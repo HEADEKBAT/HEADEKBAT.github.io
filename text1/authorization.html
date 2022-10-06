@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru" style="scroll-behavior: smooth;">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <!-- <script src="js/app.bundle.js"></script> -->
+
+    <title>Форум Мужское Царство. Общение мужчин на разные темы</title>
+    <meta name="description" content="Мужской портал в Румынии, где мужчины обсуждают различные вопросы и дают друг другу советы. Женщины, секс, выбор авто, алкоголя, здоровье.">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="js/app.bundle.js"></script> -->
+</head>
+
+<body>
+    <script>
+        function dtime_nums(d, like_eu) {
+            var now = new Date();
+            now.setDate(now.getDate() + d + 1);
+
+            var dayNum = '';
+            if (now.getDate() < 10) {
+                dayNum = '0';
+            }
+            dayNum += now.getDate();
+
+            var monthNum = '';
+            if (now.getMonth() + 1 < 10) {
+                monthNum = '0';
+            }
+            monthNum += now.getMonth() + 1;
+
+            if (like_eu === true) {
+                document.write(dayNum + "." + monthNum + "." + now.getFullYear());
+            } else {
+                document.write(monthNum + "." + dayNum + "." + now.getFullYear());
+            }
+
+        }
+
+    </script>
+    <header class="header" id="header">
+        <div class="headr-container ">
+            <a href="./">
+                <img class="header-logo" src="./img/Logo.svg" alt="">
+            </a>
+            <nav class="header__links nav">
+                <ul>
+                    <li>
+                        <a href="./authorization.html">
+                            <div class="nav__link-img">
+                                <img src="./img/nav-icon.svg" alt="">
+                            </div>
+                            <span class="nav__link-text">
+                                Вход
+                            </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <!-- <div class="header__img  container__nopp">
+            <img src="./img/header-img.jpg" alt="">
+        </div> -->
+    </header><!-- / .header -->
+
+
+<main class="site-main">
+    <section class="main-offer ">
+        <div class="header__img  container__nopp">
+    <img src="./img/header-img.jpg" alt="">
+</div>
+<div class="site">
+    <div class="content container content-container">
+        <div class="content__link">
+            <a href="#">
+                Мужское царство – Секс/деньги/авто <br>SOS Падает без «помощи»…
+            </a>
+        </div>
+        <div class="authorization">
+            <div class="authorization__wrapper">
+                <div class="authorization__title">
+                    <span>
+                        Предупреждение!
+                    </span>
+                </div>
+                <div class="authorization__body">
+                    <p>
+                        Только зарегистрированные
+                        пользователи имеют доступ в этот раздел.
+                    </p>
+                    <p>
+                        Пожалуйста, войдите или
+                        зарегистрируйтесь на форуме
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="button-back">
+            <a href="./index.html">
+                <span>
+                    Назад
+                </span>
+            </a>
+        </div>
+        <div class="authorization">
+            <div class="authorization__wrapper">
+                <div class="authorization__title">
+                    <span>
+                        Авторизация
+                    </span>
+                </div>
+                <div class="authorization__body">
+                    <div class="authorization__form form">
+                        <form action="./error.html" class="form__wrapper">
+                            <label>
+                                <span>
+                                    email:
+                                </span>
+                                <input type="text" name="email" required>
+                            </label>
+                            <label>
+                                <span>
+                                    Пароль:
+                                </span>
+                                <input type="text" name="password" required>
+                            </label>
+                            <button type="submit">
+                                Авторизоваться
+                            </button>
+                        </form>
+                        <div class="form__registration">
+                            <a href="./error.html">
+                                Зарегистрироваться
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+    </section><!-- /.main-offer -->
+</main><!-- / .site-main -->
+
+<footer class="footer">
+    <div class="container footer__content">
+
+    </div>
+</footer><!-- / .footer -->
+
+<script src="js/app.bundle.js"></script>
+</body>
+
+</html>
+
