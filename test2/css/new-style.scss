@@ -567,3 +567,10 @@ input {
 .modal--visible {
     display: block;
 }
+.header__menu-img {
+    padding: 13px 0px;
+    position: relative;
+    @media (max-width: 768px) {
+        top: 4px;
+    }
+}

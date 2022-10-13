@@ -752,4 +752,15 @@ input {
 .modal--visible {
   display: block;
 }
+
+.header__menu-img {
+  padding: 13px 0px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .header__menu-img {
+    top: 4px;
+  }
+}
 /*# sourceMappingURL=new-style.css.map */

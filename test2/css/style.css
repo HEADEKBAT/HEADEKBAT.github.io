@@ -248,6 +248,11 @@ body {
 	float: right;
 	position: relative;
 }
+@media (max-width: 768px) {
+	.header__user-btn {
+		top: 4px;
+	}
+}
 
 .header__user-btn::after {
 	content: '';
