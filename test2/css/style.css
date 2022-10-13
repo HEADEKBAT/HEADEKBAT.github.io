@@ -647,6 +647,7 @@ body {
 }
 
 .ac_footer {
+	z-index: -1;
 	position: relative;
 	top: 10px;
 	height: 0;
