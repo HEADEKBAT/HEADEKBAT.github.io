@@ -724,6 +724,13 @@ input {
             padding: 5px 5px;
             display: block;
             height: 205px;
+            img {
+                display: block;
+            }
+            @media (max-width: 435px) {
+                height: fit-content;
+                display: block;
+            }
         }
     }
     .dn {
@@ -839,7 +846,7 @@ input {
 }
 .overflov {
     overflow: hidden;
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .open-animation {
