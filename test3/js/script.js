@@ -221,6 +221,7 @@ const openAnimation = document.querySelector('.open-animation');
 bopsItem1.addEventListener('click', () => {
     bigBopsItem1.classList.add('open-animation');
     bops.classList.add('dn');
+    document.querySelector('.overflov').scrollIntoView();
     setTimeout(() => {
         bigBopsItem1.classList.remove('dn');
     }, 800);
@@ -229,13 +230,16 @@ bopsItem1.addEventListener('click', () => {
 bopsItem2.addEventListener('click', () => {
     bigBopsItem2.classList.add('open-animation');
     bops.classList.add('dn');
+    document.querySelector('.overflov').scrollIntoView();
     setTimeout(() => {
         bigBopsItem2.classList.remove('dn');
+
     }, 800);
 })
 bopsItem3.addEventListener('click', () => {
     bigBopsItem3.classList.add('open-animation');
     bops.classList.add('dn');
+    document.querySelector('.overflov').scrollIntoView();
     setTimeout(() => {
         bigBopsItem3.classList.remove('dn');
     }, 800);
@@ -243,6 +247,7 @@ bopsItem3.addEventListener('click', () => {
 bopsItem4.addEventListener('click', () => {
     bigBopsItem4.classList.add('open-animation');
     bops.classList.add('dn');
+    document.querySelector('.overflov').scrollIntoView();
     setTimeout(() => {
         bigBopsItem4.classList.remove('dn');
     }, 800);
@@ -252,7 +257,8 @@ for (const bupsBuppon of bupsBuppons) {
     const orderBlock = document.querySelector('.order_block')
     bupsBuppon.addEventListener('click', () => {
         bigBops.classList.add('dn');
-        orderBlock.classList.add('open-animation')
+        orderBlock.classList.add('open-animation');
+        document.querySelector('.overflov').scrollIntoView();
         setTimeout(() => {
             orderBlock.classList.remove('dn');
         }, 800);
