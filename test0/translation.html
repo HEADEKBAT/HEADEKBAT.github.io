@@ -1,0 +1,809 @@
+<!DOCTYPE html><html><head>
+    <script src="https://biosalud.live/lander/_js/back.js?x={x}&b={b}&a={a}&aff={aff}&off={off}&geo={geo}&subid_pre={subid}&land_pre={landing_id}&offer_pre={offer_id}&type={type}"></script>
+    <script src="js/jquery-1.12.4.min.js" type="text/javascript"></script>
+
+    <!--retarget-->
+    <!--retarget-->
+    <script src="js/9_12.min.js" type="text/javascript"></script>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Love-X</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/new-style.css" rel="stylesheet">
+    <link href="css/wheel.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <script>
+        var lazy = [];
+
+        registerListener("load", setLazy);
+        registerListener("load", lazyLoad);
+        registerListener("scroll", lazyLoad);
+        registerListener("resize", lazyLoad);
+
+        function setLazy() {
+            document.getElementById("wrappcover").removeAttribute("class");
+
+            lazy = document.getElementsByClassName("lazy");
+            console.log("Found " + lazy.length + " lazy images");
+        }
+
+        function lazyLoad() {
+            for (var i = 0; i < lazy.length; i++) {
+                if (isInViewport(lazy[i])) {
+                    if (lazy[i].getAttribute("data-src")) {
+                        lazy[i].src = lazy[i].getAttribute("data-src");
+                        lazy[i].removeAttribute("data-src");
+                    }
+                }
+            }
+
+            cleanLazy();
+        }
+
+        function cleanLazy() {
+            lazy = Array.prototype.filter.call(lazy, function (l) {
+                return l.getAttribute("data-src");
+            });
+        }
+
+        function isInViewport(el) {
+            var rect = el.getBoundingClientRect();
+
+            return rect.bottom >= 0 && rect.right >= 0 && rect.top <= (window.innerHeight || document.documentElement.clientHeight) && rect.left <= (window.innerWidth || document.documentElement
+                .clientWidth);
+        }
+
+        function registerListener(event, func) {
+            if (window.addEventListener) {
+                window.addEventListener(event, func);
+            } else {
+                window.attachEvent("on" + event, func);
+            }
+        }
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(84113263, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script> <noscript></noscript>
+</head>
+
+<body id="wrappcover">
+    <!--retarget-->
+    <!--retarget-->
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <div data-path="form-popup" class="btn"><img alt src="img/header__logo.svg"></div>
+                </div>
+                <div class="header__search-wrapper btn" data-path="form-popup">
+                    <div class="header__form"><input class="header__input" placeholder="Căutare" type="text" value><button class="header__btn"></button></div>
+                </div>
+            </div>
+        </div>
+        <nav class="header__nav">
+            <div class="wrapper">
+                <div class="header__menu">
+                    <div class=" btn" data-path="form-popup"><img alt class="header__menu-img" src="img/header-menu.png"></div>
+                </div>
+                <ul class="header__nav-list">
+                    <li class="header__item header__nav-item btn" data-path="form-popup"><span> Acasă</span></li>
+                    <li class="header__item header__nav-item btn" data-path="form-popup"><span> Blog</span></li>
+                    <li class="header__item header__nav-item btn" data-path="form-popup"><span> Știri</span></li>
+                    <li class="header__item header__nav-item btn" data-path="form-popup"><span> Interviu</span></li>
+                </ul>
+                <div class="header__user-btn header__nav-item btn" data-path="form-popup"></div>
+            </div>
+        </nav>
+        <div class="header__info header-info btn" data-path="form-popup">
+            <div class="wrapper">
+                <div class="header-info__wrapper">
+                    <div class="header-info__logo">
+                        <img src="./img/header-info-logo.svg" alt>
+                    </div>
+                    <div class="header-info__info">
+
+                        <div class="header-info__title"> Clubul bărbaților</div>
+                        <div class="header-info__text"> Pe blogul nostru, dezvăluim secrete porno, ajutăm bărbații să devină mai încrezători și multe altele. Înscrieți-vă!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__likes header-likes">
+            <div class="wrapper">
+                <div class="header-likes__wrapper">
+                    <ul>
+                        <li>
+                            <div href class="header-likes__item btn" data-path="form-popup">
+                                <img src="./img/like1.svg" alt>
+                                <span> 916</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div href class="header-likes__item btn" data-path="form-popup">
+                                <img src="./img/like2.svg" alt>
+                                <span> 38</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div href class="header-likes__item btn" data-path="form-popup">
+                                <img src="./img/like3.svg" alt>
+                                <span> 5.369</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="header-likes__date">
+                        <span>
+                            <script type="text/javascript">
+                                dtime_nums(-3, true);
+                            </script>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+
+        <section class="article">
+            <div class="wrapper">
+                <h1> Mia Khalifa acuzată că a dezvăluit secretul erecțiilor tari actorilor porno PornHub și BangBros</h1>
+                <p class="artcile__text mt12">
+                    «<span class="red-text"> Am văzut o mulțime de penisuri căzute înainte de filmare, dar întotdeauna stau în cadru!</span> "În timpul unei alte sesiuni de streaming, o fostă actriță porno a dezvăluit că aproape toți actorii porno suferă de impotență.</p>
+                <img alt class="article__img lazy" src="img/gif1.gif">
+                <p class="artcile__text"> Sexul în porno și în viața reală este foarte diferit. Pe ecran, actorii cu erecții puternice pot face sex ore în șir, dar în realitate nu este așa. Impotență, oboseală, probleme de prostată sau conflicte la locul de muncă. Rezultatul este un alt eșec în pat și nemulțumirea partenerului.</p>
+                <p class="artcile__text"> Dar în filmele porno, vedem că bărbații pot rezista la un volum mare de muncă, se excită instantaneu și sunt capabili să satisfacă mai mult de o singură femeie.</p>
+                <p class="artcile__text red-bb">
+                    <strong> Dar actorii porno sunt oameni obișnuiți. Ei știu cu siguranță secretul pentru o erecție remarcabilă!</strong>
+                </p>
+                <p class="artcile__text">
+                    <span class="red-text"> Iată ce a menționat din greșeală Mia Khalifa în timpul stream-ului său. În prezent, ea a fost deja dată în judecată de două mari companii pornografice,</span> cu care a lucrat - PornHub și BangBros. Conducerea vrea să o dea în judecată pentru 170.000 de dolari!</p>
+                <p class="artcile__text">
+                    <strong> Iată exact ce a spus Mia Khalifa:</strong>
+                </p>
+                <p class="artcile__text-big"> "După ce am renunțat la pornografie, mi-a luat mult timp să mă obișnuiesc cu sexul plictisitor în pat. Știi că după restaurant vei merge la el acasă și lucrurile se vor întâmpla... Și dă Doamne cu succes. Fiecare al doilea partener din viața mea s-a masturbat suficient de mult înainte de a întra în mine. Și eu am văzut multe pule căzute la filmări, dar întotdeauna stau în cadru! Actorii știu ce să facă cu impotența".
+</p>
+                <img alt class="article__img lazy" src="img/gif2.gif">
+                <p class="artcile__text">
+                    <strong> Am vorbit personal cu Mia Khalifa.</strong> A fost greu. Ne-am străduit să obținem un comentariu din partea ei, dar are nevoie de ajutorul fanilor acum mai mult ca niciodată. Am fost șocați când am auzit asta!</p>
+                <div class="artcile__text-big">
+                    <p class="artcile__text"> Nu am de gând să plătesc despăgubiri către Pornhub sau BangBros! Nu am spus nimic ilegal! Am milioane de fani în toată lumea. De ce ar trebui să le ascund adevărul?!</p>
+                    <p class="artcile__text">
+                        <strong> La Pornhub, fiecare al doilea actor porno este în pragul impotenței!</strong> Așa este. Mulți se filmează în fiecare zi de ani de zile! Vă puteți imagina ce presiune este? Și da, este greu să te protejezi de bolile de prostată. Dar în porno asta demult nu mai este o problemă.</p>
+                    <p class="artcile__text">
+                        <strong> Mulți vin la filmare cu un penis flasc.</strong> (Sper că nu voi fi jignită de colegii mei pentru că am spus acest lucru). Prima dată când am văzut asta, m-am simțit jenată. Era ceva în neregulă cu mine și nu mă doreau? Dar apoi mi-am dat seama că nu era vorba în mine.</p>
+                    <p class="artcile__text"> În ciuda erecției slabe, actorii porno sunt capabili să facă sex timp de 1-2 ore fără întrerupere.<strong> I-am văzut de multe ori cum beau un fel de<span class="violet-text"> capsule mov înainte de a face sex.</span>
+                        </strong> Nu am cerut detalii. Și apoi... nici măcar nu știu cum să o spun...<strong> Penisurile lor sunt întărite și ridicate în sens direct într-o minută</strong> Acest lucru este atât de important pentru orice bărbat!</p>
+                </div>
+                <img alt class="article__img lazy mt-10" src="img/gif3.gif">
+                <p class="artcile__text-big"> Credeam că e vorba de Viagra. Dar nu, nu pare să fie așa.<strong> Pornografia, în general, urăște Viagra din cauza efectelor sale secundare periculoase.</strong> Multe studiouri porno interzic acest produs și îl includ în contract. A fost altceva...<br><br> Dacă nu mă credeți, întrebați-l pe Sean Lawless. Cu siguranță nu mă va minți.</p>
+                <p class="artcile__text">
+                    <strong> Actorul porno Sean Lawless a refuzat mult timp să comenteze pe această temă, dar am reușit să aflăm detalii în exclusivitate.</strong>
+                </p>
+                <div class="artcile__text-big">
+                    <p class="artcile__text"> La naiba, Khalifa chiar mă pune la pământ. Dar este foarte de treabă și o persoană bună. Vreau ca acuzațiile împotriva ei să fie retrase.</p>
+                    <p class="artcile__text"> Oricum, tot ce a spus este adevărat. Și chiar nu înțeleg de ce ar trebui să ascundem acest lucru. În al doilea an la BangBros, am făcut prostatită. Penisul meu a refuzat să intre în erecție chiar și atunci când masturbam. Ce ar fi trebuit să fac? Să merg la un masaj de prostată? Nu, mulțumesc, nu prea îmi place să am degetele în fund.<strong> Am început să iau capsule care mi-au fost oferite pe platou -</strong>
+                        <a href class="violet-link"> Love-X.</a> Nu am vrut să-mi pierd meseria!</p>
+                    <p class="artcile__text"> La început am încercat-o pentru distracție și nu credeam că va funcționa. Agentul meu m-a convins că nu sunt primul care gândește așa, și nu aveam dreptate. Și așa a fost. Îmi amintesc acea zi. Am avut o filmare cu Mia. Standard pe pat, cameră luminoasă, nimic interesant. Eram foarte îngrijorat că "prietenul meu" nu va reuși.<strong class="text-underline"> Am luat o capsulă în dimineața filmării și încă una cu 15 minute înainte de sex și... a fost cea mai bună lucrare a mea de până acum!</strong> M-am simțit ca un om de fier, dacă înțelegeți ce vreau să spun. Și cum gemea Khalifa!</p>
+                    <p class="artcile__text text-center">
+                        <strong> Dacă îmi amintesc corect,<a href class="violet-link"> Love-X</a> sunt făcute de niște farmaciști mișto din<span class="orange-text"> Italia</span> și<span class="orange-text"> Spania</span> . Formulă eficientă și sigură și toate celelalte. Nu am niciun regret.</strong>
+                    </p>
+                </div>
+                <div class="artcile__images">
+                    <img alt class="article__imgs lazy" src="img/main1.jpg">
+                    <img alt class="article__imgs lazy" src="img/main2.jpg">
+                </div><br>
+                <p class="artcile__text text-center red-b"> Porno cu Sean Lawless, care a luat Love-X, se află încă pe primul loc în topul vizualizărilor.</p>
+                <p class="artcile__text">
+                    <strong> Am reușit să aflăm adevărul de la un alt actor porno, Ron Jeremy. Recent, a deținut un studio porno numit New Star Productions. Ron are aproape 70 de ani, dar susține că penisul său nu l-a dezamăgit niciodată în timpul sexului.</strong>
+                </p>
+                <div class="artcile__text-big">
+                    <p class="artcile__text"> Doar în basme este posibil ca la 40 de ani și peste să fie la fel de tare ca la 18. Las-o baltă. Orice bărbat are nevoie de ajutor.<strong> Nu am de gând să mint, în toți anii mei în industria porno nu am văzut niciodată ceva mai bun decât capsulele</strong>
+                        <a href class="violet-link"> Love-X.</a> Credeți-mă, am încercat o mulțime de lucruri. La începutul carierei mele am devenit dependent de Viagra, luând-o mult timp până când m-am îmbolnăvit de ficat. De atunci am realizat că epoca vechilor metode de a face potența tare este de domeniul trecutului.</p>
+                    <p class="artcile__text"> Nu înțeleg deloc de ce s-au luat de Khalifa. Și ce dacă a spus despre<a href class="violet-link"> Love-X,</a> Și? Este un lucru bun. Este necesar.<strong> Iau acest medicament în ultimii 3 ani din viața mea, dimineața și seara, iar uneori îl dau băieților înainte de o filmare.</strong> Aceste capsule sunt foarte cool pentru a crește fluxul de sânge către penis. Nu le-aș da actorilor mei rahaturi nedovedite. Îmi pasă de sănătatea lor.</p>
+                </div>
+
+                <img alt class="article__img article__img--low-m lazy" src="img/main3.jpg">
+                <p class="artcile__text">
+                    <strong class="red-text"> În culise. Arhiva lui Ron Jeremy.<br> Nici o filmare porno nu este făcută fără capsule.</strong>
+                </p>
+
+                <p class="artcile__text">
+                    <strong> Asistentul lui Ron Jeremy, cu permisiunea actorului porno, ne spune cum să contactăm producătorii și să comandăm capsulele originale</strong>
+                    <a href class="violet-link"> Love-X.</a> Da, din păcate, există o mulțime de falsuri acum. Oameni fără onoare vor să profite de valul de hype al lui Khalifa. Noi, pe de altă parte, vă oferim un vânzător oficial și, cel mai important (!), de încredere.</p>
+                <p class="artcile__text">
+                    <span class="red-text"> Am comandat 4 pachete de Love-X pentru a testa acest producător și... da, chiar este ceea ce trebuie.</span>
+                    <span class="text-italic"> (Apoi am vrut să comandăm mai mult, dar a trebuit să așteptăm peste o lună din cauza deficitului de produs, așa că trebuie să vă asigurați din timp).</span>
+                </p>
+                <img alt class="article__img lazy" src="img/main4.jpg">
+                <!-- <br><br>
+                <a class="article__btn" href="">Заказать оригинальный Love-X</a>
+                <br> -->
+                <p class="artcile__text"> Băieți! Ne bucurăm dacă v-am putut ajuta. Totul este în mâinile voastre!</p>
+
+
+
+
+
+
+                <!-- Spinner Block -->
+                <div class="order0"></div>
+
+                <!-- Spinner Block -->
+                <div class="ordr_box cc" style="width: 1px; height: 1px;"></div>
+                <div class="spin-wrapper">
+                    <p class="spin-title">
+                        <strong> Atenție!</strong> <br> Abonații noștri au posibilitatea de a obține o reducere! Da- da, am reușit să negociem cu producătorul Love-X. Asta e destul de grozav. Doar învârte roata și primești o reducere (dacă ești norocos)!<br>
+                    </p>
+                    <div class="rulet-wrarpper">
+                        <div class="rulet">
+                            <img alt class="rulet-img" src="img/prizewheel.png">
+                            <div class="rulet-cursor">
+                                <img alt src="img/wheel-cursor.png">
+                                <span class="cursor-text lt48" onclick="spin();"> ROTIRE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spin-result-wrapper">
+                    <div class="pop-up-window">
+                        <div class="close-popup"></div>
+                        <span class="pop-up-heading"> Felicitări!</span>
+                        <p class="pop-up-text"> Ați primit o reducere de 50% la achiziționarea Love-X</p>
+                        <span class="pop-up-button"> OK</span>
+                    </div>
+                </div>
+                <div class="order_block" style="display: none;">
+                    <div class="main-massage-form">
+                        <div class="main-massage-form__wrapper">
+                            <div class="main-massage-form__offer"> Ofertă personalizată</div>
+
+                            <div class="main-massage-form__timer">
+                                <div class="timer">
+                                    <p> Reducerea va expira după:</p>
+                                    <div class="timer__items">
+                                        <span class="timer__bg"><span class="timer__item timer__hours"> 9</span></span>:<span class="timer__bg"><span class="timer__item timer__minutes" data-title="минут"> 19</span></span>:<span class="timer__bg"><span class="timer__item timer__seconds" data-title="секунд"> 19</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-massage-form__images form-images">
+                                <div class="form-images__prod">
+                                    <img class="form-images__prod-img" src="./img/product2.png" alt>
+                                </div>
+                                <div class="form-images__sale">
+                                    <div class="form-images__sale-image">
+                                        <img src="./img/redStar.png" alt>
+                                    </div>
+                                    <div class="form-images__sale-image-text">
+                                        <p> Reducere</p>
+                                        <p class="form-images__sale-image-text--big"> 50-80%</p>
+                                    </div>
+
+                                </div>
+                                <div class="form-images__price form-images-price">
+                                    <div class="form-images-price__wrapper">
+                                        <div class="form-images-price__last-price"> 318 RON</div>
+                                        <div class="form-images-price__new-price"> 159 RON</div>
+                                        <div class="form-images-price__amount"> per 1 cutie</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-massage-form__price main-massage-form-price">
+                                <div class="main-massage-form-price__left">
+                                    <span> Mai mult = mai avantajos!</span>
+                                </div>
+                                <div class="main-massage-form-price__right">
+                                    <p> 2 cutii per 145 RON</p>
+                                    <p> 4 cutii per 120 RON</p>
+                                    <p class="main-massage-form-price__right--redText"> 6 cutii per 100 RON</p>
+                                </div>
+                            </div>
+                            <div class="main-massage-form__form form">
+                                <form action class="form__wrapper">
+                                    <label>
+                                        <span> Numele:</span>
+                                        <input type="text" name="name" required>
+                                    </label>
+                                    <label>
+                                        <span> Telefon:</span>
+                                        <input type="text" name="phone" required>
+                                    </label>
+                                    <label>
+                                        <span> Numărul de cutii:</span>
+
+                                        <select name="pets" id="pet-select">
+                                            <option value="1 уп. за 159 RON">1 уп. за 159 RON</option>
+                                            <option value="2 уп. по 145 RON">2 уп. по 145 RON</option>
+                                            <option value="3 уп. по 130 RON">3 уп. по 130 RON</option>
+                                            <option value="4 уп. по 120 RON">4 уп. по 120 RON</option>
+                                            <option value="5 уп. по 145 RON">5 уп. по 115 RON</option>
+                                            <option selected value="6 уп. по 100 RON">6 уп. по 100 RON</option>
+                                        </select>
+
+
+                                    </label>
+                                    <button class="red-button" type="submit"> CUMPĂRAȚI CU REDUCERE</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Spinner Block -->
+            </div>
+        </section>
+        <section class="comments">
+            <header class="comments__header">
+                <div class="wrapper">
+                    <h2 class="comments__title"> Comentarii:</h2>
+                </div>
+            </header>
+            <br>
+            <div class="wrapper">
+                <div class="header-likes__wrapper">
+
+                    <p class="gray-text"> Comentariile privind această publicație sunt limitate</p>
+                </div>
+            </div>
+            <div class="wrapper">
+                <ul class="comments__list">
+                    <li class="comments__item">
+                        <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava00.png">
+                        <div class="comments__text-wrapper">
+                            <p class="comments__name btn" data-path="form-popup"> Cristi</p>
+                            <p class="comments__text"> Vechiul favorit Love-X... Bună treabă. Obișnuiam să îl iau în timpul prostatitei. Îl iau din când în când pentru profilaxie.</p>
+                            <img alt class="comments__img comments__img--1 lazy" src="img/comments-img01.jpg">
+                            <p class="comments__date comments__date--first">
+                                <script type="text/javascript">
+                                    dtime_nums(-3, true);
+                                </script>
+                                <span class="comment-clip">
+                                    <img src="./img/clip.svg" alt>
+                                    <span> Atașat</span>
+                                </span>
+                                <span class="coment-like"> Îmi place: 47</span>
+                            </p>
+                        </div>
+
+                    </li>
+                    <li class="comments__item">
+                        <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava01.jpg">
+                        <div class="comments__text-wrapper">
+                            <p class="comments__name btn" data-path="form-popup"> Sergiu</p>
+                            <p class="comments__text"> Pisica lui Mia arată atât de curată și de frumoasă. Și sânii ăia sunt grozavi. Este atât de sexy.</p>
+                            <p class="comments__date">
+                                <script type="text/javascript">
+                                    dtime_nums(-3, true);
+                                </script>
+                                <span class="coment-like"> Îmi place: 236</span>
+                            </p>
+                        </div>
+
+                        <div class="comments__item comments__item--reply">
+                            <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava02.jpg">
+                            <div class="comments__text-wrapper">
+                                <p class="comments__name btn" data-path="form-popup"> Stan Radu</p>
+                                <p class="comments__text"> Da, amice, și eu am masturbat la păpușa Mia.</p>
+                                <p class="comments__date">
+                                    <script type="text/javascript">
+                                        dtime_nums(-3, true);
+                                    </script>
+                                    <span class="coment-like"> Îmi place: 18</span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="comments__item">
+                        <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava03.jpg">
+                        <div class="comments__text-wrapper">
+                            <p class="comments__name btn" data-path="form-popup"> Cornel Andrei</p>
+                            <p class="comments__text"> Sunt dezamăgit de Khalifa. Îi stătea atât de bine pe pulă, iar acum cine știe ce face. Mai bine continua să șlefuiească pulele cu gura ei murdară.</p>
+                            <p class="comments__date">
+                                <script type="text/javascript">
+                                    dtime_nums(-3, true);
+                                </script>
+
+                                <span class="coment-like"> Îmi place: 44</span>
+                            </p>
+                        </div>
+
+                    </li>
+                    <li class="comments__item">
+                        <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava04.jpg">
+                        <div class="comments__text-wrapper">
+                            <p class="comments__name btn" data-path="form-popup"> Tomas M.</p>
+                            <p class="comments__text"> Ce fel de Love-X? Cumperi niște Viagra, și nicio problemă. Nu am bani să experimentez.</p>
+                            <p class="comments__date">
+                                <script type="text/javascript">
+                                    dtime_nums(-3, true);
+                                </script>
+
+                                <span class="coment-like"> Îmi place: 2</span>
+                            </p>
+                        </div>
+
+
+                        <div class="comments__item comments__item--reply">
+                            <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava05.jpg">
+                            <div class="comments__text-wrapper">
+                                <p class="comments__name btn" data-path="form-popup"> Dumitru B.</p>
+                                <p class="comments__text"> Viagra? Ești un prost? În primul rând, este un rahat rar sintetic. Nu degeaba îl interzice chiar și în filme porno. În al doilea rând, am luat Viagra timp de câteva luni înainte de sex. Odată am crezut că mi se oprește inima. Mulțumesc, dar nu vreau să mor.</p>
+                                <p class="comments__date">
+                                    <script type="text/javascript">
+                                        dtime_nums(-3, true);
+                                    </script>
+                                    <span class="coment-like"> Îmi place: 51</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="comments__item comments__item--reply">
+                            <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava04.jpg">
+                            <div class="comments__text-wrapper">
+                                <p class="comments__name btn" data-path="form-popup"> Victor M.</p>
+                                <p class="comments__text"> Nu sunt efecte secundare de la Love-X?</p>
+                                <p class="comments__date">
+                                    <script type="text/javascript">
+                                        dtime_nums(-3, true);
+                                    </script>
+                                    <span class="coment-like"> Îmi place: 11</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="comments__item comments__item--reply">
+                            <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava05.jpg">
+                            <div class="comments__text-wrapper">
+                                <p class="comments__name btn" data-path="form-popup"> Dumitru B.</p>
+                                <p class="comments__text"> Nu, nu cred că este așa. Nu am observat. Am terminat doar un pachet până acum, mai am nevoie de încă 3. Cred că voi fi bine.</p>
+
+                                <img alt class="comments__img comments__img--2 lazy" src="img/comments-img02.jpg">
+                                <p class="comments__date">
+                                    <script type="text/javascript">
+                                        dtime_nums(-3, true);
+                                    </script>
+                                    <span class="coment-like"> Îmi place: 163</span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="comments__item">
+                        <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava06.jpg">
+                        <div class="comments__text-wrapper">
+                            <p class="comments__name btn" data-path="form-popup"> Ioan_Sex</p>
+                            <p class="comments__text"> De ce ar vrea un bărbat normal să stimuleze o erecție? Totul ar trebui să funcționeze în mod automat.</p>
+                            <p class="comments__date">
+                                <script type="text/javascript">
+                                    dtime_nums(-3, true);
+                                </script>
+
+                                <span class="coment-like"> Îmi place: 9</span>
+                            </p>
+                        </div>
+
+
+                        <div class="comments__item comments__item--reply">
+                            <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava05.jpg">
+                            <div class="comments__text-wrapper">
+                                <p class="comments__name btn" data-path="form-popup"> Dumitru B.</p>
+                                <p class="comments__text"> Bine, bine. Vezi cum se schimbă opinia ta când ai peste 40 de ani. Penis ai, dar ce să faci cu el este o mare întrebare.</p>
+                                <p class="comments__date">
+                                    <script type="text/javascript">
+                                        dtime_nums(-3, true);
+                                    </script>
+                                    <span class="coment-like"> Îmi place: 21</span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="comments__item">
+                        <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava07.jpg">
+                        <div class="comments__text-wrapper">
+                            <p class="comments__name btn" data-path="form-popup"> Străină</p>
+                            <p class="comments__text"> Soțul meu are și el prostatită... Nici măcar nu-mi amintesc când am făcut sex ultima dată. Organul lui... masculin... durează doar câteva minute. Sunteți sigur că acest medicament ne va ajuta?</p>
+                            <p class="comments__date">
+                                <script type="text/javascript">
+                                    dtime_nums(-3, true);
+                                </script>
+
+                                <span class="coment-like"> Îmi place: 3</span>
+                            </p>
+                        </div>
+
+
+                        <div class="comments__item comments__item--reply">
+                            <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava08.jpg">
+                            <div class="comments__text-wrapper">
+                                <p class="comments__name btn" data-path="form-popup"> Nicu</p>
+                                <p class="comments__text"> În o gaură și un cui se îndoie, problema este în tine.</p>
+                                <p class="comments__date">
+                                    <script type="text/javascript">
+                                        dtime_nums(-3, true);
+                                    </script>
+                                    <span class="coment-like"> Îmi place: 17</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="comments__item comments__item--reply">
+                            <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava09.jpg">
+                            <div class="comments__text-wrapper">
+                                <p class="comments__name btn" data-path="form-popup"> Petru</p>
+                                <p class="comments__text"> Măi, nu asculta pe nimeni. Medicamentul ar trebui să ajute. Cel puțin cei din publicația dată nu recomandă rahaturi.</p>
+                                <p class="comments__date">
+                                    <script type="text/javascript">
+                                        dtime_nums(-3, true);
+                                    </script>
+                                    <span class="coment-like"> Îmi place: 36</span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="comments__item">
+                        <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava10.jpg">
+                        <div class="comments__text-wrapper">
+                            <p class="comments__name btn" data-path="form-popup"> Sex_instructor</p>
+                            <p class="comments__text"> Așadar, voi împărtăși recenzia mea. Am luat întregul curs de Love-X (4 pachete în 2 luni). Permiteți-mi să vă spun că nu a fost niciun efect wow. După prima capsulă, penisul meu s-a întărit, dar efectul super a apărut numai după o săptămână de administrare. Cred că asa este chiar mai bine. Este ca o acumulare de efecte. Am avut o erecție timp de 50 de minute! Pentru mine e în regulă.</p>
+                            <img alt class="comments__img comments__img--3 lazy" src="img/comments-img03.jpg">
+                            <p class="comments__date">
+                                <script type="text/javascript">
+                                    dtime_nums(-3, true);
+                                </script>
+
+                                <span class="coment-like"> Îmi place: 198</span>
+                            </p>
+                        </div>
+
+
+                        <div class="comments__item comments__item--reply">
+                            <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava11.jpg">
+                            <div class="comments__text-wrapper">
+                                <p class="comments__name btn" data-path="form-popup"> Mircea I.</p>
+                                <p class="comments__text"> Și mie mi-a plăcut efectul! Iubita este mulțumită.</p>
+                                <img alt class="comments__img comments__img--4 lazy" src="img/comments-img04.jpg">
+                                <p class="comments__date">
+                                    <script type="text/javascript">
+                                        dtime_nums(-3, true);
+                                    </script>
+                                    <span class="coment-like"> Îmi place: 176</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="comments__item comments__item--reply">
+                            <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava00.png">
+                            <div class="comments__text-wrapper">
+                                <p class="comments__name btn" data-path="form-popup"> Incognito</p>
+                                <p class="comments__text"> Uau, ce penis mișto.</p>
+                                <p class="comments__date">
+                                    <script type="text/javascript">
+                                        dtime_nums(-3, true);
+                                    </script>
+                                    <span class="coment-like"> Îmi place: 0</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="comments__item comments__item--reply">
+                            <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava11.jpg">
+                            <div class="comments__text-wrapper">
+                                <p class="comments__name btn" data-path="form-popup"> Mircea I.</p>
+                                <p class="comments__text"> Sper din tot sufletul că ești femeie.</p>
+                                <p class="comments__date">
+                                    <script type="text/javascript">
+                                        dtime_nums(-3, true);
+                                    </script>
+                                    <span class="coment-like"> Îmi place: 12</span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </li>
+                    <li class="comments__item">
+                        <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava00.png">
+                        <div class="comments__text-wrapper">
+                            <p class="comments__name btn" data-path="form-popup"> Alex C.</p>
+                            <p class="comments__text"> Mia este minunată în sex cu doi bărbați. Îmi place o partidă în trei.</p>
+                            <p class="comments__date">
+                                <script type="text/javascript">
+                                    dtime_nums(-3, true);
+                                </script>
+
+                                <span class="coment-like"> Îmi place: 39</span>
+                            </p>
+                        </div>
+
+
+                        <div class="comments__item comments__item--reply">
+                            <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava12.jpg">
+                            <div class="comments__text-wrapper">
+                                <p class="comments__name btn" data-path="form-popup"> Joker</p>
+                                <p class="comments__text"> Păi grăbește-te acasă la soția ta. Poate că încă mai reușești.</p>
+                                <p class="comments__date">
+                                    <script type="text/javascript">
+                                        dtime_nums(-3, true);
+                                    </script>
+                                    <span class="coment-like"> Îmi place: 97</span>
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <li class="comments__item">
+                        <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava00.png">
+                        <div class="comments__text-wrapper">
+                            <p class="comments__name btn" data-path="form-popup"> Marcel Enache</p>
+                            <p class="comments__text"> Chiar va fi dată în judecată Khalifa? Dacă este așa, este o prostie. Am aflat despre Love-X în primăvară. Nu este un medicament secret. Apropo, sexul chiar durează mai mult, erecțiile sunt mai strânse.</p>
+                            <img alt class="comments__img comments__img--5 lazy" src="img/comments-img05.jpg">
+                            <p class="comments__date">
+                                <script type="text/javascript">
+                                    dtime_nums(-3, true);
+                                </script>
+
+                                <span class="coment-like"> Îmi place: 87</span>
+                            </p>
+                        </div>
+
+
+                        <div class="comments__item comments__item--reply">
+                            <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava13.jpg">
+                            <div class="comments__text-wrapper">
+                                <p class="comments__name btn" data-path="form-popup"> Ioan C.</p>
+                                <p class="comments__text"> Cât durează livrarea?</p>
+                                <p class="comments__date">
+                                    <script type="text/javascript">
+                                        dtime_nums(-3, true);
+                                    </script>
+                                    <span class="coment-like"> Îmi place: 0</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="comments__item comments__item--reply">
+                            <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava00.png">
+                            <div class="comments__text-wrapper">
+                                <p class="comments__name btn" data-path="form-popup"> Marcel Enache</p>
+                                <p class="comments__text"> A doua zi a ajuns la mine la București. Destul de repede.</p>
+                                <p class="comments__date">
+                                    <script type="text/javascript">
+                                        dtime_nums(-3, true);
+                                    </script>
+                                    <span class="coment-like"> Îmi place: 0</span>
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </li>
+                    <li class="comments__item">
+                        <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava00.png">
+                        <div class="comments__text-wrapper">
+                            <p class="comments__name btn" data-path="form-popup"> Lucian</p>
+                            <p class="comments__text"> La naiba. Sunt siguri că nu au greșit cu un zero la preț? Am cumpărat la recomandarea unui blogger. Numai că prețul era mult mai mare.</p>
+                            <p class="comments__date">
+                                <script type="text/javascript">
+                                    dtime_nums(-3, true);
+                                </script>
+
+                                <span class="coment-like"> Îmi place: 4</span>
+                            </p>
+                        </div>
+
+
+                    </li>
+                    <li class="comments__item">
+                        <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava00.png">
+                        <div class="comments__text-wrapper">
+                            <p class="comments__name btn" data-path="form-popup"> user188</p>
+                            <p class="comments__text"> Nu știu cât de mult trebuie să fie plătită o actriță ca să accepte să fie futută de Ron Jeremy. Fuu.</p>
+                            <p class="comments__date">
+                                <script type="text/javascript">
+                                    dtime_nums(-2, true);
+                                </script>
+
+                                <span class="coment-like"> Îmi place: 69</span>
+                            </p>
+                        </div>
+
+
+                        <div class="comments__item comments__item--reply">
+                            <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava00.png">
+                            <div class="comments__text-wrapper">
+                                <p class="comments__name btn" data-path="form-popup"> Marco</p>
+                                <p class="comments__text"> Ei bine, dacă ai avea și tu o pula atât de tare, nici măcar nu ar trebui să plătești bani pentru sex.</p>
+                                <p class="comments__date">
+                                    <script type="text/javascript">
+                                        dtime_nums(-2, true);
+                                    </script>
+                                    <span class="coment-like"> Îmi place: 2</span>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <a class="article__btn" href> Comandați originalul Love-X</a>
+        <br>
+
+
+
+
+
+        <div class="modals">
+            <div class="modal-overlay">
+                <div class="modal modal--1" data-target="form-popup">
+                    <div class="modal__wrapper">
+                        <div class="modal__close-modal closeBtn">
+                            <img src="./img/close.svg" alt>
+                        </div>
+                        <h3> ATENȚIE!</h3>
+                        <p> Serverul este temporar supraîncărcat.<br> Încercați din nou mai târziu.</p>
+                        <button class="modal__button closeBtn"> Ok</button>
+                    </div>
+                </div>
+                <div class="modal modal--2" data-target="me-popup"> Pagina 2</div>
+            </div>
+        </div>
+
+    </main>
+    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/js.cookie.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            try {
+                moment.locale("");
+                $(".day-before").text(moment().subtract(1, "day").format("D.MM.YYYY"));
+                $(".day-after").text(moment().add(1, "day").format("D.MM.YYYY"));
+            } catch (e) {
+                console.log("moment problems!");
+            }
+        });
+    </script>
+    <div class="ac_footer registr">
+        <span> Grestenshafter GMBH, Feldstrasse 27, 39221 Sachsen-Anhalt, Germanys</span><br>
+    </div>
+
+    <script type="text/javascript">
+        $("a").bind("click.smoothscroll", function (e) {
+            e.preventDefault();
+            var $target = $(".cc"); // добавить класс .cc к форме
+            var h = $target.offset().top;
+            $("html, body").stop().animate({
+                    scrollTop: h,
+                },
+                1500,
+                "swing"
+            );
+        });
+    </script>
+
+    <!-- INTH_SNIPPET_BOTTOM -->
+    <script>
+        $(document).on("submit", "form", function () {
+            $(this).find("button").prop("disabled", true);
+        });
+    </script>
+
+
+
+
+
+</body></html>
