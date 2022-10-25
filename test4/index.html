@@ -1134,6 +1134,9 @@
                     </div>
                 </li>
 
+                <li>
+                    <div id="commentPushBlock"></div>
+                </li>
             </ul>
         </div>
     </div>
@@ -1149,6 +1152,32 @@
     </div>
 </div>
 
+        <div class="container">
+    <form id="commentForm" method="POST" class="intlTelInput">
+        <!-- <input type="hidden" name="country" value="CZ">
+        <input type="hidden" name="goods_id" value="22984"> -->
+
+        <div class="form__item">
+            <div class="file">
+                <div class="file__item">
+                    <label for="formImage" class="form__avatar" id="formAvatar"></label>
+                    <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file__input">
+                    <label for="formImage" class="file-label">Фото</label>
+                </div>
+            </div>
+        </div>
+        <div class="form__inputs">
+            <!----Добавляем input если нужно вводить имя ---->
+            <input type="text" placeholder="Ваше имя" id="inputCommentName">
+            <textarea name="" id="inputCommentText" placeholder="Ваше сообщение" cols="20" rows="5"></textarea>
+            <button type="submit" id="commentPush">
+                Оставить комментарий
+            </button>
+        </div>
+        <input type="hidden" name="stats_uuid" value="471ebc44-0935-4835-ae5f-529daade4fe2">
+    </form>
+</div>
+
     </section><!-- /.main-offer -->
 </main><!-- / .site-main -->
 
@@ -1157,8 +1186,14 @@
         <span>SfatulMedicului.ro - Copyright © 2022</span>
     </div>
 </footer><!-- / .footer -->
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="js/app.bundle.js"></script>
+
+
+<script>
+
+</script>
+
 </body>
 
 </html>
