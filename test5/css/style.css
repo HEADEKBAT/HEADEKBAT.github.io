@@ -656,8 +656,8 @@ form .error {
 .registr {
 	color: #aaaaaa;
 }
-.offer-link {
+.color-link {
 	font-weight: 700;
+	color: #5c0da0;
 	text-decoration: underline;
-	color: #b118e5;
 }
