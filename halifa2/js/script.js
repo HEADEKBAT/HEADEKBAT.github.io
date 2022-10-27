@@ -52,72 +52,6 @@ function tick() {
     $("#sec").html(secs);
 }
 
-;
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    // let date = new Date();
-    // let year = date.getFullYear();
-    // let month = date.getMonth();
-    // let day = date.getDate();
-    // month = month >= 10 ? month : '0' + month;
-    // day = day >= 10 ? day : '0' + day;
-
-    // function nowDate() {
-    //     document.querySelectorAll('#yearNow').forEach(function (yearNow) {
-    //         yearNow.innerHTML = year;
-    //     });
-    //     document.querySelectorAll('#monthNow').forEach(function (monthNow) {
-    //         monthNow.innerHTML = month;
-    //     });
-    //     document.querySelectorAll('#dayNow').forEach(function (dayNow) {
-    //         dayNow.innerHTML = day;
-    //     });
-    // }
-    // nowDate();
-    const deadline = new Date(
-        new Date().getFullYear(),
-        new Date().getMonth() + 1, 1);
-    let timerId = null;
-
-    function declensionNum(num, words) {
-        return words[
-            num % 100 > 4 && num % 100 < 20 ?
-            2 : [2, 0, 1, 1, 1, 2][num % 10 < 5 ? num % 10 : 5]
-        ];
-    }
-
-    function countdownTimer() {
-        const diff = deadline - new Date();
-        if (diff <= 0) {
-            clearInterval(timerId);
-        }
-        const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
-        const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
-        const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
-        $hours.textContent = hours < 10 ? '0' + hours : hours;
-        $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
-        $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
-        $minutes.dataset.title = declensionNum(minutes, [
-            'минута',
-            'минуты',
-            'минут',
-        ]);
-        $seconds.dataset.title = declensionNum(seconds, [
-            'секунда',
-            'секунды',
-            'секунд',
-        ]);
-
-    }
-    const $hours = document.querySelector('.timer__hours');
-    const $minutes = document.querySelector('.timer__minutes');
-    const $seconds = document.querySelector('.timer__seconds');
-
-    countdownTimer();
-    timerId = setInterval(countdownTimer, 1000);
-});
-
 
 
 
@@ -259,6 +193,7 @@ for (const bupsBuppon of bupsBuppons) {
         bigBops.classList.add('dn');
         orderBlock.classList.add('open-animation');
         document.querySelector('.overflov').scrollIntoView();
+        start_timer();
         setTimeout(() => {
             orderBlock.classList.remove('dn');
         }, 800);

@@ -341,7 +341,7 @@ body {
 	.artcile__text-big {
 		font-size: 18px;
 		line-height: 22px;
-		padding: 30px 10px 10px;
+		padding: 30px 0px 0px;
 		background: url('../img/icon-quotes.png') no-repeat left 10px top 10px, #111111;
 	}
 }
