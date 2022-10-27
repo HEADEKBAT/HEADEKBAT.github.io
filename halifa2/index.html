@@ -14,6 +14,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/new-style.css" rel="stylesheet">
     <link href="css/wheel.css" rel="stylesheet">
+    <link href="css/comment.css" rel="stylesheet">
 
     <link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
@@ -174,7 +175,8 @@
                         <p class="artcile__text white-text">
                             <strong> Mulți vin la filmare cu un penis flasc.</strong> (Sper că nu voi fi jignită de colegii mei pentru că am spus acest lucru). Prima dată când am văzut asta, m-am
                             simțit jenată. Era ceva în neregulă cu mine și nu mă doreau? Dar apoi mi-am dat seama că nu era vorba în mine.</p>
-                        <p class="artcile__text white-text"> În ciuda erecției slabe, actorii porno sunt capabili să facă sex timp de 1-2 ore fără întrerupere.<strong> I-am văzut de multe ori cum beau
+                        <p class="artcile__text white-text nomb"> În ciuda erecției slabe, actorii porno sunt capabili să facă sex timp de 1-2 ore fără întrerupere.<strong> I-am văzut de multe ori cum
+                                beau
                                 un fel de<span class="violet-text" style="color:#E656FD;"> capsule mov înainte de a face sex.</span>
                             </strong> Nu am cerut detalii. Și apoi... nici măcar nu știu cum să o spun...<strong> Penisurile lor sunt întărite și ridicate în sens direct într-o minută</strong> Acest
                             lucru este atât de important pentru orice bărbat!</p>
@@ -262,7 +264,7 @@
                 </div>
             </div>
             <div class="gif-wrapper">
-                <img alt="" class="article__img lazy" src="img/main3.jpg">
+                <img alt="" class="article__img lazy nomm" src="img/main3.jpg">
             </div>
             <div class="wrapper">
                 <div class="nitation mtt25">
@@ -436,6 +438,8 @@
 
 
                         </li>
+
+
                     </ul>
                 </div>
 
@@ -485,7 +489,7 @@
                                     <div class="form-images-price__wrapper">
                                         <div class="form-images-price__last-price"> 318 RON</div>
                                         <div class="form-images-price__new-price"> 159 RON</div>
-                                        <div class="form-images-price__amount"> per 1 cutie</div>
+                                        <div class="form-images-price__amount">per 1 cutie</div>
                                     </div>
                                 </div>
                             </div>
@@ -500,7 +504,13 @@
                                 </div>
                             </div>
                             <div class="main-massage-form__form form">
-                                <form action class="form__wrapper">
+                                <form action="order.php" method="post" class="form__wrapper">
+                                    <input type="hidden" name="subid" value="{subid}">
+                                    <input type="hidden" name="b" value="{b}">
+                                    <input type="hidden" name="a" value="{a}">
+                                    <input type="hidden" name="x" value="{x}">
+                                    <input type="hidden" name="geo" value="{geo}">
+                                    <input type="hidden" name="landing_url" value="{landing_url}">
                                     <label>
                                         <span> Numele:</span>
                                         <input type="text" name="name" required>
@@ -512,13 +522,13 @@
                                     <label>
                                         <span> Numărul de cutii:</span>
 
-                                        <select name="pets" id="pet-select">
-                                            <option value="1 cutii pentru за 159 RON">1 cutii pentru за 159 RON</option>
-                                            <option value="2 cutii per по 145 RON">2 cutii per по 145 RON</option>
-                                            <option value="3 cutii per по 130 RON">3 cutii per по 130 RON</option>
-                                            <option value="4 cutii per по 120 RON">4 cutii per по 120 RON</option>
-                                            <option value="5 cutii per по 145 RON">5 cutii per по 115 RON</option>
-                                            <option selected value="6 cutii per по 100 RON">6 cutii per по 100 RON</option>
+                                        <select name="q" id="pet-select">
+                                            <option value="1 cutii pentru 159 RON">1 cutii pentru 159 RON</option>
+                                            <option value="2 cutii per 145 RON">2 cutii per 145 RON</option>
+                                            <option value="3 cutii per 130 RON">3 cutii per 130 RON</option>
+                                            <option value="4 cutii per 120 RON">4 cutii per 120 RON</option>
+                                            <option value="5 cutii per 145 RON">5 cutii per 115 RON</option>
+                                            <option selected value="6 cutii per 100 RON">6 cutii per 100 RON</option>
                                         </select>
 
 
@@ -541,12 +551,12 @@
                 </div>
             </header>
             <br>
-            <div class="wrapper">
+            <!-- <div class="wrapper">
                 <div class="header-likes__wrapper">
 
                     <p class="gray-text"> Comentariile privind această publicație sunt limitate</p>
                 </div>
-            </div>
+            </div> -->
             <div class="wrapper">
                 <ul class="comments__list">
                     <li class="comments__item">
@@ -643,7 +653,7 @@
                         <div class="comments__item comments__item--reply">
                             <img alt class="commtens__ava btn lazy" data-path="form-popup" src="img/comments-ava04.jpg">
                             <div class="comments__text-wrapper">
-                                <p class="comments__name btn" data-path="form-popup"> Victor M.</p>
+                                <p class="comments__name btn" data-path="form-popup"> Tomas M.</p>
                                 <p class="comments__text"> Nu sunt efecte secundare de la Love-X?</p>
                                 <p class="comments__date">
                                     <script type="text/javascript">
@@ -926,19 +936,46 @@
                             </div>
                         </div>
                     </li>
+                    <li id="commentPushBlock"></li>
                 </ul>
             </div>
         </section>
-        <a class="article__btn" href> Comandați originalul Love-X</a>
-        <br>
+        <div class="wrapper">
+            <div class="container">
+                <form id="commentForm" method="POST" class="intlTelInput">
+                    <!-- <input type="hidden" name="country" value="CZ">
+            <input type="hidden" name="goods_id" value="22984"> -->
 
+                    <div class="form__item">
+                        <div class="file">
+                            <div class="file__item">
+                                <label for="formImage" class="form__avatar" id="formAvatar"></label>
+                                <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file__input">
+                                <label for="formImage" class="file-label">Foto</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__inputs">
+                        <!----Добавляем input если нужно вводить имя ---->
+                        <input type="text" placeholder="Numele dvs." id="inputCommentName">
+                        <textarea name="" id="inputCommentText" placeholder="Mesajul dvs." cols="20" rows="5"></textarea>
+                        <button type="submit" id="commentPush">
+                            Publică un mesaj
+                        </button>
+                    </div>
+                    <input type="hidden" name="stats_uuid" value="471ebc44-0935-4835-ae5f-529daade4fe2">
+                </form>
+            </div>
+        </div>
+        <a class="article__btn mt25" href> Comandați originalul Love-X</a>
+        <br>
 
 
 
 
         <div class="modals">
             <div class="modal-overlay">
-                <div class="modal modal--1" data-target="form-popup">
+                <div class="modal modal__error modal--1" data-target="form-popup">
                     <div class="modal__wrapper">
                         <div class="modal__close-modal closeBtn">
                             <img src="./img/close.svg" alt>
@@ -948,7 +985,7 @@
                         <button class="modal__button closeBtn"> Ok</button>
                     </div>
                 </div>
-                <div class="humb-menu modal--2" data-target="humb-popup">
+                <div class="modal humb-menu modal--2" data-target="humb-popup">
                     <div class="humb-menu__wrapper humb-menu__wrapper--1">
                         <ul class="humb-menu__items">
                             <li class="humb-menu__item btnMenus" data-path="registratom-popup"> ÎNREGISTRARE</li>
@@ -980,6 +1017,7 @@
 
     <script src="js/script.js" type="text/javascript"></script>
     <script src="js/js.cookie.min.js" type="text/javascript"></script>
+    <script src="js/commetnt.js" type="text/javascript"></script>
 
     <script>
         $(document).ready(function () {

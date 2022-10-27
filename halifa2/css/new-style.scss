@@ -12,10 +12,20 @@ h1 {
 .mt-10 {
     margin-top: -10px;
 }
-.mtt25 {
+.nomm {
+    margin-bottom: 0;
+    display: block;
+}
+.mt25 {
     margin-top: 25px;
-
+}
+.mtt25 {
+    margin-top: 15px;
     margin-bottom: 25px;
+}
+.nomb {
+    margin-bottom: 0;
+    padding-bottom: 15px;
 }
 .red-text {
     color: #fc6a00;
@@ -318,6 +328,11 @@ form {
         text-align: center;
         color: #ffffff;
         border: none;
+        transition: all 0.4s ease 0s;
+        &:hover {
+            background: yellow;
+            color: #000;
+        }
         @media (max-width: 400px) {
             font-size: 16px;
             width: 250px;
@@ -769,7 +784,8 @@ input {
     &__logo {
         position: absolute;
         top: -50px;
-        left: 39%;
+        left: 50%;
+        transform: translate(-50%, 0px);
     }
     &__title {
         padding-top: 63px;
@@ -819,6 +835,11 @@ input {
         height: 60px;
         background: #fc6a00;
         border-radius: 30px;
+        transition: all 0.4s ease 0s;
+        &:hover {
+            color: #000;
+            background: yellow;
+        }
         span {
             font-weight: 700;
             font-size: 20px;

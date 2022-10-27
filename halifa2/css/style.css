@@ -382,8 +382,12 @@ body {
 		font-size: 18px;
 		line-height: 26px;
 		padding: 7px;
-		margin: 0px 14px;
 		/* max-width: 250px; */
+	}
+}
+@media (max-width: 460px) {
+	.article__btn {
+		margin: 0px 14px;
 	}
 }
 @media (max-width: 400px) {
