@@ -272,16 +272,9 @@ body {
 }
 
 .promo__info {
-	padding: 20px 0;
 	display: table;
 	width: 100%;
 	border-bottom: 1px solid #9c9c9c;
-}
-
-@media (max-width: 767px) {
-	.promo__info {
-		padding: 15px 0;
-	}
 }
 
 .promo__author-img {

@@ -235,7 +235,7 @@ textarea {
 .comment-title {
 	margin-top: 20px;
 	padding: 17px 18px;
-	font-family: 'Roboto';
+	font-family: sans-serif;
 	font-style: normal;
 	font-size: 22px;
 	line-height: 26px;
