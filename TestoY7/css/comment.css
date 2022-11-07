@@ -218,7 +218,7 @@ textarea {
 	background-color: transparent;
 	border: none;
 	border-radius: 5px;
-	background-color: #b118e5;
+	background-color: #6c6c6c;
 	color: white;
 	font-weight: bold;
 	padding: 10px 15px;
@@ -233,7 +233,7 @@ textarea {
 	background-color: yellow;
 }
 .comment-title {
-	margin-top: 20px;
+	/* margin-top: 20px; */
 	padding: 17px 18px;
 	font-family: sans-serif;
 	font-style: normal;

@@ -290,6 +290,8 @@ body {
 }
 
 .promo__author-info {
+	display: inline-block;
+	width: 100%;
 	font-weight: bold;
 	font-size: 18px;
 	line-height: 21px;
@@ -312,12 +314,16 @@ body {
 		height: 30px;
 	}
 }
+.promo__name {
+	display: block;
+	width: 100%;
+}
 
 .promo__author,
 .promo__social-list {
-	display: table-cell;
+	display: block;
 	vertical-align: middle;
-	width: 50%;
+	width: 100%;
 }
 
 .promo__social-item {
@@ -339,7 +345,7 @@ body {
 }
 
 .promo__social-item:hover svg {
-	fill: #b118e5;
+	fill: #00c73c;
 }
 
 @media (max-width: 767px) {
@@ -480,10 +486,10 @@ body {
 	line-height: 36px;
 	text-align: center;
 	color: #ffffff;
-	background: #ea4747;
+	background: #00c73c;
 	border-radius: 50px;
 	margin: 0 auto;
-	padding: 22px 0;
+	padding: 22px 10px;
 	transition: all 0.3s;
 	cursor: pointer;
 }
