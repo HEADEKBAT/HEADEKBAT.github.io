@@ -1,0 +1,123 @@
+/** @format */
+
+.btn {
+	cursor: pointer;
+}
+
+.modal-overlay {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(245, 242, 233, 0.7);
+	-webkit-backdrop-filter: blur(9px);
+	backdrop-filter: blur(9px);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100%;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.modal {
+	background-color: #fff;
+	width: 400px;
+	max-width: 100%;
+	height: 369px;
+	border: 6px solid #346df7;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	display: none;
+}
+
+.modal__wrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	text-align: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+.modal__wrapper h3 {
+	font-weight: 700;
+	font-size: 27px;
+	line-height: 32px;
+	text-align: center;
+	color: #eb0d0d;
+}
+
+.modal__wrapper p {
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 26px;
+	text-align: center;
+	color: #000;
+}
+
+.modal__button {
+	margin-top: 40px;
+	width: 199px;
+	height: 48px;
+	background: #346df7;
+	-webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+	border-radius: 30px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	text-align: center;
+	border: none;
+	color: #ffffff;
+}
+
+.modal__close-modal {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.modal__close-modal img {
+	width: 25px;
+	height: 25px;
+}
+
+.modal-overlay--visible {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.modal--visible {
+	display: block;
+}
