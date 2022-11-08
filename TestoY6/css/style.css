@@ -156,6 +156,7 @@ body {
 .header__logo,
 .header__search-wrapper {
 	/* display: table-cell; */
+	margin: auto auto;
 	vertical-align: middle;
 	height: 100px;
 }
@@ -173,6 +174,7 @@ body {
 
 .header__search-wrapper {
 	width: 380px;
+	height: 100%;
 }
 
 @media (max-width: 767px) {
@@ -365,7 +367,7 @@ body {
 .promo__title {
 	margin-top: 20px;
 	font-weight: bold;
-	font-size: 48px;
+	font-size: 32px;
 	line-height: 58px;
 	color: #000000;
 	margin-bottom: 15px;
@@ -374,7 +376,7 @@ body {
 @media (max-width: 767px) {
 	.promo__title {
 		margin-top: 15px;
-		font-size: 28px;
+		font-size: 32px;
 		line-height: 34px;
 		margin-bottom: 15px;
 	}
@@ -688,7 +690,7 @@ form .error {
 }
 .header__logo-text {
 	font-weight: 700;
-	font-size: 45px;
+	font-size: 38px;
 	line-height: 53px;
 	color: #000000;
 }
