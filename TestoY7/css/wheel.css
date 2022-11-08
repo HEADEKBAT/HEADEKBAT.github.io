@@ -20,15 +20,16 @@
 }
 
 .btn_rulet {
+	padding: 10px 20px;
 	display: block !important;
 	margin: 40px auto !important;
 	padding: 20px !important;
 	font-size: 20px !important;
 	text-decoration: none !important;
-	background-color: #de0606 !important;
+	background: #00c73c;
+	border-radius: 50px !important;
 	text-align: center !important;
 	color: #fff !important;
-	border-radius: 4px !important;
 	border: none !important;
 	cursor: pointer !important;
 }
