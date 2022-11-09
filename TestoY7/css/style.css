@@ -7,6 +7,7 @@ html {
 
 body {
 	margin: 0;
+	background: #ffffff;
 }
 
 main {
@@ -123,8 +124,8 @@ body {
 	line-height: 1.5;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
-	color: #ffffff;
-	background: #f5f2e9;
+	/* color: #ffffff; */
+	background: #fff;
 	color: #000000;
 
 	overflow-x: hidden;
@@ -201,7 +202,7 @@ body {
 }
 
 .header__nav {
-	background: #272727;
+	background: #06c63c;
 }
 
 .header__nav-list {
