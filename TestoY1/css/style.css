@@ -126,7 +126,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;
 	color: #ffffff;
-	background: #f5f2e9;
+	background: #fff;
 	color: #000000;
 
 	overflow-x: hidden;
@@ -203,7 +203,7 @@ body {
 	width: 43px;
 	height: 43px;
 	border-radius: 50%;
-	background: url('../img/icon-search.png') no-repeat center, #b118e5;
+	background: url('../img/icon-search.png') no-repeat center, #595858;
 	border: none;
 	/* cursor: pointer; */
 }
@@ -344,7 +344,7 @@ body {
 }
 
 .promo__social-item:hover svg {
-	fill: #b118e5;
+	fill: #595858;
 }
 
 @media (max-width: 767px) {
@@ -458,7 +458,7 @@ body {
 	font-size: 24px;
 	line-height: 36px;
 	color: #000000;
-	border-left: 3px solid #ea4747;
+	border-left: 3px solid #ee4647;
 	padding: 50px 30px 10px;
 	position: relative;
 	margin-bottom: 25px;
@@ -492,7 +492,7 @@ body {
 	line-height: 36px;
 	text-align: center;
 	color: #ffffff;
-	background: #ea4747;
+	background: #ee4647;
 	border-radius: 50px;
 	margin: 0 auto;
 	padding: 22px 0;
@@ -669,4 +669,8 @@ form .error {
 	font-weight: 700;
 	color: #5c0da0;
 	text-decoration: underline;
+}
+.header-logo {
+	border-bottom: 1px solid #9c9c9c;
+	width: 100%;
 }
