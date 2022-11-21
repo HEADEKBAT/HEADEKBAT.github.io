@@ -3097,3 +3097,8 @@ textarea {
 .bups .dn {
 	display: none;
 }
+.red-link {
+	text-decoration: underline;
+	color: #fe1a1a;
+	font-weight: 700;
+}
