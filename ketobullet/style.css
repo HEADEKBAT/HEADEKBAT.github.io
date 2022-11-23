@@ -2208,9 +2208,9 @@ input:-webkit-autofill:focus {
 }
 .main-photo__item {
 	height: 100%;
-	-webkit-box-flex: 0;
-	-ms-flex: 0 0 50%;
-	flex: 0 0 50%;
+	/* -webkit-box-flex: 0;
+	-ms-flex: 0 0 50%; */
+	/* flex: 0 0 50%; */
 }
 .main-photo__item img {
 	width: 100%;
@@ -2310,6 +2310,7 @@ h1 {
 	border: none;
 }
 .button-footer span {
+	text-transform: uppercase;
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: 700;
