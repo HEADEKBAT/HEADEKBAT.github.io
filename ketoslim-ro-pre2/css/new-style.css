@@ -1,0 +1,26 @@
+.header {
+  background: #fff;
+}
+
+.header-img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header-img img {
+  width: 100%;
+}
+
+.header-container {
+  margin: 0 auto;
+  max-width: 768px;
+}
+
+.color-text {
+  color: #850286;
+}
+
+.red-text-form {
+  color: #fe1a1a;
+}
+/*# sourceMappingURL=new-style.css.map */
