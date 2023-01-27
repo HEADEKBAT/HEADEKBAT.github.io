@@ -1,4 +1,4 @@
-<!--?php
+<?php
 // Защита от прямых заходов на ленд
 if (!isset($rawClick)) {
     echo '404';
@@ -6,865 +6,884 @@ if (!isset($rawClick)) {
 }
 
 // Данные по офферу
-$offerData = 'Welltone---hr---leadrock.php';
+$offerData = 'welltone---lt---shakes.php';
 include __DIR__ . '/../_order/offers/' . $offerData;
 
 // Получение ID партнерки
 include __DIR__ . '/../_order/affiliates.php';
 $affiliates_id = $affiliates[$aff];
 // ID счетчика Яндекс.Метрики
-$metrika = '92129194';
+$metrika = '92156383';
 // Цвета конфирма
 $confirmColorBackground = 'ffffff'; // Общий фон
-$confirmColorBlocks = '600aff'; // Блоки
+$confirmColorBlocks = '000'; // Блоки
 $confirmColorHeaders = '000000'; // Заголовки
-$confirmColorText = 'fff'; // Текст в блоках
+$confirmColorText = '2c6285'; // Текст в блоках
 // Блок тестирования элементов
 //include __DIR__ . '/versions.php';
 
 // Обновление параметров клика
 include __DIR__ . '/../_php/update-params.php';
-?-->
+?>
 <!DOCTYPE html>
-<html lang="ru" style="scroll-behavior: smooth;">
+<html
+    data-scrapbook-title="Ministarstvo zdravlja Srbije predviđa da će 2022. godine od kardiovaskularnih bolesti umreti više od 200.000 Srba. Svaki treći Srbin umire od srčanog udara. Visok krvni pritisak, začepljene arterije i bolesno srce dovode do rane smrti.">
 
 <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="description"
-        content="DRAUDŽIAMAS ATRADIMAS: Lietuvos kardiologas buvo pašalintas iš televizijos studijos, nes atrado, kaip gydyti hipertenziją ir 7 „nepagydomas“ pagyvenusių žmonių ligas.">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="img/med.png" type="image/x-icon">
 
-    <title>DRAUDŽIAMAS ATRADIMAS: Lietuvos kardiologui gresia atleidimas iš darbo už tai, kad televizijos laidoje įvardijo vaistą nuo hipertenzijos ir 7 "nepagydomų" pagyvenusių žmonių ligų</title>
+    <script src="js/jquery.min.js"></script>
+    <title>Vyriausiasis Lietuvos kardiologas: „Kas trečias vyresnis nei 45 metų Lietuvos pilietis per artimiausius 10 metų mirs nuo hipertenzijos, nesuvokdamas, kad serga. Valstybė nesirūpina
+        pensininkų ir hipertonikų sveikata“</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <!-- ==favicon===== -->
-    <link rel="icon" type="image/png" href="./img/favicon/favicon.png" data-cmp-info="9">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+    <link media="all" href="style/index.css" type="text/css" rel="stylesheet">
+    <link media="all" href="./css/comments.css" type="text/css" rel="stylesheet">
+    <link media="all" href="style/orderForm.css?v=2" type="text/css" rel="stylesheet">
+    <link media="all" type="text/css" rel="stylesheet" href="style/ded.css">
+    <link media="all" type="text/css" rel="stylesheet" href="./css/comment.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="{_current_domain}/lander/_js/scripts.js?var=4&metrika=<?php echo $metrika;?>&aid=<?php echo $affiliates_id;?>"></script>
-    <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff;?>&off=<?php echo $off;?>&geo=<?php echo $geo;?>&land_pre={landing_id}&offer_pre={offer_id}"></script>
+    <script src="{_current_domain}/lander/_js/scripts.js?var=4&metrika=<?php echo $metrika; ?>&aid=<?php echo $affiliates_id; ?>"></script>
+    <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff; ?>&off=<?php echo $off; ?>&geo=<?php echo $geo; ?>&land_pre={landing_id}&offer_pre={offer_id}"></script>
 </head>
 
 <body>
-    <script>
-        function dtime_nums(d, like_eu) {
-            var now = new Date();
-            now.setDate(now.getDate() + d + 1);
+    <div id="bodyWrapper">
+        <script>
+            function dtime_nums(d, like_eu) {
+                var now = new Date();
+                now.setDate(now.getDate() + d + 1);
 
-            var dayNum = "";
-            if (now.getDate() < 10) {
-                dayNum = "0";
+                var dayNum = "";
+                if (now.getDate() < 10) {
+                    dayNum = "0";
+                }
+                dayNum += now.getDate();
+
+                var monthNum = "";
+                if (now.getMonth() + 1 < 10) {
+                    monthNum = "0";
+                }
+                monthNum += now.getMonth() + 1;
+
+                if (like_eu === true) {
+                    document.write(dayNum + "." + monthNum + "." + now.getFullYear());
+                } else {
+                    document.write(monthNum + "." + dayNum + "." + now.getFullYear());
+                }
             }
-            dayNum += now.getDate();
+        </script>
+        <header>
+            <img style="width: 100%;max-width: 100%;" src="./img/header.png" alt>
+        </header>
 
-            var monthNum = "";
-            if (now.getMonth() + 1 < 10) {
-                monthNum = "0";
-            }
-            monthNum += now.getMonth() + 1;
+        <div id="mainWrapper">
+            <div id="wrapper" style="display: block;">
+                <div id="content">
 
-            if (like_eu === true) {
-                document.write(dayNum + "." + monthNum + "." + now.getFullYear());
-            } else {
-                document.write(monthNum + "." + dayNum + "." + now.getFullYear());
-            }
-        }
-    </script>
-    <style>
-        .color-link {
-            cursor: pointer;
-            color: #600aff;
-            font-weight: 700;
-            text-decoration: underline;
-        }
-    </style>
-    <style>
-        .author {
-            margin-top: 15px;
-            font-size: 21px;
-            font-weight: 700;
-        }
+                    <div id="title_block">
+                        <div class="title_block_wrapper">
+                            <div class="title_block_content">
+                                <div class="title_block_img">
+                                </div>
+                                <div class="title_block_shadow"></div>
+                                <div class="title_block_texts">
+                                    <div class="rublica">
+                                        <span> GYVENIMAS </span>
+                                        <span> / </span>
+                                        <span> SVEIKATA </span>
+                                    </div>
+                                    <div class="main-title">
+                                        <div class="main-title__info">
 
-        .color-border-title {
-            margin-top: 15px;
-            display: inline-block;
-            background: #c03;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            font-weight: 700;
-            font-size: 18px;
-            padding: 3px 10px;
-            text-transform: uppercase;
-        }
-    </style>
+                                            <div class="main-title__date">
+                                                <script type="text/javascript">
+                                                    dtime_nums(-3, true);
+                                                </script> 07:11
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="title_block_subcontent">
+                                        <div class="title_block_lead">
+                                            <h1 class="title_h1"> Vyriausiasis Lietuvos kardiologas: „Kas trečias vyresnis nei 45 metų Lietuvos pilietis per artimiausius 10 metų mirs nuo
+                                                hipertenzijos, nesuvokdamas, kad serga. Valstybė nesirūpina pensininkų ir hipertenzija sergančių pacientų sveikata“</h1>
+                                            <div class="title_bq"> Dėl naujausių hipertenzijos gydymo metodų stokos vidutinė vyresnio amžiaus žmonių gyvenimo trukmė Lietuvoje sutrumpėja 15-17 metų.
+                                                Vilnietis kardiologas Didona Vilkinienė turi atsakymą į klausimą, kaip prailginti gyvenimą ir visam laikui atsikratyti aukšto kraujospūdžio.</div>
 
-    <header class="header" id="header">
-        <div class="header-container btn" data-path="form-popup">
-            <img src="./img/header-img.png" alt>
+                                            <div class="title_block_author">
+                                                <div class="tauthor"> Didona Vilkinienė</div>
+                                                <div data-format="dd month yyyy" class="tdate start date-7"> 2023 m. sausio 20 d</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- DED -->
+
+                    <!-- DED -->
+                    <div class="padWrap">
+                        <a href="#order_form"><img alt class="img-left main-img" src="./img/main1.jpg"></a>
+                        <div class="info-image-bg">
+                            <p class="nomt">
+                                <span class="info-image-bg__name">Didona Vilkinienė</span> <br>
+                                Lietuvos kardiologų asociacijos vyriausiasis gydytojas, profesorius, Europos Sąjungos nusipelnęs gydytojas <br>
+                                Darbo patirtis: 20 metai
+                            </p>
+                        </div>
+                        <ul class="article__top-list" style="list-style: none;">
+                            <li>
+                                <div class="list__title"> 12 mln</div>
+                                <p> Kasmet nuo širdies ligų miršta 12 mln.</p>
+                            </li>
+                            <li>
+                                <div class="list__title">95%</div>
+                                <p> 95% atvejų galima išvengti chirurginės intervencijos.</p>
+                            </li>
+                            <li>
+                                <div class="list__title">85%</div>
+                                <p> Daugiau nei 85% insultų ir širdies priepuolių yra susiję su nešvariomis kraujagyslėmis.</p>
+                            </li>
+                        </ul>
+
+                        <p> „Per visus savo medicinos praktikos metus nemačiau tokios baisios statistikos. Dabar mano misija yra padėti tiems žmonėms ir pratęsti jų gyvenimą! Esu visiškai įsitikinęs,
+                            kad kiekvienas Lietuvos pilietis galės sau padėti namuose“.</p>
+                        <p> Prof. Didona Vilkinienė – lietuvių kardiologas, profesorius. Ji garsėja tuo, kad gydo žmones be tablečių. Jos teigimu, dėl netinkamo aukšto kraujospūdžio gydymo 2021–2022
+                            m.
+                            mirė kas ketvirtas pensininkas. Laimei, Didona Vilkinienė turi planą pailginti žmonių gyvenimą 12–15 metų.</p>
+                        <p> Didona Vilkinienė įsitikinęs, kad KIEKVIENAS GALI NAMUOSE IŠVALYTI KRaujagysles, PAGERINTI ŠIRDIES KRAUJAGYSLIŲ SISTEMOS DARBĄ IR GYVENTI 15 METŲ!</p>
+
+                        <p> Kaip atliekamas šis gydomasis valymas, gydytojas paaiškino žemiau.</p>
+
+                        <div style="border: 2px solid rgb(0, 171, 114); background-color: rgb(188, 248, 238); padding: 5px; border-radius: 10px;">
+                            <h3 style="padding-left: 15px;color:#000;"> Šiame straipsnyje taip pat minimos šios temos:</h3>
+
+                            <ul>
+                                <li> Išgyventi iki 100 metų be tablečių yra realu!</li>
+                                <li> Kodėl lėtinės nepagydomos ligos eina koja kojon su užsikimšusiomis kraujagyslėmis</li>
+                                <li> Paslėpti ir akivaizdūs nešvarių kraujagyslių požymiai</li>
+                                <li> ŠIUOLAIKINIAI HIPERTENZIJOS GYDYMO METODAI pagyvenusiems žmonėms BE Tablečių</li>
+                            </ul>
+                        </div>
+
+                        <h3> Kraujagyslių nepaisymas gali būti jūsų žudikas!</h3>
+
+                        <p>
+                            <b> Profesorius Didona Vilkinienė:</b>
+                        </p>
+
+                        <p> – Pateiksiu šiek tiek informacijos, kuri, tikiuosi, privers susimąstyti.</p>
+
+                        <p> Dažniausia mirties priežastis planetoje yra ŠIRDIES IR KRAUJOVĖS LIGOS. Pagrindinė tokių su amžiumi atsirandančių ligų atsiradimo priežastis yra CHOLESTEROLIS.
+                            Cholesterolis, pasirodo, yra pavojingiausia medžiaga planetoje. Kad cholesterolis žudo daugiau žmonių nei alkoholis, nikotinas ir narkotikai kartu paėmus.</p>
+
+                        <p style="background-color: #9a045d; color: #fff; padding: 5px; font-weight: bold;"> 94% atvejų, jei žmogus miršta nesulaukęs 80 metų, kaltas blogasis cholesterolis.</p>
+
+                        <h3> Cholesterolis kenkia sveikatai. Jei cholesterolis nesikauptų kraujagyslėse, žmogus nesunkiai išgyventų iki 100 metų.</h3>
+
+                        <p> Kaip atrodo cholesterolis ir kas tai yra? Pateiksiu paprastą palyginimą: įsivaizduokite riebalus ant keptuvės, kuri atvėso ir sustingo. Maždaug taip atrodo cholesterolis.
+                        </p>
+
+                        <p> Būdama kraujyje, ši medžiaga nusėda išilgai kraujagyslių sienelių. Pirmiausia tai plonas sluoksnis (per 20-25 m.), vėliau greitai sutirštėja cholesterolio sluoksnis (25-40
+                            m.), nes vis daugiau dalelių prilimpa prie lipnaus paviršiaus. DĖL 40 METŲ CHOLESTEROLIS BEVEIK Dvigubai padidina KRaujagyslių ATIDARYMĄ. O širdis neturi nieko kito, kaip
+                            tik didinti kraujospūdį. Žmogus patiria slėgio šuolius ir su amžiumi susijusią hipertenziją su visomis pasekmėmis. Ir tai nėra pavojingiausia!</p>
+
+                        <p> Daug pavojingiau, kai cholesterolis visiškai užkemša smulkias kraujagysles, kurios prasiskverbia į visus audinius. Dėl pablogėjusio aprūpinimo krauju vidaus organuose
+                            vystosi patologiniai procesai. Ir tai yra lėtinių ligų vystymosi pagrindas.</p>
+
+                        <figure class="Figure" style="text-align: center;">
+                            <img src="img/content-2.jpg">
+                            <span class="Figure-caption"> Apsvarstykite, ar vanduo gali tekėti per surūdijusius vamzdžius? Tikrai ne. Tas pats atsitinka su užsikimšusiomis kraujagyslėmis. Dėl
+                                cholesterolio, kuris kaupiasi kaip rūdys, kraujas negali tekėti iš širdies į organus, įskaitant smegenis. Rezultatas – ankstyva mirtis.</span>
+                        </figure>
+
+                        <p> Žodžiu, viskas organizme priklauso nuo kraujagyslių būklės. Jei kojų kraujagyslės užsikimšusios, tai sukelia venų varikozę, nuolatinį patinimą ir nuolatinį sunkumo jausmą
+                            kojose. Jei užsikimšimas yra kepenyse, atsiranda hepatozė ir cirozė; jei jis yra sąnariuose, atsiranda artritas, artrozė ar skausmas stuburo srityje. Jei akių kraujagyslės
+                            užsikemša, žmogus pamažu praranda regėjimą.</p>
+
+                        <h3 style="background-color: #9a045d; color: #fff; padding: 5px; font-weight: bold;"> Cholesterolio nusėdimas yra neišvengiamas. Tai atsitinka kiekvieno žmogaus kraujagyslėse.
+                            O kraujagyslių užsikimšimas yra greito senėjimo priežastis.</h3>
+
+                        <h3> Užsikimšusios kraujagyslės gali sukelti negrįžtamų pasekmių</h3>
+                        <p> Kai kraujagyslės užsikemša cholesterolio ir kitų nuosėdų, kenčia absoliučiai visi organai. Pagrindinė našta tenka širdies ir kraujagyslių sistemai. Paminėsiu tik 10% viso
+                            ligų, kurios pasireiškia žmonėms, kurių arterijų užsikimšimas, sąrašo:</p>
+
+                        <p> 1.<strong> Hipertenzija.</strong> Kaip sakiau, kraujas negali patekti į organus dėl siauro kraujagyslių spindžio.</p>
+                        <p> 2.<strong> Insultas.</strong> Smegenų kraujagyslės užsikimšusios arba plyšusios. Sutrinka smegenų pusrutulių aprūpinimas krauju, neuronai badauja ir miršta.</p>
+                        <p> 3.<strong> Aterosklerozė.</strong> Kai cholesterolio kiekis gerokai viršija normą, kraujagyslės sienelėje susidaro aterosklerozinė plokštelė. Kraujo judėjimas į organus
+                            gali būti sustabdytas bet kuriuo metu ir sukelti ankstyvą mirtį.</p>
+                        <p> 4.<strong> Širdies smūgis.</strong> Dažniausia pažengusios aterosklerozės pasekmė.</p>
+                        <h3> Ne kartą mačiau užsikimšusių kraujagyslių pasekmes. Audiniai skausmingai miršta, kenčia VISI organai.</h3>
+                        <figure class="Figure" style="text-align: center;">
+                            <img src="img/content-3.jpg">
+                            <span class="Figure-caption"> Insultą patyrusio paciento smegenų magnetinio rezonanso tomografija. Dėl cholesterolio kaupimosi kraujagyslė plyšta ir kraujuoja į smegenis.
+                                Kraujas kaupiasi ir suspaudžia aplinkinius smegenų audinius.</span>
+                        </figure>
+                        <figure class="Figure" style="text-align: center;">
+                            <img src="img/content-4.jpg">
+                            <span class="Figure-caption"> 55 metų moters širdis, kuri nesivalė kraujagysles. Nuotraukoje parodytas lipidų atsisluoksniavimas su vėlesniu jungiamojo audinio skaidulų
+                                augimu kraujagyslės sienelėje.</span>
+                        </figure>
+                        <figure class="Figure" style="text-align: center;">
+                            <img src="img/content-6.jpg">
+                            <span class="Figure-caption"> Dėl kraujagyslių užsikimšimo vyrui kraujavo tinklainė.</span>
+                        </figure>
+
+                        <p>
+                            <b> Profesorius Didona Vilkinienė:</b>
+                        </p>
+
+                        <p> Iš karto galiu pasakyti, jei jums niekada nebuvo valytos kraujagyslės, o jums daugiau nei 50 metų, tai jūsų kraujagyslės tikrai nešvarios. Vos pradėję juos valyti,
+                            PAJUSIITE PAGERĖJIMĄ BEVEIK IŠ karto.</p>
+
+                        <div style="border: 2px solid rgb(194, 14, 14); background-color: rgb(250, 192, 192); padding: 5px;">
+                            <p></p>
+                            <h2> Nešvarių kraujagyslių simptomai:</h2>
+                            <p></p>
+                            <b> Jei turite bent 2 iš šių simptomų, turite nedelsiant išvalyti kraujagysles!</b>
+
+                            <ul class="dhr">
+                                <li> Patinimas po nakties miego</li>
+                                <li> Spengimas ausyse</li>
+                                <li> Turi būti jiems prieš akis</li>
+                                <li> Sąnarių skausmai</li>
+                                <li> Vertigo</li>
+                                <li> Nemiga naktį ir mieguistumas dieną</li>
+                                <li> Nuolatinis nuovargio jausmas</li>
+                                <li> Regėjimo pablogėjimas</li>
+                                <li> Atminties pablogėjimas</li>
+                                <li> Venų išsiplėtimas</li>
+                                <li> Dusulys</li>
+                                <li> Dažnos virškinimo trakto problemos</li>
+                                <li> Problemos su pertekliniu kūno svoriu</li>
+                            </ul>
+                        </div>
+
+                        <h3> Ar galite ginčytis, kad kraujagyslių valymas gali pailginti vyresnio amžiaus žmonių gyvenimą ir stabilizuoti kraujospūdį?</h3>
+
+                        <p>
+                            <b> Profesorius DR. Didona Vilkinienė:</b>
+                        </p>
+
+                        <p> - Aš žinau tai! Mūsų klinikoje kraujagysles valyti rekomenduojame visiems vyresniems nei 50 metų (o kai kuriems net vyresniems nei 40 metų) pacientams. Tik po valymo mes
+                            nustatome, kaip elgtis toliau.<span style="background-color: rgb(196, 221, 83);"> MAŽdaug 9 IŠ 10 ŽMONIŲ SLĖGIS NORMALIZUOJAMAS IŠ karto PO VALYMO IR TOLIAU GYDYTI
+                                NEREIKALINGAS.</span>
+                        </p>
+
+                        <p>
+                            <b> Kitaip tariant, daugelis žmonių, kurie dabar reguliariai vartoja vaistus nuo kraujospūdžio, gali jo atsikratyti. O tereikia išvalyti kraujagysles. Jei kalbame apie
+                                hipertenziją, problema neišnyks iš karto (nors taip pat būna), bet vis tiek bendra būklė pagerės daug kartų!</b>
+                        </p>
+
+                        <p>
+                            <strong> Blogiausia, kas mane šokiravo, buvo nesąžiningi Lietuvos gydytojai, kurie tiesiog nori užsidirbti iš tavo bėdos. Daugelis jų tiesiog užmerkia akis į tai, kad šiuo
+                                metu žmogui gresia insultas atsidurti ligoninės lovoje.</strong> Taip, mačiau atvejų, kai kardiologai išrašo brangius vaistus, bet supratau, kad jie pacientui nepadės.
+                            Pacientas išleis daug pinigų ir energijos savo sveikatai. Rezultatas bus lygus nuliui, o laikas bus sugaištas be reikalo. Taigi žmogų iš nežinojimo galima pamažu nunešti į
+                            kapus.<strong> Tuo pačiu kraujagysles išvalyti paprasta, nereikalaujanti didelių išlaidų ir greitai pasveiksta žmogus.</strong>
+                        </p>
+
+                        <h3> Kraujagyslių valymo būdas pensininkams ir žmonėms, sergantiems hipertenzija</h3>
+
+                        <p>
+                            <b> Profesorius DR. Didona Vilkinienė:</b>
+                        </p>
+                        <style>
+                            .button-link {
+                                text-decoration: underline;
+                                font-weight: 700;
+                                cursor: pointer;
+                                color: #ff3e8c;
+                            }
+                        </style>
+                        <p> – Šiandien Europoje yra tik vienas veiksmingas vaistas. Tai vadinama <span class="color-link">Welltone</span>. Šis vaistas buvo sukurtas 2015 metais
+                            Širdies ligų institute. Į vaisto sudėtį įeina apie 40 veikliųjų medžiagų, kraujagyslėms naudingų augalų ekstraktų, vitaminų, mikro ir makroelementų.</p>
+
+                        <p> Svarbiausias komplekso komponentas “<span class="color-link">Welltone</span>“ sudaro vadinamąsias „AKTYVIOJI DEGUONIO MOLEKULES“. Jie sugeba
+                            „suvalgyti“ kraujagyslėse susikaupusius nešvarumus. Šios „molekulės“ tirpdo cholesterolį, krešulių masę ir kalcio kristalus.</p>
+                        <figure class="Figure" style="text-align: center;">
+                            <img src="img/content-5.jpg">
+                            <span class="Figure-caption"></span>
+                        </figure>
+                        <!-- <p>
+                            „Molekule aktivnog kiseonika“ su otkrili 2007. godine japanski naučnici. Za istraživanja u toj oblasti dvojica japanskih naučnika je dobila Nobelovu nagradu. Danas se
+                            „molekule aktivnog kiseonika“ aktivno
+                            koriste u svetskoj medicini.
+                        </p>
+
+                        <p style="border: 2px dashed rgb(3, 146, 79); padding: 10px;">
+                            <b>
+                                Japan je postao rekorder u prosečnom očekivanom životnom veku. Doživeti stotu za Japance ne predstavlja čudo. Ako su ranije Japanci čistili krvne sudove sa biljkama,
+                                pomoću fiskulture i joge, sada koriste
+                                specijalne lekove na bazi „aktivnog kiseonika“. Danas mi vidimo rezultat takvih odluka. Sami Japanci su već od 1965. godine počeli da posvećuju veliku pažnju čišćenju
+                                krvnih sudova za starosno doba 40-50
+                                godina, nakon što je donet Nacionalni program ozdravljenja i dugovečnosti. U tom programu čišćenje krvnih sudova je izdvojeno u poseban zakonski član.
+                            </b>
+                        </p> -->
+                        <p> Man svarbiausia, kad kraujagyslės būtų išvalytos naudojant <span class="color-link">Welltone</span> seniai populiarus Nyderlanduose. Mokslo draugija
+                            atliko apklausą tarp žmonių, kurie pasinaudojo šiuo metodu.</p>
+                        <h3> Statistika kalba pati už save:</h3>
+                        <p>
+                        </p>
+                        <ul>
+                            <li> 18% pacientų per 30 dienų visiškai atsikratė širdies ir kraujagyslių ligų;</li>
+                            <li> 77% pacientų per 60 dienų visiškai atsikratė kraujospūdžio ir širdies ir kraujagyslių ligų;</li>
+                            <li> 4% pacientų kraujospūdžio problemų atsikratė per 8 dienas, bet širdies ir kraujagyslių ligas pašalino tik per 90 dienų;</li>
+                            <li> 1% pacientų atsikratė tik kraujospūdžio problemų;</li>
+                            <li> 96% pacientų visiškai išsivalė kraujagysles ir įveikė visas širdies ir kraujagyslių ligų rizikas.</li>
+                        </ul>
+                        <p></p>
+                        <h3 class="tac color-text"> Hipertenzijos ir širdies ir kraujagyslių ligų gydymas Lietuvoje išliko viduramžių lygyje! Mes galime tai išspręsti kartu!</h3>
+
+                        <a href="#order_form"><img alt class="img-left main-img" src="./img/product.png"></a>
+                        <div class="middle">
+                            <div>
+                                <a class="button" data-toggle="scroll" href="">PASKUTINĖS PARTIJOS PARDAVIMAS</a>
+                            </div>
+                        </div>
+
+                        <h3> Kiek laiko <span class="color-link">Welltone</span> reikia naudoti kraujagyslėms valyti?</h3>
+
+                        <p> Vidutiniškai vaisto vartojimo kursas trunka 4-6 savaites. Pasibaigus šiam laikotarpiui, jis turėtų būti vertinamas pagal paciento būklę.</p>
+
+                        <p><b> Aš išvardinsiu, ką jis gali padaryti <span class="color-link">Welltone</span> Jūsų kūnui ir sveikatai valymo metu ir po kelių mėnesių po valymo.</b>
+                        </p>
+                        <p><b> Jis valo ir atkuria kraujagysles</b></p>
+
+                        <p style="padding: 10px; background-color: rgb(226, 246, 248);"> Naudojant „aktyviąsias deguonies molekules“ <span class="color-link">Welltone</span>
+                            ištirpins cholesterolio nuosėdas, trombus ir kalcio nuosėdas.</p>
+
+                        <p><b> Jis atkurs vidaus organus ir sąnarius</b></p>
+
+                        <p style="padding: 10px; background-color: rgb(226, 246, 248);"> Išvalius kraujagysles, prasidės vidaus organų regeneracija. Pasikeitus orams, sąnariai atsigauna ir nustoja
+                            skaudėti. Išvalius kraujagysles, išgydomos skrandžio ir dvylikapirštės žarnos opos.</p>
+
+                        <p><b> Jis ištirpdys riebalų perteklių</b></p>
+
+                        <p style="padding: 10px; background-color: rgb(226, 246, 248);"> <span class="color-link">Welltone</span> yra medžiagų, kurios pagreitina riebalų skaidymo
+                            procesą. Išsivalius kraujagysles per mėnesį vidutiniškai netenkama 8-12 kg kūno svorio.</p>
+
+                        <p><b> Tai pagerins regėjimą ir atmintį</b></p>
+
+                        <p style="padding: 10px; background-color: rgb(226, 246, 248);"> Sudėtinga <span class="color-link">Welltone</span> formulė gali atkurti akies mikrokraujagysles (dugno dugną),
+                            todėl regėjimas palaipsniui
+                            grįžta.</p>
+
+                        <p><b> Atkuria potenciją vyrams!</b></p>
+
+                        <p style="padding: 10px; background-color: rgb(226, 246, 248);"> Dėl kraujagyslių valymo vėl išsiskiria hormonas testosteronas. Išnyksta prostatitas, atsiranda potencija ir
+                            seksualinis gyvenimas.</p>
+
+                        <img src="./img/content-7.jpg">
+
+                        <h3> Lietuvos vaistinėse trūksta <span class="color-link">Welltone</span> preparatų</h3>
+
+                        <p>
+                            <strong> Kiek žinome, vaistinėse labai sunku rasti <span class="color-link">Welltone</span>. Tas vaistas retai laukia lentynoje. Tai teisinga? O ką galėtumėte patarti mūsų
+                                žmonėms, norintiems rasti
+                                gydymą?</strong>
+                        </p>
+
+                        <p> - Taip, tai tiesa. <span class="color-link">Welltone</span> gaminamas nedideliais, ribotais kiekiais, todėl vaistinių tiesiog nepasiekia. Didelė dalis,
+                            deja, išeina į lauką, o dalį perka privačios klinikos.</p>
+
+                        <p> Paprasti žmonės vargu ar gali pasiekti <span class="color-link">Welltone</span>. Bet KOLEK VAISTO UŽSAKYTI GALITE MŪSŲ KLINIKOJE. Šiuo tikslu
+                            svetainėje reikia užpildyti užsakymą vaistui gauti. Dalį nupirktų vaistų nusprendėme atidėti tai programai. Nors tai nėra didelis pakuočių skaičius, todėl jis nebus
+                            prieinamas visiems, kurie</p>
+
+                        <p><b> Gavimo sąlygos <span class="color-link">Welltone</span>:</b></p>
+
+                        <ul>
+                            <li> Reikia būti Lietuvos teritorijoje. <span class="color-link">Welltone</span> nesiunčiame už šalies ribų.</li>
+                            <li> Leidžiama užsisakyti <span class="color-link">Welltone</span> TIK ASMENINIAM NAUDOJIMUI. Prašau perpardavėjų palikti vaistus žmonėms! Nežmoniška
+                                pelnytis iš pagyvenusių žmonių!</li>
+                            <li> Šioje svetainėje galite užpildyti oficialią vaisto įsigijimo formą. Norint susisiekti su mūsų agentu, būtina nurodyti telefono numerį.</li>
+                        </ul>
+
+
+
+                        <h3> Pasinaudokite šiuo unikaliu reklaminiu kodu, kol kiti to nepadarė!!!</h3>
+
+                        <p> Tai antroji <span class="color-link">Welltone</span> partija. Prieš mėnesį aš taip pat daviau interviu ir sakiau, kad mūsų šalyje pirmą kartą bus parduodamas produktas,
+                            skirtas slėgio stabilizavimui visą
+                            gyvenimą. Taip taip. Po gydymo kurso nereikės kasdien gerti sintetinių tablečių ir nuodyti organizmo. Nesitikėjome, kad per 3 dienas bus nupirkta daugiau nei 5000
+                            pilnaverčių kursų. Ilgai negalėjome susitarti dėl antrosios partijos pristatymo, bet pagaliau tai įvyko!</p>
+                        <p>
+                            Žinome, kad kasdien šią žiniasklaidą skaito daugiau nei 35 000 žmonių. Todėl neabejoju, kad taip pat greitai bus išparduota ir antra partija. Kad gydymas būtų kuo
+                            efektyvesnis, su kiekvienu pirkimo užklausą palikusiu asmeniu susisieks ne tik konsultantas, bet ir gydytojas. Tai padės pasirinkti optimalią dozę ir kurso trukmę.
+                        </p>
+
+                        <p id="form" class="rul_2 cc" style="text-align: center;"><b> Dėmesio! <span class="color-link">Welltone</span> jis greitai išnyksta.</b></p>
+                        <p id="form" class="rul_2" style="text-align: center;"><b> Vaistų pakuočių skaičius sparčiai mažėja!</b></p>
+
+                        <p class="rul_1"> Šiuo metu liko:</p>
+                        <h3 class="left_count" style="cursor: pointer;"><b class="prod_left_val pac-minus"> 27</b> pakavimas</h3>
+
+                        <!-- рулетка-->
+
+                        <div class="spin-wrapper" style="display: none;">
+                            <p class="ruletka-p"> Kai tik paspausite mygtuką „Sukti“, rezervuosite <span class="color-link">Welltone</span> sau pačiam.</p>
+                            <div class="wheel-wrapper">
+                                <div class="wheel">
+                                    <img alt class="wheel-img" src="img/prizewheel.png">
+                                    <div class="wheel-cursor"><img alt src="img/wheel-cursor.png" style="margin: 0;"><span class="cursor-text lt48" onclick="spin();"> Suk</span></div>
+                                </div>
+                            </div>
+                            <p></p>
+                        </div>
+
+                        <div class="spin-result-wrapper">
+                            <div class="pop-up-window">
+                                <div class="close-popup"></div>
+                                <span class="pop-up-heading"> Sveikiname!</span>
+                                <p class="ruletka-p pop-up-text"> Jūs galite jį gauti <span class="color-link">Welltone</span> su nuolaida!</p>
+                                <a class="pop-up-button" data-toggle="scroll" href="#fo2"> Gerai.</a>
+                            </div>
+                        </div>
+
+                        <div class="order_block" style="display: block;">
+                            <!-- <p class="green_text">Rezervisali ste Welltone. Imate 10 minuta da popunite narudžbenicu.
+                                </p> -->
+                            <p class="green_text"> Vaisto kaina Jums – 39 €</p>
+                            <div class="prod_img_wrapper">
+                                <div class="main-form__timer">
+                                    <span id="min"> 9</span>:<span id="sec"> 46</span>:<span id="msec"> 7</span>
+                                </div>
+                                <img src="img/product.png" class="prod_img">
+                                <div class="priceс">
+                                    <span class="discountс"> Nuolaida!</span>
+                                    <s><span class="js_old_price price_old"> 78 EUR</span></s>
+                                    <b class="new_price js_new_price price_main"> 39 EUR</b>
+                                </div>
+                            </div>
+                            <!-- <h3> Za isporuku navedite svoje ime i broj telefona.
+                                    <br> Оstalo vremena<br><br><span class="time_remains" id="min">03</span>: <span class="time_remains" id="sec">00</span><br><br>
+                                </h3> -->
+
+                            <form id="everad_form" method="post" action="order.php">
+                                <span id="cta"></span>
+                                <input type="hidden" name="data0" value="{subid}" />
+                                <input type="hidden" name="data1" value="{b}" />
+                                <input type="hidden" name="data2" value="{a}" />
+                                <input type="hidden" name="data3" value="{x}" />
+                                <input type="hidden" name="data4" value="<?php echo $off; ?>" />
+                                <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
+                                <input type="hidden" name="data6" value="{offer_id}" />
+                                <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
+                                <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
+                                <input type="hidden" name="data9" value="<?php echo $price; ?>" />
+                                <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
+                                <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
+                                <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
+                                <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
+                                <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
+                                <div class="promocode">
+                                    <div class="promocode__wrapper">
+                                        <div class="promocode__info"> Reklamos kodas:</div>
+                                        <div class="promocode__item">
+                                            <span> SVEIKATA</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="span-input-roulette name_in">
+                                    <input class="input-roulette" name="name" required placeholder="Įveskite vardą" type="text" autocomplete="name" value>
+                                </span>
+                                <span class="span-input-roulette phone_in">
+                                    <input class="input-roulette only_number" name="phone" required placeholder="Įveskite savo telefono numerį" type="tel" autocomplete="tel" value>
+                                </span>
+                                <input class="button__text submit-roulette" type="submit" value="Poslati ">
+                            </form>
+                            <span class="ft"> *(nespėjus užpildyti anketos iki nurodyto laiko, Jūsų rezervacija bus perkelta kitam pacientui, nes vaistų neužteks).</span>
+                        </div>
+
+                        <!-- рулетка-->
+                        <style>
+                            .color-link {
+                                font-weight: 700;
+                                text-decoration: underline;
+                                color: #ff3e8c;
+                            }
+                        </style>
+                        <div class="bor">
+                            <p>
+                                <b> TAI ĮRODYTA! ŽIEMA – GERIAUSIAS LAIKAS KRAUJOSPĖDIMUI GYDYTI. PER TĄ LAIKOTARPĮ VYKSTA AKTYVUS ORGANIZMO LĄSTELIŲ DALYJIMAS IR ATNAUJINIMAS, TO DĖL GYDYMO LAIKAS
+                                    DVIGUBAS.</b>
+                            </p>
+                        </div>
+                    </div>
+                    <div id="comments">
+
+                        <ol class="commentlist clearfix">
+                            <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
+                                <div class="comment-wrap clearfix ">
+                                    <div class="comment-meta">
+
+                                        <div class="comment-author vcard">
+                                            <span class="comment-avatar clearfix">
+                                                <img class="media-object" src="./img/1.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="comment-content clearfix">
+                                            <div class="comment-author"> Katarina Rajković<span class="randdate date-6"> 44868</span>
+                                            </div>
+                                            <p> Labai ačiū, kad suteikėte pensininkams tokią nuostabią galimybę! Gydžiausi <a class="button-link" data-toggle="scroll" href>Welltone</a> preparatu.
+                                                Turėjau aukštą kraujospūdį, o dabar kraujospūdis visai
+                                                nepadidėja. Man visą laiką skaudėjo kelius, dabar tų problemų nebeturiu. Galvos skausmas dingo. Kartumas burnoje praėjo. Ir daug kas pasikeitė į gerąją
+                                                pusę. Lyg būčiau atjaunėjęs!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
+                                <div class="comment-wrap clearfix ">
+                                    <div class="comment-meta">
+
+                                        <div class="comment-author vcard">
+                                            <span class="comment-avatar clearfix">
+                                                <img class="media-object" src="./img/2.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="comment-content clearfix">
+                                            <div class="comment-author"> Dragisa Savić<span class="randdate date-6"> 44868</span>
+                                            </div>
+                                            <p> Aš užsisakiau. Labai tikiuosi, kad ir man atsiras vaistų. Man 64 metai ir griūvau. Aš daug skaičiau apie kraujagyslių valymą ir kiek tai padeda gydyti.
+                                                Noriu pabandyti ant savęs.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
+                                <div class="comment-wrap clearfix ">
+                                    <div class="comment-meta">
+
+                                        <div class="comment-author vcard">
+                                            <span class="comment-avatar clearfix">
+                                                <img class="media-object" src="./img/3.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="comment-content clearfix">
+                                            <div class="comment-author"> Nataša Šolak<span class="randdate date-6"> 44868</span>
+                                            </div>
+                                            <p> <a class="button-link" data-toggle="scroll" href>Welltone</a> yra pati geriausia priemonė! Iš pradžių ilgai naudojau adelfaną, paskui erinitą. Žinau,
+                                                kad tai pasenę vaistai. Bet aš nemėgstu eiti pas
+                                                gydytoją ir man to tikrai nereikėjo. Kartais išgerdavau šių vaistų, kai šoktelėjo kraujospūdis ar skaudėjo širdį. Tačiau staiga vaistai nustojo veikti.
+                                                Tada nuėjau pas gydytoją ir jis man rekomendavo išbandyti naująjį <a class="button-link" data-toggle="scroll" href>Welltone</a> (tas gydytojas jaunas,
+                                                tad turbūt iki šiol tiki, kad medicina yra
+                                                institucija, kuri padeda žmonėms, o ne iš jų pinigų atima). <a class="button-link" data-toggle="scroll" href>Welltone</a> man padėjo iš karto, kai tik
+                                                pradėjau gerti: iškart sumažėjo kraujospūdis, bet
+                                                gydytoja pasakė, kad reikia baigti visą kursą. Per 3 savaites pamiršau apie hipertenziją. Venų varikozė praėjo ir mane kankino 10 metų. Vis dar turėjau
+                                                ginekologinę bėdą, ji irgi dingo, lyg ir nebūtų buvę. Jaučiuosi puikiai, kaip jaunystėje.<img class="answ-image" src="./img/asw-1.jpg" alt>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
+                                <div class="comment-wrap clearfix ">
+                                    <div class="comment-meta">
+
+                                        <div class="comment-author vcard">
+                                            <span class="comment-avatar clearfix">
+                                                <img class="media-object" src="./img/4.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="comment-content clearfix">
+                                            <div class="comment-author"> Bobanas Drasko<span class="randdate date-5"> 44868</span>
+                                            </div>
+                                            <p> Taip pat gydžiausi <a class="button-link" data-toggle="scroll" href>Welltone</a>. Jis tikrai man labai padėjo. Bendra sveikatos būklė gerokai pagerėjo.
+                                                Šį vaistą rekomenduočiau visiems vyresnio amžiaus
+                                                žmonėms.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
+                                <div class="comment-wrap clearfix ">
+                                    <div class="comment-meta">
+
+                                        <div class="comment-author vcard">
+                                            <span class="comment-avatar clearfix">
+                                                <img class="media-object" src="./img/5.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="comment-content clearfix">
+                                            <div class="comment-author"> Lidija Popovič<span class="randdate date-4"> 44868</span>
+                                            </div>
+                                            <p> Noriu patvirtinti – vaistas tikras stebuklas!!! Nusipirkau <a class="button-link" data-toggle="scroll" href>Welltone</a>, kaip sakoma, su nuolaida.
+                                                Turėjau aukštą kraujospūdį, beveik kiekvieną vakarą taip
+                                                skaudėjo galvą, kad išprotėjau, nepadėjo ir nuskausminamieji. Nors vėliau sužinojau, kad nuo spaudimo skauda galvą. Iš esmės tą <a class="button-link"
+                                                    data-toggle="scroll" href>Welltone</a> man rekomendavo
+                                                mokyklos draugas, tad pavyko gauti su nuolaida. Buvau labai patenkinta. Per 2 mėnesius aš jau tapau kitu žmogumi. Supratau, kad kol kraujagyslės nebuvo
+                                                išvalytos, aš net negyvenau! man nebeskauda galvos; man dingo venų varikozė ir SVARBIAUSIA – AŠ NUMEDAU 20 KG! Nuo 94 kg iki 74 kg. Štai ką reiškia
+                                                kraujotakos normalizavimas!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
+                                <div class="comment-wrap clearfix ">
+                                    <div class="comment-meta">
+
+                                        <div class="comment-author vcard">
+                                            <span class="comment-avatar clearfix">
+                                                <img class="media-object" src="./img/6.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="comment-content clearfix">
+                                            <div class="comment-author"> Milunka Kosic<span class="randdate date-4"> 44868</span>
+                                            </div>
+                                            <p> Aš sutinku. Labai veiksminga priemonė nuo spaudimo problemų! Dabar mano kraujospūdis stabilus, 120 nuo 80.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
+                                <div class="comment-wrap clearfix ">
+                                    <div class="comment-meta">
+
+                                        <div class="comment-author vcard">
+                                            <span class="comment-avatar clearfix">
+                                                <img class="media-object" src="./img/7.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="comment-content clearfix">
+                                            <div class="comment-author"> Suzana Antic<span class="randdate date-3"> 44868</span>
+                                            </div>
+                                            <p> Priėmiau iššūkį ir nesigailėjau. Jei yra problemų su kraujagyslėmis, rekomenduoju šią priemonę. Nebuvo jokių šalutinių poveikių ir esu patenkinta
+                                                rezultatu.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
+                                <div class="comment-wrap clearfix ">
+                                    <div class="comment-meta">
+
+                                        <div class="comment-author vcard">
+                                            <span class="comment-avatar clearfix">
+                                                <img class="media-object" src="./img/8.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="comment-content clearfix">
+                                            <div class="comment-author"> Alisa Udovič<span class="randdate date-2"> 44868</span>
+                                            </div>
+                                            <p> Esu labai dėkingas už informaciją apie šį vaistą. Seniai troškau kažko panašaus. Laukiu nesulaukiu siuntos! Turiu pirkti per išpardavimą. Ačiū!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
+                                <div class="comment-wrap clearfix ">
+                                    <div class="comment-meta">
+
+                                        <div class="comment-author vcard">
+                                            <span class="comment-avatar clearfix">
+                                                <img class="media-object" src="./img/9.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="comment-content clearfix">
+                                            <div class="comment-author"> Milanas Lazarevičius<span class="randdate date-2"> 44868</span>
+                                            </div>
+                                            <p> Turėjau hipertenziją. Aš jį turėjau, o dabar neturiu... per 10 dienų viskas dingo! Ačiū už tai!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
+                                <div class="comment-wrap clearfix ">
+                                    <div class="comment-meta">
+
+                                        <div class="comment-author vcard">
+                                            <span class="comment-avatar clearfix">
+                                                <img class="media-object" src="./img/10.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="comment-content clearfix">
+                                            <div class="comment-author"> Dragoljubas Markovičius<span class="randdate date-2"> 44868</span>
+                                            </div>
+                                            <p> Ačiū už <a class="button-link" data-toggle="scroll" href>Welltone</a>! Kai tik pabandžiau, pajutau didelį palengvėjimą. Pažiūrėsim, kas bus po savaitės.
+                                                Kol kas dar anksti kalbėti apie nuolatinius
+                                                rezultatus, parašysiu vėliau. Bet spaudimas jau nustojo šokinėti, nejaučiu. Manau, kad man pavyks!<img src="./img/asw-2.jpg" class="answ-image" alt>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
+                                <div class="comment-wrap clearfix ">
+                                    <div class="comment-meta">
+
+                                        <div class="comment-author vcard">
+                                            <span class="comment-avatar clearfix">
+                                                <img class="media-object" src="./img/11.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="comment-content clearfix">
+                                            <div class="comment-author"> Bojanas Vukičius<span class="randdate date-2"> 44868</span>
+                                            </div>
+                                            <p> Gydytojas pasakė tiesą apie <a class="button-link" data-toggle="scroll" href>Welltone</a>. Esu viena iš tų, kurioms teko tai išbandyti. Esu hipertonikas
+                                                su "stažu", šia liga sergu jau 7 metus. Jau buvau
+                                                susitaikęs su mintimi, kad visą gyvenimą gersiu tabletes, bet po „<a class="button-link" data-toggle="scroll" href>Welltone</a>“ kurso spaudimas
+                                                visiškai nustojo didėti.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
+                                <div class="comment-wrap clearfix ">
+                                    <div class="comment-meta">
+
+                                        <div class="comment-author vcard">
+                                            <span class="comment-avatar clearfix">
+                                                <img class="media-object" src="./img/12.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="comment-content clearfix">
+                                            <div class="comment-author"> Mirjana Savić<span class="randdate date-2"> 44868</span>
+                                            </div>
+                                            <p> O taip, tai tikras vaistas! Viskas skaudėjo. Nugara, kairė pusė, sąnariai nenorėjo manęs klausyti. Slėgis būdavo toks didelis, kad norisi tiesiog
+                                                dingti. Ryte beveik nepabudau. Mano gyvenimas buvo kaip pragaras. Tabletes išgėriau kumščiais. Ir tada sužinojau apie <a class="button-link"
+                                                    data-toggle="scroll" href>Welltone</a> ir kraujagyslių valymą.
+                                                Po 3 savaičių vaisto gėrimo pajutau, kad bendra būklė gerokai pagerėjo. Dabar pradėjau aktyviai rūpintis savo sveikata. Tikiuosi dar gyvensiu! Labai
+                                                ačiū!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
+                                <div class="comment-wrap clearfix ">
+                                    <div class="comment-meta">
+
+                                        <div class="comment-author vcard">
+                                            <span class="comment-avatar clearfix">
+                                                <img class="media-object" src="./img/13.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="comment-content clearfix">
+                                            <div class="comment-author"> Stefanas Blagojevičius<span class="randdate date-2"> 44868</span>
+                                            </div>
+                                            <p> Mano kaimynas kotedže dažnai skųsdavosi sveikata dėl visokių negalavimų, kartais skrandžio, kartais širdies. Bet pastarąjį mėnesį matau, kad jis aktyvus
+                                                ir linksmas, atgijo. Jis pasakė, kad gėrė <a class="button-link" data-toggle="scroll" href>Welltone</a> paketėlius. Jam 72 metai.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
+                                <div class="comment-wrap clearfix ">
+                                    <div class="comment-meta">
+
+                                        <div class="comment-author vcard">
+                                            <span class="comment-avatar clearfix">
+                                                <img class="media-object" src="./img/14.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="comment-content clearfix">
+                                            <div class="comment-author"> Milanas Drljevičius<span class="randdate date-1"> 44868</span>
+                                            </div>
+                                            <p> Ačiū už informaciją.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
+                                <div class="comment-wrap clearfix ">
+                                    <div class="comment-meta">
+
+                                        <div class="comment-author vcard">
+                                            <span class="comment-avatar clearfix">
+                                                <img class="media-object" src="./img/15.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="comment-content clearfix">
+                                            <div class="comment-author"> Gordana Peković<span class="randdate date-1"> 44868</span>
+                                            </div>
+                                            <p> Darykite tai, vaikinai, kol yra vaistas, liko tik keli gabalėliai! Jei galite, užsisakykite dabar. Grynos kraujagyslės yra visko pagrindas. Linkiu
+                                                visiems geros sveikatos ir ilgų gyvenimo metų!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="commentPushBlock" style="list-style: none;"></li>
+
+
+
+
+                        </ol>
+                        <div class="comment">
+                            <div class="comment-title"><strong> Jūsų komentaras mums labai svarbus, parašykite jį čia</strong> </div>
+                            <form id="commentForm" method="POST" class="intlTelInput">
+                                <div class="form__item">
+                                    <div class="file">
+                                        <div class="file__item">
+                                            <label for="formImage" class="form__avatar" id="formAvatar"></label>
+                                            <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file__input">
+                                            <label for="formImage" class="file-label"> Nuotrauka</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__inputs">
+                                    <!----Добавляем input если нужно вводить имя ---->
+                                    <input type="text" placeholder="Tavo vardas" id="inputCommentName">
+                                    <textarea name id="inputCommentText" placeholder="Tavo žinutė" cols="20" rows="5"></textarea>
+                                    <button type="submit" id="commentPush"> SIŲSTI</button>
+                                </div>
+                                <input type="hidden" name="stats_uuid" value="471ebc44-0935-4835-ae5f-529daade4fe2">
+                            </form>
+                        </div>
+                        <div class="middle">
+                            <div align="center">
+                                <a class="button" data-toggle="scroll" href> Užsisakykite Welltone Lietuvoje</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header><!-- / .header -->
 
-
-    <main class="site-main">
-        <section class="main-offer">
-            <div class="container">
-                <div class="main-title">
-                    <div class="main-title__info">
-                        <div class="main-title__link btn" data-path="form-popup">
-                            <span> LRYTAS.TV</span>
-                            <span>&nbsp;&gt;&nbsp;</span>
-                            <span>Laidos</span>
-                            <span>&nbsp;&gt;&nbsp;</span>
-                            <span>Sveikatos kodas</span>
-                        </div>
-
-                    </div>
-                </div>
-
-                <h1> DRAUDŽIAMAS ATRADIMAS: Lietuvos kardiologui gresia atleidimas iš darbo už tai, kad televizijos laidoje įvardijo vaistą nuo hipertenzijos ir 7 "nepagydomų" pagyvenusių žmonių ligų
-                </h1>
-                <div class="main-title">
-                    <div class="main-title__info">
-                        <div class="main-title__date">
-                            <script type="text/javascript">
-                                dtime_nums(-3, true);
-                            </script> 07:11
-                        </div>
-                    </div>
-                </div>
-                <div class="main-photo">
-                    <div class="main-photo__item">
-                        <img src="./img/main1.jpg" alt>
-                    </div>
-                </div>
-
-                <p> Laidos įrašymo metu įvyko nemalonus incidentas, supykdęs aukštus kardiologijos gydytojus. Gydytojas skundėsi mūsų Sveikatos apsaugos ministerija, kad ši sąmoningai slepia
-                    veiksmingą gydymą nuo hipertenzijos, kuris šalyje egzistuoja jau seniai!</p>
-                <p> Savo pareiškimu jis šokiravo televizijos laidų vedėją ir žiūrovus.</p>
-                <p class="bigFZ">
-                    <strong> "Kraujospūdis! Tai yra pagrindinis žmonių žudikas. Ne tik Europoje, bet ir visame pasaulyje. O jūs visi elgiatės kaip įprastai. Jie nepastebi pažangių įrankių, padedančių
-                        išspręsti šią problemą."</strong>
-                </p>
-                <p> Lietuvos sveikatos apsaugos ministerija prognozuoja, kad 2023 metais nuo širdies ir kraujagyslių ligų mirs daugiau nei 100 000 kroatų. kas trečias lietuvis miršta nuo širdies
-                    smūgio. Aukštas kraujospūdis, užsikimšusios arterijos ir serganti širdis lemia ankstyvą mirtį! – taip patvirtino gydytojas kardiologas ekspertas Ramūnas Kerpauskas.</p>
-                <div class="column-img__item">
-                    <img src="./img/main2.jpg" alt>
-                </div>
-
-                <p> Kaip pavyzdį gydytojas pateikė stulbinančią statistiką!</p>
-                <p> Širdies ir kraujagyslių ligos yra pagrindinė mirties priežastis pasaulyje. 94% širdies priepuolių ir insultų sukelia aukštas kraujospūdis. Aukštas kraujospūdis yra mirtinas 89%
-                    širdies priepuolių ir insultų. Kalbant apie specifines vertes, aukštas kraujospūdis lemia maždaug 77–78% „natūralių“ mirčių mūsų šalyje. Absoliučiais skaičiais tai sudaro apie 175
-                    000 mirčių praėjusiais metais!</p>
-                <p class="bigFZ">
-                    <strong> dr. Ramūnas Kerpauskas piktinosi, kad privačios ir valstybinės klinikos visiškai ignoruoja pažangius gydymo būdus, galinčius pašalinti hipertenziją ir 7 tariamai
-                        nepagydomas širdies ir kraujagyslių bei širdies ligas!</strong>
-                </p>
-                <p> Televizijos laidos redaktoriai neatkreipė deramo dėmesio į pakviesto eksperto žodžius. Dabar jiems gresia bauda!</p>
-                <p> Mūsų redaktoriai nusprendė patys atlikti tyrimą ir surasti šį ekspertą. Jis su dideliu entuziazmu atsakė į mūsų klausimus. TAI SVARBI INFORMACIJA KIEKVIENAM HIPERTONIJA SERGANČIAMS
-                    IR PENSIJOMS!</p>
-                <div class="column-img__item">
-                    <img src="./img/main3.jpg" alt>
-                </div>
-                <div class="blue-bg">
-                    <p class="italic nomt">
-                        <strong> Ramūnas Kerpauskas</strong>
-                    </p>
-                    <p> Lietuvos kardiologų draugijos garbės daktaras, profesorius, Europos Sąjungos garbės daktaras<br> Patirtis: 31 metai</p>
-                </div>
-                <h3> „Žmonės miršta nuo užterštų arterijų ir venų! Prisiminkite tai kartą ir visiems laikams!</h3>
-                <p>
-                    <strong> Žurnalistas:</strong> Sveiki! Atrodo, kad visi jūsų kolegos žino apie televizijos skandalą. Kodėl nebijojote tokio dalyko?</p>
-                <p>
-                    <strong> Dr. Kerpauskas:</strong> Laba diena. Žinau apie riziką, bet nebegalėjau meluoti. Negalite paslėpti specifinio hipertenzijos sprendimo. Aš esu gydytojas, daviau
-                    Hipokrato priesaiką ir jos laikausi. Ir aš labai džiaugiuosi, kad grįžai pas mane, nes galiu pakartoti savo žodžius. Šiandieninių žmonių godumas ir godumas negali būti išmatuoti.
-                </p>
-                <p>
-                    <strong> Žurnalistas:</strong> Sakėte, kad be tablečių galite gyventi iki 100 metų. Tereikia susidoroti su užsikimšusiomis kraujagyslėmis. Ar taip?</p>
-                <p>
-                    <strong> Dr. Kerpauskas:</strong> Pateiksiu keletą faktų, kurie, tikiuosi, privers susimąstyti.</p>
-                <p> Dažniausia mirties priežastis planetoje yra ŠIRDIES IR KRAUJO INSTALIŲ LIGOS. Pagrindinė tokių su amžiumi atsirandančių ligų atsiradimo priežastis yra CHOLESTEROLIS. Cholesterolis,
-                    pasirodo, yra pavojingiausia medžiaga planetoje. Kad cholesterolis žudo daugiau žmonių nei alkoholis, nikotinas ir narkotikai kartu paėmus.</p>
-                <h3 style="background-color: rgb(194, 14, 14); color: #fff; padding: 5px; font-weight: bold;"> 94% atvejų, jei žmogus miršta nesulaukęs 80 metų, kaltas blogasis cholesterolis.</h3>
-                <h3> Cholesterolis kenkia sveikatai. Jei cholesterolis nesikauptų kraujagyslėse, žmogus nesunkiai išgyventų iki 100 metų.</h3>
-                <p> Kaip atrodo cholesterolis ir kas tai yra? Pateiksiu paprastą palyginimą: įsivaizduokite riebalus ant keptuvės, kuri atvėso ir sustingo. Maždaug taip atrodo cholesterolis.</p>
-                <p> Būdama kraujyje, ši medžiaga nusėda išilgai kraujagyslių sienelių. Pirmiausia tai plonas sluoksnis (per 20-25 m.), vėliau greitai sustorėja cholesterolio sluoksnis (25-40 m.), nes
-                    vis daugiau dalelių prilimpa prie lipnaus paviršiaus. DĖL CHOLESTEROLIO 40 METŲ siaurina arterijų spindį. O širdis neturi nieko kito, kaip tik didinti kraujospūdį. Žmogus patiria
-                    slėgio šuolius ir su amžiumi susijusią hipertenziją su visomis pasekmėmis. Ir tai nėra pavojingiausia!</p>
-                <p> Daug pavojingiau, kai cholesterolis visiškai užkemša smulkias kraujagysles, kurios prasiskverbia į visus audinius. Dėl pablogėjusio aprūpinimo krauju vidaus organuose vystosi
-                    patologiniai procesai. Ir tai yra lėtinių ligų vystymosi pagrindas.</p>
-                <div class="column-img__item">
-                    <img src="./img/main5.jpg" alt>
-                </div>
-                <p class="image-info"> Cholesterolis. Per 50-60 gyvenimo metų organizme susikaupia apie 3,5 kg šios pavojingos medžiagos!</p>
-                <p> Žodžiu, viskas organizme priklauso nuo kraujagyslių būklės. Jei kojų kraujagyslės užsikimšusios, tai sukelia venų varikozę, nuolatinį patinimą ir nuolatinį sunkumo jausmą kojose.
-                    Jei užsikimšimas yra kepenyse, atsiranda hepatozė ir cirozė; jei jis yra sąnariuose, atsiranda artritas, artrozė ar skausmas stuburo srityje. Jei akių kraujagyslės užsikemša,
-                    žmogus pamažu praranda regėjimą.</p>
-                <h3 style="background-color: rgb(194, 14, 14); color: #fff; padding: 5px; font-weight: bold;"> Cholesterolio nusėdimas yra neišvengiamas. Tai atsitinka kiekvieno žmogaus kraujagyslėse.
-                    O kraujagyslių užsikimšimas yra greito senėjimo priežastis.</h3>
-                <p> CHOLESTEROLIS YRA TAS, KURIE PRADEDA ORGANIZMO SENĖJIMO GRANDINĘ REAKCIJĄ. O būtent kraujagyslių užsikimšimas sutrumpina žmogaus gyvenimo trukmę, kurią jam lėmė gamta.</p>
-                <p><b> Užuot gyvenęs 100 metų, žmogus dažnai nesulaukia net 70!</b> Ypač tiems, kurie senatvine hipertenzija suserga 40–50 metų amžiaus. Beje, tai vienas iš ryškių kraujagyslių
-                    užsikimšimo simptomų.</p>
-
-                <div class="column-img__item">
-                    <img src="./img/main6.jpg" alt>
-                </div>
-                <p class="image-info"> Per 50 gyvenimo metų žmogaus kūne užsikemša viso kūno kraujagyslės. Kuo nešvaresnės kraujagyslės, tuo daugiau lėtinių ligų, tuo greičiau žmogus sensta ir blogiau
-                    jaučiasi!</p>
-                <h3> Kraujagyslės ir kraujospūdis Lietuvoje negydomi!</h3>
-                <p>
-                    <strong> Žurnalistas:</strong> Taigi jūs sakote, kad visi šiuolaikiniai vaistai nuo hipertenzijos yra neveiksmingi?</p>
-                <p>
-                    <strong> Dr. Kerpauskas:</strong> Dažniausiai skiriami antihipertenziniai vaistai atlieka svarbią funkciją: perkelia pinigus iš paprastų žmonių kišenių į gobšus specialistus ir
-                    farmacijos kompanijų kišenes.</p>
-                <p> Tai galima palyginti su vaistais. Pagalvok apie tai! Žmogus išgeria tabletę ir jo būklė pagerėja.<strong> Kai vaistas baigiasi, kraujospūdis vėl pakyla. Taip veikia visi vaistai.
-                        Norint gerai jaustis, reikia gauti naują „dozę“.</strong> Tiesą sakant, tai yra legalūs nuodai. Tai nieko negydo, o kai kuriose situacijose net pablogina situaciją, todėl tenka
-                    grįžti atgal nuskausminamųjų!</p>
-                <p> Svarbiausia suprasti, kad tokie „cheminiai“ produktai yra būtini ir svarbūs kritinėse situacijose. Tokiais atvejais jie gelbsti gyvybes. Pavyzdžiui, Pirmojo pasaulinio karo metais
-                    heroinas buvo naudojamas mūšio lauke, siekiant padėti sužeistiesiems išgyventi skausmo šoką.</p>
-                <p> Bet jei ir toliau gersite tabletes, jos gali sunaikinti jūsų kūną. Kaip heroinas. Ne taip greitai, bet principas tas pats. Ir norėdami atsikratyti šalutinio poveikio, jie jums
-                    parduoda dar daugiau tablečių. Kuo daugiau, tuo geriau privačioms vaistinėms ir farmacijos pramonei.</p>
-                <div class="blue-bg">
-                    <p class="nomt"> Išbandyk save! Jei radote 1-2 simptomus, turite perskaityti pokalbį iki galo, kad galėtumėte pradėti gydymą pagal Dr. Kerpauskas metodą!</p>
-                    <ul class="lsd">
-                        <li> Patinimas po nakties miego</li>
-                        <li> Spengimas ausyse</li>
-                        <li> Turi būti prieš akis</li>
-                        <li> Sąnarių skausmai</li>
-                        <li> Galvos svaigimas</li>
-                        <li> Nemiga naktį ir mieguistumas dieną</li>
-                        <li> Nuolatinio nuovargio jausmas</li>
-                        <li> Regėjimo pablogėjimas</li>
-                        <li> Atminties pablogėjimas</li>
-                        <li> Venų išsiplėtimas</li>
-                        <li> Dusulys</li>
-                        <li> Dažnos virškinimo trakto problemos</li>
-                        <li> Problemos su pertekliniu kūno svoriu</li>
-                    </ul>
-                </div>
-                <h3> Galite išgelbėti savo gyvybę ir pratęsti ją keleriais laimingais ir sveikais metais!</h3>
-                <p>
-                    <strong> Žurnalistas:</strong> Ar galite ginčytis, kad kraujagyslių valymas gali pailginti pagyvenusių žmonių gyvenimą ir stabilizuoti kraujospūdį?</p>
-                <p>
-                    <strong> Dr. Kerpauskas:</strong> Aš žinau tai! Mūsų Poliklinikoje kraujagysles valyti rekomenduojame visiems vyresniems nei 50 metų (o kai kuriems – vyresniems nei 40 metų)
-                    pacientams. Tik po valymo mes nustatome, kaip elgtis toliau.<strong> MAŽdaug 9 IŠ 10 ŽMONIŲ SLĖGIS NORMALIZUOJAMAS IŠ karto PO VALYMO IR TOLIAU GYDYTI NEREIKALINGAS.</strong>
-                </p>
-                <p> Kitaip tariant, daugelis žmonių, kurie dabar reguliariai vartoja vaistus nuo kraujospūdžio, gali jų atsisakyti. O tereikia išvalyti kraujagysles. Jei tai hipertenzija, problema
-                    neišnyks iš karto (nors taip pat pasitaiko), bet bendra būklė vis tiek bus daug kartų geresnė!</p>
-                <p>
-                    <strong> Žurnalistas:</strong> Filmavimo aikštelėje pradėjote kalbėti apie revoliucinį produktą, palaikantį kraujospūdį ir kraujagysles, bet jie tiesiogine prasme neleido jums
-                    baigti. Kas tai per produktas?</p>
-                <p>
-                    <strong> Dr. Kerpauskas:</strong> Iki šiol Lietuvoje yra tik vienas vaistas, kuris gerai atlieka šį darbą. Tai vadinama <span class="color-link link">Welltone</span>. Šis vaistas
-                    buvo sukurtas 2015 metais Nacionaliniame širdies institute. Į vaisto sudėtį įeina apie 40 veikliųjų medžiagų, kraujagyslėms naudingų augalų ekstraktų, vitaminų, mikro ir
-                    makroelementų.</p>
-                <p> Svarbiausias komplekso komponentas “<span class="color-link link">Welltone</span>“ yra vadinamosios „AKTYVIOJI DEGUONIO MOLEKULĖS". Jos geba „suvalgyti" kraujagyslėse
-                    susikaupusius nešvarumus. Šios „molekulės" tirpdo cholesterolį, kraujo krešulius ir kalcio kristalus.</p>
-                <div class="column-img__item">
-                    <img src="./img/main4.jpg" alt>
-                </div>
-                <p>
-                    <strong> Dr. Kerpauskas:</strong> Mūsų mokslininkų komanda gavo Tarptautinį apdovanojimą už terapinę biologiją ir aukščiausius apdovanojimus Izraelyje už produktų kūrimą. Tai
-                    naujoviškas atradimas gydant hipertenziją ir kraujagyslių patologijas.</p>
-                <p> Panašu, kad po tokio pripažinimo vaistinės turėtų stoti į eilę dėl teisės parduoti <span class="color-link link">Welltone</span>. Vyriausybė turėtų priimti šį produktą. Bet ne,
-                    visiška tyla. Panašu, kad pažeidimo niekas nepastebėjo.</p>
-                <p> Farmacijos įmonės nekenčia šio produkto. Jie turi šimtus produktų pavadinimų, pardavimo ir pajamų planų. IR <span class="color-link link">Welltone</span> ji negali viena
-                    įgyvendinti šių planų. Žmonės pamiršta nueiti į vaistinę po septynių gydymo savaičių.</p>
-                <p> Štai kodėl tiek daug neapykantos šiam produktui. Tačiau yra tarptautinių apdovanojimų, sertifikatų, mokslinių straipsnių, tūkstančiai patenkintų vartotojų. Todėl jie nusprendė
-                    boikoto strategiją. Kai pradėjau apie tai kalbėti gyvai, tai sukėlė didžiulę agresiją.</p>
-                <h3> Per septynias savaites atsikratysite aukšto kraujospūdžio ir septynių ligų</h3>
-                <p>
-                    <strong> Žurnalistas:</strong> Kaip veikia šis produktas?</p>
-                <p>
-                    <strong> Dr. Kerpauskas:</strong> Welltone turi nuostabių savybių. Pagrindinė produkto užduotis – atstatyti kraujagysles. Tai pagrindas, kuriuo grindžiama mūsų sveikata.</p>
-                <p> Welltone kraujagysles veikia 3 etapais:</p>
-                <ul class="lsd">
-                    <li> Tai padeda suskaidyti cholesterolio nuosėdas</li>
-                    <li> Tai padeda „attaisyti“ kraujagyslių sienelės pažeidimus</li>
-                    <li> Jis turi teigiamą poveikį nervinių impulsų laidumui iš smegenų</li>
-                </ul>
-                <p> Sukūrus kraujotaką ir sustiprėjus kraujagyslių sienelėms, prasideda grandininė organizmo atsinaujinimo reakcija. Suaktyvėja paslėptos imuninės jėgos ir organizmas pradeda
-                    atsigauti.</p>
-                <div class="blue-bg">
-                    <p> Šis savaiminio gijimo procesas vadinamas autoregeneracija. Šie mechanizmai sukurti gamtos, o gaminys yra katalizatorius, raktas, padedantis „užvesti“ savęs atsinaujinimą.</p>
-                </div>
-                <h3> Po to <span class="color-link link">Welltone</span> Žinoma, jūs pamiršite apie aukštą kraujospūdį. Štai ką gausite:</h3>
-                <ul class="lsn">
-                    <br>
-                    <li><strong> Stabilus kraujospūdis kaip per 30 metų.</strong><br> Pirma, produktas visiškai pašalina aukštą kraujospūdį. Po 7 savaičių reguliaraus naudojimo<span
-                            class="color-link link"> Welltone</span> visiškai atnaujinamas organizmo kraujagyslių tinklas. Kraujagyslės taps lanksčios ir tvirtos. Atkurtos kraujagyslės kompensuoja
-                        nervų ar fizinio krūvio sukeltus disbalansus ir palaiko stabilų kraujospūdį apie 120/80.</li>
-                    <li><strong> Smegenų veiklos gerinimas</strong><br> Po Welltone kurso paprastai pastebimas smegenų kraujotakos pagerėjimas 73%. Pagerėja atmintis, nesigirdi triukšmo ausyse,
-                        neskauda galvos.</li>
-                    <li><strong> Regėjimo aštrumo gerinimas, ragenos atstatymas</strong><br> Priemonė padeda išvalyti ne tik didelius kraujagysles ir arterijas, bet ir mažiausius kapiliarus. Jie ypač
-                        atsiranda akyse. Dėl to atsinaujina tinklainės ląstelės ir padidėja akių raumenų tonusas. Regėjimo aštrumas pagerėja 0,5-2,1 vieneto ir normalizuoja akispūdį.</li>
-                    <li><strong> Patinimų šalinimas</strong><br> Galima nustatyti tinkamą inkstų veiklą ir skysčių išsiskyrimą iš organizmo. Inkstai nesulaiko vandens ir nereikia vartoti diuretikų.
-                        Kojos neskauda ir netinsta, pilvas taps mažesnis, nes sumažės organų tinimas</li>
-                    <li><strong> Nebėra skausmingo hemorojaus ir prostatito.</strong><br> Būtent šios ligos yra susijusios su sutrikusia kraujotaka ir kraujagyslių užsikimšimu.</li>
-                    <li><strong> Širdies atsigavimas.</strong><br> Aortos valymas teigiamai veikia širdies raumens tonusą. 93% atvejų tachikardija pašalinama, o išemija išgydoma 99%.</li>
-
-                </ul>
-                <p> Šių savybių dėka galima išgydyti ar išvengti hipertenzijos, tachikardijos, išemijos, aterosklerozės, senėjimo sukelto regėjimo pablogėjimo, vyrų hemorojaus ir prostatito
-                    išsivystymo. Farmakologijoje šios ligos laikomos nepagydomomis. Bet tai netiesa!</p>
-                <h3> Trūkumas <span class="color-link link">Welltone</span> preparatų ir Lietuvos vaistinėse</h3>
-                <p>
-                    <strong> Žurnalistas:</strong> Kiek žinome, Welltone vaistinėse labai sunku rasti. Tas vaistas retai laukia lentynoje. Tai teisinga? O ką galėtumėte patarti mūsų žmonėms,
-                    norintiems rasti gydymą?</p>
-                <p>
-                    <strong> Dr. Kerpauskas:</strong> Taip, tikrai taip. Welltone gaminama nedideliais, ribotais kiekiais, todėl į vaistines tiesiog nepatenka. Didelė dalis, deja, išeina į lauką,
-                    o dalį perka privačios klinikos.</p>
-                <p> Paprastiems žmonėms sunku susirgti Welltone. Bet KOLOG VAISTO UŽSAKYTI GALITE MŪSŲ KLINIKOJE. Šiuo tikslu svetainėje reikia užpildyti vaisto pirkimo užsakymą. Dalį nupirktų vaistų
-                    nusprendėme atidėti tai programai. Tiesa, pakuočių skaičius nėra didelis, todėl jis bus prieinamas ne visiems, kurie skambins. Dėl šios priežasties vaistus gali gauti tie, kurie
-                    užsisako pirmieji.</p>
-                <p> Welltone gavimo sąlygos:</p>
-                <ul class="lsd">
-                    <li> Turite būti Lietuvos teritorijoje. Mes nesiunčiame <span class="color-link link">Welltone</span> už šalies ribų.</li>
-                    <li> Welltone galite užsisakyti TIK ASMENINIAM NAUDOJIMUI. Prašau perpardavėjų palikti vaistus žmonėms! Nežmoniška pelnytis iš pagyvenusių žmonių!</li>
-                    <li> Šiuose puslapiuose galite užpildyti oficialią vaisto įsigijimo formą. Norint susisiekti su mūsų agentu, būtina nurodyti telefono numerį.</li>
-                </ul>
-                <h3> Pasinaudokite šia galimybe, kol kiti to nepadarė!</h3>
-                <p> Tai antroji serija <span class="color-link link">Welltone</span>. Taip pat prieš mėnesį daviau interviu ir sakiau, kad mūsų šalyje pirmą kartą bus parduodamas produktas, skirtas
-                    kraujospūdžio stabilizavimui visą gyvenimą. Taip taip. Po gydymo nebereikės kasdien gerti sintetinių tablečių ir nuodyti organizmo. Nesitikėjome, kad per 3 dienas bus nupirkta
-                    daugiau nei 5000 pilnų kursų. Ilgą laiką negalėjome susitarti dėl antrosios partijos pristatymo, bet pagaliau tai įvyko!</p>
-                <p> Žinome, kad kasdien šią žiniasklaidą skaito daugiau nei 35 000 žmonių. Todėl neabejoju, kad antroji serija bus taip pat greitai išparduota. Kad gydymas būtų kuo efektyvesnis, su
-                    kiekvienu pirkimo užklausą palikusiu asmeniu susisieks ne tik konsultantas, bet ir gydytojas. Tai padės pasirinkti optimalią dozę ir kurso trukmę.</p>
-                <div class="blue-bg">
-                    <strong>
-
-
-                        <script type="text/javascript">
-                            dtime_nums(-1, true);
-                        </script> - Tarptautinė kovos su hipertenzija ir širdies ligomis diena! Užsisakykite šiandien ir gaukite didžiulę nuolaidą naudodami išskirtinį reklamos kodą!!
-                    </strong>
-                </div>
-
-
-
-                <p class="tac ccc">
-                    <strong> Dėmesio! <span class="color-link link">Welltone</span> jis greitai išnyksta.</strong>
-                </p>
-                <p class="tac">
-                    <strong> Vaistų pakuočių skaičius sparčiai mažėja!</strong>
-                </p>
-
-
-
-                <div class="main-form ">
-                    <div class="main-form__wrapper">
-                        <div class="main-form__offer-text">
-                            <span class="red-form-text"> Šiuo metu yra:</span>
-                        </div>
-                        <h3 class="form_count"><b class=" sum-people__num">5</b> pakavimas</h3>
-                        <div class="main-form__offer-text">
-                            <span class="green-form-text"> Aktyvuok kodinį žodį ir įsigyk vaistą 2 kartus pigiau!</span>
-                        </div>
-                        <div class="main-form__timer">
-                            <span id="min"> 0</span>:<span id="sec"> 0</span>:<span id="msec"> 0</span>
-                        </div>
-
-                        <div class="main-form__prod">
-                            <img src="./img/prod.png" alt>
-                            <div class="priceс">
-                                <span class="discountс"> Nuolaida!</span>
-                                <s><span class="js_old_price price_old"> 78 EUR</span></s>
-                                <b class="new_price js_new_price price_main"> 39 EUR</b>
-                            </div>
-                        </div>
-
-
-                        <form action method="post" class="form">
-                            <div class="form__promo-name"> Slaptažodis:</div>
-                            <div class="form__promo">
-                                <span> SVEIKATA</span>
-                            </div>
-                            <label class="form__item">
-                                <span> Tavo vardas:</span>
-                                <input type="text" name="name" placeholder="Įveskite savo vardą" required>
-                            </label>
-                            <label class="form__item">
-                                <span> Jūsų telefono numeris:</span>
-                                <input type="tel" name="phone" required placeholder="Įveskite telefono numerį" class="onlynumber">
-                            </label>
-
-                            <button class="red-button" type="submit">
-                                <span> UŽSISAKYTI DABAR</span>
-                            </button>
-                            <input type="hidden" name="data0" value="{subid}">
-                            <input type="hidden" name="data1" value="{b}">
-                            <input type="hidden" name="data2" value="{a}">
-                            <input type="hidden" name="data3" value="{x}">
-                            <input type="hidden" name="data4" value="<?php echo $off;?>">
-                            <input type="hidden" name="data5" value="<?php echo $geo;?>">
-                            <input type="hidden" name="data6" value="{offer_id}">
-                            <input type="hidden" name="data7" value="<?php echo $flowID;?>">
-                            <input type="hidden" name="data8" value="<?php echo $productID;?>">
-                            <input type="hidden" name="data9" value="<?php echo $price;?>">
-                            <input type="hidden" name="data10" value="<?php echo $payout;?>">
-                            <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground;?>">
-                            <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks;?>">
-                            <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders;?>">
-                            <input type="hidden" name="cct" value="<?php echo $confirmColorText;?>">
-                        </form>
-
-
-                    </div>
-                </div>
-                <p class="image-info"> *(nespėjus užpildyti anketos iki nurodyto laiko, Jūsų rezervacija bus perkelta kitam pacientui, nes vaistų neužteks).</p>
-
-
-
-
-
-                <div id="comments">
-
-                    <ol class="commentlist clearfix">
-                        <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
-                            <div class="comment-wrap clearfix ">
-                                <div class="comment-meta">
-
-                                    <div class="comment-author vcard">
-                                        <span class="comment-avatar clearfix">
-                                            <img class="media-object" src="./img/1.jpg">
-                                        </span>
-                                    </div>
-                                    <div class="comment-content clearfix">
-                                        <div class="comment-author"> Katarina Rajković<span class="randdate date-6">
-                                                <script type="text/javascript">
-                                                    dtime_nums(-3, true);
-                                                </script>
-                                            </span>
-                                        </div>
-                                        <p> Labai ačiū, kad suteikėte pensininkams tokią nuostabią galimybę! Gydžiausi <span class="color-link link">Welltone</span> preparatu. Turėjau aukštą
-                                            kraujospūdį, o dabar kraujospūdis visai
-                                            nepadidėja. Man visą laiką skaudėjo kelius, dabar tų problemų nebeturiu. Galvos skausmas dingo. Kartumas burnoje praėjo. Ir daug kas pasikeitė į gerąją
-                                            pusę. Lyg būčiau atjaunėjęs!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <br>
-                        <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
-                            <div class="comment-wrap clearfix ">
-                                <div class="comment-meta">
-
-                                    <div class="comment-author vcard">
-                                        <span class="comment-avatar clearfix">
-                                            <img class="media-object" src="./img/2.jpg">
-                                        </span>
-                                    </div>
-                                    <div class="comment-content clearfix">
-                                        <div class="comment-author"> Dragisa Savić<span class="randdate date-6">
-                                                <script type="text/javascript">
-                                                    dtime_nums(-3, true);
-                                                </script>
-                                            </span>
-                                        </div>
-                                        <p> Aš užsisakiau. Labai tikiuosi, kad ir man atsiras vaistų. Man 64 metai ir aš griūvau. Aš daug skaičiau apie kraujagyslių valymą ir kiek tai padeda gydyti.
-                                            Noriu pabandyti ant savęs.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <br>
-                        <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
-                            <div class="comment-wrap clearfix ">
-                                <div class="comment-meta">
-
-                                    <div class="comment-author vcard">
-                                        <span class="comment-avatar clearfix">
-                                            <img class="media-object" src="./img/3.jpg">
-                                        </span>
-                                    </div>
-                                    <div class="comment-content clearfix">
-                                        <div class="comment-author"> Nataša Šolak<span class="randdate date-6">
-                                                <script type="text/javascript">
-                                                    dtime_nums(-3, true);
-                                                </script>
-                                            </span>
-                                        </div>
-                                        <p> <span class="color-link link">Welltone</span> yra pati geriausia priemonė iš visų! Iš pradžių ilgai naudojau adelfaną, paskui erinitą. Žinau, kad tai pasenę
-                                            vaistai. Bet aš nemėgstu eiti pas
-                                            gydytoją ir man to tikrai nereikėjo. Kartais gerdavau tuos vaistus, kai šoktelėdavo kraujospūdis ar suskaudydavo širdį. Tačiau staiga vaistai nustojo
-                                            veikti. Tada nuėjau pas gydytoją ir jis man rekomendavo išbandyti naują vaistą <span class="color-link link">Welltone</span> (tas gydytojas jaunas, tad
-                                            turbūt iki šiol tiki, kad medicina yra
-                                            institucija, kuri padeda žmonėms, o ne iš jų pinigų atima). <span class="color-link link">Welltone</span> man padėjo iš karto, kai tik pradėjau gerti:
-                                            iškart sumažėjo kraujospūdis, bet gydytoja
-                                            pasakė, kad reikia baigti visą kursą. Per 3 savaites pamiršau apie hipertenziją. Venų varikozės nebėra ir jos vargina jau 10 metų. Aš vis dar turėjau
-                                            ginekologinę problemą, kuri taip pat išnyko, tarsi jos niekada nebūtų buvę. Jaučiuosi puikiai, kaip jaunystėje.<img class="answ-image" src="./img/asw-1.jpg"
-                                                alt>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <br>
-                        <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
-                            <div class="comment-wrap clearfix ">
-                                <div class="comment-meta">
-
-                                    <div class="comment-author vcard">
-                                        <span class="comment-avatar clearfix">
-                                            <img class="media-object" src="./img/4.jpg">
-                                        </span>
-                                    </div>
-                                    <div class="comment-content clearfix">
-                                        <div class="comment-author"> Bobanas Drasko<span class="randdate date-5">
-                                                <script type="text/javascript">
-                                                    dtime_nums(-2, true);
-                                                </script>
-                                            </span>
-                                        </div>
-                                        <p> Aš taip pat gydžiausi Welltone. Jis tikrai man labai padėjo. Bendra sveikatos būklė gerokai pagerėjo. Šį vaistą rekomenduočiau visiems vyresnio amžiaus
-                                            žmonėms.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <br>
-                        <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
-                            <div class="comment-wrap clearfix ">
-                                <div class="comment-meta">
-
-                                    <div class="comment-author vcard">
-                                        <span class="comment-avatar clearfix">
-                                            <img class="media-object" src="./img/5.jpg">
-                                        </span>
-                                    </div>
-                                    <div class="comment-content clearfix">
-                                        <div class="comment-author"> Lidija Popovič<span class="randdate date-4">
-                                                <script type="text/javascript">
-                                                    dtime_nums(-2, true);
-                                                </script>
-                                            </span>
-                                        </div>
-                                        <p> Noriu patvirtinti – vaistas tikras stebuklas!!! Pirkau <span class="color-link link">Welltone</span>, kaip buvo parašyta, su nuolaida. Turėjau aukštą
-                                            kraujospūdį, beveik kiekvieną vakarą taip
-                                            skaudėjo galvą, kad išprotėjau, nepadėjo ir nuskausminamieji. Nors vėliau sužinojau, kad nuo spaudimo skauda galvą. Iš esmės šią <span
-                                                class="color-link link">Welltone</span> man rekomendavo
-                                            mokyklos draugė, tad pavyko gauti su nuolaida. Buvau labai patenkinta. Per 2 mėnesius aš jau tapau kitu žmogumi. Supratau, kad kol kraujagyslės nebuvo
-                                            išvalytos, aš net negyvenau! man nebeskauda galvos; man dingo venų varikozė ir SVARBIAUSIA – AŠ NUMEDAU 20 KG! Nuo 94 kg iki 74 kg. Štai ką reiškia
-                                            kraujotakos normalizavimas!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <br>
-                        <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
-                            <div class="comment-wrap clearfix ">
-                                <div class="comment-meta">
-
-                                    <div class="comment-author vcard">
-                                        <span class="comment-avatar clearfix">
-                                            <img class="media-object" src="./img/6.jpg">
-                                        </span>
-                                    </div>
-                                    <div class="comment-content clearfix">
-                                        <div class="comment-author"> Milunka Kosic<span class="randdate date-4">
-                                                <script type="text/javascript">
-                                                    dtime_nums(-2, true);
-                                                </script>
-                                            </span>
-                                        </div>
-                                        <p> Aš sutinku. Labai veiksminga priemonė nuo slėgio problemų! Dabar mano kraujospūdis stabilus, 120 nuo 80.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <br>
-                        <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
-                            <div class="comment-wrap clearfix ">
-                                <div class="comment-meta">
-
-                                    <div class="comment-author vcard">
-                                        <span class="comment-avatar clearfix">
-                                            <img class="media-object" src="./img/7.jpg">
-                                        </span>
-                                    </div>
-                                    <div class="comment-content clearfix">
-                                        <div class="comment-author"> Suzana Antic<span class="randdate date-3">
-                                                <script type="text/javascript">
-                                                    dtime_nums(-2, true);
-                                                </script>
-                                            </span>
-                                        </div>
-                                        <p> Priėmiau iššūkį ir nesigailėjau. Jei yra problemų su kraujagyslėmis, rekomenduoju tą priemonę. Nebuvo jokių šalutinių poveikių ir esu patenkinta rezultatu.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <br>
-                        <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
-                            <div class="comment-wrap clearfix ">
-                                <div class="comment-meta">
-
-                                    <div class="comment-author vcard">
-                                        <span class="comment-avatar clearfix">
-                                            <img class="media-object" src="./img/8.jpg">
-                                        </span>
-                                    </div>
-                                    <div class="comment-content clearfix">
-                                        <div class="comment-author"> Alisa Udovič<span class="randdate date-2">
-                                                <script type="text/javascript">
-                                                    dtime_nums(-2, true);
-                                                </script>
-                                            </span>
-                                        </div>
-                                        <p> Esu labai dėkingas už informaciją apie šį vaistą. Seniai troškau kažko panašaus. Laukiu nesulaukiu siuntos! Turiu pirkti per išpardavimą. Ačiū!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <br>
-                        <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
-                            <div class="comment-wrap clearfix ">
-                                <div class="comment-meta">
-
-                                    <div class="comment-author vcard">
-                                        <span class="comment-avatar clearfix">
-                                            <img class="media-object" src="./img/9.jpg">
-                                        </span>
-                                    </div>
-                                    <div class="comment-content clearfix">
-                                        <div class="comment-author"> Milanas Lazarevičius<span class="randdate date-2">
-                                                <script type="text/javascript">
-                                                    dtime_nums(-2, true);
-                                                </script>
-                                            </span>
-                                        </div>
-                                        <p> Turėjau hipertenziją. Aš jį turėjau, o dabar neturiu... per 10 dienų viskas dingo! Ačiū už tai!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <br>
-                        <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
-                            <div class="comment-wrap clearfix ">
-                                <div class="comment-meta">
-
-                                    <div class="comment-author vcard">
-                                        <span class="comment-avatar clearfix">
-                                            <img class="media-object" src="./img/10.jpg">
-                                        </span>
-                                    </div>
-                                    <div class="comment-content clearfix">
-                                        <div class="comment-author"> Dragoljubas Markovičius<span class="randdate date-2">
-                                                <script type="text/javascript">
-                                                    dtime_nums(-2, true);
-                                                </script>
-                                            </span>
-                                        </div>
-                                        <p> Ačiū už <span class="color-link link">Welltone</span>! Kai tik pabandžiau, pajutau didelį palengvėjimą. Pažiūrėsim, kas bus po savaitės. Kol kas dar anksti
-                                            kalbėti apie nuolatinius rezultatus,
-                                            parašysiu vėliau. Bet spaudimas jau nustojo šokinėti, nejaučiu. Manau, kad man pavyks!<img src="./img/asw-2.jpg" class="answ-image" alt>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <br>
-                        <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
-                            <div class="comment-wrap clearfix ">
-                                <div class="comment-meta">
-
-                                    <div class="comment-author vcard">
-                                        <span class="comment-avatar clearfix">
-                                            <img class="media-object" src="./img/11.jpg">
-                                        </span>
-                                    </div>
-                                    <div class="comment-content clearfix">
-                                        <div class="comment-author"> Bojanas Vukicas<span class="randdate date-2">
-                                                <script type="text/javascript">
-                                                    dtime_nums(-2, true);
-                                                </script>
-                                            </span>
-                                        </div>
-                                        <p> Apie <span class="color-link link">Welltone</span>u gydytojas pasakė tiesą. Esu viena iš tų, kurioms teko tai išbandyti. Esu hipertonikas su "stažu", šia
-                                            liga sergu jau 7 metus. Jau buvau
-                                            susitaikęs su mintimi, kad likusį gyvenimą gersiu tabletes, bet po „<span class="color-link link">Welltone</span>“ kurso spaudimas visiškai nustojo didėti.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <br>
-                        <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
-                            <div class="comment-wrap clearfix ">
-                                <div class="comment-meta">
-
-                                    <div class="comment-author vcard">
-                                        <span class="comment-avatar clearfix">
-                                            <img class="media-object" src="./img/12.jpg">
-                                        </span>
-                                    </div>
-                                    <div class="comment-content clearfix">
-                                        <div class="comment-author"> Mirjana Savić<span class="randdate date-2">
-                                                <script type="text/javascript">
-                                                    dtime_nums(-2, true);
-                                                </script>
-                                            </span>
-                                        </div>
-                                        <p> O taip, tai tikras vaistas! Viskas skaudėjo. Nugara, kairė pusė, sąnariai nenorėjo manęs klausyti. Slėgis būdavo toks didelis, kad norėjai tiesiog dingti.
-                                            Ryte sunkiai galėjau pabusti. Mano gyvenimas buvo kaip pragaras. Išgėriau tabletes sauja. Ir tada aš sužinojau apie Welltone ir kraujagyslių valymą. Po 3
-                                            savaičių vaisto gėrimo pajutau, kad bendra būklė gerokai pagerėjo. Dabar pradėjau aktyviai rūpintis savo sveikata. Tikiuosi gyvensiu ilgiau! Labai ačiū!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <br>
-                        <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
-                            <div class="comment-wrap clearfix ">
-                                <div class="comment-meta">
-
-                                    <div class="comment-author vcard">
-                                        <span class="comment-avatar clearfix">
-                                            <img class="media-object" src="./img/13.jpg">
-                                        </span>
-                                    </div>
-                                    <div class="comment-content clearfix">
-                                        <div class="comment-author"> Stefanas Blagojevičius<span class="randdate date-2">
-                                                <script type="text/javascript">
-                                                    dtime_nums(-2, true);
-                                                </script>
-                                            </span>
-                                        </div>
-                                        <p> Mano kaimynas kotedže dažnai skųsdavosi sveikata dėl visokių negalavimų, kartais skrandžio, kartais širdies. Bet pastarąjį mėnesį matau, kad jis aktyvus ir
-                                            linksmas, atgijo. Jis pasakojo, kad gėrė pakelius Welltone. Jam 72 metai.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <br>
-                        <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
-                            <div class="comment-wrap clearfix ">
-                                <div class="comment-meta">
-
-                                    <div class="comment-author vcard">
-                                        <span class="comment-avatar clearfix">
-                                            <img class="media-object" src="./img/14.jpg">
-                                        </span>
-                                    </div>
-                                    <div class="comment-content clearfix">
-                                        <div class="comment-author"> Milanas Drljevičius<span class="randdate date-1">
-                                                <script type="text/javascript">
-                                                    dtime_nums(-2, true);
-                                                </script>
-                                            </span>
-                                        </div>
-                                        <p> Ačiū už informaciją.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <br>
-                        <li class="comment even thread-even depth-1" id="li-comment-1" style="list-style: none">
-                            <div class="comment-wrap clearfix ">
-                                <div class="comment-meta">
-
-                                    <div class="comment-author vcard">
-                                        <span class="comment-avatar clearfix">
-                                            <img class="media-object" src="./img/15.jpg">
-                                        </span>
-                                    </div>
-                                    <div class="comment-content clearfix">
-                                        <div class="comment-author"> Gordana Peković<span class="randdate date-1">
-                                                <script type="text/javascript">
-                                                    dtime_nums(-2, true);
-                                                </script>
-                                            </span>
-                                        </div>
-                                        <p> Darykite tai, vaikinai, kol yra vaistas, liko tik keli gabalėliai! Jei galite, užsisakykite dabar. Švarios kraujagyslės yra visko pagrindas. Linkiu visiems
-                                            geros sveikatos ir ilgų gyvenimo metų!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li id="commentPushBlock" style="list-style: none;"></li>
-
-
-
-
-                    </ol>
-                    <div class="comment">
-                        <div class="comment-title"><strong> Jūsų komentaras mums labai svarbus, parašykite jį čia</strong> </div>
-                        <form id="commentForm" method="POST" class="intlTelInput">
-                            <div class="form__item">
-                                <div class="file">
-                                    <div class="file__item">
-                                        <label for="formImage" class="form__avatar" id="formAvatar"></label>
-                                        <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file__input">
-                                        <label for="formImage" class="file-label"> Nuotrauka</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form__inputs">
-                                <!----Добавляем input если нужно вводить имя ---->
-                                <input type="text" placeholder="Tavo vardas" id="inputCommentName">
-                                <textarea name id="inputCommentText" placeholder="Tavo žinutė" cols="20" rows="5"></textarea>
-                                <button type="submit" id="commentPush"> SIŲSTI</button>
-                            </div>
-                            <input type="hidden" name="stats_uuid" value="471ebc44-0935-4835-ae5f-529daade4fe2">
-                        </form>
-                    </div>
-
-                </div>
-                <div class="button-footer">
-                    <button class=" red-button link">
-                        <span>Pirkti Welltone</span>
-                    </button>
-                </div>
-
-            </div>
-
-        </section><!-- /.main-offer -->
-    </main><!-- / .site-main -->
-
-    <div class="modals">
-        <div class="modal-overlay">
-            <div class="modal modal__error modal--1" data-target="form-popup">
-                <div class="modal__wrapper">
-                    <div class="modal__close-modal closeBtn">
-                        <img src="./img/close.svg" alt>
-                    </div>
-                    <h3> DĖMESIO!</h3>
-                    <p> Serveris laikinai nepasiekiamas.<br> Pabandykite dar kartą vėliau</p>
-                    <button class="modal__button closeBtn"> K</button>
-                </div>
-            </div>
-            <div class="modal humb-menu modal--2" data-target="humb-popup">
-                <div class="humb-menu__wrapper humb-menu__wrapper--1">
-                    <ul class="humb-menu__items">
-                        <li class="humb-menu__item btnMenus" data-path="registratom-popup"> REGISTRACIJA</li>
-                        <li class="humb-menu__item btnMenus"> IEŠKAU</li>
-                        <li class="humb-menu__item btnMenus"> REGISTRACIJA</li>
-                    </ul>
-                    <div class="btn button-on-humb closeBtnHumb closeBtn">
-                        <span> NUGARA</span>
-                    </div>
-                </div>
-
-                <div class="humb-menu__wrapper humb-menu__wrapper--2 dn">
-                    <h3 class="humb-menu__alert-title"> ATSARGIAI!</h3>
-                    <p class="humb-menu__alert-subtitle"> Serveris laikinai perkrautas.<br> Pabandyti dar kartą vėliau.</p>
-                    <div class="btn button-on-humb closeBtnHumb closeBtn">
-                        <span> NUGARA</span>
-                    </div>
-                </div>
-
-            </div>
-
-
-        </div>
-    </div>
-    <footer class="footer btn" data-path="form-popup">
-        <div class="header-container">
+        <div style="clear: both;"></div>
+        <br>
+        <footer class="footer">
             <img src="./img/footer.png" alt>
-        </div>
-    </footer><!-- / .footer -->
-    <script src="js/app.bundle.js"></script>
+        </footer>
+    </div>
+
+
+
+    <link href="style/css2_1.css" rel="stylesheet">
+    <link href="style/css.css" rel="stylesheet">
+    <link href="style/css2.css" rel="stylesheet">
+    <script src="js/modal.js"></script>
+    <script src="js/commetnt.js"></script>
+
+    <script type="text/javascript">
+        $("a").bind("click.smoothscroll", function (e) {
+            e.preventDefault();
+            var $target = $(".cc"); // добавить класс .cc к форме
+            var h = $target.offset().top - 20;
+            $("html, body").stop().animate({
+                    scrollTop: h,
+                },
+                1500,
+                "swing"
+            );
+        });
+    </script>
+
 
 
 
