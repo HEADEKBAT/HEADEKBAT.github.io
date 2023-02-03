@@ -25,7 +25,9 @@ window.addEventListener('scroll', function () {
 });
 
 function showPopupWindow() {
-    elShow.classList.add("modal-scrol--active")
+    if (!popupCall.classList.contains("disablet")) {
+        elShow.classList.add("modal-scrol--active")
+    }
 }
 
 function closePopupWindow() {
@@ -33,13 +35,13 @@ function closePopupWindow() {
 }
 closeModalPopup.addEventListener("click", () => {
     closePopupWindow();
-    popupCall.classList.remove('popup-call-active');
-    setTimeout(() => {
-        popupCall.classList.add('popup-call-active');
-    }, 10000);
 })
 buttoneModalPopup.addEventListener("click", () => {
     const anhor = document.querySelector('.ccc')
     closePopupWindow();
+    popupCall.classList.add('disablet');
+    setTimeout(() => {
+        popupCall.classList.remove('disablet');
+    }, 10000);
     anhor.scrollIntoView(top);
 })
