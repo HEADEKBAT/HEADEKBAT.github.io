@@ -1,0 +1,128 @@
+.modal-scrol {
+  display: none;
+  min-width: 350px;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+  top: 0;
+  left: 0;
+}
+
+.modal-scrol__bg {
+  position: relative;
+  background-color: #000;
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.modal-scrol__wrapper {
+  color: #fff;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  min-height: 600px;
+  position: absolute;
+  z-index: 11;
+  background: #ffe4c4;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  padding: 30px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.modal-scrol__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 550px) {
+  .modal-scrol__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.modal-scrol__left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
+}
+
+.modal-scrol__left img {
+  width: 100%;
+  max-width: 260px;
+}
+
+@media (max-width: 550px) {
+  .modal-scrol__left {
+    margin-top: 20px;
+  }
+}
+
+.modal-scrol__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.modal-scrol__title {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 65px;
+  text-align: center;
+  color: #a90000;
+  margin-top: 20px;
+}
+
+.modal-scrol__subtitle {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.modal-scrol__text {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 32px;
+  color: #a90000;
+  margin-top: 20px;
+}
+
+.modal-scrol__text p {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 32px;
+  text-align-last: right;
+  color: #000;
+}
+
+.modal-scrol--active {
+  display: block;
+}
+/*# sourceMappingURL=scsss.css.map */
