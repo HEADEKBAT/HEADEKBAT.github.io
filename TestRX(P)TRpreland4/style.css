@@ -2468,7 +2468,7 @@ h1 {
 	font-family: Roboto;
 }
 .main-form__price {
-	margin-top: 18px;
+	/* margin-top: 18px; */
 }
 .main-form__old-price {
 	position: relative;
@@ -2505,8 +2505,8 @@ h1 {
 }
 .main-form__time-alert,
 .main-form__timer {
-	margin-top: 18px;
-	font-family: Roboto;
+	margin-top: 5px;
+	font-family: 'Roboto';
 	font-style: normal;
 	font-size: 18px;
 	text-align: center;
@@ -2548,7 +2548,7 @@ h1 {
 }
 .form {
 	width: 100%;
-	margin-top: 35px;
+	margin-top: 5px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
