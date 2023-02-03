@@ -165,4 +165,9 @@
 .pulse-button span {
   margin-left: 15px;
 }
+
+.main-form__prod {
+  -webkit-animation: pulse 1.5s infinite;
+          animation: pulse 1.5s infinite;
+}
 /*# sourceMappingURL=scsss.css.map */
