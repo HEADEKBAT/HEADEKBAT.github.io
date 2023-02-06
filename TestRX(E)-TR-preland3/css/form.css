@@ -115,7 +115,7 @@
 	text-decoration: none;
 	box-shadow: 0 4px 15px 0 rgb(129 150 160 / 45%);
 	border-radius: 5px;
-	background-color: #069b49;
+	background-color: #4cad0e;
 	background-position: 1.35em 0.94em;
 	background-size: 1em;
 	background-repeat: no-repeat;
@@ -124,7 +124,7 @@
 	cursor: pointer;
 	font-size: 20px;
 	margin-top: 20px;
-	max-width: 300px;
+	max-width: 600px;
 	width: 100%;
 }
 #order_form {
@@ -163,17 +163,20 @@
 	font-family: Trebuchet MS, sans-serif;
 	text-transform: uppercase;
 	text-align: center;
-	/* padding: 15px 25px 15px 25px; */
+	padding: 15px 25px 15px 25px;
 	color: #fff;
 	border: none;
 	border-radius: 10px;
-	background: #4cad0e;
+	background: #4cad0e !important;
 	cursor: pointer;
 	-webkit-box-shadow: 0 0 0 0 rgb(76 173 14 / 27%);
 	box-shadow: 0 0 0 0 rgb(76 173 14 / 27%);
 	animation: pulse 1.5s infinite;
 	-webkit-animation: pulse 1.5s infinite;
 	text-decoration: none;
+}
+.pulse-button__small-padding {
+	padding: 5px 15px;
 }
 .icon-button {
 	-webkit-box-flex: 0;
@@ -208,4 +211,7 @@
 		-webkit-box-shadow: 0 0 0 0 rgb(90 153 212 / 0%);
 		box-shadow: 0 0 0 0 rgb(90 153 212 / 0%);
 	}
+}
+.animation {
+	animation: pulse 1.5s infinite;
 }
