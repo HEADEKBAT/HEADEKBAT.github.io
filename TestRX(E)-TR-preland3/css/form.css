@@ -1,0 +1,211 @@
+/** @format */
+
+.tcenter {
+	text-align: center !important;
+}
+#order_form {
+	position: relative;
+	background: #fff;
+	padding: 20px;
+	max-width: 600px;
+	font-family: Arial;
+	background-image: url(../img/formbg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 20px auto;
+}
+#order_form input {
+	font-size: 21px;
+	padding: 15px;
+	border-radius: 3px;
+	border: 2px solid #e9d7dc;
+	max-width: 300px;
+	width: 100%;
+}
+#order_form div {
+	background: 0 0 !important;
+}
+#order_form h2 {
+	margin: 15px 0 0 0;
+	padding: 0;
+	line-height: 32px;
+	border: 0;
+	font-size: 26px;
+	font-weight: 700;
+}
+.blue {
+	color: blue;
+}
+#order_form div {
+	background: 0 0 !important;
+}
+
+.form-note {
+	margin: 15px 10px -5px 10px;
+	border: 2px solid #0299ff;
+	padding: 10px;
+	margin-bottom: 15px;
+}
+#order_form div {
+	background: 0 0 !important;
+}
+.price {
+	display: flex;
+	justify-content: center;
+}
+.price {
+	/* color: red; */
+	font-weight: 700;
+}
+#order_form .order_form_pole {
+	padding: 10px;
+}
+.price__item {
+	padding: 0 10px;
+}
+.price__item p {
+	margin-bottom: 5px;
+	margin-top: 0;
+}
+.price__item span {
+	font-size: 18px;
+}
+.price__item p:nth-child(2) {
+	text-align: center;
+}
+
+.price__item p {
+	margin-bottom: 5px;
+	margin-top: 0;
+}
+.red {
+	color: red;
+}
+.price__item--new span {
+	font-size: 24px;
+}
+#order_form .order_form_pole {
+	padding: 10px;
+}
+#order_form label {
+	max-width: 290px;
+	width: 100%;
+	display: block;
+	padding: 5px 0 5px 0;
+	font-weight: 700;
+	font-size: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+#order_form input {
+	font-size: 21px;
+	padding: 15px;
+	border-radius: 3px;
+	border: 2px solid #e9d7dc;
+	max-width: 300px;
+	width: 100%;
+}
+#order_form button,
+.obutton {
+	display: inline-block;
+	padding: 20px;
+	color: #000;
+	font-weight: 700;
+	text-decoration: none;
+	box-shadow: 0 4px 15px 0 rgb(129 150 160 / 45%);
+	border-radius: 5px;
+	background-color: #069b49;
+	background-position: 1.35em 0.94em;
+	background-size: 1em;
+	background-repeat: no-repeat;
+	transition: all 0.15s ease-in-out;
+	border: 0;
+	cursor: pointer;
+	font-size: 20px;
+	margin-top: 20px;
+	max-width: 300px;
+	width: 100%;
+}
+#order_form {
+	position: relative;
+	background: #fff;
+	padding: 20px;
+	max-width: 600px;
+	font-family: Arial;
+	background-image: url(../img/formbg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin: 20px auto;
+}
+.pulse-button-wrapper {
+	display: block;
+	height: 100%;
+	margin: 20px auto 0px auto;
+	-webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
+	background: inherit;
+	border: unset;
+	outline: none;
+	text-decoration: none !important;
+	position: relative;
+}
+.pulse-button,
+.pulse-button-no-animation {
+	width: 100%;
+	min-height: 76px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 20px;
+	font-weight: light;
+	font-family: Trebuchet MS, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	/* padding: 15px 25px 15px 25px; */
+	color: #fff;
+	border: none;
+	border-radius: 10px;
+	background: #4cad0e;
+	cursor: pointer;
+	-webkit-box-shadow: 0 0 0 0 rgb(76 173 14 / 27%);
+	box-shadow: 0 0 0 0 rgb(76 173 14 / 27%);
+	animation: pulse 1.5s infinite;
+	-webkit-animation: pulse 1.5s infinite;
+	text-decoration: none;
+}
+.icon-button {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 auto;
+	flex: 0 0 auto;
+	top: 11px;
+	left: 5px;
+	width: 60px;
+	height: 60px;
+}
+.icon-button img {
+	width: 100%;
+	height: 100%;
+}
+.pulse-button span {
+	margin-left: 15px;
+}
+@keyframes pulse {
+	0% {
+		-webkit-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+	70% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		-webkit-box-shadow: 0 0 0 50px rgb(90 153 212 / 0%);
+		box-shadow: 0 0 0 50px rgb(90 153 212 / 0%);
+	}
+	100% {
+		-webkit-transform: scale(0.9);
+		transform: scale(0.9);
+		-webkit-box-shadow: 0 0 0 0 rgb(90 153 212 / 0%);
+		box-shadow: 0 0 0 0 rgb(90 153 212 / 0%);
+	}
+}
