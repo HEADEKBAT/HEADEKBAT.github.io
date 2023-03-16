@@ -1,0 +1,248 @@
+.header-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.header-image img {
+  width: 100%;
+}
+
+.header {
+  background-color: #fff;
+}
+
+.header-info {
+  background-color: #fff;
+  display: block;
+  text-decoration: none;
+  color: #3b3b3b;
+  font-size: 13px;
+}
+
+.header-info span {
+  display: inline-block;
+  color: #19beb6;
+  margin-right: 10px;
+  padding-left: 10px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.header-time {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.main_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url(../images/form_bg.jpg) center top no-repeat;
+  background-size: 100% 100%;
+  padding: 30px 0;
+  text-align: center;
+  max-width: 650px;
+  margin: 20px auto 0;
+  font-size: 18px;
+}
+
+@media (max-width: 992px) {
+  .main_form {
+    padding: 30px 15px;
+  }
+}
+
+.main_form img {
+  margin: 0 auto;
+}
+
+.main_form h2 {
+  font-size: 32px;
+  line-height: 1.35;
+  color: black;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.sertif {
+  color: blue;
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.main_form .price {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 0 7px;
+  font-weight: 500;
+  color: #000;
+  font-size: 22px;
+}
+
+.blue-border {
+  margin: 0px 20px 15px 20px;
+  border: 2px solid #0299ff;
+  padding: 10px !important;
+  text-align: center !important;
+  max-width: 700px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.main_form label {
+  margin-top: 10px;
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.main_form input {
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 3px;
+  border: 2px solid #e9d7dc;
+  max-width: 300px;
+  width: 100%;
+}
+
+.main_form button {
+  -webkit-animation: glowingBlue 2000ms infinite both;
+          animation: glowingBlue 2000ms infinite both;
+}
+
+.form-button {
+  padding: 20px;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #00c24a;
+  background-position: 1.35em 0.94em;
+  background-size: 1em;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 260px;
+  margin-bottom: 20px;
+}
+
+.timelimit,
+.additional {
+  font-size: 12px;
+  text-align: center;
+  padding: 0 20px;
+  margin-bottom: 5px;
+}
+
+.timelimit b {
+  display: inline-block;
+  background: url(../images/timerIcon2.png) no-repeat;
+  margin-top: -2px;
+  padding-left: 14px;
+  color: red;
+  vertical-align: middle;
+  background-position-y: 0px;
+  font-size: 12px;
+}
+
+.price_red {
+  font-weight: bold;
+  color: #00c24a;
+}
+
+.answ-image {
+  display: block;
+  margin-top: 15px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.body-image {
+  display: block;
+  margin: 15px auto 0 auto;
+}
+
+.sert__title {
+  text-align: center;
+  background: #f4f4f4;
+  border-radius: 4px;
+  padding: 20px 40px;
+  position: relative;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sert__title::after,
+.sert__title::before {
+  content: "";
+  position: absolute;
+  width: 36px;
+  height: 72px;
+  background-image: url(../images/arow_down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+}
+
+.sert__title::before {
+  top: 10px;
+  right: 10px;
+}
+
+.sert__title::after {
+  top: 10px;
+  left: 10px;
+}
+
+.answer-body {
+  display: block;
+  color: #000;
+  font-weight: 500;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.answer-body img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.color-title {
+  margin-top: 15px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #0299ff;
+  text-align: center;
+}
+
+.lsd li {
+  list-style: disc;
+  margin-left: 15px;
+  margin-top: 15px;
+  font-weight: 500;
+}
+/*# sourceMappingURL=new-style.css.map */

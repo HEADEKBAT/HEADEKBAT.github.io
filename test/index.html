@@ -1,340 +1,642 @@
+<?php
+// Защита от прямых заходов на ленд
+if (!isset($rawClick)) {
+    echo '404';
+    exit();
+}
+
+// Данные по офферу
+$offerData = 'urofemmin---pe---lemonad.php';
+include __DIR__ . '/../_order/offers/' . $offerData;
+
+// Получение ID партнерки
+include __DIR__ . '/../_order/affiliates.php';
+$affiliates_id = $affiliates[$aff];
+// ID счетчика Яндекс.Метрики
+$metrika = '92674772';
+// Цвета конфирма
+$confirmColorBackground = 'ffffff'; // Общий фон
+$confirmColorBlocks = 'd2f3f7'; // Блоки
+$confirmColorHeaders = '000000'; // Заголовки
+$confirmColorText = '000'; // Текст в блоках
+// Блок тестирования элементов
+//include __DIR__ . '/versions.php';
+
+// Обновление параметров клика
+include __DIR__ . '/../_php/update-params.php';
+?>
+
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 
 <head>
-    <!-- Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="format-detection" content="telephone=no">
-
-    <title>title</title>
-
-    <!-- Favicon -->
-
-    <!-- SEO -->
-    <meta name="description" content="Путешествия  друзей, путешествия для друзей">
-
-    <!-- Preloading fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>&quot;La incontinencia urinaria y la cistitis en las mujeres conducen al cáncer cervical temprano. ¡No seas indiferente a tu salud!&quot; - El urólogo nos cuenta sobre cómo deshacerse de
+        las principales enfermedades femeninas.</title>
+    <meta
+        content="&quot;La incontinencia urinaria y la cistitis en las mujeres conducen al cáncer cervical temprano. ¡No seas indiferente a tu salud!&quot; - El urólogo nos cuenta sobre cómo deshacerse de las principales enfermedades femeninas."
+        name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/components.css" rel="stylesheet" type="text/css">
+    <link href="css/new-style.css" rel="stylesheet" type="text/css">
+    <link href="css/barlekosteetass.css" rel="stylesheet" type="text/css">
+    <link href="images/123.ico" rel="shortcut icon" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="{_current_domain}/lander/_js/scripts.js?var=4&metrika=<?php echo $metrika; ?>&aid=<?php echo $affiliates_id; ?>"></script>
+    <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff; ?>&off=<?php echo $off; ?>&geo=<?php echo $geo; ?>&land_pre={landing_id}&offer_pre={offer_id}"></script>
 </head>
 
 <body>
+    <script>
+        function dtime_nums(d, like_eu) {
+            var now = new Date();
+            now.setDate(now.getDate() + d + 1);
 
-    <header class="header">
-        <div class="header__image">
-            <img src="./img/bg/bg-header.png" alt="">
-        </div>
-        <div class="container header__content">
-            <nav class="header__navigation nav">
-                <ul>
-                    <li class='header__item'>
-                        <a href="#">Síntomas</a>
-                    </li>
-                    <li class='header__item'>
-                        <a href="#">Composición</a>
-                    </li>
-                    <li class='header__item'>
-                        <a href="#">¿Cómo utilizarlo?</a>
-                    </li>
-                    <li class='header__item'>
-                        <a href="#">Opiniones de usuarios</a>
-                    </li>
-                </ul>
-            </nav>
+            var dayNum = "";
+            if (now.getDate() < 10) {
+                dayNum = "0";
+            }
+            dayNum += now.getDate();
 
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            var monthNum = "";
+            if (now.getMonth() + 1 < 10) {
+                monthNum = "0";
+            }
+            monthNum += now.getMonth() + 1;
+
+            if (like_eu === true) {
+                document.write(dayNum + "." + monthNum + "." + now.getFullYear());
+            } else {
+                document.write(monthNum + "." + dayNum + "." + now.getFullYear());
+            }
+        }
+    </script>
+
+    <div>
+        <div class="navbar-3 w-nav">
+            <div class="container-13 w-container">
+                <header>
+
+                    <a class="header-image">
+                        <img src="./images/header.png" alt="">
+                    </a>
+                    <a href="" class="header-info">
+                        Portada
+                        <span>></span>
+                        Expertos
+                    </a>
+                    <p class="header-time">
+                        <script>
+                            dtime_nums(-3, true)
+                        </script>
+                    </p>
+                </header>
             </div>
         </div>
-    </header><!-- / .header -->
+        <div class="div-block-5">
+            <div class="contents w-container">
+                <h1>La incontinencia urinaria y la cistitis en las mujeres conducen al cáncer cervical temprano. ¡No seas indiferente a tu
+                    salud!&quot; - El urólogo nos cuenta sobre cómo deshacerse de las principales enfermedades femeninas.</h1>
+                <div class="text-block">
 
-
-<main class="content">
-    <section class="container content-block">
-        <h1 class='content-block__title'>Cocoa Slim ¡El mejor quema grasa!</h1>
-        <p class="content-block__text">
-            Los tiempos modernos avanzan rápidamente, trayendo cambios que facilitan tanto la vida cotidiana como el trabajo. Sin embargo, a pesar de que esto ayuda a incrementar la eficacia laboral y
-            tener más comodidades, también tiene un impacto negativo en la salud al crear un estilo de vida sedentario con prolongadas horas de trabajo en una oficina y la posibilidad de obtener todo
-            en casa al alcance de la mano.
-        </p>
-        <span class="content-block__text--break"></span>
-        <p class="content-block__text">
-            Esto, sumado a otra serie de factores como lo son el estrés y ansiedad del día a día, trae como consecuencia la aparición del sobrepeso y la obesidad, condiciones que afectan a millones de
-            individuos y que tienen grandes consecuencias sobre la salud en general de las personas.
-        </p>
-        <div class="content-block__image-info image-info">
-            <div class="image-info__text-wrapper">
-                <p class="image-info__text">
-                    Por tal motivo, existe una gran cantidad de remedios caseros para adelgazar y productos diseñados específicamente para este fin. Sin embargo, son pocos los productos que han
-                    logrado
-                    ofrecer resultados verdaderos y satisfactorios, creando una gran frustración en las miles de personas que diariamente luchan por encontrar una solución a sus problemas de
-                    sobrepeso.
-                </p>
-                <span class="content-block__text--break-gray"></span>
-                <p class="image-info__text">
-                    Con esto en mente, la empresa Argentina IGALFER SRL, decidió crear un producto que sea capaz de ofrecer una pérdida de peso verdadera de forma rápida, eficaz, segura, y usando solo
-                    ingredientes 100% naturales que puedan ser asimilados por el organismo de una mejor manera y sin tener ningún tipo de reacción adversa. De esta forma surgió Cocoa Slim, la mejor
-                    alternativa para perder peso.
-
-                </p>
-            </div>
-            <div class="image-info__image">
-                <div class="image-info__img image-info__img--front">
-                    <img src="./img/bg/prod-175x175.png" alt="">
                 </div>
-                <div class="image-info__img">
-                    <img src="./img/bg/woomen.png" alt="">
+                <div class="div-block">
+                    <img src="images/main1.jpg" alt="" class="image main1-img">
+                    <div class="text-block-3">Dra. Leoncio Eduardo Amador Acosta es uróloga jefe del Centro Español de Urología y Ginecología.<br> <br>
+                    </div>
+                    <img src="images/main2.jpg" alt="" class="image main2-img"><br><br>
+                    <div class="text-block-2"> En el mundo moderno, la cistitis, la incontinencia urinaria y las fugas ocurren en el 67% de las mujeres mayores de 47 años (en el 35% de las mujeres
+                        mayores de 31 años). Lo más peligroso en estas enfermedades es que con el tiempo no mejorarán: si la incontinencia no se cura por completo, habrá más y más fugas y, por lo
+                        tanto, las manchas húmedas en la ropa y un olor desagradable solo se intensificarán. La cistitis no tratada provoca dolores en la parte inferior del abdomen, malestar general,
+                        micción frecuente (hasta 50 o más veces al día) y también impide llevar la vida sexual saludable<br><br> Sin embargo, hoy en día, estas enfermedades pueden ser tratadas
+                        efectivamente en casa en poco tiempo.<br>‍<strong><em><br></em></strong></div>
+                    <div class="text-block-25"><strong>- Doctora Amador, ¿realmente la cistitis y la incontinencia son peligrosas para las mujeres?</strong><br><span
+                            class="trans">g<br>‍‍‍‍‍‍‍‍‍‍‍</span>- De hecho, muchas mujeres ni siquiera se dan cuenta de que es una enfermedad realmente peligrosa y menosprecian las consecuencias.
+                        Muchas esperan que pase por sí solo con el tiempo, pero nunca pasa. La cistitis es una enfermedad infecciosa extremadamente grave que provoca daños graves en toda la vejiga.
+                        Posteriormente, la infección a través de la vejiga penetra en los riñones y luego comienza la infección de todo el organismo.<br><br>Y la incontinencia urinaria puede destruir
+                        no solo la vida de la mujer: debido a las fugas constantes y al olor desagradable, la mujer tiene complejos y relaciones tensas con los demás. Esto se explica fácilmente: las
+                        personas que huelen a orina generalmente son rechazadas, ya que este olor es desagradable para las personas. Pero aún así, el principal peligro de la incontinencia urinaria es
+                        que en un medio húmedo y cálido la microbiota patógena se multiplica rápidamente, penetra en la vagina y se asienta sobre su mucosa.<br><span class="trans">asdq</span><br>
+                    </div>
+                    <div class="text-block-25 dfsd">Estadísticamente, después de 1-2 meses de &quot;fugas&quot; regulares, una mujer ya sufre de disbiosis en la vagina, después de 3-4 meses - de
+                        colpitis crónica o vaginitis. Después de aproximadamente un año a las mujeres que sufren de esta patología (y no reciben un tratamiento adecuado) se les diagnostican tumores
+                        benignos. Y los quistes se manifiestan en cantidades muy grandes. A esto contribuye precisamente la microbiota patógena. En cualquier momento tales tumores pueden volverse
+                        cancerosos, y esto ya es cáncer y necesidad de acudir al hospital.<br></div>
+                    <div class="text-block-25"><span class="trans">asdqr<br>‍‍‍‍‍‍‍‍‍</span>Desafortunadamente, si la micción espontánea no se trata, terminará con el hecho de que la vejiga dejará de
+                        contener la orina por completo y tendrás que recurrir al cateterismo. Este procedimiento implica la inserción en la vejiga de un catéter que está conectado a un receptor de
+                        orina suspendido de la pierna.<br><br>De hecho, una mujer que lucha contra las fugas de orina con los salvaslips (o no lucha en absoluto) vive en un riesgo constante. Y para
+                        ser honesta, no entiendo por qué las mujeres descuidan tanto su salud. Ahora hay métodos bastante efectivos para tratar tanto la incontinencia urinaria como la cistitis.
+                        Después de 2-3 semanas puedes olvidarse de este problema para siempre.<br>‍
+
+                        <img class="body-image" src="./images/main3.jpg" alt="">
+
+
+                        <span><strong class="trans">dasdqwr</strong></span><strong><br>- ¿Te refieres a
+                            cirugía?</strong><br><span class="trans">asdqt<br>‍‍</span>- Claro que no. Y aún más, quiero disuadir a todos de hacer tales operaciones. Incluyendo el uso de láser y
+                        procedimientos de sling mediouretrales. A pesar de la alta velocidad de la manipulación (con lo que a menudo cobran los médicos deshonestos que anhelan dinero), estas
+                        operaciones tienen muchas consecuencias negativas para la salud de la mujer, ya que conducen al estancamiento de la orina ya dentro del cuerpo, y esto puede causar los mismos
+                        quistes. Pero la desventaja más importante de la intervención quirúrgica es que esto es solo una eliminación cosmética del problema: se eliminan las consecuencias de la
+                        enfermedad y no sus causas.<br>‍<span class="trans">bxadq</span><br>Dado que la causa permanece, el problema vuelve a aparecer en el futuro. Y muy rápidamente, ya después de
+                        1-2 años.<br><span class="trans">g<br>‍‍‍‍‍‍</span>Para deshacerte de la incontinencia urinaria y de la cistitis de una vez por todas, hay que eliminar la causa, y la causa es
+                        el mal funcionamiento del páncreas. Debido a los trastornos endocrinos, el cuerpo está sobresaturado con glucosa y productos dañinos de la glucólisis (el proceso de oxidación
+                        de la glucosa realizado por el páncreas). Estas sustancias, que se encuentran en grandes cantidades en la orina, eliminan del cuerpo el calcio y el magnesio que proporcionan
+                        elasticidad y condición sana a los músculos. Como resultado, los músculos se debilitan y dejan de retener la orina; así es como ocurre la incontinencia urinaria. Las fugas
+                        regulares y el dolor muscular crean el ambiente necesario para el desarrollo de la infección, que luego penetra directamente en la vejiga, por lo que la mujer tiene
+                        cistitis.<br><span class="trans">aasdq</span><br></div><img src="images/es-scheme.jpg" alt="" class="image-17">
+                    <div class="text-block-22">La pérdida de elasticidad muscular como resultado de la eliminación de sustancias beneficiosas es la causa principal de la fuga de orina. Primero, las
+                        fugas aparecen al toser o estornudar, luego ocurrirán continuamente.<br>‍<br></div>
+                    <div class="text-block-23">Durante las operaciones se realiza un estiramiento muscular, sin embargo, el calcio y el magnesio continúan eliminándose del cuerpo debido a trastornos
+                        endocrinos no tratados. Esto conduce a la reaparición del problema. Por lo tanto, en la medicina moderna no se recomienda el tratamiento quirúrgico.<br>‍<span
+                            class="trans">gasdq</span><br><strong class="bold-text-56">- ¿Qué aconsejas hacer a las mujeres que sufren de incontinencia urinaria o cistitis?<br>
+                            <img class="body-image" src="./images/main4.jpg" alt="">
+                        </strong><span><strong class="bold-text-56 trans">ttrwqeasd</strong></span><strong class="bold-text-56"><br></strong>- No descuiden su salud en vano. En este momento, las
+                        mujeres peruanos
+                        tienen la oportunidad de ingresar al programa preferencial &quot;Salud feminina&quot;, esto les da derecho a obtener UroFemmin. Este medicamento está diseñado específicamente
+                        para eliminar la cistitis y la incontinencia urinaria y muestra una efectividad simplemente fenomenal. Ayuda a casi todas, gracias al hecho de que este es un remedio de nueva
+                        generación.<br><span class="trans">va<br>‍‍‍‍‍‍‍‍</span>La efectividad de este medicamento se debe a 3 acciones importantes. Primero, este medicamento normaliza el páncreas,
+                        elimina el dolor, los calambres, el olor y su gran ventaja es la posibilidad de su uso en mujeres embarazadas. Segundo es que este producto limpia los fluidos del cuerpo, hace
+                        frente a las infecciones y la inflamación del sistema genitourinario, eliminando así la amenaza de cistitis. Tercero, este fármaco preferencial recupera las paredes y los
+                        músculos de la vejiga, por lo que se cura la incontinencia urinaria. En este caso, las fugas desaparecen muy rápidamente. Según las estadísticas, al día siguiente de comenzar a
+                        tomar UroFemmin la ropa interior estará seca. Para la curación completa del sistema genitourinario, la normalización del páncreas y el fortalecimiento de los músculos del suelo
+                        pélvico y la vejiga, generalmente es suficiente tomar el medicamento durante solo 14 días. En algunos casos raros, puede tardar un poco más.<br>‍<span
+                            class="trans">asdqwre</span><br>Desafortunadamente, en la mayoría de los países de Europa, no solo en España, todavía están usando medicamentos obsoletos que yo llamo
+                        &quot;Hiroshima&quot;. Porque dejan solo tierra quemada, causando daño tanto a la vejiga como a los genitales.<br>‍<span class="trans">asdcz</span><br>UroFemmin es un
+                        medicamento nuevo y muy efectivo: se desarrolló en Alemania en cooperación con Suiza e Israel. En su creación participaron los mejores científicos del mundo. Debido al hecho de
+                        que este medicamento se basa en componentes naturales, se excluye el daño al cuerpo. Este factor positivo permite tomar este medicamento en casa, lo que me hace muy feliz en
+                        las condiciones de la situación actual. Gracias al programa preferencial, las mujeres peruanos tienen la oportunidad de recibir el medicamento a través de la entrega a
+                        domicilio.<br>
+                        <div class="answer-body" style="border: 2px solid rgb(255 69 69); background-color: rgb(255 220 220); padding: 10px;">
+                            <img src="./images/main5.jpg" alt="">
+                            <p style="text-align: center; ">
+                                <strong>
+
+                                    Hola, me llamo Meldoza Lizbeth y quiero compartir mi alegría contigo.
+                                </strong>
+                            </p>
+                            <p>
+                                Me gustaría dar las gracias al Dr. Leoncio Eduardo. Es mi salvador. El médico que me trató antes quería recetarme una operación pesada y cortarme toda una zona de la
+                                vejiga. Doy gracias al Todopoderoso por haber leído a tiempo el artículo del doctor sobre Urofemmin.
+                            </p>
+                            <p>
+                                Ya no llevo compresas a diario, no tengo miedo a las pérdidas. Cuando voy al baño, no me duele nada. Lo he sufrido durante los últimos 10 años de mi vida. Estoy tan
+                                contenta de sentirme sana y sin miedo a un paso en falso repentino en medio de la calle. Muchas gracias.
+                            </p>
+                        </div>
+                        <p class="color-title">
+                            Además de su acción principal, UroFemmin posee las siguientes propiedades:
+                        </p>
+
+                        <ul class="lsd">
+                            <li>El medicamento ayuda a reducir la inflamación</li>
+                            <li>Ayuda a prevenir las infecciones urinarias</li>
+                            <li>Refuerza y alivia el flujo de orina</li>
+                            <li>Ayuda contra la cándida y la cistitis.</li>
+                            <li>Refuerza el sistema inmunitario.</li>
+                            <li>Mejora la circulación en los órganos pélvicos.</li>
+                            <li>Aporta al organismo más vitaminas y minerales.</li>
+
+                        </ul>
+
+                        <span class="trans">gasdqwr<br>‍‍</span><strong>- ¿Qué se debe hacer para participar en este programa?</strong><br><span class="trans">asdqwr<br>‍</span>- Para
+                        obtener UroFemmin, debes cumplir con las siguientes condiciones:<br><span class="trans">mbnasdqr</span><br>
+                    </div>
+                </div>
+                <div class="text-block-25"><strong>Términos de uso de UroFemmin:<br></strong><span><strong class="trans">vasdq<br>‍‍</strong></span><strong>• Sólo para uso personal:<br></strong>Esta
+                    medida es para combatir a los especuladores que intentan comprar UroFemmin a gran escala y revenderlo a su margen;<strong><br>• Solicitarlo a través del formulario oficial del
+                        programa:<br></strong>El formulario de solicitud oficial es una garantía de calidad y protección contra los especuladores.<br></div>
+                <div class="text-block-24"><strong>- ¿Cuánto tiempo durará el programa preferencial &quot;La salud feminina&quot;?</strong><br><span class="trans">j<br>‍‍‍</span>Hasta el <span
+                        id="year">date</span> inclusive o hasta que se entregue la última unidad de UroFemmin. Y todo esto a pesar de la ausencia de publicidad en la radio y la televisión. La gente
+                    transmite información, lo recomienda a familiares y amigos. Fue una sorpresa para mí cuando descubrí que tanta gente se aprovechaba del programa preferencial. Por lo tanto,
+                    aconsejamos pedir UroFemmin lo antes posible.<br></div>
+
+            </div>
+            <p class="sert__title">
+                <a href="" style="text-decoration: none; color: #006cad;">
+                    El UROFEMMIN con un 50%
+                </a>
+                DE DESCUENTO SOLO SE PUEDE
+                <a href="" style="text-decoration: none; color: #006cad;">
+                    PEDIR EN EL SIGUIENTE ENLACE
+                </a>
+            </p>
+            <img class="body-image" src="./images/sert.jpg" alt="">
+            <br><br>
+            <img class="body-image" src="./images/prod.png" alt="">
+            <form action="" id="form" class="main_form" method="post">
+                <img src="./images/med_form.png">
+                <h2>Formulario oficial de pedido</h2>
+                <p class="sertif">
+                    № 29 982 de 30 000,
+                    <span class="">
+                        <script>
+                            dtime_nums(-1, true)
+                        </script>
+                    </span>
+                </p>
+                <p class="price">
+                    Para conseguir UroFemmin al precio con descuento de
+                    <span style="
+              color: red;
+              text-decoration: line-through;
+              font-size: 0.9em;
+              white-space: nowrap;
+            ">
+                        280 PEN
+                    </span>
+                    <span></span>
+                    <span style="white-space: nowrap;" class="price_red">140 PEN</span>
+                </p>
+
+
+
+                <p class="blue-border">
+                    Para obtener UroFemmin con un descuento del 50%, introduce tu nombre
+                    y número de contacto en los campos siguientes y haz clic en
+                    "Pedir".
+                </p>
+                <label for="name0">Por ejemplo: Luis Rodríguez</label>
+                <input id="name0" type="text" placeholder="Ingresa tu nombre" name="name" required="">
+                <label for="phone0">Por ejemplo: +34 123456789</label>
+                <input id="phone0" name="phone" type="tel" placeholder="Ingresa tu número de teléfono" required="">
+                <input type="hidden" name="data0" value="{subid}" />
+                <input type="hidden" name="data1" value="{b}" />
+                <input type="hidden" name="data2" value="{a}" />
+                <input type="hidden" name="data3" value="{x}" />
+                <input type="hidden" name="data4" value="<?php echo $off; ?>" />
+                <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
+                <input type="hidden" name="data6" value="{offer_id}" />
+                <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
+                <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
+                <input type="hidden" name="data9" value="<?php echo $price; ?>" />
+                <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
+                <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
+                <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
+                <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
+                <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
+                <button class="form-button" type="submit">PEDIR</button>
+
+                <div class="timelimit">
+                    <span>La recepción de solicitudes está a punto de terminar</span>
+                    <b class="timer"><span class="min"></span>:<span class="sec"></span>:<span class="msec"></span></b>
+                </div>
+                <span class="additional">
+                    * Sus datos personales se envían directamente al fabricante. Solo
+                    él tiene acceso a ellos.
+                </span>
+
+            </form>
+
+
+
+            <div>
+                <div class="w-container">
+                    <h3 class="heading-9"><strong>Comentarios:</strong><br></h3>
+                </div>
+            </div>
+            <div data-w-id="ddd1f482-6d71-1f79-cdfc-f202f83710db">
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/11.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">nagore Amador<br></h4>
+                        <p class="comments-text">Gracias por las recomendaciones. Logró obtener UroFemmin por el programa preferencial. Realmente lo consiguí con el máximo descuento. Ya escuché muchas
+                            cosas buenas sobre él, este remedio me salvó de la cistitis, que no me dejaba vivir en paz. Me alegra que, por el programa preferencial, el medicamento lo hayan entregado
+                            directamente a casa; no tenía necesidad de ir a ningún lado.<br>
+
+                        </p>
+                        <div class="answ-image">
+                            <img src="./images/answ1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/22.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">Nuria López<br></h4>
+                        <p class="comments-text">El remedio es realmente muy bueno. He tenido incontinencia durante casi un año. Apareció después del tercer embarazo. Probé muchos tratamientos
+                            conservadores. Solo UroFemmin me ayudó. Estoy bien ahora. ¡Se lo aconsejo a todas!</p>
+                        <div class="answ-image">
+                            <img src="./images/answ2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/33.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">Ana Vergara<br></h4>
+                        <p class="comments-text">Solo tengo 20 años y solía sufrir de micción frecuente. Después de las 8 de la noche trataba de no beber agua. Antes de acostarme siempre iba al baño,
+                            pero a menudo había una mancha en la cama. Me sentía terriblemente incómoda ante mi novio, pero lo entendía todo. Intentaba tratarme, pero todo fue en vano. Hace
+                            aproximadamente 2 meses recibí una llamada de mi médico, me dijo que había un remedio que podría ayudarme. Y me ayudó en realidad, ahora no tengo incontinencia en absoluto.
+                            La incontinencia ha desaparecido por completo.<br></p>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/44.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">pacífica Hernández<br></h4>
+                        <p class="comments-text">Yo no lo probé, pero sé que una pariente de mi amiga sufría de cistitis. Sufría mucho de micción frecuente y dolorosa. Parece que ella también tomó
+                            UroFemmin, y también la ayudó!<br></p>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/55.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">Alejandra Ramírez<br></h4>
+                        <p class="comments-text">Es verdad que dicen que las mujeres no deben levantar más de 3 kilos de peso. Llevamos toda la vida tirando bolsas, y luego tenemos fugas y nadie nos
+                            necesita. ¡Mi marido me dejó por eso! Se fue a vivir con una joven.<br></p>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"></div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/66.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">Rosario Flores<br></h4>
+                        <p class="comments-text">El médico me dijo que hay que entrenar los músculos íntimos. Lo hice, mejoró. Pero aún tenía fugas, olía a orina. Y al final, también, me recuperé solo
+                            gracias a UroFemmin. En general, es un muy buen remedio. Me gustó que, gracias al programa preferencial, se organizara la entrega del medicamento a domicilio.<br></p>
+                        <div class="answ-image">
+                            <img src="./images/answ3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/77.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">Diana Ortega<br></h4>
+                        <p class="comments-text">Gracias. Tengo que pedírmelo. Ahora tengo la esperanza!<br></p>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/88.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">Isabel Delgado<br></h4>
+                        <p class="comments-text">También tengo los músculos débiles en la vejiga. Si de repente toso, a menudo me meo. Un poco, pero suficiente para tener que cambiar la ropa interior.
+                            Probaré UroFemmin. ¡Mientras estoy en casa, me voy a curar!<br></p>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/99.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">Susi Pérez<br></h4>
+                        <p class="comments-text">¡Curamos la incontinencia urinaria de mi abuela con este medicamento!!! Tiene 75 años. Sentía impulsos de ir al baño, pero no podía ir rápido al baño.
+                            Antes de eso, tomaba otros medicamentos, pero no la ayudaban. Por un consejo de los amigos probamos UroFemmin! Ya no tiene problemas.<br></p>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/1010.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">mariona Gómez<br></h4>
+                        <p class="comments-text">Sobre la operación es cierto. Mi colega tiene 56 años. El año pasado fue operada por incontinencia urinaria. 10 meses de alegría, y luego todo empezó
+                            de nuevo. Pero después de la operación estuvo recuperándose durante mucho tiempo<br></p>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/1111.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">Luisa Sánchez<br></h4>
+                        <p class="comments-text">La cistitis me apareció de manera muy imperceptible. Nada ayudaba. Así viví durante 5 meses. Tuve dolores desagradables en la parte baja de la espalda
+                            y en el abdomen. Hace dos meses me enteré de UroFemmin. Decidí pedirlo. Me ayudó. El problema desapareció por completo en 9 días. Y en general todo mejoró. Siento que los
+                            músculos también se han vuelto mucho más elásticos, ¡es muy agradable.</p>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/1212.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">Sofía Montero<br></h4>
+                        <p class="comments-text">Gracias. El médico dijo que quedaban pocas unidades por oferta. Afortunadamente, he podido pedirlo!</p>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/1313.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">ricarda Molina<br></h4>
+                        <p class="comments-text">¡Es realmente increíble! ¡UroFemmin también me ayudó! He sufrido de cistitis durante casi un mes, con dolores muy fuertes. Probé muchos tratamientos
+                            conservadores. Este remedio alemán me ayudó. ¡Los científicos europeos son los mejores. Estoy bien ahora. ¡Se lo aconsejo a todas!</p>
+                        <div class="answ-image">
+                            <img src="./images/answ4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/1414.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">María Pérez<br></h4>
+                        <p class="comments-text">Soy una de aquellas personas que ya pidió y probó UroFemmin. He tenido incontinencia durante los últimos 7 años. No recuerdo la última vez que tuve un
+                            día normal sin fugas. Por recomendación de mi médico, decidí probar UroFemmin. Después de tomar durante un mes, los músculos se volvieron fuertes, ¡las fugas
+                            desaparecieron! Estoy muy feliz de que ahora no tengo que ir al baño con frecuencia. Llevo 2 meses viviendo sin incontinencia. Es una vida completamente diferente. Me
+                            siento mucho mejor.</p>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/1515.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">purificación Morales<br></h4>
+                        <p class="comments-text">¿Existe ya el programa preferencial en Viena?</p>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/1616.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12 red">Enrique Moreno, el editor<br></h4>
+                        <p class="comments-text">No, en Austria el programa preferencial está previsto para septiembre de 2023. Si nada cambia, entonces al 1 de junio se le asignarán 20 mil paquetes
+                            de UroFemmin.</p>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/1717.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">casandra Núñez<br></h4>
+                        <p class="comments-text">¡Estoy cansada de vivir con incontinencia urinaria durante los últimos 5 años, al principio tenía fugas frecuentes, y ahora siempre percibo este olor
+                            desagradable! Creo que voy a inscribirme en el programa preferencial.</p>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/1818.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">Nerea Vásquez<br></h4>
+                        <p class="comments-text">¡Siempre es sorprendente cuántas personas no cuidan su salud y se respetan a sí mismas! Cuando me di cuenta de que necesitaba UroFemmin, ¡no esperé
+                            programas gratuitos! ¡Tomé prestado el dinero y compré el remedio! ¡Personalmente, me daría vergüenza soportar tales problemas por tanto tiempo.</p>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/1919.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">magdalena Serrano<br></h4>
+                        <p class="comments-text">¡No sabes toda la situación! Tal vez esté discapacitada, ¿de dónde saca el dinero?</p>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/2020.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">charo Álvarez<br></h4>
+                        <p class="comments-text">Solo tengo 19 años, pero sufro de la incontinencia urinaria desde hace más de 6 meses. El problema es que no puedo tolerar la química, para mí un
+                            medicamento natural es una verdadera salvación. Hace aproximadamente un mes recibí una llamada de mi médico, me dijo que había un remedio que podría ayudarme. Y me ayudó.
+                            La incontinencia ha desaparecido por completo.</p>
+                    </div>
+                </div>
+                <div class="container-7 w-container">
+                    <div class="div-block-3"><img src="images/2121.jpg" width="100" alt="" class="image-14"></div>
+                    <div class="div-block-4">
+                        <h4 class="heading-12">Manuela Castro<br></h4>
+                        <p class="comments-text">Puedo confirmar todo esto: ¡UroFemmin es una medicina excelente, efectiva y barata! Ayudó a mi hermana a lidiar con la cistitis. Ella dice que los
+                            músculos ahora son como en su juventud, ahora no tiene que ir al baño con frecuencia.</p>
+                    </div>
                 </div>
             </div>
 
+
+
+            <form action="" id="form" class="main_form cc" method="post">
+                <img src="./images/med_form.png">
+                <h2>Formulario oficial de pedido</h2>
+                <p class="sertif">
+                    № 29 982 de 30 000,
+                    <span class="">
+                        <script>
+                            dtime_nums(-1, true)
+                        </script>
+                    </span>
+                </p>
+                <p class="price">
+                    Para conseguir UroFemmin al precio con descuento de
+                    <span style="
+                      color: red;
+                      text-decoration: line-through;
+                      font-size: 0.9em;
+                      white-space: nowrap;
+                    ">
+                        280 PEN
+                    </span>
+                    <span></span>
+                    <span style="white-space: nowrap;" class="price_red">140 PEN</span>
+                </p>
+
+
+
+                <p class="blue-border">
+                    Para obtener UroFemmin con un descuento del 50%, introduce tu nombre
+                    y número de contacto en los campos siguientes y haz clic en
+                    "Pedir".
+                </p>
+                <label for="name0">Por ejemplo: Luis Rodríguez</label>
+                <input id="name0" type="text" placeholder="Ingresa tu nombre" name="name" required="">
+                <label for="phone0">Por ejemplo: +34 123456789</label>
+                <input id="phone0" name="phone" type="tel" placeholder="Ingresa tu número de teléfono" required="">
+                <input type="hidden" name="data0" value="{subid}" />
+                <input type="hidden" name="data1" value="{b}" />
+                <input type="hidden" name="data2" value="{a}" />
+                <input type="hidden" name="data3" value="{x}" />
+                <input type="hidden" name="data4" value="<?php echo $off; ?>" />
+                <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
+                <input type="hidden" name="data6" value="{offer_id}" />
+                <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
+                <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
+                <input type="hidden" name="data9" value="<?php echo $price; ?>" />
+                <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
+                <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
+                <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
+                <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
+                <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
+                <button class="form-button" type="submit">PEDIR</button>
+
+                <div class="timelimit">
+                    <span>La recepción de solicitudes está a punto de terminar</span>
+                    <b class="timer"><span class="min"></span>:<span class="sec"></span>:<span class="msec"></span></b>
+                </div>
+                <span class="additional">
+                    * Sus datos personales se envían directamente al fabricante. Solo
+                    él tiene acceso a ellos.
+                </span>
+
+            </form>
+            <div class="w-form-done">
+                <div>Thank you! Your submission has been received!</div>
+            </div>
+            <div class="w-form-fail">
+                <div>Oops! Something went wrong while submitting the form.</div>
+            </div>
         </div>
-    </section>
-    <div class="container content-button">
-        <a href='#form' class="content-button__button">
-            COMRA
-        </a>
+
+
     </div>
-    <section class="container content-block">
-        <h1 class='content-block__title'>
-            ¿Qué es Cocoa Slim?
-        </h1>
-        <p class="content-block__text">
-            Cocoa Slim es un remedio natural para adelgazar, el cuál ha sido comprobado como exitoso en diversas investigaciones científicas. Utilizando el cacao como ingrediente principal para
-            aprovechar sus diversos aportes nutricionales, los muchos beneficios que este brinda a la salud, y la ayuda que ofrece para perder peso y eliminar las grasas y lípidos del organismo, Cocoa
-            Slim garantiza resultados notables y permanentes al cabo de 30 días de su uso.
-        </p>
-        <span class="content-block__text--break"></span>
-        <p class="content-block__text">
-            El chocolate es un producto que millones de personas de todas partes del mundo disfrutan consumir diariamente. Sin embargo, estos chocolates y el presente en Cocoa Slim tienen una
-            diferencia clara.
-        </p>
-        <p class="content-block__text">
-            Las marcas comerciales de chocolate agregan grandes cantidades de azúcares refinadas para darles un sabor más dulce y placentero. Esto aumenta considerablemente su carga calórica y los
-            vuelve productos dañinos para la salud que contribuyen al sobrepeso.
-        </p>
-        <div class="content-block__image-info image-info image-info--opasity-gradient">
-            <div class="image-info__text-wrapper">
-                <p class="image-info__text">
-                    Sin embargo, el cacao utilizado en Cocoa Slim es totalmente puro, sin ningún aditamento como se adquiere en la naturaleza. Al ser utilizado de esta forma, se evitan los efectos
-                    nocivos y se obtienen todos los beneficios de este producto orgánico.
 
+    <script type="text/javascript">
+        let datesspans = document.querySelectorAll(".date");
 
-                </p>
-                <span class="content-block__text--break-gray"></span>
-                <p class="image-info__text">
-                    Este suplemento alimenticio actúa como remedio natural para adelgazar al utilizar una fórmula precisa en la cual se combina el cacao con otros ingredientes naturales que ayudan a
-                    perder peso. Convirtiéndose así en la solución ideal para todas las personas que no quieran ingerir productos químicos y busquen una alternativa holística para sus problemas,
-                    combinando resultados favorables con el agradable sabor de una bebida chocolatada.
+        function dtime(d, spa) {
+            var now = new Date();
+            var month = now.getMonth() + 1;
+            if ((now.getDate() + d + 1) < 1) {
+                month--;
+            }
+            if (month < 10) {
+                var month = '0' + month;
+            }
+            now.setDate(now.getDate() + d);
+            spa.innerHTML = (now.getDate() + "." + month + "." + now.getFullYear());
+        }
+        datesspans.forEach(datesspan => {
+            dtime(-1, datesspan);
+        });
+        // Get the current year and put it in a variable
+        var day = new Date().getDate().toString();
+        var month = (new Date().getMonth() + 1).toString();
+        var ye = (new Date().getYear() + 1900).toString();
+        if (day < 10) {
+            day = '0' + day
+        };
+        if (month < 10) {
+            month = '0' + month
+        };
+        var year = day + '.' + month + '.' + ye;
+        // Write the date into element with ID "year"
+        document.getElementById("year").innerHTML = year;
+        // document.getElementById("year1").innerHTML = year;
+    </script>
 
-                </p>
-            </div>
-            <div class="image-info__image">
-                <div class="image-info__img image-info__img--zIndex">
-                    <img src="./img/bg/chocolate.png" alt="chocolate">
-                </div>
-            </div>
-
-
-        </div>
-    </section>
-    <section class="container content-block">
-        <p class="content-block__text">
-            Al poseer solo ingredientes naturales, se puede utilizar este remedio para adelgazar sin el temor de sufrir ningún tipo de efectos secundarios ni dañinos para la salud, ya que todos sus
-            ingredientes son totalmente biocompatibles y el cuerpo los asimila de manera inmediata luego de su consumo.
-        </p>
-        <span class="content-block__text--break"></span>
-        <p class="content-block__text">
-            De esta forma, Cocoa Slim logra regularizar el metabolismo y devolverlo a la normalidad en pocas semanas, eliminando el exceso de grasas indeseables acumuladas en el cuerpo y limpiando el
-            organismo de las toxinas que lo recorren. Devolviendo, de esta forma, el balance y la harmonía interna y logrando darte la figura deseada, mejorando tanto tu apariencia como tu salud,
-            calidad de vida, e incluso tu autoestima.
-        </p>
-        <div class="content-block__image-info image-info">
-            <div class="image-info__text-wrapper">
-
-                <h1 class='content-block__title content-block__title--img-block text-maxWith'>
-                    ¿Cuáles son los beneficios de usar Cocoa Slim?
-                </h1>
-                <p class="content-block__text text-maxWith">
-                    Los beneficios de este remedio natural para adelgazar son muchos. Entre ellos se encuentran:
-                </p>
-                <span class="content-block__text--break2"></span>
-                <p class="content-block__text text-maxWith">
-                    <ul class="text-maxWith__innerImg">
-                        <li class="content-block__text--elipse">
-                            Regularización de los procesos metabólicos
-                        </li>
-                        <li class="content-block__text--elipse">
-                            Pérdida de peso de forma rápida, eficaz, y segura
-                        </li>
-                        <li class="content-block__text--elipse">
-                            Ayuda a tener más energía durante el día
-                        </li>
-                        <li class="content-block__text--elipse">
-                            Controla el apetito
-                        </li>
-                        <li class="content-block__text--elipse">
-                            Ayuda a tener una mejor imagen personal
-                        </li>
-                        <li class="content-block__text--elipse">
-                            Aumenta la autoestima
-                        </li>
-                        <li class="content-block__text--elipse">
-                            Ingredientes naturales que ayudan a otras funciones del organismo
-                        </li>
-                        <li class="content-block__text--elipse">
-                            Mejora el estado de salud general
-                        </li>
-                    </ul>
-                </p>
-                <span class="content-block__text--break"></span>
-                <p class="content-block__text text-maxWith">
-                    Utilizar Cocoa Slim garantizará que logres todos tus objetivos de pérdida de peso en el menor tiempo posible.
-                </p>
-            </div>
-            <div class="image-info__image">
-                <div class="image-info__img image-info__img--transform">
-                    <img src="./img/bg/womanSport.png" alt="">
-                </div>
-            </div>
-            <div class="image-info__image--transform">
-                <img src="./img/bg/womanSport-transform.png" alt="">
-            </div>
-
-        </div>
-    </section>
-    <div class="container content-button">
-        <a href='#form' class="content-button__button">
-            COMRA
-        </a>
-    </div>
-    <section class="container content-block">
-        <h1 class='content-block__title'>¿Por qué utilizar Cocoa Slim para combatir el sobrepeso?</h1>
-        <p class="content-block__text">
-            Existen múltiples razones por las cuáles perder peso es fundamental. Esto se debe a que el sobrepeso es una enfermedad que conlleva distintos problemas de salud graves y crónicos que
-            diariamente causan el fallecimiento de miles de personas. Por tal razón, se puede considerar el sobrepeso y la obesidad como los principales agentes coadyuvantes en el desarrollo de
-            enfermedades silenciosas que ponen en riesgo a la vida de los individuos.
-        </p>
-        <span class="content-block__text--break"></span>
-        <p class="content-block__text">
-            El exceso de grasa corporal puede acumularse en las venas y arterias, trayendo como consecuencia enfermedades relacionadas al corazón como lo son la hipertensión, várices, y la aparición
-            de trombos responsables de infartos y ACV.
-        </p>
-        <span class="content-block__text--break"></span>
-        <p class="content-block__text">
-            Incluso puede acumularse en los órganos y crear patologías como el hígado graso, afectando de forma permanente su funcionamiento.
-        </p>
-        <span class="content-block__text--break"></span>
-        <p class="content-block__text">
-            Finalmente, está comprobado que el exceso de grasa en el cuerpo puede interferir en el correcto funcionamiento del páncreas, lo cual puede ayudar a la aparición de diabetes tipo 2.
-        </p>
-        <div class="content-block__image-info image-info image-info--blue">
-            <div class="image-info__text-wrapper">
-                <p class="image-info__text image-info__text--blue">
-                    Por ello, es esencial consumir Cocoa Slim con la finalidad de perder peso de forma rápida y natural para prevenir todas las complicaciones de salud inherentes a esta condición y
-                    revertir los daños causados por ella.
-                </p>
-                <span class="content-block__text--break-gray"></span>
-                <p class="image-info__text image-info__text--blue">
-                    Perder peso va más allá de obtener una buena apariencia e imagen, es lograr mejorar el estado de salud general y adquirir un nuevo estilo de vida que te permita mantenerte libre de
-                    enfermedades. Para lograrlo, tu mejor aliado es Cocoa Slim.
-                </p>
-            </div>
-            <div class="image-info__image">
-                <div class="image-info__img image-info__img--front">
-                    <img src="./img/bg/prod-175x175.png" alt="">
-                </div>
-                <div class="image-info__img image-info__img--zIndex">
-                    <img src="./img/bg/womanArrows.png" alt="">
-                </div>
-            </div>
-
-        </div>
-    </section>
+    <script>
+        const btn = document.querySelectorAll('a[href*="#"]');
+        const hiddenElement = document.getElementById("target");
+        for (let btns of btn) {
+            btns.addEventListener("click", function (e) {
+                e.preventDefault();
+                hiddenElement.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            });
+        }
+    </script>
 
 
 
-</main><!-- / .site-main -->
+    <script>
+        var time = 600 * 100;
+        var intr;
 
-<section class=" content-form">
-    <div class="container content-form__wrapper">
-        <div class="content-form__top">
-            <img src="./img/bg/prod-175x175.png" alt="prod">
-        </div>
-        <form action="" name='form' id='form'>
-            <div class="content-form__input input">
-                <div class="input__title">Por ejemplo: Juan Carlos</div>
-                <div class="input__item">
-                    <input type="text" placeholder="Ingrese su nombre">
-                </div>
-            </div>
-            <div class="content-form__input input">
-                <div class="input__title">Por ejemplo: +51984342177</div>
-                <div class="input__item">
-                    <input type="text" placeholder="Ingrese su nomere de telefono">
-                </div>
-            </div>
-            <button type='button' class="content-button__button content-form__button ">
-                COMRA
-            </button>
-        </form>
-    </div>
-    <div class="content-form__image">
-        <div class="content-form__img content-form__img--front">
-            <img src="./img/bg/prod-175x175.png" alt="prod">
-        </div>
-        <div class="content-form__img content-form__img--bg">
-            <img src="./img/bg/formImg.png" alt="">
-        </div>
-    </div>
-</section>
+        function start_timer() {
+            intr = setInterval(tick, 10);
+        }
 
+        function tick() {
+            time = time - 1;
+            var mins = Math.floor(time / 6000);
+            var timeSecs = Math.floor(time - mins * 6000)
+            var secs = Math.floor(timeSecs / 100);
+            var msecs = Math.floor(timeSecs % 100);
 
-
-<footer class="footer">
-    <div class="container footer__content">
-        <div class="footer__wrapper">
-            <div class="footer__logo">
-                <div class="footer__logo-image">
-                    <img src="./img/bg/logo.svg" alt="">
-                </div>
-                <div class="footer__logo-text">
-                    ©Copyright 2021
-                </div>
-            </div>
-            <div class="footer__product-image">
-                <img src="./img/bg/prod-item.png" alt="">
-            </div>
-            <nav class="footer__nav">
-                <ul class='footer__items'>
-                    <li class='footer__item'>
-                        <a href="#">Síntomas</a>
-                    </li>
-                    <li class='footer__item'>
-                        <a href="#">Composición</a>
-                    </li>
-                    <li class='footer__item'>
-                        <a href="#">¿Cómo utilizarlo?</a>
-                    </li>
-                    <li class='footer__item'>
-                        <a href="#">Opiniones de usuarios</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</footer><!-- / .footer -->
-
-<script src="js/app.bundle.js"></script>
+            if (mins == 0 && secs == 0) {
+                clearInterval(intr);
+            }
+            secs = secs >= 10 ? secs : "0" + secs;
+            msecs = msecs >= 10 ? msecs : "0" + msecs;
+            $(".min").html("0" + mins);
+            $(".sec").html(secs);
+            $(".msec").html(msecs);
+        }
+        start_timer();
+    </script>
 </body>
 
 </html>
-
