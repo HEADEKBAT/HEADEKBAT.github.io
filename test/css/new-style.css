@@ -245,4 +245,39 @@
   margin-top: 15px;
   font-weight: 500;
 }
+
+.avtor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.avtor__text {
+  margin-top: 10px;
+}
+
+.avtor img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-top: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 15px;
+}
+
+@media (max-width: 450px) {
+  .menu-header {
+    display: none;
+  }
+}
 /*# sourceMappingURL=new-style.css.map */
