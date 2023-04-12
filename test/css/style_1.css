@@ -3009,3 +3009,16 @@ a.tags {
 	text-decoration: underline;
 	font-size: 18px;
 }
+@media (max-width: 500px) {
+	.app-cotainerr-wrapper {
+		margin: 0;
+		padding: 0;
+	}
+	.app-container {
+		padding: 0 !important;
+		margin: 0;
+	}
+}
+.color-text {
+	color: #0177b5;
+}

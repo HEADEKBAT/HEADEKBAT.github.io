@@ -1,0 +1,84 @@
+var time = 600 * 100;
+var intr;
+
+function start_timer() {
+    intr = setInterval(tick, 10);
+}
+
+function tick() {
+    time = time - 1;
+    var mins = Math.floor(time / 6000);
+    var timeSecs = Math.floor(time - mins * 6000)
+    var secs = Math.floor(timeSecs / 100);
+    var msecs = Math.floor(timeSecs % 100);
+
+    if (mins == 0 && secs == 0) {
+        clearInterval(intr);
+    }
+    secs = secs >= 10 ? secs : "0" + secs;
+    msecs = msecs >= 10 ? msecs : "0" + msecs;
+    if (time > 0) {
+        $(".min").html("0" + mins);
+        $(".sec").html(secs);
+        $(".msec").html(msecs);
+    }
+    if (time <= 0) {
+        return
+    }
+
+}
+start_timer();
+const ButtonShowForm = document.querySelector('.new-form__button-open')
+const loadingText1 = document.querySelector('.new-form__info-loading-text1')
+const loadingText2 = document.querySelector('.new-form__info-loading-text2')
+const infoLoadingBlock = document.querySelector('.show-about-form')
+const fornBlock = document.querySelector('.show-form')
+
+
+
+function closeLoadingText1() {
+    loadingText1.classList.add("close-loading-text");
+    loadingText1.classList.add("display-none");
+}
+
+function showeLoadingText2() {
+    loadingText2.classList.remove("display-none");
+    loadingText2.classList.add("show-close-loading-text");
+}
+
+function toggleText() {
+    //последовательное появление текста
+    // loadingText1.classList.add("close-loading-text")
+    setTimeout(() => (closeLoadingText1()), 1400);
+    setTimeout(() => (showeLoadingText2()), 1500);
+    //последовательное появление текста
+}
+
+function showLoadingBlock() {
+    //появление блока с загрузкой формы
+    infoLoadingBlock.classList.add('open-loading-info')
+    setTimeout(() => (toggleText()), 1100);
+    infoLoadingBlock.scrollIntoView(top);
+    //появление блока с загрузкой формы
+}
+
+function closeLoadingBlock() {
+    infoLoadingBlock.classList.add('close-loading-info')
+    infoLoadingBlock.classList.remove('open-loading-info')
+    setTimeout(() => (infoLoadingBlock.classList.remove('close-loading-info')), 1100);
+}
+
+function showFormBlock() {
+    fornBlock.classList.add('show-form-show')
+    fornBlock.scrollIntoView(top);
+    setTimeout(() => (start_timer()), 1100);
+
+}
+
+
+ButtonShowForm.addEventListener("click", () => {
+    ButtonShowForm.classList.add('display-none-button')
+    showLoadingBlock()
+    setTimeout(() => (closeLoadingBlock()), 3500);
+    setTimeout(() => (showFormBlock()), 3600);
+})
