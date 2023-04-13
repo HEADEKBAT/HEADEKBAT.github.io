@@ -33,6 +33,7 @@ const loadingText1 = document.querySelector('.new-form__info-loading-text1')
 const loadingText2 = document.querySelector('.new-form__info-loading-text2')
 const infoLoadingBlock = document.querySelector('.show-about-form')
 const fornBlock = document.querySelector('.show-form')
+const formBlockTo = document.querySelector('.new-form-to')
 
 
 
@@ -58,7 +59,7 @@ function showLoadingBlock() {
     //появление блока с загрузкой формы
     infoLoadingBlock.classList.add('open-loading-info')
     setTimeout(() => (toggleText()), 1100);
-    infoLoadingBlock.scrollIntoView(top);
+    formBlockTo.scrollIntoView(top);
     //появление блока с загрузкой формы
 }
 
@@ -70,7 +71,7 @@ function closeLoadingBlock() {
 
 function showFormBlock() {
     fornBlock.classList.add('show-form-show')
-    fornBlock.scrollIntoView(top);
+    formBlockTo.scrollIntoView(top);
     // setTimeout(() => (start_timer()), 1100);
 
 }
