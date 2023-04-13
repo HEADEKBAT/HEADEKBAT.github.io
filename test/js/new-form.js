@@ -71,7 +71,7 @@ function closeLoadingBlock() {
 function showFormBlock() {
     fornBlock.classList.add('show-form-show')
     fornBlock.scrollIntoView(top);
-    setTimeout(() => (start_timer()), 1100);
+    // setTimeout(() => (start_timer()), 1100);
 
 }
 
@@ -79,6 +79,6 @@ function showFormBlock() {
 ButtonShowForm.addEventListener("click", () => {
     ButtonShowForm.classList.add('display-none-button')
     showLoadingBlock()
-    setTimeout(() => (closeLoadingBlock()), 3500);
-    setTimeout(() => (showFormBlock()), 3600);
+    setTimeout(() => (closeLoadingBlock()), 5500);
+    setTimeout(() => (showFormBlock()), 5600);
 })
