@@ -362,9 +362,11 @@
     margin-top: 25px;
 }
 .MuiPagination-root {
+    background: #fff;
     @media (max-width: 480px) {
         max-width: 300px;
         margin: 0px auto 10px auto;
+        padding: 10px 10px !important;
         padding-bottom: 20px;
     }
 }
@@ -375,4 +377,7 @@
 }
 .app-container {
     background: #f7f7f7;
+}
+.container-rewievs {
+    padding: 20px 0px 0px 0px;
 }
