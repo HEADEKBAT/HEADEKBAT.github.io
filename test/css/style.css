@@ -263,3 +263,6 @@
 .border-box p {
 	margin-bottom: 10px;
 }
+.col-xs-12 {
+	padding-right: 1px;
+}

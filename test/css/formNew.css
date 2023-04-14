@@ -178,6 +178,7 @@
 @media (max-width: 350px) {
   .new-form-body__info-date {
     margin-top: 15px;
+    margin-left: 0;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -188,6 +189,10 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -528,5 +533,21 @@
 
 .app-container {
   margin-top: 25px;
+}
+
+@media (max-width: 480px) {
+  .MuiPagination-root {
+    max-width: 300px;
+    margin: 0px auto 10px auto;
+    padding-bottom: 20px;
+  }
+}
+
+.MuiPagination-ul {
+  background: #fff;
+}
+
+.app-container {
+  background: #f7f7f7;
 }
 /*# sourceMappingURL=formNew.css.map */

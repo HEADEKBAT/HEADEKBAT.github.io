@@ -127,17 +127,17 @@
         margin-left: 15px;
         @media (max-width: 350px) {
             margin-top: 15px;
+            margin-left: 0;
             text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
         }
         span {
             display: block;
             // &:last-child {
-            //     margin-top: 5px;
             //     @media (max-width: 350px) {
-            //         margin-top: 0;
             //         margin-left: 10px;
             //     }
             // }
@@ -360,4 +360,19 @@
 }
 .app-container {
     margin-top: 25px;
+}
+.MuiPagination-root {
+    @media (max-width: 480px) {
+        max-width: 300px;
+        margin: 0px auto 10px auto;
+        padding-bottom: 20px;
+    }
+}
+.MuiPagination-ul {
+    background: #fff;
+    @media (max-width: 480px) {
+    }
+}
+.app-container {
+    background: #f7f7f7;
 }
