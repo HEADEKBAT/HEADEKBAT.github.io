@@ -18,9 +18,21 @@ function tick() {
     secs = secs >= 10 ? secs : "0" + secs;
     msecs = msecs >= 10 ? msecs : "0" + msecs;
     if (time > 0) {
-        $(".min").html("0" + mins);
-        $(".sec").html(secs);
-        $(".msec").html(msecs);
+        const minsClases = document.querySelectorAll('.min')
+        const secsClases = document.querySelectorAll('.sec')
+        const msecsClases = document.querySelectorAll('.msec')
+        for (const minClass of minsClases) {
+            minClass.innerHTML = ("0" + mins);
+        }
+        for (const secClass of secsClases) {
+            secClass.innerHTML = secs;
+        }
+        for (const msecClass of msecsClases) {
+            msecClass.innerHTML = msecs;
+        }
+
+
+
     }
     if (time <= 0) {
         return

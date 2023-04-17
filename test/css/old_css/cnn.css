@@ -552,7 +552,7 @@ ul.social-area li a img {
     z-index: 888;
 }
 .custom-search-input button {
-  
+
     height: 32px;
     width: 32px;
     top: 0;
@@ -992,11 +992,12 @@ ul.widget-img-list li:last-child {
     padding-top: 15px;
 }
 .article-mainheader h2 {
-    font-family: cnn-roman;
-    font-size: 2.5em;
-    color: #3d3d3d;
-    padding-bottom: 20px;
-    padding-top: 8px;
+  padding-right: 30px;
+  font-size: 2.5em;
+  color: #3d3d3d;
+  padding-bottom: 20px;
+  padding-top: 8px;
+  font-family: 'RobotoSlabRegular';
 }
 ul.article-topsocial {
     margin: 15px 0;

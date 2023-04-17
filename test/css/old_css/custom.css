@@ -3609,7 +3609,7 @@ div.padding-5{
   position: relative;
   background-color: white;
   background-color: var(--bg-color-primary);
-  /* box-shadow: 0 6px 12px rgba(0, 0, 0, .14); */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .14);
   z-index: 1;
 }
 .theme-dark .header {
@@ -4823,7 +4823,7 @@ div.padding-5{
 }
 
 @media only screen and (max-width: 960px){
-.header-top 
+.header-top
     padding-top: 12px;
     align-items: center;
 }}

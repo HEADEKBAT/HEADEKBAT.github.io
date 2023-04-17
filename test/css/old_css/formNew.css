@@ -8,10 +8,11 @@
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 700;
-  padding: 10px 10px;
+  padding: 25px 10px 10px;
   background-color: #3897eb;
   color: #fff;
   text-align: center;
+      border-radius: 10px;
 }
 
 @media (max-width: 600px) {
@@ -177,6 +178,7 @@
 
 @media (max-width: 350px) {
   .new-form-body__info-date {
+    width: 100%;
     margin-top: 15px;
     margin-left: 0;
     text-align: center;
@@ -196,12 +198,32 @@
   }
 }
 
-.new-form-body__info-date span {
-  display: block;
+@media (max-width: 350px) {
+  .new-form-body__info-date span {
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+}
+
+.new-form-body__info-date span:first-child {
+  margin-right: 5px;
+}
+
+@media (max-width: 400px) {
+  .new-form-body__info-date span:first-child {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .new-form-body__info-date span:first-child {
+    text-align: right;
+  }
 }
 
 .new-form-body__middle {
-  margin-top: 80px;
+  margin-top: 60px;
   text-align: center;
 }
 
@@ -271,7 +293,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 319px) {
   .new-form-body__images-achiv img {
     max-width: 60%;
   }
@@ -533,6 +555,13 @@
 
 .app-container {
   margin-top: 25px;
+  padding: 10px 20px 50px 20px !important;
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 10px 10px 50px 10px !important;
+  }
 }
 
 .MuiPagination-root {
@@ -543,7 +572,7 @@
   .MuiPagination-root {
     max-width: 300px;
     margin: 0px auto 10px auto;
-    padding: 10px 10px !important;
+    padding: 10px 10px 20px !important;
     padding-bottom: 20px;
   }
 }
@@ -556,7 +585,29 @@
   background: #f7f7f7;
 }
 
-.container-rewievs {
+.reviews .container-rewievs .reviews-list-item {
+  padding-bottom: 20px;
+}
+
+.reviews .container-rewievs .container-rewievs {
   padding: 20px 0px 0px 0px;
+}
+
+.reviews .container-rewievs .reviews-content {
+  padding: 20px 15px 0px 15px;
+}
+
+.reviews .container-rewievs .reviews-list {
+  padding-right: 0;
+}
+
+.reviews .container-rewievs .reviews-bottom {
+  margin-top: 10px;
+}
+
+@media (max-width: 500px) {
+  .reviews .container-rewievs .reviews-headStar-wrapper {
+    margin-top: 15px;
+  }
 }
 /*# sourceMappingURL=formNew.css.map */

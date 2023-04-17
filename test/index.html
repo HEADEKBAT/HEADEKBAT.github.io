@@ -1,1309 +1,468 @@
-<?php
-// Защита от прямых заходов на ленд
-if (!isset($rawClick)) {
-    echo '404';
-    exit();
-}
-
-// Данные по офферу
-$offerData = 'vitalex---co---leadreaktor.php';
-include __DIR__ . '/../_order/offers/' . $offerData;
-
-// Получение ID партнерки
-include __DIR__ . '/../_order/affiliates.php';
-$affiliates_id = $affiliates[$aff];
-// ID счетчика Яндекс.Метрики
-$metrika = '92927220';
-// Цвета конфирма
-$confirmColorBackground = 'ffffff'; // Общий фон
-$confirmColorBlocks = '3898EC'; // Блоки
-$confirmColorHeaders = '000000'; // Заголовки
-$confirmColorText = 'fff'; // Текст в блоках
-// Блок тестирования элементов
-//include __DIR__ . '/versions.php';
-
-// Обновление параметров клика
-include __DIR__ . '/../_php/update-params.php';
-?>
 <!DOCTYPE html>
-<html dir="ltr" style="scroll-behavior: smooth;">
+<html lang="es">
 
 <head>
+    <title>MedPortal: Dr. Oswaldo Restrepo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-
-    <title>La fuente: Dr. Oswaldo Restrepo </title>
-
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
-    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
-    <link rel="stylesheet" type="text/css" href="css/slider.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/jquery.mcustomscrollbar.css">
-    <link rel="stylesheet" type="text/css" href="css/style_1.css">
-    <link rel="stylesheet" type="text/css" href="css/cnn.css">
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
-    <link rel="stylesheet" type="text/css" href="css/formNew.css">
-    <link rel="stylesheet" type="text/css" href="css/form.css">
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-    <link href="css/all-skins.css" rel="stylesheet">
-
+    <meta name="keywords" content="важные, ключевые, слова">
+    <meta name="description" content="краткое описание">
     <link rel="shortcut icon" href="./img/fav.png" type="image/png">
-    <link href="css/style.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="{_current_domain}/lander/_js/scripts.js?var=4&metrika=<?php echo $metrika; ?>&aid=<?php echo $affiliates_id; ?>"></script>
-    <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff; ?>&off=<?php echo $off; ?>&geo=<?php echo $geo; ?>&land_pre={landing_id}&offer_pre={offer_id}"></script>
-    <link rel="stylesheet" type="text/css" href="css/main3.css">
-
-    <!--[HEADER]-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/comments.css">
+    <script src="./js/date.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
 </head>
 
 <body>
-    <script>
-        function dtime_nums(d, like_eu) {
-            var now = new Date();
-            now.setDate(now.getDate() + d + 1);
+    <header>
+        <img src="./img/header.png" class="header-img" alt="">
+        <hr />
+    </header>
+    <main>
+        <section>
+            <div class="tags">
+                <ul>
+                    <li>Divulgación</li>
+                    <li>Entrevista</li>
+                    <li>Hipertensión</li>
+                    <li style="background-color: #1e3a6f; color: #fff; border-color: #1e3a6f;">Lazartán</li>
+                    <li>Medicación</li>
+                    <li>Doctor en Medicina</li>
+                    <li>Opinión</li>
+                    <li style="background-color: #db005e; color: #fff; border-color: #db005e;">Oswaldo Restrepo</li>
+                </ul>
+            </div>
+            <h1>Dr Oswaldo Restrepo: "¡Losartan causa mutación en el ADN! ¿Cómo bajar la tensión arterial en 2 minutos SIN medicación?</h1>
+            <hr />
+            <div class="by-author">
+                By <strong>Silvio Noviteño</strong>
+                <br />
+                Publicado
+                <script>
+                    dtime_nums(-9, true);
+                </script>
+            </div>
+            <div class="caption-img">
+                <img class="wide-img" src="img/main.gif" alt="">
+                Dr. Oswaldo Restrepo © YouTube
+            </div>
+        </section>
+        <section>
+            <p>
+                <i>
+                    <b>Dr. Oswaldo Restrepo</b> es un famoso médico colombiano que dirige su propio canal de YouTube. Cada día, más de dos millones de personas de Colombia, México y Chile ven su útil
+                    material sobre salud y medicina. En
+                    un nuevo vídeo, el médico explica por qué un popular tratamiento contra la hipertensión te quita varios años de vida.
+                </i>
+            </p>
+            <h2>El losartán provoca una mutación en el ADN</h2>
+            <div class="votch-video pulse-button">
+                <div class="votch-video__text">VER EL VÍDEO</div>
+                <div class="votch-video_arrows">
+                    <img src="./img/arroe.svg" alt="">
+                    <img src="./img/arroe.svg" alt="">
+                    <img src="./img/arroe.svg" alt="">
+                </div>
+            </div>
+            <div class="wide-img" style="position: relative; padding-top: 56.25%;">
+                <iframe src="https://kinescope.io/embed/203548143" allow="autoplay; fullscreen; picture-in-picture; encrypted-media;" frameborder="0" allowfullscreen=""
+                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
+            </div>
+        </section>
+        <section>
+            <p class="intq">
+                - Doctor, ¿es realmente cierto que el Lozartán es tan peligroso?
+            </p>
+            <p class="inta">
+                - Pues sí. En el vídeo dije la pura verdad. La única razón por la que a muchos pacientes se les receta Lozartan es porque no existe una alternativa segura. Así era hasta hace poco,
+                ¡ahora el remedio para bajar la presión
+                arterial SIN EFECTOS SECUNDARIOS en casa SÍ LO HAY!
+            </p>
+            <p class="inta">
+                No entiendo cómo la gente toma este medicamento durante años en absoluto. Mareos constantes, fatiga, problemas renales y hepáticos. ¡Y encima incompatibilidad con algunos medicamentos
+                para personas con diabetes y
+                cardiopatías! Como médico, me alegro de que en nuestro país el Lozartan esté siendo sustituido poco a poco por otro medicamento.
+            </p>
+            <p class="intq">
+                - ¿Y cuántas personas han sufrido daños en el ADN a causa del losartán sin ni siquiera darse cuenta?
+            </p>
+            <p class="inta">
+                - No tiene ni idea de cuántos. Hay más de 700 millones de personas en el mundo con hipertensión no tratada. 3 de cada 5 toman losartán. En nuestro país, el número de hipertensos supera
+                el millón y medio.
+            </p>
+            <p class="inta">
+                Mareos, debilidad, deterioro de la función renal. ¿Por qué cree que se producen estos síntomas? El hombre es un blanco. Está siendo disparado por dos balas a la vez. La enfermedad y la
+                cura. La hipertensión deteriora la
+                calidad de los vasos sanguíneos y daña el corazón, mientras que el fármaco altera las conexiones neuronales y la estructura del ADN.
+            </p>
+            <p class="inta">
+                Cada año los síntomas serán más graves. La persona tendrá que aumentar la dosis. Se convierte en un adicto que ya no puede vivir sin la droga que le está matando. Es un círculo
+                vicioso.
+            </p>
+            <div class="border-box">
+                <h3>
+                    Amigos, no hay por qué jugar al escondite con la hipertensión. Es una enfermedad insidiosa y silenciosa. Cuando aparece esta enfermedad, se presentan los siguientes cambios:
+                </h3>
+                <ul>
+                    <li>fatiga crónica;</li>
+                    <li>empeoramiento de la inteligencia y la memoria;</li>
+                    <li>migrañas;</li>
+                    <li>empeoramiento de la visión, lo que conduce a la ceguera en casos graves;</li>
+                    <li>empeoramiento de la audición;</li>
+                    <li>mala coordinación del movimiento;</li>
+                    <li>cambios al andar;</li>
+                    <li>debilidad de brazos o piernas;</li>
+                    <li>reducción general de la sensibilidad;</li>
+                    <li>dolor articular y muscular;</li>
+                    <li>insomnio;</li>
+                    <li>disfunción eréctil.</li>
+                </ul>
+            </div>
+            <p class="inta">
+                Todos estos síntomas empeoran significativamente la calidad de vida. Para los hombres se vuelve difícil jugar con sus hijos/nietos y realizar las actividades diarias, mientras que para
+                las mujeres es más difícil mantener
+                la vida doméstica, lo que se debe a la falta de aire constante incluso durante actividades físicas insignificantes.
+            </p>
+            <p>
+                <img class="wide-img" src="img/main2222.jpg" alt="">
+            </p>
+            <p class="intq">
+                - ¿La hipertensión puede no presentar síntomas?
+            </p>
+            <p class="inta">
+                ¡Por eso esta enfermedad es tan insidiosa! En muchos pacientes la hipertensión arterial puede no mostrar síntomas durante bastante tiempo y la salud del paciente puede permanecer
+                relativamente buena. Su cuerpo
+                simplemente se adapta a la presión arterial alta. La presión arterial alta, independientemente de que la persona la sienta o no, tiene un efecto perjudicial sobre los vasos sanguíneos
+                y los órganos que alimentan: el
+                cerebro, el corazón y los riñones. Debido a una hipertensión arterial a largo plazo (incluso si no hay quejas), estos cambios pueden provocar catástrofes vasculares:
+            </p>
+            <ul class="">
+                <li>derrame cerebral;</li>
+                <li>dolor en el área del pecho, también llamado angina;</li>
+                <li>ataque al corazón;</li>
+                <li>insuficiencia cardíaca y renal;</li>
+                <li>arritmia cardíaca que puede provocar una muerte súbita.</li>
+            </ul>
+            <p class="inta">
+                La hipertensión siempre tiene un patrón progresivo.
+            </p>
+            <p class="inta">
+                Aquí se muestran las estadísticas sobre muertes por enfermedades cardiovasculares en Colombia:
+            </p>
+            <div class="border-box">
+                <img src="img/3.png" alt="">
+                <ul>
+                    <li>13,2% enfermedad coronaria;</li>
+                    <li>12% insuficiencia cardíaca y renal;</li>
+                    <li>11,9% infarto;</li>
+                    <li>11% derrame cerebral;</li>
+                    <li>4% hipertensión;</li>
+                    <li>2% arritmia;</li>
+                    <li>45,9% otras enfermedades.</li>
+                </ul>
+            </div>
+            <p class="intq">
+                - ¿No reacciona el Estado de alguna manera ante esto? ¿Sigue fomentando la venta de losartán?
+            </p>
+            <p class="inta">
+                - Esto es de lo que quería hablar. Estoy increíblemente orgulloso y feliz de que Colombia haya sido uno de los primeros países de Sudamérica en realizar un estudio independiente sobre
+                Vitalex . 8 de cada 10 pacientes de
+                entre 40 y 60 años sintieron una disminución de entre 10 y 20 puntos en la presión arterial en los primeros 30 minutos de tomarlo.
+            </p>
+            <p class="inta">
+                ¿Ha oído hablar de Vitalex?
+            </p>
+            <p class="intq">
+                - Sí, sí, ¿se trata del mismo medicamento que ha recibido apoyo financiero del Ministerio de Sanidad?
+            </p>
+            <p class="inta">
+                - Así es. Usted sabe que la hipertensión tiene 2 causas principales: la suciedad de los vasos sanguíneos y el aumento de la concentración de la hormona angiotensina II. El losartán
+                simplemente bloquea la producción de
+                esta hormona, lo que tiene consecuencias irreparables: alteración del ritmo cardíaco, inflamación, alteración del ADN.
+            </p>
+            <p class="inta">
+                Los creadores de Vitalex, en cambio, han aprendido a controlar la producción de la hormona, que es importante para el hígado, el corazón y las glándulas suprarrenales. Al mismo tiempo,
+                el último medicamento también tiene
+                una segunda propiedad no menos importante: la limpieza de los vasos sanguíneos.
+            </p>
+            <p class="inta">
+                ¿Cómo actúa? Los cristales de calcio, las sales y otros residuos de los vasos sanguíneos tienen una forma específica. Las moléculas de Vitalex capturan los restos y los excretan junto
+                con las toxinas a través de los
+                riñones.
+            </p>
+            <p class="inta">
+                Si el paciente no comienza a limpiar sus vasos sanguíneos, los síntomas progresarán y se volverán permanentes.
+            </p>
+            <p class="inta">
+                Si el paciente no comienza a limpiar sus vasos sanguíneos, los síntomas progresarán y se volverán permanentes.
+            </p>
+            <p class="inta">
+                Así es cómo se ve un vaso sanguíneos obstruido:
+            </p>
+            <p>
+                <img class="wide-img" src="img/photo1.jpg" alt="">
+            </p>
+            <p class="intq">
+                - Esto es increíble. ¿La medicina realmente funciona así?
+            </p>
+            <p class="inta">
+                Vitalex es un producto desarrollado por expertos líderes en el campo de la cardiología. Durante más de tres años, desarrollaron una fórmula que proporciona los mejores resultados en el
+                tratamiento de la hipertensión y
+                sus consecuencias.
+            </p>
+            <div class="border-box">
+                <p class="inta">
+                    En Colombia, el estudio Vitalex fue realizado por el Centro de Cardiología Fundacen (Bucaramanga) y el Instituto del Corazón de las Américas (Bogotá). Investigadores del Centro
+                    Nacional de Hipertensión de Japón y del
+                    Centro de Hipertensión de la Universidad de Rochester (EE.UU.) también han demostrado la eficacia del producto.
+                </p>
+            </div>
+            <p class="inta">
+                Este producto solo contiene extractos altamente concentrados de plantas medicinales que limpian bien los vasos sanguíneos, lo que lo convierte en un producto seguro y ecológico.
+                Además, tiene un valor nutricional para
+                todo el cuerpo.
+            </p>
+            <p class="inta">
+                Yo también comía mucha sal, me movía poco y fumaba mucho. Conozco de primera mano la hipertensión. También era mi problema, pero ahora ya veis que estoy bien, me encuentro
+                estupendamente, tengo buen humor y ganas de
+                vivir otros 50 años.
+            </p>
+            <p class="inta">
+                Es un producto que tomé para tratar mi hipertensión, y ahora cada 6 meses tomo un curso para mantener mi bienestar.
+            </p>
+            <p>
+                <img class="wide-img" src="img/555.png" alt="">
+            </p>
+            <p class="inta">
+                Yo, personalmente, recomiendo este producto. Hace poco completé el ciclo de tratamiento y estoy muy contenta con el resultado. Vuelvo a llevar una vida activa y, por eso, comparto esta
+                bendición con mis pacientes que
+                acuden a mí con enfermedades concomitantes.
+            </p>
+            <h2>
+                Vitalex permite bajar la tensióN arterial en 2 minutos en casa. Ya después del primer tratamiento, su presión arterial no sube por encima de 130/85
+            </h2>
+            <p class="inta">
+                Voy a explicar detalladamente para todos mis seguidores y pacientes cómo funciona Vitalex.
+            </p>
+            <p class="inta">
+                <b>1. Usted se sentirá considerablemente mejor el primer día que lo tome.</b> El dolor de cabeza, las náuseas y los mareos desaparecerán. EN 2 MINUTOS su presión arterial bajará. Verá
+                los números en su tensiómetro. Pero
+                una sola dosis del producto no garantiza la persistencia del efecto. ¡Vitalex necesita seguir un curso!
+            </p>
+            <p class="inta">
+                <b>2. Después de 7-10 días de tratamiento, se dará cuenta de que ya no es necesario medir la presión de 3-5 veces al día.</b> Su presión arterial no fluctuará en el transcurso del día.
+                No hay más pánico o confusión
+                acerca de cómo deshacerse del problema. Usted sabe que Vitalex es la respuesta.
+            </p>
+            <p class="inta">
+                <b>3. Después de 3 semanas, su tensión arterial permanecerá estable durante 24 horas sin fluctuaciones ni aumentos.</b> Querrá volar al espacio (es broma). Tendrás más energía,
+                confianza en ti mismo, un gran estado de
+                ánimo y los pensamientos depresivos dejarán de molestarte.
+            </p>
+            <h2>
+                ¡Volverás a vivir tu vida sin temer por tu salud y tu futuro!
+            </h2>
+            <p class="inta">
+                Me gustaría presentarles las estadísticas de limpieza de vasos sanguíneos Vitalex de un estudio clínico del Centro de Cardiología Fundación Cardiovascular (Bucaramanga). El estudio
+                involucró a 3000 pacientes, todos ellos
+                completaron un ciclo de tratamiento de 2 semanas con Vitalex . Esto es lo que mostraron los resultados del estudio:
+            </p>
+            <ul>
+                <li>La presión arterial volvió a la normalidad durante la primera semana: 99% de los participantes;</li>
+                <li>La frecuencia cardíaca volvió a la normalidad: 97% de los participantes;</li>
+                <li>Los vasos sanguíneos se limpiaron por completo del colesterol al final del estudio: 98% de los participantes;</li>
+                <li>Las migrañas desaparecieron: 99% de los participantes;</li>
+                <li>Mejoró la visión y la audición: 100% de los participantes</li>
+                <li>Mejoró el bienestar general: 100% de los participantes;</li>
+                <li>Aumentó la eficacia del tratamiento de enfermedades crónicas: 98% de los participantes;</li>
+                <li>No hubo efectos secundarios por tomar el producto: 100% de los participantes.</li>
+            </ul>
+            <div class="border-box">
+                <p class="inta">
+                    Al tomar Vitalex, nunca se volverá adicto. Y así es exactamente como funciona Lozartan. El tratamiento con Vitalex no daña el corazón, los riñones ni el hígado. Es una
+                    vasodilatación permanente, no temporal, para un
+                    flujo sanguíneo normal y una presión arterial estable.
+                </p>
+            </div>
+            <p>
+                <img class="wide-img" src="img/6.jpg" alt="">
+            </p>
+            <p class="intq">
+                - ¿Cuánto cuesta Vitalex y dónde se puede comprar?
+            </p>
+            <p class="inta">
+                Ahora mismo el precio del producto es muy asequible. Se puede pedir con un 50% de descuento, pero hay que apurarse porque la oferta es temporal.
+            </p>
+            <p class="inta">
+                Para obtener más información sobre cómo recibir Vitalex en cualquier parte del país:
+            </p>
+            <ol>
+                <li>Completen el formulario en el sitio web.</li>
+                <li>Después de eso, un manager les llamará y les pedirá su dirección de entrega.</li>
+            </ol>
+            <p class="inta">
+                Y recuerden, para mantener limpios sus vasos sanguíneos, se recomienda tomar un ciclo de tratamiento con este producto una vez al año porque los vasos sanguíneos limpios son la clave
+                para tener una buena salud y
+                bienestar, especialmente para los ancianos. Me gustaría desearles a ustedes y a su familia una buena salud.
+            </p>
+            <h2>
+                Respóndete a algunas preguntas: ¿Quiero librarme hoy mismo de mi dolor de cabeza? ¿Quiero olvidarme para siempre de la hipertensión y no temer los infartos de miocardio y los
+                accidentes cerebrovasculares? ¿Quiero volver
+                a tener una vida sana y feliz?
+            </h2>
+            <p class="inta">
+                Si su respuesta es afirmativa, ¡Vitalex es su elección!
+            </p>
+            <p class="intq">
+                - Dr. Restrepo, gracias por su tiempo y una entrevista tan interesante y útil.
+            </p>
+            <p>
+                <img src="./img/sert-prod.png" alt="">
+            </p>
+            <p class="inta">
+                La venta de Vitalex entró dentro del programa de subvenciones del Gobierno. Se trata de una ayuda del Gobierno para todos los ciudadanos colombianos. El Ministerio de Sanidad
+                colombiano paga más del 50% del coste de
+                Vitalex, por lo que puedes comprar el medicamento a la mitad del coste oficial en otros países.
+            </p>
+            <h2 class="new-form-to">
+                SIN PRODUCTOS QUÍMICOS NI COMPONENTES SINTÉTICOS
+            </h2>
+        </section>
+        <section>
+            <div class="new-form">
+                <div class="new-form__button-open">
+                    <span>
+                        HAGA CLIC AQUÍ PARA ABRIR EL FORMULARIO DE PEDIDO OFICIAL
+                    </span>
+                    <div><img class="blankimg" src="./img/blank.png" alt=""></div>
+                </div>
+                <div class="new-form__border-wrapper show-form">
+                    <div class="new-form__wrapper">
+                        <div class="new-form__bg-images">
+                            <div class="new-form__bg-image-center">
+                                <img src="./img/form/back.png" alt="">
+                            </div>
+                            <div class="new-form__bg-image-bottom">
+                                <img src="./img/form/footer.png" alt="">
+                            </div>
+                        </div>
+                        <div class="new-form__body new-form-body">
+                            <div class="new-form-body__top">
+                                <div class="new-form-body__logo">
+                                    <img src="./img/form/logo.png" alt="">
+                                </div>
+                                <div class="new-form-body__info-date">
+                                    <span>
+                                        29894
+                                    </span>
 
-            var dayNum = "";
-            if (now.getDate() < 10) {
-                dayNum = "0";
-            }
-            dayNum += now.getDate();
-
-            var monthNum = "";
-            if (now.getMonth() + 1 < 10) {
-                monthNum = "0";
-            }
-            monthNum += now.getMonth() + 1;
-
-            if (like_eu === true) {
-                document.write(dayNum + "." + monthNum + "." + now.getFullYear());
-            } else {
-                document.write(monthNum + "." + dayNum + "." + now.getFullYear());
-            }
-        }
-    </script>
-    <div class="container-fluid">
-        <div class="row">
-            <!--Render the header area-->
-
-            <div class="header-wrapper">
-                <div class="header-box">
-                    <div class="header-section">
-                        <a href="" class="header-link">
-
-                            <img src="./img/header111.png" class="header-image" alt="">
-                        </a>
-                        <style>
-                            .header-link {
-                                width: 100%;
-                                display: block;
-                            }
-
-                            .header-image {
-                                width: 100%;
-                            }
-
-                            hr {
-                                margin-top: 10px;
-                            }
-                        </style>
-                    </div>
-                    <hr class="mb-0">
-                    <div class="header-drop drop-plus">
-                        <div class="header-section">
-                            <div class="drop-section">
-                                <div class="drop-row">
-                                    <div class="drop-col">
-                                        <a class="header-link" href="">Últimas noticias</a><a class="header-link" href="">Nación</a><a class="header-link" href="">Coronavirus</a><a class="header-link"
-                                            href="">Opinión</a><a class="header-link" href="">Economía</a>
-                                    </div>
-                                    <div class="drop-col">
-                                        <a class="header-link" href="">Mundo</a><a class="header-link" href="">Gente</a><a class="header-link" href="">Cultura</a><a class="header-link"
-                                            href="">Tecnología</a><a class="header-link" href="">Deportes</a>
-                                    </div>
-                                    <div class="drop-col">
-                                        <a class="header-link" href="">Vida Moderna</a><a class="header-link" href="">Semana TV</a><a class="header-link" href="">Edición impresa</a><a
-                                            class="header-link" href="">Educación</a><a class="header-link" href="" rel="noopener">Sostenibilidad</a>
-                                    </div>
-                                    <div class="drop-col">
-                                        <a class="header-link" href="" rel="noopener">Foros Semana</a><a class="header-link" href="">Especiales</a><a class="header-link" href="">Galerías</a><a
-                                            class="header-link" href="">Semana Pódcast</a><a class="header-link" href="">Caricaturas</a>
-                                    </div>
+                                    <span>
+                                        <script>
+                                            dtime_nums(-1, true);
+                                        </script>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="new-form-body__middle">
+                                <div class="new-form-body__subtitle">
+                                    Formulario de pedido electrónico <br />
+                                    nº 29894 de 30.000
+                                </div>
+                                <div class="new-form-body__title">
+                                    Debido a la ENORME cantidad de solicitudes y a la pesada carga de nuestro servidor, nos vemos obligados a introducir un límite de tiempo para el envío de su
+                                    solicitud. Por favor, envíe su solicitud en
+                                    los 5 MINUTOS siguientes a la apertura del formulario. Transcurrido este tiempo, se CERRARÁ la posibilidad de enviar una solicitud.
+                                </div>
+                                <div class="new-form-body__images-achiv">
+                                    <img src="./img/form/emblem1.png" alt="">
+                                    <img src="./img/form/emblem2.png" alt="">
+                                    <img src="./img/form/emblem3.png" alt="">
+                                </div>
+                                <div class="new-form-body__price">Precio subvencionado: $139.000</div>
+                                <div class="new-form-body__info-price">
+                                    Para recibir Vitalix, introduzca su nombre y número de teléfono en los campos siguientes y haga clic en el botón “ENVIAR PEDIDO”.
+                                </div>
+                                <div class="new-form-body__sub-timer">Después, el formulario dejará de estar disponible:</div>
+                                <div class="new-form-body__timer"><span class="min">09</span>:<span class="sec">46</span>:<span class="msec">07</span></div>
+                            </div>
+                            <div class="new-form-body__form">
+                                <form action="" method="post" class="cc">
+                                    <input type="hidden" name="data0" value="{subid}" />
+                                    <input type="hidden" name="data1" value="{b}" />
+                                    <input type="hidden" name="data2" value="{a}" />
+                                    <input type="hidden" name="data3" value="{x}" />
+                                    <input type="hidden" name="data4" value="<?php echo $off; ?>" />
+                                    <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
+                                    <input type="hidden" name="data6" value="{offer_id}" />
+                                    <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
+                                    <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
+                                    <input type="hidden" name="data9" value="<?php echo $price; ?>" />
+                                    <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
+                                    <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
+                                    <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
+                                    <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
+                                    <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
+                                    <input class="new-form-body__input" type="text" name="name" id="name2" placeholder="NOMBRE" />
+                                    <input class="new-form-body__input" type="tel" name="phone" id="phone2" placeholder="Número de teléfono" required="required" />
+                                    <button type="submit" class="new-form-body__button">
+                                        enviar PEDIDO
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="new-form-body__bottom">
+                                <div class="new-form-body__bottom-info">
+                                    <span>
+                                        Los datos se envían al servidor del fabricante utilizando tecnología de doble cifrado de datos
+                                    </span>
+                                </div>
+                                <div class="new-form-body__bottom-icons">
+                                    <img src="./img/form/ssl.png" alt="">
+                                    <img src="./img/form/mcafee.png" alt="">
                                 </div>
                             </div>
                         </div>
+                        <!-- </div> -->
                     </div>
                 </div>
-                <div class="header-subnav hidden">
-                    <div class="header-section">
-                        <div class="header-list">
-                            <div class="list-item"><strong>Tendencias:</strong></div>
-                            <a class="list-item" href=""><span>Coronavirus</span></a><a class="list-item" href=""><span>Cuarentena</span></a><a class="list-item" href=""><span>Bogotá </span></a><a
-                                class="list-item" href=""><span>Día sin iva</span></a><a class="list-item" href=""><span>Claudia
-                                    López</span></a><a class="list-item" href=""><span>Coronavirus</span></a><a class="list-item" href=""><span>Fútbol Colombia</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-drop drop-menu">
-                    <div class="header-section">
-                        <div class="drop-section">
-                            <div class="search-tool">
-                                <div class="search-brand">
-                                    <svg viewbox="0 0 226 226">
-                                        <g>
-                                            <rect x="0" fill="#E91B1E" width="226" height="226" />
-                                            <path fill="white"
-                                                d="M165,142.3c0,27.9-24.6,42.2-49,42.2c-19.3,0-33.8-9-42.8-19.5l-4.3,17.2H61v-40.4h8.6 c8.4,18.4,26.4,27.1,41.4,27.1c12.3,0,22.3-5.9,22.3-17.2c0-12.9-12.7-17.4-30.1-25.8c-17.8-8.6-38.9-18.7-38.9-44.5 c0-25.6,20.9-40,45.3-40c18.2,0,29.5,8,36.1,14.8l3.5-14.8h7.8v37.7h-8.6C142.6,63,126.6,56,113.3,56c-10.9,0-19.5,4.7-19.5,14.6 c0,13.1,15.4,18.2,33.6,27.1C146.1,106.6,165,118.1,165,142.3z" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div class="search-control">
-                                    <input type="text" id="search" class="search-input" name="searchItem">
-                                </div>
-                                <a class="search-icon"><i class="icon icon-icon60"></i></a>
-                            </div>
-                            <div class="drop-row">
-                                <div class="drop-col">
-                                    <a class="header-link" href="">Últimas noticias</a><a class="header-link" href="">Nación</a><a class="header-link" href="">Coronavirus</a><a class="header-link"
-                                        href="">Opinión</a><a class="header-link" href="">Economía</a><a class="header-link" href="">Mundo</a>
-                                </div>
-                                <div class="drop-col">
-                                    <a class="header-link" href="">Gente</a><a class="header-link" href="">Cultura</a><a class="header-link" href="">Tecnología</a><a class="header-link"
-                                        href="">Deportes</a><a class="header-link" href="">Vida Moderna</a><a class="header-link" href="">Semana
-                                        TV</a>
-                                </div>
-                                <div class="drop-col">
-                                    <a class="header-link" href="">Edición impresa</a><a class="header-link" href="">Educación</a><a class="header-link" href="" rel="noopener">Sostenibilidad</a><a
-                                        class="header-link" href="" rel="noopener">Foros Semana</a><a class="header-link" href="">Especiales</a>
-                                </div>
-                                <div class="drop-col">
-                                    <a class="header-link" href="">Galerías</a><a class="header-link" href="">Semana Pódcast</a><a class="header-link" href="">Caricaturas</a>
-                                    <div class="header-link link-black">Iniciar sesión</div>
-                                    <a class="header-link link-red" href="" rel="noopener">Suscribirse</a>
-                                </div>
-                                <div class="drop-col">
-                                    <a href="" rel="noopener" class="header-social">
-                                        <div class="social-icon">
-                                            <i class="icon icon-light icon-icon70"></i>
-                                        </div>
-                                        <div class="social-label">Facebook</div>
-                                    </a>
-                                    <a href="" rel="noopener" class="header-social">
-                                        <div class="social-icon">
-                                            <i class="icon icon-light icon-icon71"></i>
-                                        </div>
-                                        <div class="social-label">Twitter</div>
-                                    </a>
-                                    <a href="" rel="noopener" class="header-social">
-                                        <div class="social-icon">
-                                            <i class="icon icon-light icon-icon73"></i>
-                                        </div>
-                                        <div class="social-label">Instagram</div>
-                                    </a>
-                                    <a href="" rel="noopener" class="header-social">
-                                        <div class="social-icon">
-                                            <i class="icon icon-light icon-icon72"></i>
-                                        </div>
-                                        <div class="social-label">Youtube</div>
-                                    </a>
-                                </div>
+                <div class="new-form__border-wrapper show-about-form">
+                    <div class="new-form__wrapper">
+                        <div class="new-form-body__top">
+                            <div class="new-form-body__logo">
+                                <img src="./img/form/logo.png" alt="">
                             </div>
                         </div>
-                        <div class="header-drop-close">
-                            <i class="icon icon-icon01"></i>
+                        <div class="new-form__loading">
+                            <img src="./img/form/loading.gif" alt="">
+                        </div>
+                        <div class="new-form__info-loading">
+                            <span class="new-form__info-loading-text1">
+                                Establecer una conexión con el servidor del fabricante
+                            </span>
+                            <br />
+                            <span class="new-form__info-loading-text2 display-none">
+                                Obtención de información y elaboración de una orden de pedido oficial
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="body-padding-div body-scroll" style="padding-top: 0px !important"></div>
-            <!--Render the main area-->
-            <!--Render the section area-->
-            <section class="row in">
-                <style>
-                    .background-image {
-                        position: absolute;
-                        opacity: 1;
-                        background-position: center;
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        /*background-attachment: fixed;*/
-                        height: 100vh;
-                        width: 100%;
-                        top: 0;
-                        left: 0;
-                    }
-
-                    .withBackground {
-                        margin-left: -15px;
-                        margin-right: -15px;
-                    }
-
-                    .image-gradient__bottom.dark {
-                        position: absolute;
-                        width: 100%;
-                        background: rgba(0, 0, 0, 0);
-                        background: linear-gradient(180deg,
-                                rgba(0, 0, 0, 0),
-                                #1a1a1a 75%);
-                        background: -o-linear-gradient(top,
-                                rgba(0, 0, 0, 0),
-                                #1a1a1a 75%);
-                        background: -webkit-gradient(linear,
-                                left top,
-                                left bottom,
-                                from(rgba(0, 0, 0, 0)),
-                                color-stop(75%, #1a1a1a));
-                        height: 20vh;
-                        top: 80vh;
-                    }
-
-                    .image-gradient__bottom.light {
-                        position: absolute;
-                        width: 100%;
-                        background: rgba(0, 0, 0, 0);
-                        background: linear-gradient(180deg,
-                                rgba(0, 0, 0, 0),
-                                #1a1a1a 75%);
-                        background: -o-linear-gradient(top,
-                                rgba(0, 0, 0, 0),
-                                #1a1a1a 75%);
-                        background: -webkit-gradient(linear,
-                                left top,
-                                left bottom,
-                                from(rgba(0, 0, 0, 0)),
-                                color-stop(75%, #ffffff));
-                        height: 20vh;
-                        top: 80vh;
-                    }
-
-                    .image-gradient__top.dark {
-                        position: absolute;
-                        width: 100%;
-                        background: rgba(0, 0, 0, 0);
-                        background: -webkit-gradient(linear,
-                                left top,
-                                left bottom,
-                                from(rgba(12, 12, 12, 0.75)),
-                                to(rgba(0, 0, 0, 0)));
-                        background: -o-linear-gradient(top,
-                                rgba(12, 12, 12, 0.75),
-                                rgba(0, 0, 0, 0));
-                        background: linear-gradient(180deg,
-                                rgba(12, 12, 12, 0.75),
-                                rgba(0, 0, 0, 0));
-                        height: 20vh;
-                        top: 0;
-                    }
-
-                    .image-gradient__top.light {
-                        display: none;
-                        position: absolute;
-                        width: 100%;
-                        background: unset;
-                        background: unset;
-                        background: unset;
-                        background: unset;
-                        height: 0;
-                        top: 0;
-                    }
-
-                    .dark-bg {
-                        background-color: #1a1a1a;
-                    }
-                </style>
-                <section class="row">
-                    <div class="cbcontainer">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <!-- /51284997/HPLeaderboard -->
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <style>
-                    .background-image {
-                        position: absolute;
-                        opacity: 1;
-                        background-position: center;
-                        background-size: cover;
-                        background-repeat: no-repeat;
-                        /*background-attachment: fixed;*/
-                        height: 100vh;
-                        width: 100%;
-                        top: 0;
-                        left: 0;
-                    }
-
-                    .withBackground {
-                        margin-left: -15px;
-                        margin-right: -15px;
-                    }
-
-                    .image-gradient__bottom.dark {
-                        position: absolute;
-                        width: 100%;
-                        background: rgba(0, 0, 0, 0);
-                        background: linear-gradient(180deg,
-                                rgba(0, 0, 0, 0),
-                                #1a1a1a 75%);
-                        background: -o-linear-gradient(top,
-                                rgba(0, 0, 0, 0),
-                                #1a1a1a 75%);
-                        background: -webkit-gradient(linear,
-                                left top,
-                                left bottom,
-                                from(rgba(0, 0, 0, 0)),
-                                color-stop(75%, #1a1a1a));
-                        height: 20vh;
-                        top: 80vh;
-                    }
-
-                    .image-gradient__bottom.light {
-                        position: absolute;
-                        width: 100%;
-                        background: rgba(0, 0, 0, 0);
-                        background: linear-gradient(180deg,
-                                rgba(0, 0, 0, 0),
-                                #1a1a1a 75%);
-                        background: -o-linear-gradient(top,
-                                rgba(0, 0, 0, 0),
-                                #1a1a1a 75%);
-                        background: -webkit-gradient(linear,
-                                left top,
-                                left bottom,
-                                from(rgba(0, 0, 0, 0)),
-                                color-stop(75%, #ffffff));
-                        height: 20vh;
-                        top: 80vh;
-                    }
-
-                    .image-gradient__top.dark {
-                        position: absolute;
-                        width: 100%;
-                        background: rgba(0, 0, 0, 0);
-                        background: -webkit-gradient(linear,
-                                left top,
-                                left bottom,
-                                from(rgba(12, 12, 12, 0.75)),
-                                to(rgba(0, 0, 0, 0)));
-                        background: -o-linear-gradient(top,
-                                rgba(12, 12, 12, 0.75),
-                                rgba(0, 0, 0, 0));
-                        background: linear-gradient(180deg,
-                                rgba(12, 12, 12, 0.75),
-                                rgba(0, 0, 0, 0));
-                        height: 20vh;
-                        top: 0;
-                    }
-
-                    .image-gradient__top.light {
-                        display: none;
-                        position: absolute;
-                        width: 100%;
-                        background: unset;
-                        background: unset;
-                        background: unset;
-                        background: unset;
-                        height: 0;
-                        top: 0;
-                    }
-
-                    .dark-bg {
-                        background-color: #1a1a1a;
-                    }
-                </style>
-                <section class="row cnn-fullwidth">
-                    <div class="cbcontainer">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <article role="main">
-                                    <header>
-                                        <div class="row">
-                                            <div class="col-xs-12">
-                                                <div class="article-mainheader">
-
-                                                    <h2 class="title">
-                                                        Dr Oswaldo Restrepo: "¡Losartan causa mutación en el ADN! ¿Cómo bajar la tensión arterial en 2 minutos SIN medicación?
-                                                    </h2>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </header>
-                                    <section class="row">
-                                        <section class="col-sm-8" role="main">
-                                            <div class="row" id="byline-container">
-                                                <div class="col-sm-6">
-                                                    <div class="author-byline">
-                                                        <p>
-                                                            Por
-                                                            <a href="">
-                                                                MedPortal: Colombia
-                                                            </a>
-                                                        </p>
-                                                    </div>
-                                                    <div class="content-mainimg-time">
-                                                        <div class="dateLine">
-                                                            <!--<i class="dateIcon"></i>-->
-                                                            <p class="dateString no-icon">
-                                                                Publicado
-                                                                <script type="text/javascript">
-                                                                    var appendNull = function (num) {
-                                                                        return num < 10 ?
-                                                                            0 + num.toString() :
-                                                                            num;
-                                                                    };
-                                                                    d = new Date();
-                                                                    p = new Date(d.getTime() + 0 * 86400000);
-                                                                    monthb =
-                                                                        "01,02,03,04,05,06,07,08,09,10,11,12".split(
-                                                                            ","
-                                                                        );
-                                                                    document.write(
-                                                                        appendNull(p.getDate()) +
-                                                                        "." +
-                                                                        monthb[p.getMonth()] +
-                                                                        "." +
-                                                                        p.getFullYear()
-                                                                    );
-                                                                </script>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6"></div>
-                                            </div>
-                                            <span style="display: none">
-                                                enablePagination: false <br>
-                                                maxItemsPerPage: 10 <br>
-                                                totalITemsFound: <br>
-                                                maxPaginationLinks: 10 <br>
-                                                maxPossiblePages: <br>
-                                                startIndex: <br>
-                                                endIndex: <br>
-                                            </span>
-                                            <section></section>
-
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <div class="article-maincontent-p cnn-life-body">
-                                                        <div id="content-body-244757-498257">
-                                                            <p>
-                                                                <img src="img/main1111.jpg"><br><i>
-                                                                    Dr. Oswaldo Restrepo
-                                                                </i>
-                                                            </p>
-                                                            <p></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <div class="article-maincontent-p cnn-life-body">
-                                                        <div id="content-body-244757-498257">
-                                                            <p style="font-size: 20px">
-                                                                <b>
-                                                                    Oswaldo Restrepo es un famoso médico colombiano que dirige su propio canal de YouTube. Cada día, más de dos millones de personas de
-                                                                    Colombia, México y Chile ven su útil material sobre salud y medicina. En un nuevo vídeo, el médico explica por qué un popular
-                                                                    tratamiento contra la hipertensión te quita varios años de vida.
-                                                                </b>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <h3 class="color-title">
-                                                        El losartán provoca una mutación en el ADN
-                                                    </h3>
-                                                    <br>
-                                                    <div class="votch-video pulse-button">
-
-                                                        <div class="votch-video__text">VER EL VÍDEO </div>
-                                                        <div class="votch-video__arrows">
-                                                            <img src="./img/arroe.svg" alt="">
-                                                            <img src="./img/arroe.svg" alt="">
-                                                            <img src="./img/arroe.svg" alt="">
-                                                        </div>
-
-                                                    </div>
-                                                    <div>
-
-
-                                                        <div style=“position: relative; padding-top: 56.25%; width: 100%“><iframe src=“https://kinescope.io/embed/203548143” allow=“autoplay;
-                                                                fullscreen; picture-in-picture; encrypted-media;” frameborder=“0” allowfullscreen style=“position: absolute; width: 100%; height: 100%;
-                                                                top: 0; left: 0;“></iframe></div>
-
-
-
-                                                    </div>
-                                                    <br>
-                                                    <div class="article-maincontent-p cnn-life-body">
-
-                                                        <p>
-                                                            <b style="font-size: 18px">- Dr. Oswaldo Restrepo, ¿es realmente cierto que el Lozartán es tan peligroso</b>?</p>
-                                                    </div>
-
-                                                    <p>
-                                                        - Pues sí. En el vídeo dije la pura verdad. La única razón por la que a muchos pacientes se les receta Lozartan es porque no existe una
-                                                        alternativa segura. Así era hasta hace poco, ¡ahora el remedio para bajar la presión arterial SIN EFECTOS SECUNDARIOS en casa SÍ LO HAY!
-                                                    </p>
-                                                    <p>
-                                                        No entiendo cómo la gente toma este medicamento durante años en absoluto. Mareos constantes, fatiga, problemas renales y hepáticos. ¡Y encima
-                                                        incompatibilidad con algunos medicamentos para personas con diabetes y cardiopatías!
-                                                        <strong class="color-text">
-                                                            Como médico, me alegro de que en nuestro país el Lozartan
-                                                            esté siendo sustituido poco a poco por otro medicamento.
-                                                        </strong>
-                                                    </p>
-                                                    <p>
-                                                        <b style="font-size: 18px">- ¿Y cuántas personas han sufrido daños en el ADN a causa del losartán sin ni siquiera darse cuenta?</b></p>
-                                                    <p>
-                                                        - No tiene ni idea de cuántos. Hay más de 700 millones de personas en el mundo con hipertensión no tratada. 3 de cada 5 toman losartán. En
-                                                        nuestro país, el número de hipertensos supera el millón y medio.
-                                                    </p>
-                                                    <p>
-                                                        Mareos, debilidad, deterioro de la función renal. ¿Por qué cree que se producen estos síntomas? El hombre es un blanco. Está siendo disparado
-                                                        por dos balas a la vez. La enfermedad y la cura. <strong class="color-text">
-                                                            La hipertensión deteriora la calidad de los vasos sanguíneos y daña el corazón, mientras que el
-                                                            fármaco altera las conexiones neuronales y la estructura del ADN.
-                                                        </strong>
-                                                    </p>
-                                                    <p>
-                                                        Cada año los síntomas serán más graves. La persona tendrá que aumentar la dosis. Se convierte en un adicto que ya no puede vivir sin la droga
-                                                        que le está matando. Es un círculo vicioso.
-                                                    </p>
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <div class="article-maincontent-p cnn-life-body">
-                                                        <div id="content-body-244757-498257">
-                                                            <div class="border-box">
-                                                                <p><b style="font-size: 18px">
-                                                                        Amigos, no hay por qué jugar al escondite con la hipertensión. Es una enfermedad insidiosa y silenciosa. Cuando aparece esta
-                                                                        enfermedad, se presentan los siguientes cambios:
-                                                                    </b></p>
-                                                                <ul class="lsd">
-                                                                    <li>fatiga crónica;</li>
-                                                                    <li>empeoramiento de la inteligencia y la memoria;</li>
-                                                                    <li>migrañas;</li>
-                                                                    <li>empeoramiento de la visión, lo que conduce a la ceguera en casos graves;</li>
-                                                                    <li>empeoramiento de la audición;</li>
-                                                                    <li>mala coordinación del movimiento;</li>
-                                                                    <li>cambios al andar;</li>
-                                                                    <li>debilidad de brazos o piernas;</li>
-                                                                    <li>reducción general de la sensibilidad;</li>
-                                                                    <li>dolor articular y muscular;</li>
-                                                                    <li>insomnio;</li>
-                                                                    <li>disfunción eréctil;</li>
-                                                                </ul>
-                                                            </div>
-                                                            <br>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <div class="article-maincontent-p cnn-life-body">
-                                                        <div id="content-body-244757-498257">
-                                                            <p>
-                                                                Todos estos síntomas empeoran
-                                                                significativamente la calidad de vida. Para
-                                                                los hombres se vuelve difícil jugar con sus
-                                                                hijos/nietos y realizar las actividades
-                                                                diarias, mientras que para las mujeres es más
-                                                                difícil mantener la vida doméstica, lo que se
-                                                                debe a la falta de aire constante incluso
-                                                                durante actividades físicas insignificantes.
-                                                            </p>
-
-                                                            <p><img src="img/main2222.jpg"><br></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <div class="article-maincontent-p cnn-life-body">
-                                                        <div id="content-body-244757-498257">
-                                                            <p>
-                                                                <b style="font-size: 18px">
-                                                                    - ¿La hipertensión puede no presentar
-                                                                    síntomas?
-                                                                </b>
-                                                            </p>
-
-                                                            <p>
-                                                                ¡Por eso esta enfermedad es tan insidiosa! En
-                                                                muchos pacientes la hipertensión arterial
-                                                                puede no mostrar síntomas durante bastante
-                                                                tiempo y la salud del paciente puede
-                                                                permanecer relativamente buena. Su cuerpo
-                                                                simplemente se adapta a la presión arterial
-                                                                alta. La presión arterial alta,
-                                                                independientemente de que la persona la sienta
-                                                                o no, tiene un efecto perjudicial sobre los
-                                                                vasos sanguíneos y los órganos que alimentan:
-                                                                el cerebro, el corazón y los riñones. Debido a
-                                                                una hipertensión arterial a largo plazo
-                                                                (incluso si no hay quejas), estos cambios
-                                                                <b>
-                                                                    pueden provocar catástrofes vasculares
-                                                                </b>
-                                                                :
-                                                            </p>
-
-                                                            <ul type="disc" class="ListBlock-root" style="
-                                    list-style-type: disc;
-                                    padding-left: 45px;
-                                  ">
-                                                                <li>derrame cerebral;</li>
-                                                                <li>
-                                                                    dolor en el área del pecho, también llamado
-                                                                    angina;
-                                                                </li>
-                                                                <li>ataque al corazón;</li>
-                                                                <li>insuficiencia cardíaca y renal;</li>
-                                                                <li>
-                                                                    arritmia cardíaca que puede provocar una
-                                                                    muerte súbita.
-                                                                </li>
-                                                            </ul>
-
-                                                            <p>
-                                                                La hipertensión siempre tiene un patrón
-                                                                progresivo.
-                                                            </p>
-
-                                                            <p>
-                                                                Aquí se muestran las estadísticas sobre
-                                                                muertes por enfermedades cardiovasculares en
-                                                                Colombia:
-                                                            </p>
-
-                                                            <p></p>
-                                                            <div style="
-                                    border: 8px solid rgb(255 147 2 / 70%);
-                                    border-radius: 8px;
-                                  " class="test">
-                                                                <img src="img/3.png">
-
-                                                                <ul type="circle" class="ListBlock-root" style="
-                                      list-style-type: circle;
-                                      padding-left: 45px;
-                                    ">
-                                                                    <li>13,2% enfermedad coronaria;</li>
-                                                                    <li>12% insuficiencia cardíaca y renal;</li>
-                                                                    <li>11,9% infarto;</li>
-                                                                    <li>11% derrame cerebral;</li>
-                                                                    <li>4% hipertensión;</li>
-                                                                    <li>2% arritmia;</li>
-                                                                    <li>45,9% otras enfermedades.</li>
-                                                                </ul>
-                                                            </div>
-                                                            <p></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <div class="article-maincontent-p cnn-life-body">
-                                                        <div id="content-body-244757-498257">
-
-                                                            <p>
-                                                                <b>
-                                                                    - ¿No reacciona el Estado de alguna manera ante esto? ¿Sigue fomentando la venta de losartán?
-                                                                </b>
-                                                            </p>
-                                                            <p>
-                                                                - Esto es de lo que quería hablar. <strong class="color-text">
-                                                                    Estoy increíblemente orgulloso y feliz de que Colombia haya sido uno de los primeros países de
-                                                                    Sudamérica en realizar un estudio independiente sobre <a href=""><b> Vitalex </b></a>.
-                                                                </strong> 8 de cada 10 pacientes de entre 40 y 60 años
-                                                                sintieron una disminución de
-                                                                entre 10 y 20 puntos en la presión arterial en los primeros 30 minutos de tomarlo.
-                                                            </p>
-                                                            <p>
-                                                                ¿Ha oído hablar de <a href=""><b>Vitalex</b></a>?
-                                                            </p>
-                                                            <p><b>
-                                                                    - Sí, sí, ¿se trata del mismo medicamento que ha recibido apoyo financiero del Ministerio de Sanidad?
-                                                                </b>
-                                                            </p>
-                                                            <p>
-                                                                - Así es. Usted sabe que la hipertensión tiene 2 causas principales: la suciedad de los vasos sanguíneos y el aumento de la
-                                                                concentración de la hormona angiotensina II. El losartán simplemente bloquea la producción de esta hormona, lo que tiene consecuencias
-                                                                irreparables: alteración del ritmo cardíaco, inflamación, alteración del ADN.
-                                                            </p>
-                                                            <p>
-                                                                Los creadores de <a href=""><b>Vitalex</b></a>, en cambio, han aprendido a controlar la producción de la hormona, que es importante para
-                                                                el hígado, el corazón
-                                                                y las glándulas suprarrenales. Al mismo tiempo, el último medicamento también tiene una segunda propiedad no menos importante: la
-                                                                limpieza de los vasos sanguíneos.
-                                                            </p>
-                                                            <p>
-                                                                ¿Cómo actúa? Los cristales de calcio, las sales y otros residuos de los vasos sanguíneos tienen una forma específica. Las moléculas de
-                                                                <a href=""><b>Vitalex</b></a> capturan los restos y los excretan junto con las toxinas a través de los riñones.
-                                                            </p>
-
-
-
-
-
-                                                            <p>
-                                                                <b>
-                                                                    Si el paciente no comienza a limpiar sus
-                                                                    vasos sanguíneos, los síntomas progresarán y
-                                                                    se volverán permanentes.
-                                                                </b>
-                                                            </p>
-
-                                                            <p>
-                                                                El paciente tendrá que ir a farmacias
-                                                                constantemente y comprar un montón de
-                                                                medicamentos diferentes. ¿Es agradable? ¡Por
-                                                                supuesto que no!
-                                                            </p>
-
-                                                            <p>
-                                                                <b>
-                                                                    Así es cómo se ve un vaso sanguíneos
-                                                                    obstruido
-                                                                </b>
-                                                            </p>
-
-                                                            <p></p>
-                                                            <center><img src="img/4.jpg"></center>
-                                                            <p></p>
-                                                            <p>
-                                                                <b style="font-size: 18px">
-                                                                    - Esto es increíble. ¿La medicina realmente funciona así?</b>
-                                                            </p>
-
-
-
-
-
-                                                            <p>
-                                                                <a href=""><b> Vitalex </b></a>
-                                                                es un producto desarrollado por expertos
-                                                                líderes en el campo de la cardiología. Durante
-                                                                más de tres años, desarrollaron una fórmula
-                                                                que proporciona los mejores resultados en el
-                                                                tratamiento de la hipertensión y sus
-                                                                consecuencias.
-                                                            </p>
-                                                            <div class="border-box">
-                                                                <p>
-                                                                    En Colombia, el estudio <a href=""><b>Vitalex</b></a> fue realizado por el Centro de Cardiología Fundacen (Bucaramanga) y el
-                                                                    Instituto del Corazón de las
-                                                                    Américas (Bogotá). Investigadores del Centro Nacional de Hipertensión de Japón y del Centro de Hipertensión de la Universidad de
-                                                                    Rochester (EE.UU.) también han demostrado la eficacia del producto.
-                                                                </p>
-                                                            </div>
-                                                            <br>
-                                                            <p>
-                                                                Este producto solo contiene extractos
-                                                                altamente concentrados de plantas medicinales
-                                                                que limpian bien los vasos sanguíneos, lo que
-                                                                lo convierte en un producto seguro y
-                                                                ecológico. Además, tiene un valor nutricional
-                                                                para todo el cuerpo.
-                                                            </p>
-                                                            <p>
-                                                                Yo también comía mucha sal, me movía poco y fumaba mucho. Conozco de primera mano la hipertensión. También era mi problema, pero ahora
-                                                                ya veis que estoy bien, me encuentro estupendamente, tengo buen humor y ganas de vivir otros 50 años.
-
-                                                            </p>
-                                                            <p>
-                                                                Es un producto que tomé para tratar mi hipertensión, y ahora cada 6 meses tomo un curso para mantener mi bienestar.
-                                                            </p>
-
-                                                            <p></p>
-                                                            <center><img src="img/555.png"></center>
-                                                            <p></p>
-
-                                                            <p>
-                                                                Yo, personalmente, recomiendo este producto.
-                                                                Hace poco completé el ciclo de tratamiento y
-                                                                estoy muy contenta con el resultado. Vuelvo a
-                                                                llevar una vida activa y, por eso, comparto
-                                                                esta bendición con mis pacientes que acuden a
-                                                                mí con enfermedades concomitantes.
-                                                            </p>
-
-
-
-                                                            <h3 class="color-text text-underline" style="font-size: 18px;font-weight: 700;">
-
-
-
-                                                                <a href=""><b>Vitalex</b></a> permite bajar la tensión arterial en 2 minutos en casa. Ya después del primer tratamiento, su presión
-                                                                arterial no sube por
-                                                                encima de 130/85
-                                                            </h3>
-
-                                                            <p>
-                                                                Voy a explicar detalladamente para todos mis seguidores y pacientes cómo funciona <a href=""><b>Vitalex</b></a>.
-                                                            </p>
-
-                                                            <p>
-                                                                <strong class="color-text">
-                                                                    1. Usted se sentirá considerablemente mejor el primer día que lo tome.
-                                                                </strong> El dolor de cabeza, las náuseas y los mareos desaparecerán. EN 2
-                                                                MINUTOS su presión arterial bajará. Verá los números en su tensiómetro. Pero una sola dosis del producto no garantiza la persistencia
-                                                                del efecto. ¡<a href=""><b>Vitalex</b></a> necesita seguir un curso!
-                                                            </p>
-                                                            <p>
-                                                                <strong class="color-text">
-                                                                    2. Después de 7-10 días de tratamiento, se dará cuenta de que ya no es necesario medir la presión de 3-5 veces al día.</strong> Su
-                                                                presión
-                                                                arterial no fluctuará en el transcurso del día. No hay más pánico o confusión acerca de cómo deshacerse del problema. Usted sabe que
-                                                                <a href=""><b>Vitalex</b></a> es la respuesta.
-                                                            </p>
-                                                            <p>
-                                                                <strong class="color-text">
-                                                                    3. Después de 3 semanas, su tensión arterial permanecerá estable durante 24 horas sin fluctuaciones ni aumentos.</strong> Querrá
-                                                                volar al espacio
-                                                                (es broma). Tendrás más energía, confianza en ti mismo, un gran estado de ánimo y los pensamientos depresivos dejarán de molestarte.
-
-                                                            </p>
-                                                            <p class="text-underline">
-                                                                ¡Volverás a vivir tu vida sin temer por tu salud y tu futuro!
-                                                            </p>
-
-
-                                                            <p>
-                                                                Me gustaría presentarles las estadísticas de limpieza de vasos sanguíneos <a href=""><b>Vitalex</b></a> de un estudio clínico del Centro
-                                                                de Cardiología Fundación Cardiovascular (Bucaramanga).<br>
-                                                                El estudio involucró a 3000 pacientes, todos
-                                                                ellos completaron un ciclo de tratamiento de 2
-                                                                semanas con
-                                                                <a href=""><b> Vitalex </b></a> .
-                                                                Esto es lo que mostraron los resultados del
-                                                                estudio:
-                                                            </p>
-                                                            <ul type="disc" class="ListBlock-root" style="
-                                    list-style-type: disc;
-                                    padding-left: 45px;
-                                  ">
-                                                                <li>
-                                                                    La presión arterial volvió a la normalidad
-                                                                    durante la primera semana: 99% de los
-                                                                    participantes;
-                                                                </li>
-                                                                <li>
-                                                                    La frecuencia cardíaca volvió a la
-                                                                    normalidad: 97% de los participantes;
-                                                                </li>
-                                                                <li>
-                                                                    Los vasos sanguíneos se limpiaron por
-                                                                    completo del colesterol al final del
-                                                                    estudio: 98% de los participantes;
-                                                                </li>
-                                                                <li>
-                                                                    Las migrañas desaparecieron: 99% de los
-                                                                    participantes;
-                                                                </li>
-                                                                <li>
-                                                                    Mejoró la visión y la audición: 100% de los
-                                                                    participantes
-                                                                </li>
-                                                                <li>
-                                                                    Mejoró el bienestar general: 100% de los
-                                                                    participantes;
-                                                                </li>
-                                                                <li>
-                                                                    Aumentó la eficacia del tratamiento de
-                                                                    enfermedades crónicas: 98% de los
-                                                                    participantes;
-                                                                </li>
-                                                                <li>
-                                                                    No hubo efectos secundarios por tomar el
-                                                                    producto: 100% de los participantes.
-                                                                </li>
-                                                            </ul>
-
-
-                                                            <div class="border-box">
-                                                                <p>
-                                                                    Al tomar <a href=""><b>Vitalex</b></a>, nunca se volverá adicto. Y así es exactamente como funciona Lozartan. El tratamiento con <a
-                                                                        href=""><b>Vitalex</b></a> no daña el
-                                                                    corazón, los riñones ni el hígado. Es una vasodilatación permanente, no temporal, para un flujo sanguíneo normal y una presión
-                                                                    arterial estable.
-                                                                </p>
-                                                            </div>
-
-                                                            <p></p>
-                                                            <center>
-                                                                <img style="max-width: 90%" src="img/6.jpg">
-                                                            </center>
-                                                            <p></p>
-
-                                                            <p>
-                                                                <b style="font-size: 18px">
-                                                                    - ¿Cuánto cuesta
-                                                                    <a href=""><b> Vitalex </b></a>
-                                                                    y dónde se puede comprar?
-                                                                </b>
-                                                            </p>
-
-                                                            <p>
-                                                                Ahora mismo el precio del producto es muy
-                                                                asequible. Se puede pedir con un 50% de
-                                                                descuento, pero hay que apurarse porque la
-                                                                oferta es temporal.
-                                                                </b>
-                                                            </p>
-
-                                                            <p>
-                                                                Para obtener más información sobre cómo
-                                                                recibir
-                                                                <a href=""><b> Vitalex </b></a>
-                                                                en cualquier parte del país:
-                                                            </p>
-
-                                                            <ol class="ListBlock-root" style="padding-left: 45px">
-                                                                <li>
-                                                                    Completen el formulario en el sitio web.
-                                                                </li>
-                                                                <li>
-                                                                    Después de eso, un manager les llamará y les
-                                                                    pedirá su dirección de entrega.
-                                                                </li>
-                                                            </ol>
-
-                                                            <p>
-                                                                Y recuerden, para mantener limpios sus vasos
-                                                                sanguíneos, se recomienda tomar un ciclo de
-                                                                tratamiento con este producto una vez al año
-                                                                porque los vasos sanguíneos limpios son la
-                                                                clave para tener una buena salud y bienestar,
-                                                                especialmente para los ancianos. Me gustaría
-                                                                desearles a ustedes y a su familia una buena
-                                                                salud.
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <div class="article-maincontent-p cnn-life-body">
-                                                        <div id="content-body-244757-498257">
-                                                            <center>
-                                                                <h3 class="color-title">
-                                                                    Respóndete a algunas preguntas:
-                                                                    ¿Quiero librarme hoy mismo de mi dolor de cabeza?
-                                                                    ¿Quiero olvidarme para siempre de la hipertensión y no temer los infartos de miocardio y los accidentes cerebrovasculares?
-                                                                    ¿Quiero volver a tener una vida sana y feliz?
-                                                                    <br><br>
-                                                                    Si su respuesta es afirmativa, ¡<a href=""><b>Vitalex</b></a> es su elección!
-
-
-                                                                </h3>
-                                                                <br>
-                                                                <link rel="stylesheet" href="css/orderform.css">
-                                                                <img style="max-width: 90%" src="./img/sert-prod.png">
-
-
-                                                            </center>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <div class="article-maincontent-p cnn-life-body">
-                                                        <div id="content-body-244757-498257">
-
-
-                                                            <p>
-                                                                <b style="font-size: 18px">
-                                                                    - Dr. Restrepo, gracias por su tiempo y una
-                                                                    entrevista tan interesante y útil.
-                                                                </b>
-                                                            </p>
-                                                            <p>
-                                                                La venta de Vitalex entró dentro del programa de subvenciones del Gobierno. Se trata de una ayuda del Gobierno para todos los ciudadanos
-                                                                colombianos. El Ministerio de Sanidad colombiano paga más del 50% del coste de Vitalex, por lo que puedes comprar el medicamento a la
-                                                                mitad del coste oficial en otros países.
-                                                            </p>
-                                                            <p><b style="font-size: 18px">
-                                                                    SIN PRODUCTOS QUÍMICOS NI COMPONENTES SINTÉTICOS
-                                                                </b></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-xs-12 new-form-to">
-                                                    <div class="new-form">
-                                                        <div class="new-form__button-open">
-                                                            <span>
-                                                                ABRIR UN FORMULARIO DE PEDIDO OFICIAL
-                                                            </span>
-                                                        </div>
-                                                        <div class="new-form__border-wrapper show-form">
-                                                            <div class="new-form__wrapper">
-                                                                <div class="new-form__bg-images">
-                                                                    <div class="new-form__bg-image-center">
-                                                                        <img src="./img/form/back.png" alt="">
-                                                                    </div>
-                                                                    <div class="new-form__bg-image-bottom">
-                                                                        <img src="./img/form/footer.png" alt="">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="new-form__body new-form-body">
-                                                                    <div class="new-form-body__top">
-                                                                        <div class="new-form-body__logo">
-                                                                            <img src="./img/form/logo.png" alt="">
-                                                                        </div>
-                                                                        <div class="new-form-body__info-date">
-                                                                            <span>
-                                                                                29894
-                                                                            </span>
-
-                                                                            <span>
-                                                                                <script>
-                                                                                    dtime_nums(-1, true);
-                                                                                </script>
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="new-form-body__middle">
-                                                                        <div class="new-form-body__subtitle">
-                                                                            Formulario de pedido electrónico <br> nº 29894 de 30.000
-                                                                        </div>
-                                                                        <div class="new-form-body__title">
-                                                                            Debido a la ENORME cantidad de solicitudes y a la pesada carga de nuestro servidor, nos vemos obligados a introducir un
-                                                                            límite de tiempo para el envío de su solicitud. Por favor, envíe su solicitud en los 5 MINUTOS siguientes a la apertura del
-                                                                            formulario. Transcurrido este tiempo, se CERRARÁ la posibilidad de enviar una solicitud.
-                                                                        </div>
-                                                                        <div class="new-form-body__images-achiv">
-                                                                            <img src="./img/form/emblem1.png" alt="">
-                                                                            <img src="./img/form/emblem2.png" alt="">
-                                                                            <img src="./img/form/emblem3.png" alt="">
-                                                                        </div>
-                                                                        <div class="new-form-body__price">Precio subvencionado - $ 139.000</div>
-                                                                        <div class="new-form-body__info-price">Para recibir Vitalix, introduzca su nombre
-                                                                            y número de teléfono en los campos siguientes y
-                                                                            haga clic en el botón “ENVIAR PEDIDO”.</div>
-                                                                        <div class="new-form-body__sub-timer">Después, el formulario dejará de estar disponible:</div>
-                                                                        <div class="new-form-body__timer">
-                                                                            <span class="min">09</span>:<span class="sec">46</span>:<span class="msec">07</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="new-form-body__form">
-                                                                        <form action="" method="post" class="cc">
-                                                                            <input class="new-form-body__input" type="text" name="name" id="name2" placeholder="NOMBRE">
-
-                                                                            <input class="new-form-body__input " type="tel" name="phone" id="phone2" placeholder="Número de teléfono"
-                                                                                required="required">
-                                                                            <button type="submit" class="new-form-body__button">
-                                                                                enviar PEDIDO
-                                                                            </button>
-
-
-                                                                        </form>
-                                                                    </div>
-                                                                    <div class="new-form-body__bottom">
-                                                                        <div class="new-form-body__bottom-info">
-
-                                                                            <span>
-                                                                                Los datos se envían al servidor del fabricante utilizando tecnología de doble cifrado de datos
-                                                                            </span>
-                                                                        </div>
-                                                                        <div class="new-form-body__bottom-icons">
-                                                                            <img src="./img/form/ssl.png" alt="">
-                                                                            <img src="./img/form/mcafee.png" alt="">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <!-- </div> -->
-                                                            </div>
-                                                        </div>
-                                                        <div class="new-form__border-wrapper show-about-form">
-                                                            <div class="new-form__wrapper">
-                                                                <div class="new-form-body__top">
-                                                                    <div class="new-form-body__logo">
-                                                                        <img src="./img/form/logo.png" alt="">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="new-form__loading">
-                                                                    <img src="./img/form/loading.gif" alt="">
-                                                                </div>
-                                                                <div class="new-form__info-loading">
-                                                                    <span class="new-form__info-loading-text1">
-                                                                        Establecer una conexión con el servidor del fabricante
-                                                                    </span>
-                                                                    <br>
-                                                                    <span class="new-form__info-loading-text2 display-none">
-                                                                        Obtención de información y elaboración de una orden de pedido oficial
-                                                                    </span>
-                                                                </div>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <article class="article-tags"></article>
-                                        </section>
-
-                                        <style>
-                                            #ad_iframe {
-                                                width: unset;
-                                            }
-
-                                            @media (max-width: 767px) {
-                                                .ad-desktop {
-                                                    display: none;
-                                                }
-
-                                                .ad-mobile {
-                                                    display: block;
-                                                }
-                                            }
-
-                                            @media (min-width: 768px) {
-                                                .ad-desktop {
-                                                    display: block;
-                                                }
-
-                                                .ad-mobile {
-                                                    display: none;
-                                                }
-                                            }
-                                        </style>
-                                    </section>
-
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-8 app-cotainerr-wrapper">
-                        <div class="app-cotainerr">
-                            <div id="root" feed="https://kt.ulysse.team/lander/app/comments.json"></div>
-                        </div>
-                    </div>
-
-                </section>
-            </section>
-        </div>
-    </div>
-
-    <footer style="text-align: center; padding: 10px 0; color: #fff;">
-        CLASSY GIRL LTD, 3 Navigation Street, Ground Floor, Leicester, England, LE1 3UR
-        <br>
-        <a href="" rel="noopener noreferrer">Privacy policy</a>
+        </section>
+    </main>
+    <section class="section-comments">
+        <div id="root" feed="https://kt.ulysse.team/lander/_app/comments.json"></div>
+    </section>
+    <footer>
+        INNOVACIONES MÉDICAS S.A.S.
+        <br />
+        © 2023 Bogotá, Colombia
+        <br />
+        Todos los derechos reservados y pertenecen a los titulares de los derechos de autor
     </footer>
-    <style>
-        .test {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .test img {
-            max-width: 450px;
-        }
-
-        @media screen and (max-width: 1025px) {
-            .test {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-
-            .test img {
-                max-width: 320px;
-            }
-        }
-
-        @media screen and (max-width: 400px) {}
-
-        .ittem-comment {
-            display: block;
-            position: relative;
-            margin-bottom: 25px;
-            min-height: 60px;
-        }
-
-        .ava-img {
-            width: 60px;
-            border-radius: 10px;
-            display: block;
-            position: relative;
-            float: left;
-        }
-
-        .ittem-comment p {
-            display: block;
-            position: relative;
-            padding-left: 75px;
-            margin-bottom: 5px;
-            color: black;
-            line-height: 1.3;
-            margin: 0 0 20px;
-        }
-
-        a.button:hover {
-            background-color: #c11f1f;
-        }
-
-        a.button {
-            font-size: 120%;
-            text-align: center;
-            color: #fff !important;
-            background-color: red;
-            display: table;
-            margin: 25px auto;
-            width: 350px;
-            max-width: 100%;
-            border-radius: 15px;
-            text-decoration: none;
-            padding: 15px;
-        }
-    </style>
-    <script src="js/slick.min.js"></script>
-
-    <style>
-        input[type="tel"] {
-            outline: none;
-        }
-
-        a {
-            cursor: pointer !important;
-        }
-
-        button {
-            cursor: pointer !important;
-        }
-
-        button:disabled {
-            cursor: not-allowed !important;
-        }
-    </style>
-
-    <script src="./js/new-form.js"></script>
     <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="./js/main1.js"></script>
+    <script src="./js/new-form.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
