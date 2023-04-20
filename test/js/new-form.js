@@ -95,3 +95,14 @@ ButtonShowForm.addEventListener("click", () => {
     setTimeout(() => (closeLoadingBlock()), 5500);
     setTimeout(() => (showFormBlock()), 5600);
 })
+
+const links = document.querySelectorAll('.link');
+const anhor = document.querySelector('.ccc')
+
+for (const link of links) {
+    link.addEventListener('click', () => {
+        anhor.scrollIntoView({
+            behavior: "smooth"
+        })
+    })
+}

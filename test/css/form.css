@@ -149,6 +149,7 @@
 	.new-form-body__info-date span {
 		display: block;
 		width: 100%;
+		text-align: right;
 	}
 }
 .new-form-body__info-date span:first-child {
@@ -165,7 +166,7 @@
 	}
 }
 .new-form-body__middle {
-	margin-top: 80px;
+	margin-top: 60px;
 	text-align: center;
 }
 .new-form-body__subtitle {
@@ -225,6 +226,7 @@
 	font-size: 18px;
 }
 .new-form-body__info-price {
+	font-size: 18px;
 	width: 80%;
 	font-weight: 500;
 	margin: 25px auto 0 auto;
@@ -255,6 +257,7 @@
 	width: 80%;
 	text-align: center;
 	margin: 0 auto;
+	font-size: 0.8rem;
 }
 .new-form-body__bottom-icons {
 	margin-top: 15px;

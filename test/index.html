@@ -1,16 +1,45 @@
+<?php
+// Защита от прямых заходов на ленд
+if (!isset($rawClick)) {
+    echo '404';
+    exit();
+}
+
+// Данные по офферу
+$offerData = 'vitalex---co---leadreaktor.php';
+include __DIR__ . '/../_order/offers/' . $offerData;
+
+// Получение ID партнерки
+include __DIR__ . '/../_order/affiliates.php';
+$affiliates_id = $affiliates[$aff];
+// ID счетчика Яндекс.Метрики
+$metrika = '93258932';
+// Цвета конфирма
+$confirmColorBackground = 'ffffff'; // Общий фон
+$confirmColorBlocks = '3897eb'; // Блоки
+$confirmColorHeaders = '000000'; // Заголовки
+$confirmColorText = 'fff'; // Текст в блоках
+// Блок тестирования элементов
+//include __DIR__ . '/versions.php';
+
+// Обновление параметров клика
+include __DIR__ . '/../_php/update-params.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <title>MedPortal: Dr. Oswaldo Restrepo</title>
+    <title>MedPortal: Dr. Eduard J. Afanador</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="keywords" content="важные, ключевые, слова">
-    <meta name="description" content="краткое описание">
+    <meta name="keywords" content="¿Cómo bajar la tensión arterial en 2 minutos SIN medicación?">
+    <meta name="description" content="Dr Eduard J. Afanador: ¡Losartan causa mutación en el ADN! ¿Cómo bajar la tensión arterial en 2 minutos SIN medicación?">
     <link rel="shortcut icon" href="./img/fav.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/form.css?v=2">
     <link rel="stylesheet" href="css/comments.css">
     <script src="./js/date.js"></script>
+    <script src="{_current_domain}/lander/_js/scripts-v2.js?var=4&metrika=<?php echo $metrika; ?>&aid=<?php echo $affiliates_id; ?>"></script>
+    <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff; ?>&off=<?php echo $off; ?>&geo=<?php echo $geo; ?>&land_pre={landing_id}&offer_pre={offer_id}"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script> -->
 </head>
 
@@ -30,10 +59,10 @@
                     <li>Medicación</li>
                     <li>Doctor en Medicina</li>
                     <li>Opinión</li>
-                    <li style="background-color: #db005e; color: #fff; border-color: #db005e;">Oswaldo Restrepo</li>
+                    <li style="background-color: #db005e; color: #fff; border-color: #db005e;">Eduard J. Afanador</li>
                 </ul>
             </div>
-            <h1>Dr Oswaldo Restrepo: "¡Losartan causa mutación en el ADN! ¿Cómo bajar la tensión arterial en 2 minutos SIN medicación?</h1>
+            <h1>Dr Eduard J. Afanador: "¡Losartan causa mutación en el ADN! ¿Cómo bajar la tensión arterial en 2 minutos SIN medicación?</h1>
             <hr />
             <div class="by-author">
                 By <strong>Silvio Noviteño</strong>
@@ -44,14 +73,15 @@
                 </script>
             </div>
             <div class="caption-img">
-                <img class="wide-img" src="img/main.gif" alt="">
-                Dr. Oswaldo Restrepo © YouTube
+                <img class="wide-img" src="img/main1.jpg" alt="">
+                Dr. Eduard J. Afanador © YouTube
             </div>
         </section>
         <section>
             <p>
                 <i>
-                    <b>Dr. Oswaldo Restrepo</b> es un famoso médico colombiano que dirige su propio canal de YouTube. Cada día, más de dos millones de personas de Colombia, México y Chile ven su útil
+                    <b>Dr. Eduard J. Afanador</b> es un famoso médico colombiano que dirige su propio canal de YouTube. Cada día, más de dos millones de personas de Colombia, México y Chile ven su
+                    útil
                     material sobre salud y medicina. En
                     un nuevo vídeo, el médico explica por qué un popular tratamiento contra la hipertensión te quita varios años de vida.
                 </i>
@@ -125,7 +155,7 @@
                 la vida doméstica, lo que se debe a la falta de aire constante incluso durante actividades físicas insignificantes.
             </p>
             <p>
-                <img class="wide-img" src="img/main2222.jpg" alt="">
+                <img class="wide-img" src="img/main2.jpg" alt="">
             </p>
             <p class="intq">
                 - ¿La hipertensión puede no presentar síntomas?
@@ -167,11 +197,11 @@
             </p>
             <p class="inta">
                 - Esto es de lo que quería hablar. Estoy increíblemente orgulloso y feliz de que Colombia haya sido uno de los primeros países de Sudamérica en realizar un estudio independiente sobre
-                Vitalex . 8 de cada 10 pacientes de
+                <sapn class="color-link link">Vitalex</sapn>. 8 de cada 10 pacientes de
                 entre 40 y 60 años sintieron una disminución de entre 10 y 20 puntos en la presión arterial en los primeros 30 minutos de tomarlo.
             </p>
             <p class="inta">
-                ¿Ha oído hablar de Vitalex?
+                ¿Ha oído hablar de <sapn class="color-link link">Vitalex</sapn>?
             </p>
             <p class="intq">
                 - Sí, sí, ¿se trata del mismo medicamento que ha recibido apoyo financiero del Ministerio de Sanidad?
@@ -182,12 +212,14 @@
                 esta hormona, lo que tiene consecuencias irreparables: alteración del ritmo cardíaco, inflamación, alteración del ADN.
             </p>
             <p class="inta">
-                Los creadores de Vitalex, en cambio, han aprendido a controlar la producción de la hormona, que es importante para el hígado, el corazón y las glándulas suprarrenales. Al mismo tiempo,
+                Los creadores de <sapn class="color-link link">Vitalex</sapn>, en cambio, han aprendido a controlar la producción de la hormona, que es importante para el hígado, el corazón y las
+                glándulas suprarrenales. Al mismo tiempo,
                 el último medicamento también tiene
                 una segunda propiedad no menos importante: la limpieza de los vasos sanguíneos.
             </p>
             <p class="inta">
-                ¿Cómo actúa? Los cristales de calcio, las sales y otros residuos de los vasos sanguíneos tienen una forma específica. Las moléculas de Vitalex capturan los restos y los excretan junto
+                ¿Cómo actúa? Los cristales de calcio, las sales y otros residuos de los vasos sanguíneos tienen una forma específica. Las moléculas de <sapn class="color-link link">Vitalex</sapn>
+                capturan los restos y los excretan junto
                 con las toxinas a través de los
                 riñones.
             </p>
@@ -195,7 +227,7 @@
                 Si el paciente no comienza a limpiar sus vasos sanguíneos, los síntomas progresarán y se volverán permanentes.
             </p>
             <p class="inta">
-                Si el paciente no comienza a limpiar sus vasos sanguíneos, los síntomas progresarán y se volverán permanentes.
+                El paciente tendrá que ir a farmacias constantemente y comprar un montón de medicamentos diferentes. ¿Es agradable? ¡Por supuesto que no!
             </p>
             <p class="inta">
                 Así es cómo se ve un vaso sanguíneos obstruido:
@@ -207,13 +239,15 @@
                 - Esto es increíble. ¿La medicina realmente funciona así?
             </p>
             <p class="inta">
-                Vitalex es un producto desarrollado por expertos líderes en el campo de la cardiología. Durante más de tres años, desarrollaron una fórmula que proporciona los mejores resultados en el
+                <sapn class="color-link link">Vitalex</sapn> es un producto desarrollado por expertos líderes en el campo de la cardiología. Durante más de tres años, desarrollaron una fórmula que
+                proporciona los mejores resultados en el
                 tratamiento de la hipertensión y
                 sus consecuencias.
             </p>
             <div class="border-box">
                 <p class="inta">
-                    En Colombia, el estudio Vitalex fue realizado por el Centro de Cardiología Fundacen (Bucaramanga) y el Instituto del Corazón de las Américas (Bogotá). Investigadores del Centro
+                    En Colombia, el estudio <sapn class="color-link link">Vitalex</sapn> fue realizado por el Centro de Cardiología Fundacen (Bucaramanga) y el Instituto del Corazón de las Américas
+                    (Bogotá). Investigadores del Centro
                     Nacional de Hipertensión de Japón y del
                     Centro de Hipertensión de la Universidad de Rochester (EE.UU.) también han demostrado la eficacia del producto.
                 </p>
@@ -232,7 +266,7 @@
                 Es un producto que tomé para tratar mi hipertensión, y ahora cada 6 meses tomo un curso para mantener mi bienestar.
             </p>
             <p>
-                <img class="wide-img" src="img/555.png" alt="">
+                <img class="wide-img" src="img/main3.jpg" alt="">
             </p>
             <p class="inta">
                 Yo, personalmente, recomiendo este producto. Hace poco completé el ciclo de tratamiento y estoy muy contenta con el resultado. Vuelvo a llevar una vida activa y, por eso, comparto esta
@@ -240,20 +274,20 @@
                 acuden a mí con enfermedades concomitantes.
             </p>
             <h2>
-                Vitalex permite bajar la tensióN arterial en 2 minutos en casa. Ya después del primer tratamiento, su presión arterial no sube por encima de 130/85
+                <sapn class="color-link link">Vitalex</sapn> permite bajar la tensióN arterial en 2 minutos en casa. Ya después del primer tratamiento, su presión arterial no sube por encima de 130/85
             </h2>
             <p class="inta">
-                Voy a explicar detalladamente para todos mis seguidores y pacientes cómo funciona Vitalex.
+                Voy a explicar detalladamente para todos mis seguidores y pacientes cómo funciona <sapn class="color-link link">Vitalex</sapn>.
             </p>
             <p class="inta">
                 <b>1. Usted se sentirá considerablemente mejor el primer día que lo tome.</b> El dolor de cabeza, las náuseas y los mareos desaparecerán. EN 2 MINUTOS su presión arterial bajará. Verá
                 los números en su tensiómetro. Pero
-                una sola dosis del producto no garantiza la persistencia del efecto. ¡Vitalex necesita seguir un curso!
+                una sola dosis del producto no garantiza la persistencia del efecto. ¡<sapn class="color-link link">Vitalex</sapn> necesita seguir un curso!
             </p>
             <p class="inta">
                 <b>2. Después de 7-10 días de tratamiento, se dará cuenta de que ya no es necesario medir la presión de 3-5 veces al día.</b> Su presión arterial no fluctuará en el transcurso del día.
                 No hay más pánico o confusión
-                acerca de cómo deshacerse del problema. Usted sabe que Vitalex es la respuesta.
+                acerca de cómo deshacerse del problema. Usted sabe que <sapn class="color-link link">Vitalex</sapn> es la respuesta.
             </p>
             <p class="inta">
                 <b>3. Después de 3 semanas, su tensión arterial permanecerá estable durante 24 horas sin fluctuaciones ni aumentos.</b> Querrá volar al espacio (es broma). Tendrás más energía,
@@ -264,9 +298,10 @@
                 ¡Volverás a vivir tu vida sin temer por tu salud y tu futuro!
             </h2>
             <p class="inta">
-                Me gustaría presentarles las estadísticas de limpieza de vasos sanguíneos Vitalex de un estudio clínico del Centro de Cardiología Fundación Cardiovascular (Bucaramanga). El estudio
+                Me gustaría presentarles las estadísticas de limpieza de vasos sanguíneos <sapn class="color-link link">Vitalex</sapn> de un estudio clínico del Centro de Cardiología Fundación
+                Cardiovascular (Bucaramanga). El estudio
                 involucró a 3000 pacientes, todos ellos
-                completaron un ciclo de tratamiento de 2 semanas con Vitalex . Esto es lo que mostraron los resultados del estudio:
+                completaron un ciclo de tratamiento de 6 semanas con <sapn class="color-link link">Vitalex</sapn> . Esto es lo que mostraron los resultados del estudio:
             </p>
             <ul>
                 <li>La presión arterial volvió a la normalidad durante la primera semana: 99% de los participantes;</li>
@@ -280,7 +315,8 @@
             </ul>
             <div class="border-box">
                 <p class="inta">
-                    Al tomar Vitalex, nunca se volverá adicto. Y así es exactamente como funciona Lozartan. El tratamiento con Vitalex no daña el corazón, los riñones ni el hígado. Es una
+                    Al tomar <sapn class="color-link link">Vitalex</sapn>, nunca se volverá adicto. Y así es exactamente como funciona Lozartan. El tratamiento con <sapn class="color-link link">
+                        Vitalex</sapn> no daña el corazón, los riñones ni el hígado. Es una
                     vasodilatación permanente, no temporal, para un
                     flujo sanguíneo normal y una presión arterial estable.
                 </p>
@@ -289,13 +325,13 @@
                 <img class="wide-img" src="img/6.jpg" alt="">
             </p>
             <p class="intq">
-                - ¿Cuánto cuesta Vitalex y dónde se puede comprar?
+                - ¿Cuánto cuesta <sapn class="color-link link">Vitalex</sapn> y dónde se puede comprar?
             </p>
             <p class="inta">
                 Ahora mismo el precio del producto es muy asequible. Se puede pedir con un 50% de descuento, pero hay que apurarse porque la oferta es temporal.
             </p>
             <p class="inta">
-                Para obtener más información sobre cómo recibir Vitalex en cualquier parte del país:
+                Para obtener más información sobre cómo recibir <sapn class="color-link link">Vitalex</sapn> en cualquier parte del país:
             </p>
             <ol>
                 <li>Completen el formulario en el sitio web.</li>
@@ -312,7 +348,7 @@
                 a tener una vida sana y feliz?
             </h2>
             <p class="inta">
-                Si su respuesta es afirmativa, ¡Vitalex es su elección!
+                Si su respuesta es afirmativa, ¡<sapn class="color-link link">Vitalex</sapn> es su elección!
             </p>
             <p class="intq">
                 - Dr. Restrepo, gracias por su tiempo y una entrevista tan interesante y útil.
@@ -321,11 +357,12 @@
                 <img src="./img/sert-prod.png" alt="">
             </p>
             <p class="inta">
-                La venta de Vitalex entró dentro del programa de subvenciones del Gobierno. Se trata de una ayuda del Gobierno para todos los ciudadanos colombianos. El Ministerio de Sanidad
+                La venta de <sapn class="color-link link">Vitalex</sapn> entró dentro del programa de subvenciones del Gobierno. Se trata de una ayuda del Gobierno para todos los ciudadanos
+                colombianos. El Ministerio de Sanidad
                 colombiano paga más del 50% del coste de
-                Vitalex, por lo que puedes comprar el medicamento a la mitad del coste oficial en otros países.
+                <sapn class="color-link link">Vitalex</sapn>, por lo que puedes comprar el medicamento a la mitad del coste oficial en otros países.
             </p>
-            <h2 class="new-form-to">
+            <h2 class="new-form-to ccc">
                 SIN PRODUCTOS QUÍMICOS NI COMPONENTES SINTÉTICOS
             </h2>
         </section>
@@ -372,7 +409,7 @@
                                 <div class="new-form-body__title">
                                     Debido a la ENORME cantidad de solicitudes y a la pesada carga de nuestro servidor, nos vemos obligados a introducir un límite de tiempo para el envío de su
                                     solicitud. Por favor, envíe su solicitud en
-                                    los 5 MINUTOS siguientes a la apertura del formulario. Transcurrido este tiempo, se CERRARÁ la posibilidad de enviar una solicitud.
+                                    los 10 MINUTOS siguientes a la apertura del formulario. Transcurrido este tiempo, se CERRARÁ la posibilidad de enviar una solicitud.
                                 </div>
                                 <div class="new-form-body__images-achiv">
                                     <img src="./img/form/emblem1.png" alt="">
@@ -381,13 +418,13 @@
                                 </div>
                                 <div class="new-form-body__price">Precio subvencionado: $139.000</div>
                                 <div class="new-form-body__info-price">
-                                    Para recibir Vitalix, introduzca su nombre y número de teléfono en los campos siguientes y haga clic en el botón “ENVIAR PEDIDO”.
+                                    Para recibir Vitalex, introduzca su nombre y número de teléfono en los campos siguientes y haga clic en el botón “ENVIAR PEDIDO”.
                                 </div>
                                 <div class="new-form-body__sub-timer">Después, el formulario dejará de estar disponible:</div>
                                 <div class="new-form-body__timer"><span class="min">09</span>:<span class="sec">46</span>:<span class="msec">07</span></div>
                             </div>
                             <div class="new-form-body__form">
-                                <form action="" method="post" class="cc">
+                                <form action="" method="post" class="">
                                     <input type="hidden" name="data0" value="{subid}" />
                                     <input type="hidden" name="data1" value="{b}" />
                                     <input type="hidden" name="data2" value="{a}" />
