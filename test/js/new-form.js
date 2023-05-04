@@ -1,7 +1,7 @@
 var time = 600 * 100;
 var intr;
 
-function start_timer() {
+function start_timer1() {
     intr = setInterval(tick, 10);
 }
 
@@ -39,7 +39,7 @@ function tick() {
     }
 
 }
-start_timer();
+
 const ButtonShowForm = document.querySelector('.new-form__button-open')
 const loadingText1 = document.querySelector('.new-form__info-loading-text1')
 const loadingText2 = document.querySelector('.new-form__info-loading-text2')
@@ -94,15 +94,16 @@ ButtonShowForm.addEventListener("click", () => {
     showLoadingBlock()
     setTimeout(() => (closeLoadingBlock()), 5500);
     setTimeout(() => (showFormBlock()), 5600);
+    setTimeout(() => (start_timer1()), 5650)
 })
 
-const links = document.querySelectorAll('.link');
-const anhor = document.querySelector('.ccc')
+// const links = document.querySelectorAll('.link');
+// const anhor = document.querySelector('.ccc')
 
-for (const link of links) {
-    link.addEventListener('click', () => {
-        anhor.scrollIntoView({
-            behavior: "smooth"
-        })
-    })
-}
+// for (const link of links) {
+//     link.addEventListener('click', () => {
+//         anhor.scrollIntoView({
+//             behavior: "smooth"
+//         })
+//     })
+// }
