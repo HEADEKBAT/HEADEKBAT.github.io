@@ -751,4 +751,11 @@ p {
 .cor_img {
 	width: 25px;
 	transform: translateY(5px);
+	border-radius: 50%;
+}
+.border-box {
+	margin-top: 15px;
+	border: 3px solid #4682b4;
+	padding: 15px 10px;
+	background-color: #f1f4ff;
 }
