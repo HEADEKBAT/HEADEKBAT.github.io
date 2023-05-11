@@ -97,13 +97,52 @@ ButtonShowForm.addEventListener("click", () => {
     setTimeout(() => (start_timer1()), 5650)
 })
 
-// const links = document.querySelectorAll('.link');
-// const anhor = document.querySelector('.ccc')
+const links = document.querySelectorAll('.link');
+const anhor = document.querySelector('.ccc')
 
-// for (const link of links) {
-//     link.addEventListener('click', () => {
-//         anhor.scrollIntoView({
-//             behavior: "smooth"
-//         })
-//     })
-// }
+for (const link of links) {
+    link.addEventListener('click', () => {
+        anhor.scrollIntoView({
+            behavior: "smooth"
+        })
+    })
+}
+
+
+//свайпер....
+const btns = document.querySelectorAll('.btn');
+const modalOverlay = document.querySelector('.modal-overlay ');
+const modals = document.querySelectorAll('.modal');
+const closeModalBtns = document.querySelectorAll('.closeBtn');
+
+btns.forEach((el) => {
+    el.addEventListener('click', (e) => {
+        let path = e.currentTarget.getAttribute('data-path');
+
+        modals.forEach((el) => {
+            el.classList.remove('modal--visible');
+        });
+
+        document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
+        modalOverlay.classList.add('modal-overlay--visible');
+    });
+});
+
+modalOverlay.addEventListener('click', (e) => {
+    // console.log(e.target);
+
+    if (e.target == modalOverlay) {
+        modalOverlay.classList.remove('modal-overlay--visible');
+        modals.forEach((el) => {
+            el.classList.remove('modal--visible');
+        });
+    }
+});
+for (let closeModelBtn of closeModalBtns) {
+    closeModelBtn.addEventListener("click", () => {
+        modalOverlay.classList.remove('modal-overlay--visible');
+        modals.forEach((el) => {
+            el.classList.remove('modal--visible');
+        });
+    })
+}
