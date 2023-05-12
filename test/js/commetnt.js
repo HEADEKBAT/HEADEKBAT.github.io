@@ -105,7 +105,7 @@ let comment = new Comment(
 )
 Comment.prototype.pushComm = function () {
     let urlAvatar = '';
-    this.formImageUrl ? urlAvatar = this.formImageUrl : urlAvatar = '../img/user-0.jpg';
+    this.formImageUrl ? urlAvatar = this.formImageUrl : urlAvatar = './img/user-0.jpg';
 
 
     const comment = `
