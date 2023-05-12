@@ -1,0 +1,137 @@
+/** @format */
+
+#commentForm {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	-webkit-box-pack: start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	background-color: #fff;
+	padding: 10px;
+	border: 1px solid #ccc;
+}
+
+#commentForm .form__item {
+	width: 90px;
+}
+
+#commentForm .form__inputs {
+	margin-left: 10px;
+	width: 100%;
+}
+
+.form__item {
+	margin-right: 10px;
+	color: snow;
+	border-radius: 50%;
+}
+
+.file {
+	width: 100%;
+	max-width: 90px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+
+.file__item {
+	position: relative;
+}
+
+#commentForm .form__avatar {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	background-color: #fff;
+	background: url(../img/user-0.jpg) no-repeat 50% / cover;
+	width: 70px;
+	height: 70px;
+	overflow: hidden;
+}
+
+.file__input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	font-size: 0;
+	cursor: pointer;
+}
+
+#commentForm .file-label {
+	display: inline-block;
+	width: 100%;
+	color: #000;
+	font-size: 12px;
+	padding: 2px 5px;
+	border: 1px solid #000;
+	border-radius: 4px;
+	text-align: center;
+	margin-top: 5px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccc));
+	background: linear-gradient(180deg, #fff, #ccc);
+}
+
+#commentForm input,
+#commentForm textarea {
+	width: 100%;
+	padding: 12px 20px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	background-color: #f8f8f8;
+	resize: none;
+}
+
+textarea {
+	overflow: auto;
+	margin-top: 15px;
+}
+
+#commentPush {
+	display: inline-block;
+	background-color: transparent;
+	border-radius: 5px;
+	background: #fe0001;
+	border-radius: 10px;
+	color: #fff;
+	font-weight: 700;
+	padding: 10px 15px;
+	text-decoration: none;
+	margin: 5px 0 0;
+	cursor: pointer;
+	border: none;
+}
+
+#commentPush,
+.comment-title {
+	background: #db005e;
+	color: #fff;
+	font-weight: 700;
+}
+.comment-title {
+	margin-top: 50px;
+	padding: 17px 18px;
+	font-family: Roboto;
+	font-style: normal;
+	font-size: 22px;
+	line-height: 26px;
+	letter-spacing: 0.01em;
+}
