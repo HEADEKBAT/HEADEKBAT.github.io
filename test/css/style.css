@@ -270,3 +270,118 @@ header {
 	text-decoration: none;
 	padding: 15px;
 }
+@media (max-width: 450px) {
+	.button-to-form {
+		width: auto;
+	}
+}
+.color-bg-text {
+	background: yellow;
+	font-weight: 700;
+}
+.border-box-color-bg {
+	padding: 10px;
+	border: 2px solid #2f71f5;
+	border-radius: 4px;
+	background: rgb(255, 236, 251);
+}
+.graph__value svg {
+	width: 100%;
+}
+@media (max-width: 480px) {
+	.graph__value svg {
+		/* width: 100%;
+		width: 430px;
+		height: 233px; */
+	}
+}
+.graph,
+.graph__name {
+	margin-bottom: 15px;
+}
+.graph {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	padding: 15px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	/* -ms-border-radius: 5px; */
+	/* -o-border-radius: 5px; */
+	-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 640px) {
+	.graph {
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+}
+.graph__name--item {
+	font-size: 18px;
+	font-weight: 700;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.graph__name--item:nth-child(1):before {
+	background-color: #ed6e6f;
+}
+.graph__name--item:before {
+	content: '';
+	display: block;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	/* -ms-border-radius: 50%; */
+	/* -o-border-radius: 50%; */
+	margin-right: 20px;
+	/* -ms-flex-negative: 0; */
+	flex-shrink: 0;
+}
+.graph__name--item:before {
+	content: '';
+	display: block;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	/* -ms-border-radius: 50%; */
+	/* -o-border-radius: 50%; */
+	margin-right: 20px;
+	/* -ms-flex-negative: 0; */
+	flex-shrink: 0;
+}
+.graph__name--item:nth-child(3):before {
+	background-color: #7c7c7c;
+}
+.graph__name--item:nth-child(2):before {
+	background-color: #4758a5;
+}
+@media screen and (min-width: 640px) {
+	.graph__name {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	.graph__name--item:not(:last-child) {
+		margin-bottom: 0;
+		margin-right: 15px;
+	}
+}
+.green-text {
+	font-weight: 700;
+	color: #1ea159;
+}

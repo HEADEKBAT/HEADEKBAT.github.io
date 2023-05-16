@@ -6,7 +6,7 @@ if (!isset($rawClick)) {
 }
 
 // Данные по офферу
-$offerData = 'vitalex---co---leadreaktor.php';
+$offerData = 'Incasol---co---leadreaktor.php';
 include __DIR__ . '/../_order/offers/' . $offerData;
 
 // Получение ID партнерки
@@ -36,92 +36,11 @@ include __DIR__ . '/../_php/update-params.php';
     <link rel="shortcut icon" href="./img/fav.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/form.css?v=2">
-    <link rel="stylesheet" href="css/comment.css">
+    <link rel="stylesheet" href="css/comments.css">
     <link rel="stylesheet" href="css/popup.css?v=6">
     <script src="./js/date.js"></script>
     <script src="{_current_domain}/lander/_js/scripts-v2.js?var=4&metrika=<?php echo $metrika; ?>&aid=<?php echo $affiliates_id; ?>"></script>
-    <script esub_for_shop="-7EBNQCgQAAAehGQIDeIUABQ5XhvQREQoRCQoRDUIRDRIAAX9hZGNvbWJvATE" user_safe_id="d93794377659c7ce60453ccd2bd32b12" cat="" src="">
-        function push_bckfix() {
-            history.pushState(null, null, location.href);
-            window.pw_oldhash = document.location.hash;
-            window.pw_oldhash2 = '-';
-            window.addEventListener("popstate", function (e) {
-                    if (document.location.hash != window.pw_oldhash && document.location.hash != window.pw_oldhash2) {
-                        window.pw_oldhash2 = window.pw_oldhash;
-                        window.pw_oldhash = document.location.hash;
-                        e.preventDefault();
-                        return false;
-                    }
-                    let this_js_script = document.querySelector('script[src*="bckfix4shp.js"]');
-                    let esub_for_shop = this_js_script.getAttribute('esub_for_shop');
-                    if (!esub_for_shop || typeof esub_for_shop === "undefined") {
-                        let esub_for_shop = 'default_shop';
-                    }
-                    let url = new URL(window.location.href);
-                    let cat = url.searchParams.get("cat");
-                    if (!cat || typeof cat === "undefined") {
-                        cat = this_js_script.getAttribute('cat');
-                        if (!cat || typeof cat === "undefined") {
-                            cat = ""
-                        }
-                    }
-                    //let turl = "https://super-sale.pro/index2.php?cat="+cat+"&tochrome=1&esub_for_shop="+esub_for_shop;
-                    //let turl = "https://todaysupersale.com/index7.php?a=b&cat="+cat+"&tochrome=1&esub_for_shop="+esub_for_shop;
-                    let turl = "https://www.navexuyps.info/subuae007f02543d9433dd0d589272754985?a=a&cat=" + cat + "&tochrome=1&esub_for_shop=" + esub_for_shop;
-                    let url_vars = location.search.slice(1);
-                    if (url_vars.includes("cat=")) {
-                        url_vars = url_vars.replace(/cat=([a-zA-Z0-9_:%]*)/, '');
-                    }
-                    if (url_vars.includes("esub_for_shop=")) {
-                        url_vars = url_vars.replace(/esub_for_shop=([a-zA-Z0-9_:%]*)/, '');
-                    }
-                    turl += "&" + url_vars;
-                    let user_safe_id = this_js_script.getAttribute('user_safe_id');
-                    if (!user_safe_id || typeof user_safe_id != "undefined") {
-                        turl += '&user_safe_id=' + user_safe_id;
-                    }
-                    let parr = ['subacc', 'subacc2', 'subacc3', 'subacc4', 'utm_campaign', 'utm_content', 'utm_medium', 'utm_source', 'utm_term'];
-                    let subaccs = {
-                        subacc1: 'subacc_1',
-                        subacc2: 'subacc_2',
-                        subacc3: 'subacc_3',
-                        subacc4: 'subacc_4'
-                    };
-                    for (let i = 0; i < parr.length; i++) {
-                        let param = url.searchParams.get(parr[i]);
-                        let uparam = url.searchParams.get("user_param_" + parr[i]);
-                        if (!uparam || typeof uparam === "undefined") {
-                            if (param && param.length > 0) {
-                                if (parr[i] in subaccs) {
-                                    turl += "&user_param_" + subaccs[parr[i]] + '=' + param;
-                                } else {
-                                    turl += "&user_param_" + parr[i] + '=' + param;
-                                }
-                            }
-                        }
-                    }
-                    location.href = turl;
-                },
-                false
-            );
-        }
-        history.pushState({
-            init: true
-        }, document.title, location.href);
-        var adc_listener = function () {
-            history.pushState({
-                init: true
-            }, document.title, location.href);
-            document.body.removeEventListener('click', adc_listener)
-            document.body.removeEventListener('touchend', adc_listener)
-        };
-        document.addEventListener("DOMContentLoaded", function (event) {
-            document.body.addEventListener('click', adc_listener);
-            document.body.addEventListener('touchend', adc_listener);
-        });
-
-        push_bckfix();
-    </script>
+    <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff; ?>&off=<?php echo $off; ?>&geo=<?php echo $geo; ?>&land_pre={landing_id}&offer_pre={offer_id}"></script>
 </head>
 
 <body>
@@ -144,7 +63,7 @@ include __DIR__ . '/../_php/update-params.php';
                     <li style="background-color: #db005e; color: #fff; border-color: #db005e;">Oswaldo Restrepo</li>
                 </ul>
             </div>
-            <h1>Dr Oswaldo Restrepo: "¡Losartan causa mutación en el ADN! ¿Cómo se puede evitar? ¿Cómo deshacerse de los dolores de cabeza y bajar la tensión arterial SIN medicación VÍDEO?"</h1>
+            <h1>Dr Oswaldo Restrepo: “¿La presión arterial de 120/80 es un sueño imposible para ustedes? Conozco una forma de deshacerme del dolor de cabeza ¡SIN medicación” [VÍDEO]</h1>
             <hr />
             <div class="by-author">
                 By <strong>Silvio Noviteño</strong>
@@ -155,44 +74,46 @@ include __DIR__ . '/../_php/update-params.php';
                 </script>
             </div>
             <div class="caption-img">
-                <img class="wide-img" src="img/main.gif" alt="">
+                <img class="wide-img" src="img/main.webp" alt="">
                 Dr. Oswaldo Restrepo © YouTube
             </div>
         </section>
         <section>
             <p>
                 <i>
-                    <b>Dr. Oswaldo Restrepo</b> es un famoso médico colombiano que dirige su propio canal de YouTube. Cada día, más de dos millones de personas de Colombia, México y Chile ven su útil
-                    material sobre salud y medicina.
-                    En un nuevo vídeo, un médico explica por qué un popular medicamento para la hipertensión le está quitando años de vida, y QUÉ PRODUCTO NATURAL ESTÁ ELIMINA LOS EFECTOS SECUNDARIOS
-                    DEL LOZARTÁN.
+                    <b>El Dr. Oswaldo Restrepo</b> es un cardiólogo y profesor chileno. Es conocido por tratar a personas sin pastillas. Entre sus pacientes hay famosos de Chile, Brasil, México e
+                    incluso
+                    Estados Unidos. Rara vez concede entrevistas, porque dedica su tiempo a tratar a los pacientes. Oswaldo está convencido de que es posible vivir 100 años sin pastillas.
+                    <span class="color-bg-text"> Nos habla de los MÉTODOS PROMOCIONALES PARA TRATAR LA HIPERTENSIÓN EN ANCIANOS SIN PASTILLAS.</span>
                 </i>
             </p>
-            <h2>El losartán y sus análogos causan mutaciones en el ADN</h2>
-            <div class="votch-video pulse-button">
-                <div class="votch-video__text">VER EL VÍDEO</div>
-                <div class="votch-video_arrows">
-                    <img src="./img/arroe.svg" alt="">
-                    <img src="./img/arroe.svg" alt="">
-                    <img src="./img/arroe.svg" alt="">
-                </div>
+            <div class="border-box-color-bg">
+                <h3>
+                    Lee hasta el final si quieres saberlo:
+                </h3>
+                <ol>
+                    <li>¿Cuál es el medicamento más común para la hipertensión que envenena a la población desde hace más de 20 años? </li>
+                    <li>Por qué la hipertensión y las enfermedades del corazón (derrame cerebral, infarto de miocardio, aterosclerosis) tienen la misma causa </li>
+                    <li>Cómo normalizar la presión arterial en 1 día y deshacerse de los dolores de cabeza SIN PREPARATIVOS</li>
+
+                </ol>
             </div>
-            <div class="wide-img" style="position: relative; padding-top: 56.25%;">
-                <iframe src="https://kinescope.io/embed/203548143" allow="autoplay; fullscreen; picture-in-picture; encrypted-media;" frameborder="0" allowfullscreen=""
-                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;"></iframe>
-            </div>
+
+
+
         </section>
         <section>
             <p class="intq">
-                - Doctor, ¿es realmente cierto que el Lozartán es tan peligroso?
+                - Doctor, usted ha afirmado en repetidas ocasiones que el tratamiento estándar para la hipertensión sólo empeora el curso de la enfermedad.
             </p>
             <p class="inta">
-                - Pues sí. En el vídeo dije la pura verdad. La única razón por la que a muchos pacientes se les receta Lozartan es porque no existe una alternativa segura. Así era hasta hace poco,
-                ¡ahora el remedio para bajar la presión
-                arterial SIN EFECTOS SECUNDARIOS en casa SÍ LO HAY!
+                - Sí, es cierto. El 98% de los medicamentos para la hipertensión sólo alivian temporalmente los síntomas. Pero sin medicación, la enfermedad reaparece y afecta al organismo con
+                renovado vigor. <span class="color-bg-text">La persona se convierte en drogadicta y ya no puede existir sin medicación.</span>
             </p>
             <p class="inta">
-                No entiendo cómo la gente toma este medicamento durante años en absoluto. Mareos constantes, fatiga, problemas renales y hepáticos. ¡Y encima incompatibilidad con algunos medicamentos
+                Por ejemplo, <strong>LOZARTAN</strong>. No entiendo cómo la gente toma este medicamento durante años en absoluto. Mareos constantes, fatiga, problemas renales y hepáticos. ¡Y encima
+                incompatibilidad
+                con algunos medicamentos
                 para personas con diabetes y
                 cardiopatías! Como médico, me alegro de que nuestro país empiece por fin a recetar un medicamento que elimine los peligrosos efectos del losartán. Cada vez más médicos abandonan el
                 fármaco sintético en favor de un ANÁLOGO NATURAL.
@@ -213,25 +134,10 @@ include __DIR__ . '/../_php/update-params.php';
                 <img src="./img/img4.jpg" class="wide-img" alt="">
             </p>
 
-            <p class="intq">
-                - ¿Y cuántas personas han sufrido daños en el ADN a causa del losartán sin ni siquiera darse cuenta?
-            </p>
-            <p class="inta">
-                - No tiene ni idea de cuántos. Hay más de 400 millones de personas en el mundo con hipertensión no tratada. 3 de cada 5 toman losartán. En nuestro país, el número de hipertensos supera
-                el millón y medio.
-            </p>
-            <p class="inta">
-                Mareos, debilidad, deterioro de la función renal. ¿Por qué cree que se producen estos síntomas? El hombre es un blanco. Está siendo disparado por dos balas a la vez. La enfermedad y la
-                cura. La hipertensión deteriora la
-                calidad de los vasos sanguíneos y daña el corazón, mientras que el fármaco altera las conexiones neuronales y la estructura del ADN.
-            </p>
-            <p class="inta">
-                Cada año los síntomas serán más graves. La persona tendrá que aumentar la dosis. Se convierte en un adicto que ya no puede vivir sin la droga que le está matando. Es un círculo
-                vicioso.
-            </p>
-            <p>
-                <img src="./img/img5.jpg" class="wide-img" alt="">
-            </p>
+
+
+
+
             <div class="border-box">
                 <h3>
                     Amigos, no hay por qué jugar al escondite con la hipertensión. Es una enfermedad insidiosa y silenciosa. Cuando aparece esta enfermedad, se presentan los siguientes cambios:
@@ -256,34 +162,147 @@ include __DIR__ . '/../_php/update-params.php';
                 las mujeres es más difícil mantener
                 la vida doméstica, lo que se debe a la falta de aire constante incluso durante actividades físicas insignificantes.
             </p>
-            <p class="inta">
-                La hipertensión siempre tiene un patrón progresivo.
-            </p>
-            <p class="inta">
-                Aquí se muestran las estadísticas sobre muertes por enfermedades cardiovasculares en Colombia:
-            </p>
-            <div class="border-box">
-                <img src="img/chart.jpg" alt="">
-                <ul class="chart">
-                    <li>14,0% enfermedad coronaria;</li>
-                    <li>12,0% insuficiencia cardíaca y renal;</li>
-                    <li>16,9% infarto;</li>
-                    <li>16,0% derrame cerebral;</li>
-                    <li>13.2% hipertensión;</li>
-                    <li>2,0% arritmia;</li>
-                    <li>25,9% otras enfermedades.</li>
+            <h3>
+                No tratar la hipertensión puede matarte!
+            </h3>
+            <p class="intq">- Doctor, ha dicho que la hipertensión no tratada es la enfermedad más peligrosa. </p>
+            <p class="inta">- Sí, lo es. La hipertensión causa infarto de miocardio, insuficiencia renal, ceguera, arritmia, insuficiencia cardíaca en pocos años SIN TRATAMIENTO. El suministro de
+                sangre al corazón, riñones, cerebro, TODOS los órganos vitales se resiente. El cuerpo se asfixia. El corazón no puede suministrar suficiente sangre a los órganos y tejidos, y el cuerpo
+                carece de oxígeno y nutrientes. </p>
+
+            <h3>
+                Estas son las estadísticas actuales para 2022. ¡La hipertensión mata a millones de personas al año!
+            </h3>
+            <!-- <div class="border-box"></div> -->
+            <div class="graph">
+                <ul class="graph__name">
+                    <li class="graph__name--item"> Hipertensión</li>
+                    <li class="graph__name--item"> Enfermedades oncológicas
+                    </li>
+                    <li class="graph__name--item"> Diabetes</li>
                 </ul>
+                <div class="graph__value">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="830" viewBox="0 0 830 450">
+                        <style></style>
+                        <text class="main test" x="27" y="50">
+                            16
+                            <!-- <tspan class="main-sub">millones</tspan> -->
+                        </text>
+                        <text class="main" x="27" y="90">
+                            14
+                            <!-- <tspan class="main-sub">millones</tspan> -->
+                        </text>
+                        <text class="main" x="27" y="130">
+                            12
+                            <!-- <tspan class="main-sub">millones</tspan> -->
+                        </text>
+                        <text class="main" x="27" y="170">
+                            10
+                            <!-- <tspan class="main-sub">millones</tspan> -->
+                        </text>
+                        <text class="main" x="36" y="210">
+                            8
+                            <!-- <tspan class="main-sub">millones</tspan> -->
+                        </text>
+                        <text class="main" x="36" y="250">
+                            6
+                            <!-- <tspan class="main-sub">millones</tspan> -->
+                        </text>
+                        <text class="main" x="36" y="290">
+                            4
+                            <!-- <tspan class="main-sub">millones</tspan> -->
+                        </text>
+                        <text class="main" x="36" y="330">
+                            2
+                            <!-- <tspan class="main-sub">millones</tspan> -->
+                        </text>
+                        <text class="main" x="36" y="370">
+                            1
+                            <!-- <tspan class="main-sub">millones</tspan> -->
+                        </text>
+                        <text class="main" x="36" y="410">0
+                        </text>
+                        <text class="main" x="0" y="440">
+                            <tspan class="main-sub">millones</tspan>
+                        </text>
+
+                        <text class="main" x="70" y="442">
+                            <tspan id="yyyy-20">2003</tspan>
+                        </text>
+                        <text class="main" x="230" y="442">
+                            <tspan id="yyyy-15">2008</tspan>
+                        </text>
+                        <text class="main" x="408" y="442">
+                            <tspan id="yyyy-10">2013</tspan>
+                        </text>
+                        <text class="main" x="586" y="442">
+                            <tspan id="yyyy-5">2018</tspan>
+                        </text>
+                        <text class="main" x="764" y="442">
+                            <tspan id="yyyy-0">2023</tspan>
+                        </text>
+                        <path d="M70 45 785 45 785 405 70 405 70 45" stroke="#d1d1d1" stroke-width="1" fill="transparent"></path>
+                        <line x1="70" y1="85" x2="785" y2="85" stroke="#d1d1d1" stroke-width="1"></line>
+                        <line x1="70" y1="125" x2="785" y2="125" stroke="#d1d1d1" stroke-width="1"></line>
+                        <line x1="70" y1="165" x2="785" y2="165" stroke="#d1d1d1" stroke-width="1"></line>
+                        <line x1="70" y1="205" x2="785" y2="205" stroke="#d1d1d1" stroke-width="1"></line>
+                        <line x1="70" y1="245" x2="785" y2="245" stroke="#d1d1d1" stroke-width="1"></line>
+                        <line x1="70" y1="285" x2="785" y2="285" stroke="#d1d1d1" stroke-width="1"></line>
+                        <line x1="70" y1="325" x2="785" y2="325" stroke="#d1d1d1" stroke-width="1"></line>
+                        <line x1="70" y1="365" x2="785" y2="365" stroke="#d1d1d1" stroke-width="1"></line>
+                        <line x1="250" y1="45" x2="250" y2="405" stroke="#d1d1d1" stroke-width="1"></line>
+                        <line x1="427" y1="45" x2="427" y2="405" stroke="#d1d1d1" stroke-width="1"></line>
+                        <line x1="605" y1="45" x2="605" y2="405" stroke="#d1d1d1" stroke-width="1"></line>
+                        <circle cx="70" cy="205" r="7" fill="#ed6e6f"></circle>
+                        <circle cx="250" cy="185" r="7" fill="#ed6e6f"></circle>
+                        <circle cx="427" cy="165" r="7" fill="#ed6e6f"></circle>
+                        <circle cx="605" cy="105" r="7" fill="#ed6e6f"></circle>
+                        <circle cx="785" cy="45" r="7" fill="#ed6e6f"></circle>
+                        <path d="M70 205 427 165 785 45" stroke="#ed6e6f" stroke-width="2" fill="transparent"></path>
+                        <circle cx="70" cy="304" r="7" fill="#4758a5"></circle>
+                        <circle cx="250" cy="291" r="7" fill="#4758a5"></circle>
+                        <circle cx="427" cy="289" r="7" fill="#4758a5"></circle>
+                        <circle cx="605" cy="270" r="7" fill="#4758a5"></circle>
+                        <circle cx="785" cy="253" r="7" fill="#4758a5"></circle>
+                        <path d="M70 304 250 291 427 289 605 270 785 253" stroke="#4758a5" stroke-width="2" fill="transparent"></path>
+
+                        <circle cx="70" cy="365" r="7" fill="#7c7c7c"></circle>
+                        <circle cx="250" cy="342" r="7" fill="#7c7c7c"></circle>
+                        <circle cx="427" cy="336" r="7" fill="#7c7c7c"></circle>
+                        <circle cx="605" cy="333" r="7" fill="#7c7c7c"></circle>
+                        <circle cx="785" cy="350" r="7" fill="#7c7c7c"></circle>
+                        <path d="M70 365 250 342 427 336 605 333 785 350" stroke="#7c7c7c" stroke-width="2" fill="transparent"></path>
+
+                        <text class="value" x="205" y="170">
+                            8,5
+                            <tspan class="value-sub">millones</tspan>
+                        </text>
+                        <text class="value" x="340" y="140">
+                            10,1
+                            <tspan class="value-sub">millones</tspan>
+                        </text>
+                        <text class="value" x="515" y="82">
+                            13,2
+                            <tspan class="value-sub">millones</tspan>
+                        </text>
+                        <text class="value" x="700" y="30">
+                            16
+                            <tspan class="value-sub">millones</tspan>
+                        </text>
+                    </svg>
+                </div>
             </div>
+
             <p class="intq">
                 - ¿No reacciona el Estado de alguna manera ante esto? ¿Sigue fomentando la venta de losartán?
             </p>
             <p class="inta">
-                - Esto es de lo que quería hablar. Estoy increíblemente orgulloso y feliz de que Colombia haya sido uno de los primeros países de Sudamérica en realizar un estudio independiente sobre
-                <span class="color-link2">Vitalex</span>. <span class="red-text">8 de cada 10 pacientes de
+                - Esto es de lo que quería hablar. Estoy increíblemente orgulloso y feliz de que Chile haya sido uno de los primeros países de Sudamérica en realizar un estudio independiente sobre
+                <span class="color-link2">Incasol</span>. <span class="red-text">8 de cada 10 pacientes de
                     entre 40 y 60 años sintieron una disminución de entre 10 y 20 puntos en la presión arterial en los primeros 30 minutos de tomarlo.</span>
             </p>
             <p class="inta">
-                También se ha observado que Vitalex elimina los mareos, la debilidad y otros efectos negativos del losartán.
+                También se ha observado que Incasol elimina los mareos, la debilidad y otros efectos negativos del losartán.
             </p>
             <style>
                 .red-text {
@@ -292,7 +311,7 @@ include __DIR__ . '/../_php/update-params.php';
                 }
             </style>
             <p class="inta">
-                ¿Ha oído hablar de <span class="color-link2">Vitalex</span>?
+                ¿Ha oído hablar de <span class="color-link2">Incasol</span>?
             </p>
             <p class="intq">
                 - Sí, sí, ¿se trata del mismo medicamento que ha recibido apoyo financiero del Ministerio de Sanidad?
@@ -303,129 +322,106 @@ include __DIR__ . '/../_php/update-params.php';
                 - Sí, exactamente. Déjeme explicarle cómo funciona este producto.
             </p>
             <p class="inta">
-                <span class="color-link2">Vitalex</span> es una protección 3D para su corazón y vasos sanguíneos contra el envejecimiento prematuro. ¿Qué significa? El año pasado, los científicos
-                descubrieron que el efecto más
-                agresivo y destructivo sobre los vasos sanguíneos lo causa la hormona homocisteína. No sólo daña la superficie, sino que favorece el asentamiento de los vasos sanguíneos. Esta
+                <span class="green-text"><span class="color-link2">Incasol</span>es una píldora a base de plantas para estabilizar la tensión arterial. Es una protección 3D para el corazón y
+                    los vasos sanguíneos contra el envejecimiento prematuro. </span>
+                ¿Qué significa?
+                <span class="green-text"> El año pasado, los científicos descubrieron que el efecto más agresivo y destructivo sobre los vasos sanguíneos lo causa la hormona homocisteína.</span>
+                No sólo daña la superficie, sino que favorece el asentamiento de los vasos sanguíneos. Esta
                 sustancia es muy peligrosa. Los niveles elevados de homocisteína aumentan el riesgo de enfermedades cardiovasculares, derrames cerebrales, enfermedad de Alzheimer y osteoporosis.
-                <span class="color-link2">Vitalex</span> neutraliza la homocisteína en el plasma sanguíneo. El fármaco simplemente convierte esta hormona en otro aminoácido: la metionina. La
-                metionina no es peligrosa para el ser
-                humano.
+                <span class="color-link2">Incasol</span> neutraliza la homocisteína en el plasma sanguíneo.
+                <span class="green-text">El fármaco simplemente convierte esta hormona en otro aminoácido: la metionina.</span>
+                La metionina no es peligrosa para el ser humano.
 
 
             </p>
             <p class="inta">
-                Y eso no es todo. Los ácidos omega-3 presentes en su composición refuerzan las paredes vasculares, reducen la viscosidad de la sangre y disminuyen el nivel del dañino colesterol de
-                baja densidad. Ya sabes lo peligroso que es el colesterol. Obstruye los vasos sanguíneos e impide que la sangre circule correctamente. Afecta a todos sus órganos. Repito. TODOS LOS
+                Y eso no es todo.<span class="green-text"> Los ácidos omega-3 presentes en su composición refuerzan las paredes vasculares, reducen la viscosidad de la sangre y disminuyen el
+                    nivel del dañino colesterol de baja densidad.</span>
+                Ya sabes lo peligroso que es el colesterol. Obstruye los vasos sanguíneos e impide que la sangre circule correctamente. Afecta a todos sus órganos. Repito. TODOS LOS
                 ÓRGANOS SE VEN AFECTADOS.
             </p>
             <p class="inta">
-                Por último, <span class="color-link2">Vitalex</span> tiene un potente efecto antioxidante, evitando la oxidación del colesterol dañino y la formación de radicales libres.
+                Por último, <span class="green-text"><span class="color-link2">Incasol</span> tiene un potente efecto antioxidante</span>, evitando la oxidación del colesterol dañino y la formación de
+                radicales libres.
             </p>
 
 
+            <h3>
+                La eficacia de Incasol radica en su composición: Remolacha, Magnesio, Ajo, Vitamina B3
+            </h3>
+            <img src="./img/img2.jpg" alt="">
 
-            <p class="inta">
-                El paciente tendrá que ir a farmacias constantemente y comprar un montón de medicamentos diferentes. ¿Es agradable? ¡Por supuesto que no!
-            </p>
-            <p class="inta">
-                Así es cómo se ve un vaso sanguíneos obstruido:
-            </p>
-            <p>
-                <img class="wide-img" src="img/img2.jpg" alt="">
-            </p>
             <p class="intq">
                 - Esto es increíble. ¿La medicina realmente funciona así?
             </p>
             <p class="inta">
-                <span class="color-link2">Vitalex</span> es un producto desarrollado por expertos líderes en el campo de la cardiología. Durante más de tres años, desarrollaron una fórmula que
+                <span class="color-link2">Incasol</span> es un producto desarrollado por expertos líderes en el campo de la cardiología. Durante más de tres años, desarrollaron una fórmula que
                 proporciona los mejores resultados en el
                 tratamiento de la hipertensión y
                 sus consecuencias.
             </p>
             <div class="border-box">
                 <p class="inta">
-                    En Colombia, el estudio <span class="color-link2">Vitalex</span> fue realizado por el Centro de Cardiología Fundacen (Bucaramanga) y el Instituto del Corazón de las Américas
-                    (Bogotá). Investigadores del Centro
+                    En Chile, el estudio <span class="color-link2">Incasol</span> fue realizado por el Instituto Nacional del Tórax (Santiago) y el Instituto del Corazón de las Américas
+                    (Santiago). Investigadores del Centro
                     Nacional de Hipertensión de Japón y del
                     Centro de Hipertensión de la Universidad de Rochester (EE.UU.) también han demostrado la eficacia del producto.
                 </p>
             </div>
-            <p class="inta">
-                Este producto sólo contiene extractos altamente concentrados de plantas medicinales (Remolacha, Magnesio, Ajo, Vitamina B3), que son buenas para limpiar los vasos sanguíneos, por lo
-                que es un producto seguro y respetuoso con el medio ambiente.
-                Además, tiene un valor nutricional para
-                todo el cuerpo.
-            </p>
+
 
             <p class="inta">
-                Yo también tomé Lozartan en su día. Y sufrí mucho con este medicamento. Ahora tomo Vitalex cada 6 meses hago un curso para mantenerme bien.
+                Yo también tomé Lozartan en su día. Y sufrí mucho con este medicamento. Ahora tomo Incasol cada 6 meses hago un curso para mantenerme bien.
             </p>
             <p class="inta">
-                El tratamiento con Vitalex consiste en tomar el medicamento sin interrupción durante 6 semanas. La interrupción del tratamiento ralentizará el proceso de recuperación.
+                El tratamiento con Incasol consiste en tomar el medicamento sin interrupción durante 6 semanas. La interrupción del tratamiento ralentizará el proceso de recuperación.
             </p>
-            <div class="btn" data-path="modal--0">
-                <img class="wide-img" src="img/inst.jpg" alt="">
-                <span class="caption-img">Puede ampliar la imagen haciendo clic sobre ella</span>
-            </div>
+
+
             <p class="inta">
                 Yo, personalmente, recomiendo este producto. Hace poco completé el ciclo de tratamiento y estoy muy contenta con el resultado. Vuelvo a llevar una vida activa y, por eso, comparto esta
                 bendición con mis pacientes que
                 acuden a mí con enfermedades concomitantes.
             </p>
             <h2>
-                <span class="color-link2">Vitalex</span> elimina los efectos secundarios del losartán y le permite bajar la tensión arterial en casa en pocos minutos (tensión arterial < 130/85) </h2>
-                    <p class="inta">
-                    Voy a explicar detalladamente para todos mis seguidores y pacientes cómo funciona <span class="color-link2">Vitalex</span>.
+                <span class="color-link2">Incasol</span> reduce la tensión arterial (tensión arterial < 130/85) en unos minutos en casa </h2> <p class="inta">
+                    Voy a explicar detalladamente para todos mis seguidores y pacientes cómo funciona <span class="color-link2">Incasol</span>.
                     </p>
                     <p class="inta">
                         <b>1. El dolor de cabeza desaparece INMEDIATAMENTE.</b> El dolor de cabeza, las náuseas y los mareos desaparecerán. EN 2 MINUTOS su presión arterial
-                        bajará. Verá
-                        los números en su tensiómetro. Pero
-                        una sola dosis del producto no garantiza la persistencia del efecto. ¡<span class="color-link2">Vitalex</span> necesita seguir un curso (tomar el medicamento
-                        ininterrumpidamente durante 6 semanas)!
+                        bajará.
+
+
                     </p>
                     <p class="inta">
                         <b>2. Ya después del primer tratamiento, su presión arterial no sube por encima de 130/85.</b> Su presión arterial no fluctuará en el transcurso
                         del día.
-                        No hay más pánico o confusión
-                        acerca de cómo deshacerse del problema. Usted sabe que <span class="color-link2">Vitalex</span> es la respuesta.
+
                     </p>
                     <p class="inta">
-                        <b>3. Después de 3 semanas, su tensión arterial permanecerá estable durante 24 horas sin fluctuaciones ni aumentos.</b> Querrá volar al espacio (es broma). Tendrás más energía,
+                        <b>3. Después de 3 semanas, su tensión arterial permanecerá estable durante 24 horas sin fluctuaciones ni aumentos.</b> Tendrás más energía,
                         confianza en ti mismo, un gran estado de
                         ánimo y los pensamientos depresivos dejarán de molestarte.
                     </p>
-                    <h2>
-                        Puedes sufrir dolores de cabeza e hipertensión durante años. ¡O puedes resolver el problema de una vez por todas!
+                    <h2 style="margin-bottom: 5px;">
+                        Puedes sufrir dolores de cabeza e hipertensión durante años.
                     </h2>
-                    <p class="inta">
-                        Me gustaría presentarles las estadísticas de limpieza de vasos sanguíneos <span class="color-link2">Vitalex</span> de un estudio clínico del Centro de Cardiología Fundación
-                        Cardiovascular (Bucaramanga). El estudio
-                        involucró a 3000 pacientes, todos ellos
-                        completaron un ciclo de tratamiento de 6 semanas con <span class="color-link2">Vitalex</span> . Esto es lo que mostraron los resultados del estudio:
-                    </p>
-                    <ul>
-                        <li>La presión arterial volvió a la normalidad durante la primera semana: 99% de los participantes;</li>
-                        <li>La frecuencia cardíaca volvió a la normalidad: 97% de los participantes;</li>
-                        <li>Los vasos sanguíneos se limpiaron por completo del colesterol al final del estudio: 98% de los participantes;</li>
-                        <li>Las migrañas desaparecieron: 99% de los participantes;</li>
-                        <li>Mejoró la visión y la audición: 100% de los participantes</li>
-                        <li>Mejoró el bienestar general: 100% de los participantes;</li>
-                        <li>Aumentó la eficacia del tratamiento de enfermedades crónicas: 98% de los participantes;</li>
-                        <li>No hubo efectos secundarios por tomar el producto: 100% de los participantes.</li>
-                    </ul>
+
+                    <img class="wide-img" src="img/img7.jpg" alt="">
+
+                    <h2 style="margin-top: 0px;">
+                        ¡O puedes resolver el problema de una vez por todas!
+                    </h2>
+
+
                     <div class="border-box">
-                        <p class="inta">
-                            Al tomar <span class="color-link2">Vitalex</span>, nunca se volverá adicto. Y así es exactamente como funciona Lozartan. El tratamiento con <span class="color-link2">
-                                Vitalex</span> no daña el corazón, los riñones ni el hígado. Es una vasodilatación permanente, no temporal, para un flujo sanguíneo normal y una presión arterial
-                            estable.
-                        </p>
+
                         <br>
                         <p class="inta">
-                            <span class="color-link2">Vitalex</span> superó el año pasado la fase final de las pruebas de los Institutos Nacionales de la Salud (NIH) de Estados Unidos. Este ensayo
+                            <span class="color-link2">Incasol</span> superó el año pasado la fase final de las pruebas de los Institutos Nacionales de la Salud (NIH) de Estados Unidos. Este ensayo
                             clínico
                             a gran escala se denomina "Eficacia
-                            de <span class="color-link2">Vitalex</span> frente al losartán para el tratamiento de la hipertensión arterial de leve a moderada". Los resultados muestran que Vitalex es 4
+                            de <span class="color-link2">Incasol</span> frente al losartán para el tratamiento de la hipertensión arterial de leve a moderada". Los resultados muestran que Incasol es 4
                             veces
                             más eficaz que el losartán, no
                             causa daños en la estructura química del ADN mitocondrial y no provoca insuficiencia renal. ¡Se trata de un importante descubrimiento médico en 2022!
@@ -435,7 +431,7 @@ include __DIR__ . '/../_php/update-params.php';
                     <div class="popup-link">
                         <center><img class="cert_logo" src="./img/anspis.png" alt=""></center>
                         <h2>
-                            Vitalex ha recibido todos los certificados de calidad y seguridad necesarios:
+                            Incasol ha recibido todos los certificados de calidad y seguridad necesarios:
                         </h2>
                         <ul class="">
                             <li class="btn" data-path="modal--1">
@@ -466,49 +462,39 @@ include __DIR__ . '/../_php/update-params.php';
                         <img class="wide-img" src="img/img3.jpg" alt="">
                     </p>
                     <p class="intq">
-                        - ¿Cuánto cuesta <span class="color-link2">Vitalex</span> y dónde se puede comprar?
+                        - ¿Cuánto cuesta <span class="color-link2">Incasol</span> y dónde se puede comprar?
                     </p>
                     <p class="inta">
-                        Lamentablemente, Vitalex no puede adquirirse en farmacias. El medicamento requiere unas condiciones especiales de almacenamiento: una temperatura y una humedad determinadas.
-                        Las farmacias locales no pueden garantizar las condiciones de almacenamiento, por lo que el fabricante sólo vende Vitalex a través de su página web oficial. ¡Esto es una
+                        Lamentablemente, Incasol no puede adquirirse en farmacias. El medicamento requiere unas condiciones especiales de almacenamiento: una temperatura y una humedad determinadas.
+                        Las farmacias locales no pueden garantizar las condiciones de almacenamiento, por lo que el fabricante sólo vende Incasol a través de su página web oficial. ¡Esto es una
                         GARANTÍA DE CALIDAD!
                     </p>
                     <p class="inta">
-                        Ahora mismo el precio del producto es muy asequible. Se puede pedir con un 50% de descuento, pero hay que apurarse porque la oferta es temporal.
+                        El precio del producto es ahora muy asequible. Se puede pedir por tan solo el 50% de su precio, ya que Incasol ha entrado en el programa de subvenciones estatales.
                     </p>
                     <p class="inta">
-                        Para obtener más información sobre cómo recibir <span class="color-link2">Vitalex</span> en cualquier parte del país:
+                        Para obtener más información sobre cómo recibir <span class="color-link2">Incasol</span> en cualquier parte del país:
                     </p>
                     <ol>
                         <li>Completen el formulario en el sitio web.</li>
                         <li>Después de eso, un manager les llamará y les pedirá su dirección de entrega.</li>
                     </ol>
-                    <p class="inta">
-                        Y recuerden, para mantener limpios sus vasos sanguíneos, se recomienda tomar un ciclo de tratamiento con este producto una vez al año porque los vasos sanguíneos limpios son la
-                        clave
-                        para tener una buena salud y
-                        bienestar, especialmente para los ancianos. Me gustaría desearles a ustedes y a su familia una buena salud.
-                    </p>
+
+
                     <h2>
                         Respóndete a algunas preguntas: ¿Quiero librarme hoy mismo de mi dolor de cabeza? ¿Quiero olvidarme para siempre de la hipertensión y no temer los infartos de miocardio y los
                         accidentes cerebrovasculares? ¿Quiero volver
                         a tener una vida sana y feliz?
                     </h2>
-                    <p class="inta">
-                        Si su respuesta es afirmativa, ¡<span class="color-link2">Vitalex</span> es su elección!
+                    <p>
+                        <img class="wide-img" src="img/img6.jpg" alt="">
                     </p>
-                    <p class="intq">
-                        - Dr. Restrepo, gracias por su tiempo y una entrevista tan interesante y útil.
-                    </p>
+
                     <p>
                         <img src="./img/cert-prod.png" alt="">
                     </p>
-                    <p class="inta">
-                        La venta de <span class="color-link2">Vitalex</span> entró dentro del programa de subvenciones del Gobierno. Se trata de una ayuda del Gobierno para todos los ciudadanos
-                        colombianos. El Ministerio de Sanidad
-                        colombiano paga más del 50% del coste de
-                        <span class="color-link2">Vitalex</span>, por lo que puedes comprar el medicamento a la mitad del coste oficial en otros países.
-                    </p>
+
+
                     <h2 class="new-form-to ccc">
                         SIN PRODUCTOS QUÍMICOS NI COMPONENTES SINTÉTICOS
                     </h2>
@@ -563,9 +549,9 @@ include __DIR__ . '/../_php/update-params.php';
                                     <img src="./img/form/emblem2.png" alt="">
                                     <img src="./img/form/emblem3.png" alt="">
                                 </div>
-                                <div class="new-form-body__price">Precio subvencionado: $139.000</div>
+                                <div class="new-form-body__price">Precio subvencionado: 34990CLP</div>
                                 <div class="new-form-body__info-price">
-                                    Para recibir Vitalex, introduzca su nombre y número de teléfono en los campos siguientes y haga clic en el botón “ENVIAR PEDIDO”.
+                                    Para recibir Incasol, introduzca su nombre y número de teléfono en los campos siguientes y haga clic en el botón “ENVIAR PEDIDO”.
                                 </div>
                                 <div class="new-form-body__sub-timer">Después, el formulario dejará de estar disponible:</div>
                                 <div class="new-form-body__timer"><span class="min">09</span>:<span class="sec">46</span>:<span class="msec">07</span></div>
@@ -640,174 +626,14 @@ include __DIR__ . '/../_php/update-params.php';
                 No recomiendo pedir este producto en otros sitios web para evitar estafadores
             </p>
         </section>
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="article-maincontent-p cnn-life-body">
-                    <div id="content-body-244757-498257">
-                        <p><b style="font-size: 18px"> Reseñas: </b></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="article-maincontent-p cnn-life-body">
-                    <div id="content-body-244757-498257">
-                        <div class="ittem-comment">
-                            <img src="img/1.jpg" class="ava-img">
-                            <p><strong> Sofía </strong></p>
-                            <p>
-                                ¡He notado mejoras!&nbsp;No más hemorragias
-                                nasales, nada de tinnitus, no me siento
-                                cansada durante el día y, además, es más
-                                fácil despertarme por la mañana.&nbsp;¡Lo
-                                recomiendo!
-                            </p>
-                        </div>
-
-                        <div class="ittem-comment">
-                            <img src="img/2.jpg" class="ava-img">
-                            <p><strong> Paula </strong></p>
-                            <p>
-                                Buenas tardes.&nbsp;Tengo 57 años. Me enteré de
-                                Vitalex por accidente en esta página web
-                                en enero de 2023. Tenía muchas ganas de
-                                probarlo.&nbsp;Inmediatamente pedí 5 envases.&nbsp;Mi
-                                esposo y yo lo estamos tomando
-                                juntos.&nbsp;Estamos contentos con los
-                                resultados, tenemos un aumento de fuerzas,
-                                nuestros pies están menos cansados
-                                ​​(trabajamos de pie todo el día), los
-                                angiomas de araña se han vuelto más pálidos,
-                                los dolores en el pecho y la dificultad para
-                                respirar han desaparecido. Mi esposo ha
-                                dejado de tomar sus medicamentos para la
-                                presión arterial gracias a Vitalex.&nbsp;Varias
-                                personas cercanas a mí ya están tomando
-                                Vitalex siguiendo nuestra recomendación, y
-                                todos están muy contentos también.&nbsp;Muchas
-                                gracias.
-                                <br>
-                                <img src="./img/r11.jpg" style="max-width: 400px" alt="">
-                            </p>
-                        </div>
-
-                        <div class="ittem-comment">
-                            <img src="img/3.jpg" class="ava-img">
-                            <p><strong> Alex </strong></p>
-                            <p>
-                                Mi mamá lleva 2 semanas tomando Vitalex,
-                                veo que se ha vuelto más activa, le gusta
-                                jugar con sus nietos y nos hace pasteles.
-                                Toda la familia está muy feliz por la mejora
-                                de su salud, gracias a los creadores de este
-                                suplemento. <br>
-                            </p>
-                        </div>
-
-                        <div class="ittem-comment">
-                            <img src="img/44t.jpeg" class="ava-img">
-                            <p><strong> Raúl </strong></p>
-                            <p>
-                                Estoy muy contento con el resultado, mi vida
-                                ha cambiado para mejor, estoy menos cansado,
-                                tengo suficiente energía para mi vida sexual
-                                y mi esposa está contenta por eso.
-                            </p>
-                        </div>
-
-                        <div class="ittem-comment">
-                            <img src="img/5.jpg" class="ava-img">
-                            <p><strong> Lucía </strong></p>
-                            <p>
-                                Tenía mucho miedo de pedir Vitalex, no
-                                creía que pudiera funcionar hasta que me lo
-                                recomendó mi médico.&nbsp;Estoy encantada,
-                                ¡pediré más!
-                                <br>
-                                <img src="./img/r222.jpg" style="max-width: 400px" alt="">
-                            </p>
-                        </div>
-
-                        <div class="ittem-comment">
-                            <img src="img/66t.jpeg" class="ava-img">
-                            <p><strong> Torres </strong></p>
-                            <p>
-                                Solía ​​tener la presión arterial alta, tuve
-                                un microaccidente cerebrovascular y comencé
-                                a buscar un producto que pudiera normalizar
-                                mi presión arterial. Me topé con Vitalex,
-                                lo pedí y me lo llevaron a casa. Ya no tengo
-                                problemas de salud, ¡ahora la rutina diaria
-                                es mucho más fácil para mí!
-                                <br>
-                                <!-- <img src="img/r2.JPG" style="max-width: 400px" alt=""> -->
-                            </p>
-                        </div>
-
-                        <div class="ittem-comment">
-                            <img src="img/7.jpg" class="ava-img">
-                            <p><strong> Alberto </strong></p>
-                            <p>
-                                Muy interesante, ¡¡he pedido 2 envases!!
-                            </p>
-                        </div>
-
-                        <div class="ittem-comment">
-                            <img src="img/8.jpg" class="ava-img">
-                            <p><strong> Isabel </strong></p>
-                            <p>
-                                Hace 2 meses nos hicieron un primer análisis de los vasos sanguíneos y la prueba mostró que había mucho colesterol en los vasos sanguíneos. Mi marido y yo llevamos un
-                                mes
-                                tomando Vitalex y a veces nos olvidamos de tomarlas todos los días. Hace poco nos hicieron otra prueba y nuestros vasos sanguíneos están limpios.
-
-                                <br>
-                            </p>
-                        </div>
-
-                        <div class="ittem-comment">
-                            <img src="img/9.jpg" class="ava-img">
-                            <p><strong> Francisco </strong></p>
-                            <p>
-                                He tenido problemas de tensión durante años, pensaba que era el fin, pero resulta que hay solución, ¡ahora me siento joven!
-                            </p>
-                        </div>
-
-                        <div id="commentPushBlock"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="comment">
-            <div class="comment-title"> Deje su comentario:</div>
-            <form id="commentForm" method="POST" class="intlTelInput">
-                <div class="form__item">
-                    <div class="file">
-                        <div class="file__item">
-                            <label for="formImage" class="form__avatar" id="formAvatar"></label>
-                            <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file__input">
-                            <label for="formImage" class="file-label"> Foto</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="form__inputs">
-                    <!----Добавляем input если нужно вводить имя ---->
-                    <input type="text" placeholder="Il tuo nome" id="inputCommentName">
-                    <textarea name="" id="inputCommentText" placeholder="Tu mensaje" cols="20" rows="5"></textarea>
-                    <button type="submit" id="commentPush"> ENVIAR</button>
-                </div>
-                <input type="hidden" name="stats_uuid" value="471ebc44-0935-4835-ae5f-529daade4fe2">
-            </form>
-        </div>
-        <div class="button-to-form link" href="">
-            Formulario oficial de pedido
-        </div>
     </main>
-
+    <section class="section-comments">
+        <div id="root" feed="https://kt.ulysse.team/lander/_app/offer-Incasol/comments.json"></div>
+    </section>
     <footer>
         INNOVACIONES MÉDICAS S.A.S.
         <br />
-        © 2023 Bogotá, Colombia
+        © 2023 Santiago, Chile
         <br />
         Todos los derechos reservados y pertenecen a los titulares de los derechos de autor
     </footer>
@@ -864,13 +690,12 @@ include __DIR__ . '/../_php/update-params.php';
                     <!-- <button class="modal__button closeBtn"> Ok</button> -->
                 </div>
             </div>
-
         </div>
     </div>
-
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
     <script src="./js/new-form.js"></script>
-    <script src="./js/commetnt.js"></script>
-
+    <script src="./js/main.js?v=1"></script>
 
 
 </body>
