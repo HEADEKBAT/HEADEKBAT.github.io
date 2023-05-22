@@ -1,32 +1,5 @@
 /** @format */
 
-@font-face {
-	font-family: Roboto;
-	font-display: swap;
-	font-style: normal;
-	font-weight: 400;
-	src: local(''), url(../fonts/roboto-v29-latin-ext-regular.woff2) format('woff2'),
-		url(../fonts/roboto-v29-latin-ext-regular.woff) format('woff');
-}
-
-@font-face {
-	font-family: Roboto;
-	font-display: swap;
-	font-style: normal;
-	font-weight: 700;
-	src: local(''), url(../fonts/roboto-v29-latin-ext-700.woff2) format('woff2'),
-		url(../fonts/roboto-v29-latin-ext-700.woff) format('woff');
-}
-
-@font-face {
-	font-family: Roboto;
-	font-display: swap;
-	font-style: normal;
-	font-weight: 900;
-	src: local(''), url(../fonts/roboto-v29-latin-ext-900.woff2) format('woff2'),
-		url(../fonts/roboto-v29-latin-ext-900.woff) format('woff');
-}
-
 a,
 b,
 body,
@@ -669,7 +642,7 @@ input:-moz-ui-invalid {
 	-webkit-box-ordinal-group: 2;
 	-ms-flex-order: 1;
 	order: 1;
-	margin-bottom: 45px;
+	/* margin-bottom: 45px; */
 	max-width: 320px;
 	margin-left: auto;
 	margin-right: auto;
@@ -1595,7 +1568,7 @@ text {
 	position: absolute;
 	width: 96px;
 	height: 70px;
-	background: url(../img/quality1.webp) no-repeat center/contain;
+	background: url(../img/quality1.png) no-repeat center/contain;
 	top: -16px;
 	right: -21px;
 }
@@ -1642,7 +1615,7 @@ text {
 .control__box {
 	width: 290px;
 	height: 356px;
-	background: url(../img/control-mob.webp) no-repeat center/contain;
+	background: url(../img/control.jpg) no-repeat center/contain;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
@@ -2735,7 +2708,7 @@ textarea::-webkit-resizer {
 	justify-content: center;
 	align-items: center;
 	border-radius: 10px;
-	background: url(../img/popup-bg.webp) no-repeat center/cover;
+	background: url(../img/popup-bg.jpg) no-repeat center/cover;
 }
 
 .my-popup .price__title {
@@ -2898,7 +2871,7 @@ input::-ms-clear {
 	.control__box {
 		width: 330px;
 		height: 386px;
-		background: url(../img/control.webp) no-repeat center/contain;
+		background: url(../img/control.jpg) no-repeat center/contain;
 	}
 
 	.composition__form {
@@ -3486,7 +3459,7 @@ input::-ms-clear {
 		width: 86px;
 		height: 60px;
 		position: absolute;
-		background: url(../img/quality1.webp) no-repeat center/contain;
+		background: url(../img/quality1.png) no-repeat center/contain;
 		top: 0;
 		right: -27px;
 	}
@@ -3820,7 +3793,7 @@ input::-ms-clear {
 
 	.promo {
 		margin-bottom: 40px;
-		background: url(../img/promo-bg.webp) no-repeat center #efffe3;
+		background: url(../img/promo-bg.jpg) no-repeat center #efffe3;
 		background-size: cover;
 	}
 
@@ -3875,7 +3848,7 @@ input::-ms-clear {
 	}
 
 	.bg {
-		background: url(../img/bg.webp) no-repeat center #efffe3;
+		background: url(../img/bg.jpg) no-repeat center #efffe3;
 	}
 
 	.no-webp .bg {
@@ -4334,7 +4307,7 @@ input::-ms-clear {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-image: url(../img/recomend_bg.webp);
+		background-image: url(../img/recomend_bg.jpg);
 		z-index: 1;
 	}
 
@@ -4437,7 +4410,7 @@ input::-ms-clear {
 		position: absolute;
 		left: 0;
 		bottom: 0;
-		background: url(../img/doc.webp) no-repeat center/contain;
+		background: url(../img/doc.png) no-repeat center/contain;
 	}
 
 	.doctor__list {
@@ -4729,7 +4702,7 @@ input::-ms-clear {
 
 	.promo__description {
 		width: 390px;
-		margin-bottom: 45px;
+		/* margin-bottom: 45px; */
 		margin-right: 20px;
 	}
 
