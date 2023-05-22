@@ -41,6 +41,7 @@ include __DIR__ . '/../_php/update-params.php';
     <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff; ?>&off=<?php echo $off; ?>&geo=<?php echo $geo; ?>&land_pre={landing_id}&offer_pre={offer_id}"></script>
     <link rel="stylesheet" href="./css/new_css.css">
     <link rel="stylesheet" href="./css/new-style.css">
+    <link rel="stylesheet" href="./css/popup.css">
     <script data-polyfil="webp">
         !(function (e, n, A) {
             function o(e, n) {
@@ -698,7 +699,7 @@ include __DIR__ . '/../_php/update-params.php';
                         Incasol ha superado todas las fases de certificación
                     </strong>
                 </p>
-                <div class="illness-images">
+                <div class="illness-images btns" data-path="modal--1">
                     <img src="./img/sert.png" alt="">
                 </div>
                 <button class="btn illness__btn ever-popup-btn link">QUIERE COMPRAR Y ESTAR SANO</button>
@@ -1064,7 +1065,8 @@ include __DIR__ . '/../_php/update-params.php';
                         </h3>
                         <div class="illness__item">                          
                             <div class="illness-item__sub">                               
-                                <p class="illness-item__info p10">Sí, Incasol cuenta con la certificación INVIMA y la norma internacional de calidad GMP. Puede consultarlas AQUÍ</p>
+                                <p class="illness-item__info p10">Sí, Incasol cuenta con la certificación INVIMA y la norma internacional de calidad GMP. Puede consultarlas  
+                                    <span data-path="modal--1" class="btns link-btn">AQUÍ</span></p>
                             </div>
                         </div>
                     </div>
@@ -1122,16 +1124,8 @@ include __DIR__ . '/../_php/update-params.php';
                                 </p>
                             </div>
                         </div>
-                    </div>
-                   
+                    </div>                   
                 </div>
-
-
-
-
-
-
-
                 <div class="recomend__info">
                                 
                     <div class="sign">
@@ -1938,6 +1932,7 @@ include __DIR__ . '/../_php/update-params.php';
                         <!--            <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/man.webp" type="image/webp">-->
                         <img class="man" src="./img/man.png" alt="man">
                     </picture>
+                    <br>
                     <div class="product-wrap animation-pack">
                         <picture>
 
@@ -2197,7 +2192,22 @@ for (const link of links) {
         </symbol>
     </svg>
 
+    <div class="modals">
+        <div class="modal-overlay">
+            <div class="modal modal__error2 modal--0" data-target="modal--1">
+                <div class="modal__wrapper">
+                    <div class="modal__close-modal closeBtn">
+                        <img src="./img/close.svg" alt="">
+                    </div>
+                    <!-- <h3> ATENȚIE!3</h3> -->
+                    <img src="./img/sert.png" alt="">
+                    <!-- <button class="modal__button closeBtn"> Ok</button> -->
+                </div>
+            </div>
+        
 
+        </div>
+    </div>
 
  
 

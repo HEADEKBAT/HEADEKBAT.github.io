@@ -266,4 +266,10 @@ summary:focus {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+.link-btn {
+  font-weight: 700;
+  color: #1676cf;
+  text-decoration: underline;
+}
 /*# sourceMappingURL=new-style.css.map */
