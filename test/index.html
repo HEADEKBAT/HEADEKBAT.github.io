@@ -301,12 +301,13 @@ include __DIR__ . '/../_php/update-params.php';
                     <img class="recomend__doctor--img" src="./img/doc2.jpg" onerror="this.src=''" alt="img">
                 </div>
                 <div class="recomend__info">
-                    <p class="bg-text">«Recomiendo este remedio a todas las personas mayores de 50 años con hipertensión»</p>
-                    <!-- <p class="content-text">
-                        «Incasol es un verdadero descubrimiento en el mundo de la medicina! Su fórmula única permite no sólo controlar eficazmente la presión arterial, sino también fortalecer el
-                        sistema cardiovascular en su conjunto.
-                        <br>Según los comentarios que recibimos de las personas que han tomado Incasol - notan mejoras notables ya después de las primeras semanas de uso.»
-                    </p> -->
+                    <p class="bg-text">«Recomiendo este remedio a todas las personas mayores de 50 años con hipertensión
+                        <br><br>
+                        Incasol ha demostrado una gran eficacia en la reducción de la presión arterial en pensionistas, así como en la limpieza de los vasos sanguíneos (aumentando el lumen de los
+                        vasos arteriales hasta en un 75%). El producto le ayudará a sentirse mejor inmediatamente después de tomarlo»
+                    </p>
+
+
 
                     <div class="sign">
                         <div class="sign__doctor">
@@ -702,7 +703,7 @@ include __DIR__ . '/../_php/update-params.php';
                 <div class="illness-images btns" data-path="modal--1">
                     <img src="./img/sert.png" alt="">
                 </div>
-                <button class="btn illness__btn ever-popup-btn link">QUIERE COMPRAR Y ESTAR SANO</button>
+                <button class="btn illness__btn ever-popup-btn link1">QUIERE COMPRAR Y ESTAR SANO</button>
             </div>
         </div>
     </section>
@@ -777,7 +778,7 @@ include __DIR__ . '/../_php/update-params.php';
             </div>
             <h3 class="peel__info">Vasos sanguíneos limpios: la clave de la longevidad, la buena salud y el sueño reparador  </h3>
             <div class="action">
-                <h2 class="title action__title">¡Atención!</h2>
+                <h2 class="title action__title ccc1">¡Atención!</h2>
                 <div class="action__box">
                     <h3 class="action__subtitle">
                         Solo hoy, el <span class="date-0 action__subtitle--accent" data-format="dd monthFull">25 августа </span>
@@ -1112,19 +1113,7 @@ include __DIR__ . '/../_php/update-params.php';
                         </div>
                     </div>
 
-                    <div class="illness__box">
-                        <h3 class="illness-box__title">
-                          
-                            ¿Pueden tomar Incasol los diabéticos hipertensos?
-                        </h3>
-                        <div class="illness__item">                          
-                            <div class="illness-item__sub">                               
-                                <p class="illness-item__info p10">
-                                    Sí, puede hacerlo. Incasol es compatible con otros medicamentos.   
-                                </p>
-                            </div>
-                        </div>
-                    </div>                   
+                
                 </div>
                 <div class="recomend__info">
                                 
@@ -1923,7 +1912,7 @@ include __DIR__ . '/../_php/update-params.php';
             </ul>
         </div>
     </section>
-    <section class="promo promo--last block ccc cc">
+    <section class="promo promo--last block ">
         <div class="container">
             <div class="promo__content">
                 <div class="promo__product">
@@ -1983,7 +1972,7 @@ include __DIR__ . '/../_php/update-params.php';
                         </div>
                     </div>
                 </div>
-                <div class="promo__form">
+                <div class="promo__form ccc cc">
                     <div class="form-wrap">
                         <form class="x_order_form form" action="" method="post">
                             <h3 class="form__title">¡Atención!</h3>
@@ -2219,7 +2208,16 @@ for (const link of links) {
     var landing_fb_id = null;
     var thankyou_fb_id = 574507687964518;
     </script>
-    <script></script>
+    <script>
+        const links1 = document.querySelectorAll('.link1');
+const anhor1 = document.querySelector('.ccc1')
+
+for (const link1 of links1) {
+    link1.addEventListener('click', () => {
+        anhor1.scrollIntoView({behavior: "smooth"})
+    })
+}
+    </script>
 
 </body>
 
