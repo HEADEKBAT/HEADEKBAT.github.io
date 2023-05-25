@@ -2508,7 +2508,7 @@ body.lang_it .form_top__title {
 		font-size: 22px;
 	}
 	.formula .wrapper .top_part .image {
-		position: relative;
+		/* position: relative; */
 		right: 0;
 		bottom: 0;
 		margin: 0 auto -50px;
