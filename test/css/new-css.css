@@ -1,0 +1,157 @@
+.bg {
+  background: url(../img/bg_results.jpg) 0 0/cover no-repeat;
+}
+
+.block-doc {
+  padding: 30px 0px;
+}
+
+.recomend__title {
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+}
+
+.recomend__content {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+  .recomend__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.recomend__doctor {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+.recomend__doctor--img {
+  display: block;
+  max-width: 290px;
+  width: 100%;
+  margin: 0 15px 0 0;
+}
+
+@media (max-width: 900px) {
+  .recomend__doctor--img {
+    margin: 15px auto 0 auto;
+  }
+}
+
+.recomend__info .text {
+  font-size: 18px;
+  line-height: 23px;
+  color: #444;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+.bg-text {
+  margin-top: 15px;
+  background-color: #ed6e6f;
+  padding: 15px;
+  margin-bottom: 25px;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.sign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-top: 25px;
+  position: relative;
+}
+
+.sign__doctor--name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #444;
+}
+
+.sign__doctor--post {
+  color: #666;
+  font-size: 16px;
+}
+
+.sign:before {
+  top: 0;
+  left: 0;
+  width: 60px;
+  background-color: #c6c6c6;
+}
+
+.sign:before {
+  top: 0;
+  left: 0;
+  width: 60px;
+  background-color: #c6c6c6;
+}
+
+.sign:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+}
+
+.top_part img {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.final__list__text {
+  margin-top: 15px;
+}
+
+@media (max-width: 787px) {
+  .final__list__text {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 420px) {
+  .final__list__text {
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 360px) {
+  .final__list__text {
+    margin-left: 15px;
+  }
+}
+
+.final__list__item:nth-child(5):before {
+  background-position: -50px -533px;
+  width: 48px;
+}
+
+.final__list__item:nth-child(6):before {
+  background-position: -50px -533px;
+  width: 48px;
+}
+
+.final__list__item:nth-child(5):before,
+.final__list__item:nth-child(6):before {
+  background-image: url(../img/sprite.png);
+  height: 47px;
+}
+/*# sourceMappingURL=new-css.css.map */

@@ -6,979 +6,998 @@ if (!isset($rawClick)) {
 }
 
 // Данные по офферу
-$offerData = 'incasol---cl---adcombo.php';
+$offerData = 'prostanorm-forte---mx---lucky.php';
 include __DIR__ . '/../_order/offers/' . $offerData;
 
 // Получение ID партнерки
 include __DIR__ . '/../_order/affiliates.php';
 $affiliates_id = $affiliates[$aff];
 // ID счетчика Яндекс.Метрики
-$metrika = '93466655';
+$metrika = '93638751';
 // Цвета конфирма
 $confirmColorBackground = 'ffffff'; // Общий фон
-$confirmColorBlocks = '36ad23'; // Блоки
+$confirmColorBlocks = 'ba0505'; // Блоки
 $confirmColorHeaders = '000000'; // Заголовки
 $confirmColorText = 'fff'; // Текст в блоках
 // Блок тестирования элементов
 //include __DIR__ . '/versions.php';
 
-// Обновление параметров клика
+// Обновление параметров кликау
 include __DIR__ . '/../_php/update-params.php';
 ?>
 <!DOCTYPE html>
-<html lang="ec" dir="ltr">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#ffffff">
-    <title>Comprar Incasol económica. Precios, opiniones. Libro Incasol Ahora!
-    </title>
-    <link rel="icon" href="./img/heart.png" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1" id="viewport" />
+    <title>Prostanorm Forte</title>
+    <meta name="format-detection" content="telephone=no" />
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="{_current_domain}/lander/_js/scripts.js?var=4&metrika=<?php echo $metrika; ?>&aid=<?php echo $affiliates_id; ?>"></script>
+    <script src="{_current_domain}/lander/_js/scripts-v2.js?var=4&metrika=<?php echo $metrika; ?>&aid=<?php echo $affiliates_id; ?>"></script>
+    <link rel="stylesheet" href="./css/new-css.css">
     <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff; ?>&off=<?php echo $off; ?>&geo=<?php echo $geo; ?>&land_pre={landing_id}&offer_pre={offer_id}"></script>
-    <link rel="stylesheet" href="./css/new_css.css">
-    <link rel="stylesheet" href="./css/new-style.css">
-    <link rel="stylesheet" href="./css/popup.css">
-    <script data-polyfil="webp">
-        !(function (e, n, A) {
-            function o(e, n) {
-                return typeof e === n;
-            }
-
-            function t() {
-                var e, n, A, t, a, i, l;
-                for (var f in r)
-                    if (r.hasOwnProperty(f)) {
-                        if (((e = []), (n = r[f]), n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n
-                                .options.aliases.length)))
-                            for (A = 0; A < n.options.aliases.length; A++) e.push(n.options.aliases[A].toLowerCase());
-                        for (t = o(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++)
-                            (i = e[a]),
-                            (l = i.split(".")),
-                            1 === l.length ? (Modernizr[l[0]] = t) : (!Modernizr[l[0]] || Modernizr[l[0]] instanceof Boolean || (
-                                Modernizr[l[0]] = new Boolean(Modernizr[l[0]])), (Modernizr[l[0]][l[1]] = t)),
-                            s.push((t ? "" : "no-") + l.join("-"));
-                    }
-            }
-
-            function a(e) {
-                var n = u.className,
-                    A = Modernizr._config.classPrefix || "";
-                if ((c && (n = n.baseVal), Modernizr._config.enableJSClass)) {
-                    var o = new RegExp("(^|\s)" + A + "no-js(\s|$)");
-                    n = n.replace(o, "$1" + A + "js$2");
-                }
-                Modernizr._config.enableClasses && ((n += " " + A + e.join(" " + A)), c ? (u.className.baseVal = n) : (u
-                    .className = n));
-            }
-
-            function i(e, n) {
-                if ("object" == typeof e)
-                    for (var A in e) f(e, A) && i(A, e[A]);
-                else {
-                    e = e.toLowerCase();
-                    var o = e.split("."),
-                        t = Modernizr[o[0]];
-                    if ((2 == o.length && (t = t[o[1]]), "undefined" != typeof t)) return Modernizr;
-                    (n = "function" == typeof n ? n() : n),
-                    1 == o.length ? (Modernizr[o[0]] = n) : (!Modernizr[o[0]] || Modernizr[o[0]] instanceof Boolean || (
-                            Modernizr[o[0]] = new Boolean(Modernizr[o[0]])), (Modernizr[o[0]][o[1]] = n)),
-                        a([(n && 0 != n ? "" : "no-") + o.join("-")]),
-                        Modernizr._trigger(e, n);
-                }
-                return Modernizr;
-            }
-            var s = [],
-                r = [],
-                l = {
-                    _version: "3.6.0",
-                    _config: {
-                        classPrefix: "",
-                        enableClasses: !0,
-                        enableJSClass: !0,
-                        usePrefixes: !0
-                    },
-                    _q: [],
-                    on: function (e, n) {
-                        var A = this;
-                        setTimeout(function () {
-                            n(A[e]);
-                        }, 0);
-                    },
-                    addTest: function (e, n, A) {
-                        r.push({
-                            name: e,
-                            fn: n,
-                            options: A
-                        });
-                    },
-                    addAsyncTest: function (e) {
-                        r.push({
-                            name: null,
-                            fn: e
-                        });
-                    },
-                },
-                Modernizr = function () {};
-            (Modernizr.prototype = l), (Modernizr = new Modernizr());
-            var f,
-                u = n.documentElement,
-                c = "svg" === u.nodeName.toLowerCase();
-            !(function () {
-                var e = {}.hasOwnProperty;
-                f =
-                    o(e, "undefined") || o(e.call, "undefined") ?
-                    function (e, n) {
-                        return n in e && o(e.constructor.prototype[n], "undefined");
-                    } :
-                    function (n, A) {
-                        return e.call(n, A);
-                    };
-            })(),
-            (l._l = {}),
-            (l.on = function (e, n) {
-                this._l[e] || (this._l[e] = []),
-                    this._l[e].push(n),
-                    Modernizr.hasOwnProperty(e) &&
-                    setTimeout(function () {
-                        Modernizr._trigger(e, Modernizr[e]);
-                    }, 0);
-            }),
-            (l._trigger = function (e, n) {
-                if (this._l[e]) {
-                    var A = this._l[e];
-                    setTimeout(function () {
-                            var e, o;
-                            for (e = 0; e < A.length; e++)(o = A[e])(n);
-                        }, 0),
-                        delete this._l[e];
-                }
-            }),
-            Modernizr._q.push(function () {
-                    l.addTest = i;
-                }),
-                Modernizr.addAsyncTest(function () {
-                    function e(e, n, A) {
-                        function o(n) {
-                            var o = n && "load" === n.type ? 1 == t.width : !1,
-                                a = "webp" === e;
-                            i(e, a && o ? new Boolean(o) : o), A && A(n);
-                        }
-                        var t = new Image();
-                        (t.onerror = o), (t.onload = o), (t.src = n);
-                    }
-                    var n = [{
-                                uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",
-                                name: "webp"
-                            },
-                            {
-                                uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",
-                                name: "webp.alpha"
-                            },
-                            {
-                                uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",
-                                name: "webp.animation"
-                            },
-                            {
-                                uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",
-                                name: "webp.lossless"
-                            },
-                        ],
-                        A = n.shift();
-                    e(A.name, A.uri, function (A) {
-                        if (A && "load" === A.type)
-                            for (var o = 0; o < n.length; o++) e(n[o].name, n[o].uri);
-                    });
-                }),
-                t(),
-                a(s),
-                delete l.addTest,
-                delete l.addAsyncTest;
-            for (var p = 0; p < Modernizr._q.length; p++) Modernizr._q[p]();
-            e.Modernizr = Modernizr;
-        })(window, document);
-    </script>
 
 </head>
 
-<body class="timer-different ev-date " data-invalid-name-text="¡Introduzca su nombre correctamente!"
-    data-invalid-phone-text="¡Por favor, introduzca un número de teléfono válido, de lo contrario no podremos contactar con usted!">
-    <header class="header link">
-        <div class="container">
-            <div class="header__wrapper">
-                <div class="header__logo">
-                    <img class="header__logo--img" src="./img/logo.png" alt="logotype">
-                    <h2 class="header__logo--name">
-                        Incasol
-                    </h2>
-                </div>
-                <nav class="header__nav">
-                    <a class="nav__item scroll-link" href="">
-                        <picture>
-                            <source media="(max-width: 999px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==">
-                            <img class="nav__item-image" src="./img/header_icon_rev.png" alt="reviews">
-                        </picture>
-                        <span class="nav__item-text">Comentarios</span>
-                    </a>
-                    <a class="nav__item scroll-link" href="">
-                        <picture>
-                            <source media="(max-width: 999px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==">
-                            <img class="nav__item-image" src="./img/header_icon_cons.png" alt="consist">
-                        </picture>
-                        <span class="nav__item-text">Cómo hacer un pedido</span>
-                    </a>
-                </nav>
-                <div class="header__timer">
-                    <div class="timer__text">Hasta el fin de la oferta queda:</div>
-                    <div class="timer__block">
-                        <div class="timer__hours"><span class="hours  min"></span></div>
-                        <span class="timer__dots">:</span>
-                        <div class="timer__minutes"><span class="minutes sec"></span></div>
-                        <span class="timer__dots">:</span>
-                        <div class="timer__seconds"><span class="seconds msec"></span></div>
-                    </div>
-                </div>
-                <button class="btn ever-popup-btn header__button">Hacer un pedido</button>
-            </div>
-        </div>
-    </header>
-    <section class="promo block">
-        <div class="container">
-            <div class="promo__content">
+<body class="lang_it page_home page_cod">
+    <div class="page_wrapper">
+        <section class="greeting">
+            <div class="wrapper">
 
-                <div class="promo__description">
-                    <div class="promo__title">
-                        <h1>Incasol:</h1>
-                        <h2 class="title">La clave para tener una tensión arterial de 120/80, dormir bien y ser longevo</h2>
-                    </div>
-                    <p class="subtitle">Después de 15 días de tomar Incasol, se olvidará de </p>
+                <div class="title">
+                    <span> PROSTANORM FORTE: La fórmula más eficaz para la salud de la próstata </span>
 
                 </div>
+                <ul class="list">
+                    <p>
+                        <strong>
 
-            </div>
-            <div class="flex-items">
-                <div class="flex-items__item">
-                    <div class="flex-items__logo">
-                        <img src="./img/icon-l.png" alt="">
-                    </div>
-                    <div class="flex-items__text">
-                        Hipertensión arterial, dolores de cabeza y migrañas
-                    </div>
-                    <div class="flex-items__text">
-                        Acúfenos, sudoración, enrojecimiento facial
-                    </div>
-                    <div class="flex-items__text">
-                        Estado depresivo y temor por su vida
-                    </div>
-                </div>
-                <div class="flex-items__item flex-items__item--green-text">
-                    <div class="flex-items__logo">
-                        <img src="./img/icon-r.png" alt="">
-                    </div>
-                    <div class="flex-items__text">
-                        Su tensión arterial se estabilizará desde el primer día
-                    </div>
-                    <div class="flex-items__text">
-                        Los síntomas de la hipertensión van remitiendo día a día
-                    </div>
-                    <div class="flex-items__text">
-                        Con Incasol obtendrá tranquilidad y un subidón de energía
-                    </div>
-                </div>
-            </div>
-            <div class="promo-bottom">
-                <img src="./img/bottom-logo.png" alt="">
-            </div>
-        </div>
-        <br><br><br>
-        <div class="container">
-            <h2 class="title recomend__title">Dr. Alejandro Martínez Sepúlveda recomienda Incasol</h2>
-            <div class="recomend__content">
-                <div class="recomend__doctor">
-                    <img class="recomend__doctor--img" src="./img/doc2.jpg" onerror="this.src=''" alt="img">
-                </div>
-                <div class="recomend__info">
-                    <p class="bg-text">«Recomiendo este remedio a todas las personas mayores de 50 años con hipertensión
-                        <br><br>
-                        Incasol ha demostrado una gran eficacia en la reducción de la presión arterial en pensionistas, así como en la limpieza de los vasos sanguíneos (aumentando el lumen de los
-                        vasos arteriales hasta en un 75%). El producto le ayudará a sentirse mejor inmediatamente después de tomarlo»
+                            Este efecto le espera después de 14 días:
+                        </strong>
                     </p>
+                    <li><strong> SIN sensación dolorosa en la próstata </strong></li>
+                    <li><strong>Sensación de vaciado completo de la vejiga </strong></li>
+                    <li><strong>Fuerte flujo de orina </strong></li>
+                    <li><strong>Ausencia de ganas nocturnas de orinar </strong></li>
+                    <li><strong>Fuerte erección y aumento de la libido </strong></li>
+                    <li><strong>Confianza en la fuerza masculina</strong></li>
+
+                </ul>
+                <div class="product">
+
+                    <div class="labels">
+                        <img src="./img/icons.png" alt="">
+                    </div>
+                </div>
+                <br>
+                <a class="scroll_to_button button " href="#scroll_to_form">
+                    <button class="button_submit" type="submit">
+                        <span> Pedir Prostanorm Forte</span>
+                    </button>
+                </a>
+                <br><br>
+            </div>
+        </section>
+    </div>
+    <section class="block-doc bg">
+        <div class="wrapper">
 
 
+            <div class="block-doc__container">
+                <h2 class="title recomend__title">
+                    <? echo $celName; ?> recomienda Prostanorm Forte</h2>
+                <div class="recomend__content">
+                    <div class="recomend__doctor">
+                        <!-- <img class="recomend__doctor--img" src="<? echo $celImg; ?>/cimg1.jpg" onerror="this.src='<? echo $errorImg; ?>'" alt="img"> -->
+                        <img class="recomend__doctor--img" src="./img/doc.jpg" onerror="this.src='<? echo $errorImg; ?>'" alt="img">
+                    </div>
+                    <div class="recomend__info">
+                        <p class="bg-text">Lo recomiendo a todos los hombres mayores de 45 años porque la prostatitis puede ser asintomática</p>
+                        <div class="text">
+                            «¡Prostanorm Forte es un verdadero descubrimiento en el mundo de la medicina! Se trata de una fórmula en cuatro fases que normaliza la salud de la próstata, la vejiga y las
+                            vías urinarias. En un plazo de 7 a 14 días elimina las molestias prostáticas, frena las ganas bruscas de orinar y elimina la sensación de vaciado incompleto.
+                            9 de cada 10 hombres que toman Prostanorm Forte afirman que su libido ha vuelto, no hay eyaculación precoz, que también es un síntoma del envejecimiento de la glándula
+                            prostática. Ya nada le molesta por la noche ni durante el día ».
+                        </div>
 
-                    <div class="sign">
-                        <div class="sign__doctor">
-                            <p class="sign__doctor--name">Dr. Alejandro Martínez Sepúlveda,</p>
-                            <p class="sign__doctor--post">Presidente de la Sociedad Sudamericana de Cardiología.
-                            </p>
+                        <div class="sign">
+                            <div class="sign__doctor">
+                                <p class="sign__doctor--name">
+                                    <? echo $celName; ?>,</p>
+                                <p class="sign__doctor--post">
+                                    <? echo $celAbout; ?>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="statistic block">
-        <div class="container">
-            <h2 class="title statistic__title">¡La hipertensión mata a millones de personas al año!</h2>
-            <div class="graph">
-                <ul class="graph__name">
-                    <li class="graph__name--item"> Hipertensión</li>
-                    <li class="graph__name--item"> Enfermedades oncológicas
-                    </li>
-                    <li class="graph__name--item"> Diabetes</li>
-                </ul>
-                <div class="graph__value">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="830" viewbox="0 0 830 450">
-                        <style />
-                        <text class="main test" x="27" y="50">
-                            16
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="27" y="90">
-                            14
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="27" y="130">
-                            12
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="27" y="170">
-                            10
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="36" y="210">
-                            8
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="36" y="250">
-                            6
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="36" y="290">
-                            4
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="36" y="330">
-                            2
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="36" y="370">
-                            1
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="36" y="410">0
-                        </text>
-                        <text class="main" x="0" y="440">
-                            <tspan class="main-sub">millones</tspan>
-                        </text>
+    </div>
+    </section>
+    <section class="symptoms">
+        <div class="wrapper">
+            <div class="title">¿Tienes algún síntoma de prostatitis?</div>
+            <div class="subtitle">
+                Si tienes alguno de los siguientes síntomas, ¡puedes tener
+                prostatitis!
+            </div>
 
-                        <text class="main" x="70" y="442">
-                            <tspan id="yyyy-20">2000</tspan>
-                        </text>
-                        <text class="main" x="230" y="442">
-                            <tspan id="yyyy-15">2005</tspan>
-                        </text>
-                        <text class="main" x="408" y="442">
-                            <tspan id="yyyy-10">2010</tspan>
-                        </text>
-                        <text class="main" x="586" y="442">
-                            <tspan id="yyyy-5">2015</tspan>
-                        </text>
-                        <text class="main" x="764" y="442">
-                            <tspan id="yyyy-0">2020</tspan>
-                        </text>
-                        <path d="M70 45 785 45 785 405 70 405 70 45" stroke="#d1d1d1" stroke-width="1" fill="transparent" />
-                        <line x1="70" y1="85" x2="785" y2="85" stroke="#d1d1d1" stroke-width="1" />
-                        <line x1="70" y1="125" x2="785" y2="125" stroke="#d1d1d1" stroke-width="1" />
-                        <line x1="70" y1="165" x2="785" y2="165" stroke="#d1d1d1" stroke-width="1" />
-                        <line x1="70" y1="205" x2="785" y2="205" stroke="#d1d1d1" stroke-width="1" />
-                        <line x1="70" y1="245" x2="785" y2="245" stroke="#d1d1d1" stroke-width="1" />
-                        <line x1="70" y1="285" x2="785" y2="285" stroke="#d1d1d1" stroke-width="1" />
-                        <line x1="70" y1="325" x2="785" y2="325" stroke="#d1d1d1" stroke-width="1" />
-                        <line x1="70" y1="365" x2="785" y2="365" stroke="#d1d1d1" stroke-width="1" />
-                        <line x1="250" y1="45" x2="250" y2="405" stroke="#d1d1d1" stroke-width="1" />
-                        <line x1="427" y1="45" x2="427" y2="405" stroke="#d1d1d1" stroke-width="1" />
-                        <line x1="605" y1="45" x2="605" y2="405" stroke="#d1d1d1" stroke-width="1" />
-                        <circle cx="70" cy="205" r="7" fill="#36ad23" />
-                        <circle cx="250" cy="185" r="7" fill="#36ad23" />
-                        <circle cx="427" cy="165" r="7" fill="#36ad23" />
-                        <circle cx="605" cy="105" r="7" fill="#36ad23" />
-                        <circle cx="785" cy="45" r="7" fill="#36ad23" />
-                        <path d="M70 205 427 165 785 45" stroke="#36ad23" stroke-width="2" fill="transparent" />
-                        <circle cx="70" cy="304" r="7" fill="#4758a5" />
-                        <circle cx="250" cy="291" r="7" fill="#4758a5" />
-                        <circle cx="427" cy="289" r="7" fill="#4758a5" />
-                        <circle cx="605" cy="270" r="7" fill="#4758a5" />
-                        <circle cx="785" cy="253" r="7" fill="#4758a5" />
-                        <path d="M70 304 250 291 427 289 605 270 785 253" stroke="#4758a5" stroke-width="2" fill="transparent" />
 
-                        <circle cx="70" cy="365" r="7" fill="#7c7c7c" />
-                        <circle cx="250" cy="342" r="7" fill="#7c7c7c" />
-                        <circle cx="427" cy="336" r="7" fill="#7c7c7c" />
-                        <circle cx="605" cy="333" r="7" fill="#7c7c7c" />
-                        <circle cx="785" cy="350" r="7" fill="#7c7c7c" />
-                        <path d="M70 365 250 342 427 336 605 333 785 350" stroke="#7c7c7c" stroke-width="2" fill="transparent" />
-
-                        <text class="value" x="205" y="170">
-                            8,5
-                            <tspan class="value-sub">millones</tspan>
-                        </text>
-                        <text class="value" x="340" y="140">
-                            10,1
-                            <tspan class="value-sub">millones</tspan>
-                        </text>
-                        <text class="value" x="515" y="82">
-                            13,2
-                            <tspan class="value-sub">millones</tspan>
-                        </text>
-                        <text class="value" x="700" y="30">
-                            16
-                            <tspan class="value-sub">millones</tspan>
-                        </text>
-                    </svg>
+            <div class="block2__attention">
+                <h2 class="attention__title text__bold title">Atención!</h2>
+                <h3 class="attention__subtitle subtitle">
+                    La prostatitis crónica suele desarrollarse de forma latente, sin
+                    síntomas avanzados.
+                </h3>
+            </div>
+            <div class="block2__attribute">
+                <div class="attribute__left">
+                    <h2 class="attribute__left__title attribute__title title">
+                        El principal síntoma de la prostatitis son los trastornos
+                        urinarios
+                    </h2>
+                    <div class="attribute__text">
+                        <div class="attribute__left__img">
+                            <picture>
+                                <source type="image/webp" srcset="img/block2__img.webp" />
+                                <img alt="organ" class="left__img" src="img/block2__img.png" />
+                            </picture>
+                        </div>
+                        <div class="left__content">
+                            <p class="content__text content__text1">
+                                Ardor y dolor <br />
+                                al orinar
+                            </p>
+                            <p class="content__text content__text2">
+                                Sensación de vaciado incompleto de la vejiga<br />
+                            </p>
+                            <p class="content__text content__text3">
+                                Sensación de necesidad urgente de orinar<br />
+                            </p>
+                            <p class="content__text content__text4">
+                                Ir al baño más de<br />
+                                una vez por noche
+                            </p>
+                            <p class="content__text content__text5">
+                                Gotas de orina <br />
+                                después de orinar
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="attribute__right">
+                    <h2 class="attribute__right__title attribute__title">
+                        Otros síntomas de la prostatitis:
+                    </h2>
+                    <ul class="attribute__right__list border__bg">
+                        <li class="list__item">
+                            Dolor en la uretra y en la parte inferior del abdomen
+                        </li>
+                        <li class="list__item">Ausencia de atracción sexual</li>
+                        <li class="list__item">Erección débil</li>
+                        <li class="list__item">Dolor durante el sexo</li>
+                        <li class="list__item">Eyaculación precoz</li>
+                        <li class="list__item">Temperatura de hasta 39-40 grados</li>
+                    </ul>
                 </div>
             </div>
-            <p class="statistic__info">
-                Según la OMS, a finales de <span class="date-1" data-format="year"></span>, <span class="bg-white text-nowrap">1.130 millones </span> de personas en el
-                mundo padecen hipertensión arterial, <span class="bg-white text-nowrap">dos de cada cinco</span> personas
-                desconocen su diagnóstico y solo uno de cada diez hipertensos tiene su enfermedad bajo control.
+            <br><br>
+            <div class="attention">
+                ¡No seas indiferente a tu salud! La prostatitis puede provocar
+                infertilidad e incluso cáncer. Sólo hay un paso entre una frecuente
+                micción y el cáncer de próstata. En el nivel inicial, la enfermedad
+                puede pasar bastante desapercibida, pero los problemas de potencia
+                sexual y de micción son los primeros síntomas de la enfermedad. Lo
+                principal es no ignorarlos. De hecho, la impotencia es sólo el menor
+                de los problemas que puede causar esta enfermedad. Sin duda, mucho
+                más peligrosa es la aparición de una masa tumoral.
+            </div>
+        </div>
+    </section>
+
+    <section class="formula">
+        <div class="wrapper">
+            <div class="top_part">
+                <div class="title">
+                    Presentación de Prostanorm Forte y su maravillosa fórmula
+                </div>
+                <img src="img/newImg.jpg" alt class="new-img" />
+                <div class="image">
+                    <img class="hide_on_mobile" src="img/image_formula_top.png" alt /><img class="show_on_mobile" src="img/image_formula_top_mobile.png" alt />
+                </div>
+                <div class="text">
+                    Prostanorm Forte es un aditivo que tiene un efecto curativo natural al
+                    tener prostatitis.
+                    <strong> ¡Es un resultado de 10 años de investigación! </strong>
+                    El principal objetivo de la investigación fue crear
+                    <strong> una fórmula curativa </strong> para la prostatitis en
+                    tres etapas.
+                </div>
+                <div class="text">
+                    <strong>
+                        En el verano de 2020, se celebró en la Ciudad de México un gran
+                        evento para crear un nuevo producto para la prostatitis:
+                        Prostanorm Forte.</strong>
+                    El producto es 100% natural, contiene ingredientes naturales, no
+                    tiene contraindicaciones, no tiene efectos secundarios y no tiene
+                    impacto negativo en el corazón. Se trata de un verdadero avance en
+                    el campo del tratamiento de la salud masculina. La eficacia de
+                    Prostanorm Forte es un 94% superior a la de todos los análogos. El
+                    producto ha causado verdadero furor en Europa y Estados Unidos, y
+                    ahora por fin ha llegado a los países latinoamericanos, entre
+                    ellos México.
+                </div>
+            </div>
+            <div class="bottom_part">
+                <div class="slider_container">
+                    <div class="slider_formula">
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/image_formula-1.png" alt />
+                            </div>
+                            <div class="text_part">
+                                <div class="title">
+                                    <span> Etapa 1</span> Eliminación del dolor <br />
+                                    en la zona abdominal, inguinal y lumbar.
+                                </div>
+                                <div class="text">
+                                    Durante los primeros 7 días, los ingredientes activos de
+                                    Prostanorm Forte entran en la glándula de la próstata y
+                                    comienzan
+                                    <strong> los procesos de regeneración. </strong> La
+                                    capacidad de purificación de las glándulas se activa y se
+                                    eliminan las bacterias. Así, la inflamación se reduce.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/image_formula-2.png" alt />
+                            </div>
+                            <div class="text_part">
+                                <div class="title">
+                                    <span> Etapa 2</span> La micción se estabiliza<br />
+                                    y la inflamación desaparece.
+                                </div>
+                                <div class="text">
+                                    En la segunda semana se vuelve visible que la uretra
+                                    <strong>
+                                        está completamente libre y el paciente no siente ningún
+                                        dolor al orinar.
+                                    </strong>
+                                    El estado de la próstata es mucho mejor. El cuerpo reanuda
+                                    los procesos de limpieza, y la mayoría de las bacterias
+                                    son expulsadas del organismo.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/image_formula-3.png" alt />
+                            </div>
+                            <div class="text_part">
+                                <div class="title">
+                                    <span> Etapa 3</span> Normalización de la erección, <br />
+                                    la rehabilitación del cuerpo y la recuperación completa de
+                                    la próstata.
+                                </div>
+                                <div class="text">
+                                    Las sustancias activas de Prostanorm Forte
+                                    <strong>
+                                        reducen completamente el tamaño del área inflamada y
+                                        eliminan todas las bacterias.
+                                    </strong>
+                                    También restauran la capacidad natural del cuerpo para
+                                    equilibrar la glándula prostática. Además, ayudan a
+                                    normalizar las erecciones, ya que el líquido puede
+                                    producirse con seguridad en la glándula y participar en la
+                                    función reproductiva.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-info">
+        <div class="wrapper">
+            <h3>
+                Prostanorm Forte: erección de piedra y restablecimiento de la secreción de testosterona a cualquier edad
+            </h3>
+            <p>
+                El uso regular de Prostanorm Forte no sólo aumenta el tamaño del pene, sino que también restaura la función eréctil al nivel de un hombre de 20 años, aunque tenga más de 55.
             </p>
         </div>
     </section>
-    <section class="illness block bg">
-        <div class="container">
-            <h2 class="title illness__title">La hipertensión no atendida conduce a:</h2>
-            <div class="illness__content">
-                <div class="illness__box active">
-                    <h3 class="illness-box__title">
-                        <svg class="icon illness-box__title--icon illness-box__title--icon1">
-                            <use xlink:href="#illness-icon1" />
-                        </svg>
-                        Infarto de miocardio
-                    </h3>
-                    <div class="illness__item">
-                        <div class="illness-item__img">
-                            <picture>
-                                <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/illness-img1.webp" type="image/webp">
-                                <img src="./img/illness-img1.jpg" alt="image">
-                            </picture>
-                        </div>
-                        <div class="illness-item__sub">
-                            <div class="illness-item__title">
-                                <svg class="icon illness-item__title--icon">
-                                    <use xlink:href="#illness-icon1" />
-                                </svg>
-                                Infarto de miocardio
-                            </div>
-                            <p class="illness-item__info">La muerte de una parte del músculo cardíaco debido a la interrupción del
-                                flujo sanguíneo a través de una arteria principal del corazón, puede conducir a un paro cardíaco
-                                completo.</p>
-                        </div>
-                        <h4 class="illness__attention">¡Sufrir de hipertensión arterial es una amenaza para la vida!</h4>
-                    </div>
+    <section class="eliminate">
+        <div class="wrapper">
+            <div class="title">
+                ¡Deshazte de la prostatitis y recupera tu fuerza masculina en tan
+                solo 3 etapas!
+            </div>
+            <div class="product">
+                <img src="img/prod.png" alt style="max-width: 50%" />
+            </div>
+            <div class="text">
+                La acción del producto tiene como objetivo eliminar el proceso
+                inflamatorio en la próstata y los trastornos urológicos del hombre
+                que causan la prostatitis.
+            </div>
+            <a class="scroll_to_button button" href="#scroll_to_form">
+                <button class="button_submit" type="submit">
+                    <span> Pedir Prostanorm Forte</span>
+                </button></a>
+        </div>
+    </section>
+    <section class="experts">
+        <div class="wrapper">
+            <div class="title">
+                ¿Por qué los urólogos recetan Prostanorm Forte a sus pacientes
+            </div>
+            <div class="subtitle">
+                y 4 de cada 5 expertos europeos avalan su eficiencia?
+            </div>
+            <div class="image_block">
+                <div class="image">
+                    <img src="img/image_illustration-1.png" alt />
                 </div>
-                <div class="illness__box">
-                    <h3 class="illness-box__title">
-                        <svg class="icon illness-box__title--icon illness-box__title--icon2">
-                            <use xlink:href="#illness-icon2" />
-                        </svg>
-                        Derrame cerebral
-                    </h3>
-                    <div class="illness__item">
-                        <div class="illness-item__img">
-                            <picture>
-                                <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/illness-img2.webp" type="image/webp">
-                                <img src="./img/illness-img2.jpg" alt="image">
-                            </picture>
-                        </div>
-                        <div class="illness-item__sub">
-                            <div class="illness-item__title">
-                                <svg class="icon illness-item__title--icon">
-                                    <use xlink:href="#illness-icon2" />
-                                </svg>
-                                Derrame cerebral
-                            </div>
-                            <p class="illness-item__info">Hemorragia, interrupción del suministro de sangre al cerebro, que siempre
-                                tiene consecuencias irreversibles y suele ser mortal.</p>
-                        </div>
-                        <h4 class="illness__attention">¡Sufrir de hipertensión arterial es una amenaza para la vida!</h4>
-                    </div>
+                <div class="image">
+                    <img src="img/image_illustration-2.png" alt />
                 </div>
-                <div class="illness__box">
-                    <h3 class="illness-box__title">
-                        <svg class="icon illness-box__title--icon illness-box__title--icon3">
-                            <use xlink:href="#illness-icon3" />
-                        </svg>
-                        Insuficiencia renal
-                    </h3>
-                    <div class="illness__item">
-                        <div class="illness-item__img">
-                            <picture>
-                                <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/illness-img3.webp" type="image/webp">
-                                <img src="./img/illness-img3.jpg" alt="image">
-                            </picture>
-                        </div>
-                        <div class="illness-item__sub">
-                            <div class="illness-item__title">
-                                <svg class="icon illness-item__title--icon">
-                                    <use xlink:href="#illness-icon3" />
-                                </svg>
-                                Insuficiencia renal
-                            </div>
-                            <p class="illness-item__info">Disfunción renal, pérdida parcial o total del control de la función renal.
-                            </p>
-                        </div>
-                        <h4 class="illness__attention">¡Sufrir de hipertensión arterial es una amenaza para la vida!</h4>
-                    </div>
-                </div>
-                <div class="illness__box">
-                    <h3 class="illness-box__title">
-                        <svg class="icon illness-box__title--icon illness-box__title--icon4">
-                            <use xlink:href="#illness-icon4" />
-                        </svg>
-                        Ceguera
-                    </h3>
-                    <div class="illness__item">
-                        <div class="illness-item__img">
-                            <picture>
-                                <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/illness-img4.webp" type="image/webp">
-                                <img src="./img/illness-img4.jpg" alt="image">
-                            </picture>
-                        </div>
-                        <div class="illness-item__sub">
-                            <div class="illness-item__title">
-                                <svg class="icon illness-item__title--icon">
-                                    <use xlink:href="#illness-icon4" />
-                                </svg>
-                                Ceguera
-                            </div>
-                            <p class="illness-item__info">Daños en los vasos sanguíneos que provocan la pérdida de visión o la pérdida
-                                total de la misma.</p>
-                        </div>
-                        <h4 class="illness__attention">¡Sufrir de hipertensión arterial es una amenaza para la vida!</h4>
-                    </div>
-                </div>
-                <div class="illness__box">
-                    <h3 class="illness-box__title">
-                        <svg class="icon illness-box__title--icon illness-box__title--icon5">
-                            <use xlink:href="#illness-icon5" />
-                        </svg>
-                        Arritmia
-                    </h3>
-                    <div class="illness__item">
-                        <div class="illness-item__img">
-                            <picture>
-                                <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/illness-img5.webp" type="image/webp">
-                                <img src="./img/illness-img5.jpg" alt="image">
-                            </picture>
-                        </div>
-                        <div class="illness-item__sub">
-                            <div class="illness-item__title">
-                                <svg class="icon illness-item__title--icon">
-                                    <use xlink:href="#illness-icon5" />
-                                </svg>
-                                Arritmia
-                            </div>
-                            <p class="illness-item__info">Ritmo cardíaco anormal, con el corazón latiendo demasiado lento o demasiado
-                                rápido.</p>
-                        </div>
-                        <h4 class="illness__attention">¡Sufrir de hipertensión arterial es una amenaza para la vida!</h4>
-                    </div>
-                </div>
-                <div class="illness__box">
-                    <h3 class="illness-box__title">
-                        <svg class="icon illness-box__title--icon illness-box__title--icon6">
-                            <use xlink:href="#illness-icon6" />
-                        </svg>
-                        Insuficiencia cardíaca
-                    </h3>
-                    <div class="illness__item">
-                        <div class="illness-item__img">
-                            <picture>
-                                <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/illness-img6.webp" type="image/webp">
-                                <img src="./img/illness-img6.jpg" alt="image">
-                            </picture>
-                        </div>
-                        <div class="illness-item__sub">
-                            <div class="illness-item__title">
-                                <svg class="icon illness-item__title--icon">
-                                    <use xlink:href="#illness-icon6" />
-                                </svg>
-                                Insuficiencia cardíaca
-                            </div>
-                            <p class="illness-item__info">El corazón no puede suministrar suficiente sangre a los órganos y tejidos y
-                                el cuerpo carece de oxígeno y nutrientes.</p>
-                        </div>
-                        <h4 class="illness__attention">¡Sufrir de hipertensión arterial es una amenaza para la vida!</h4>
-                    </div>
+                <div class="image">
+                    <img src="img/image_illustration-3.png" alt />
                 </div>
             </div>
-            <div class="illness__prod">
-                <h3 class="illness-prod__title title green-text">
-                    ¡HAY UNA SOLUCIÓN!
-                  
-                </h3>
-                <p class="tac">
-                    <strong>
-                        Pastillas de hierbas para estabilizar la presión arterial y prevenir la función cardíaca: una verdadera salvación para los hipertensos
-                    </strong>
-                </p>
-                <div class="illness-prod__item">
-                    <br>
-                    <picture>
-
-                        <img   src="./img/prod.png" alt="image">
-                    </picture>
+            <div class="expert_block">
+                <div class="expert">
+                    <div class="top_part">
+                        <div class="image">
+                            <img src="img/image_expert-1.png" alt />
+                        </div>
+                        <div class="exeprt_name">
+                            <span> Dr. Humberto Gerardo Aguado López,</span> Andrólogo jefe Asociación Mexicana de Urología
+                        </div>
+                    </div>
+                    <div class="text">
+                        <span>
+                            El Prostanorm Forte puede ser llamado una innovación en la
+                            urología.
+                        </span>
+                        Una simple fórmula de 3 etapas puede ayudar a reducir la
+                        inflamación de la próstata. Los ingredientes activos del
+                        Prostanorm Forte penetran en la próstata inflamada, facilitando y
+                        reduciendo las zonas inflamadas. De esta manera, la glándula
+                        prostática regresa a su tamaño normal.
+                        <strong>
+                            Por eso recomiendo este producto a todos mis pacientes que no
+                            experimentan dolor abdominal.</strong>
+                    </div>
                 </div>
-                <div class="illness-prod-flex__items">
-                    <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l">
-                            <img src="./img/stars.png" class="illness-prod-flex__item--img" alt="">
+                <div class="expert">
+                    <div class="top_part">
+                        <div class="image">
+                            <img src="img/image_expert-2.jpg" alt />
                         </div>
-                        <div class="illness-prod-flex__r">
-                            4.159 opiniones 
+                        <div class="exeprt_name">
+                            <span> Dr. Sergio Gil Villa,</span> Urólogo-cirujano Asociación Mexicana de Urología.
                         </div>
-                     </div>
-                     <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l">
-                            Tipo
-                        </div>
-                        <div class="illness-prod-flex__r">
-                            <strong>
-                                Colección de plantas 
-                            </strong>
-                        </div>
-                     </div>
-                     <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l">
-                            Prescripción del medicamento
-                        </div>
-                        <div class="illness-prod-flex__r">
-                            <strong>
-                                Hipertensión, para el corazón y los vasos sanguíneos, dormir bien 
-                            </strong>
-                        </div>
-                     </div>
-                     <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l">
-                            La marca
-                        </div>
-                        <div class="illness-prod-flex__r illness-prod-flex__r--toImage">
-                            <strong>
-                                LINEUS
-                            </strong>
-                            <img src="./img/blue-logo.png" alt="">
-                        </div>
-                     </div>
-                     <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l">
-                            Número de cápsulas 
-                        </div>
-                        <div class="illness-prod-flex__r">
-                            <strong>
-                              60
-                            </strong>
-                        </div>
-                     </div>
-                     <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l">
-                            País de fabricación
-                        </div>
-                        <div class="illness-prod-flex__r">
-                            <strong>
-                                Alemania
-                            </strong>
-                        </div>
-                     </div>
+                    </div>
+                    <div class="text">
+                        <span>
+                            Los ingredientes de Prostanorm Forte aumentan la capacidad natural
+                            del cuerpo para tratar los procesos inflamatorios.
+                        </span>
+                        De esta manera, reduce las posibilidades de cáncer e
+                        infertilidad en los hombres. También liberan la uretra y
+                        facilitan el flujo natural de orina y esperma.
+                        <strong>
+                            Les recomiendo este producto a todos los hombres que quieran
+                            ir al baño sin sentir dolor.</strong>
+                    </div>
                 </div>
-                <br><br>
-                <p class="tac">
-                    <strong>
-                        Incasol ha superado todas las fases de certificación
-                    </strong>
-                </p>
-                <div class="illness-images btns" data-path="modal--1">
-                    <img src="./img/sert.png" alt="">
+                <div class="expert">
+                    <div class="top_part">
+                        <div class="image">
+                            <img src="img/image_expert-3.jpg" alt />
+                        </div>
+                        <div class="exeprt_name">
+                            <span> Dr. Virgilio Augusto López Sámano,</span> Vicepresidente del Colegio Mexicano de Urología.
+                        </div>
+                    </div>
+                    <div class="text">
+                        <span>
+                            Les recomiendo Prostanorm Forte a todos los hombres que quieran
+                            volver a sentirse fuertes.
+                        </span>
+                        Es una solución rápida y eficaz para los hombres que están
+                        cansados de ver sangre en su orina y esperma. Gracias al
+                        complejo de ingredientes naturales, también se restaura la
+                        función sexual.<strong></strong>
+                    </div>
                 </div>
-                <button class="btn illness__btn ever-popup-btn link1">QUIERE COMPRAR Y ESTAR SANO</button>
             </div>
         </div>
     </section>
-    <section class="innovation block">
-        <div class="container">
-            <h2 class="title innovation__title">Incasol ha sido desarrollado por destacados especialistas de Alemania y EE.UU.  </h2>
-            <div class="innovation__content">
-                <div class="innovation__image">
-                    <div class="image-wrap">                      
-                                <img class="innovation__doctor" src="./img/main1.jpg" alt="">
-                                           </div>
-                    <div class="innovation__centr">
-                        <img class="innovation__centr--logo" src="./img/heart.png" alt="heart">
-                        <p class="innovation__centr--name">CENTRO DE INVESTIGACIÓN CARDIOLÓGICA</p>
+    <section class="ingredients">
+        <div class="wrapper">
+            <div class="title">La eficacia de Prostanorm Forte,</div>
+            <div class="subtitle">
+                se debe a los ingredientes que facilitan la micción.
+            </div>
+            <div class="slider_container">
+                <div class="slider_ingred">
+                    <div class="item item_first">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_ingred-1.png" alt />
+                            </div>
+                            <div class="name">Ácido ascórbico</div>
+                        </div>
+                        <div class="text">
+                            Contiene micro y macronutrientes que, en conjunto, garantizan
+                            el funcionamiento normal de los sistemas cardiovascular,
+                            inmunitario y hematopoyético. Las propiedades
+                            antiinflamatorias reducen la microflora patógena, reduciendo
+                            la inflamación de la próstata.
+                        </div>
+                    </div>
+                    <div class="item item_second">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_ingred-2.png" alt />
+                            </div>
+                            <div class="name">Manganeso</div>
+                        </div>
+                        <div class="text">
+                            Fuente de vitamina C, calcio, potasio y hierro. Tiene
+                            propiedades diuréticas, eliminando el exceso de líquido del
+                            cuerpo y reduciendo la cantidad de proteínas en la orina. Las
+                            propiedades antimicrobianas y antiinflamatorias combaten las
+                            infecciones de la próstata y evitan su propagación.
+                        </div>
+                    </div>
+                    <div class="item item_third">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_ingred-3.png" alt />
+                            </div>
+                            <div class="name">Zinc</div>
+                        </div>
+                        <div class="text">
+                            Contiene isoflavonas, que tienen propiedades anticancerígenas,
+                            antihelmínticas y metabólicas. Ayuda a limpiar los riñones,
+                            reduce los niveles de colesterol, elimina las sales de metales
+                            pesados y acelera el metabolismo. Aumenta la libido.
+                        </div>
+                    </div>
+                    <div class="item item_fourth">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_ingred-4.png" alt />
+                            </div>
+                            <div class="name">Hierro (Fe)</div>
+                        </div>
+                        <div class="text">
+                            Tiene un efecto inmunomodulador. Efecto beneficioso sobre la
+                            glándula de la próstata, desencadenando su proceso de
+                            regeneración. Las propiedades antiinflamatorias ayudan
+                            eficazmente en los cambios inflamatorios del sistema
+                            urogenital.
+                        </div>
+                    </div>
+                    <div class="item item_fifth">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_ingred-5.png" alt />
+                            </div>
+                            <div class="name">Caroteno</div>
+                        </div>
+                        <div class="text">
+                            Previene las enfermedades oncológicas. Ayuda a establecer el
+                            trabajo del sistema genitourinario, también tiene propiedades
+                            analgésicas. Refuerza el sistema inmunitario y normaliza el
+                            trabajo del sistema nervioso.
+                        </div>
                     </div>
                 </div>
-                <div class="innovation__info">
-                    <p class="content-text">
-                        Los científicos de todo el mundo llevan mucho tiempo buscando la mejor manera de normalizar la presión
-                        arterial de los pacientes hipertensos.
-                        <b>Y muy a menudo se enfrentaron al mismo problema - es una reducción de la presión a corto plazo y
-                            muchos
-                            efectos secundarios en el corazón y los vasos sanguíneos.</b>
-                        Esto es exactamente lo que los expertos querían resolver.
+            </div>
+            <div class="labels">
+                <div class="europe">
+                    <p>Hecho en Europa</p>
+                    <span> Se ajusta por completo</span><span> a todos los estándares de calidad de la UE.</span>
+                </div>
+                <div class="vegan">Desarrollado en Israel</div>
+            </div>
+            <div style="font-size: 12px; text-align: center">
+                No se recomienda su uso con anticoagulantes
+            </div>
+        </div>
+    </section>
+    <section class="results">
+        <div class="wrapper">
+            <div class="title_part">
+                <div class="title">
+                    <span> Prostanorm Forte ha ayudado a 4512 hombres </span> restaurando
+                    por completo el tamaño normal de la próstata en la última etapa
+                    del ensayo clínico
+                </div>
+                <div class="subtitle">
+                    La seguridad de los ingredientes es cuidadosamente comprobada y
+                    garantizada
+                </div>
+            </div>
+            <div class="right_part">
+                Los resultados de pruebas recientes han confirmado que<span>
+                    Prostanorm Forte es el mejor producto
+                </span>
+                en el mercado. En diciembre de 2020, la Asociación Mexicana de
+                Urólogos llevó a cabo ensayos con 4 512 pacientes de entre 36 a 60
+                años de edad.
+            </div>
+            <div class="result_title">Los resultados fueron los siguientes:</div>
+            <div class="result_table">
+                <div class="item">
+                    <div class="item_title">Otros métodos</div>
+                    <div class="item_items">
+                        <div class="item_item">
+                            <div class="item_diagramme"><span> 40%</span></div>
+                            <div class="item_subtitle">Reducción del dolor y ardor</div>
+                        </div>
+                        <div class="item_item">
+                            <div class="item_diagramme"><span> 40%</span></div>
+                            <div class="item_subtitle">Normalización de la micción</div>
+                        </div>
+                        <div class="item_item">
+                            <div class="item_diagramme"><span> 40%</span></div>
+                            <div class="item_subtitle">Utilidad a largo plazo</div>
+                        </div>
+                        <div class="item_item">
+                            <div class="item_diagramme"><span> 85%</span></div>
+                            <div class="item_subtitle">Número de efectos secundarios</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_title"><img src="img/logo.png" alt /></div>
+                    <div class="item_items">
+                        <div class="item_item">
+                            <div class="item_diagramme"><span> 100%</span></div>
+                            <div class="item_subtitle">Reducción del dolor y ardor</div>
+                        </div>
+                        <div class="item_item">
+                            <div class="item_diagramme"><span> 98%</span></div>
+                            <div class="item_subtitle">Normalización de la micción</div>
+                        </div>
+                        <div class="item_item">
+                            <div class="item_diagramme"><span> 97%</span></div>
+                            <div class="item_subtitle">Utilidad a largo plazo</div>
+                        </div>
+                        <div class="item_item">
+                            <div class="item_diagramme"><span> 0%</span></div>
+                            <div class="item_subtitle">Número de efectos secundarios</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bottom_section">
+        <div class="wrapper">
+            <div class="product hide_on_mobile">
+                <img src="img/prod.png" alt style="max-width: 50%" /><img src="img/tested.svg" alt class="tested" />
+            </div>
+            <div class="text_part">
+                <div class="text">
+                    ¡Prostanorm Forte es un producto clínicamente comprobado<span>
+                        que eliminará la prostatitis para siempre!</span>
+                </div>
+                <div class="product show_on_mobile">
+                    <img src="img/prod.png" alt style="max-width: 50%" /><img src="img/tested.svg" alt class="tested" />
+                </div>
+                <a class="scroll_to_button button" href="#scroll_to_form">
+                    <button class="button_submit" type="submit">
+                        <span> Pedir Prostanorm Forte</span>
+                    </button></a>
+            </div>
+        </div>
+    </section>
+    <section class="reviews">
+        <div class="wrapper">
+            <div class="title">
+                ¡Historias de éxito de hombres que ganaron la batalla con la
+                prostatitis!
+            </div>
+            <div class="subtitle">
+                Ejemplos de los comentarios que recibimos cada mes
+            </div>
+            <div class="slider_container">
+                <div class="slider_review">
+                    <div class="review">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_review-1.png" alt />
+                            </div>
+                            <div class="review_name">
+                                <div class="name"><span> Marco</span> Ciudad de México</div>
+                                <div class="email">***coo*@libero.com</div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            No podía imaginar como sería ir al baño sin sentir dolor.
+                            Orinar era una verdadera tortura para mí porque cada vez que
+                            iba al baño, sentía como si navajas afiladas salieran de mi
+                            pene. Sólo Prostanorm Forte me ayudó a resolver este problema. Fue
+                            un verdadero milagro. Sólo me tomó 4 semanas, así que ahora
+                            puedo orinar sin dolor.
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_review-2.png" alt />
+                            </div>
+                            <div class="review_name">
+                                <div class="name"><span> Carlos,</span> Guadalajara</div>
+                                <div class="email">***arlo***@yahoo.com</div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            Le tengo miedo a las cirugías. Tuve un problema de urología y
+                            conozco esta experiencia. No se puede oír nada, pero se puede
+                            ver todo. Ves en el reflejo cómo el doctor trata tu cuerpo con
+                            un bisturí. Estuve en el ejército, así que no soy un débil de
+                            corazón, pero fue una pesadilla. No quería repetir esa
+                            experiencia, por eso elegí Prostanorm Forte. Tres semanas después,
+                            vi los resultados. Dejé de sentir dolor en la ingle y de sacar
+                            orina con sangre.
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_review-3.png" alt />
+                            </div>
+                            <div class="review_name">
+                                <div class="name"><span> Miguel,</span> Puebla</div>
+                                <div class="email">*igu****@gmx.com</div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            Mi médico me recetó Prostanorm Forte porque pensó que era la única
+                            manera de librarme del dolor de estómago. Era tan espantoso
+                            ver sangre en mi ropa interior por la mañana en lugar de una
+                            erección. Orinar se convirtió en un infierno. Incluso intenté
+                            beber menos agua para no ir al baño tan frecuente. En un mes,
+                            fui capaz de recuperarme por completo. No más dolor y no más
+                            sangre.
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_review-4.png" alt />
+                            </div>
+                            <div class="review_name">
+                                <div class="name">
+                                    <span> Francisco,</span> Aguascalientes
+                                </div>
+                                <div class="email">Franc****@libero.com</div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            Cáncer. Eso es lo que realmente me asustó cuando el doctor me
+                            diagnosticó prostatitis avanzada. Y muchas veces tenía
+                            problemas al ir al baño por la noche. Durante un tiempo,
+                            incluso pensé en usar pañales. Mi médico me ayudó mucho al
+                            hablarme de Prostanorm Forte. El uso del producto duró unas pocas
+                            semanas, y la próstata volvió a la normalidad. Ahora no tengo
+                            más preocupaciones sobre el cáncer, y no hay más pensamientos
+                            sobre pañales para adultos.
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_review-5.jpg" alt />
+                            </div>
+                            <div class="review_name">
+                                <div class="name">
+                                    <span> David,</span> Ciudad de México
+                                </div>
+                                <div class="email">Davi****@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            Hace poco me diagnosticaron esta horrible enfermedad. Aunque
+                            sólo tengo 45 años y quiero llevar una vida normal. Decidí
+                            probar Prostanorm Forte, y no me equivoqué. El producto resultó ser
+                            muy eficaz, ayudó. El dolor desapareció después de unas 2
+                            semanas, voy al baño una o dos veces por la noche (antes iba
+                            al baño 10 veces). Me siento mejor. Esperemos que esto
+                            restaure mi potencia, sentir que las cosas están mejorando. La
+                            vida está volviendo a la normalidad. Lamento no haber conocido
+                            este producto antes.<br />
+                            <!-- <img src="img/review_1.jpg"> -->
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_review-6.jpg" alt />
+                            </div>
+                            <div class="review_name">
+                                <div class="name"><span> Pablo,</span> Hidalgo</div>
+                                <div class="email">Pab****@yahoo.com</div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            Tengo prostatitis crónica desde mi juventud. Durante los
+                            últimos seis meses los dolores han sido tan intensos que no
+                            podía ni pensar en tener relaciones sexuales con mi mujer.
+                            Tengo la suerte de que ella es médico y me aconseja. Un día me
+                            trajo Prostanorm Forte y en un mes estaba irreconocible. Ya no
+                            tengo dolor, ni disfunción urinaria. Mi vida sexual ha
+                            mejorado.<br />
+                            <!-- <img src="img/review_2.jpg"> -->
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_review-7.jpg" alt />
+                            </div>
+                            <div class="review_name">
+                                <div class="name"><span> Víctor,</span> Coahuila</div>
+                                <div class="email">***cto**@libero.com</div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            ¡¡¡Chicos, es un gran producto!!! Lo tomo por prevención. Me
+                            siento rejuvenecido. Fuerte y enérgico, pero lo que es
+                            especialmente bueno, mi potencia es normal, se mantiene como
+                            en la juventud. Me encanta la vida y no quiero limitarme.
+                            Antes de usarlo me sentía como un anciano, aunque sólo tenía
+                            53 años. Se lo recomiendo a todo el mundo, si aún no lo han
+                            probado. El producto es natural, sin efectos secundarios.
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_review-8.jpg" alt />
+                            </div>
+                            <div class="review_name">
+                                <div class="name"><span> Martín,</span> Sonora</div>
+                                <div class="email">*****tin@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            Tengo prostatitis crónica desde hace 10 años. Estoy
+                            acostumbrado a ello. Un día mi mujer y yo decidimos que
+                            queríamos tener hijos. Me hicieron varias pruebas que
+                            demostraron que era infértil, mi esperma era de mala calidad.
+                            Entonces me enteré de que la prostatitis conduce a la
+                            infertilidad. Quería deshacerme de la enfermedad lo antes
+                            posible. Estaba dispuesto a operarme si era necesario, pero
+                            por suerte no tuve que hacerlo. Me hicieron todas las pruebas
+                            y mi médico me recetó Prostanorm Forte. Sólo tomé un curso y me
+                            curé por completo.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="faq">
+        <div class="wrapper">
+            <div class="image">
+                <picture>
+                    <source type="image/webp" srcset="img/image_faq.webp" />
+                    <img alt class="left__img" src="img/image_faq.png" />
+                </picture>
+            </div>
+            <div class="title">FAQ</div>
+            <div class="accordion_container">
+                <div class="accordion">
+                    <div class="accordion_title">
+                        ¿Qué obtendré después de 14 días de tomar Prostanorm Forte?
+                    </div>
+                    <div class="accordion_body">
+                        Tras 2 semanas de tratamiento, dejará de sentir hormigueo o sensación de quemazón "ahí abajo". Las molestias en la vejiga disminuirán cada día. Las ganas repentinas de ir al
+                        baño por la noche desaparecerán gradualmente. Desaparecerán las ganas constantes de orinar. Tendrá ganas de ir al baño varias veces al día como cualquier persona sana.
+                        Recuperará la libido y la confianza en sí mismo. Podrá mantener relaciones sexuales prolongadas con una fuerte erección, placer y orgasmos.
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion_title">
+                        ¿Cómo afectará Prostanorm Forte a mi erección y libido?
+                    </div>
+                    <div class="accordion_body">
+                        Los componentes de Prostanorm Forte estimulan la libido masculina y la producción de testosterona, aumentan la síntesis de esperma, tienen un efecto tónico sobre el sistema
+                        reproductor y normalizan la función de la próstata. Tomados regularmente, los componentes del complejo mejoran la función reproductora masculina.
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion_title">¿Prostanorm Forte provoca hipertensión arterial u otros efectos secundarios? </div>
+                    <div class="accordion_body">
+                        No, Prostanorm Forte no tiene efectos secundarios ni restricciones de edad. El producto puede tomarse con medicamentos para la tensión arterial, medicamentos para reducir la
+                        glucosa u otros medicamentos.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="delivery">
+        <div class="back_left"></div>
+        <div class="wrapper">
+            <div class="left_part">
+                <div class="content_part">
+                    <div class="title">¿Cómo pedir?</div>
+                    <div class="order_items">
+                        <div class="order_item">
+                            <div class="image">
+                                <img src="img/image_order_1.png" alt />
+                            </div>
+                            <div class="text">
+                                <p class="subtitle">
+                                    Rellena el formulario en nuestro sitio web
+                                </p>
+                                <span> (Nombre y teléfono)</span>
+                            </div>
+                        </div>
+                        <div class="order_item">
+                            <div class="image">
+                                <img src="img/image_order_2.png" alt />
+                            </div>
+                            <div class="text">
+                                <p class="subtitle">
+                                    Confirma tu dirección y fecha de entrega
+                                </p>
+                                <span>
+                                    (Un ejecutivo te llamará después de realizar el
+                                    pedido)</span>
+                            </div>
+                        </div>
+                        <div class="order_item">
+                            <div class="image">
+                                <img src="img/image_order_3.png" alt />
+                            </div>
+                            <div class="text">
+                                <p class="subtitle">Recibe el producto y paga</p>
+                                <span> (Pago contra entrega al mensajero)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="right_part">
+                <div class="subtitle"><span> ¡Envío</span> rápido!</div>
+                <ul class="list">
+                    <li>
+                        Obtendrás Prostanorm Forte de 1 a 3 días después de realizar el
+                        pedido.
+                    </li>
+                    <li>¡Pagarás solo después de recibir el producto!</li>
+                    <li>
+                        Embalaje 100% seguro, anonimato para la entrega y la
+                        facturación.
+                    </li>
+                </ul>
+                <!-- <div class="items">
+            <div class="icon"></div>
+            <div class="icon"></div>
+            <div class="icon"></div>
+            <div class="icon"></div>
+            <div class="icon"></div>
+            <div class="icon"></div>
+            <div class="icon"></div>
+          </div> -->
+                <div class="country_part">
+                    <div class="discreet_part">
+                        Tu pedido se colocará en una caja segura sin especificar el tipo
+                        y origen del contenido.
+                        <div class="discreet"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="final">
+        <div class="wrapper">
+            <div class="final__image"></div>
+            <div class="final__colums">
+                <div class="final__left">
+                    <div class="final__site_title">
+                        Prostanorm Forte: una próstata sana en 14 días
+                    </div>
+                    <p class="final__list__text">
+                        Este efecto le espera después de 14 días:
                     </p>
-                    <p class="content-text">
-                        Se han realizado estudios durante varios años y es
-                        <b>la fórmula a base de hierbas que ha demostrado la mayor eficacia.</b>
-                        El complejo vegetal <b>Incasol</b>, enriquecido con vitaminas y minerales, <b>se acumula gradualmente
-                            en el
-                            cuerpo y promueve una reducción gradual de la presión y la regulación del sistema
-                            cardiovascular</b> en su conjunto.
-                    </p>
-                    <p class="innovation__desc">Incasol ha sido desarrollado sobre la base de las mejores prácticas de
-                        especialistas de todo el mundo en el campo de la limpieza vascular
-                        y la hipertensión.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="peel block bg">
-        <div class="container">
-            <h2 class="title peel__title">¿Cómo funciona exactamente la mezcla de hierbas?</h2>
-            <div class="peel__content">
-                <div class="peel__box">
-                    <div class="peel-box__img">
-                      
-                            <img src="./img/peel-img1.jpg" alt="image">
-                     
-                    </div>
-                    <div class="peel-box__icon"><img class="peel-box__icon1" src="./img/peel-icon1.png" alt=""></div>
-                    <p class="peel-box__text">Limpia los vasos sanguíneos de cristales de calcio y colesterol. La acumulación de lípidos en las paredes internas provoca infarto de miocardio y aterosclerosis en el 94% de los casos  </p>
-                </div>
-                <div class="peel__box">
-                    <div class="peel-box__img">
-                   
-                            <img src="./img/peel-img2.jpg" alt="image">
-    
-                    </div>
-                    <div class="peel-box__icon"><img class="peel-box__icon2" src="./img/peel-icon2.png" alt=""></div>
-                    <p class="peel-box__text">Elimina la hormona homocisteína. Su exceso provoca vasoconstricción e hipertensión arterial</p>
-                </div>
-                <div class="peel__box">
-                    <div class="peel-box__img">
-                
-                            <img src="./img/peel-img3.jpg" alt="image">
-                
-                    </div>
-                    <div class="peel-box__icon"><img class="peel-box__icon3" src="./img/peel-icon3.png" alt=""></div>
-                    <p class="peel-box__text">Tiene un efecto calmante, reduce los efectos negativos del estrés en el organismo y normaliza el sueño</p>
-                </div>
-            </div>
-            <h3 class="peel__info">Vasos sanguíneos limpios: la clave de la longevidad, la buena salud y el sueño reparador  </h3>
-            <div class="action">
-                <h2 class="title action__title ccc1">¡Atención!</h2>
-                <div class="action__box">
-                    <h3 class="action__subtitle">
-                        Solo hoy, el <span class="date-0 action__subtitle--accent" data-format="dd monthFull">25 августа </span>
-                    </h3>
-                    <div class="action__price">
-                        <div class="action__price-old">
-                            <p class="action__price-title"> Precio anterior: </p>
-                            <div class="action__old">
-                                <span class="x_price_previous">69980CLP</span> <span class="x_currency"></span>
-                            </div>
-                        </div>
-                        <div class="action__price-new">
-                            <p class="action__price-title"> Nuevo precio:</p>
-                            <span class="x_price_current">34990</span> <span class="x_currency">CLP</span>
-                        </div>
-                    </div>
-                    <div class="action__pack">
-                        <picture>
+                    <ul class="final__list">
+                        <li class="final__list__item">
+                            <strong> SIN sensación dolorosa en la próstata </strong>
+                        </li>
+                        <li class="final__list__item">
+                            <strong>Sensación de vaciado completo de la vejiga </strong>
+                        </li>
+                        <li class="final__list__item">
+                            <strong>Fuerte flujo de orina </strong>
+                        </li>
+                        <li class="final__list__item">
+                            <strong>Ausencia de ganas nocturnas de orinar </strong>
+                        </li>
+                        <li class="final__list__item">
+                            <strong>Fuerte erección y aumento de la libido </strong>
+                        </li>
+                        <li class="final__list__item">
+                            <strong> Confianza en la fuerza masculina</strong>
+                        </li>
 
-                            <img src="./img/prod.png" alt="image">
-                        </picture>
-                    </div>
-                    <div class="action__timer">
-                        <div class="timer__text">Hasta el fin de la oferta queda:</div>
-                        <div class="timer__block">
-                            <div class="timer__hours"><span class="hours min> min"></span></div>
-                            <span class="timer__dots">:</span>
-                            <div class="timer__minutes"><span class="minutes sec"></span></div>
-                            <span class="timer__dots">:</span>
-                            <div class="timer__seconds"><span class="seconds msec"></span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="action__form">
-                    <form class="x_order_form" action="" method="post">
-                        <label class="form__input--wrap">
-                            <span class="form__input--icon"><img src="./img/icon_name.png" alt=""></span>
-                            <input class="form__input" placeholder="Mi nombre" type="text" name="name" required autocomplete="name">
-                        </label>
-                        <label class="form__input--wrap">
-                            <span class="form__input--icon"><img src="./img/icon_phone.png" alt=""></span>
-                            <input class="form__input" placeholder="Mi teléfono" type="tel" name="phone" required autocomplete="tel">
-                        </label>
-                        <button class="btn action__btn" type="submit">Hacer un pedido</button>
-                        <input type="hidden" name="data0" value="{subid}" />
-                        <input type="hidden" name="data1" value="{b}" />
-                        <input type="hidden" name="data2" value="{a}" />
-                        <input type="hidden" name="data3" value="{x}" />
-                        <input type="hidden" name="data4" value="<?php echo $off; ?>" />
-                        <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
-                        <input type="hidden" name="data6" value="{offer_id}" />
-                        <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
-                        <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
-                        <input type="hidden" name="data9" value="<?php echo $price; ?>" />
-                        <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
-                        <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
-                        <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
-                        <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
-                        <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="control block">
-        <div class="container">
-            <div class="control__info">
-                <h2 class="title control__title">
-                    Incasol ayuda a regular el sistema cardiovascular y a limpiar
-                    los vasos sanguíneos
-                </h2>
-                <p class="control__text">
-                    El uso prolongado del producto ayuda a <b>limpiar los vasos sanguíneos</b> de las placas de colesterol, a
-                    fortalecer las paredes y a devolverles la elasticidad. Esto garantiza una circulación sanguínea estable sin
-                    ejercer presión sobre la pared vascular.
-                </p>
-                <p class="control__text">Debido al efecto acumulativo del complejo de extractos de plantas, puede producirse una
-                    <b>normalización del sistema cardiovascular.</b>
-                </p>
-                <p class="control__text">Así, <b>Incasol ayuda a neutralizar las causas de la presión arterial alta.</b>
-                </p>
-            </div>
-            <div class="control__box">
-                <div class="control__pack animation-pack">
-                    <picture>
 
-                        <img src="./img/prod.png" alt="image">
-                    </picture>
-                    <div class="control__medal animation-medal">
-                        <picture>
-                            <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/quality3.webp" type="image/webp">
-                            <img src="./img/quality3.png" alt="image">
-                        </picture>
+
+
+
+                    </ul>
+                    <div class="final__product">
+                        <img src="img/prod.png" alt style="max-width: 80%" />
+                        <ul class="final__ser_list">
+                            <li class="final__ser_item"></li>
+                            <li class="final__ser_item"></li>
+                            <li class="final__ser_item"></li>
+                            <li class="final__ser_item"></li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section class="composition block bg">
-        <div class="container">
-            <h2 class="title composition__title">La eficacia de Incasol radica en su composición</h2>
-            <h3 class="composition__subtitle">
-                La composición especial del complejo ayuda a prevenir los coágulos de sangre
-            </h3>
-            <div class="composition__content">
-                <div class="composition__box active">
-                    <div class="composition-box__item composition-box__item--capsule">
-                        <div class="composition-item__ingredient">
-                            <div class="composition-item__img composition-item__img1">
-                                <picture>
-                                    <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/composition1.webp" type="image/webp">
-                                    <img src="./img/composition1.png" alt="">
-                                </picture>
-                            </div>
-                            <p class="composition-item__info">
-                                <b>Remolacha<br>
-                                </b>
-                                ayuda a mejorar el metabolismo y a normalizar la función renal y hepática.
-                            </p>
-                        </div>
-                        <div class="composition-item__ingredient">
-                            <div class="composition-item__img composition-item__img2">
-                                <picture>
-                                    <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/composition2.webp" type="image/webp">
-                                    <img src="./img/composition2.png" alt="">
-                                </picture>
-                            </div>
-                            <p class="composition-item__info"><b>Magnesio<br></b> regulador del tono vascular, la presión
-                                arterial y la circulación periférica.</p>
-                        </div>
-                        <div class="composition-item__ingredient">
-                            <div class="composition-item__img composition-item__img3">
-                                <picture>
-                                    <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/composition3.webp" type="image/webp">
-                                    <img src="./img/composition3.png" alt="">
-                                </picture>
-                            </div>
-                            <p class="composition-item__info"><b>Ajo</b><br> contiene compuestos azufrados, como la alicina, que pueden ayudar a aumentar el flujo sanguíneo y a relajar los vasos
-                                sanguíneos.</p>
-                        </div>
-                        <div class="composition-item__ingredient">
-                            <div class="composition-item__img composition-item__img3">
-                                <picture>
-                                    <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/composition4.webp" type="image/webp">
-                                    <img src="./img/composition4.png" alt="">
-                                </picture>
-                            </div>
-                            <p class="composition-item__info"><b>Vitamina B3 </b><br> Es responsable de la respiración celular y del metabolismo de los hidratos de carbono, las proteínas y las grasas.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="composition__form">
-                <div class="action">
-                    <h2 class="title action__title">¡Atención!</h2>
-                    <div class="action__box">
-                        <h3 class="action__subtitle">
-                            Solo hoy, el <span class="date-0 action__subtitle--accent" data-format="dd monthFull">25 августа </span>
-                        </h3>
-                        <div class="action__price">
-                            <div class="action__price-old">
-                                <p class="action__price-title"> Precio anterior: </p>
-                                <div class="action__old">
-                                    <span class="x_price_previous">69980CLP</span> <span class="x_currency"></span>
+                <div class="final__right">
+                    <div class="form_top final__form">
+                        <div id="scroll_to_form"></div>
+                        <div class="form_top__discount wv_discount">-50%</div>
+                        <div class="form_top__price_container">
+                            <div class="form_top__price_old">
+                                <div class="form_top__price_old_label">
+                                    Precio al por menor:
+                                </div>
+                                <div class="form_top__price_old_value">
+                                    <span class="wv_old-price"> $1480.00</span><span class="wv_currency"></span>
                                 </div>
                             </div>
-                            <div class="action__price-new">
-                                <p class="action__price-title"> Nuevo precio:</p>
-                                <span class="x_price_current">34990</span> <span class="x_currency">CLP</span>
+                            <div class="form_top__price_new">
+                                <div class="form_top__price_val">
+                                    <span class="wv_new-price"> $790.00</span><span class="wv_currency"></span>
+                                    <div class="form_top__icon_new">¡Novedad!</div>
+                                </div>
+                                <div class="form_top__price_label">
+                                    +<span> ENVÍO</span> RÁPIDO
+                                </div>
                             </div>
                         </div>
-                        <div class="action__pack">
-                            <picture>
 
-                                <img src="./img/prod.png" alt="image">
-                            </picture>
-                        </div>
-                        <div class="action__timer">
-                            <div class="timer__text">Hasta el fin de la oferta queda:</div>
-                            <div class="timer__block">
-                                <div class="timer__hours"><span class="hours min> min"></span></div>
-                                <span class="timer__dots">:</span>
-                                <div class="timer__minutes"><span class="minutes sec"></span></div>
-                                <span class="timer__dots">:</span>
-                                <div class="timer__seconds"><span class="seconds msec"></span></div>
+                        <div class="timer timer-1 new-form-body__timer">
+                            <div class="timer-flexWrap">
+                                <div class="timer-flexItem">
+                                    <span class="timer-numbers min">00</span>
+                                    <!-- <p class="timer-description hours">horas</p> -->
+                                </div>
+                                <div class="timer-flexItem">
+                                    <span class="timer-numbers sec">00</span>
+                                    <!-- <p class="timer-description minutes">minutos</p> -->
+                                </div>
+                                <div class="timer-flexItem">
+                                    <span class="timer-numbers msec">00</span>
+                                    <!-- <p class="timer-description seconds">segundos</p> -->
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="action__form">
-                        <form class="x_order_form" action="" method="post">
-                            <label class="form__input--wrap">
-                                <span class="form__input--icon"><img src="./img/icon_name.png" alt=""></span>
-                                <input class="form__input" placeholder="Mi nombre" type="text" name="name" required autocomplete="name">
-                            </label>
-                            <label class="form__input--wrap">
-                                <span class="form__input--icon"><img src="./img/icon_phone.png" alt=""></span>
-                                <input class="form__input" placeholder="Mi teléfono" type="tel" name="phone" required autocomplete="tel">
-                            </label>
-                            <button class="btn action__btn" type="submit">Hacer un pedido</button>
+
+                        <div class="form_top__title">
+                            ¡Pedir Prostanorm Forte con<span><span class="wv_discount"> 50%</span> de descuento!</span>
+                        </div>
+                        <form action="" class="orderForm form wv_order-fotm" method="post" action>
                             <input type="hidden" name="data0" value="{subid}" />
                             <input type="hidden" name="data1" value="{b}" />
                             <input type="hidden" name="data2" value="{a}" />
@@ -994,1229 +1013,325 @@ include __DIR__ . '/../_php/update-params.php';
                             <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
                             <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
                             <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
+                            <label for> Ejemplo: José</label>
+                            <div class="form_top__field form_top__field-name">
+                                <input class="form_top__input wv_name" type="text" name="name" placeholder="Nombre" required autocomplete="name" />
+                            </div>
+                            <label for> Ejemplo: +52 960 293 7500</label>
+                            <div class="form_top__field form_top__field-phone">
+                                <input class="form_top__input wv_phone" type="tel" name="phone" placeholder="Teléfono" required maxlength="20" />
+                            </div>
+                            <button class="submit_form button_submit" type="submit">
+                                <span class="big"> Pedir Prostanorm Forte</span>
+                            </button>
+                            <div class="shields__block">
+                                <div class="free-delivery">
+                                    <div class="free-delivery-title">
+                                        Atención: Debido a la gran atención por parte de los
+                                        medios de comunicación, nuestra oferta de productos está
+                                        limitada. Hoy, <span class="date"> 43788</span> solo hay
+                                        disponibles 28 piezas.
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" name="sub1" value="{subid}">
                         </form>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-    <section class="study block">
-        <div class="container">
-            <h2 class="title study__title">
-                Los resultados de la investigación de Incasol en centros de investigación de Estados Unidos y Chile
-            </h2>
-            <h3 class="study__subtitle">Un total de <span class="study__subtitle--accent">2348</span>
-                participantes tomaron parte en el estudio</h3>
-            <ul class="study__content">
-                <li class="study__box">
-                    <svg class="study-box__circle study-box__circle1" viewbox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="66.5" cy="66.5" r="58" />
-                    </svg>
-                    <div class="study-box__num">
-                        <span class="number" data-num="96" data-state="true">0</span>
-                        <span class="study-box__num--small">%</span>
+    <footer class="footer">
+        <div class="top_part">
+            <div class="wrapper">
+                <div class="footer_left">
+                    <div class="footer_warnings">
+                        <strong> Advertencia:</strong> Manténgase fuera del alcance de
+                        los niños. Deje de tomarlo y consulte a su médico si desarrolla
+                        alguna irritación. Todas las imágenes se muestran sólo a modo de
+                        ilustración. La composición y las técnicas de fabricación de
+                        este producto pueden variar debido a posibles mejoras.
                     </div>
-                    <p class="study-box__text"> La presión se normaliza después de un curso</p>
-                </li>
-                <li class="study__box study__box--border">
-                    <svg class="study-box__circle study-box__circle2" viewbox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="66.5" cy="66.5" r="58" />
-                    </svg>
-                    <div class="study-box__num">
-                        <span class="number" data-num="91" data-state="true">0</span>
-
-                        <span class="study-box__num--small">%</span>
-                    </div>
-                    <p class="study-box__text"> La PA se mantuvo normal 2 meses después del curso</p>
-                </li>
-                <li class="study__box">
-                    <svg class="study-box__circle study-box__circle3" viewbox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="66.5" cy="66.5" r="58" />
-                    </svg>
-                    <div class="study-box__num">
-                        <span class="number" data-num="87" data-state="true">0</span>
-
-                        <span class="study-box__num--small">%</span>
-                    </div>
-                    <p class="study-box__text"> Mejora del bienestar general</p>
-                </li>
-            </ul>
-            <div class="study__accent">*Los resultados pueden variar en función de las necesidades individuales
-            </div>
-        </div>
-    </section>
-    <section class="recomend block bg">
-        <div class="container">
-            <h2 class="title recomend__title">El Dr. Felipe Heusser responde a las preguntas sobre Incasol </h2>
-            <div class="recomend__content">
-                <div class="recomend__doctor">
-         
-                        <img class="recomend__doctor--img" src="./img/specialist.jpg" alt="">
-                   
                 </div>
-
-
-
-                <div class="illness__content">
-                    <div class="illness__box">
-                        <h3 class="illness-box__title">
-                          
-                            ¿Se ha confirmado la eficacia del medicamento? 
-                        </h3>
-                        <div class="illness__item">                          
-                            <div class="illness-item__sub">                               
-                                <p class="illness-item__info p10">Sí, Incasol cuenta con la certificación INVIMA y la norma internacional de calidad GMP. Puede consultarlas  
-                                    <span data-path="modal--1" class="btns link-btn">AQUÍ</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="illness__box">
-                        <h3 class="illness-box__title">
-                          
-                            ¿Cuántas semanas necesita tomar Incasol para sentirse mejor?
-                        </h3>
-                        <div class="illness__item">                          
-                            <div class="illness-item__sub">                               
-                                <p class="illness-item__info p10">
-                                    El curso de la terapia depende de las necesidades individuales del paciente y de la gravedad de su estado de salud. Sin embargo, los picos de tensión arterial y los dolores de cabeza cesarán al cabo de 14 días.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="illness__box">
-                        <h3 class="illness-box__title">
-                          
-                            ¿A qué hora del día debo tomar el medicamento? 
-                        </h3>
-                        <div class="illness__item">                          
-                            <div class="illness-item__sub">                               
-                                <p class="illness-item__info p10">
-                                    Tomar una cápsula por la mañana, al mediodía y por la noche.  
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="illness__box">
-                        <h3 class="illness-box__title">
-                          
-                            ¿Pueden tomar Incasol los diabéticos hipertensos?
-                        </h3>
-                        <div class="illness__item">                          
-                            <div class="illness-item__sub">                               
-                                <p class="illness-item__info p10">
-                                    Sí, puede hacerlo. Incasol es compatible con otros medicamentos.   
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                
-                </div>
-                <div class="recomend__info">
-                                
-                    <div class="sign">
-                        <div class="sign__doctor">
-                            <p class="sign__doctor--name">Dr. Alejandro Martínez Sepúlveda,</p>
-                            <p class="sign__doctor--post">                                Presidente de la Sociedad Sudamericana de Cardiología.</p>
-                        </div>
+                <div class="footer_right">
+                    <div class="logo_list">
+                        <span class="item_1"></span><span class="item_2"></span><span class="item_3"></span><span class="item_4"></span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="recomend__action block">
-        <div class="container">
-            <div class="action">
-                <h2 class="title action__title">¡Atención!</h2>
-                <div class="action__box">
-                    <h3 class="action__subtitle">
-                        Solo hoy, el <span class="date-0 action__subtitle--accent" data-format="dd monthFull">25 августа </span>
-                    </h3>
-                    <div class="action__price">
-                        <div class="action__price-old">
-                            <p class="action__price-title"> Precio anterior: </p>
-                            <div class="action__old">
-                                <span class="x_price_previous">69980CLP</span> <span class="x_currency"></span>
-                            </div>
-                        </div>
-                        <div class="action__price-new">
-                            <p class="action__price-title"> Nuevo precio:</p>
-                            <span class="x_price_current">34990</span> <span class="x_currency">CLP</span>
-                        </div>
-                    </div>
-                    <div class="action__pack">
-                        <picture>
-
-                            <img src="./img/prod.png" alt="image">
-                        </picture>
-                    </div>
-                    <div class="action__timer">
-                        <div class="timer__text">Hasta el fin de la oferta queda:</div>
-                        <div class="timer__block">
-                            <div class="timer__hours"><span class="hours min> min"></span></div>
-                            <span class="timer__dots">:</span>
-                            <div class="timer__minutes"><span class="minutes sec"></span></div>
-                            <span class="timer__dots">:</span>
-                            <div class="timer__seconds"><span class="seconds msec"></span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="action__form">
-                <form class="x_order_form" action="" method="post">
-                    <label class="form__input--wrap">
-                        <span class="form__input--icon"><img src="./img/icon_name.png" alt=""></span>
-                        <input class="form__input" placeholder="Mi nombre" type="text" name="name" required autocomplete="name">
-                    </label>
-                    <label class="form__input--wrap">
-                        <span class="form__input--icon"><img src="./img/icon_phone.png" alt=""></span>
-                        <input class="form__input" placeholder="Mi teléfono" type="tel" name="phone" required autocomplete="tel">
-                    </label>
-                    <button class="btn action__btn" type="submit">Hacer un pedido</button>
-                    <input type="hidden" name="data0" value="{subid}" />
-                    <input type="hidden" name="data1" value="{b}" />
-                    <input type="hidden" name="data2" value="{a}" />
-                    <input type="hidden" name="data3" value="{x}" />
-                    <input type="hidden" name="data4" value="<?php echo $off; ?>" />
-                    <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
-                    <input type="hidden" name="data6" value="{offer_id}" />
-                    <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
-                    <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
-                    <input type="hidden" name="data9" value="<?php echo $price; ?>" />
-                    <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
-                    <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
-                    <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
-                    <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
-                    <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
-                </form>
-            </div>
-        </div>       
-    </section>
-    <section class="reviews block bg" id="reviews">
-        <div class="container">
-            <h2 class="title reviews__title">Comentarios de personas que se han beneficiado
-                de Incasol</h2>
-            <div class="reviews-content">
-                <div class="reviews-panel">
-                    <div class="star-box">
-                        <div class="reviews-headStar" style="width: 89px;"></div>
-                        <div class="reviews-amount">30 comentarios</div>
-                    </div>
-                    <button class="btn reviews-btn">Escribir un comentario</button>
-                </div>
-                <div class="feedback">
-                    <div class="feedback-form">
-                        <div class="feedback-top">
-                            <label class="feedback-name"><input class="feedback-name-input input__val-1" type="text" name="name" required placeholder="Mi nombre" autocomplete="name"></label>
-                            <div class="feedback-assessment">Su puntuación</div>
-                            <div class="feedback-rating">
-                                <img class="star1" src="./img/star.png" alt=""><img class="star2" src="./img/star.png" alt=""><img class="star3" src="./img/star.png" alt=""><img class="star4"
-                                    src="./img/star.png" alt=""><img class="star5" src="./img/star.png" alt="">
-                            </div>
-                        </div>
-                        <label class="feedback-text"><textarea class="feedback-text-input input__val-4" placeholder="Mensajes"></textarea></label>
-                        <div class="feedback-btn btn reviews-btn">Enviar</div>
-                    </div>
-                    <div class="feedback-modal">
-                        <div class="feedback-modal__inner">
-                            <div class="feedback-modal__title">¡Gracias!</div>
-                            <div class="feedback-modal__text">Su comentario se envió a moderación</div>
-                        </div>
-                    </div>
-                </div>
-                <ul class="reviews-list">
-                    <li class="reviews-list-item reviews--full">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">J</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Jorge Salazar</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Bueno para bajar la presión arterial, poco a poco, estoy satisfecho y tomo
-                            todo el curso. No puedo quejarme en absoluto.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">19</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-0"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item reviews--full">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">A</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Ana Garcia</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Llevo quince días tomándolo y puedo decir que me ayuda.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">12</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">1</span></div>
-                            </div>
-                            <div class="reviews-item__date date-0"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item reviews--full">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">J</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Juana Lopez</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> La presión arterial pasó de 140 sobre 90 a 120 sobre 80. Recomiendo a
-                            comprar.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">44</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-0"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item reviews--full">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">R</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Raul Chavez</h4>
-                            </div>
-                            <div class="reviews-item__rating" style="width: 95px;"></div>
-                        </div>
-                        <div class="reviews-item__text"> Muy buen producto para tomar, funciona muy bien.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">24</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">1</span></div>
-                            </div>
-                            <div class="reviews-item__date date-0"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">M</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Margarita Contreras
-                                </h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Los dolores de cabeza por la presión arterial son cosa del pasado y me
-                            siento muy bien. Lo tomé para mi hermana y mi madre, ya que también tienen problemas de hipertensión.
-                        </div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">46</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-0"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">C</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Carmen Garcia
-                                </h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> ¡Acabé con la hipertensión en tiempo récord! ¡En solo cuatro semanas!</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">39</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-1"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">L</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Luis Rodriguez</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Lo compré y no me arrepiento, porque ya me he olvidado de los saltos de
-                            tensión. No tengo ningún problema con ello.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">19</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-1"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">J</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Juan Gonzalez
-                                </h4>
-                            </div>
-                            <div class="reviews-item__rating" style="width: 76px; margin-right: 18px;"></div>
-                        </div>
-                        <div class="reviews-item__text"> Retraso en la oficina de correos pero estoy muy contento con el producto.
-                        </div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">15</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">4</span></div>
-                            </div>
-                            <div class="reviews-item__date date-1"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item reviews--full">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">J</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Jose Cardenas</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Ahora puedo vivir con normalidad, ya que mi presión arterial es siempre
-                            normal. No hay dolores de cabeza, no tomo analgésicos. Es sorprendente lo bien que ayuda esto.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">46</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-1"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">P</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Pedro Hernandez</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Ayuda.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">12</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-2"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">A</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Adriana Ramirez</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Me salva de la hipertensión cuando el tiempo cambia. ¡Gracias!</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">6</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-2"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">A</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name">Alma Fernandez
-                                    s</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Todo es bueno, se puede comprar, los efectos son reales.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">17</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-2"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">J</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Juana Flores
-                                </h4>
-                            </div>
-                            <div class="reviews-item__rating" style="width: 76px; margin-right: 18px;"></div>
-                        </div>
-                        <div class="reviews-item__text"> Mi presión arterial siempre se eleva cuando hace calor, pero después de un
-                            curso de este remedio parece que no. Pero también tengo que evitar el alcohol y la comida grasosa.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">42</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">3</span></div>
-                            </div>
-                            <div class="reviews-item__date date-2"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">M</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Margarita Hernandez</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Estoy contenta con mi compra.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">9</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-2"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">A</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Ana Castro</h4>
-                            </div>
-                            <div class="reviews-item__rating" style="width: 76px; margin-right: 18px;"></div>
-                        </div>
-                        <div class="reviews-item__text"> Básicamente hace lo que se supone que debe hacer, que es bajar la presión.
-                            ¿Qué más puedo decir?</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">25</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">8</span></div>
-                            </div>
-                            <div class="reviews-item__date date-3"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">B</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Blanca Aguirre</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Completamente satisfecha.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">29</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-3"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">M</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Margarita Rodriguez</h4>
-                            </div>
-                            <div class="reviews-item__rating" style="width: 90px;"></div>
-                        </div>
-                        <div class="reviews-item__text"> Todo está bien, entrega rápida y no molesta la presión.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">18</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-3"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">O/div>
-                                <div class="reviews-item-title">
-                                    <h4 class="reviews-item__name"> Oscar Mendez</h4>
-                                </div>
-                                <div class="reviews-item__rating"></div>
-                            </div>
-                            <div class="reviews-item__text"> Tómalo según las instrucciones y no te saltes días, entonces funcionará.
-                            </div>
-                            <div class="reviews-bottom">
-                                <div class="reviews-assessment">
-                                    <div class="social__button"><span class="like social__img"> </span><span class="social__count">28</span>
-                                    </div>
-                                    <div class="social__button"><span class="dislike social__img"></span><span class="social__count">2</span></div>
-                                </div>
-                                <div class="reviews-item__date date-3"></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">M</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Marco Salas
-                                </h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Es mejor que tomar analgésicos para el dolor de cabeza.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">34</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-3"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">V</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Veronica Ruiz</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Tomé este producto por consejo de un especialista y no me arrepiento, mi
-                            presión arterial es estable y normal.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">24</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-4"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">М</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Margarita Gomez
-                                </h4>
-                            </div>
-                            <div class="reviews-item__rating" style="width: 94px;"></div>
-                        </div>
-                        <div class="reviews-item__text"> Funcionó incluso mejor en mi presión arterial de lo que esperaba.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">29</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-4"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">R</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Rosa Ramirez
-                                </h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Ayuda.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">7</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-4"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">M</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Maria Castillo
-                                </h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Todas mis amigas del trabajo han tomado el curso de Incasol, así que decidí
-                            hacerlo yo también. Lo pedí y obtuve un descuento. Ahora lo tomo y la presión arterial no me ha molestado
-                            todavía.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">41</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-5"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">A</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Arturo Rodriguez</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text">Compré este producto por su composición y estoy satisfecho con él.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">47</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-5"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">M</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Maria Castillo
-                                </h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Entrega rápida, manageres amables.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">29</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-5"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">P</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Pedro Dominguez
-                                </h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Este producto tiene un gran efecto y ya estoy en mi tercera semana de
-                            curso.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">24</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-5"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">L</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Luis Moreno
-                                </h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Parece estar bien.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">21</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-6"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">P</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Patricia Avila</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Reduce bien la presión arterial.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">34</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-6"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">I</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Irma Cortes</h4>
-                            </div>
-                            <div class="reviews-item__rating" style="width: 88px;"></div>
-                        </div>
-                        <div class="reviews-item__text"> Estará siempre en mi botiquín de casa para evitar los saltos de presión.
-                        </div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">31</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-6"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">M</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Monica Lopez</h4>
-                            </div>
-                            <div class="reviews-item__rating" style="width: 80px;"></div>
-                        </div>
-                        <div class="reviews-item__text"> Fácil de tomar, ayuda rápidamente, sin efectos secundarios.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">28</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-7"></div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section class="use block">
-        <div class="container">
-            <h2 class="title use__title">Cómo tomar Incasol</h2>
-            <div class="use__content">
-                <div class="use__box">
-                    <div class="use-box__icon"><img src="./img/use-icon1.png" alt=""></div>
-                    <h3 class="use-box__title">Tomar 3 pastillas al día. </h3>
-                </div>
-
-                <div class="use__pack">
-                    <picture>
-                        <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/use-bottle.webp" type="image/webp">
-                        <img src="./img/use-bottle.png" alt="">
-                    </picture>
-                </div>
-                <div class="use__box">
-                    <div class="use-box__icon"><img src="./img/use-icon2.png" alt=""></div>
-                    <h3 class="use-box__title">
-                        El curso de la terapia depende de las necesidades individuales del paciente
-                        y de la gravedad de su estado de salud.
-                    </h3>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="doctor bg block">
-        <div class="container">
-            <div class="doctor__content">
-                <ul class="doctor__list">
-                    <li class="doctor-list__item doctor-list__item1">
-                        <b> Para potenciar el efecto de Incasol,</b>
-                        debes evitar los alimentos grasos y el alcohol
-                    </li>
-                    <li class="doctor-list__item doctor-list__item2">
-                        <b> Intenta evitar un esfuerzo extra para tu corazón</b>
-                        para maximizar el efecto de Incasol
-                    </li>
-                    <li class="doctor-list__item doctor-list__item3">
-                        <b> También debes mantener una dieta constante y tus vasos sanguíneos bajo control</b>
-                        para prevenir la hipertensió
-                    </li>
-                </ul>
-                <div class="doctor__info">
-                    <h3 class="doctor-info__name">Consejos de Jose Juarez, <span class="doctor-info__name--prof">especialista
-                            líder del Centro de Cardiología y Cirugía, <br> 20 años de experiencia</span>
-                    </h3>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="order block" id="order">
-        <div class="container">
-            <h2 class="title order__title">Cómo pedir Incasol</h2>
-            <ul class="order__list">
-                <li class="order__item">
-                    <div class="order-item__icon">
-                        <img src="./img/order-1.png" alt=""><svg class="order-item__icon-circle" viewbox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="66.5" cy="66.5" r="64" />
-                        </svg>
-                    </div>
-                    <h3 class="order-item__title">
-                        Rellena el formulario de pedido
-                    </h3>
-                    <p class="order-item__text">
-                        Indica el nombre y el número
-                        de teléfono
-                    </p>
-                </li>
-                <li class="order__item">
-                    <div class="order-item__icon">
-                        <img src="./img/order-2.png" alt=""><svg class="order-item__icon-circle order-item__icon-circle2" viewbox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="66.5" cy="66.5" r="64" />
-                        </svg>
-                    </div>
-                    <h3 class="order-item__title">
-                        Acepta una llamada
-                        de un operador
-                    </h3>
-                    <p class="order-item__text">Un especialista va a consultarte y a aclarar los datos
-                        de la dirección</p>
-                </li>
-                <li class="order__item">
-                    <div class="order-item__icon">
-                        <img src="./img/order-3.png" alt=""><svg class="order-item__icon-circle order-item__icon-circle3" viewbox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="66.5" cy="66.5" r="64" />
-                        </svg>
-                    </div>
-                    <h3 class="order-item__title">
-                        Pagar después de recibirlo
-                    </h3>
-                    <p class="order-item__text">
-                        No es necesario pagar
-                        por adelantado
-                    </p>
-                </li>
-                <li class="order__item">
-                    <div class="order-item__icon">
-                        <img src="./img/order-4.png" alt=""><svg class="order-item__icon-circle order-item__icon-circle4" viewbox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="66.5" cy="66.5" r="64" />
-                        </svg>
-                    </div>
-                    <h3 class="order-item__title">
-                        Disfruta del efecto
-                    </h3>
-                    <p class="order-item__text">
-                        Recupera la presión
-                        arterial
-                    </p>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="promo promo--last block ">
-        <div class="container">
-            <div class="promo__content">
-                <div class="promo__product">
-                    <picture>
-                        <source media="(max-width: 1023px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==">
-                        <!--            <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/man.webp" type="image/webp">-->
-                        <img class="man" src="./img/man.png" alt="man">
-                    </picture>
-                    <br>
-                    <div class="product-wrap animation-pack">
-                        <picture>
-
-                            <img class="product-image" src="./img/prod.png" alt="prod">
-                        </picture>
-
-                        <div class="medal animation-medal"><img src="./img/quality3.png" alt=""></div>
-                    </div>
-                </div>
-                <ul class="promo__quality">
-                    <li class="promo__quality--item"><img class="quality" src="./img/quality1.png" alt="prod"><span>Recomendado
-                            por los principales especialistas del país</span></li>
-                </ul>
-                <div class="promo__description">
-                    <div class="promo__title">
-                        <h1>Incasol:</h1>
-                        <h2 class="title">La clave para tener una tensión arterial de 120/80, dormir bien y ser longevo</h2>
-                    </div>
-                    <p class="subtitle">Regula el sistema cardiovascular con ingredientes vegetales</p>
-                    <div class="flex-items">
-                        <div class="flex-items__item">
-                            <div class="flex-items__logo">
-                                <img src="./img/icon-l.png" alt="">
-                            </div>
-                            <div class="flex-items__text">
-                                Hipertensión arterial, dolores de cabeza y migrañas
-                            </div>
-                            <div class="flex-items__text">
-                                Acúfenos, sudoración, enrojecimiento facial
-                            </div>
-                            <div class="flex-items__text">
-                                Estado depresivo y temor por su vida
-                            </div>
-                        </div>
-                        <div class="flex-items__item flex-items__item--green-text">
-                            <div class="flex-items__logo">
-                                <img src="./img/icon-r.png" alt="">
-                            </div>
-                            <div class="flex-items__text">
-                                Su tensión arterial se estabilizará desde el primer día
-                            </div>
-                            <div class="flex-items__text">
-                                Los síntomas de la hipertensión van remitiendo día a día
-                            </div>
-                            <div class="flex-items__text">
-                                Con Incasol obtendrá tranquilidad y un subidón de energía
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="promo__form ccc cc">
-                    <div class="form-wrap">
-                        <form class="x_order_form form" action="" method="post">
-                            <h3 class="form__title">¡Atención!</h3>
-                            <p class="date-wrap">Solo hoy, el <span class="date-0 date-color" data-format="dd monthFull"></span></p>
-                            <div class="price">
-                                <div class="price__left">
-                                    <p class="price__title"> Precio anterior: </p>
-                                    <div class="price__old">
-                                        <span class="x_price_previous">69980CLP</span> <span class="x_currency"></span>
-                                    </div>
-                                </div>
-                                <div class="price__right">
-                                    <p class="price__title"> Nuevo precio:</p>
-                                    <div class="price__new">
-                                        <span class="x_price_current">34990</span> <span class="x_currency">CLP</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form__input--wrap">
-                                <label class="form__input--icon"><img src="./img/icon_name.png" alt=""></label><input class="form__input" placeholder="Mi nombre" type="text" name="name" required
-                                    autocomplete="name">
-                            </div>
-                            <div class="form__input--wrap">
-                                <label class="form__input--icon"><img src="./img/icon_phone.png" alt=""></label><input class="form__input" placeholder="Mi teléfono" type="tel" name="phone" required
-                                    autocomplete="tel">
-                            </div>
-                            <button class="btn" type="submit">Hacer un pedido</button>
-
-                            <div class="visitors"><img class="eye" src="./img/eye.png" alt="eye">Ahora en el sitio  <span class="lastpeople">12</span> persona</div>
-                            <input type="hidden" name="data0" value="{subid}" />
-                            <input type="hidden" name="data1" value="{b}" />
-                            <input type="hidden" name="data2" value="{a}" />
-                            <input type="hidden" name="data3" value="{x}" />
-                            <input type="hidden" name="data4" value="<?php echo $off; ?>" />
-                            <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
-                            <input type="hidden" name="data6" value="{offer_id}" />
-                            <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
-                            <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
-                            <input type="hidden" name="data9" value="<?php echo $price; ?>" />
-                            <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
-                            <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
-                            <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
-                            <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
-                            <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
-                        </form>
-                        <p class="last">Quedan <span class="lastpack">80</span> envases</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="banner" style="display: none;">
-        <div class="container">
-            <div class="banner__content">
-                <div class="banner__pack">
-                    <picture>
-                        <source media="(max-width: 1023px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==">
-
-                        <img src="./img/prod.png" alt="prod">
-                    </picture>
-                </div>
-                <div class="banner__title">Solo hoy, el <span class="date-0 text-nowrap banner__title--accent" data-format="dd monthFull"> </span> </div>
-
-                <div class="action__price banner__price">
-                    <div class="action__price-old">
-                        <p class="action__price-title"> Precio anterior: </p>
-                        <div class="action__old">
-                            <span class="x_price_previous">69980CLP</span> <span class="x_currency"></span>
-                        </div>
-                    </div>
-                    <div class="action__price-new">
-                        <p class="action__price-title"> Nuevo precio:</p>
-                        <span class="x_price_current">34990</span> <span class="x_currency">CLP</span>
-                    </div>
-                </div>
-                <div class="banner__timer">
-                    <div class="timer__text">Hasta el fin de la oferta queda:</div>
-                    <div class="timer__block">
-                        <div class="timer__hours"><span class="hours min> min"></span></div>
-                        <span class="timer__dots">:</span>
-                        <div class="timer__minutes"><span class="minutes sec"></span></div>
-                        <span class="timer__dots">:</span>
-                        <div class="timer__seconds"><span class="seconds msec"></span></div>
-                    </div>
-                </div>
-                <button class="banner__btn btn ever-popup-btn">Pedir una llamada</button>
-            </div>
-        </div>
+    </footer>
     </div>
-  
-    <script>
-    var time = 600 * 100;
-    var intr;
 
-    function start_timer() {
-        intr = setInterval(tick, 10);
-    }
+    <p style="
+        text-align: center;
+        display: block;
+        margin-top: 10px;
+        padding: 15px;
+        box-sizing: border-box;
+      ">
+        Ramsgatte LLP, 63 Thornwall Rd, CB6 5QE Wilburton, United Kingdom<br />
+    </p>
 
-    function tick() {
-        time = time - 1;
-        var mins = Math.floor(time / 6000);
-        var timeSecs = Math.floor(time - mins * 6000)
-         var secs = Math.floor(timeSecs / 100);
-        var msecs = Math.floor(timeSecs % 100);
+    <div class="feedback">
+        <img src="img/i-phone.png" alt />
+    </div>
+    <div class="popup-window hidden">
+        <div class="close-popup"></div>
+        <form action="" method="POST" action>
+            <input type="hidden" name="data0" value="{subid}" />
+            <input type="hidden" name="data1" value="{b}" />
+            <input type="hidden" name="data2" value="{a}" />
+            <input type="hidden" name="data3" value="{x}" />
+            <input type="hidden" name="data4" value="<?php echo $off; ?>" />
+            <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
+            <input type="hidden" name="data6" value="{offer_id}" />
+            <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
+            <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
+            <input type="hidden" name="data9" value="<?php echo $price; ?>" />
+            <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
+            <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
+            <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
+            <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
+            <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
+            <label for="name2"> Ejemplo: José</label>
+            <input id="name2" type="text" name="name" placeholder="Nombre" required autocomplete="name" />
+            <label for="phone2"> Ejemplo: +52 960 293 7500</label>
+            <input id="phone2" type="tel" name="phone" placeholder="Teléfono" required />
+            <button type="submit">Pedir</button>
+            <input type="hidden" name="sub1" value="{subid}">
+        </form>
+    </div>
 
-        if (mins == 0 && secs == 0) {
-            clearInterval(intr);
+    <link rel="stylesheet" href="css/app.css" />
+
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <script src="js/date.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <style>
+        .feedback {
+            width: 75px;
+            height: 70px;
+            position: fixed;
+            right: -15px;
+            top: 15%;
+            display: flex;
+            align-items: center;
+            background-color: #af2c4b;
+            padding-left: 10px;
+            border-top-left-radius: 35px;
+            border-bottom-left-radius: 35px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+            transition: all 0.5s;
         }
 
-        secs = secs >= 10 ? secs : "0" + secs;
-        msecs = msecs >= 10 ? msecs : "0" + msecs;
-        $(".min").html("0" + mins);
-        $(".sec").html(secs);
-        $(".msec").html(msecs);
-        
-    }
+        .feedback:hover {
+            right: 0;
+        }
 
-    start_timer();
-    const links = document.querySelectorAll('.link');
-const anhor = document.querySelector('.ccc')
+        .popup-window {
+            font-family: inherit;
+            width: 300px;
+            position: fixed;
+            right: 0%;
+            top: 12%;
+            padding: 35px 10px;
+            background: #fff;
+            border-radius: 5px;
+            z-index: 2000;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        }
 
-for (const link of links) {
-    link.addEventListener('click', () => {
-        anhor.scrollIntoView({behavior: "smooth"})
-    })
-}
-    </script>
-    <svg style="display: none;" width="0" height="0" class="hidden">
-        <symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 59.619 64.133" id="illness-icon1">
-            <defs>
-                <clippath>
-                    <path d="M0 48.1h44.714V0H0z" />
-                </clippath>
-            </defs>
-            <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 64.133)">
-                <path
-                    d="M6.962 18.6c.9-4.9 4.1-10 7.8-13.6v5.8c0 .4.2.7.5.9l2 1.1-1.1 6.3c-.1.5.3 1.1.8 1.2.6.1 1.1-.3 1.2-.8l1.3-7c.1-.4-.1-.8-.5-1.1l-2.1-1.2v-7c2.6-2 5.3-3.2 7.8-3.2.4 0 .9 0 1.3.1 1.9.4 3.7 1.4 5.2 2.9l-3.8 6.1c-.1.2-.1.3-.1.5v3.2l-3.1 3.8c-.4.4-.3 1.1.1 1.4.4.4 1.1.3 1.4-.1l3.4-4.1c.1-.2.2-.4.2-.6V9.9l3.3-5.2c.7.9 1.3 1.9 1.9 3 2 4.1 2.6 9 1.7 13.6-.9 4.8-3.5 8.6-7.4 10.7-.1 0-.1.1-.2.1l-6.2 1.6h-.6c-.9 0-1.8-.1-2.6-.3-4.1-.8-7.1-2.1-9.2-4.1-2.9-2.5-3.8-6.1-3-10.7m15.8 16.9l6.1-1.6c.1 0 .3-.1.4-.1.9 1.9 2.9 3.3 5.1 3.3.6 0 1 .4 1 1v5.1c0 .6-.4 1-1 1h-.9c-5.5 0-10.2-3.6-11.9-8.6h.4c.3.1.6 0 .8-.1m-2 12.6h-5.5c-.3 0-.5-.1-.7-.3-.2-.2-.3-.4-.3-.7v-8.5c-1.4-1.2-2.2-3.1-2.2-5.1v-.2c1.8.9 4 1.6 6.6 2.1.3 0 .6.1.9.1l.3.8c.5 1.4 1.2 2.8 2 3.9v6.9c-.1.5-.5 1-1.1 1m21.699-31l-3.899-3c-.4-.3-.5-1-.2-1.4.3-.4 1-.5 1.4-.2l3.9 3c.4.3.5 1 .2 1.4-.3.5-1 .5-1.4.2m-3.2-7c-.2-.5.2-1.1.7-1.2 2-.3 4.3-1.9 4.7-.3.2.5-.2 1.1-.7 1.2l-3.5 1c-.5.1-1.1-.2-1.2-.7m-34.4 2.4c.4-.3 1.1-.3 1.4.2.4.4.3 1.1-.1 1.4l-3.9 3c-.4.3-1.1.3-1.4-.2-.3-.4-.3-1.1.2-1.4zm-4.8-4c.2-.5.7-.8 1.2-.7l3.5 1c.6.2.9.7.7 1.3-.2.5-.7.8-1.2.7l-3.5-1c-.6-.2-.9-.7-.7-1.3" />
+        .hidden {
+            right: -100%;
+        }
 
-            </g>
-        </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 77.06 77.333" id="illness-icon2">
-            <defs>
-                <clippath>
-                    <path d="M0 58h57.795V0H0z" />
-                </clippath>
-            </defs>
-            <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 77.333)">
-                <path d="M9.408 46l4 12H2.625L0 44h5.956L3.07 24.763a.657.657 0 0 1 .154-.532.666.666 0 0 1 1.107.156L14.236 46z" />
+        .popup-window form {
+            width: 100%;
+            min-height: auto;
+            padding: 0;
+            background: inherit;
+            box-shadow: none;
+        }
 
-                <path
-                    d="M49.873 50.088C44.757 55.19 37.938 58 30.674 58h-.656c-6.72 0-12.992-2.99-17.236-8.2l-.6-1.8h5.171L8.62 28.943a22.89 22.89 0 0 1 3.772-7.74l3.604-4.803a19.12 19.12 0 0 0 3.8-11.4V0h4v10c0 2.757 2.243 5 5 5h8c1.654 0 3 1.346 3 3s-1.346 3-3 3h-15c-2.206 0-4 1.794-4 4s1.794 4 4 4h13a1.001 1.001 0 0 1 0 2h-15c-3.309 0-6 2.69-6 6 0 3.052 2.292 5.574 5.245 5.947A9.036 9.036 0 0 0 18.795 45c0 4.963 4.038 9 9 9a8.951 8.951 0 0 0 7.86-4.644 7.944 7.944 0 0 0 3.14.644c4.411 0 8-3.59 8-8 0-.34-.039-.674-.082-1.008.028 0 .054.008.082.008 2.757 0 5-2.243 5-5s-2.243-5-5-5h-9.184c.112-.314.184-.648.184-1 0-1.654-1.346-3-3-3h-13c-1.103 0-2-.897-2-2s.897-2 2-2h15c2.757 0 5-2.243 5-5s-2.243-5-5-5h-8c-1.654 0-3-1.346-3-3V0h10v.395c0 1.656.337 3.302.957 4.837L29.553 7.03l.485 1.939 10.618-2.653c.838-.21 1.7-.317 2.564-.317 5.831 0 10.575 4.744 10.575 10.575v6.043l4 2v6.375c0 7.218-2.814 13.999-7.922 19.095" />
+        .popup-window label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #333;
+            text-transform: uppercase;
+        }
 
-                <path
-                    d="M19.795 41c-2.206 0-4-1.794-4-4s1.794-4 4-4h27c1.654 0 3 1.346 3 3s-1.346 3-3 3-3-1.346-3-3h-2c0 1.956 1.14 3.636 2.78 4.457.134.502.22 1.017.22 1.543 0 3.309-2.691 6-6 6-3.024 0-5.525-2.25-5.935-5.162 1.687-.47 2.935-2.003 2.935-3.838h-2c0 1.103-.897 2-2 2s-2-.897-2-2h-2c0 1.877 1.304 3.444 3.05 3.874a7.99 7.99 0 0 0 3.088 5.465A6.96 6.96 0 0 1 27.795 52c-3.86 0-7-3.141-7-7 0-.741.119-1.463.344-2.157 2.663-.613 4.656-2.997 4.656-5.843h-2c0 2.206-1.794 4-4 4" />
+        .popup-window input {
+            box-sizing: border-box;
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            font-family: inherit;
+            font-size: 16px;
+            margin-bottom: 15px;
+            border: 1px solid #333;
+        }
 
-            </g>
-        </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 80.149 64.021" id="illness-icon3">
-            <defs>
-                <clippath>
-                    <path d="M0 48.016h60.112V0H0z" />
-                </clippath>
-            </defs>
-            <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 64.02)">
-                <path
-                    d="M58.001 20.2c-1.5-2.7-3.899-5-6.6-6.5-1.9-1-3.9-1.5-5.9-1.5h-.5c-2.5.1-4.8 1.1-6.3 2.8-1.3 1.3-1.8 3-1.5 4.5.3 1.6 1.401 2.6 2.2 3.4l.3.3c.6.6 1.3 1.4 1.401 2.3.1 1-.6 2.1-1 2.6s-.9 1-1.4 1.5c-2.8-3.3-6.6-9.1-6.6-16.2V2c0-1.1-.9-2-2-2s-2 .9-2 2v11.4c0 7.1-3.7 12.9-6.6 16.2-.5-.5-1-1-1.4-1.5-.4-.5-1.1-1.6-1-2.6.1-.9.8-1.7 1.4-2.3l.3-.3c.8-.8 1.9-1.8 2.2-3.4.3-1.5-.3-3.1-1.5-4.5-1.5-1.7-3.8-2.7-6.3-2.8h-.5c-1.9 0-3.9.5-5.9 1.5-2.8 1.4-5.1 3.7-6.6 6.5-1.7 3.2-2.5 7.1-2.1 11.4.5 5.1 2.6 11.6 7.2 14.5 4.5 2.8 10.6 2.5 14.7-.7 2.1-1.7 3.5-3.9 3.8-6.2.3-2.1-.3-4.4-1.7-6.5 1.9-2.2 4.3-5.4 5.9-9.4 1.7 4 4 7.2 5.9 9.4-1.4 2.1-2 4.4-1.7 6.5.3 2.3 1.6 4.5 3.8 6.2 4.1 3.2 10.3 3.5 14.7.7 4.6-2.9 6.8-9.4 7.2-14.5.6-4.3-.1-8.2-1.9-11.4" />
+        .popup-window button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #af2c4b;
+            color: #fff;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 15px;
+            border-radius: 20px;
+        }
 
-            </g>
-        </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 42.699 42.733" id="illness-icon4">
-            <defs>
-                <clippath>
-                    <path d="M0 32.05h32.024V0H0z" />
-                </clippath>
-            </defs>
-            <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 42.733)">
-                <path
-                    d="M25.03 10c-1.42 0-2.66-1.01-2.94-2.39-.133-.713-.934-.975-1.4-.71a.98.98 0 0 0-.57 1.02c0 .03.01.05.01.08.47 2.32 2.53 4 4.9 4 .55 0 1-.45 1-1s-.45-1-1-1m-18.02.03c-1.602 0-3-1.301-3-3 0-.55-.45-1-1-1s-1 .45-1 1c0 2.872 2.356 5 5 5 .55 0 1-.45 1-1s-.45-1-1-1m24.998 12.95c0 4.97-4.04 9-9 9h-1a.99.99 0 0 1-1-1c0-.55.439-1 1-1h1c3.86 0 7-3.14 7-7V11.923A7.011 7.011 0 0 1 25.03 14c-3.03 0-5.61-1.92-6.57-4.61-.001 0-.002 0-.003.002a5.035 5.035 0 0 1-4.858-.03 6.97 6.97 0 0 1-6.59 4.669c-3.172 0-4.902-2.044-5.002-2.113V23.05c0 3.86 3.14 7 7 7h1c.549 0 1 .44 1 1 0 .55-.451 1-1 1h-1c-4.96 0-9-4.04-9-9C.066 6.357-.133 6.728.198 5.43l.004-.005A6.985 6.985 0 0 1 7.01.03c3.86 0 7 3.13 7 7 0 .05 0 .1-.01.15v.003a2.98 2.98 0 0 0 4.037.057l.003-.003C17.64 3.975 20.668 0 25.03 0c3.3 0 6.08 2.29 6.8 5.38l.01.01c.329 1.318.102.866.167 17.59" />
+        .close-popup {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            width: 27px;
+            height: 27px;
+            background-color: #fff;
+            cursor: pointer;
+        }
 
-            </g>
-        </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 109.447 77.289" id="illness-icon5">
-            <defs>
-                <clippath>
-                    <path d="M0 57.967h82.085V0H0z" />
-                </clippath>
-            </defs>
-            <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 77.289)">
-                <path
-                    d="M30.699 57.947a3 3 0 0 1-2.531-2.094l-7.344-23.906c-6.896.01-9.483.033-17.781.031a3.001 3.001 0 0 1-.085-6h.085c9.333 0 10.666-.023 20-.03a3.001 3.001 0 0 1 2.875 2.124l4.469 14.5 7.718-40.188a3 3 0 0 1 5.844-.125l7.406 31.313 4.188-6.28a2.998 2.998 0 0 1 2.5-1.345l21 .031a3 3 0 0 1 .085 6h-.085l-19.375-.03-7.125 10.686a3.001 3.001 0 0 1-5.407-.968l-5.781-24.438-7.375 38.313a3 3 0 0 1-3.281 2.406" />
+        .close-popup:before {
+            content: "";
+            background: #333;
+            width: 20px;
+            height: 1px;
+            position: absolute;
+            top: 13px;
+            left: 4px;
+            transform: rotate(-45deg);
+        }
 
-            </g>
-        </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 34.369 32.093" id="illness-icon6">
-            <defs>
-                <clippath>
-                    <path d="M0 24.07h25.776V0H0z" />
-                </clippath>
-            </defs>
-            <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 32.093)">
-                <path
-                    d="M17.395 12.07l-2.7-3.6a1 1 0 0 0-.8-.4h-.09a1 1 0 0 0-.8.55l-2.23 4.45-1.05-1.56a1.002 1.002 0 0 0-.83-.44h-6L12.075.35a1 1 0 0 1 1.51-.01l10.17 11.73zm-16.15 1a7.121 7.121 0 0 0-.71 6.73 6.64 6.64 0 0 0 5.63 4.27h.73a7.998 7.998 0 0 0 6-2.71 7.998 7.998 0 0 0 6 2.71h.73a6.65 6.65 0 0 0 5.62-4.22 7.27 7.27 0 0 0-.14-5.78h-8.21a1 1 0 0 1-.8-.4l-2-2.71-2.28 4.56a1 1 0 0 1-1.72.1l-1.74-2.55z" />
+        .close-popup:after {
+            content: "";
+            background: #333;
+            width: 20px;
+            height: 1px;
+            position: absolute;
+            top: 13px;
+            left: 4px;
+            transform: rotate(45deg);
+        }
 
-            </g>
-        </symbol>
-    </svg>
+        @media (max-width: 480px) {
+            .feedback {
+                width: 60px;
+                height: 40px;
+                padding-left: 7px;
+            }
 
-    <div class="modals">
-        <div class="modal-overlay">
-            <div class="modal modal__error2 modal--0" data-target="modal--1">
-                <div class="modal__wrapper">
-                    <div class="modal__close-modal closeBtn">
-                        <img src="./img/close.svg" alt="">
-                    </div>
-                    <!-- <h3> ATENȚIE!3</h3> -->
-                    <img src="./img/sert.png" alt="">
-                    <!-- <button class="modal__button closeBtn"> Ok</button> -->
-                </div>
-            </div>
-        
+            .feedback {
+                top: 24%;
+            }
 
-        </div>
-    </div>
+            .popup-window {
+                top: 24%;
+            }
 
- 
+            .feedback img {
+                max-width: 30px;
+            }
+        }
+    </style>
 
-   
-   
-    <script src="./js/index.js"></script>
-    <script type="text/javascript">
-    var transit_fb_id = null;
-    var landing_fb_id = null;
-    var thankyou_fb_id = 574507687964518;
-    </script>
+    <link rel="stylesheet" href="css/fixes.css" />
+    <link rel="stylesheet" href="css/timer.css" />
+
+    <!-- <script src="js/timer.js"></script> -->
+    <style>
+        input[type="tel"] {
+            outline: none;
+        }
+
+        a {
+            cursor: pointer !important;
+        }
+
+        button {
+            cursor: pointer !important;
+        }
+
+        button:disabled {
+            cursor: not-allowed !important;
+        }
+    </style>
     <script>
-        const links1 = document.querySelectorAll('.link1');
-const anhor1 = document.querySelector('.ccc1')
+        const code = "52";
+        const inputs = document.querySelectorAll('input[type="tel"]');
+        inputs.forEach((input) => {
+            input.value = `+${code}`;
+        });
 
-for (const link1 of links1) {
-    link1.addEventListener('click', () => {
-        anhor1.scrollIntoView({behavior: "smooth"})
-    })
-}
+        const lengthMain = 10;
+        const lengthTotal = code.length + lengthMain;
+        const forms = document.querySelectorAll("form");
+        forms.forEach((form) => {
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const inputPhone = form.querySelector('input[type="tel"]');
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                inputPhone.addEventListener("input", (e) => {
+                    const plus = e.target.value.includes("+");
+                    const clearStr = e.target.value.replace(/[^+\d]/g, "");
+                    if (plus) {
+                        inputPhone.setAttribute("minlength", lengthTotal + 1);
+                    } else {
+                        inputPhone.setAttribute("minlength", lengthTotal);
+                    }
+
+                    inputPhone.value = clearStr;
+
+                    if (/(\+52|52)([0-9]{10})/.test(clearStr)) {
+                        submitBtn.disabled = false;
+                        inputPhone.style.border = "2px solid green";
+                    } else {
+                        submitBtn.disabled = true;
+                        inputPhone.style.border = "2px solid red";
+                    }
+                });
+            }
+        });
+    </script>
+    <script src="./js/new-form.js?v=1"></script>
+    <script>
+        var time = 600 * 100;
+        var intr;
+
+        function start_timer() {
+            intr = setInterval(tick, 10);
+        }
+
+        function tick() {
+            time = time - 1;
+            var mins = Math.floor(time / 6000);
+            var timeSecs = Math.floor(time - mins * 6000)
+            var secs = Math.floor(timeSecs / 100);
+            var msecs = Math.floor(timeSecs % 100);
+
+            if (mins == 0 && secs == 0) {
+                clearInterval(intr);
+            }
+            secs = secs >= 10 ? secs : "0" + secs;
+            msecs = msecs >= 10 ? msecs : "0" + msecs;
+            $(".min").html("0" + mins);
+            $(".sec").html(secs);
+            $(".msec").html(msecs);
+        }
+        start_timer();
     </script>
 
 </body>
