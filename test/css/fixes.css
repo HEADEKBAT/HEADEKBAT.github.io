@@ -389,20 +389,20 @@
 .submit_form,
 .button_submit {
 	animation: glowing 1500ms infinite both;
-	box-shadow: 0 0 2px #9c2440;
+	box-shadow: 0 0 2px #8a9c24;
 }
 @keyframes glowing {
 	0% {
-		background: #af2c4b;
-		box-shadow: 0 0 0px #9c2440;
+		background: #93af2c;
+		box-shadow: 0 0 0px #909c24;
 	}
 	50% {
-		background: #cc395b;
-		box-shadow: 0 0 12px #9c2440;
+		background: #b6cc39;
+		box-shadow: 0 0 12px #909c24;
 	}
 	100% {
-		background: #af2c4b;
-		box-shadow: 0 0 0px #9c2440;
+		background: #afad2c;
+		box-shadow: 0 0 0px #949c24;
 	}
 }
 

@@ -156,16 +156,16 @@ a.button .button_submit:active {
 }
 .submit_form {
 	border-radius: 5px;
-	background-color: #af2c4b;
+	background-color: #afad2c;
 	border: none;
-	border-bottom: 5px solid #881530;
+	border-bottom: 5px solid #888015;
 }
 .submit_form:hover {
-	background-color: #c83154;
-	border-bottom: 5px solid #881530;
+	background-color: #b1c831;
+	border-bottom: 5px solid #808815;
 }
 .submit_form:active {
-	border-top: 5px solid #c83154;
+	border-top: 5px solid #a0c831;
 	border-bottom: 0;
 }
 .list {
@@ -192,7 +192,7 @@ a.button .button_submit:active {
 .form_top {
 	width: 389px;
 	background-color: #3b5c8b;
-	background-image: linear-gradient(to bottom, #205988, #6f92c4);
+	background-image: linear-gradient(to bottom, #16ae53, #6f92c4);
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 	position: relative;
@@ -608,7 +608,7 @@ a.button .button_submit:active {
 	background: #d3e7f9;
 }
 .formula .wrapper {
-	background: url(../img/bg_formula.png) top center/650px no-repeat;
+	background: url(../img/bg_formula.png) top center/100% no-repeat;
 }
 .formula .wrapper .top_part {
 	position: relative;
@@ -705,7 +705,7 @@ a.button .button_submit:active {
 }
 .eliminate {
 	color: #fff;
-	background: linear-gradient(to bottom, #2a4a6f, #345b89);
+	background: linear-gradient(to bottom, #16ae53, #345b89);
 }
 .eliminate .wrapper {
 	position: relative;
@@ -1181,7 +1181,7 @@ a.button .button_submit:active {
 }
 .bottom_section {
 	padding: 30px 0 25px;
-	background: linear-gradient(to bottom, #2a4a6f 0, #345b89 100%);
+	background: linear-gradient(to bottom, #16ae53 0, #345b89 100%);
 	text-align: center;
 }
 .bottom_section .wrapper {
@@ -2830,7 +2830,7 @@ body.lang_it .form_top__title {
 		max-width: 100%;
 		margin: 0 auto 10px;
 		padding: 20px 0;
-		background: linear-gradient(to bottom, #2a4a6f 0, #345b89 100%);
+		background: linear-gradient(to bottom, #16ae53 0, #345b89 100%);
 	}
 	.delivery .left_part .content_part {
 		width: 500px;
