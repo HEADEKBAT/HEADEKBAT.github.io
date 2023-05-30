@@ -41,11 +41,49 @@ include __DIR__ . '/../_php/update-params.php';
 </head>
 
 <body class="lang_it page_home page_cod">
+
     <div class="page_wrapper">
+        <header class="header link">
+            <div class="wrapper">
+                <div class="header__wrapper">
+                    <div class="header__logo">
+                        <img class="header__logo--img" src="./img/logo.png" alt="logotype">
+                        <h2 class="header__logo--name">
+                            <!-- Incasol -->
+                        </h2>
+                    </div>
+                    <nav class="header__nav">
+                        <a class="nav__item scroll-link" href="">
+                            <picture>
+                                <source media="(max-width: 999px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==">
+                                <img class="nav__item-image" src="./img/header_icon_rev.png" alt="reviews">
+                            </picture>
+                            <span class="nav__item-text">Comentarios</span>
+                        </a>
+                        <a class="nav__item scroll-link" href="">
+                            <picture>
+                                <source media="(max-width: 999px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==">
+                                <img class="nav__item-image" src="./img/header_icon_cons.png" alt="consist">
+                            </picture>
+                            <span class="nav__item-text">Cómo hacer un pedido</span>
+                        </a>
+                    </nav>
+                    <div class="header__timer">
+                        <div class="timer__text">Hasta el fin de la oferta queda:</div>
+                        <div class="timer__block">
+                            <div class="timer__hours"><span class="hours  min">09</span></div>
+                            <span class="timer__dots">:</span>
+                            <div class="timer__minutes"><span class="minutes sec">49</span></div>
+                            <span class="timer__dots">:</span>
+                            <div class="timer__seconds"><span class="seconds msec">94</span></div>
+                        </div>
+                    </div>
+                    <button class="btn ever-popup-btn header__button link">Oddajte naročilo</button>
+                </div>
+            </div>
+        </header>
         <section class="greeting">
-            <header>
-                <img src="./img/header-bg.png" alt="">
-            </header>
+
             <div class="wrapper">
 
                 <div class="title">
@@ -1173,7 +1211,7 @@ include __DIR__ . '/../_php/update-params.php';
             top: 15%;
             display: flex;
             align-items: center;
-            background-color: #af2c4b;
+            background-color: #065c37;
             padding-left: 10px;
             border-top-left-radius: 35px;
             border-bottom-left-radius: 35px;
@@ -1238,7 +1276,7 @@ include __DIR__ . '/../_php/update-params.php';
             padding: 10px;
             border: none;
             border-radius: 5px;
-            background: #af2c4b;
+            background: #065c37;
             color: #fff;
             cursor: pointer;
             font-family: inherit;

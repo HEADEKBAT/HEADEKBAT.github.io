@@ -89,24 +89,24 @@ function showFormBlock() {
 }
 
 
-ButtonShowForm.addEventListener("click", () => {
-    ButtonShowForm.classList.add('display-none-button')
-    showLoadingBlock()
-    setTimeout(() => (closeLoadingBlock()), 5500);
-    setTimeout(() => (showFormBlock()), 5600);
-    setTimeout(() => (start_timer1()), 5650)
-})
+// ButtonShowForm.addEventListener("click", () => {
+//     ButtonShowForm.classList.add('display-none-button')
+//     showLoadingBlock()
+//     setTimeout(() => (closeLoadingBlock()), 5500);
+//     setTimeout(() => (showFormBlock()), 5600);
+//     setTimeout(() => (start_timer1()), 5650)
+// })
 
-const links = document.querySelectorAll('.link');
-const anhor = document.querySelector('.ccc')
+// const links = document.querySelectorAll('.link');
+// const anhor = document.querySelector('.ccc')
 
-for (const link of links) {
-    link.addEventListener('click', () => {
-        anhor.scrollIntoView({
-            behavior: "smooth"
-        })
-    })
-}
+// for (const link of links) {
+//     link.addEventListener('click', () => {
+//         anhor.scrollIntoView({
+//             behavior: "smooth"
+//         })
+//     })
+// }
 
 
 //свайпер....
@@ -128,21 +128,21 @@ btns.forEach((el) => {
     });
 });
 
-modalOverlay.addEventListener('click', (e) => {
-    // console.log(e.target);
+// modalOverlay.addEventListener('click', (e) => {
+//     // console.log(e.target);
 
-    if (e.target == modalOverlay) {
-        modalOverlay.classList.remove('modal-overlay--visible');
-        modals.forEach((el) => {
-            el.classList.remove('modal--visible');
-        });
-    }
-});
-for (let closeModelBtn of closeModalBtns) {
-    closeModelBtn.addEventListener("click", () => {
-        modalOverlay.classList.remove('modal-overlay--visible');
-        modals.forEach((el) => {
-            el.classList.remove('modal--visible');
-        });
-    })
-}
+//     if (e.target == modalOverlay) {
+//         modalOverlay.classList.remove('modal-overlay--visible');
+//         modals.forEach((el) => {
+//             el.classList.remove('modal--visible');
+//         });
+//     }
+// });
+// for (let closeModelBtn of closeModalBtns) {
+//     closeModelBtn.addEventListener("click", () => {
+//         modalOverlay.classList.remove('modal-overlay--visible');
+//         modals.forEach((el) => {
+//             el.classList.remove('modal--visible');
+//         });
+//     })
+// }

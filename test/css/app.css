@@ -133,13 +133,13 @@ a.button .button_submit {
 	margin-top: 5px;
 	position: relative;
 	width: 100%;
-	color: #fff;
+	color: #000;
 }
 a.button .button_submit {
 	border-radius: 5px;
-	background-color: #af2c4b;
+	background-color: #d9ff00;
 	border: none;
-	border-bottom: 5px solid #881530;
+	border-bottom: 5px solid #c8ff00;
 }
 a.button .button_submit:hover {
 	background-color: #c83154;
@@ -156,9 +156,9 @@ a.button .button_submit:active {
 }
 .submit_form {
 	border-radius: 5px;
-	background-color: #afad2c;
+	background-color: #fffb00;
 	border: none;
-	border-bottom: 5px solid #888015;
+	border-bottom: 5px solid #c8ff00;
 }
 .submit_form:hover {
 	background-color: #b1c831;
@@ -232,7 +232,7 @@ a.button .button_submit:active {
 	font-family: 'Noto Serif', serif;
 }
 .form_top__title span {
-	color: #49c1ff;
+	color: #000;
 }
 .form_top__field {
 	margin-bottom: 6px;
@@ -318,10 +318,10 @@ a.button .button_submit:active {
 	font-style: italic;
 }
 .form_top__price_label span {
-	color: #49c1ff;
+	color: #000;
 }
 .form_top__price_val {
-	color: #49c1ff;
+	color: #000;
 	font-size: 32px;
 	line-height: 32px;
 	font-weight: 700;
@@ -605,7 +605,7 @@ a.button .button_submit:active {
 	width: 48.5%;
 }
 .formula {
-	background: #d3e7f9;
+	background: hsla(169, 34%, 61%, 0.466);
 }
 .formula .wrapper {
 	background: url(../img/bg_formula.png) top center/100% no-repeat;
@@ -1801,7 +1801,7 @@ body.lang_it .form_top__title {
 }
 .free-delivery-title {
 	text-transform: uppercase;
-	color: #49c1ff;
+	color: #000;
 	font-size: 17px;
 	line-height: 20px;
 	font-weight: 700;

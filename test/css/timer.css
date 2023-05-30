@@ -1,51 +1,53 @@
+/** @format */
+
 .timer {
-  margin-top: 20px;
-  margin-bottom: 15px;
+	margin-top: 20px;
+	margin-bottom: 15px;
 }
 .timer-flexWrap {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
 }
 .timer-flexItem {
-  flex-basis: 75px;
+	flex-basis: 75px;
 }
 .timer-flexItem:not(:last-of-type) {
-  margin-right: 10px;
+	margin-right: 10px;
 }
 .timer-numbers {
-  font-family: 'Open Sans', sans-serif;
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  width: 58px;
-  height: 58px;
-  background: #AF2C4B;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 5px;
-  position: relative;
+	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+	align-items: center;
+	width: 58px;
+	height: 58px;
+	background: #065c37;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 30px;
+	font-weight: 700;
+	margin-bottom: 5px;
+	position: relative;
 }
 .timer-numbers:after {
-  content: ':';
-  color: #fff;
-  font-size: 30px;
-  line-height: 58px;
-  font-weight: 700;
-  position: absolute;
-  left: calc(100% + 10px);
-  top: -3px;
-  font-family: 'Open Sans', sans-serif;
+	content: ':';
+	color: #fff;
+	font-size: 30px;
+	line-height: 58px;
+	font-weight: 700;
+	position: absolute;
+	left: calc(100% + 10px);
+	top: -3px;
+	font-family: 'Open Sans', sans-serif;
 }
 .timer-flexItem:last-of-type .timer-numbers:after {
-  display: none;
+	display: none;
 }
 .timer-description {
-  font-family: 'Open Sans', sans-serif;
-  text-align: center;
-  color: #fff;
-  font-size: 15px;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	color: #fff;
+	font-size: 15px;
 }
