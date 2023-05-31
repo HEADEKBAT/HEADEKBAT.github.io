@@ -275,12 +275,6 @@ summary:focus {
   }
 }
 
-@media (max-width: 768px) {
-  header .container {
-    display: none;
-  }
-}
-
 @media (min-width: 768px) {
   .promo__image {
     display: none;
