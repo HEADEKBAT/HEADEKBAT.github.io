@@ -642,7 +642,7 @@ input:-moz-ui-invalid {
 	-webkit-box-ordinal-group: 2;
 	-ms-flex-order: 1;
 	order: 1;
-	margin-bottom: 45px;
+	/* margin-bottom: 45px; */
 	max-width: 320px;
 	margin-left: auto;
 	margin-right: auto;
@@ -4698,7 +4698,7 @@ input::-ms-clear {
 
 	.promo__description {
 		width: 390px;
-		margin-bottom: 45px;
+		margin-bottom: 15px;
 		margin-right: 20px;
 	}
 
