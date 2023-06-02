@@ -1,310 +1,151 @@
-<!--?php
-// Защита от прямых заходов на ленд
+<?php
+//Тесты
+$celArr = [59, 60]; // Номера селеб через запятую
+$titleArr = [1]; // Номера заголовков через запятую
+
+//Интеграция
+$offerData = 'prostanorm-forte---mx---lucky.php'; // Путь к файлу данных оффера
+$metrika = '93774989'; // ID счетчика Яндекс.Метрики
+$confirmColorBackground = 'ffffff'; // Цвет общего фона конфирма
+$confirmColorBlocks = '346f66'; // Цвет фона блоков конфирма
+$confirmColorHeaders = '000000'; // Цвет заголовков конфирма
+$confirmColorText = 'fff'; // Цвет текста конфирма
+
+//Не трограть
+include __DIR__ . '/../_assets/versions.php'; // Блок тестирования элементов
+include __DIR__ . '/../_order/offers/' . $offerData;
+include __DIR__ . '/../_order/affiliates.php';
 if (!isset($rawClick)) {
     echo '404';
     exit();
 }
-
-// Данные по офферу
-$offerData = 'incasol---cl---adcombo.php';
-include __DIR__ . '/../_order/offers/' . $offerData;
-
-// Получение ID партнерки
-include __DIR__ . '/../_order/affiliates.php';
-$affiliates_id = $affiliates[$aff];
-// ID счетчика Яндекс.Метрики
-$metrika = '93466655';
-// Цвета конфирма
-$confirmColorBackground = 'ffffff'; // Общий фон
-$confirmColorBlocks = '36ad23'; // Блоки
-$confirmColorHeaders = '000000'; // Заголовки
-$confirmColorText = 'fff'; // Текст в блоках
-// Блок тестирования элементов
-//include __DIR__ . '/versions.php';
-
-// Обновление параметров клика
-include __DIR__ . '/../_php/update-params.php';
-?-->
+?>
 <!DOCTYPE html>
-<html lang="ec" dir="ltr">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#ffffff">
-    <title>Kupite povoljno Hypercaps. Cijene, mišljenja. Naručite Hypercaps odmah!</title>
-    <link rel="icon" href="./img/heart.png" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1" id="viewport" />
+    <title>Prostanorm Forte</title>
+    <meta name="format-detection" content="telephone=no" />
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="{_current_domain}/lander/_js/scripts.js?var=4&metrika=<?php echo $metrika;?>&aid=<?php echo $affiliates_id;?>"></script>
-    <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff;?>&off=<?php echo $off;?>&geo=<?php echo $geo;?>&land_pre={landing_id}&offer_pre={offer_id}"></script>
-    <link rel="stylesheet" href="./css/new_css.css">
-    <link rel="stylesheet" href="./css/new-style.css">
-    <script data-polyfil="webp">
-        !(function (e, n, A) {
-            function o(e, n) {
-                return typeof e === n;
-            }
-
-            function t() {
-                var e, n, A, t, a, i, l;
-                for (var f in r)
-                    if (r.hasOwnProperty(f)) {
-                        if (((e = []), (n = r[f]), n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n
-                                .options.aliases.length)))
-                            for (A = 0; A < n.options.aliases.length; A++) e.push(n.options.aliases[A].toLowerCase());
-                        for (t = o(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++)
-                            (i = e[a]),
-                            (l = i.split(".")),
-                            1 === l.length ? (Modernizr[l[0]] = t) : (!Modernizr[l[0]] || Modernizr[l[0]] instanceof Boolean || (
-                                Modernizr[l[0]] = new Boolean(Modernizr[l[0]])), (Modernizr[l[0]][l[1]] = t)),
-                            s.push((t ? "" : "no-") + l.join("-"));
-                    }
-            }
-
-            function a(e) {
-                var n = u.className,
-                    A = Modernizr._config.classPrefix || "";
-                if ((c && (n = n.baseVal), Modernizr._config.enableJSClass)) {
-                    var o = new RegExp("(^|\s)" + A + "no-js(\s|$)");
-                    n = n.replace(o, "$1" + A + "js$2");
-                }
-                Modernizr._config.enableClasses && ((n += " " + A + e.join(" " + A)), c ? (u.className.baseVal = n) : (u
-                    .className = n));
-            }
-
-            function i(e, n) {
-                if ("object" == typeof e)
-                    for (var A in e) f(e, A) && i(A, e[A]);
-                else {
-                    e = e.toLowerCase();
-                    var o = e.split("."),
-                        t = Modernizr[o[0]];
-                    if ((2 == o.length && (t = t[o[1]]), "undefined" != typeof t)) return Modernizr;
-                    (n = "function" == typeof n ? n() : n),
-                    1 == o.length ? (Modernizr[o[0]] = n) : (!Modernizr[o[0]] || Modernizr[o[0]] instanceof Boolean || (
-                            Modernizr[o[0]] = new Boolean(Modernizr[o[0]])), (Modernizr[o[0]][o[1]] = n)),
-                        a([(n && 0 != n ? "" : "no-") + o.join("-")]),
-                        Modernizr._trigger(e, n);
-                }
-                return Modernizr;
-            }
-            var s = [],
-                r = [],
-                l = {
-                    _version: "3.6.0",
-                    _config: {
-                        classPrefix: "",
-                        enableClasses: !0,
-                        enableJSClass: !0,
-                        usePrefixes: !0
-                    },
-                    _q: [],
-                    on: function (e, n) {
-                        var A = this;
-                        setTimeout(function () {
-                            n(A[e]);
-                        }, 0);
-                    },
-                    addTest: function (e, n, A) {
-                        r.push({
-                            name: e,
-                            fn: n,
-                            options: A
-                        });
-                    },
-                    addAsyncTest: function (e) {
-                        r.push({
-                            name: null,
-                            fn: e
-                        });
-                    },
-                },
-                Modernizr = function () {};
-            (Modernizr.prototype = l), (Modernizr = new Modernizr());
-            var f,
-                u = n.documentElement,
-                c = "svg" === u.nodeName.toLowerCase();
-            !(function () {
-                var e = {}.hasOwnProperty;
-                f =
-                    o(e, "undefined") || o(e.call, "undefined") ?
-                    function (e, n) {
-                        return n in e && o(e.constructor.prototype[n], "undefined");
-                    } :
-                    function (n, A) {
-                        return e.call(n, A);
-                    };
-            })(),
-            (l._l = {}),
-            (l.on = function (e, n) {
-                this._l[e] || (this._l[e] = []),
-                    this._l[e].push(n),
-                    Modernizr.hasOwnProperty(e) &&
-                    setTimeout(function () {
-                        Modernizr._trigger(e, Modernizr[e]);
-                    }, 0);
-            }),
-            (l._trigger = function (e, n) {
-                if (this._l[e]) {
-                    var A = this._l[e];
-                    setTimeout(function () {
-                            var e, o;
-                            for (e = 0; e < A.length; e++)(o = A[e])(n);
-                        }, 0),
-                        delete this._l[e];
-                }
-            }),
-            Modernizr._q.push(function () {
-                    l.addTest = i;
-                }),
-                Modernizr.addAsyncTest(function () {
-                    function e(e, n, A) {
-                        function o(n) {
-                            var o = n && "load" === n.type ? 1 == t.width : !1,
-                                a = "webp" === e;
-                            i(e, a && o ? new Boolean(o) : o), A && A(n);
-                        }
-                        var t = new Image();
-                        (t.onerror = o), (t.onload = o), (t.src = n);
-                    }
-                    var n = [{
-                                uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",
-                                name: "webp"
-                            },
-                            {
-                                uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",
-                                name: "webp.alpha"
-                            },
-                            {
-                                uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",
-                                name: "webp.animation"
-                            },
-                            {
-                                uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",
-                                name: "webp.lossless"
-                            },
-                        ],
-                        A = n.shift();
-                    e(A.name, A.uri, function (A) {
-                        if (A && "load" === A.type)
-                            for (var o = 0; o < n.length; o++) e(n[o].name, n[o].uri);
-                    });
-                }),
-                t(),
-                a(s),
-                delete l.addTest,
-                delete l.addAsyncTest;
-            for (var p = 0; p < Modernizr._q.length; p++) Modernizr._q[p]();
-            e.Modernizr = Modernizr;
-        })(window, document);
-    </script>
+    <script src="{_current_domain}/lander/_js/scripts-v2.js?var=4&metrika=<?php echo $metrika; ?>&aid=<?php echo $affiliates_id; ?>"></script>
+    <link rel="stylesheet" href="./css/new-css.css">
+    <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff; ?>&off=<?php echo $off; ?>&geo=<?php echo $geo; ?>&land_pre={landing_id}&offer_pre={offer_id}"></script>
 
 </head>
 
-<body class="timer-different ev-date no-webp" data-invalid-name-text="¡Introduzca su nombre correctamente!"
-    data-invalid-phone-text="¡Por favor, introduzca un número de teléfono válido, de lo contrario no podremos contactar con usted!">
-    <header class="header link">
-        <div class="container">
-            <div class="header__wrapper">
-                <div class="header__logo">
-                    <img class="header__logo--img" src="./img/logo.png" alt="logotype">
-                    <h2 class="header__logo--name"> Hypercaps</h2>
-                </div>
-                <nav class="header__nav">
-                    <a class="nav__item scroll-link" href>
-                        <picture>
-                            <source media="(max-width: 999px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==">
-                            <img class="nav__item-image" src="./img/header_icon_rev.png" alt="reviews">
-                        </picture>
-                        <span class="nav__item-text"> Komentari</span>
-                    </a>
-                    <a class="nav__item scroll-link" href>
-                        <picture>
-                            <source media="(max-width: 999px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==">
-                            <img class="nav__item-image" src="./img/header_icon_cons.png" alt="consist">
-                        </picture>
-                        <span class="nav__item-text"> Kako naručiti?</span>
-                    </a>
-                </nav>
-                <div class="header__timer">
-                    <div class="timer__text"> Do kraja ponude je ostalo</div>
-                    <div class="timer__block">
-                        <div class="timer__hours"><span class="hours  min"></span></div>
-                        <span class="timer__dots">:</span>
-                        <div class="timer__minutes"><span class="minutes sec"></span></div>
-                        <span class="timer__dots">:</span>
-                        <div class="timer__seconds"><span class="seconds msec"></span></div>
-                    </div>
-                </div>
-                <button class="btn ever-popup-btn header__button"> Naručiti</button>
-            </div>
-        </div>
-    </header>
-    <section class="promo block">
-        <div class="container">
-            <div class="promo__content">
+<body class="lang_it page_home page_cod">
 
-                <div class="promo__description">
-                    <div class="promo__title">
-                        <h1> Hypercaps:</h1>
-                        <h2 class="title"> Ključ za krvni pritisak 120/80, dobar san i dugovječnost</h2>
+    <div class="page_wrapper">
+        <header class="header link">
+            <div class="wrapper">
+                <div class="header__wrapper">
+                    <div class="header__logo">
+                        <img class="header__logo--img" src="./img/logo.png" alt="logotype">
+                        <h2 class="header__logo--name">
+                            <!-- Incasol -->
+                        </h2>
                     </div>
-                    <p class="subtitle"> Nakon 15 dana uzimanja Hypercapsa, zaboravit ćete na</p>
+                    <nav class="header__nav">
+                        <a class="nav__item scroll-link" href="">
+                            <picture>
+                                <source media="(max-width: 999px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==">
+                                <img class="nav__item-image" src="./img/header_icon_rev.png" alt="reviews">
+                            </picture>
+                            <span class="nav__item-text">Comentarios</span>
+                        </a>
+                        <a class="nav__item scroll-link" href="">
+                            <picture>
+                                <source media="(max-width: 999px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==">
+                                <img class="nav__item-image" src="./img/header_icon_cons.png" alt="consist">
+                            </picture>
+                            <span class="nav__item-text">Cómo hacer un pedido</span>
+                        </a>
+                    </nav>
+                    <div class="header__timer">
+                        <div class="timer__text">Hasta el fin de la oferta queda:</div>
+                        <div class="timer__block">
+                            <div class="timer__hours"><span class="hours  min">09</span></div>
+                            <span class="timer__dots">:</span>
+                            <div class="timer__minutes"><span class="minutes sec">49</span></div>
+                            <span class="timer__dots">:</span>
+                            <div class="timer__seconds"><span class="seconds msec">94</span></div>
+                        </div>
+                    </div>
+                    <button class="btn ever-popup-btn header__button link">Hacer un pedido</button>
+                </div>
+            </div>
+        </header>
+        <section class="greeting">
+
+            <div class="wrapper">
+
+                <div class="title">
+                    <span> PROSTANORM FORTE: La fórmula más eficaz para la salud de la próstata </span>
 
                 </div>
+                <ul class="list">
+                    <p>
+                        <strong>
 
-            </div>
-            <div class="flex-items">
-                <div class="flex-items__item">
-                    <div class="flex-items__logo">
-                        <img src="./img/icon-l.png" alt>
+                            Este efecto le espera después de 14 días:
+                        </strong>
+                    </p>
+                    <li><strong> SIN sensación dolorosa en la próstata </strong></li>
+                    <li><strong>Sensación de vaciado completo de la vejiga </strong></li>
+                    <li><strong>Fuerte flujo de orina </strong></li>
+                    <li><strong>Ausencia de ganas nocturnas de orinar </strong></li>
+                    <li><strong>Fuerte erección y aumento de la libido </strong></li>
+                    <li><strong>Confianza en la fuerza masculina</strong></li>
+
+                </ul>
+                <div class="product">
+
+                    <div class="labels">
+                        <img src="./img/prod.png" alt="">
                     </div>
-                    <div class="flex-items__text"> Visok krvni pritisak, glavobolje i migrene</div>
-                    <div class="flex-items__text"> Tinitus, znojenje, crvenilo lica</div>
-                    <div class="flex-items__text"> Depresivno stanje i strah za sopstveni život</div>
                 </div>
-                <div class="flex-items__item flex-items__item--green-text">
-                    <div class="flex-items__logo">
-                        <img src="./img/icon-r.png" alt>
-                    </div>
-                    <div class="flex-items__text"> Vaš krvni pritisak će se stabilizovati od prvog dana</div>
-                    <div class="flex-items__text"> Simptomi hipertenzije se smanjuju iz dana u dan</div>
-                    <div class="flex-items__text"> Uz Hypercaps ćete dobiti mir i potrebnu energiju</div>
-                </div>
+                <br>
+                <a class="scroll_to_button button " href="#scroll_to_form">
+                    <button class="button_submit" type="submit">
+                        <span> Pedir Prostanorm Forte</span>
+                    </button>
+                </a>
+                <br><br>
             </div>
-            <div class="promo-bottom">
-                <img src="./img/bottom-logo.png" alt>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
     <section class="block-doc bg">
-        <div class="container">
+        <div class="wrapper">
 
 
             <div class="block-doc__container">
                 <h2 class="title recomend__title">
-                    Dr. Danica Grujicic priporoča Hyper Caps
+                    <? echo $celName; ?> recomienda Prostanorm Forte
                 </h2>
                 <div class="recomend__content">
                     <div class="recomend__doctor">
-                        <!-- <img class="recomend__doctor--img" src="../_assets/60/cimg1.jpg" onerror="this.src=''" alt="img"> -->
-                        <img class="recomend__doctor--img" src="./img/doc.jpg" onerror="this.src=''" alt="img">
+                        <img class="recomend__doctor--img" src="<? echo $celImg; ?>/cimg1.jpg" onerror="this.src='<? echo $errorImg; ?>'" alt="img">
+                        <!-- <img class="recomend__doctor--img" src="./img/doc.jpg" onerror="this.src='<? echo $errorImg; ?>'" alt="img"> -->
                     </div>
                     <div class="recomend__info">
-                        <p class="bg-text">Ta izdelek priporočam vsem ljudem, starejšim od 50 let, ki trpijo zaradi hipertenzije.</p>
+                        <p class="bg-text">Lo recomiendo a todos los hombres mayores de 45 años porque la prostatitis puede ser asintomática</p>
                         <div class="text">
-                            «Hyper Caps je pokazal visoko učinkovitost pri zniževanju krvnega tlaka pri upokojencih, pa tudi pri čiščenju krvnih žil (povečanje svetline arterijskih žil za do 75 %).
-                            Izdelek vam bo pomagal, da se boste takoj po zaužitju počutili bolje”a ».
+                            «¡Prostanorm Forte es un verdadero descubrimiento en el mundo de la medicina! Se trata de una fórmula en cuatro fases que normaliza la salud de la próstata, la vejiga y las
+                            vías urinarias. En un plazo de 7 a 14 días elimina las molestias prostáticas, frena las ganas bruscas de orinar y elimina la sensación de vaciado incompleto.
+                            9 de cada 10 hombres que toman Prostanorm Forte afirman que su libido ha vuelto, no hay eyaculación precoz, que también es un síntoma del envejecimiento de la glándula
+                            prostática. Ya nada le molesta por la noche ni durante el día ».
                         </div>
 
                         <div class="sign">
                             <div class="sign__doctor">
                                 <p class="sign__doctor--name">
-                                    Dr. Danica Grujicic,
+                                    <? echo $celName; ?>,
                                 </p>
                                 <p class="sign__doctor--post">
-                                    Predsednik združenja kardiologov. </p>
+                                    <? echo $celAbout; ?>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -312,1585 +153,1220 @@ include __DIR__ . '/../_php/update-params.php';
             </div>
         </div>
     </section>
-    <section class="statistic block">
-        <div class="container">
-            <h2 class="title statistic__title"> Visok krvni pritisak ubija milione ljudi godišnje!</h2>
-            <div class="graph">
-                <ul class="graph__name">
-                    <li class="graph__name--item"> Hipertenzija</li>
-                    <li class="graph__name--item"> Onkološke bolesti</li>
-                    <li class="graph__name--item"> Dijabetes</li>
-                </ul>
-                <div class="graph__value">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="830" viewBox="0 0 830 450">
-                        <style></style>
-                        <text class="main test" x="27" y="50">
-                            16
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="27" y="90">
-                            14
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="27" y="130">
-                            12
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="27" y="170">
-                            10
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="36" y="210">
-                            8
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="36" y="250">
-                            6
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="36" y="290">
-                            4
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="36" y="330">
-                            2
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="36" y="370">
-                            1
-                            <!-- <tspan class="main-sub">millones</tspan> -->
-                        </text>
-                        <text class="main" x="36" y="410">0
-                        </text>
-                        <text class="main" x="0" y="440">
-                            <tspan class="main-sub">millones</tspan>
-                        </text>
-
-                        <text class="main" x="70" y="442">
-                            <tspan id="yyyy-20">2000</tspan>
-                        </text>
-                        <text class="main" x="230" y="442">
-                            <tspan id="yyyy-15">2005</tspan>
-                        </text>
-                        <text class="main" x="408" y="442">
-                            <tspan id="yyyy-10">2010</tspan>
-                        </text>
-                        <text class="main" x="586" y="442">
-                            <tspan id="yyyy-5">2015</tspan>
-                        </text>
-                        <text class="main" x="764" y="442">
-                            <tspan id="yyyy-0">2020</tspan>
-                        </text>
-                        <path d="M70 45 785 45 785 405 70 405 70 45" stroke="#d1d1d1" stroke-width="1" fill="transparent"></path>
-                        <line x1="70" y1="85" x2="785" y2="85" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="70" y1="125" x2="785" y2="125" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="70" y1="165" x2="785" y2="165" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="70" y1="205" x2="785" y2="205" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="70" y1="245" x2="785" y2="245" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="70" y1="285" x2="785" y2="285" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="70" y1="325" x2="785" y2="325" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="70" y1="365" x2="785" y2="365" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="250" y1="45" x2="250" y2="405" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="427" y1="45" x2="427" y2="405" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="605" y1="45" x2="605" y2="405" stroke="#d1d1d1" stroke-width="1"></line>
-                        <circle cx="70" cy="205" r="7" fill="#36ad23"></circle>
-                        <circle cx="250" cy="185" r="7" fill="#36ad23"></circle>
-                        <circle cx="427" cy="165" r="7" fill="#36ad23"></circle>
-                        <circle cx="605" cy="105" r="7" fill="#36ad23"></circle>
-                        <circle cx="785" cy="45" r="7" fill="#36ad23"></circle>
-                        <path d="M70 205 427 165 785 45" stroke="#36ad23" stroke-width="2" fill="transparent"></path>
-                        <circle cx="70" cy="304" r="7" fill="#4758a5"></circle>
-                        <circle cx="250" cy="291" r="7" fill="#4758a5"></circle>
-                        <circle cx="427" cy="289" r="7" fill="#4758a5"></circle>
-                        <circle cx="605" cy="270" r="7" fill="#4758a5"></circle>
-                        <circle cx="785" cy="253" r="7" fill="#4758a5"></circle>
-                        <path d="M70 304 250 291 427 289 605 270 785 253" stroke="#4758a5" stroke-width="2" fill="transparent"></path>
-
-                        <circle cx="70" cy="365" r="7" fill="#7c7c7c"></circle>
-                        <circle cx="250" cy="342" r="7" fill="#7c7c7c"></circle>
-                        <circle cx="427" cy="336" r="7" fill="#7c7c7c"></circle>
-                        <circle cx="605" cy="333" r="7" fill="#7c7c7c"></circle>
-                        <circle cx="785" cy="350" r="7" fill="#7c7c7c"></circle>
-                        <path d="M70 365 250 342 427 336 605 333 785 350" stroke="#7c7c7c" stroke-width="2" fill="transparent"></path>
-
-                        <text class="value" x="205" y="170">
-                            8,5
-                            <tspan class="value-sub">millones</tspan>
-                        </text>
-                        <text class="value" x="340" y="140">
-                            10,1
-                            <tspan class="value-sub">millones</tspan>
-                        </text>
-                        <text class="value" x="515" y="82">
-                            13,2
-                            <tspan class="value-sub">millones</tspan>
-                        </text>
-                        <text class="value" x="700" y="30">
-                            16
-                            <tspan class="value-sub">millones</tspan>
-                        </text>
-                    </svg>
-                </div>
-            </div>
-            <p class="statistic__info"> Prema WHO, na kraju<span class="date-1" data-format="year"></span>,<span class="bg-white text-nowrap"> 1.130 miliona</span> ljudi u svijetu pate od visokog
-                krvnog pritiska<span class="bg-white text-nowrap"> dvoje od pet</span> ljudi nisu svjesni svoje dijagnoze i samo jedan od deset hipertoničara ima svoju bolest pod kontrolom.</p>
-        </div>
+    </div>
     </section>
-    <section class="illness block bg">
-        <div class="container">
-            <h2 class="title illness__title"> Neliječena hipertenzija dovodi do:</h2>
-            <div class="illness__content">
-                <div class="illness__box active">
-                    <h3 class="illness-box__title">
-                        <svg class="icon illness-box__title--icon illness-box__title--icon1">
-                            <use href="#illness-icon1" />
-                        </svg> Infarkt miokarda</h3>
-                    <div class="illness__item">
-                        <div class="illness-item__img">
-                            <picture>
-
-                                <img src="./img/illness-img1.webp" alt="image">
-                            </picture>
-                        </div>
-                        <div class="illness-item__sub">
-                            <div class="illness-item__title">
-                                <svg class="icon illness-item__title--icon">
-                                    <use href="#illness-icon1" />
-                                </svg> Infarkt miokarda</div>
-                            <p class="illness-item__info"> Smrt dijela srčanog mišića zbog prekida protoka krvi kroz glavnu arteriju srca može dovesti do potpunog zastoja srca.</p>
-                        </div>
-                        <h4 class="illness__attention"> Patnja od visokog krvnog pritiska je opasna po život!</h4>
-                    </div>
-                </div>
-                <div class="illness__box">
-                    <h3 class="illness-box__title">
-                        <svg class="icon illness-box__title--icon illness-box__title--icon2">
-                            <use href="#illness-icon2" />
-                        </svg> Moždani udar</h3>
-                    <div class="illness__item">
-                        <div class="illness-item__img">
-                            <picture>
-
-                                <img src="./img/illness-img2.webp" alt="image">
-                            </picture>
-                        </div>
-                        <div class="illness-item__sub">
-                            <div class="illness-item__title">
-                                <svg class="icon illness-item__title--icon">
-                                    <use href="#illness-icon2" />
-                                </svg> Moždani udar</div>
-                            <p class="illness-item__info"> Krvarenje, prekid dotoka krvi u mozak, koji uvijek ima nesagledive posljedice i obično je fatalan.</p>
-                        </div>
-                        <h4 class="illness__attention"> Patnja od visokog krvnog pritiska je opasna po život!</h4>
-                    </div>
-                </div>
-                <div class="illness__box">
-                    <h3 class="illness-box__title">
-                        <svg class="icon illness-box__title--icon illness-box__title--icon3">
-                            <use href="#illness-icon3" />
-                        </svg> Insuficiencia renal</h3>
-                    <div class="illness__item">
-                        <div class="illness-item__img">
-                            <picture>
-
-                                <img src="./img/illness-img3.webp" alt="image">
-                            </picture>
-                        </div>
-                        <div class="illness-item__sub">
-                            <div class="illness-item__title">
-                                <svg class="icon illness-item__title--icon">
-                                    <use href="#illness-icon3" />
-                                </svg> Insuficiencia renal</div>
-                            <p class="illness-item__info"> Disfunkcija bubrega, djelomični ili potpuni gubitak kontrole nad funkcijom bubrega.</p>
-                        </div>
-                        <h4 class="illness__attention"> Patnja od visokog krvnog pritiska je opasna po život!</h4>
-                    </div>
-                </div>
-                <div class="illness__box">
-                    <h3 class="illness-box__title">
-                        <svg class="icon illness-box__title--icon illness-box__title--icon4">
-                            <use href="#illness-icon4" />
-                        </svg> Sljepoća</h3>
-                    <div class="illness__item">
-                        <div class="illness-item__img">
-                            <picture>
-
-                                <img src="./img/illness-img4.webp" alt="image">
-                            </picture>
-                        </div>
-                        <div class="illness-item__sub">
-                            <div class="illness-item__title">
-                                <svg class="icon illness-item__title--icon">
-                                    <use href="#illness-icon4" />
-                                </svg> Sljepoća</div>
-                            <p class="illness-item__info"> Oštećenje krvnih sudova koje uzrokuje djelomićan gubitak vida ili potpuni gubitak vida.</p>
-                        </div>
-                        <h4 class="illness__attention"> Patnja od visokog krvnog pritiska je opasna po život!</h4>
-                    </div>
-                </div>
-                <div class="illness__box">
-                    <h3 class="illness-box__title">
-                        <svg class="icon illness-box__title--icon illness-box__title--icon5">
-                            <use href="#illness-icon5" />
-                        </svg> Aritmija</h3>
-                    <div class="illness__item">
-                        <div class="illness-item__img">
-                            <picture>
-
-                                <img src="./img/illness-img5.webp" alt="image">
-                            </picture>
-                        </div>
-                        <div class="illness-item__sub">
-                            <div class="illness-item__title">
-                                <svg class="icon illness-item__title--icon">
-                                    <use href="#illness-icon5" />
-                                </svg> Aritmija</div>
-                            <p class="illness-item__info"> Abnormalni srčani ritam, kada kuca presporo ili prebrzo.</p>
-                        </div>
-                        <h4 class="illness__attention"> Patnja od visokog krvnog pritiska je opasna po život!</h4>
-                    </div>
-                </div>
-                <div class="illness__box">
-                    <h3 class="illness-box__title">
-                        <svg class="icon illness-box__title--icon illness-box__title--icon6">
-                            <use href="#illness-icon6" />
-                        </svg> Otkazivanje Srca</h3>
-                    <div class="illness__item">
-                        <div class="illness-item__img">
-                            <picture>
-
-                                <img src="./img/illness-img6.webp" alt="image">
-                            </picture>
-                        </div>
-                        <div class="illness-item__sub">
-                            <div class="illness-item__title">
-                                <svg class="icon illness-item__title--icon">
-                                    <use href="#illness-icon6" />
-                                </svg> Otkazivanje Srca</div>
-                            <p class="illness-item__info"> Srce ne može opskrbiti organe i tkiva dovoljno krvi, a tijelu nedostaju kisik i hranjive tvari.</p>
-                        </div>
-                        <h4 class="illness__attention"> Patnja od visokog krvnog pritiska je opasna po život!</h4>
-                    </div>
-                </div>
+    <section class="symptoms">
+        <div class="wrapper">
+            <div class="title">¿Tienes algún síntoma de prostatitis?</div>
+            <div class="subtitle">
+                Si tienes alguno de los siguientes síntomas, ¡puedes tener
+                prostatitis!
             </div>
 
-            <div class="illness__prod">
-                <h3 class="illness-prod__title title green-text">
-                    POSTOJI RIJEŠENJE!
 
+            <div class="block2__attention">
+                <h2 class="attention__title text__bold title">Atención!</h2>
+                <h3 class="attention__subtitle subtitle">
+                    La prostatitis crónica suele desarrollarse de forma latente, sin
+                    síntomas avanzados.
                 </h3>
-                <p class="tac">
-                    <strong>
-                        Biljne tablete za stabilizaciju krvnog pritiska i spriječavanje problema sa srcem- pravi spas za sve koji pate od hipertenzije
-                    </strong>
-                </p>
-                <div class="illness-prod__item">
-                    <br>
-                    <picture>
-
-                        <img src="./img/prod.png" alt="image">
-                    </picture>
-                </div>
-                <div class="illness-prod-flex__items">
-                    <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l">
-                            <img src="./img/stars.png" class="illness-prod-flex__item--img" alt="">
-                        </div>
-                        <div class="illness-prod-flex__r">
-                            4.159 recenzija
-                        </div>
-                    </div>
-                    <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l">
-                            Tip
-                        </div>
-                        <div class="illness-prod-flex__r">
-                            <strong>
-                                Kolekcija biljaka
-                            </strong>
-                        </div>
-                    </div>
-                    <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l">
-                            Propisivanje lijeka
-                        </div>
-                        <div class="illness-prod-flex__r">
-                            <strong>
-                                Za hipertenziju, srce, krvne sudove, i dobar san
-                            </strong>
-                        </div>
-                    </div>
-                    <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l">
-                            Blagovna znamka
-                        </div>
-                        <div class="illness-prod-flex__r illness-prod-flex__r--toImage">
-                            <strong>
-                                Hyper Caps
-                            </strong>
-                            <img src="./img/blue-logo.png" alt="">
-                        </div>
-                    </div>
-                    <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l">
-                            Količina kapsula
-                        </div>
-                        <div class="illness-prod-flex__r">
-                            <strong>
-                                60
-                            </strong>
-                        </div>
-                    </div>
-                    <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l">
-                            Proizvajalec
-                        </div>
-                        <div class="illness-prod-flex__r">
-                            <strong>
-                                Nemčija
-                            </strong>
-                        </div>
-                    </div>
-                </div>
-                <br><br>
-                <p class="tac">
-                    <strong>
-                        Hyper Caps je opravil vse faze certificiranja
-                    </strong>
-                </p>
-                <div class="illness-images btns" data-path="modal--1">
-                    <img src="./img/sert.png" alt="">
-                </div>
-                <button class="btn illness__btn ever-popup-btn link1">ŽELI KUPOVATI IN BITI ZDRAV</button>
             </div>
-        </div>
-    </section>
-    <section class="innovation block">
-        <div class="container">
-            <h2 class="title innovation__title"> Hypercaps su razvili vodeći stručnjaci iz Njemačke i SAD-a.</h2>
-            <div class="innovation__content">
-                <div class="innovation__image">
-                    <div class="image-wrap">
-                        <img class="innovation__doctor" src="./img/main1.jpg" alt>
-                    </div>
-                    <div class="innovation__centr">
-                        <img class="innovation__centr--logo" src="./img/heart.png" alt="heart">
-                        <p class="innovation__centr--name"> KARDIOLOŠKI ISTRAŽIVAČKI CENTAR</p>
-                    </div>
-                </div>
-                <div class="innovation__info">
-                    <p class="content-text"> Naučnici širom svijeta već dugo traže najbolji način za normalizaciju krvnog tlaka kod hipertoničara.<b> i vrlo često su se suočavali sa istim problemom -
-                            to je kratkotrajno smanjenje pritiska i mnoštvo nuspojava na srce i krvne sudove.</b> To je upravo ono što su stručnjaci htjeli riješiti.</p>
-                    <p class="content-text"> Studije su sprovodili nekoliko godina i pronašli<b> biljnu formulu koja se pokazala najefikasnijom.</b> Kompleks biljaka<b> Hypercaps</b>, obogaćen
-                        vitaminima i mineralima,<b> postepeno se akumulira u organizmu i podstiče postepeno smanjenje pritiska i regulaciju kardiovaskularnog sistema</b> kao cjelinu.</p>
-                    <p class="innovation__desc"> Hypercaps su razvijene na osnovu najboljih praksi stručnjaka iz cijelog svijeta u području vaskularnog čišćenja i hipertenzije.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="peel block bg">
-        <div class="container">
-            <h2 class="title peel__title"> Kako tačno djeluje mješavina biljaka?</h2>
-            <div class="peel__content">
-                <div class="peel__box">
-                    <div class="peel-box__img">
-
-                        <img src="./img/peel-img1.jpg" alt="image">
-
-                    </div>
-                    <div class="peel-box__icon"><img class="peel-box__icon1" src="./img/peel-icon1.png" alt></div>
-                    <p class="peel-box__text"> Čisti krvne sudove od kristala kalcijuma i holesterola. Nakupljanje lipida u unutrašnjim zidovima uzrokuje infarkt miokarda i aterosklerozu u 94%
-                        slučajeva.</p>
-                </div>
-                <div class="peel__box">
-                    <div class="peel-box__img">
-
-                        <img src="./img/peel-img2.jpg" alt="image">
-
-                    </div>
-                    <div class="peel-box__icon"><img class="peel-box__icon2" src="./img/peel-icon2.png" alt></div>
-                    <p class="peel-box__text"> Eliminiše hormon homocistein. Njegov višak uzrokuje vazokonstrikciju i arterijsku hipertenziju.</p>
-                </div>
-                <div class="peel__box">
-                    <div class="peel-box__img">
-
-                        <img src="./img/peel-img3.jpg" alt="image">
-
-                    </div>
-                    <div class="peel-box__icon"><img class="peel-box__icon3" src="./img/peel-icon3.png" alt></div>
-                    <p class="peel-box__text"> Deluje umirujuće, smanjuje negativne efekte stresa na organizam i normalizuje san.</p>
-                </div>
-            </div>
-            <h3 class="peel__info"> Čisti krvni sudovi: ključ dugovječnosti, dobrog zdravlja i mirnog sna</h3>
-            <div class="action">
-                <h2 class="title action__title"> Pažnja!</h2>
-                <div class="action__box">
-                    <h3 class="action__subtitle"> Samo danas<span class="date-0 action__subtitle--accent" data-format="dd monthFull"> 45072</span>
-                    </h3>
-                    <div class="action__price">
-                        <div class="action__price-old">
-                            <p class="action__price-title"> Standardna cijena</p>
-                            <div class="action__old">
-                                <span class="x_price_previous"> 110</span> <span class="x_currency"> KM</span>
-                            </div>
-                        </div>
-                        <div class="action__price-new">
-                            <p class="action__price-title"> Promotivna cijena</p>
-                            <span class="x_price_current"> 55</span> <span class="x_currency"> KM</span>
-                        </div>
-                    </div>
-                    <div class="action__pack">
-                        <picture>
-
-                            <img src="./img/prod.png" alt="image">
-                        </picture>
-                    </div>
-                    <div class="action__timer">
-                        <div class="timer__text"> Do kraja promocije ostalo</div>
-                        <div class="timer__block">
-                            <div class="timer__hours"><span class="hours min> min"></span></div>
-                            <span class="timer__dots">:</span>
-                            <div class="timer__minutes"><span class="minutes sec"></span></div>
-                            <span class="timer__dots">:</span>
-                            <div class="timer__seconds"><span class="seconds msec"></span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="action__form">
-                    <form class="x_order_form" action method="post">
-                        <label class="form__input--wrap">
-                            <span class="form__input--icon"><img src="./img/icon_name.png" alt></span>
-                            <input class="form__input" placeholder="Ime i Prezime" type="text" name="name" required autocomplete="name">
-                        </label>
-                        <label class="form__input--wrap">
-                            <span class="form__input--icon"><img src="./img/icon_phone.png" alt></span>
-                            <input class="form__input" placeholder="Moj kontakt telefon" type="tel" name="phone" required autocomplete="tel">
-                        </label>
-                        <button class="btn action__btn" type="submit"> Naručiti</button>
-                        <input type="hidden" name="data0" value="{subid}">
-                        <input type="hidden" name="data1" value="{b}">
-                        <input type="hidden" name="data2" value="{a}">
-                        <input type="hidden" name="data3" value="{x}">
-                        <input type="hidden" name="data4" value="<?php echo $off;?>">
-                        <input type="hidden" name="data5" value="<?php echo $geo;?>">
-                        <input type="hidden" name="data6" value="{offer_id}">
-                        <input type="hidden" name="data7" value="<?php echo $flowID;?>">
-                        <input type="hidden" name="data8" value="<?php echo $productID;?>">
-                        <input type="hidden" name="data9" value="<?php echo $price;?>">
-                        <input type="hidden" name="data10" value="<?php echo $payout;?>">
-                        <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground;?>">
-                        <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks;?>">
-                        <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders;?>">
-                        <input type="hidden" name="cct" value="<?php echo $confirmColorText;?>">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="control block">
-        <div class="container">
-            <div class="control__info">
-                <h2 class="title control__title"> Hypercaps pomaže u regulaciji kardiovaskularnog sistema i čišćenju krvnih sudova</h2>
-                <p class="control__text"> Dugotrajna upotreba proizvoda pomaže<b> da imate čiste krvne sudove</b> od holesterolskih plakova, za jačanje zidova i vraćanje njihove elastičnosti. Ovo
-                    osigurava stabilnu cirkulaciju krvi bez pritiska na vaskularni zid.</p>
-                <p class="control__text"> Zbog kumulativnog efekta biljnih ekstrakata,možete<b> normalizovati kardiovaskularnog sistema.</b>
-                </p>
-                <p class="control__text"> Ovako,<b> Hypercaps pomaže neutralizirati uzroke visokog krvnog tlaka.</b>
-                </p>
-            </div>
-            <div class="control__box">
-                <div class="control__pack animation-pack">
-                    <picture>
-
-                        <img src="./img/prod.png" alt="image">
-                    </picture>
-                    <div class="control__medal animation-medal">
-                        <picture>
-                            <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/quality3.webp" type="image/webp">
-                            <img src="./img/quality3.png" alt="image">
-                        </picture>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="composition block bg">
-        <div class="container">
-            <h2 class="title composition__title"> Efikasnost Hypercapsa leži u njegovom sastavu</h2>
-            <h3 class="composition__subtitle"> Poseban sastav kompleksa pomaže u sprječavanju nastanka krvnih ugrušaka</h3>
-            <div class="composition__content">
-                <div class="composition__box active">
-                    <div class="composition-box__item composition-box__item--capsule">
-                        <div class="composition-item__ingredient">
-                            <div class="composition-item__img composition-item__img1">
-                                <picture>
-
-                                    <img src="./img/composition1.webp" alt>
-                                </picture>
-                            </div>
-                            <p class="composition-item__info">
-                                <b> Cvekla<br>
-                                </b> pomaže poboljšanju metabolizma i normalizaciji funkcije bubrega i jetre.</p>
-                        </div>
-                        <div class="composition-item__ingredient">
-                            <div class="composition-item__img composition-item__img2">
-                                <picture>
-                                    <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/composition2.webp" type="image/webp">
-                                    <img src="./img/composition2.webp" alt>
-                                </picture>
-                            </div>
-                            <p class="composition-item__info"><b> Magnezijum<br></b> regulator vaskularnog tonusa, krvnog pritiska i periferne cirkulacije.</p>
-                        </div>
-                        <div class="composition-item__ingredient">
-                            <div class="composition-item__img composition-item__img3">
-                                <picture>
-
-                                    <img src="./img/composition3.webp" alt>
-                                </picture>
-                            </div>
-                            <p class="composition-item__info"><b> Bijeli luk</b><br> Sadrži spojeve sumpora, kao što je alicin, koji mogu pomoći u povećanju protoka krvi i opuštanju krvnih sudova.</p>
-                        </div>
-                        <div class="composition-item__ingredient">
-                            <div class="composition-item__img composition-item__img3">
-                                <picture>
-
-                                    <img src="./img/composition4.webp" alt>
-                                </picture>
-                            </div>
-                            <p class="composition-item__info"><b> Vitamin B3</b><br> Odgovoran je za ćelijsko disanje i metabolizam ugljikohidrata, proteina i masti.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="composition__form">
-                <div class="action">
-                    <h2 class="title action__title"> Pažnja!</h2>
-                    <div class="action__box">
-                        <h3 class="action__subtitle"> Samo danas<span class="date-0 action__subtitle--accent" data-format="dd monthFull"> 45072</span>
-                        </h3>
-                        <div class="action__price">
-                            <div class="action__price-old">
-                                <p class="action__price-title"> Standardna cijena</p>
-                                <div class="action__old">
-                                    <span class="x_price_previous"> 110</span> <span class="x_currency"> KM</span>
-                                </div>
-                            </div>
-                            <div class="action__price-new">
-                                <p class="action__price-title"> Promotivna cijena</p>
-                                <span class="x_price_current"> 55</span> <span class="x_currency"> KM</span>
-                            </div>
-                        </div>
-                        <div class="action__pack">
+            <div class="block2__attribute">
+                <div class="attribute__left">
+                    <h2 class="attribute__left__title attribute__title title">
+                        El principal síntoma de la prostatitis son los trastornos
+                        urinarios
+                    </h2>
+                    <div class="attribute__text">
+                        <div class="attribute__left__img">
                             <picture>
-
-                                <img src="./img/prod.png" alt="image">
+                                <source type="image/webp" srcset="img/block2__img.webp" />
+                                <img alt="organ" class="left__img" src="img/block2__img.png" />
                             </picture>
                         </div>
-                        <div class="action__timer">
-                            <div class="timer__text"> Do kraja promocije ostalo</div>
-                            <div class="timer__block">
-                                <div class="timer__hours"><span class="hours min> min"></span></div>
-                                <span class="timer__dots">:</span>
-                                <div class="timer__minutes"><span class="minutes sec"></span></div>
-                                <span class="timer__dots">:</span>
-                                <div class="timer__seconds"><span class="seconds msec"></span></div>
-                            </div>
+                        <div class="left__content">
+                            <p class="content__text content__text1">
+                                Ardor y dolor <br />
+                                al orinar
+                            </p>
+                            <p class="content__text content__text2">
+                                Sensación de vaciado incompleto de la vejiga<br />
+                            </p>
+                            <p class="content__text content__text3">
+                                Sensación de necesidad urgente de orinar<br />
+                            </p>
+                            <p class="content__text content__text4">
+                                Ir al baño más de<br />
+                                una vez por noche
+                            </p>
+                            <p class="content__text content__text5">
+                                Gotas de orina <br />
+                                después de orinar
+                            </p>
                         </div>
                     </div>
-                    <div class="action__form">
-                        <form class="x_order_form" action method="post">
-                            <label class="form__input--wrap">
-                                <span class="form__input--icon"><img src="./img/icon_name.png" alt></span>
-                                <input class="form__input" placeholder="Ime i Prezime" type="text" name="name" required autocomplete="name">
-                            </label>
-                            <label class="form__input--wrap">
-                                <span class="form__input--icon"><img src="./img/icon_phone.png" alt></span>
-                                <input class="form__input" placeholder="Moj kontakt telefon" type="tel" name="phone" required autocomplete="tel">
-                            </label>
-                            <button class="btn action__btn" type="submit"> Naručiti</button>
-                            <input type="hidden" name="data0" value="{subid}">
-                            <input type="hidden" name="data1" value="{b}">
-                            <input type="hidden" name="data2" value="{a}">
-                            <input type="hidden" name="data3" value="{x}">
-                            <input type="hidden" name="data4" value="<?php echo $off;?>">
-                            <input type="hidden" name="data5" value="<?php echo $geo;?>">
-                            <input type="hidden" name="data6" value="{offer_id}">
-                            <input type="hidden" name="data7" value="<?php echo $flowID;?>">
-                            <input type="hidden" name="data8" value="<?php echo $productID;?>">
-                            <input type="hidden" name="data9" value="<?php echo $price;?>">
-                            <input type="hidden" name="data10" value="<?php echo $payout;?>">
-                            <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground;?>">
-                            <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks;?>">
-                            <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders;?>">
-                            <input type="hidden" name="cct" value="<?php echo $confirmColorText;?>">
-                        </form>
-                    </div>
                 </div>
-
+                <div class="attribute__right">
+                    <h2 class="attribute__right__title attribute__title">
+                        Otros síntomas de la prostatitis:
+                    </h2>
+                    <ul class="attribute__right__list border__bg">
+                        <li class="list__item">
+                            Dolor en la uretra y en la parte inferior del abdomen
+                        </li>
+                        <li class="list__item">Ausencia de atracción sexual</li>
+                        <li class="list__item">Erección débil</li>
+                        <li class="list__item">Dolor durante el sexo</li>
+                        <li class="list__item">Eyaculación precoz</li>
+                        <li class="list__item">Temperatura de hasta 39-40 grados</li>
+                    </ul>
+                </div>
+            </div>
+            <br><br>
+            <div class="attention">
+                ¡No seas indiferente a tu salud! La prostatitis puede provocar
+                infertilidad e incluso cáncer. Sólo hay un paso entre una frecuente
+                micción y el cáncer de próstata. En el nivel inicial, la enfermedad
+                puede pasar bastante desapercibida, pero los problemas de potencia
+                sexual y de micción son los primeros síntomas de la enfermedad. Lo
+                principal es no ignorarlos. De hecho, la impotencia es sólo el menor
+                de los problemas que puede causar esta enfermedad. Sin duda, mucho
+                más peligrosa es la aparición de una masa tumoral.
             </div>
         </div>
     </section>
-    <section class="study block">
-        <div class="container">
-            <h2 class="title study__title"> Rezultati Hypercaps istraživanja u istraživačkim centrima u Sjedinjenim Državama</h2>
-            <h3 class="study__subtitle"> Kod ukupno<span class="study__subtitle--accent"> 2348</span> učesnika koji su učestvovali u istraživanju</h3>
-            <ul class="study__content">
-                <li class="study__box">
-                    <svg class="study-box__circle study-box__circle1" viewBox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="66.5" cy="66.5" r="58" />
-                    </svg>
-                    <div class="study-box__num">
-                        <span class="number" data-num="96" data-state="true">0</span>
-                        <span class="study-box__num--small">%</span>
-                    </div>
-                    <p class="study-box__text"> pritisak se normalizuje nakon tretmana</p>
-                </li>
-                <li class="study__box study__box--border">
-                    <svg class="study-box__circle study-box__circle2" viewBox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="66.5" cy="66.5" r="58" />
-                    </svg>
-                    <div class="study-box__num">
-                        <span class="number" data-num="91" data-state="true">0</span>
 
-                        <span class="study-box__num--small">%</span>
-                    </div>
-                    <p class="study-box__text"> BP je ostao normalan 2 mjeseca nakon istog tretmana</p>
-                </li>
-                <li class="study__box">
-                    <svg class="study-box__circle study-box__circle3" viewBox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="66.5" cy="66.5" r="58" />
-                    </svg>
-                    <div class="study-box__num">
-                        <span class="number" data-num="87" data-state="true">0</span>
-
-                        <span class="study-box__num--small">%</span>
-                    </div>
-                    <p class="study-box__text"> Poboljšava opšte blagostanje</p>
-                </li>
-            </ul>
-            <div class="study__accent"> *Rezultati mogu varirati u zavisnosti od individualnih potreba</div>
-        </div>
-    </section>
-    <section class="recomend block bg">
-        <div class="container">
-            <h2 class="title recomend__title"> Dr. Danica Grujicic odgovara na pitanja o Hypercaps-u</h2>
-            <div class="recomend__content">
-                <div class="recomend__doctor">
-
-                    <img class="recomend__doctor--img" src="./img/doc.jpg" alt>
-
+    <section class="formula">
+        <div class="wrapper">
+            <div class="top_part">
+                <div class="title">
+                    Presentación de Prostanorm Forte y su maravillosa fórmula
                 </div>
-                <div class="recomend__info">
-                    <div class="details-block">
-                        <details class="spisok">
-                            <summary><strong> Da li je potvrđena efikasnost lijeka?</strong></summary>
-                            <ul>
-                                <li> Da, Hypercaps ima INVIMA sertifikat i GMP međunarodni standard kvaliteta. Možete ih provjeriti OVDJE</li>
-
-                            </ul>
-                        </details>
-                        <details class="spisok">
-                            <summary><strong> Koliko sedmica je potrebno uzimati Hypercaps da bismo se osjećali bolje?</strong></summary>
-                            <ul>
-                                <li> Vrijeme terapije ovisi o individualnim potrebama pacijenta i ozbiljnosti njegovog zdravstvenog stanja. Međutim, skokovi krvnog pritiska i glavobolje će prestati
-                                    nakon 14 dana.</li>
-
-                            </ul>
-                        </details>
-                        <details class="spisok">
-                            <summary><strong> U koje doba dana treba uzimati lijek?</strong></summary>
-                            <ul>
-                                <li> Uzmite po jednu kapsulu i uveče.</li>
-
-                            </ul>
-                        </details>
-                        <details class="spisok">
-                            <summary><strong> Mogu li hipertenzivni dijabetičari uzimati Hypercaps?</strong></summary>
-                            <ul>
-                                <li> Da, mogu. Hypercaps je kompatibilan s drugim lijekovima.</li>
-
-                            </ul>
-                        </details>
-                    </div>
-                    <div class="sign">
-                        <div class="sign__doctor">
-                            <p class="sign__doctor--name"> Dr. Danica Grujicic</p>
-                            <p class="sign__doctor--post">Predsednik združenja kardiologov.</p>
-                        </div>
-                    </div>
+                <img src="img/newImg.jpg" alt class="new-img" />
+                <div class="image">
+                    <img class="hide_on_mobile" src="img/image_formula_top.png" alt /><img class="show_on_mobile" src="img/image_formula_top_mobile.png" alt />
+                </div>
+                <div class="text">
+                    Prostanorm Forte es un aditivo que tiene un efecto curativo natural al
+                    tener prostatitis.
+                    <strong> ¡Es un resultado de 10 años de investigación! </strong>
+                    El principal objetivo de la investigación fue crear
+                    <strong> una fórmula curativa </strong> para la prostatitis en
+                    tres etapas.
+                </div>
+                <div class="text">
+                    <strong>
+                        En el verano de 2020, se celebró en la Ciudad de México un gran
+                        evento para crear un nuevo producto para la prostatitis:
+                        Prostanorm Forte.</strong>
+                    El producto es 100% natural, contiene ingredientes naturales, no
+                    tiene contraindicaciones, no tiene efectos secundarios y no tiene
+                    impacto negativo en el corazón. Se trata de un verdadero avance en
+                    el campo del tratamiento de la salud masculina. La eficacia de
+                    Prostanorm Forte es un 94% superior a la de todos los análogos. El
+                    producto ha causado verdadero furor en Europa y Estados Unidos, y
+                    ahora por fin ha llegado a los países latinoamericanos, entre
+                    ellos México.
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="recomend__action block">
-        <div class="container">
-            <div class="action">
-                <h2 class="title action__title"> Pažnja!</h2>
-                <div class="action__box">
-                    <h3 class="action__subtitle"> Samo danas<span class="date-0 action__subtitle--accent" data-format="dd monthFull"> 45072</span>
-                    </h3>
-                    <div class="action__price">
-                        <div class="action__price-old">
-                            <p class="action__price-title"> Standardna cijena</p>
-                            <div class="action__old">
-                                <span class="x_price_previous"> 100</span> <span class="x_currency"> KM</span>
+            <div class="bottom_part">
+                <div class="slider_container">
+                    <div class="slider_formula">
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/image_formula-1.png" alt />
+                            </div>
+                            <div class="text_part">
+                                <div class="title">
+                                    <span> Etapa 1</span> Eliminación del dolor <br />
+                                    en la zona abdominal, inguinal y lumbar.
+                                </div>
+                                <div class="text">
+                                    Durante los primeros 7 días, los ingredientes activos de
+                                    Prostanorm Forte entran en la glándula de la próstata y
+                                    comienzan
+                                    <strong> los procesos de regeneración. </strong> La
+                                    capacidad de purificación de las glándulas se activa y se
+                                    eliminan las bacterias. Así, la inflamación se reduce.
+                                </div>
                             </div>
                         </div>
-                        <div class="action__price-new">
-                            <p class="action__price-title"> Promotivna cijena</p>
-                            <span class="x_price_current"> 55</span> <span class="x_currency"> KM</span>
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/image_formula-2.png" alt />
+                            </div>
+                            <div class="text_part">
+                                <div class="title">
+                                    <span> Etapa 2</span> La micción se estabiliza<br />
+                                    y la inflamación desaparece.
+                                </div>
+                                <div class="text">
+                                    En la segunda semana se vuelve visible que la uretra
+                                    <strong>
+                                        está completamente libre y el paciente no siente ningún
+                                        dolor al orinar.
+                                    </strong>
+                                    El estado de la próstata es mucho mejor. El cuerpo reanuda
+                                    los procesos de limpieza, y la mayoría de las bacterias
+                                    son expulsadas del organismo.
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="action__pack">
-                        <picture>
-
-                            <img src="./img/prod.png" alt="image">
-                        </picture>
-                    </div>
-                    <div class="action__timer">
-                        <div class="timer__text"> Do kraja promocije ostalo</div>
-                        <div class="timer__block">
-                            <div class="timer__hours"><span class="hours min> min"></span></div>
-                            <span class="timer__dots">:</span>
-                            <div class="timer__minutes"><span class="minutes sec"></span></div>
-                            <span class="timer__dots">:</span>
-                            <div class="timer__seconds"><span class="seconds msec"></span></div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/image_formula-3.png" alt />
+                            </div>
+                            <div class="text_part">
+                                <div class="title">
+                                    <span> Etapa 3</span> Normalización de la erección, <br />
+                                    la rehabilitación del cuerpo y la recuperación completa de
+                                    la próstata.
+                                </div>
+                                <div class="text">
+                                    Las sustancias activas de Prostanorm Forte
+                                    <strong>
+                                        reducen completamente el tamaño del área inflamada y
+                                        eliminan todas las bacterias.
+                                    </strong>
+                                    También restauran la capacidad natural del cuerpo para
+                                    equilibrar la glándula prostática. Además, ayudan a
+                                    normalizar las erecciones, ya que el líquido puede
+                                    producirse con seguridad en la glándula y participar en la
+                                    función reproductiva.
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="action__form">
-                <form class="x_order_form" action method="post">
-                    <label class="form__input--wrap">
-                        <span class="form__input--icon"><img src="./img/icon_name.png" alt></span>
-                        <input class="form__input" placeholder="Ime i Prezime" type="text" name="name" required autocomplete="name">
-                    </label>
-                    <label class="form__input--wrap">
-                        <span class="form__input--icon"><img src="./img/icon_phone.png" alt></span>
-                        <input class="form__input" placeholder="Moj kontakt telefon" type="tel" name="phone" required autocomplete="tel">
-                    </label>
-                    <button class="btn action__btn" type="submit"> Naručiti</button>
-                    <input type="hidden" name="data0" value="{subid}">
-                    <input type="hidden" name="data1" value="{b}">
-                    <input type="hidden" name="data2" value="{a}">
-                    <input type="hidden" name="data3" value="{x}">
-                    <input type="hidden" name="data4" value="<?php echo $off;?>">
-                    <input type="hidden" name="data5" value="<?php echo $geo;?>">
-                    <input type="hidden" name="data6" value="{offer_id}">
-                    <input type="hidden" name="data7" value="<?php echo $flowID;?>">
-                    <input type="hidden" name="data8" value="<?php echo $productID;?>">
-                    <input type="hidden" name="data9" value="<?php echo $price;?>">
-                    <input type="hidden" name="data10" value="<?php echo $payout;?>">
-                    <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground;?>">
-                    <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks;?>">
-                    <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders;?>">
-                    <input type="hidden" name="cct" value="<?php echo $confirmColorText;?>">
-                </form>
+        </div>
+    </section>
+    <section class="text-info">
+        <div class="wrapper">
+            <h3>
+                Prostanorm Forte: erección de piedra y restablecimiento de la secreción de testosterona a cualquier edad
+            </h3>
+            <p class="text-info__p">
+                El uso regular de Prostanorm Forte no sólo aumenta el tamaño del pene, sino que también restaura la función eréctil al nivel de un hombre de 20 años, aunque tenga más de 55.
+            </p>
+            <div class="text-info__flex-wrapper">
+                <div class="text-info__flex-items">
+                    <div class="text-info__flex-item">
+                        <div class="text-info__img">
+                            <img src="./img/main1.jpg" alt="">
+                        </div>
+                        <div class="text-info__text">
+                            <div class="text-info__text-title"></div>
+                            <p>
+                                Agrandamiento del pene y aumento de la erección con excitación instantánea tras la aplicación
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="text-info__flex-item">
+                        <div class="text-info__img">
+                            <img src="./img/main2.jpg" alt="">
+                        </div>
+                        <div class="text-info__text">
+                            <div class="text-info__text-title"></div>
+                            <p>
+                                Aumento del deseo sexual
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="text-info__flex-item">
+                        <div class="text-info__img">
+                            <img src="./img/main3.jpg" alt="">
+                        </div>
+                        <div class="text-info__text">
+                            <div class="text-info__text-title"></div>
+                            <p>
+                                Restaurar la secreción de testosterona
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="text-info__flex-item">
+                        <div class="text-info__img">
+                            <img src="./img/main4.jpg" alt="">
+                        </div>
+                        <div class="text-info__text">
+                            <div class="text-info__text-title"></div>
+                            <p>
+                                Aumento de la actividad espermática (si no desea tener hijos a partir de los 55 años, utilice métodos anticonceptivos)
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-
-
     </section>
-    <section class="reviews block bg" id="reviews">
-        <div class="container">
-            <h2 class="title reviews__title"> Povratne informacije od ljudi koji su koristili Hypercaps</h2>
-            <div class="reviews-content">
-                <div class="reviews-panel">
-                    <div class="star-box">
-                        <div class="reviews-headStar" style="width: 89px;"></div>
-                        <div class="reviews-amount"> 30 komentara</div>
-                    </div>
-                    <button class="btn reviews-btn"> Ostavite komentar</button>
+    <section class="eliminate">
+        <div class="wrapper">
+            <div class="title">
+                ¡Deshazte de la prostatitis y recupera tu fuerza masculina en tan
+                solo 3 etapas!
+            </div>
+            <div class="product">
+                <img src="img/prod.png" alt style="max-width: 50%" />
+            </div>
+            <div class="text">
+                La acción del producto tiene como objetivo eliminar el proceso
+                inflamatorio en la próstata y los trastornos urológicos del hombre
+                que causan la prostatitis.
+            </div>
+            <a class="scroll_to_button button" href="#scroll_to_form">
+                <button class="button_submit" type="submit">
+                    <span> Pedir Prostanorm Forte</span>
+                </button></a>
+        </div>
+    </section>
+    <section class="experts">
+        <div class="wrapper">
+            <div class="title">
+                ¿Por qué los urólogos recetan Prostanorm Forte a sus pacientes
+            </div>
+            <div class="subtitle">
+                y 4 de cada 5 expertos europeos avalan su eficiencia?
+            </div>
+            <div class="image_block">
+                <div class="image">
+                    <img src="img/image_illustration-1.png" alt />
                 </div>
-                <div class="feedback">
-                    <div class="feedback-form">
-                        <div class="feedback-top">
-                            <label class="feedback-name"><input class="feedback-name-input input__val-1" type="text" name="name" required placeholder="Ime i Prezime" autocomplete="name"></label>
-                            <div class="feedback-assessment"> Vaša ocijena</div>
-                            <div class="feedback-rating">
-                                <img class="star1" src="./img/star.png" alt><img class="star2" src="./img/star.png" alt><img class="star3" src="./img/star.png" alt><img class="star4"
-                                    src="./img/star.png" alt><img class="star5" src="./img/star.png" alt>
-                            </div>
+                <div class="image">
+                    <img src="img/image_illustration-2.png" alt />
+                </div>
+                <div class="image">
+                    <img src="img/image_illustration-3.png" alt />
+                </div>
+            </div>
+            <div class="expert_block">
+                <div class="expert">
+                    <div class="top_part">
+                        <div class="image">
+                            <img src="img/image_expert-1.png" alt />
                         </div>
-                        <label class="feedback-text"><textarea class="feedback-text-input input__val-4" placeholder="Poruka"></textarea></label>
-                        <div class="feedback-btn btn reviews-btn"> Pošalji</div>
+                        <div class="exeprt_name">
+                            <span> Dr. Humberto Gerardo Aguado López,</span> Andrólogo jefe Asociación Mexicana de Urología
+                        </div>
                     </div>
-                    <div class="feedback-modal">
-                        <div class="feedback-modal__inner">
-                            <div class="feedback-modal__title"> Hvala!</div>
-                            <div class="feedback-modal__text"> Vaš komentar je poslan</div>
+                    <div class="text">
+                        <span>
+                            El Prostanorm Forte puede ser llamado una innovación en la
+                            urología.
+                        </span>
+                        Una simple fórmula de 3 etapas puede ayudar a reducir la
+                        inflamación de la próstata. Los ingredientes activos del
+                        Prostanorm Forte penetran en la próstata inflamada, facilitando y
+                        reduciendo las zonas inflamadas. De esta manera, la glándula
+                        prostática regresa a su tamaño normal.
+                        <strong>
+                            Por eso recomiendo este producto a todos mis pacientes que no
+                            experimentan dolor abdominal.</strong>
+                    </div>
+                </div>
+                <div class="expert">
+                    <div class="top_part">
+                        <div class="image">
+                            <img src="img/image_expert-2.jpg" alt />
+                        </div>
+                        <div class="exeprt_name">
+                            <span> Dr. Sergio Gil Villa,</span> Urólogo-cirujano Asociación Mexicana de Urología.
+                        </div>
+                    </div>
+                    <div class="text">
+                        <span>
+                            Los ingredientes de Prostanorm Forte aumentan la capacidad natural
+                            del cuerpo para tratar los procesos inflamatorios.
+                        </span>
+                        De esta manera, reduce las posibilidades de cáncer e
+                        infertilidad en los hombres. También liberan la uretra y
+                        facilitan el flujo natural de orina y esperma.
+                        <strong>
+                            Les recomiendo este producto a todos los hombres que quieran
+                            ir al baño sin sentir dolor.</strong>
+                    </div>
+                </div>
+                <div class="expert">
+                    <div class="top_part">
+                        <div class="image">
+                            <img src="img/image_expert-3.jpg" alt />
+                        </div>
+                        <div class="exeprt_name">
+                            <span> Dr. Virgilio Augusto López Sámano,</span> Vicepresidente del Colegio Mexicano de Urología.
+                        </div>
+                    </div>
+                    <div class="text">
+                        <span>
+                            Les recomiendo Prostanorm Forte a todos los hombres que quieran
+                            volver a sentirse fuertes.
+                        </span>
+                        Es una solución rápida y eficaz para los hombres que están
+                        cansados de ver sangre en su orina y esperma. Gracias al
+                        complejo de ingredientes naturales, también se restaura la
+                        función sexual.<strong></strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ingredients">
+        <div class="wrapper">
+            <div class="title">La eficacia de Prostanorm Forte,</div>
+            <div class="subtitle">
+                se debe a los ingredientes que facilitan la micción.
+            </div>
+            <div class="slider_container">
+                <div class="slider_ingred">
+                    <div class="item item_first">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_ingred-1.png" alt />
+                            </div>
+                            <div class="name">Ácido ascórbico</div>
+                        </div>
+                        <div class="text">
+                            Contiene micro y macronutrientes que, en conjunto, garantizan
+                            el funcionamiento normal de los sistemas cardiovascular,
+                            inmunitario y hematopoyético. Las propiedades
+                            antiinflamatorias reducen la microflora patógena, reduciendo
+                            la inflamación de la próstata.
+                        </div>
+                    </div>
+                    <div class="item item_second">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_ingred-2.png" alt />
+                            </div>
+                            <div class="name">Manganeso</div>
+                        </div>
+                        <div class="text">
+                            Fuente de vitamina C, calcio, potasio y hierro. Tiene
+                            propiedades diuréticas, eliminando el exceso de líquido del
+                            cuerpo y reduciendo la cantidad de proteínas en la orina. Las
+                            propiedades antimicrobianas y antiinflamatorias combaten las
+                            infecciones de la próstata y evitan su propagación.
+                        </div>
+                    </div>
+                    <div class="item item_third">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_ingred-3.png" alt />
+                            </div>
+                            <div class="name">Zinc</div>
+                        </div>
+                        <div class="text">
+                            Contiene isoflavonas, que tienen propiedades anticancerígenas,
+                            antihelmínticas y metabólicas. Ayuda a limpiar los riñones,
+                            reduce los niveles de colesterol, elimina las sales de metales
+                            pesados y acelera el metabolismo. Aumenta la libido.
+                        </div>
+                    </div>
+                    <div class="item item_fourth">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_ingred-4.png" alt />
+                            </div>
+                            <div class="name">Hierro (Fe)</div>
+                        </div>
+                        <div class="text">
+                            Tiene un efecto inmunomodulador. Efecto beneficioso sobre la
+                            glándula de la próstata, desencadenando su proceso de
+                            regeneración. Las propiedades antiinflamatorias ayudan
+                            eficazmente en los cambios inflamatorios del sistema
+                            urogenital.
+                        </div>
+                    </div>
+                    <div class="item item_fifth">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_ingred-5.png" alt />
+                            </div>
+                            <div class="name">Caroteno</div>
+                        </div>
+                        <div class="text">
+                            Previene las enfermedades oncológicas. Ayuda a establecer el
+                            trabajo del sistema genitourinario, también tiene propiedades
+                            analgésicas. Refuerza el sistema inmunitario y normaliza el
+                            trabajo del sistema nervioso.
                         </div>
                     </div>
                 </div>
-                <ul class="reviews-list">
-                    <li class="reviews-list-item reviews--full">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">J</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Jasmin Tarić</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
+            </div>
+            <div class="labels">
+                <div class="europe">
+                    <p>Hecho en Europa</p>
+                    <span> Se ajusta por completo</span><span> a todos los estándares de calidad de la UE.</span>
+                </div>
+                <div class="vegan">Desarrollado en Israel</div>
+            </div>
+            <div style="font-size: 12px; text-align: center">
+                No se recomienda su uso con anticoagulantes
+            </div>
+        </div>
+    </section>
+    <section class="results">
+        <div class="wrapper">
+            <div class="title_part">
+                <div class="title">
+                    <span> Prostanorm Forte ha ayudado a 4512 hombres </span> restaurando
+                    por completo el tamaño normal de la próstata en la última etapa
+                    del ensayo clínico
+                </div>
+                <div class="subtitle">
+                    La seguridad de los ingredientes es cuidadosamente comprobada y
+                    garantizada
+                </div>
+            </div>
+            <div class="right_part">
+                Los resultados de pruebas recientes han confirmado que<span>
+                    Prostanorm Forte es el mejor producto
+                </span>
+                en el mercado. En diciembre de 2020, la Asociación Mexicana de
+                Urólogos llevó a cabo ensayos con 4 512 pacientes de entre 36 a 60
+                años de edad.
+            </div>
+            <div class="result_title">Los resultados fueron los siguientes:</div>
+            <div class="result_table">
+                <div class="item">
+                    <div class="item_title">Otros métodos</div>
+                    <div class="item_items">
+                        <div class="item_item">
+                            <div class="item_diagramme"><span> 40%</span></div>
+                            <div class="item_subtitle">Reducción del dolor y ardor</div>
                         </div>
-                        <div class="reviews-item__text"> Dobro za snižavanje krvnog pritiska, malo po malo, zadovoljan sam. Ne mogu se žaliti uopšte.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 19</span>
+                        <div class="item_item">
+                            <div class="item_diagramme"><span> 40%</span></div>
+                            <div class="item_subtitle">Normalización de la micción</div>
+                        </div>
+                        <div class="item_item">
+                            <div class="item_diagramme"><span> 40%</span></div>
+                            <div class="item_subtitle">Utilidad a largo plazo</div>
+                        </div>
+                        <div class="item_item">
+                            <div class="item_diagramme"><span> 85%</span></div>
+                            <div class="item_subtitle">Número de efectos secundarios</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_title"><img src="img/logo.png" alt /></div>
+                    <div class="item_items">
+                        <div class="item_item">
+                            <div class="item_diagramme"><span> 100%</span></div>
+                            <div class="item_subtitle">Reducción del dolor y ardor</div>
+                        </div>
+                        <div class="item_item">
+                            <div class="item_diagramme"><span> 98%</span></div>
+                            <div class="item_subtitle">Normalización de la micción</div>
+                        </div>
+                        <div class="item_item">
+                            <div class="item_diagramme"><span> 97%</span></div>
+                            <div class="item_subtitle">Utilidad a largo plazo</div>
+                        </div>
+                        <div class="item_item">
+                            <div class="item_diagramme"><span> 0%</span></div>
+                            <div class="item_subtitle">Número de efectos secundarios</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bottom_section">
+        <div class="wrapper">
+            <div class="product hide_on_mobile">
+                <img src="img/prod.png" alt style="max-width: 50%" /><img src="img/tested.svg" alt class="tested" />
+            </div>
+            <div class="text_part">
+                <div class="text">
+                    ¡Prostanorm Forte es un producto clínicamente comprobado<span>
+                        que eliminará la prostatitis para siempre!</span>
+                </div>
+                <div class="product show_on_mobile">
+                    <img src="img/prod.png" alt style="max-width: 50%" /><img src="img/tested.svg" alt class="tested" />
+                </div>
+                <a class="scroll_to_button button" href="#scroll_to_form">
+                    <button class="button_submit" type="submit">
+                        <span> Pedir Prostanorm Forte</span>
+                    </button></a>
+            </div>
+        </div>
+    </section>
+    <section class="reviews">
+        <div class="wrapper">
+            <div class="title">
+                ¡Historias de éxito de hombres que ganaron la batalla con la
+                prostatitis!
+            </div>
+            <div class="subtitle">
+                Ejemplos de los comentarios que recibimos cada mes
+            </div>
+            <div class="slider_container">
+                <div class="slider_review">
+                    <div class="review">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_review-1.png" alt />
+                            </div>
+                            <div class="review_name">
+                                <div class="name"><span> Marco</span> Ciudad de México</div>
+                                <div class="email">***coo*@libero.com</div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            No podía imaginar como sería ir al baño sin sentir dolor.
+                            Orinar era una verdadera tortura para mí porque cada vez que
+                            iba al baño, sentía como si navajas afiladas salieran de mi
+                            pene. Sólo Prostanorm Forte me ayudó a resolver este problema. Fue
+                            un verdadero milagro. Sólo me tomó 4 semanas, así que ahora
+                            puedo orinar sin dolor.
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_review-2.png" alt />
+                            </div>
+                            <div class="review_name">
+                                <div class="name"><span> Carlos,</span> Guadalajara</div>
+                                <div class="email">***arlo***@yahoo.com</div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            Le tengo miedo a las cirugías. Tuve un problema de urología y
+                            conozco esta experiencia. No se puede oír nada, pero se puede
+                            ver todo. Ves en el reflejo cómo el doctor trata tu cuerpo con
+                            un bisturí. Estuve en el ejército, así que no soy un débil de
+                            corazón, pero fue una pesadilla. No quería repetir esa
+                            experiencia, por eso elegí Prostanorm Forte. Tres semanas después,
+                            vi los resultados. Dejé de sentir dolor en la ingle y de sacar
+                            orina con sangre.
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_review-3.png" alt />
+                            </div>
+                            <div class="review_name">
+                                <div class="name"><span> Miguel,</span> Puebla</div>
+                                <div class="email">*igu****@gmx.com</div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            Mi médico me recetó Prostanorm Forte porque pensó que era la única
+                            manera de librarme del dolor de estómago. Era tan espantoso
+                            ver sangre en mi ropa interior por la mañana en lugar de una
+                            erección. Orinar se convirtió en un infierno. Incluso intenté
+                            beber menos agua para no ir al baño tan frecuente. En un mes,
+                            fui capaz de recuperarme por completo. No más dolor y no más
+                            sangre.
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_review-4.png" alt />
+                            </div>
+                            <div class="review_name">
+                                <div class="name">
+                                    <span> Francisco,</span> Aguascalientes
                                 </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
+                                <div class="email">Franc****@libero.com</div>
                             </div>
-                            <div class="reviews-item__date date-0"></div>
                         </div>
+                        <div class="text">
+                            Cáncer. Eso es lo que realmente me asustó cuando el doctor me
+                            diagnosticó prostatitis avanzada. Y muchas veces tenía
+                            problemas al ir al baño por la noche. Durante un tiempo,
+                            incluso pensé en usar pañales. Mi médico me ayudó mucho al
+                            hablarme de Prostanorm Forte. El uso del producto duró unas pocas
+                            semanas, y la próstata volvió a la normalidad. Ahora no tengo
+                            más preocupaciones sobre el cáncer, y no hay más pensamientos
+                            sobre pañales para adultos.
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_review-5.jpg" alt />
+                            </div>
+                            <div class="review_name">
+                                <div class="name">
+                                    <span> David,</span> Ciudad de México
+                                </div>
+                                <div class="email">Davi****@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            Hace poco me diagnosticaron esta horrible enfermedad. Aunque
+                            sólo tengo 45 años y quiero llevar una vida normal. Decidí
+                            probar Prostanorm Forte, y no me equivoqué. El producto resultó ser
+                            muy eficaz, ayudó. El dolor desapareció después de unas 2
+                            semanas, voy al baño una o dos veces por la noche (antes iba
+                            al baño 10 veces). Me siento mejor. Esperemos que esto
+                            restaure mi potencia, sentir que las cosas están mejorando. La
+                            vida está volviendo a la normalidad. Lamento no haber conocido
+                            este producto antes.<br />
+                            <!-- <img src="img/review_1.jpg"> -->
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_review-6.jpg" alt />
+                            </div>
+                            <div class="review_name">
+                                <div class="name"><span> Pablo,</span> Hidalgo</div>
+                                <div class="email">Pab****@yahoo.com</div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            Tengo prostatitis crónica desde mi juventud. Durante los
+                            últimos seis meses los dolores han sido tan intensos que no
+                            podía ni pensar en tener relaciones sexuales con mi mujer.
+                            Tengo la suerte de que ella es médico y me aconseja. Un día me
+                            trajo Prostanorm Forte y en un mes estaba irreconocible. Ya no
+                            tengo dolor, ni disfunción urinaria. Mi vida sexual ha
+                            mejorado.<br />
+                            <!-- <img src="img/review_2.jpg"> -->
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_review-7.jpg" alt />
+                            </div>
+                            <div class="review_name">
+                                <div class="name"><span> Víctor,</span> Coahuila</div>
+                                <div class="email">***cto**@libero.com</div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            ¡¡¡Chicos, es un gran producto!!! Lo tomo por prevención. Me
+                            siento rejuvenecido. Fuerte y enérgico, pero lo que es
+                            especialmente bueno, mi potencia es normal, se mantiene como
+                            en la juventud. Me encanta la vida y no quiero limitarme.
+                            Antes de usarlo me sentía como un anciano, aunque sólo tenía
+                            53 años. Se lo recomiendo a todo el mundo, si aún no lo han
+                            probado. El producto es natural, sin efectos secundarios.
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="top_part">
+                            <div class="image">
+                                <img src="img/image_review-8.jpg" alt />
+                            </div>
+                            <div class="review_name">
+                                <div class="name"><span> Martín,</span> Sonora</div>
+                                <div class="email">*****tin@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            Tengo prostatitis crónica desde hace 10 años. Estoy
+                            acostumbrado a ello. Un día mi mujer y yo decidimos que
+                            queríamos tener hijos. Me hicieron varias pruebas que
+                            demostraron que era infértil, mi esperma era de mala calidad.
+                            Entonces me enteré de que la prostatitis conduce a la
+                            infertilidad. Quería deshacerme de la enfermedad lo antes
+                            posible. Estaba dispuesto a operarme si era necesario, pero
+                            por suerte no tuve que hacerlo. Me hicieron todas las pruebas
+                            y mi médico me recetó Prostanorm Forte. Sólo tomé un curso y me
+                            curé por completo.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="faq">
+        <div class="wrapper">
+            <div class="image">
+                <picture>
+                    <source type="image/webp" srcset="img/image_faq.webp" />
+                    <img alt class="left__img" src="img/image_faq.png" />
+                </picture>
+            </div>
+            <div class="title">FAQ</div>
+            <div class="accordion_container">
+                <div class="accordion">
+                    <div class="accordion_title">
+                        ¿Qué obtendré después de 14 días de tomar Prostanorm Forte?
+                    </div>
+                    <div class="accordion_body">
+                        Tras 2 semanas de tratamiento, dejará de sentir hormigueo o sensación de quemazón "ahí abajo". Las molestias en la vejiga disminuirán cada día. Las ganas repentinas de ir al
+                        baño por la noche desaparecerán gradualmente. Desaparecerán las ganas constantes de orinar. Tendrá ganas de ir al baño varias veces al día como cualquier persona sana.
+                        Recuperará la libido y la confianza en sí mismo. Podrá mantener relaciones sexuales prolongadas con una fuerte erección, placer y orgasmos.
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion_title">
+                        ¿Cómo afectará Prostanorm Forte a mi erección y libido?
+                    </div>
+                    <div class="accordion_body">
+                        Los componentes de Prostanorm Forte estimulan la libido masculina y la producción de testosterona, aumentan la síntesis de esperma, tienen un efecto tónico sobre el sistema
+                        reproductor y normalizan la función de la próstata. Tomados regularmente, los componentes del complejo mejoran la función reproductora masculina.
+                    </div>
+                </div>
+                <div class="accordion">
+                    <div class="accordion_title">¿Prostanorm Forte provoca hipertensión arterial u otros efectos secundarios? </div>
+                    <div class="accordion_body">
+                        No, Prostanorm Forte no tiene efectos secundarios ni restricciones de edad. El producto puede tomarse con medicamentos para la tensión arterial, medicamentos para reducir la
+                        glucosa u otros medicamentos.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="delivery">
+        <div class="back_left"></div>
+        <div class="wrapper">
+            <div class="left_part">
+                <div class="content_part">
+                    <div class="title">¿Cómo pedir?</div>
+                    <div class="order_items">
+                        <div class="order_item">
+                            <div class="image">
+                                <img src="img/image_order_1.png" alt />
+                            </div>
+                            <div class="text">
+                                <p class="subtitle">
+                                    Rellena el formulario en nuestro sitio web
+                                </p>
+                                <span> (Nombre y teléfono)</span>
+                            </div>
+                        </div>
+                        <div class="order_item">
+                            <div class="image">
+                                <img src="img/image_order_2.png" alt />
+                            </div>
+                            <div class="text">
+                                <p class="subtitle">
+                                    Confirma tu dirección y fecha de entrega
+                                </p>
+                                <span>
+                                    (Un ejecutivo te llamará después de realizar el
+                                    pedido)</span>
+                            </div>
+                        </div>
+                        <div class="order_item">
+                            <div class="image">
+                                <img src="img/image_order_3.png" alt />
+                            </div>
+                            <div class="text">
+                                <p class="subtitle">Recibe el producto y paga</p>
+                                <span> (Pago contra entrega al mensajero)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="right_part">
+                <div class="subtitle"><span> ¡Envío</span> rápido!</div>
+                <ul class="list">
+                    <li>
+                        Obtendrás Prostanorm Forte de 1 a 3 días después de realizar el
+                        pedido.
                     </li>
-                    <li class="reviews-list-item reviews--full">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">A</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Jasna Dupovac</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Već 15 dana pijem i mogu vam reči da sam prezadovoljna reziltatima</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 12</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">1</span></div>
-                            </div>
-                            <div class="reviews-item__date date-0"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item reviews--full">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">J</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Ivana Krem</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Krvni pritisak je sa 140 / 90 porastao na 120 / 80. Preporučujem.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 44</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-0"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item reviews--full">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">R</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Rasim Cekrez</h4>
-                            </div>
-                            <div class="reviews-item__rating" style="width: 95px;"></div>
-                        </div>
-                        <div class="reviews-item__text"> Odličan proizvod. Ostvarujem neočekivane rezultate</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 24</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">1</span></div>
-                            </div>
-                            <div class="reviews-item__date date-0"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">M</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Marija Titunić</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Glavobolje od krvnog pritiska su prošlost i osjećam se odlično. Uzela sam ga za sestru i majku jer i one imaju problema sa hipertenzijom.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 46</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-0"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">C</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Kata Roster</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Riješila sam se hipertenzije u rekordnom roku! Za samo četiri sedmice!</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 39</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-1"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">L</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Luka Ramić</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Kupio sam ga i ne žalim, jer sam već zaboravio na skakanje pritiska. Nemam nikakav problem više.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 19</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-1"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">J</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Saudin Kristić</h4>
-                            </div>
-                            <div class="reviews-item__rating" style="width: 76px; margin-right: 18px;"></div>
-                        </div>
-                        <div class="reviews-item__text"> Malo sam duže čekao isporuku, ali sam jako zadovoljan proizvodom.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 15</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">4</span></div>
-                            </div>
-                            <div class="reviews-item__date date-1"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item reviews--full">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">J</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Mirza Bibić</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Sada mogu normalno da živim jer mi je krvni pritisak uvijek normalan. Glavobolje nema, ne uzimam lijekove protiv bolova. Nevjerovatno je koliko
-                            ovo pomaže.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 46</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-1"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">P</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Petar Helez</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Pomaže</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 12</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-2"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">A</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Adriana Papić</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Spašava me od visokog krvnog pritiska na promjenu vremena. Hvala!</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">6</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-2"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">A</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Alma Fejzić</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Sve je dobro efekti su pravi.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 17</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-2"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">J</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Fahreta H</h4>
-                            </div>
-                            <div class="reviews-item__rating" style="width: 76px; margin-right: 18px;"></div>
-                        </div>
-                        <div class="reviews-item__text"> Pritisak mi uvijek raste kada je vruće, ali nakon tretmana ovim lijekom izgleda da više nemam tih problema. Ali moram da izbjegavam alkohol i
-                            masnu hranu.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 42</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">3</span></div>
-                            </div>
-                            <div class="reviews-item__date date-2"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">M</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Merjema</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Prezadovoljna sam proizvodom</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">9</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-2"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">A</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Ana Cerkez</h4>
-                            </div>
-                            <div class="reviews-item__rating" style="width: 76px; margin-right: 18px;"></div>
-                        </div>
-                        <div class="reviews-item__text"> U osnovi radi ono što treba da radi, a to je postizanje nižeg pritiska. Šta više da kažem?</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 25</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">8</span></div>
-                            </div>
-                            <div class="reviews-item__date date-3"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">B</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Bisera Lazić</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Potpuno zadovoljna</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 29</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-3"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">M</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Mirnesa Sokolović</h4>
-                            </div>
-                            <div class="reviews-item__rating" style="width: 90px;"></div>
-                        </div>
-                        <div class="reviews-item__text"> Sve ide baš kako treba. Brza isporuka i pritisak postaje prošlost</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 18</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-3"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar"> O/div><div class="reviews-item-title">
-                                    <h4 class="reviews-item__name"> Omar Drekovac</h4>
-                                </div>
-                                <div class="reviews-item__rating"></div>
-                            </div>
-                            <div class="reviews-item__text"> Uzmite proizvod prema uputama i ne preskačite dane, onda će zasigurno djelovati .</div>
-                            <div class="reviews-bottom">
-                                <div class="reviews-assessment">
-                                    <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 28</span>
-                                    </div>
-                                    <div class="social__button"><span class="dislike social__img"></span><span class="social__count">2</span></div>
-                                </div>
-                                <div class="reviews-item__date date-3"></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">M</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Marko Subotić</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Bolje je nego uzimati lijekove protiv bolova za glavobolju.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 34</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-3"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">V</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Verica Pantić</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Uzela sam ovaj proizvod po savjetu specijaliste i ne žalim, tlak mi je stabilan i normalan.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 24</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-4"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">М</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Senada Omić</h4>
-                            </div>
-                            <div class="reviews-item__rating" style="width: 94px;"></div>
-                        </div>
-                        <div class="reviews-item__text"> Djeluje puno bolje nego što sam očekivala.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 29</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-4"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">R</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Ruža Ivanić</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Djeluje</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">7</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-4"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">M</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Mira Simunović</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Svi moji prijatelji na poslu su koristili Hypercaps kapsule pa sam odlučila da ih i ja pijem. Naručila sam i dobila popust. Od trenutka kada
-                            sam počela da ih pijem pritisak mi još nije zasmetao.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 41</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-5"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">A</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Adnan Koro</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Kupio sam ovaj proizvod zbog njegovog sastava i zadovoljan sam njime.</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 47</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-5"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">M</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Sanela Colo</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Brza isporuka na adresu</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 29</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-5"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">P</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Damir</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Vrlo učinkovit proizvod sa ogromnim dejstvom, već ga treću sedmicu koristim i osjećam se fenomenalno</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 24</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-5"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">L</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Latif M</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Izgleda da djeluje</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 21</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-6"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">P</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Zehra Milutinović</h4>
-                            </div>
-                            <div class="reviews-item__rating"></div>
-                        </div>
-                        <div class="reviews-item__text"> Odlično snižava krvni pritisak</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 34</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-6"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">I</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Irma Karić</h4>
-                            </div>
-                            <div class="reviews-item__rating" style="width: 88px;"></div>
-                        </div>
-                        <div class="reviews-item__text"> Zauvijek ću ih imati u kućnoj apoteci kako bih spriječila ponovne probleme sa pritiskom</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 31</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-6"></div>
-                        </div>
-                    </li>
-                    <li class="reviews-list-item">
-                        <div class="reviews-item-top">
-                            <div class="reviews-item-avatar">M</div>
-                            <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Monika Lulić</h4>
-                            </div>
-                            <div class="reviews-item__rating" style="width: 80px;"></div>
-                        </div>
-                        <div class="reviews-item__text"> Jednostavne za konzumiranje, brzo djeluju i bez nus pojava</div>
-                        <div class="reviews-bottom">
-                            <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 28</span>
-                                </div>
-                                <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
-                            </div>
-                            <div class="reviews-item__date date-7"></div>
-                        </div>
+                    <li>¡Pagarás solo después de recibir el producto!</li>
+                    <li>
+                        Embalaje 100% seguro, anonimato para la entrega y la
+                        facturación.
                     </li>
                 </ul>
-            </div>
-        </div>
-    </section>
-    <section class="use block">
-        <div class="container">
-            <h2 class="title use__title"> Kako uzimati Hypercaps</h2>
-            <div class="use__content">
-                <div class="use__box">
-                    <div class="use-box__icon"><img src="./img/use-icon1.png" alt></div>
-                    <h3 class="use-box__title"> Piti 2 puta dnevno. Ujutro i uveče</h3>
-                </div>
-
-                <div class="use__pack">
-                    <picture>
-
-                        <img src="./img/use-bottle.webp" alt>
-                    </picture>
-                </div>
-                <div class="use__box">
-                    <div class="use-box__icon"><img src="./img/use-icon2.png" alt></div>
-                    <h3 class="use-box__title"> Trajanje terapije ovisi o individualnim potrebama pacijenta i ozbiljnosti njegovog zdravstvenog stanja.</h3>
+                <!-- <div class="items">
+            <div class="icon"></div>
+            <div class="icon"></div>
+            <div class="icon"></div>
+            <div class="icon"></div>
+            <div class="icon"></div>
+            <div class="icon"></div>
+            <div class="icon"></div>
+          </div> -->
+                <div class="country_part">
+                    <div class="discreet_part">
+                        Tu pedido se colocará en una caja segura sin especificar el tipo
+                        y origen del contenido.
+                        <div class="discreet"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="doctor bg block">
-        <div class="container">
-            <div class="doctor__content">
-                <ul class="doctor__list">
-                    <li class="doctor-list__item doctor-list__item1">
-                        <b> Da biste poboljšali učinak Hypercaps-a,</b> trebate izbegavati masnu hranu i alkohol.</li>
-                    <li class="doctor-list__item doctor-list__item2">
-                        <b> Pokušajte da izbegnete dodatno opterećenje srca</b> kako bi se maksimizirao učinak Hypercapsa</li>
-                    <li class="doctor-list__item doctor-list__item3">
-                        <b> Također biste trebali držati dosljednu ishranu i svoje krvne sudove pod kontrolom.</b> za prevenciju hipertenzije</li>
-                </ul>
-                <div class="doctor__info">
-                    <h3 class="doctor-info__name"> Savjeti Milana Dedića<span class="doctor-info__name--prof"> vodeći specijalista Centra za kardiologiju i hirurgiju,<br> 20 godina iskustva</span>
-                    </h3>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="order block" id="order">
-        <div class="container">
-            <h2 class="title order__title"> kako naručiti Hypercaps?</h2>
-            <ul class="order__list">
-                <li class="order__item">
-                    <div class="order-item__icon">
-                        <img src="./img/order-1.png" alt><svg class="order-item__icon-circle" viewBox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="66.5" cy="66.5" r="64" />
-                        </svg>
+    <section class="final">
+        <div class="wrapper">
+            <div class="final__image"></div>
+            <div class="final__colums">
+                <div class="final__left">
+                    <div class="final__site_title">
+                        Prostanorm Forte: una próstata sana en 14 días
                     </div>
-                    <h3 class="order-item__title"> Popunite formular za narudžbu</h3>
-                    <p class="order-item__text"> Navedite ime i broj telefona</p>
-                </li>
-                <li class="order__item">
-                    <div class="order-item__icon">
-                        <img src="./img/order-2.png" alt><svg class="order-item__icon-circle order-item__icon-circle2" viewBox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="66.5" cy="66.5" r="64" />
-                        </svg>
-                    </div>
-                    <h3 class="order-item__title"> Prihvatite poziv od operatera</h3>
-                    <p class="order-item__text"> Stručnjak će vas konsultovati, te mu navedite podatke za dostavu.</p>
-                </li>
-                <li class="order__item">
-                    <div class="order-item__icon">
-                        <img src="./img/order-3.png" alt><svg class="order-item__icon-circle order-item__icon-circle3" viewBox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="66.5" cy="66.5" r="64" />
-                        </svg>
-                    </div>
-                    <h3 class="order-item__title"> Plaćate prilikom preuzimanja</h3>
-                    <p class="order-item__text"> Nije potrebno plaćati unaprijed</p>
-                </li>
-                <li class="order__item">
-                    <div class="order-item__icon">
-                        <img src="./img/order-4.png" alt><svg class="order-item__icon-circle order-item__icon-circle4" viewBox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="66.5" cy="66.5" r="64" />
-                        </svg>
-                    </div>
-                    <h3 class="order-item__title"> Uživajte u rezultatima</h3>
-                    <p class="order-item__text"> Oporavite krvni pritisak</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="promo promo--last block ccc cc">
-        <div class="container">
-            <div class="promo__content">
-                <div class="promo__product">
-                    <picture>
+                    <p class="final__list__text">
+                        Este efecto le espera después de 14 días:
+                    </p>
+                    <ul class="final__list">
+                        <li class="final__list__item">
+                            <strong> SIN sensación dolorosa en la próstata </strong>
+                        </li>
+                        <li class="final__list__item">
+                            <strong>Sensación de vaciado completo de la vejiga </strong>
+                        </li>
+                        <li class="final__list__item">
+                            <strong>Fuerte flujo de orina </strong>
+                        </li>
+                        <li class="final__list__item">
+                            <strong>Ausencia de ganas nocturnas de orinar </strong>
+                        </li>
+                        <li class="final__list__item">
+                            <strong>Fuerte erección y aumento de la libido </strong>
+                        </li>
+                        <li class="final__list__item">
+                            <strong> Confianza en la fuerza masculina</strong>
+                        </li>
 
-                        <!--            <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/man.webp" type="image/webp">-->
-                        <img class="man" src="./img/man.png" alt="man">
-                    </picture>
-                    <div class="product-wrap animation-pack">
-                        <picture>
 
-                            <img class="product-image" src="./img/prod.png" alt="prod">
-                        </picture>
 
-                        <div class="medal animation-medal"><img src="./img/quality3.png" alt></div>
+
+
+                    </ul>
+                    <div class="final__product">
+                        <img src="img/prod.png" alt style="max-width: 80%" />
+                        <ul class="final__ser_list">
+                            <li class="final__ser_item"></li>
+                            <li class="final__ser_item"></li>
+                            <li class="final__ser_item"></li>
+                            <li class="final__ser_item"></li>
+                        </ul>
                     </div>
                 </div>
-                <ul class="promo__quality">
-                    <li class="promo__quality--item"><img class="quality" src="./img/quality1.png" alt="prod"><span> Preporučeno od strane glavnih stručnjaka u zemlji</span></li>
-                </ul>
-                <div class="promo__description">
-                    <div class="promo__title">
-                        <h1> Hypercaps:</h1>
-                        <h2 class="title"> Ključ za krvni pritisak 120/80, dobar san i dugovječnost</h2>
-                    </div>
-                    <p class="subtitle"> Reguliše kardiovaskularni sistem biljnim sastojcima</p>
-                    <div class="flex-items">
-                        <div class="flex-items__item">
-                            <div class="flex-items__logo">
-                                <img src="./img/icon-l.png" alt>
-                            </div>
-                            <div class="flex-items__text"> Visok krvni pritisak, glavobolje i migrene</div>
-                            <div class="flex-items__text"> Tinitus, znojenje, crvenilo lica</div>
-                            <div class="flex-items__text"> Depresivno stanje i strah za vlastiti život</div>
-                        </div>
-                        <div class="flex-items__item flex-items__item--green-text">
-                            <div class="flex-items__logo">
-                                <img src="./img/icon-r.png" alt>
-                            </div>
-                            <div class="flex-items__text"> Vaš krvni pritisak će se stabilizovati od prvog dana</div>
-                            <div class="flex-items__text"> Simptomi hipertenzije nestaju iz dana u dan</div>
-                            <div class="flex-items__text"> Uz Hypercaps ćete dobiti mir i mnogo energije</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="promo__form">
+                <div class="final__right">
                     <div class="form-wrap">
-                        <form class="x_order_form form" action method="post">
-                            <h3 class="form__title"> Pažnja!</h3>
-                            <p class="date-wrap"> Samo danas<span class="date-0 date-color" data-format="dd monthFull"></span></p>
+                        <form class="x_order_form form" action="index.php" method="post">
+                            <h3 class="form__title">¡Atención!</h3>
+                            <p class="date-wrap">Solo hoy, el <span class="date-0 date-color" data-format="dd monthFull">02 junio</span></p>
                             <div class="price">
                                 <div class="price__left">
-                                    <p class="price__title"> Standardna cijena</p>
+                                    <p class="price__title"> Precio anterior: </p>
                                     <div class="price__old">
-                                        <span class="x_price_previous"> 1100</span> <span class="x_currency"> KM</span>
+                                        <span class="x_price_previous">$1480.00 </span> <span class="x_currency"></span>
                                     </div>
                                 </div>
                                 <div class="price__right">
-                                    <p class="price__title"> Promotivna cijena</p>
+                                    <p class="price__title"> Nuevo precio:</p>
                                     <div class="price__new">
-                                        <span class="x_price_current"> 55</span> <span class="x_currency"> KM</span>
+                                        <span class="x_price_current">$790.00 </span> <span class="x_currency"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="form__input--wrap">
-                                <label class="form__input--icon"><img src="./img/icon_name.png" alt></label><input class="form__input" placeholder="Ime i Prezime" type="text" name="name" required
+                                <label class="form__input--icon"><img src="./img/icon_name.png" alt=""></label><input class="form__input" placeholder="Mi nombre" type="text" name="name" required=""
                                     autocomplete="name">
                             </div>
                             <div class="form__input--wrap">
-                                <label class="form__input--icon"><img src="./img/icon_phone.png" alt></label><input class="form__input" placeholder="Moj kontakt telefon" type="tel" name="phone"
-                                    required autocomplete="tel">
+                                <label class="form__input--icon"><img src="./img/icon_phone.png" alt=""></label><input class="form__input" placeholder="Mi teléfono" type="tel" name="phone" required=""
+                                    autocomplete="tel">
                             </div>
-                            <button class="btn" type="submit"> Naruči</button>
-
-                            <div class="visitors"><img class="eye" src="./img/eye.png" alt="eye"> Sada<span class="lastpeople"> 12</span> osoba</div>
-                            <input type="hidden" name="data0" value="{subid}">
-                            <input type="hidden" name="data1" value="{b}">
-                            <input type="hidden" name="data2" value="{a}">
-                            <input type="hidden" name="data3" value="{x}">
-                            <input type="hidden" name="data4" value="<?php echo $off;?>">
-                            <input type="hidden" name="data5" value="<?php echo $geo;?>">
-                            <input type="hidden" name="data6" value="{offer_id}">
-                            <input type="hidden" name="data7" value="<?php echo $flowID;?>">
-                            <input type="hidden" name="data8" value="<?php echo $productID;?>">
-                            <input type="hidden" name="data9" value="<?php echo $price;?>">
-                            <input type="hidden" name="data10" value="<?php echo $payout;?>">
-                            <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground;?>">
-                            <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks;?>">
-                            <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders;?>">
-                            <input type="hidden" name="cct" value="<?php echo $confirmColorText;?>">
+                            <button class="btn ever-popup-btn" type="submit">Pedir Prostanorm Forte</button>
+                            <div class="free-delivery">
+                                <div class="free-delivery-title">
+                                    Atención: Debido a la gran atención por parte de los
+                                    medios de comunicación, nuestra oferta de productos está
+                                    limitada. Hoy, <span class="date">02.06.2023</span> solo hay
+                                    disponibles 28 piezas.
+                                </div>
+                            </div>
+                            <div class="visitors"><img class="eye" src="./img/eye.png" alt="eye">Ahora en el sitio &nbsp;<span class="lastpeople">12</span>&nbsp;persona</div>
+                            <input type="hidden" name="data0" value="{subid}" />
+                            <input type="hidden" name="data1" value="{b}" />
+                            <input type="hidden" name="data2" value="{a}" />
+                            <input type="hidden" name="data3" value="{x}" />
+                            <input type="hidden" name="data4" value="<?php echo $off; ?>" />
+                            <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
+                            <input type="hidden" name="data6" value="{offer_id}" />
+                            <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
+                            <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
+                            <input type="hidden" name="data9" value="<?php echo $price; ?>" />
+                            <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
+                            <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
+                            <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
+                            <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
+                            <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
                         </form>
-                        <p class="last"> Preostala količina<span class="lastpack"> 80</span> pakovanja</p>
+                        <p class="last">Quedan&nbsp;<span class="lastpack">80</span>&nbsp;envases</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <div class="banner" style="display: none;">
-        <div class="container">
-            <div class="banner__content">
-                <div class="banner__pack">
-                    <picture>
-
-                        <img src="./img/prod.png" alt="prod">
-                    </picture>
-                </div>
-                <div class="banner__title"> Samo danas<span class="date-0 text-nowrap banner__title--accent" data-format="dd monthFull"> </span> </div>
-
-                <div class="action__price banner__price">
-                    <div class="action__price-old">
-                        <p class="action__price-title"> Standardna cijena</p>
-                        <div class="action__old">
-                            <span class="x_price_previous"> 1100</span> <span class="x_currency"> KM</span>
-                        </div>
-                    </div>
-                    <div class="action__price-new">
-                        <p class="action__price-title"> Promotivna cijena</p>
-                        <span class="x_price_current"> 55</span> <span class="x_currency"> KM</span>
+    <footer class="footer">
+        <div class="top_part">
+            <div class="wrapper">
+                <div class="footer_left">
+                    <div class="footer_warnings">
+                        <strong> Advertencia:</strong> Manténgase fuera del alcance de
+                        los niños. Deje de tomarlo y consulte a su médico si desarrolla
+                        alguna irritación. Todas las imágenes se muestran sólo a modo de
+                        ilustración. La composición y las técnicas de fabricación de
+                        este producto pueden variar debido a posibles mejoras.
                     </div>
                 </div>
-                <div class="banner__timer">
-                    <div class="timer__text"> Do kraja promocije ostalo</div>
-                    <div class="timer__block">
-                        <div class="timer__hours"><span class="hours min> min"></span></div>
-                        <span class="timer__dots">:</span>
-                        <div class="timer__minutes"><span class="minutes sec"></span></div>
-                        <span class="timer__dots">:</span>
-                        <div class="timer__seconds"><span class="seconds msec"></span></div>
+                <div class="footer_right">
+                    <div class="logo_list">
+                        <span class="item_1"></span><span class="item_2"></span><span class="item_3"></span><span class="item_4"></span>
                     </div>
                 </div>
-                <button class="banner__btn btn ever-popup-btn"> Naruči</button>
             </div>
         </div>
+    </footer>
     </div>
 
+    <p style="
+        text-align: center;
+        display: block;
+        margin-top: 10px;
+        padding: 15px;
+        box-sizing: border-box;
+      ">
+        Ramsgatte LLP, 63 Thornwall Rd, CB6 5QE Wilburton, United Kingdom<br />
+    </p>
+
+    <div class="feedback">
+        <img src="img/i-phone.png" alt />
+    </div>
+    <div class="popup-window hidden">
+        <div class="close-popup"></div>
+        <form action="" method="POST" action>
+            <input type="hidden" name="data0" value="{subid}" />
+            <input type="hidden" name="data1" value="{b}" />
+            <input type="hidden" name="data2" value="{a}" />
+            <input type="hidden" name="data3" value="{x}" />
+            <input type="hidden" name="data4" value="<?php echo $off; ?>" />
+            <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
+            <input type="hidden" name="data6" value="{offer_id}" />
+            <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
+            <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
+            <input type="hidden" name="data9" value="<?php echo $price; ?>" />
+            <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
+            <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
+            <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
+            <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
+            <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
+            <label for="name2"> Ejemplo: José</label>
+            <input id="name2" type="text" name="name" placeholder="Nombre" required autocomplete="name" />
+            <label for="phone2"> Ejemplo: +52 960 293 7500</label>
+            <input id="phone2" type="tel" name="phone" placeholder="Teléfono" required />
+            <button type="submit">Pedir</button>
+            <input type="hidden" name="sub1" value="{subid}">
+        </form>
+    </div>
+
+    <link rel="stylesheet" href="css/app.css" />
+
+    <!-- <script src="js/jquery.min.js"></script> -->
+    <script src="js/date.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <style>
+        .feedback {
+            width: 75px;
+            height: 70px;
+            position: fixed;
+            right: -15px;
+            top: 15%;
+            display: flex;
+            align-items: center;
+            background-color: #065c37;
+            padding-left: 10px;
+            border-top-left-radius: 35px;
+            border-bottom-left-radius: 35px;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
+            transition: all 0.5s;
+        }
+
+        .feedback:hover {
+            right: 0;
+        }
+
+        .popup-window {
+            font-family: inherit;
+            width: 300px;
+            position: fixed;
+            right: 0%;
+            top: 12%;
+            padding: 35px 10px;
+            background: #fff;
+            border-radius: 5px;
+            z-index: 2000;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .hidden {
+            right: -100%;
+        }
+
+        .popup-window form {
+            width: 100%;
+            min-height: auto;
+            padding: 0;
+            background: inherit;
+            box-shadow: none;
+        }
+
+        .popup-window label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .popup-window input {
+            box-sizing: border-box;
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: none;
+            font-family: inherit;
+            font-size: 16px;
+            margin-bottom: 15px;
+            border: 1px solid #333;
+        }
+
+        .popup-window button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #065c37;
+            color: #fff;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 15px;
+            border-radius: 20px;
+        }
+
+        .close-popup {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            width: 27px;
+            height: 27px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .close-popup:before {
+            content: "";
+            background: #333;
+            width: 20px;
+            height: 1px;
+            position: absolute;
+            top: 13px;
+            left: 4px;
+            transform: rotate(-45deg);
+        }
+
+        .close-popup:after {
+            content: "";
+            background: #333;
+            width: 20px;
+            height: 1px;
+            position: absolute;
+            top: 13px;
+            left: 4px;
+            transform: rotate(45deg);
+        }
+
+        @media (max-width: 480px) {
+            .feedback {
+                width: 60px;
+                height: 40px;
+                padding-left: 7px;
+            }
+
+            .feedback {
+                top: 24%;
+            }
+
+            .popup-window {
+                top: 24%;
+            }
+
+            .feedback img {
+                max-width: 30px;
+            }
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/fixes.css" />
+    <link rel="stylesheet" href="css/timer.css" />
+
+    <!-- <script src="js/timer.js"></script> -->
+    <style>
+        input[type="tel"] {
+            outline: none;
+        }
+
+        a {
+            cursor: pointer !important;
+        }
+
+        button {
+            cursor: pointer !important;
+        }
+
+        button:disabled {
+            cursor: not-allowed !important;
+        }
+    </style>
+    <script>
+        const code = "52";
+        const inputs = document.querySelectorAll('input[type="tel"]');
+        inputs.forEach((input) => {
+            input.value = `+${code}`;
+        });
+
+        const lengthMain = 10;
+        const lengthTotal = code.length + lengthMain;
+        const forms = document.querySelectorAll("form");
+        forms.forEach((form) => {
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const inputPhone = form.querySelector('input[type="tel"]');
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                inputPhone.addEventListener("input", (e) => {
+                    const plus = e.target.value.includes("+");
+                    const clearStr = e.target.value.replace(/[^+\d]/g, "");
+                    if (plus) {
+                        inputPhone.setAttribute("minlength", lengthTotal + 1);
+                    } else {
+                        inputPhone.setAttribute("minlength", lengthTotal);
+                    }
+
+                    inputPhone.value = clearStr;
+
+                    if (/(\+52|52)([0-9]{10})/.test(clearStr)) {
+                        submitBtn.disabled = false;
+                        inputPhone.style.border = "2px solid green";
+                    } else {
+                        submitBtn.disabled = true;
+                        inputPhone.style.border = "2px solid red";
+                    }
+                });
+            }
+        });
+    </script>
+    <script src="./js/new-form.js?v=1"></script>
     <script>
         var time = 600 * 100;
         var intr;
@@ -1909,16 +1385,15 @@ include __DIR__ . '/../_php/update-params.php';
             if (mins == 0 && secs == 0) {
                 clearInterval(intr);
             }
-
             secs = secs >= 10 ? secs : "0" + secs;
             msecs = msecs >= 10 ? msecs : "0" + msecs;
             $(".min").html("0" + mins);
             $(".sec").html(secs);
             $(".msec").html(msecs);
-
         }
-
         start_timer();
+    </script>
+    <script>
         const links = document.querySelectorAll('.link');
         const anhor = document.querySelector('.ccc')
 
@@ -1930,102 +1405,6 @@ include __DIR__ . '/../_php/update-params.php';
             })
         }
     </script>
-    <svg style="display: none;" width="0" height="0" class="hidden">
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.619 64.133" id="illness-icon1">
-            <defs>
-                <clipPath>
-                    <path d="M0 48.1h44.714V0H0z" />
-                </clipPath>
-            </defs>
-            <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 64.133)">
-                <path
-                    d="M6.962 18.6c.9-4.9 4.1-10 7.8-13.6v5.8c0 .4.2.7.5.9l2 1.1-1.1 6.3c-.1.5.3 1.1.8 1.2.6.1 1.1-.3 1.2-.8l1.3-7c.1-.4-.1-.8-.5-1.1l-2.1-1.2v-7c2.6-2 5.3-3.2 7.8-3.2.4 0 .9 0 1.3.1 1.9.4 3.7 1.4 5.2 2.9l-3.8 6.1c-.1.2-.1.3-.1.5v3.2l-3.1 3.8c-.4.4-.3 1.1.1 1.4.4.4 1.1.3 1.4-.1l3.4-4.1c.1-.2.2-.4.2-.6V9.9l3.3-5.2c.7.9 1.3 1.9 1.9 3 2 4.1 2.6 9 1.7 13.6-.9 4.8-3.5 8.6-7.4 10.7-.1 0-.1.1-.2.1l-6.2 1.6h-.6c-.9 0-1.8-.1-2.6-.3-4.1-.8-7.1-2.1-9.2-4.1-2.9-2.5-3.8-6.1-3-10.7m15.8 16.9l6.1-1.6c.1 0 .3-.1.4-.1.9 1.9 2.9 3.3 5.1 3.3.6 0 1 .4 1 1v5.1c0 .6-.4 1-1 1h-.9c-5.5 0-10.2-3.6-11.9-8.6h.4c.3.1.6 0 .8-.1m-2 12.6h-5.5c-.3 0-.5-.1-.7-.3-.2-.2-.3-.4-.3-.7v-8.5c-1.4-1.2-2.2-3.1-2.2-5.1v-.2c1.8.9 4 1.6 6.6 2.1.3 0 .6.1.9.1l.3.8c.5 1.4 1.2 2.8 2 3.9v6.9c-.1.5-.5 1-1.1 1m21.699-31l-3.899-3c-.4-.3-.5-1-.2-1.4.3-.4 1-.5 1.4-.2l3.9 3c.4.3.5 1 .2 1.4-.3.5-1 .5-1.4.2m-3.2-7c-.2-.5.2-1.1.7-1.2 2-.3 4.3-1.9 4.7-.3.2.5-.2 1.1-.7 1.2l-3.5 1c-.5.1-1.1-.2-1.2-.7m-34.4 2.4c.4-.3 1.1-.3 1.4.2.4.4.3 1.1-.1 1.4l-3.9 3c-.4.3-1.1.3-1.4-.2-.3-.4-.3-1.1.2-1.4zm-4.8-4c.2-.5.7-.8 1.2-.7l3.5 1c.6.2.9.7.7 1.3-.2.5-.7.8-1.2.7l-3.5-1c-.6-.2-.9-.7-.7-1.3" />
-
-            </g>
-        </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.06 77.333" id="illness-icon2">
-            <defs>
-                <clipPath>
-                    <path d="M0 58h57.795V0H0z" />
-                </clipPath>
-            </defs>
-            <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 77.333)">
-                <path d="M9.408 46l4 12H2.625L0 44h5.956L3.07 24.763a.657.657 0 0 1 .154-.532.666.666 0 0 1 1.107.156L14.236 46z" />
-
-                <path
-                    d="M49.873 50.088C44.757 55.19 37.938 58 30.674 58h-.656c-6.72 0-12.992-2.99-17.236-8.2l-.6-1.8h5.171L8.62 28.943a22.89 22.89 0 0 1 3.772-7.74l3.604-4.803a19.12 19.12 0 0 0 3.8-11.4V0h4v10c0 2.757 2.243 5 5 5h8c1.654 0 3 1.346 3 3s-1.346 3-3 3h-15c-2.206 0-4 1.794-4 4s1.794 4 4 4h13a1.001 1.001 0 0 1 0 2h-15c-3.309 0-6 2.69-6 6 0 3.052 2.292 5.574 5.245 5.947A9.036 9.036 0 0 0 18.795 45c0 4.963 4.038 9 9 9a8.951 8.951 0 0 0 7.86-4.644 7.944 7.944 0 0 0 3.14.644c4.411 0 8-3.59 8-8 0-.34-.039-.674-.082-1.008.028 0 .054.008.082.008 2.757 0 5-2.243 5-5s-2.243-5-5-5h-9.184c.112-.314.184-.648.184-1 0-1.654-1.346-3-3-3h-13c-1.103 0-2-.897-2-2s.897-2 2-2h15c2.757 0 5-2.243 5-5s-2.243-5-5-5h-8c-1.654 0-3-1.346-3-3V0h10v.395c0 1.656.337 3.302.957 4.837L29.553 7.03l.485 1.939 10.618-2.653c.838-.21 1.7-.317 2.564-.317 5.831 0 10.575 4.744 10.575 10.575v6.043l4 2v6.375c0 7.218-2.814 13.999-7.922 19.095" />
-
-                <path
-                    d="M19.795 41c-2.206 0-4-1.794-4-4s1.794-4 4-4h27c1.654 0 3 1.346 3 3s-1.346 3-3 3-3-1.346-3-3h-2c0 1.956 1.14 3.636 2.78 4.457.134.502.22 1.017.22 1.543 0 3.309-2.691 6-6 6-3.024 0-5.525-2.25-5.935-5.162 1.687-.47 2.935-2.003 2.935-3.838h-2c0 1.103-.897 2-2 2s-2-.897-2-2h-2c0 1.877 1.304 3.444 3.05 3.874a7.99 7.99 0 0 0 3.088 5.465A6.96 6.96 0 0 1 27.795 52c-3.86 0-7-3.141-7-7 0-.741.119-1.463.344-2.157 2.663-.613 4.656-2.997 4.656-5.843h-2c0 2.206-1.794 4-4 4" />
-
-            </g>
-        </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.149 64.021" id="illness-icon3">
-            <defs>
-                <clipPath>
-                    <path d="M0 48.016h60.112V0H0z" />
-                </clipPath>
-            </defs>
-            <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 64.02)">
-                <path
-                    d="M58.001 20.2c-1.5-2.7-3.899-5-6.6-6.5-1.9-1-3.9-1.5-5.9-1.5h-.5c-2.5.1-4.8 1.1-6.3 2.8-1.3 1.3-1.8 3-1.5 4.5.3 1.6 1.401 2.6 2.2 3.4l.3.3c.6.6 1.3 1.4 1.401 2.3.1 1-.6 2.1-1 2.6s-.9 1-1.4 1.5c-2.8-3.3-6.6-9.1-6.6-16.2V2c0-1.1-.9-2-2-2s-2 .9-2 2v11.4c0 7.1-3.7 12.9-6.6 16.2-.5-.5-1-1-1.4-1.5-.4-.5-1.1-1.6-1-2.6.1-.9.8-1.7 1.4-2.3l.3-.3c.8-.8 1.9-1.8 2.2-3.4.3-1.5-.3-3.1-1.5-4.5-1.5-1.7-3.8-2.7-6.3-2.8h-.5c-1.9 0-3.9.5-5.9 1.5-2.8 1.4-5.1 3.7-6.6 6.5-1.7 3.2-2.5 7.1-2.1 11.4.5 5.1 2.6 11.6 7.2 14.5 4.5 2.8 10.6 2.5 14.7-.7 2.1-1.7 3.5-3.9 3.8-6.2.3-2.1-.3-4.4-1.7-6.5 1.9-2.2 4.3-5.4 5.9-9.4 1.7 4 4 7.2 5.9 9.4-1.4 2.1-2 4.4-1.7 6.5.3 2.3 1.6 4.5 3.8 6.2 4.1 3.2 10.3 3.5 14.7.7 4.6-2.9 6.8-9.4 7.2-14.5.6-4.3-.1-8.2-1.9-11.4" />
-
-            </g>
-        </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.699 42.733" id="illness-icon4">
-            <defs>
-                <clipPath>
-                    <path d="M0 32.05h32.024V0H0z" />
-                </clipPath>
-            </defs>
-            <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 42.733)">
-                <path
-                    d="M25.03 10c-1.42 0-2.66-1.01-2.94-2.39-.133-.713-.934-.975-1.4-.71a.98.98 0 0 0-.57 1.02c0 .03.01.05.01.08.47 2.32 2.53 4 4.9 4 .55 0 1-.45 1-1s-.45-1-1-1m-18.02.03c-1.602 0-3-1.301-3-3 0-.55-.45-1-1-1s-1 .45-1 1c0 2.872 2.356 5 5 5 .55 0 1-.45 1-1s-.45-1-1-1m24.998 12.95c0 4.97-4.04 9-9 9h-1a.99.99 0 0 1-1-1c0-.55.439-1 1-1h1c3.86 0 7-3.14 7-7V11.923A7.011 7.011 0 0 1 25.03 14c-3.03 0-5.61-1.92-6.57-4.61-.001 0-.002 0-.003.002a5.035 5.035 0 0 1-4.858-.03 6.97 6.97 0 0 1-6.59 4.669c-3.172 0-4.902-2.044-5.002-2.113V23.05c0 3.86 3.14 7 7 7h1c.549 0 1 .44 1 1 0 .55-.451 1-1 1h-1c-4.96 0-9-4.04-9-9C.066 6.357-.133 6.728.198 5.43l.004-.005A6.985 6.985 0 0 1 7.01.03c3.86 0 7 3.13 7 7 0 .05 0 .1-.01.15v.003a2.98 2.98 0 0 0 4.037.057l.003-.003C17.64 3.975 20.668 0 25.03 0c3.3 0 6.08 2.29 6.8 5.38l.01.01c.329 1.318.102.866.167 17.59" />
-
-            </g>
-        </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109.447 77.289" id="illness-icon5">
-            <defs>
-                <clipPath>
-                    <path d="M0 57.967h82.085V0H0z" />
-                </clipPath>
-            </defs>
-            <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 77.289)">
-                <path
-                    d="M30.699 57.947a3 3 0 0 1-2.531-2.094l-7.344-23.906c-6.896.01-9.483.033-17.781.031a3.001 3.001 0 0 1-.085-6h.085c9.333 0 10.666-.023 20-.03a3.001 3.001 0 0 1 2.875 2.124l4.469 14.5 7.718-40.188a3 3 0 0 1 5.844-.125l7.406 31.313 4.188-6.28a2.998 2.998 0 0 1 2.5-1.345l21 .031a3 3 0 0 1 .085 6h-.085l-19.375-.03-7.125 10.686a3.001 3.001 0 0 1-5.407-.968l-5.781-24.438-7.375 38.313a3 3 0 0 1-3.281 2.406" />
-
-            </g>
-        </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.369 32.093" id="illness-icon6">
-            <defs>
-                <clipPath>
-                    <path d="M0 24.07h25.776V0H0z" />
-                </clipPath>
-            </defs>
-            <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 32.093)">
-                <path
-                    d="M17.395 12.07l-2.7-3.6a1 1 0 0 0-.8-.4h-.09a1 1 0 0 0-.8.55l-2.23 4.45-1.05-1.56a1.002 1.002 0 0 0-.83-.44h-6L12.075.35a1 1 0 0 1 1.51-.01l10.17 11.73zm-16.15 1a7.121 7.121 0 0 0-.71 6.73 6.64 6.64 0 0 0 5.63 4.27h.73a7.998 7.998 0 0 0 6-2.71 7.998 7.998 0 0 0 6 2.71h.73a6.65 6.65 0 0 0 5.62-4.22 7.27 7.27 0 0 0-.14-5.78h-8.21a1 1 0 0 1-.8-.4l-2-2.71-2.28 4.56a1 1 0 0 1-1.72.1l-1.74-2.55z" />
-
-            </g>
-        </symbol>
-    </svg>
-
-
-
-
-
-
-
-    <script src="./js/index.js"></script>
-    <script type="text/javascript">
-        var transit_fb_id = null;
-        var landing_fb_id = null;
-        var thankyou_fb_id = 574507687964518;
-    </script>
-    <script></script>
-
-
-
 </body>
 
 </html>
