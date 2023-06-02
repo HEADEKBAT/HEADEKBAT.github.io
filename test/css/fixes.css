@@ -746,11 +746,11 @@
 }
 
 .form {
-	border: 2px solid #ddc5b2;
+	border: 2px solid #39a26f;
 	border-radius: 5px;
 	width: 290px;
 	background-color: #3b5c8b;
-	background-image: linear-gradient(to bottom, #16ae53, #6f92c4);
+	background-image: linear-gradient(to bottom, #aafa99, #6f92c4);
 	padding: 15px 20px 0;
 	margin-left: auto;
 	margin-right: auto;
@@ -873,7 +873,7 @@
 }
 
 .lastpeople {
-	color: #36ad23;
+	color: #ff0000;
 	font-weight: 900;
 	font-size: 16px;
 }
@@ -924,7 +924,7 @@
 }
 .nomm {
 	display: block;
-	margin: 0 auto;
+	margin: -30px auto;
 	width: 80%;
 }
 .product-nomm {
