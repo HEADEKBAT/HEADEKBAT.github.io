@@ -300,7 +300,7 @@
         a()
     }
 }());
-const priceBtns = document.querySelectorAll('.price__new');
+const priceBtns = document.querySelectorAll('.priceBtn');
 const changeText = document.querySelector('.checkbox__no-cshange')
 const oldPrice = document.querySelectorAll('.x_price_previous')
 
@@ -366,20 +366,25 @@ function changePrice() {
     }
 }
 
-
+let noChange = false
 for (const priceBtn of priceBtns) {
     priceBtn.addEventListener('click', () => {
 
+        if (noChange === false) {
 
-        priceBtn.classList.add('active');
+            priceBtn.classList.add('active');
 
-        firstChangeText()
-        setTimeout(() => {
-            changeColorText();
-            changePrice();
-            addPulse();
-            remuveColorPulse()
-        }, 100);
+            firstChangeText()
+            setTimeout(() => {
+                changeColorText();
+                changePrice();
+                addPulse();
+                remuveColorPulse()
+                noChange = true;
+            }, 100);
+        } else {
+            console.log("price change")
+        }
 
     })
 }
