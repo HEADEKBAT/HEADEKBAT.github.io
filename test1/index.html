@@ -1,1410 +1,1613 @@
-<?php
-//Тесты
-$celArr = [59, 60]; // Номера селеб через запятую
-$titleArr = [1]; // Номера заголовков через запятую
-
-//Интеграция
-$offerData = 'prostanorm-forte---mx---lucky.php'; // Путь к файлу данных оффера
-$metrika = '93774989'; // ID счетчика Яндекс.Метрики
-$confirmColorBackground = 'ffffff'; // Цвет общего фона конфирма
-$confirmColorBlocks = '346f66'; // Цвет фона блоков конфирма
-$confirmColorHeaders = '000000'; // Цвет заголовков конфирма
-$confirmColorText = 'fff'; // Цвет текста конфирма
-
-//Не трограть
-include __DIR__ . '/../_assets/versions.php'; // Блок тестирования элементов
-include __DIR__ . '/../_order/offers/' . $offerData;
-include __DIR__ . '/../_order/affiliates.php';
-if (!isset($rawClick)) {
-    echo '404';
-    exit();
-}
-?>
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1" id="viewport" />
-    <title>Prostanorm Forte</title>
-    <meta name="format-detection" content="telephone=no" />
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="{_current_domain}/lander/_js/scripts-v2.js?var=4&metrika=<?php echo $metrika; ?>&aid=<?php echo $affiliates_id; ?>"></script>
-    <link rel="stylesheet" href="./css/new-css.css">
-    <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff; ?>&off=<?php echo $off; ?>&geo=<?php echo $geo; ?>&land_pre={landing_id}&offer_pre={offer_id}"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style type="text/stylesheet">
+        body {
+         overflow: hidden;
+         width: 100%;
+         -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+         box-sizing: border-box;
+         }
+         /* @-webkit-viewport { width: device-width; }
+         @-moz-viewport { width: device-width; }
+         @-ms-viewport { width: device-width; }
+         @-o-viewport { width: device-width; }
+         @viewport { width: device-width; } */
+		 
+		 .test {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
-</head>
+@media screen and(max-width: 700px){
 
-<body class="lang_it page_home page_cod">
-
-    <div class="page_wrapper">
-        <header class="header link">
-            <div class="wrapper">
-                <div class="header__wrapper">
-                    <div class="header__logo">
-                        <img class="header__logo--img" src="./img/logo.png" alt="logotype">
-                        <h2 class="header__logo--name">
-                            <!-- Incasol -->
-                        </h2>
-                    </div>
-                    <nav class="header__nav">
-                        <a class="nav__item scroll-link" href="">
-                            <picture>
-                                <source media="(max-width: 999px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==">
-                                <img class="nav__item-image" src="./img/header_icon_rev.png" alt="reviews">
-                            </picture>
-                            <span class="nav__item-text">Comentarios</span>
-                        </a>
-                        <a class="nav__item scroll-link" href="">
-                            <picture>
-                                <source media="(max-width: 999px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==">
-                                <img class="nav__item-image" src="./img/header_icon_cons.png" alt="consist">
-                            </picture>
-                            <span class="nav__item-text">Cómo hacer un pedido</span>
-                        </a>
-                    </nav>
-                    <div class="header__timer">
-                        <div class="timer__text">Hasta el fin de la oferta queda:</div>
-                        <div class="timer__block">
-                            <div class="timer__hours"><span class="hours  min">09</span></div>
-                            <span class="timer__dots">:</span>
-                            <div class="timer__minutes"><span class="minutes sec">49</span></div>
-                            <span class="timer__dots">:</span>
-                            <div class="timer__seconds"><span class="seconds msec">94</span></div>
-                        </div>
-                    </div>
-                    <button class="btn ever-popup-btn header__button link">Hacer un pedido</button>
-                </div>
-            </div>
-        </header>
-        <section class="greeting">
-
-            <div class="wrapper">
-
-                <div class="title">
-                    <span> PROSTANORM FORTE: La fórmula más eficaz para la salud de la próstata </span>
-
-                </div>
-                <ul class="list">
-                    <p>
-                        <strong>
-
-                            Este efecto le espera después de 14 días:
-                        </strong>
-                    </p>
-                    <li><strong> SIN sensación dolorosa en la próstata </strong></li>
-                    <li><strong>Sensación de vaciado completo de la vejiga </strong></li>
-                    <li><strong>Fuerte flujo de orina </strong></li>
-                    <li><strong>Ausencia de ganas nocturnas de orinar </strong></li>
-                    <li><strong>Fuerte erección y aumento de la libido </strong></li>
-                    <li><strong>Confianza en la fuerza masculina</strong></li>
-
-                </ul>
-                <div class="product">
-
-                    <div class="labels">
-                        <img src="./img/prod.png" alt="">
-                    </div>
-                </div>
-                <br>
-                <a class="scroll_to_button button " href="#scroll_to_form">
-                    <button class="button_submit" type="submit">
-                        <span> Pedir Prostanorm Forte</span>
-                    </button>
-                </a>
-                <br><br>
-            </div>
-        </section>
-    </div>
-    <section class="block-doc bg">
-        <div class="wrapper">
-
-
-            <div class="block-doc__container">
-                <h2 class="title recomend__title">
-                    <? echo $celName; ?> recomienda Prostanorm Forte
-                </h2>
-                <div class="recomend__content">
-                    <div class="recomend__doctor">
-                        <img class="recomend__doctor--img" src="<? echo $celImg; ?>/cimg1.jpg" onerror="this.src='<? echo $errorImg; ?>'" alt="img">
-                        <!-- <img class="recomend__doctor--img" src="./img/doc.jpg" onerror="this.src='<? echo $errorImg; ?>'" alt="img"> -->
-                    </div>
-                    <div class="recomend__info">
-                        <p class="bg-text">Lo recomiendo a todos los hombres mayores de 45 años porque la prostatitis puede ser asintomática</p>
-                        <div class="text">
-                            «¡Prostanorm Forte es un verdadero descubrimiento en el mundo de la medicina! Se trata de una fórmula en cuatro fases que normaliza la salud de la próstata, la vejiga y las
-                            vías urinarias. En un plazo de 7 a 14 días elimina las molestias prostáticas, frena las ganas bruscas de orinar y elimina la sensación de vaciado incompleto.
-                            9 de cada 10 hombres que toman Prostanorm Forte afirman que su libido ha vuelto, no hay eyaculación precoz, que también es un síntoma del envejecimiento de la glándula
-                            prostática. Ya nada le molesta por la noche ni durante el día ».
-                        </div>
-
-                        <div class="sign">
-                            <div class="sign__doctor">
-                                <p class="sign__doctor--name">
-                                    <? echo $celName; ?>,
-                                </p>
-                                <p class="sign__doctor--post">
-                                    <? echo $celAbout; ?>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    </div>
-    </section>
-    <section class="symptoms">
-        <div class="wrapper">
-            <div class="title">¿Tienes algún síntoma de prostatitis?</div>
-            <div class="subtitle">
-                Si tienes alguno de los siguientes síntomas, ¡puedes tener
-                prostatitis!
-            </div>
-
-
-            <div class="block2__attention">
-                <h2 class="attention__title text__bold title">Atención!</h2>
-                <h3 class="attention__subtitle subtitle">
-                    La prostatitis crónica suele desarrollarse de forma latente, sin
-                    síntomas avanzados.
-                </h3>
-            </div>
-            <div class="block2__attribute">
-                <div class="attribute__left">
-                    <h2 class="attribute__left__title attribute__title title">
-                        El principal síntoma de la prostatitis son los trastornos
-                        urinarios
-                    </h2>
-                    <div class="attribute__text">
-                        <div class="attribute__left__img">
-                            <picture>
-                                <source type="image/webp" srcset="img/block2__img.webp" />
-                                <img alt="organ" class="left__img" src="img/block2__img.png" />
-                            </picture>
-                        </div>
-                        <div class="left__content">
-                            <p class="content__text content__text1">
-                                Ardor y dolor <br />
-                                al orinar
-                            </p>
-                            <p class="content__text content__text2">
-                                Sensación de vaciado incompleto de la vejiga<br />
-                            </p>
-                            <p class="content__text content__text3">
-                                Sensación de necesidad urgente de orinar<br />
-                            </p>
-                            <p class="content__text content__text4">
-                                Ir al baño más de<br />
-                                una vez por noche
-                            </p>
-                            <p class="content__text content__text5">
-                                Gotas de orina <br />
-                                después de orinar
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="attribute__right">
-                    <h2 class="attribute__right__title attribute__title">
-                        Otros síntomas de la prostatitis:
-                    </h2>
-                    <ul class="attribute__right__list border__bg">
-                        <li class="list__item">
-                            Dolor en la uretra y en la parte inferior del abdomen
-                        </li>
-                        <li class="list__item">Ausencia de atracción sexual</li>
-                        <li class="list__item">Erección débil</li>
-                        <li class="list__item">Dolor durante el sexo</li>
-                        <li class="list__item">Eyaculación precoz</li>
-                        <li class="list__item">Temperatura de hasta 39-40 grados</li>
-                    </ul>
-                </div>
-            </div>
-            <br><br>
-            <div class="attention">
-                ¡No seas indiferente a tu salud! La prostatitis puede provocar
-                infertilidad e incluso cáncer. Sólo hay un paso entre una frecuente
-                micción y el cáncer de próstata. En el nivel inicial, la enfermedad
-                puede pasar bastante desapercibida, pero los problemas de potencia
-                sexual y de micción son los primeros síntomas de la enfermedad. Lo
-                principal es no ignorarlos. De hecho, la impotencia es sólo el menor
-                de los problemas que puede causar esta enfermedad. Sin duda, mucho
-                más peligrosa es la aparición de una masa tumoral.
-            </div>
-        </div>
-    </section>
-
-    <section class="formula">
-        <div class="wrapper">
-            <div class="top_part">
-                <div class="title">
-                    Presentación de Prostanorm Forte y su maravillosa fórmula
-                </div>
-                <img src="img/newImg.jpg" alt class="new-img" />
-                <div class="image">
-                    <img class="hide_on_mobile" src="img/image_formula_top.png" alt /><img class="show_on_mobile" src="img/image_formula_top_mobile.png" alt />
-                </div>
-                <div class="text">
-                    Prostanorm Forte es un aditivo que tiene un efecto curativo natural al
-                    tener prostatitis.
-                    <strong> ¡Es un resultado de 10 años de investigación! </strong>
-                    El principal objetivo de la investigación fue crear
-                    <strong> una fórmula curativa </strong> para la prostatitis en
-                    tres etapas.
-                </div>
-                <div class="text">
-                    <strong>
-                        En el verano de 2020, se celebró en la Ciudad de México un gran
-                        evento para crear un nuevo producto para la prostatitis:
-                        Prostanorm Forte.</strong>
-                    El producto es 100% natural, contiene ingredientes naturales, no
-                    tiene contraindicaciones, no tiene efectos secundarios y no tiene
-                    impacto negativo en el corazón. Se trata de un verdadero avance en
-                    el campo del tratamiento de la salud masculina. La eficacia de
-                    Prostanorm Forte es un 94% superior a la de todos los análogos. El
-                    producto ha causado verdadero furor en Europa y Estados Unidos, y
-                    ahora por fin ha llegado a los países latinoamericanos, entre
-                    ellos México.
-                </div>
-            </div>
-            <div class="bottom_part">
-                <div class="slider_container">
-                    <div class="slider_formula">
-                        <div class="item">
-                            <div class="image">
-                                <img src="img/image_formula-1.png" alt />
-                            </div>
-                            <div class="text_part">
-                                <div class="title">
-                                    <span> Etapa 1</span> Eliminación del dolor <br />
-                                    en la zona abdominal, inguinal y lumbar.
-                                </div>
-                                <div class="text">
-                                    Durante los primeros 7 días, los ingredientes activos de
-                                    Prostanorm Forte entran en la glándula de la próstata y
-                                    comienzan
-                                    <strong> los procesos de regeneración. </strong> La
-                                    capacidad de purificación de las glándulas se activa y se
-                                    eliminan las bacterias. Así, la inflamación se reduce.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="image">
-                                <img src="img/image_formula-2.png" alt />
-                            </div>
-                            <div class="text_part">
-                                <div class="title">
-                                    <span> Etapa 2</span> La micción se estabiliza<br />
-                                    y la inflamación desaparece.
-                                </div>
-                                <div class="text">
-                                    En la segunda semana se vuelve visible que la uretra
-                                    <strong>
-                                        está completamente libre y el paciente no siente ningún
-                                        dolor al orinar.
-                                    </strong>
-                                    El estado de la próstata es mucho mejor. El cuerpo reanuda
-                                    los procesos de limpieza, y la mayoría de las bacterias
-                                    son expulsadas del organismo.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="image">
-                                <img src="img/image_formula-3.png" alt />
-                            </div>
-                            <div class="text_part">
-                                <div class="title">
-                                    <span> Etapa 3</span> Normalización de la erección, <br />
-                                    la rehabilitación del cuerpo y la recuperación completa de
-                                    la próstata.
-                                </div>
-                                <div class="text">
-                                    Las sustancias activas de Prostanorm Forte
-                                    <strong>
-                                        reducen completamente el tamaño del área inflamada y
-                                        eliminan todas las bacterias.
-                                    </strong>
-                                    También restauran la capacidad natural del cuerpo para
-                                    equilibrar la glándula prostática. Además, ayudan a
-                                    normalizar las erecciones, ya que el líquido puede
-                                    producirse con seguridad en la glándula y participar en la
-                                    función reproductiva.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="text-info">
-        <div class="wrapper">
-            <h3>
-                Prostanorm Forte: erección de piedra y restablecimiento de la secreción de testosterona a cualquier edad
-            </h3>
-            <p class="text-info__p">
-                El uso regular de Prostanorm Forte no sólo aumenta el tamaño del pene, sino que también restaura la función eréctil al nivel de un hombre de 20 años, aunque tenga más de 55.
-            </p>
-            <div class="text-info__flex-wrapper">
-                <div class="text-info__flex-items">
-                    <div class="text-info__flex-item">
-                        <div class="text-info__img">
-                            <img src="./img/main1.jpg" alt="">
-                        </div>
-                        <div class="text-info__text">
-                            <div class="text-info__text-title"></div>
-                            <p>
-                                Agrandamiento del pene y aumento de la erección con excitación instantánea tras la aplicación
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="text-info__flex-item">
-                        <div class="text-info__img">
-                            <img src="./img/main2.jpg" alt="">
-                        </div>
-                        <div class="text-info__text">
-                            <div class="text-info__text-title"></div>
-                            <p>
-                                Aumento del deseo sexual
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="text-info__flex-item">
-                        <div class="text-info__img">
-                            <img src="./img/main3.jpg" alt="">
-                        </div>
-                        <div class="text-info__text">
-                            <div class="text-info__text-title"></div>
-                            <p>
-                                Restaurar la secreción de testosterona
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="text-info__flex-item">
-                        <div class="text-info__img">
-                            <img src="./img/main4.jpg" alt="">
-                        </div>
-                        <div class="text-info__text">
-                            <div class="text-info__text-title"></div>
-                            <p>
-                                Aumento de la actividad espermática (si no desea tener hijos a partir de los 55 años, utilice métodos anticonceptivos)
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="eliminate">
-        <div class="wrapper">
-            <div class="title">
-                ¡Deshazte de la prostatitis y recupera tu fuerza masculina en tan
-                solo 3 etapas!
-            </div>
-            <div class="product">
-                <img src="img/prod.png" alt style="max-width: 50%" />
-            </div>
-            <div class="text">
-                La acción del producto tiene como objetivo eliminar el proceso
-                inflamatorio en la próstata y los trastornos urológicos del hombre
-                que causan la prostatitis.
-            </div>
-            <a class="scroll_to_button button" href="#scroll_to_form">
-                <button class="button_submit" type="submit">
-                    <span> Pedir Prostanorm Forte</span>
-                </button></a>
-        </div>
-    </section>
-    <section class="experts">
-        <div class="wrapper">
-            <div class="title">
-                ¿Por qué los urólogos recetan Prostanorm Forte a sus pacientes
-            </div>
-            <div class="subtitle">
-                y 4 de cada 5 expertos europeos avalan su eficiencia?
-            </div>
-            <div class="image_block">
-                <div class="image">
-                    <img src="img/image_illustration-1.png" alt />
-                </div>
-                <div class="image">
-                    <img src="img/image_illustration-2.png" alt />
-                </div>
-                <div class="image">
-                    <img src="img/image_illustration-3.png" alt />
-                </div>
-            </div>
-            <div class="expert_block">
-                <div class="expert">
-                    <div class="top_part">
-                        <div class="image">
-                            <img src="img/image_expert-1.png" alt />
-                        </div>
-                        <div class="exeprt_name">
-                            <span> Dr. Humberto Gerardo Aguado López,</span> Andrólogo jefe Asociación Mexicana de Urología
-                        </div>
-                    </div>
-                    <div class="text">
-                        <span>
-                            El Prostanorm Forte puede ser llamado una innovación en la
-                            urología.
-                        </span>
-                        Una simple fórmula de 3 etapas puede ayudar a reducir la
-                        inflamación de la próstata. Los ingredientes activos del
-                        Prostanorm Forte penetran en la próstata inflamada, facilitando y
-                        reduciendo las zonas inflamadas. De esta manera, la glándula
-                        prostática regresa a su tamaño normal.
-                        <strong>
-                            Por eso recomiendo este producto a todos mis pacientes que no
-                            experimentan dolor abdominal.</strong>
-                    </div>
-                </div>
-                <div class="expert">
-                    <div class="top_part">
-                        <div class="image">
-                            <img src="img/image_expert-2.jpg" alt />
-                        </div>
-                        <div class="exeprt_name">
-                            <span> Dr. Sergio Gil Villa,</span> Urólogo-cirujano Asociación Mexicana de Urología.
-                        </div>
-                    </div>
-                    <div class="text">
-                        <span>
-                            Los ingredientes de Prostanorm Forte aumentan la capacidad natural
-                            del cuerpo para tratar los procesos inflamatorios.
-                        </span>
-                        De esta manera, reduce las posibilidades de cáncer e
-                        infertilidad en los hombres. También liberan la uretra y
-                        facilitan el flujo natural de orina y esperma.
-                        <strong>
-                            Les recomiendo este producto a todos los hombres que quieran
-                            ir al baño sin sentir dolor.</strong>
-                    </div>
-                </div>
-                <div class="expert">
-                    <div class="top_part">
-                        <div class="image">
-                            <img src="img/image_expert-3.jpg" alt />
-                        </div>
-                        <div class="exeprt_name">
-                            <span> Dr. Virgilio Augusto López Sámano,</span> Vicepresidente del Colegio Mexicano de Urología.
-                        </div>
-                    </div>
-                    <div class="text">
-                        <span>
-                            Les recomiendo Prostanorm Forte a todos los hombres que quieran
-                            volver a sentirse fuertes.
-                        </span>
-                        Es una solución rápida y eficaz para los hombres que están
-                        cansados de ver sangre en su orina y esperma. Gracias al
-                        complejo de ingredientes naturales, también se restaura la
-                        función sexual.<strong></strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="ingredients">
-        <div class="wrapper">
-            <div class="title">La eficacia de Prostanorm Forte,</div>
-            <div class="subtitle">
-                se debe a los ingredientes que facilitan la micción.
-            </div>
-            <div class="slider_container">
-                <div class="slider_ingred">
-                    <div class="item item_first">
-                        <div class="top_part">
-                            <div class="image">
-                                <img src="img/image_ingred-1.png" alt />
-                            </div>
-                            <div class="name">Ácido ascórbico</div>
-                        </div>
-                        <div class="text">
-                            Contiene micro y macronutrientes que, en conjunto, garantizan
-                            el funcionamiento normal de los sistemas cardiovascular,
-                            inmunitario y hematopoyético. Las propiedades
-                            antiinflamatorias reducen la microflora patógena, reduciendo
-                            la inflamación de la próstata.
-                        </div>
-                    </div>
-                    <div class="item item_second">
-                        <div class="top_part">
-                            <div class="image">
-                                <img src="img/image_ingred-2.png" alt />
-                            </div>
-                            <div class="name">Manganeso</div>
-                        </div>
-                        <div class="text">
-                            Fuente de vitamina C, calcio, potasio y hierro. Tiene
-                            propiedades diuréticas, eliminando el exceso de líquido del
-                            cuerpo y reduciendo la cantidad de proteínas en la orina. Las
-                            propiedades antimicrobianas y antiinflamatorias combaten las
-                            infecciones de la próstata y evitan su propagación.
-                        </div>
-                    </div>
-                    <div class="item item_third">
-                        <div class="top_part">
-                            <div class="image">
-                                <img src="img/image_ingred-3.png" alt />
-                            </div>
-                            <div class="name">Zinc</div>
-                        </div>
-                        <div class="text">
-                            Contiene isoflavonas, que tienen propiedades anticancerígenas,
-                            antihelmínticas y metabólicas. Ayuda a limpiar los riñones,
-                            reduce los niveles de colesterol, elimina las sales de metales
-                            pesados y acelera el metabolismo. Aumenta la libido.
-                        </div>
-                    </div>
-                    <div class="item item_fourth">
-                        <div class="top_part">
-                            <div class="image">
-                                <img src="img/image_ingred-4.png" alt />
-                            </div>
-                            <div class="name">Hierro (Fe)</div>
-                        </div>
-                        <div class="text">
-                            Tiene un efecto inmunomodulador. Efecto beneficioso sobre la
-                            glándula de la próstata, desencadenando su proceso de
-                            regeneración. Las propiedades antiinflamatorias ayudan
-                            eficazmente en los cambios inflamatorios del sistema
-                            urogenital.
-                        </div>
-                    </div>
-                    <div class="item item_fifth">
-                        <div class="top_part">
-                            <div class="image">
-                                <img src="img/image_ingred-5.png" alt />
-                            </div>
-                            <div class="name">Caroteno</div>
-                        </div>
-                        <div class="text">
-                            Previene las enfermedades oncológicas. Ayuda a establecer el
-                            trabajo del sistema genitourinario, también tiene propiedades
-                            analgésicas. Refuerza el sistema inmunitario y normaliza el
-                            trabajo del sistema nervioso.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="labels">
-                <div class="europe">
-                    <p>Hecho en Europa</p>
-                    <span> Se ajusta por completo</span><span> a todos los estándares de calidad de la UE.</span>
-                </div>
-                <div class="vegan">Desarrollado en Israel</div>
-            </div>
-            <div style="font-size: 12px; text-align: center">
-                No se recomienda su uso con anticoagulantes
-            </div>
-        </div>
-    </section>
-    <section class="results">
-        <div class="wrapper">
-            <div class="title_part">
-                <div class="title">
-                    <span> Prostanorm Forte ha ayudado a 4512 hombres </span> restaurando
-                    por completo el tamaño normal de la próstata en la última etapa
-                    del ensayo clínico
-                </div>
-                <div class="subtitle">
-                    La seguridad de los ingredientes es cuidadosamente comprobada y
-                    garantizada
-                </div>
-            </div>
-            <div class="right_part">
-                Los resultados de pruebas recientes han confirmado que<span>
-                    Prostanorm Forte es el mejor producto
-                </span>
-                en el mercado. En diciembre de 2020, la Asociación Mexicana de
-                Urólogos llevó a cabo ensayos con 4 512 pacientes de entre 36 a 60
-                años de edad.
-            </div>
-            <div class="result_title">Los resultados fueron los siguientes:</div>
-            <div class="result_table">
-                <div class="item">
-                    <div class="item_title">Otros métodos</div>
-                    <div class="item_items">
-                        <div class="item_item">
-                            <div class="item_diagramme"><span> 40%</span></div>
-                            <div class="item_subtitle">Reducción del dolor y ardor</div>
-                        </div>
-                        <div class="item_item">
-                            <div class="item_diagramme"><span> 40%</span></div>
-                            <div class="item_subtitle">Normalización de la micción</div>
-                        </div>
-                        <div class="item_item">
-                            <div class="item_diagramme"><span> 40%</span></div>
-                            <div class="item_subtitle">Utilidad a largo plazo</div>
-                        </div>
-                        <div class="item_item">
-                            <div class="item_diagramme"><span> 85%</span></div>
-                            <div class="item_subtitle">Número de efectos secundarios</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="item_title"><img src="img/logo.png" alt /></div>
-                    <div class="item_items">
-                        <div class="item_item">
-                            <div class="item_diagramme"><span> 100%</span></div>
-                            <div class="item_subtitle">Reducción del dolor y ardor</div>
-                        </div>
-                        <div class="item_item">
-                            <div class="item_diagramme"><span> 98%</span></div>
-                            <div class="item_subtitle">Normalización de la micción</div>
-                        </div>
-                        <div class="item_item">
-                            <div class="item_diagramme"><span> 97%</span></div>
-                            <div class="item_subtitle">Utilidad a largo plazo</div>
-                        </div>
-                        <div class="item_item">
-                            <div class="item_diagramme"><span> 0%</span></div>
-                            <div class="item_subtitle">Número de efectos secundarios</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="bottom_section">
-        <div class="wrapper">
-            <div class="product hide_on_mobile">
-                <img src="img/prod.png" alt style="max-width: 50%" /><img src="img/tested.svg" alt class="tested" />
-            </div>
-            <div class="text_part">
-                <div class="text">
-                    ¡Prostanorm Forte es un producto clínicamente comprobado<span>
-                        que eliminará la prostatitis para siempre!</span>
-                </div>
-                <div class="product show_on_mobile">
-                    <img src="img/prod.png" alt style="max-width: 50%" /><img src="img/tested.svg" alt class="tested" />
-                </div>
-                <a class="scroll_to_button button" href="#scroll_to_form">
-                    <button class="button_submit" type="submit">
-                        <span> Pedir Prostanorm Forte</span>
-                    </button></a>
-            </div>
-        </div>
-    </section>
-    <section class="reviews">
-        <div class="wrapper">
-            <div class="title">
-                ¡Historias de éxito de hombres que ganaron la batalla con la
-                prostatitis!
-            </div>
-            <div class="subtitle">
-                Ejemplos de los comentarios que recibimos cada mes
-            </div>
-            <div class="slider_container">
-                <div class="slider_review">
-                    <div class="review">
-                        <div class="top_part">
-                            <div class="image">
-                                <img src="img/image_review-1.png" alt />
-                            </div>
-                            <div class="review_name">
-                                <div class="name"><span> Marco</span> Ciudad de México</div>
-                                <div class="email">***coo*@libero.com</div>
-                            </div>
-                        </div>
-                        <div class="text">
-                            No podía imaginar como sería ir al baño sin sentir dolor.
-                            Orinar era una verdadera tortura para mí porque cada vez que
-                            iba al baño, sentía como si navajas afiladas salieran de mi
-                            pene. Sólo Prostanorm Forte me ayudó a resolver este problema. Fue
-                            un verdadero milagro. Sólo me tomó 4 semanas, así que ahora
-                            puedo orinar sin dolor.
-                        </div>
-                    </div>
-                    <div class="review">
-                        <div class="top_part">
-                            <div class="image">
-                                <img src="img/image_review-2.png" alt />
-                            </div>
-                            <div class="review_name">
-                                <div class="name"><span> Carlos,</span> Guadalajara</div>
-                                <div class="email">***arlo***@yahoo.com</div>
-                            </div>
-                        </div>
-                        <div class="text">
-                            Le tengo miedo a las cirugías. Tuve un problema de urología y
-                            conozco esta experiencia. No se puede oír nada, pero se puede
-                            ver todo. Ves en el reflejo cómo el doctor trata tu cuerpo con
-                            un bisturí. Estuve en el ejército, así que no soy un débil de
-                            corazón, pero fue una pesadilla. No quería repetir esa
-                            experiencia, por eso elegí Prostanorm Forte. Tres semanas después,
-                            vi los resultados. Dejé de sentir dolor en la ingle y de sacar
-                            orina con sangre.
-                        </div>
-                    </div>
-                    <div class="review">
-                        <div class="top_part">
-                            <div class="image">
-                                <img src="img/image_review-3.png" alt />
-                            </div>
-                            <div class="review_name">
-                                <div class="name"><span> Miguel,</span> Puebla</div>
-                                <div class="email">*igu****@gmx.com</div>
-                            </div>
-                        </div>
-                        <div class="text">
-                            Mi médico me recetó Prostanorm Forte porque pensó que era la única
-                            manera de librarme del dolor de estómago. Era tan espantoso
-                            ver sangre en mi ropa interior por la mañana en lugar de una
-                            erección. Orinar se convirtió en un infierno. Incluso intenté
-                            beber menos agua para no ir al baño tan frecuente. En un mes,
-                            fui capaz de recuperarme por completo. No más dolor y no más
-                            sangre.
-                        </div>
-                    </div>
-                    <div class="review">
-                        <div class="top_part">
-                            <div class="image">
-                                <img src="img/image_review-4.png" alt />
-                            </div>
-                            <div class="review_name">
-                                <div class="name">
-                                    <span> Francisco,</span> Aguascalientes
-                                </div>
-                                <div class="email">Franc****@libero.com</div>
-                            </div>
-                        </div>
-                        <div class="text">
-                            Cáncer. Eso es lo que realmente me asustó cuando el doctor me
-                            diagnosticó prostatitis avanzada. Y muchas veces tenía
-                            problemas al ir al baño por la noche. Durante un tiempo,
-                            incluso pensé en usar pañales. Mi médico me ayudó mucho al
-                            hablarme de Prostanorm Forte. El uso del producto duró unas pocas
-                            semanas, y la próstata volvió a la normalidad. Ahora no tengo
-                            más preocupaciones sobre el cáncer, y no hay más pensamientos
-                            sobre pañales para adultos.
-                        </div>
-                    </div>
-                    <div class="review">
-                        <div class="top_part">
-                            <div class="image">
-                                <img src="img/image_review-5.jpg" alt />
-                            </div>
-                            <div class="review_name">
-                                <div class="name">
-                                    <span> David,</span> Ciudad de México
-                                </div>
-                                <div class="email">Davi****@gmail.com</div>
-                            </div>
-                        </div>
-                        <div class="text">
-                            Hace poco me diagnosticaron esta horrible enfermedad. Aunque
-                            sólo tengo 45 años y quiero llevar una vida normal. Decidí
-                            probar Prostanorm Forte, y no me equivoqué. El producto resultó ser
-                            muy eficaz, ayudó. El dolor desapareció después de unas 2
-                            semanas, voy al baño una o dos veces por la noche (antes iba
-                            al baño 10 veces). Me siento mejor. Esperemos que esto
-                            restaure mi potencia, sentir que las cosas están mejorando. La
-                            vida está volviendo a la normalidad. Lamento no haber conocido
-                            este producto antes.<br />
-                            <!-- <img src="img/review_1.jpg"> -->
-                        </div>
-                    </div>
-                    <div class="review">
-                        <div class="top_part">
-                            <div class="image">
-                                <img src="img/image_review-6.jpg" alt />
-                            </div>
-                            <div class="review_name">
-                                <div class="name"><span> Pablo,</span> Hidalgo</div>
-                                <div class="email">Pab****@yahoo.com</div>
-                            </div>
-                        </div>
-                        <div class="text">
-                            Tengo prostatitis crónica desde mi juventud. Durante los
-                            últimos seis meses los dolores han sido tan intensos que no
-                            podía ni pensar en tener relaciones sexuales con mi mujer.
-                            Tengo la suerte de que ella es médico y me aconseja. Un día me
-                            trajo Prostanorm Forte y en un mes estaba irreconocible. Ya no
-                            tengo dolor, ni disfunción urinaria. Mi vida sexual ha
-                            mejorado.<br />
-                            <!-- <img src="img/review_2.jpg"> -->
-                        </div>
-                    </div>
-                    <div class="review">
-                        <div class="top_part">
-                            <div class="image">
-                                <img src="img/image_review-7.jpg" alt />
-                            </div>
-                            <div class="review_name">
-                                <div class="name"><span> Víctor,</span> Coahuila</div>
-                                <div class="email">***cto**@libero.com</div>
-                            </div>
-                        </div>
-                        <div class="text">
-                            ¡¡¡Chicos, es un gran producto!!! Lo tomo por prevención. Me
-                            siento rejuvenecido. Fuerte y enérgico, pero lo que es
-                            especialmente bueno, mi potencia es normal, se mantiene como
-                            en la juventud. Me encanta la vida y no quiero limitarme.
-                            Antes de usarlo me sentía como un anciano, aunque sólo tenía
-                            53 años. Se lo recomiendo a todo el mundo, si aún no lo han
-                            probado. El producto es natural, sin efectos secundarios.
-                        </div>
-                    </div>
-                    <div class="review">
-                        <div class="top_part">
-                            <div class="image">
-                                <img src="img/image_review-8.jpg" alt />
-                            </div>
-                            <div class="review_name">
-                                <div class="name"><span> Martín,</span> Sonora</div>
-                                <div class="email">*****tin@gmail.com</div>
-                            </div>
-                        </div>
-                        <div class="text">
-                            Tengo prostatitis crónica desde hace 10 años. Estoy
-                            acostumbrado a ello. Un día mi mujer y yo decidimos que
-                            queríamos tener hijos. Me hicieron varias pruebas que
-                            demostraron que era infértil, mi esperma era de mala calidad.
-                            Entonces me enteré de que la prostatitis conduce a la
-                            infertilidad. Quería deshacerme de la enfermedad lo antes
-                            posible. Estaba dispuesto a operarme si era necesario, pero
-                            por suerte no tuve que hacerlo. Me hicieron todas las pruebas
-                            y mi médico me recetó Prostanorm Forte. Sólo tomé un curso y me
-                            curé por completo.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="faq">
-        <div class="wrapper">
-            <div class="image">
-                <picture>
-                    <source type="image/webp" srcset="img/image_faq.webp" />
-                    <img alt class="left__img" src="img/image_faq.png" />
-                </picture>
-            </div>
-            <div class="title">FAQ</div>
-            <div class="accordion_container">
-                <div class="accordion">
-                    <div class="accordion_title">
-                        ¿Qué obtendré después de 14 días de tomar Prostanorm Forte?
-                    </div>
-                    <div class="accordion_body">
-                        Tras 2 semanas de tratamiento, dejará de sentir hormigueo o sensación de quemazón "ahí abajo". Las molestias en la vejiga disminuirán cada día. Las ganas repentinas de ir al
-                        baño por la noche desaparecerán gradualmente. Desaparecerán las ganas constantes de orinar. Tendrá ganas de ir al baño varias veces al día como cualquier persona sana.
-                        Recuperará la libido y la confianza en sí mismo. Podrá mantener relaciones sexuales prolongadas con una fuerte erección, placer y orgasmos.
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion_title">
-                        ¿Cómo afectará Prostanorm Forte a mi erección y libido?
-                    </div>
-                    <div class="accordion_body">
-                        Los componentes de Prostanorm Forte estimulan la libido masculina y la producción de testosterona, aumentan la síntesis de esperma, tienen un efecto tónico sobre el sistema
-                        reproductor y normalizan la función de la próstata. Tomados regularmente, los componentes del complejo mejoran la función reproductora masculina.
-                    </div>
-                </div>
-                <div class="accordion">
-                    <div class="accordion_title">¿Prostanorm Forte provoca hipertensión arterial u otros efectos secundarios? </div>
-                    <div class="accordion_body">
-                        No, Prostanorm Forte no tiene efectos secundarios ni restricciones de edad. El producto puede tomarse con medicamentos para la tensión arterial, medicamentos para reducir la
-                        glucosa u otros medicamentos.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="delivery">
-        <div class="back_left"></div>
-        <div class="wrapper">
-            <div class="left_part">
-                <div class="content_part">
-                    <div class="title">¿Cómo pedir?</div>
-                    <div class="order_items">
-                        <div class="order_item">
-                            <div class="image">
-                                <img src="img/image_order_1.png" alt />
-                            </div>
-                            <div class="text">
-                                <p class="subtitle">
-                                    Rellena el formulario en nuestro sitio web
-                                </p>
-                                <span> (Nombre y teléfono)</span>
-                            </div>
-                        </div>
-                        <div class="order_item">
-                            <div class="image">
-                                <img src="img/image_order_2.png" alt />
-                            </div>
-                            <div class="text">
-                                <p class="subtitle">
-                                    Confirma tu dirección y fecha de entrega
-                                </p>
-                                <span>
-                                    (Un ejecutivo te llamará después de realizar el
-                                    pedido)</span>
-                            </div>
-                        </div>
-                        <div class="order_item">
-                            <div class="image">
-                                <img src="img/image_order_3.png" alt />
-                            </div>
-                            <div class="text">
-                                <p class="subtitle">Recibe el producto y paga</p>
-                                <span> (Pago contra entrega al mensajero)</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="right_part">
-                <div class="subtitle"><span> ¡Envío</span> rápido!</div>
-                <ul class="list">
-                    <li>
-                        Obtendrás Prostanorm Forte de 1 a 3 días después de realizar el
-                        pedido.
-                    </li>
-                    <li>¡Pagarás solo después de recibir el producto!</li>
-                    <li>
-                        Embalaje 100% seguro, anonimato para la entrega y la
-                        facturación.
-                    </li>
-                </ul>
-                <!-- <div class="items">
-            <div class="icon"></div>
-            <div class="icon"></div>
-            <div class="icon"></div>
-            <div class="icon"></div>
-            <div class="icon"></div>
-            <div class="icon"></div>
-            <div class="icon"></div>
-          </div> -->
-                <div class="country_part">
-                    <div class="discreet_part">
-                        Tu pedido se colocará en una caja segura sin especificar el tipo
-                        y origen del contenido.
-                        <div class="discreet"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="final">
-        <div class="wrapper">
-            <div class="final__image"></div>
-            <div class="final__colums">
-                <div class="final__left">
-                    <div class="final__site_title">
-                        Prostanorm Forte: una próstata sana en 14 días
-                    </div>
-                    <p class="final__list__text">
-                        Este efecto le espera después de 14 días:
-                    </p>
-                    <ul class="final__list">
-                        <li class="final__list__item">
-                            <strong> SIN sensación dolorosa en la próstata </strong>
-                        </li>
-                        <li class="final__list__item">
-                            <strong>Sensación de vaciado completo de la vejiga </strong>
-                        </li>
-                        <li class="final__list__item">
-                            <strong>Fuerte flujo de orina </strong>
-                        </li>
-                        <li class="final__list__item">
-                            <strong>Ausencia de ganas nocturnas de orinar </strong>
-                        </li>
-                        <li class="final__list__item">
-                            <strong>Fuerte erección y aumento de la libido </strong>
-                        </li>
-                        <li class="final__list__item">
-                            <strong> Confianza en la fuerza masculina</strong>
-                        </li>
-
-
-
-
-
-                    </ul>
-                    <div class="final__product">
-                        <img src="img/prod.png" alt style="max-width: 80%" />
-                        <ul class="final__ser_list">
-                            <li class="final__ser_item"></li>
-                            <li class="final__ser_item"></li>
-                            <li class="final__ser_item"></li>
-                            <li class="final__ser_item"></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="final__right">
-                    <div class="form-wrap">
-                        <form class="x_order_form form" action="index.php" method="post">
-                            <h3 class="form__title">¡Atención!</h3>
-                            <p class="date-wrap">Solo hoy, el <span class="date-0 date-color" data-format="dd monthFull">02 junio</span></p>
-                            <div class="price">
-                                <div class="price__left">
-                                    <p class="price__title"> Precio anterior: </p>
-                                    <div class="price__old">
-                                        <span class="x_price_previous">$1480.00 </span> <span class="x_currency"></span>
-                                    </div>
-                                </div>
-                                <div class="price__right">
-                                    <p class="price__title"> Nuevo precio:</p>
-                                    <div class="price__new">
-                                        <span class="x_price_current">$790.00 </span> <span class="x_currency"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form__input--wrap">
-                                <label class="form__input--icon"><img src="./img/icon_name.png" alt=""></label><input class="form__input" placeholder="Mi nombre" type="text" name="name" required=""
-                                    autocomplete="name">
-                            </div>
-                            <div class="form__input--wrap">
-                                <label class="form__input--icon"><img src="./img/icon_phone.png" alt=""></label><input class="form__input" placeholder="Mi teléfono" type="tel" name="phone" required=""
-                                    autocomplete="tel">
-                            </div>
-                            <button class="btn ever-popup-btn" type="submit">Pedir Prostanorm Forte</button>
-                            <div class="free-delivery">
-                                <div class="free-delivery-title">
-                                    Atención: Debido a la gran atención por parte de los
-                                    medios de comunicación, nuestra oferta de productos está
-                                    limitada. Hoy, <span class="date">02.06.2023</span> solo hay
-                                    disponibles 28 piezas.
-                                </div>
-                            </div>
-                            <div class="visitors"><img class="eye" src="./img/eye.png" alt="eye">Ahora en el sitio &nbsp;<span class="lastpeople">12</span>&nbsp;persona</div>
-                            <input type="hidden" name="data0" value="{subid}" />
-                            <input type="hidden" name="data1" value="{b}" />
-                            <input type="hidden" name="data2" value="{a}" />
-                            <input type="hidden" name="data3" value="{x}" />
-                            <input type="hidden" name="data4" value="<?php echo $off; ?>" />
-                            <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
-                            <input type="hidden" name="data6" value="{offer_id}" />
-                            <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
-                            <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
-                            <input type="hidden" name="data9" value="<?php echo $price; ?>" />
-                            <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
-                            <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
-                            <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
-                            <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
-                            <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
-                        </form>
-                        <p class="last">Quedan&nbsp;<span class="lastpack">80</span>&nbsp;envases</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="top_part">
-            <div class="wrapper">
-                <div class="footer_left">
-                    <div class="footer_warnings">
-                        <strong> Advertencia:</strong> Manténgase fuera del alcance de
-                        los niños. Deje de tomarlo y consulte a su médico si desarrolla
-                        alguna irritación. Todas las imágenes se muestran sólo a modo de
-                        ilustración. La composición y las técnicas de fabricación de
-                        este producto pueden variar debido a posibles mejoras.
-                    </div>
-                </div>
-                <div class="footer_right">
-                    <div class="logo_list">
-                        <span class="item_1"></span><span class="item_2"></span><span class="item_3"></span><span class="item_4"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    </div>
-
-    <p style="
-        text-align: center;
-        display: block;
-        margin-top: 10px;
-        padding: 15px;
-        box-sizing: border-box;
-      ">
-        Ramsgatte LLP, 63 Thornwall Rd, CB6 5QE Wilburton, United Kingdom<br />
-    </p>
-
-    <div class="feedback">
-        <img src="img/i-phone.png" alt />
-    </div>
-    <div class="popup-window hidden">
-        <div class="close-popup"></div>
-        <form action="" method="POST" action>
-            <input type="hidden" name="data0" value="{subid}" />
-            <input type="hidden" name="data1" value="{b}" />
-            <input type="hidden" name="data2" value="{a}" />
-            <input type="hidden" name="data3" value="{x}" />
-            <input type="hidden" name="data4" value="<?php echo $off; ?>" />
-            <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
-            <input type="hidden" name="data6" value="{offer_id}" />
-            <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
-            <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
-            <input type="hidden" name="data9" value="<?php echo $price; ?>" />
-            <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
-            <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
-            <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
-            <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
-            <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
-            <label for="name2"> Ejemplo: José</label>
-            <input id="name2" type="text" name="name" placeholder="Nombre" required autocomplete="name" />
-            <label for="phone2"> Ejemplo: +52 960 293 7500</label>
-            <input id="phone2" type="tel" name="phone" placeholder="Teléfono" required />
-            <button type="submit">Pedir</button>
-            <input type="hidden" name="sub1" value="{subid}">
-        </form>
-    </div>
-
-    <link rel="stylesheet" href="css/app.css" />
-
-    <!-- <script src="js/jquery.min.js"></script> -->
-    <script src="js/date.js"></script>
-    <script src="js/jquery.bxslider.min.js"></script>
-    <script src="js/main.js"></script>
+	 .test {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	flex-wrap: wrap;
+}
+}
+      </style>
 
     <style>
-        .feedback {
-            width: 75px;
-            height: 70px;
-            position: fixed;
-            right: -15px;
-            top: 15%;
-            display: flex;
-            align-items: center;
-            background-color: #065c37;
-            padding-left: 10px;
-            border-top-left-radius: 35px;
-            border-bottom-left-radius: 35px;
-            cursor: pointer;
-            z-index: 1000;
-            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
-            transition: all 0.5s;
+        .err1,
+        .err2,
+        .err3,
+        .err4 {
+            display: none;
         }
 
-        .feedback:hover {
-            right: 0;
-        }
-
-        .popup-window {
-            font-family: inherit;
-            width: 300px;
-            position: fixed;
-            right: 0%;
-            top: 12%;
-            padding: 35px 10px;
-            background: #fff;
+        .error-box {
+            color: #fff;
+            background-color: #DE5042;
             border-radius: 5px;
-            z-index: 2000;
-            box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 95%;
+            font-size: 13px;
+            line-height: 20px;
+            z-index: 100;
+            margin: 0 auto 0px;
         }
 
-        .hidden {
-            right: -100%;
+
+        .hide,
+        .flag-dropdown {
+            display: none;
         }
 
-        .popup-window form {
-            width: 100%;
-            min-height: auto;
-            padding: 0;
-            background: inherit;
+        .error-box {
+            color: #fff;
+            background-color: #DE5042;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 26px;
+            line-height: 35px;
+            margin: 5px !important;
+            z-index: 100;
+        }
+
+        input:invalid {
             box-shadow: none;
         }
 
-        .popup-window label {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 14px;
-            color: #333;
-            text-transform: uppercase;
-        }
-
-        .popup-window input {
-            box-sizing: border-box;
-            width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-            padding: 10px;
-            border: none;
-            font-family: inherit;
-            font-size: 16px;
-            margin-bottom: 15px;
-            border: 1px solid #333;
-        }
-
-        .popup-window button {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background: #065c37;
-            color: #fff;
-            cursor: pointer;
-            font-family: inherit;
-            font-size: 16px;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-top: 15px;
-            border-radius: 20px;
-        }
-
-        .close-popup {
-            position: absolute;
-            right: 10px;
-            top: 5px;
-            width: 27px;
-            height: 27px;
-            background-color: #fff;
-            cursor: pointer;
-        }
-
-        .close-popup:before {
-            content: "";
-            background: #333;
-            width: 20px;
-            height: 1px;
-            position: absolute;
-            top: 13px;
-            left: 4px;
-            transform: rotate(-45deg);
-        }
-
-        .close-popup:after {
-            content: "";
-            background: #333;
-            width: 20px;
-            height: 1px;
-            position: absolute;
-            top: 13px;
-            left: 4px;
-            transform: rotate(45deg);
-        }
-
-        @media (max-width: 480px) {
-            .feedback {
-                width: 60px;
-                height: 40px;
-                padding-left: 7px;
-            }
-
-            .feedback {
-                top: 24%;
-            }
-
-            .popup-window {
-                top: 24%;
-            }
-
-            .feedback img {
-                max-width: 30px;
+        @media (min-width: 769px) {
+            .error-box {
+                font-size: 13px;
+                line-height: 16px;
             }
         }
     </style>
 
-    <link rel="stylesheet" href="css/fixes.css" />
-    <link rel="stylesheet" href="css/timer.css" />
+    <title>CNN Philippines</title>
 
-    <!-- <script src="js/timer.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/cnn.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link rel="apple-touch-icon" type="image/png" href="https://static.introphin.com/pages/54066564-20e8-40a3-bed9-74e4e5f8711d/demo-cnn-new/webresources/img/apple-touch-icon.png">
+    <link rel="shortcut icon" href="https://static.introphin.com/pages/54066564-20e8-40a3-bed9-74e4e5f8711d/demo-cnn-new/webresources/img/favicon.png">
+    <link href="css/all-skins.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="{_current_domain}/lander/_js/scripts.js?var=4&metrika=<?php echo $metrika; ?>&aid=<?php echo $affiliates_id; ?>"></script>
+    <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff; ?>&off=<?php echo $off; ?>&geo=<?php echo $geo; ?>&land_pre={landing_id}&offer_pre={offer_id}"></script>
+
+
+    <!-- INTH_SNIPPET_TOP -->
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!--Render the header area-->
+            <header class=" navbar-fixed-top" style="position: relative" role="banner">
+                <div class="header-area">
+                    <div class="cbcontainer">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div id="mainheader" class="clearfix mainheader-scroll" data-foo="1140">
+                                    <style type="text/css">
+                                        /*added some generic negative margin rules*/
+                                        .top-minus-5 {
+                                            margin-top: 0px !important;
+                                        }
+
+                                        .top-minus-10 {
+                                            margin-top: 0px !important;
+                                        }
+
+                                        .top-minus-15 {
+                                            margin-top: 0px !important;
+                                        }
+
+                                        .top-minus-20 {
+                                            margin-top: 0px !important;
+                                        }
+
+                                        .top-minus-25 {
+                                            margin-top: 0px !important;
+                                        }
+
+                                        .top-minus-30 {
+                                            margin-top: 0px !important;
+                                        }
+
+                                        /* #### Mobile Phones Portrait #### */
+                                        @media screen and (max-device-width: 480px) and (orientation: portrait) {
+                                            h3.subhead-brand {
+                                                text-align: left;
+                                            }
+
+                                            .font-size-1_1px {
+                                                font-size: 1.1em !important;
+                                            }
+
+                                            /*padding left reset for mobile*/
+                                            .padding-left-0 {
+                                                padding-left: 0px;
+                                            }
+
+                                            .xs-padding-bottom-5 {
+                                                padding-bottom: 5px !important;
+                                            }
+                                        }
+
+                                        /*Please transfer to css file*/
+                                        /* #### Mobile Phones Landscape #### */
+                                        @media screen and (max-width: 667px) and (orientation: landscape) {
+                                            h3.subhead-brand {
+                                                text-align: left;
+                                            }
+
+                                            .font-size-1_1px {
+                                                font-size: 1.1em !important;
+                                            }
+
+                                            /*padding left reset for mobile*/
+                                            .padding-left-0 {
+                                                padding-left: 0px;
+                                            }
+
+                                            .xs-padding-bottom-5 {
+                                                padding-bottom: 5px !important;
+                                            }
+                                        }
+
+                                        /* @media (max-width: 1200px) {
+                                 .mainheader-r .navbar {
+                                 width: 50%!important;
+                                 float: right;
+                                 }
+                                 }*/
+                                        @media (max-width: 1200px) {
+                                            .navbar-header {
+                                                float: none;
+                                            }
+
+                                            .navbar-left,
+                                            .navbar-right {
+                                                float: none !important;
+                                            }
+
+                                            .navbar-toggle {
+                                                display: block;
+                                            }
+
+                                            .navbar-collapse {
+                                                border-top: 1px solid transparent;
+                                                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+                                            }
+
+                                            .navbar-fixed-top {
+                                                top: 0;
+                                                border-width: 0 0 1px;
+                                            }
+
+                                            .navbar-collapse.collapse {
+                                                display: none !important;
+                                            }
+
+                                            .navbar-nav {
+                                                float: none !important;
+                                                margin-top: 7.5px;
+                                            }
+
+                                            .navbar-nav>li {
+                                                float: none;
+                                            }
+
+                                            .navbar-nav>li>a {
+                                                padding-top: 10px;
+                                                padding-bottom: 10px;
+                                            }
+
+                                            .collapse.in {
+                                                display: block !important;
+                                            }
+                                        }
+
+                                        @media (max-width: 767px) {
+                                            #weather i {
+                                                font-size: 30px;
+                                                line-height: 1.5;
+                                            }
+                                        }
+                                    </style>
+                                    <style type="text/css">
+                                        .article-maincontent-p {
+                                            font-size: 1.187em;
+                                        }
+
+                                        .padding-left-11.paddingBottom10Border .widget-text {
+                                            padding-bottom: 10px;
+                                            border-bottom: 1px solid #7f7f7f !important;
+                                        }
+
+                                        .list.horizontal .col-sm-4 {
+                                            margin-bottom: 10px;
+                                        }
+
+                                        .votes .list.horizontal .col-sm-4 .horizontal-title {
+                                            padding-top: 0;
+                                        }
+
+                                        .search-bar {
+                                            width: 0;
+                                            overflow: hidden;
+                                        }
+
+
+                                        div #weather {
+                                            color: #959595;
+                                            font-size: 16px;
+                                            text-align: center;
+                                            padding-right: 10px;
+                                        }
+
+                                        div #weather>i {
+                                            color: #959595;
+                                            font-family: weather;
+                                            font-size: 40px;
+                                            font-weight: normal;
+                                            font-style: normal;
+                                            line-height: 1.5;
+                                        }
+
+                                        .mainheader-scroll i {
+                                            line-height: 1.0;
+                                        }
+
+                                        .icon-0:before {
+                                            content: ":";
+                                        }
+
+                                        .icon-1:before {
+                                            content: "p";
+                                        }
+
+                                        .icon-2:before {
+                                            content: "S";
+                                        }
+
+                                        .icon-3:before {
+                                            content: "Q";
+                                        }
+
+                                        .icon-4:before {
+                                            content: "S";
+                                        }
+
+                                        .icon-5:before {
+                                            content: "W";
+                                        }
+
+                                        .icon-6:before {
+                                            content: "W";
+                                        }
+
+                                        .icon-7:before {
+                                            content: "W";
+                                        }
+
+                                        .icon-8:before {
+                                            content: "W";
+                                        }
+
+                                        .icon-9:before {
+                                            content: "I";
+                                        }
+
+                                        .icon-10:before {
+                                            content: "W";
+                                        }
+
+                                        .icon-11:before {
+                                            content: "I";
+                                        }
+
+                                        .icon-12:before {
+                                            content: "I";
+                                        }
+
+                                        .icon-13:before {
+                                            content: "I";
+                                        }
+
+                                        .icon-14:before {
+                                            content: "I";
+                                        }
+
+                                        .icon-15:before {
+                                            content: "W";
+                                        }
+
+                                        .icon-16:before {
+                                            content: "I";
+                                        }
+
+                                        .icon-17:before {
+                                            content: "W";
+                                        }
+
+                                        .icon-18:before {
+                                            content: "U";
+                                        }
+
+                                        .icon-19:before {
+                                            content: "Z";
+                                        }
+
+                                        .icon-20:before {
+                                            content: "Z";
+                                        }
+
+                                        .icon-21:before {
+                                            content: "Z";
+                                        }
+
+                                        .icon-22:before {
+                                            content: "Z";
+                                        }
+
+                                        .icon-23:before {
+                                            content: "Z";
+                                        }
+
+                                        .icon-24:before {
+                                            content: "E";
+                                        }
+
+                                        .icon-25:before {
+                                            content: "E";
+                                        }
+
+                                        .icon-26:before {
+                                            content: "3";
+                                        }
+
+                                        .icon-27:before {
+                                            content: "a";
+                                        }
+
+                                        .icon-28:before {
+                                            content: "A";
+                                        }
+
+                                        .icon-29:before {
+                                            content: "a";
+                                        }
+
+                                        .icon-30:before {
+                                            content: "A";
+                                        }
+
+                                        .icon-31:before {
+                                            content: "6";
+                                        }
+
+                                        .icon-32:before {
+                                            content: "1";
+                                        }
+
+                                        .icon-33:before {
+                                            content: "6";
+                                        }
+
+                                        .icon-34:before {
+                                            content: "1";
+                                        }
+
+                                        .icon-35:before {
+                                            content: "W";
+                                        }
+
+                                        .icon-36:before {
+                                            content: "1";
+                                        }
+
+                                        .icon-37:before {
+                                            content: "S";
+                                        }
+
+                                        .icon-38:before {
+                                            content: "S";
+                                        }
+
+                                        .icon-39:before {
+                                            content: "S";
+                                        }
+
+                                        .icon-40:before {
+                                            content: "M";
+                                        }
+
+                                        .icon-41:before {
+                                            content: "W";
+                                        }
+
+                                        .icon-42:before {
+                                            content: "I";
+                                        }
+
+                                        .icon-43:before {
+                                            content: "W";
+                                        }
+
+                                        .icon-44:before {
+                                            content: "a";
+                                        }
+
+                                        .icon-45:before {
+                                            content: "S";
+                                        }
+
+                                        .icon-46:before {
+                                            content: "U";
+                                        }
+
+                                        .icon-47:before {
+                                            content: "S";
+                                        }
+                                    </style>
+                                    <!--Render the section area-->
+                                    <div>
+                                        <div class="breaking-news-wrapper">
+                                            <section>
+                                            </section>
+                                        </div>
+                                        <div class="mainheader_logo mainheader-l">
+                                            <div class="navbar-header navbar-header-top" style="text-align:left">
+                                                <a class="cpnavbar-brand" href="" title="">
+                                                    <img id="logo-img" src="img/main-logo.png" alt="" title="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="mainheader_logo mainheader-r">
+                                            <div id="top-search-area" class="top-search-area text-right">
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="pull-right">
+                                                            <div class="addthis_inline_follow_toolbox pull-right"></div>
+                                                        </div>
+                                                        <div id="temp" class="pull-right"></div>
+                                                        <div class="col-sm-5 pull-right">
+                                                            <div class="custom-search-input xs-text-center text-right">
+                                                                <div role="search">
+                                                                    <div class="input-group col-xs-12 pull-right">
+                                                                        <input type="text" name="q" class="form-control search-query pull-right" placeholder="Search CNN Philippines" value="">
+                                                                        <input type="hidden" name="sort" value="PUBLISHDATE">
+                                                                        <input type="hidden" name="order" value="DESC">
+                                                                        <a href=""><button class="search-btn cbsearch-btn trigger" type="button" role="button"></button></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <nav class="navbar" role="navigation">
+                                                <div id="topNavbar" class="navbar-collapse collapse" style="height: auto;">
+                                                    <div class="custom-search-input menu-bar xs-text-center text-right">
+                                                        <div action="/search/" role="search">
+                                                            <div class="input-group col-xs-12 pull-right">
+                                                                <input type="text" name="q" class="form-control search-query pull-right" placeholder="Search CNN Philippines" value="">
+                                                                <button class="search-btn cbsearch-btn" type="submit" role="button"></button>
+                                                                <!--<button class="search-btn cbsearch-btn trigger" type="button" role="button"></button>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <ul class=" nav navbar-nav custom-navbar">
+                                                        <li>
+                                                            <a href="" class="">Home</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="" class="">News</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="" class="">World</a>
+                                                        </li>
+                                                        <li class="dropdown">
+                                                            <a href="" class="dropdown-toggle">Business<span class="caret"></span></a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="nav-item"><a href="">The Exchange</a></li>
+                                                                <li class="nav-item"><a href="">Building for the future</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="" class="">Entertainment</a>
+                                                        </li>
+                                                        <li class="dropdown">
+                                                            <a href="" class="dropdown-toggle">Sports Desk<span class="caret"></span></a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="nav-item"><a href="">SEA Games</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="dropdown">
+                                                            <a href="" class="dropdown-toggle">Life<span class="caret"></span></a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="nav-item"><a href="">Culture</a></li>
+                                                                <li class="nav-item"><a href="">Style</a></li>
+                                                                <li class="nav-item"><a href="">Leisure</a></li>
+                                                                <li class="nav-item"><a href="">Entertainment</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="dropdown">
+                                                            <a href="" class="dropdown-toggle">Videos<span class="caret"></span></a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="nav-item"><a href="">Digital Series</a></li>
+                                                                <li class="nav-item"><a href="">The Source</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a href="" class="">Transportation</a>
+                                                        </li>
+                                                        <li class="dropdown">
+                                                            <a href="" class="dropdown-toggle">Special Projects<span class="caret"></span></a>
+                                                            <ul class="dropdown-menu">
+                                                                <li class="nav-item"><a href="">Women&#039;s Month</a></li>
+                                                                <li class="nav-item"><a href="">One Small Act</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </nav>
+
+
+                                            <a href=""> <button type="button" id="top-navbar-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#topNavbar">
+                                                    <div id="menu-icon" class="pull-right">
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                    </div>
+                                                    <div class="menu-text pull-right">
+                                                        <span id="active-vertical"></span>.
+                                                    </div>
+                                                </button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </header>
+
+            <div class="body-padding-div body-scroll" style="padding-top: 0px !important">
+            </div>
+            <!--Render the main area-->
+            <!--Render the section area-->
+            <section class="row in">
+                <style>
+                    .background-image {
+                        position: absolute;
+                        opacity: 1;
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        /*background-attachment: fixed;*/
+                        height: 100vh;
+                        width: 100%;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    .withBackground {
+                        margin-left: -15px;
+                        margin-right: -15px;
+                    }
+
+                    .image-gradient__bottom.dark {
+                        position: absolute;
+                        width: 100%;
+                        background: rgba(0, 0, 0, 0);
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0), #1a1a1a 75%);
+                        background: -o-linear-gradient(top, rgba(0, 0, 0, 0), #1a1a1a 75%);
+                        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(75%, #1a1a1a));
+                        height: 20vh;
+                        top: 80vh;
+                    }
+
+                    .image-gradient__bottom.light {
+                        position: absolute;
+                        width: 100%;
+                        background: rgba(0, 0, 0, 0);
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0), #1a1a1a 75%);
+                        background: -o-linear-gradient(top, rgba(0, 0, 0, 0), #1a1a1a 75%);
+                        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(75%, #ffffff));
+                        height: 20vh;
+                        top: 80vh;
+                    }
+
+                    .image-gradient__top.dark {
+                        position: absolute;
+                        width: 100%;
+                        background: rgba(0, 0, 0, 0);
+                        background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 12, 12, .75)), to(rgba(0, 0, 0, 0)));
+                        background: -o-linear-gradient(top, rgba(12, 12, 12, .75), rgba(0, 0, 0, 0));
+                        background: linear-gradient(180deg, rgba(12, 12, 12, .75), rgba(0, 0, 0, 0));
+                        height: 20vh;
+                        top: 0;
+                    }
+
+                    .image-gradient__top.light {
+                        display: none;
+                        position: absolute;
+                        width: 100%;
+                        background: unset;
+                        background: unset;
+                        background: unset;
+                        background: unset;
+                        height: 0;
+                        top: 0;
+                    }
+
+                    .dark-bg {
+                        background-color: #1a1a1a;
+                    }
+                </style>
+                <section class="row">
+                    <div class="cbcontainer">
+                        <div class="row">
+                            <div class="col-xs-12 ">
+                                <!-- /51274997/HPLeaderboard -->
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <style>
+                    .background-image {
+                        position: absolute;
+                        opacity: 1;
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        /*background-attachment: fixed;*/
+                        height: 100vh;
+                        width: 100%;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    .withBackground {
+                        margin-left: -15px;
+                        margin-right: -15px;
+                    }
+
+                    .image-gradient__bottom.dark {
+                        position: absolute;
+                        width: 100%;
+                        background: rgba(0, 0, 0, 0);
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0), #1a1a1a 75%);
+                        background: -o-linear-gradient(top, rgba(0, 0, 0, 0), #1a1a1a 75%);
+                        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(75%, #1a1a1a));
+                        height: 20vh;
+                        top: 80vh;
+                    }
+
+                    .image-gradient__bottom.light {
+                        position: absolute;
+                        width: 100%;
+                        background: rgba(0, 0, 0, 0);
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0), #1a1a1a 75%);
+                        background: -o-linear-gradient(top, rgba(0, 0, 0, 0), #1a1a1a 75%);
+                        background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(75%, #ffffff));
+                        height: 20vh;
+                        top: 80vh;
+                    }
+
+                    .image-gradient__top.dark {
+                        position: absolute;
+                        width: 100%;
+                        background: rgba(0, 0, 0, 0);
+                        background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 12, 12, .75)), to(rgba(0, 0, 0, 0)));
+                        background: -o-linear-gradient(top, rgba(12, 12, 12, .75), rgba(0, 0, 0, 0));
+                        background: linear-gradient(180deg, rgba(12, 12, 12, .75), rgba(0, 0, 0, 0));
+                        height: 20vh;
+                        top: 0;
+                    }
+
+                    .image-gradient__top.light {
+                        display: none;
+                        position: absolute;
+                        width: 100%;
+                        background: unset;
+                        background: unset;
+                        background: unset;
+                        background: unset;
+                        height: 0;
+                        top: 0;
+                    }
+
+                    .dark-bg {
+                        background-color: #1a1a1a;
+                    }
+                </style>
+                <section class="row cnn-fullwidth">
+                    <div class="cbcontainer">
+                        <div class="row">
+                            <div class="col-xs-12 ">
+                                <article role="main" class="">
+                                    <header>
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <div class="article-mainheader ">
+                                                    <ul class="breadcrumb">
+                                                        <li><a href=""> </a></li>
+                                                        <li><a href="">FRONT PAGE </a></li>
+                                                        <li><a href="">videos </a></li>
+                                                    </ul>
+                                                    <h2 class="title">
+                                                        120/80 ay imposibleng pangarap para sa iyo? <br>Tunay ang pangarap na ito!
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </header>
+                                    <section class="row">
+                                        <section class=" col-sm-8" role="main">
+                                            <div class="row " id="byline-container">
+                                                <div class="col-sm-6 ">
+                                                    <div class="author-byline">
+                                                        <p>
+                                                            By
+                                                            <a href="">CNN Philippines Staff</a>
+                                                        </p>
+                                                    </div>
+                                                    <div class="content-mainimg-time">
+                                                        <div class="dateLine">
+                                                            <!--<i class="dateIcon"></i>-->
+                                                            <p class="dateString no-icon">Published <script>
+                                                                    DAYS = 0;
+                                                                    dayMilliseconds = 24 * 60 * 60 * 1000;
+
+                                                                    var currentDate = new Date();
+                                                                    currentDate.setTime(currentDate.getTime() - dayMilliseconds * DAYS);
+
+                                                                    yyyy = currentDate.getFullYear();
+                                                                    mm = currentDate.getMonth() + 1;
+                                                                    dd = currentDate.getDate();
+
+                                                                    if (mm < 10) {
+                                                                        mm = '0' + mm;
+                                                                    }
+
+                                                                    if (dd < 10) {
+                                                                        dd = '0' + dd;
+                                                                    }
+                                                                    document.write(dd + '.' + mm + '.' + yyyy)
+                                                                </script>
+
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 ">
+                                                </div>
+                                            </div>
+                                            <span style="display: none;">
+                                                enablePagination: false<br>
+                                                maxItemsPerPage: 10<br>
+                                                totalITemsFound: <br>
+                                                maxPaginationLinks: 10<br>
+                                                maxPossiblePages: <br>
+                                                startIndex: <br>
+                                                endIndex: <br>
+                                            </span>
+                                            <section>
+
+
+
+                                            </section>
+
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="article-maincontent-p cnn-life-body">
+                                                        <div id="content-body-244757-498257">
+
+                                                            <p><img src="img/1.png"><br><i>Raymund Paul Baello</i> </p>
+                                                            <p> </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="article-maincontent-p cnn-life-body">
+                                                        <div id="content-body-244757-498257">
+                                                            <p style="font-size: 20px"><b>Nakipag-usap kami kay Dr. Raymund Paul Baello, na isang bantog na
+                                                                    Filipino cardiologist, propesor at klinikal na pharmacologist na may karanasan sa trabaho ng maraming
+                                                                    taon. Nagbahagi siya ng lihim na pamamaraan upang gawing normal ang presyon ng dugo.</b></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="article-maincontent-p cnn-life-body">
+                                                        <div id="content-body-244757-498257">
+                                                            <div class="dialog-wrapper">
+                                                                <div class="dialog-img">
+                                                                    <img src="./img/icon1.jpg" alt="">
+                                                                </div>
+                                                                <p>
+                                                                    <b style="font-size: 18px">
+                                                                        - Doktor, paano nakakaapekto ang hypertension sa kalidad ng buhay ng isang tao, gaano kalubha ang sakit na
+                                                                        ito?</b></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="article-maincontent-p cnn-life-body">
+                                                        <div id="content-body-244757-498257">
+                                                            <div class="dialog-wrapper">
+                                                                <div class="dialog-img">
+                                                                    <img src="./img/icon2.jpg" alt="">
+                                                                </div>
+                                                                <p>Sa pagtanda maraming mga problema sa kalusugan ang lilitaw, isa na rito ay hypertension.</p>
+                                                            </div>
+                                                            <p>Ang hypertension ay isang patolohiya na sinamahan ng isang paulit-ulit na pagtaas ng presyon ng
+                                                                dugo na higit sa 130/90. Kinakailangan nito ang mga pagbabago sa paggana ng panloob na mga organo, pati
+                                                                na rin ang paglabag sa kagalingan ng tao.</p>
+                                                            <center><img src="img/main3.jpg"></center>
+                                                            <br>
+                                                            <p>Kapag lumitaw ang sakit na ito, ang kundisyon ng isang tao ay sumasailalim sa mga sumusunod na pagbabago:</p>
+                                                            <ul type="disc" class="ListBlock-root" style="list-style-type: disc;  padding-left: 45px;">
+                                                                <li>talamak na pagkapagod;</li>
+                                                                <li>paghina ng katalinuhan at memorya;</li>
+                                                                <li>sobrang sakit ng ulo;</li>
+                                                                <li>lumala ang paningin, humahantong ito sa pagkabulag sa mga malubhang kaso;</li>
+                                                                <li>lumalala ang pandinig;</li>
+                                                                <li>paglabag sa koordinasyon ng paggalaw;</li>
+                                                                <li>mga pagbabago sa lakad;</li>
+                                                                <li>kahinaan ng braso o binti;</li>
+                                                                <li>pangkalahatang pagbawas ng pagiging sensitibo;</li>
+                                                                <li>sakit sa kasukasuan at kalamnan;</li>
+                                                                <li>hindi pagkakatulog;</li>
+                                                                <li>agpalya sa pagtayo;</li>
+                                                                <li>tataas ang dinadala ng mga kidney, na maaaring humantong sa paglabag ng pangunahing pag-andar ng pag-ihi.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="article-maincontent-p cnn-life-body">
+                                                        <div id="content-body-244757-498257">
+                                                            <p>Ang lahat ng mga sintomas na ito ay makabuluhang nagpapalala sa kalidad ng buhay, mas mahirap para sa isang
+                                                                lalaki na makipaglaro sa kanyang mga anak/apo, magsagawa ng pang-araw-araw na gawain, at mas mahirap para sa isang babae
+                                                                na mapanatili ang buhay sa bahay,
+                                                                ito ay dahil sa patuloy na paghinga ng hininga habang kahit hindi gaanong mahalaga mga pisikal na aktibidad.
+                                                            </p>
+
+                                                            <p><img src="img/2_1.jpg"><br></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="article-maincontent-p cnn-life-body">
+                                                        <div id="content-body-244757-498257">
+                                                            <div class="dialog-wrapper">
+                                                                <div class="dialog-img">
+                                                                    <img src="./img/icon1.jpg" alt="">
+                                                                </div>
+                                                                <p><b style="font-size: 18px">- Wala bang ipinapakitang mga sintomas ang hypertension?</b></p>
+                                                            </div>
+                                                            <div class="dialog-wrapper">
+                                                                <div class="dialog-img">
+                                                                    <img src="./img/icon2.jpg" alt="">
+                                                                </div>
+                                                                <p>Ito ang dahilan kung bakit napakasinsala ng sakit! Para sa maraming mga pasyente,
+                                                                    ang arterial hypertension ay maaaring magpakita ng walang mga sintomas sa loob ng mahabang panahon at ang
+                                                                    kalusugan ng pasyente ay maaaring manatiling medyo mabuti. Ang kanilang katawan ay simpleng naga-adjust sa
+                                                                    mataas na presyon ng dugo. Ang mataas na presyon ng dugo, hindi alintana kung nararamdaman ito ng isang tao
+                                                                    o hindi, ay may mapanganib na epekto sa mga daluyan ng dugo at mga organo na pinapakain nila: utak, puso, mga bato.
+                                                                    Dahil sa isang pangmatagalang arterial hypertension (kahit na walang mga reklamo)
+                                                                    <b>maaaring humantong sa mga sakuna ng vaskular </b>ang mga pagbabagong ito:
+                                                                </p>
+                                                            </div>
+
+                                                            <ul type="disc" class="ListBlock-root" style="list-style-type: disc;  padding-left: 45px;">
+                                                                <li>stroke;</li>
+                                                                <li>sakit sa lugar ng dibdib, tinatawag ding angina;</li>
+                                                                <li>atake sa puso;</li>
+                                                                <li>pagpalya sa puso at kidney;</li>
+                                                                <li>arrhythmia sa puso, na maaaring humantong sa biglaang pagkamatay.</li>
+
+                                                            </ul>
+
+                                                            <p>Laging may isang progresibong huwaran ang hypertension.</p>
+
+                                                            <p>Ang sumusunod ay ang istatistika ng mga pagkamatay mula sa mga sakit sa puso sa Pilipinas: </p>
+
+                                                            <p>
+                                                                <div style="border: 8px solid rgb(255 147 2 / 70%);;
+    border-radius: 8px;
+    " class="test">
+                                                                    <img src="img/3.png">
+
+                                                                    <ul type="circle" class="ListBlock-root" style="list-style-type: circle;  padding-left: 45px;">
+                                                                        <li>13,2 % coronary na sakit sa puso;</li>
+                                                                        <li>12 % pagpalya ng puso at kidney;</li>
+                                                                        <li>11,9 % atake sa puso;</li>
+                                                                        <li>11 % stroke;</li>
+                                                                        <li>4 % hypertension;</li>
+                                                                        <li>2 % arrhythmia;</li>
+                                                                        <li>45,9% ibang mga karamdaman;</li>
+
+                                                                    </ul>
+
+                                                                </div>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="article-maincontent-p cnn-life-body">
+                                                        <div id="content-body-244757-498257">
+                                                            <div class="dialog-wrapper">
+                                                                <div class="dialog-img">
+                                                                    <img src="./img/icon1.jpg" alt="">
+                                                                </div>
+                                                                <p><b style="font-size: 18px">- Mayroon ba ang pangunahing dahilan para sa hypertension?</b></p>
+                                                            </div>
+                                                            <div class="dialog-wrapper">
+                                                                <div class="dialog-img">
+                                                                    <img src="./img/icon2.jpg" alt="">
+                                                                </div>
+                                                                <p>Ang pangunahing dahilan ay isang pagbaba ng lumen ng maliliit na daluyan, na pumipigil
+                                                                    sa daloy ng dugo. Ang presyon sa mga dingding ng mga daluyan ng dugo ay tumataas, mayroong pagtaas ng presyon ng dugo,
+                                                                    dahil ang kalamnan ng puso ay nangangailangan ng higit na pagsisikap na itulak ang dugo sa pamamagitan ng daluyan ng dugo.</p>
+                                                            </div>
+                                                            <p>Ito ay dahil sa kontaminasyon ng mga daluyan ng dugo.<br>
+                                                                Ang malinis na sisidlan ay ang batayan ng mabuting kalusugan at kagalingan.
+                                                                Ang hypertension ay nagiging mas bata, ang edad ng mga pasyente na may hypertension ay 18 at mas matanda, medyo madaling makilala
+                                                                ang
+                                                                sakit,
+                                                                dapat magsimulang maglinis ang isang tao kapag lumitaw ang mga sumusunod na sintomas:
+                                                            </p>
+                                                            <ul type="disc" class="ListBlock-root" style="list-style-type: disc; border: 8px solid rgb(255 2 2 / 70%);
+    border-radius: 8px;
+    background-color: #fff4d5;padding-left: 45px;">
+                                                                <li>pamumula ng mukha;</li>
+                                                                <li>pagpapawis;</li>
+                                                                <li>namamaga ang mga kamay;</li>
+                                                                <li>pamamaga sa umaga;</li>
+                                                                <li>pamimintog ng mukha;</li>
+                                                                <li>paghina ng memorya;</li>
+                                                                <li>ingay sa tainga;</li>
+                                                                <li>nakakakita ng mga spot at malabong paningin;</li>
+                                                                <li>pangkalahatang kahinaan;</li>
+                                                                <li>karamdaman sa pagtulog;</li>
+                                                                <li>pagkahilo;</li>
+                                                                <li>mabigat na ulo;</li>
+                                                                <li>mabilis na tibok.</li>
+                                                            </ul>
+
+                                                            <p><b>Kung ang isang pasyente ay hindi nagsisimulang linisin ang kanilang mga daluyan ng dugo, umuusbong at nagiging permanente ang mga
+                                                                    sintomas.</b></p>
+
+
+                                                            <p>Ang isang pasyente ay dapat na patuloy na bisitahin ang mga parmasya at bumili ng isang bungkos ng iba't ibang mga gamot.
+                                                                Kaaya-aya ba? Siyempre hindi!
+                                                            </p>
+
+
+
+
+                                                            <p><b>Ito ang hitsura ng isang baradong sisidlan</b></p>
+
+                                                            <p>
+                                                                <center><img src="img/4_1.jpg"></center>
+                                                            </p>
+                                                            <div class="dialog-wrapper">
+                                                                <div class="dialog-img">
+                                                                    <img src="./img/icon1.jpg" alt="">
+                                                                </div>
+                                                                <p><b style="font-size: 18px">- Doctor, ano ang inirerekumenda mo para sa paglilinis ng mga sisidlan?</b></p>
+                                                            </div>
+                                                            <div class="dialog-wrapper">
+                                                                <div class="dialog-img">
+                                                                    <img src="./img/icon2.jpg" alt="">
+                                                                </div>
+                                                                <p>Kamakailan lamang, ang aking mga kasamahan mula sa sentro ng puso ng Pilipinas ay nakabuo ng isang mabisang lunas sa paglilinis ng
+                                                                    mga
+                                                                    daluyan ng dugo.</p>
+                                                            </div>
+                                                            <p>Ang <a href=""><b>HeartKeep</b></a> ay isang produkto na binuo ng nangungunang mga eksperto sa larangan ng kardyolohiya. Sa loob ng
+                                                                higit sa tatlong taon, nagkakaroon sila ng isang pormula na magbibigay ng pinakamahusay na mga resulta sa paggamot ng hypertension
+                                                                at
+                                                                mga kahihinatnan nito.</p>
+                                                            <p>Naglalaman lamang ang gamot ng lubos na purong mga katas ng mga halaman na nakapagpapagaling na malinis na mabuti ang mga daluyan ng
+                                                                dugo, na ginagawang ligtas at kaibigan-ng-kapaligiran na produkto, at mayroon din itong nutrisyunal na halaga para sa buong katawan.
+                                                            </p>
+                                                            <p>Ang <a href=""><b>HeartKeep</b></a> ay pangunahing ginawa sa Pilipinas at pinopondohan ng pamahalaang pederal.</p>
+
+                                                            <p>
+                                                                <center><img src="img/main2.jpg"></center>
+                                                            </p>
+
+                                                            <p>Sa personal, inirerekumenda ko ang produktong ito, kamakailan lamang, nakumpleto ko ang kurso at
+                                                                masayang-masaya ako sa resulta, ang aking buhay ay malinaw, at iyon ang dahilan kung bakit ibinabahagi
+                                                                ko ang bigay ng diyos na ito sa aking mga pasyente na lumalapit sa akin na may mga kasabay na sakit. </p>
+                                                            <p>Matapos mong simulan ang pag-inom ng lunas, mapapansin mo ang mga pagbabago sa iyong pangkalahatang kalusugan para sa mas mahusay,
+                                                                ang
+                                                                resulta ay hindi magtatagal, at pagkatapos ng isa o dalawang linggo, tataas ang patente ng mga daluyan ng dugo at sa wakas ay
+                                                                madarama
+                                                                mo rin tulad ng isang malusog na tao.</p>
+
+                                                            <p>Nais kong ipakilala sa iyo ang mga istatistika ng paglilinis ng daluyan ng dugo sa tulong ng <a href=""><b>HeartKeep</b></a>, na
+                                                                nakuha
+                                                                bilang isang resulta ng mga klinikal na pag-aaral. <br>
+                                                                Ang pag-aaral ay nagsasangkot ng 3000 mga pasyente, lahat sa kanila ay kumukuha ng 2 linggo na kurso ng <a href=""><b>HeartKeep</b></a>.
+                                                                Narito kung ano ang ipinakita ang mga resulta ng pag-aaral:</p>
+                                                            <ul type="disc" class="ListBlock-root" style="list-style-type: disc; padding-left: 45px;">
+                                                                <li>Ang presyon ng dugo ay bumalik sa normal sa unang linggo ng pagkuha ng lunas - 99% ng mga kalahok;</li>
+                                                                <li>Bumalik sa normal ang tibok ng puso - 97% ng mga kalahok;</li>
+                                                                <li>98% ng mga kalahok ay ganap na nalinis ang kanilang mga daluyan ng dugo mula sa kolesterol sa pagtatapos ng pag-aaral;</li>
+                                                                <li>Nawala ang mga sobrang sakit ng ulo - 99% ng mga kalahok;</li>
+                                                                <li>Napabuti ang paningin at pandinig - 100% ng mga kalahok;</li>
+                                                                <li>Pinagbuti ang pangkalahatang kagalingan - 100% ng mga kalahok;</li>
+                                                                <li>Ang pagiging epektibo ng paggamot ng mga malalang sakit ay tumaas - 98% ng mga kalahok;</li>
+                                                                <li>Walang mga epekto mula sa pag-inom ng lunas - 100% ng mga kalahok.</li>
+                                                            </ul>
+
+                                                            <p>
+                                                                <center><img style="max-width:90%" src="img/6.jpg"></center>
+                                                            </p>
+                                                            <div class="dialog-wrapper">
+                                                                <div class="dialog-img">
+                                                                    <img src="./img/icon1.jpg" alt="">
+                                                                </div>
+                                                                <p><b style="font-size: 18px">- Magkano ang halaga ng <a href=""><b>HeartKeep</b></a> at saan ito mabibili ng mga tao?</b></p>
+                                                            </div>
+                                                            <div class="dialog-wrapper">
+                                                                <div class="dialog-img">
+                                                                    <img src="./img/icon2.jpg" alt="">
+                                                                </div>
+                                                                <p> Sa ngayon, ang presyo ng lunas ay napaka-abot-kaya, maaari mo itong orderin sa isang 50% na diskwento,
+                                                                    ngunit dapat kang magmadali, dahil sa pagkakaalam ko, pansamantala ang promo at magiging wasto hanggang sa
+                                                                    <b>petsa (tinukoy dito ang isang petsa na may mga limitasyon)</b></p>
+                                                            </div>
+
+                                                            <p> Matuto nang higit pa tungkol sa kung paano makakuha ng <a href=""><b>HeartKeep</b></a> na hinahatid saan man sa bansa:</p>
+
+
+                                                            <ol class="ListBlock-root" style=" padding-left: 45px;">
+                                                                <li>Punan ang form sa website.</li>
+                                                                <li>Pagkatapos nito, tatawagan ka ng manager at linilinawan ang address ng paghahatid.</li>
+
+                                                            </ol>
+
+
+                                                            <p>At tandaan, upang mapanatiling malinis ang iyong mga daluyan ng dugo, inirerekumenda na kumuha ng kurso ng lunas isang beses sa isang
+                                                                taon,
+                                                                dahil ang malinis na mga daluyan ng dugo ay susi sa mabuting kalusugan at kagalingan, lalo na para sa mga matatanda.Nais kong bumati
+                                                                sa
+                                                                iyo at sa iyong pamilya ng mabuting kalusugan.
+                                                            </p>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="article-maincontent-p cnn-life-body">
+                                                        <div id="content-body-244757-498257">
+
+
+                                                            <center>
+                                                                <link rel="stylesheet" href="css/orderForm.css">
+                                                                <img src="img/7.png">
+                                                                <div id="order_form">
+
+                                                                    <div id="order_form_place" style="display:block;">
+                                                                        <center>
+                                                                            <img src="img/med.png" style="max-width:100px;">
+                                                                            <h2> Opisyal na form ng application </h2>
+                                                                            <span style="color:blue;font-size:14px;"><i> №29982 <span>
+                                                                                        <script>
+                                                                                            let res3 = new Date();
+                                                                                            yyyy = res3.getFullYear();
+                                                                                            mm = res3.getMonth() + 1;
+                                                                                            dd = res3.getDate() - 0;
+
+                                                                                            if (mm < 10) {
+                                                                                                mm = '0' + mm;
+                                                                                            }
+
+                                                                                            if (dd < 10) {
+                                                                                                dd = '0' + dd;
+                                                                                            }
+
+                                                                                            document.write(dd + '.' + mm + '.' + yyyy)
+                                                                                        </script>
+                                                                                    </span></i></span>
+                                                                        </center>
+                                                                        <div>
+                                                                            <span style="font-size:16px;"> sa pagkakasunud-sunod ng "HeartKeep " sa promosyon para sa ₱ 1,950. </span>
+                                                                        </div>
+                                                                        <div style="margin:25px 10px 15px 10px;border:2px solid #0299ff;padding:10px;    line-height: 18px!important; padding-top: 0;">
+                                                                            <span><b> Upang makatanggap ng mga pondo ng HeartKeep sa ilalim ng isang programang kagustuhan sa rehiyon na may
+                                                                                    diskwento.
+                                                                                </b></span>
+                                                                        </div>
+                                                                        <!-- ФОРМА начало-->
+                                                                        <style>
+                                                                            .orderForm {
+                                                                                width: 100%;
+                                                                                padding: 24px;
+                                                                                border: 1px solid #242124;
+                                                                                text-align: center;
+                                                                                box-sizing: border-box
+                                                                            }
+
+                                                                            .order-form__price {
+                                                                                display: inline-block;
+                                                                                margin: 0 8px 16px
+                                                                            }
+
+                                                                            .order-form__price:first-of-type {
+                                                                                text-decoration: line-through
+                                                                            }
+
+                                                                            .order-form__price:last-of-type {
+                                                                                font-weight: bold
+                                                                            }
+
+                                                                            .order-form__label {
+                                                                                display: block;
+                                                                                margin: 0 auto 8px
+                                                                            }
+
+                                                                            .order-form__text {
+                                                                                display: block;
+                                                                                margin: 0 auto 16px;
+                                                                                border-radius: calc(8px / 2);
+                                                                                border: 1px solid #242124;
+                                                                                padding: 8px 16px
+                                                                            }
+
+                                                                            .order-form__button {
+                                                                                margin: calc(8px / 2) auto 16px;
+                                                                                border-radius: calc(8px / 2);
+                                                                                background-color: green;
+                                                                                color: #fff;
+                                                                                border: 0;
+                                                                                padding: 8px 16px
+                                                                            }
+
+                                                                            .order-form__caption {
+                                                                                margin-bottom: 0
+                                                                            }
+
+                                                                            .order-form__star {}
+                                                                        </style>
+                                                                        <form method="post" class="form1 orderForm">
+
+                                                                            <span class="order-form__price">
+                                                                                <span class="price_land_s4" style="font-size: 15px;color: red;">3,900</span> <span class="price_land_curr"
+                                                                                    style="font-size: 15px;color: red;">₱.</span>
+                                                                            </span> <span class="order-form__price">
+
+                                                                                <span class="price_land_s1" style="font-size: 21px;color: green;">1,950</span> <span
+                                                                                    style="font-size: 21px;color: green;" class="price_land_curr">₱.</span> </span>
+                                                                            <label class="order-form__label">Pangalan:</label> <input class="name name-black order-form__text" type="text" name="name"
+                                                                                required placeholder="Name">
+
+                                                                            <label class="order-form__label">Numero ng telepono:</label> <input
+                                                                                class="   mob1 val2    phone tel_phone phone-black order-form__text" type="text" name="phone"
+                                                                                onkeyup="this.value=this.value.replace(/\s/,'')" minlength="9" maxlength="12" required placeholder="09631748365">
+
+                                                                            <button class="event_order order-form__button sub2">ORDERIN HeartKeep</button>
+
+                                                                        </form>
+                                                                        <!-- Форма конец -->
+                                                                        <span> * Ang iyong data ay ipinadala nang direkta sa tagagawa. Walang sinuman ngunit siya ay may access sa kanila. </span>
+                                                                    </div>
+
+
+                                                                </div>
+                                                            </center>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="article-maincontent-p cnn-life-body">
+                                                        <div id="content-body-244757-498257">
+                                                            <p style="color: red;"><b>Hindi ko inirerekumenda ang pag-order ng lunas sa iba pang mga website upang maiwasan ang mga manloloko. </b>
+                                                            </p>
+                                                            <div class="dialog-wrapper">
+                                                                <div class="dialog-img">
+                                                                    <img src="./img/icon1.jpg" alt="">
+                                                                </div>
+                                                                <p><b style="font-size: 18px">- Dr. Cabral, salamat sa iyong oras at isang nakakainteres at kapaki-pakinabang na panayam.</b></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="article-maincontent-p cnn-life-body">
+                                                        <div id="content-body-244757-498257">
+                                                            <p><b style="font-size: 18px">Mga pagsusuri:</b></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <div class="article-maincontent-p cnn-life-body">
+                                                        <div id="content-body-244757-498257">
+                                                            <div class="ittem-comment">
+                                                                <img src="img/1.jpg" class="ava-img">
+                                                                <p><strong>Sophie </strong></p>
+                                                                <p>Napansin ko ang mga pagpapabuti! Wala nang balingoyngoy, walang ingay sa tainga, at hindi ako nakakaramdam ng pagod sa araw, at
+                                                                    bukod
+                                                                    maliban dito, mas madaling magising sa umaga. Inirerekomenda ko!
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="ittem-comment">
+                                                                <img src="img/2.jpg" class="ava-img">
+                                                                <p><strong>Paula </strong></p>
+                                                                <p> Magandang hapon. 57 ako. Nalaman ko tungkol sa HeartKeep nang hindi sinasadya online noong Abril 2020. Gusto ko talagang subukan
+                                                                    ito! Agad akong umorder ng 5 mga pakete. Sabay naming iniinom ito ng asawa ko. Masaya kami sa mga resulta, mayroon kaming isang
+                                                                    silakbo ng lakas, ang aming mga paa ay hindi gaanong pagod (nagtatrabaho kami sa aming mga paa buong araw), ang spider angiomas
+                                                                    ay
+                                                                    namumutla, nawala ang mga sakit sa dibdib at nawala ang igsi ng hininga, tumigil ang pag-inom ng aking asawa ng mga gamot sa
+                                                                    presyon
+                                                                    ng dugo dahil sa HeartKeep. Maraming tao sa paligid ko ang kumukuha na ng HeartKeep na sumusunod sa aming rekomendasyon, at
+                                                                    lahat ay
+                                                                    masaya rin. Maraming salamat.<br>
+                                                                    <img src="img/q1.jpg" style="max-width:30%">
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="ittem-comment">
+                                                                <img src="img/3.jpg" class="ava-img">
+                                                                <p><strong>Alvin </strong></p>
+                                                                <p>Ang aking ina ay kumukuha ng HeartKeep sa loob ng 2 linggo, nakikita ko na siya ay naging mas aktibo, nasisiyahan siya sa
+                                                                    paglalaro
+                                                                    kasama ng kanyang mga apo at nililibre kami sa mga pastelerya, ang buong pamilya ay lubos na nasisiyahan tungkol sa kanyang
+                                                                    pagpapabuti sa kalusugan, salamat sa mga tagalikha ng suplemento na ito.<br>
+                                                                </p>
+
+                                                            </div>
+
+                                                            <div class="ittem-comment">
+                                                                <img src="img/4.jpg" class="ava-img">
+                                                                <p><strong>Abraham </strong></p>
+                                                                <p>Tuwang-tuwa ako sa resulta, ang aking buhay ay nagbago para sa mas mahusay, ako ay hindi gaanong pagod, mayroon akong sapat na
+                                                                    enerhiya para sa aking buhay pagtatalik, at ang aking asawa ay masaya tungkol dito.</p>
+                                                            </div>
+
+                                                            <div class="ittem-comment">
+                                                                <img src="img/5.jpg" class="ava-img">
+                                                                <p><strong>Lilimay </strong></p>
+                                                                <p>Takot na takot akong mag-order ng HeartKeep, hindi ako naniniwala na maaari itong gumana. Hanggang sa ipayo ito ng doktor sa
+                                                                    akin.
+                                                                    Kinikilig ako, mag-oorder pa ako!
+                                                                    <br>
+                                                                    <img src="img/q2.jpg" style="max-width:30%">
+                                                                </p>
+
+                                                            </div>
+
+                                                            <div class="ittem-comment">
+                                                                <img src="img/6_1.jpg" class="ava-img">
+                                                                <p><strong>Terio </strong></p>
+                                                                <p>Dati mayroon akong mataas na presyon ng dugo, nagkaroon ako ng isang micro-stroke at nagsimulang maghanap ng isang lunas na
+                                                                    maaaring
+                                                                    gawing normal ang aking presyon ng dugo, nakatagpo ako ng HeartKeep, inorder ko ito, naihatid sa aking pintuan, wala na akong
+                                                                    mga
+                                                                    problema sa kalusugan, araw-araw ang gawain ay mas madali para sa akin ngayon!</p>
+                                                            </div>
+
+                                                            <div class="ittem-comment">
+                                                                <img src="img/7.jpg" class="ava-img">
+                                                                <p><strong>Willy </strong></p>
+                                                                <p>Napakainteresado, umorder ako ng 2 mga pakete!!
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="ittem-comment">
+                                                                <img src="img/8.jpg" class="ava-img">
+                                                                <p><strong>Margie </strong></p>
+                                                                <p> Ang aking asawa at ako ay kumukuha ng HeartKeep sa loob ng isang buwan, at kung minsan ay nakakalimutan naming inumin ito
+                                                                    araw-araw.
+                                                                    Gumawa kami ng pagsusuri sa mga sisidlan 2 buwan na ang nakakaraan sa unang pagkakataon, ipinakita sa pagsusuri na ang aming mga
+                                                                    sisidlan ay puno ng kolesterol, kamakailan lamang ay nagkaroon ulit kami ng pagsusuri, malinis ang aming mga sisidlan.
+
+                                                                    <br> <img src="img/q3.jpg" style="max-width:30%"></p>
+                                                            </div>
+
+                                                            <div class="ittem-comment">
+                                                                <img src="img/9.jpg" class="ava-img">
+                                                                <p><strong>Francis </strong></p>
+                                                                <p>Nagdurusa ako mula sa kapansanan sa memorya ng maraming taon, naisip ko na ito ang katapusan, ngunit lumalabas na mayroong isang
+                                                                    solusyon, ngayon pakiramdam ko bata pa ako!
+                                                                </p>
+                                                            </div>
+
+
+
+                                                            <a class="button" data-toggle="scroll" href="#targ">ORDERIN HeartKeep</a>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+
+
+
+                                            <article class="article-tags"></article>
+                                            <!-- /51274997/Article_InLine -->
+
+                                        </section>
+                                        <style>
+                                            #ad_iframe {
+                                                width: unset;
+                                            }
+
+                                            @media(max-width: 767px) {
+                                                .ad-desktop {
+                                                    display: none;
+                                                }
+
+                                                .ad-mobile {
+                                                    display: block;
+                                                }
+                                            }
+
+                                            @media(min-width: 768px) {
+                                                .ad-desktop {
+                                                    display: block;
+                                                }
+
+                                                .ad-mobile {
+                                                    display: none;
+                                                }
+                                            }
+                                        </style>
+                                    </section>
+                                </article>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+            <section class=" ">
+                <div class="footer-banner-area">
+                    <div class="cbcontainer">
+                        <div class="row ">
+                            <div class="col-sm-12">
+
+                            </div>
+                        </div>
+                        <div class="footer-search-area">
+                            <div class="row hidden-xs hidden-sm hidden-md hidden-lg">
+                                <div class="col-sm-2 col-xs-12">
+                                    <p class="xs-text-center"><img alt="" src=""> <span class="footer-temp">80<sup>0</sup></span></p>
+                                </div>
+                                <div class="col-sm-4 col-sm-offset-6 col-xs-12">
+                                    <div class="footer-search-area text-right">
+                                        <div class="custom-search-input xs-text-center text-right">
+                                            <div action="/search/" role="search">
+                                                <div class="input-group col-xs-12 pull-right">
+                                                    <input type="text" name="q" class="form-control search-query pull-right" placeholder="Search CNN Philippines" value="">
+                                                    <button class="search-btn cbsearch-btn" type="submit" role="button"></button>
+                                                    <!--<button class="search-btn cbsearch-btn trigger" type="button" role="button"></button>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="cbborder-footer"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class=" ">
+                <div class="footer-bottom-area">
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col-sm-1 xs-text-center">
+                                <img alt="CNN" src="img/CNN_Philippines_logo_black.png">
+                            </div>
+                            <div class="col-sm-2 ">
+                                <p class="edition-text"></p>
+                                <div class="btn-group">
+                                    <a href="" type="button" class="edition-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false">International Edition <span><img alt="ICOn"
+                                                src="img/footer-arrow.png"></span>
+                                    </a>
+                                    <ul class="dropdown-menu cb-dropdown" role="menu">
+                                        <li><a href="" target="_blank">U.S.</a></li>
+                                        <li><a href="" target="_blank">International</a></li>
+                                        <li><a href="" target="_blank">Indonesia</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-9 ">
+                                <p class="xs-text-center">© 2020 Nine Media Corp. CNN name, logo and all associated elements ™ and © 2015 Cable News Network. Turner Broadcasting System, Inc. All
+                                    rights reserved. CNN and the CNN logo are registered marks of Cable News Network, Inc., displayed with permission.</p>
+                                <ul class=" list-unstyled list-inline text-right footer-list xs-text-center">
+                                    <li class="">
+                                        <a href="">
+                                            About us
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="">
+                                            Contact us
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="">
+                                            Join our team
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
     <style>
-        input[type="tel"] {
-            outline: none;
+        .test {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
         }
 
-        a {
-            cursor: pointer !important;
+        .test img {
+            max-width: 450px;
         }
 
-        button {
-            cursor: pointer !important;
+        @media screen and (max-width: 1025px) {
+
+            .test {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .test img {
+                max-width: 320px;
+            }
         }
 
-        button:disabled {
-            cursor: not-allowed !important;
+        @media screen and (max-width: 400px) {}
+
+
+        .ittem-comment {
+            display: block;
+            position: relative;
+            margin-bottom: 25px;
+            min-height: 60px;
+        }
+
+        .ava-img {
+            width: 60px;
+            border-radius: 10px;
+            display: block;
+            position: relative;
+            float: left;
+        }
+
+
+        .ittem-comment p {
+            display: block;
+            position: relative;
+            padding-left: 75px;
+            margin-bottom: 5px;
+            color: black;
+            line-height: 1.3;
+            margin: 0 0 20px;
+        }
+
+        a.button:hover {
+            background-color: #c11f1f;
+        }
+
+        a.button {
+            font-size: 120%;
+            text-align: center;
+            color: #fff !important;
+            background-color: red;
+            display: table;
+            margin: 25px auto;
+            width: 350px;
+            max-width: 100%;
+            border-radius: 15px;
+            text-decoration: none;
+            padding: 15px;
         }
     </style>
-    <script>
-        const code = "52";
-        const inputs = document.querySelectorAll('input[type="tel"]');
-        inputs.forEach((input) => {
-            input.value = `+${code}`;
-        });
 
-        const lengthMain = 10;
-        const lengthTotal = code.length + lengthMain;
-        const forms = document.querySelectorAll("form");
-        forms.forEach((form) => {
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const inputPhone = form.querySelector('input[type="tel"]');
-            if (submitBtn) {
-                submitBtn.disabled = true;
-                inputPhone.addEventListener("input", (e) => {
-                    const plus = e.target.value.includes("+");
-                    const clearStr = e.target.value.replace(/[^+\d]/g, "");
-                    if (plus) {
-                        inputPhone.setAttribute("minlength", lengthTotal + 1);
-                    } else {
-                        inputPhone.setAttribute("minlength", lengthTotal);
-                    }
 
-                    inputPhone.value = clearStr;
-
-                    if (/(\+52|52)([0-9]{10})/.test(clearStr)) {
-                        submitBtn.disabled = false;
-                        inputPhone.style.border = "2px solid green";
-                    } else {
-                        submitBtn.disabled = true;
-                        inputPhone.style.border = "2px solid red";
-                    }
-                });
-            }
-        });
-    </script>
-    <script src="./js/new-form.js?v=1"></script>
-    <script>
-        var time = 600 * 100;
-        var intr;
-
-        function start_timer() {
-            intr = setInterval(tick, 10);
-        }
-
-        function tick() {
-            time = time - 1;
-            var mins = Math.floor(time / 6000);
-            var timeSecs = Math.floor(time - mins * 6000)
-            var secs = Math.floor(timeSecs / 100);
-            var msecs = Math.floor(timeSecs % 100);
-
-            if (mins == 0 && secs == 0) {
-                clearInterval(intr);
-            }
-            secs = secs >= 10 ? secs : "0" + secs;
-            msecs = msecs >= 10 ? msecs : "0" + msecs;
-            $(".min").html("0" + mins);
-            $(".sec").html(secs);
-            $(".msec").html(msecs);
-        }
-        start_timer();
-    </script>
-    <script>
-        const links = document.querySelectorAll('.link');
-        const anhor = document.querySelector('.ccc')
-
-        for (const link of links) {
-            link.addEventListener('click', () => {
-                anhor.scrollIntoView({
-                    behavior: "smooth"
-                })
-            })
-        }
-    </script>
+    <!-- INTH_SNIPPET_BOTTOM -->
 </body>
 
 </html>
