@@ -1,0 +1,769 @@
+<?php
+//Тесты
+$celArr = [2, 100, 101, 102, 59]; // Номера селеб через запятую
+$titleArr = []; // Номера заголовков через запятую
+
+//Интеграция
+$offerData = 'incasol---cl---adcombo.php'; // Путь к файлу данных оффера
+$metrika = '93807372'; // ID счетчика Яндекс.Метрики
+$confirmColorBackground = 'ffffff'; // Общий фон
+$confirmColorBlocks = '0299ff'; // Блоки
+$confirmColorHeaders = '000000'; // Заголовки
+$confirmColorText = 'fff'; // Текст в блоках
+
+//Не трограть
+include __DIR__ . '/../_assets/versions.php'; // Блок тестирования элементов
+include __DIR__ . '/../_order/offers/' . $offerData;
+include __DIR__ . '/../_order/affiliates.php';
+if (!isset($rawClick)) {
+    echo '404';
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Comprar Incasol económica. Precios, opiniones. Libro Incasol
+        Ahora!
+    </title>
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/new-style.css">
+    <link media="all" href="css/index.css" type="text/css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="{_current_domain}/lander/_js/scripts.js?var=4&metrika=<?php echo $metrika; ?>&aid=<?php echo $affiliates_id; ?>"></script>
+    <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff; ?>&off=<?php echo $off; ?>&geo=<?php echo $geo; ?>&land_pre={landing_id}&offer_pre={offer_id}"></script>
+
+    <meta name="referrer" content="unsafe-url">
+</head>
+
+<body data-invalid-name-text="¡Introduzca su nombre correctamente!" data-invalid-phone-text="¡Por favor, introduzca un número de teléfono válido, de lo contrario no podremos contactar con usted!">
+    <script>
+        function dtime_nums(d, like_eu) {
+            var now = new Date();
+            now.setDate(now.getDate() + d + 1);
+
+            var dayNum = "";
+            if (now.getDate() < 10) {
+                dayNum = "0";
+            }
+            dayNum += now.getDate();
+
+            var monthNum = "";
+            if (now.getMonth() + 1 < 10) {
+                monthNum = "0";
+            }
+            monthNum += now.getMonth() + 1;
+
+            if (like_eu === true) {
+                document.write(dayNum + "." + monthNum + "." + now.getFullYear());
+            } else {
+                document.write(monthNum + "." + dayNum + "." + now.getFullYear());
+            }
+        }
+    </script>
+
+
+    <div id="bodyWrapper">
+        <header>
+            <a href="">
+                <img class="header__s" src="./img/header-s.png" alt="">
+                <img class="header__b" src="./img/header-b.png" alt="">
+            </a>
+        </header>
+        <div id="mainWrapper">
+            <div id="wrapper" style="display: block">
+                <div id="content">
+                    <div id="title_block">
+                        <div class="title_block_wrapper">
+                            <div class="title_block_content">
+
+                                <div class="title_block_shadow"></div>
+                                <div class="title_block_texts">
+
+                                    <div class="title_block_subcontent">
+                                        <div class="title_block_lead">
+                                            <h1 class="title_h1">
+                                                El Ministerio de Sanidad prevé que más de 200.000
+                                                personas en Chile morirán de enfermedades del
+                                                corazón en 2023. Uno de cada cinco chilenos morirá
+                                                de un infarto. La hipertensión, la obstrucción de los
+                                                vasos sanguíneos y la enfermedad del corazón conducen
+                                                a una muerte prematura.
+                                            </h1>
+                                            <div class="title_block_author">
+                                                <div class="tauthor">
+                                                    <a href="">By Nadia Kounang, CNN</a>
+                                                    <p class="date-title">
+                                                        Updated
+                                                        8:57 AM, <script>
+                                                            dtime_nums(-1, true)
+                                                        </script>
+                                                    </p>
+                                                </div>
+                                                <div class="tdate start date-7"></div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="padWrap">
+                        <div class="article__text js-mediator-article">
+                            <div class="article_content" style="padding-top: 33px">
+                                <figure class="Figure" style="text-align: center">
+                                    <!-- <img alt="img" style="max-width: 500px; width: 100%" src="img/doc.jpg"> -->
+                                    <img class="recomend__doctor--img" src="<? echo $celImg; ?>/cimg1.jpg" onerror="" alt="img">
+                                    <span class="Figure-caption">
+                                        <? echo $celName; ?>sdfsdfsfdsdf <br>
+                                    </span>
+                                    <span class="photo-info">
+                                        <? echo $celAbout; ?>sdfsdfsdfsdf3242433
+                                    </span>
+                                </figure>
+                                <div class="title_bq">
+                                    ¿Cómo puede evitarlo y prolongar su vida entre 12 y 17
+                                    años? Para averiguarlo, lea hasta el final del texto.
+                                </div>
+
+
+
+                                <p>
+                                    <? echo $celName; ?> es un cardiólogo chileno,
+                                    profesor. Es conocido por tratar a personas sin prescribir
+                                    pastillas. Al mismo tiempo, todos los que acuden a él se
+                                    recuperan.
+                                    <b>Entre los pacientes del profesor se encuentran personajes
+                                        famosos de Chile, así como pacientes de otros países de
+                                        América del Sur y del Norte (incluidos Estados Unidos,
+                                        Brasil, Argentina, Perú y etc.).</b>
+                                </p>
+                                <p>
+                                    <? echo $celName; ?> rara vez da entrevistas, tratando de
+                                    dedicar más tiempo al tratamiento de los pacientes. Sin
+                                    embargo, la periodista de nuestro canal tuvo suerte: un
+                                    médico famoso aceptó responder a varias preguntas para
+                                    aquellos pacientes que no tienen la oportunidad de pedir la
+                                    cita en la clínica.
+                                </p>
+                                <p>
+                                    <? echo $celName; ?>
+                                    <span>ESTÁ ABSOLUTAMENTE SEGURO DE QUE CUALQUIER PERSONA PUEDE
+                                        LLEVAR A CABO UNA LIMPIEZA CURATIVA DE LOS VASOS
+                                        SANGUÍNEOS EN CASA Y MEJORAR EN GRAN MEDIDA SU SALUD Y
+                                        BIENESTAR.</span>
+                                    Tal limpieza ayuda a deshacerse de los picos de presión y
+                                    curar 9 enfermedades crónicas de los pensionados.
+                                </p>
+
+                                <div class="green-modul">
+                                    <p>
+                                        El médico nos contó cómo hacer una limpieza curativa,
+                                        léelo a continuación. Además, el material aborda los
+                                        temas:
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            ¡Vivir hasta la edad de 100 años sin pastillas es real!
+                                        </li>
+                                        <li>
+                                            ¿Por qué las enfermedades crónicas incurables van de la
+                                            mano con los vasos obstruidos?
+                                        </li>
+                                        <li>Signos ocultos y evidentes de vasos obstruidos</li>
+                                        <li>
+                                            TRATAMIENTOS MODERNOS PARA LA HIPERTENSIÓN RELACIONADA
+                                            CON LA EDAD SIN PASTILLAS
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <h3>¡Los vasos obstruidos pueden ser tu asesino!</h3>
+                                <p><b>
+                                        <? echo $celName; ?>:</b></p>
+                                <p>
+                                    - Te daré algunos datos que, espero, te harán reflexionar.
+                                </p>
+                                <p>
+                                    La causa más común de muerte en el planeta son las
+                                    ENFERMEDADES CARDIOVASCULARES. La razón principal de su
+                                    aparición con la edad es el COLESTEROL. Resulta que el
+                                    colesterol es la sustancia más peligrosa del planeta. Esta
+                                    sustancia mata a las personas con más frecuencia que el
+                                    alcohol, la nicotina y las drogas.
+                                </p>
+                                <p>
+                                    <span>En el 94% de los casos, si una persona no sobrevive hasta
+                                        los 80 años, es porque la mata el colesterol.
+                                    </span>
+                                </p>
+                                <p>
+                                    ¿Cómo es el colesterol y qué es? No voy a dar aquí una
+                                    descripción de esta sustancia, como está escrito en los
+                                    libros de texto médicos. Lo explicaré más fácil. Imagina la
+                                    grasa fría que queda en una sartén sin lavar después del
+                                    almuerzo. Así es como se ve el colesterol.
+                                </p>
+                                <p>
+                                    Esta sustancia, al estar en la sangre, se deposita en las
+                                    paredes de los vasos sanguíneos. Primero, una pequeña placa
+                                    (a los 20-25 años), luego la capa de colesterol crece
+                                    rápidamente (a los 25-40 años), ya que más partículas se
+                                    adhieren a la capa pegajosa. COMO RESULTADO, A LOS 40 AÑOS,
+                                    EL COLESTEROL REDUCE LA LUZ EN LOS VASOS CASI A LA MITAD. En
+                                    respuesta a esto, el corazón no tiene más remedio que
+                                    aumentar la presión. Una persona tiene picos de presión e
+                                    hipertensión relacionada con la edad con todas las
+                                    consecuencias. ¡Pero ni siquiera eso es más peligroso!
+                                </p>
+                                <p>
+                                    <strong>Mucho más peligroso es el hecho de que el colesterol
+                                        obstruye por completo los pequeños vasos que están
+                                        presentes en todos los tejidos.</strong>
+                                    Como resultado del deterioro del suministro de sangre, se
+                                    desarrollan procesos patológicos en los órganos internos. En
+                                    su contexto una persona tiene llagas crónicas.
+                                </p>
+                                <p>
+                                    Primero, le duele el estómago, luego el bazo y después de un
+                                    tiempo tiene estenosis del hígado y del páncreas. Por lo
+                                    general, en tales casos, dicen que la salud de una persona
+                                    se echa a perder. El colesterol es lo que desencadena este
+                                    proceso con mayor frecuencia.
+                                </p>
+
+                                <p>
+                                    Literalmente todo depende del estado de los vasos del
+                                    cuerpo. Si los vasos se obstruyen en las piernas, esto
+                                    conduce a venas varicosas, edema constante y pesadez eterna
+                                    en las piernas. Si esto ocurre en el hígado, se produce
+                                    hepatosis y cirrosis, si en las articulaciones, entonces
+                                    aparece artritis y artrosis o dolor en la columna. Si los
+                                    vasos sanguíneos están obstruidos en los ojos, la persona se
+                                    vuelve ciega gradualmente.
+                                </p>
+                                <h3>
+                                    <span>Es imposible evitar la obstrucción vascular. Se acumula
+                                        en los vasos sanguíneos de todos. La obstrucción de los
+                                        vasos sanguíneos es la causa de la mortalidad
+                                        temprana</span>.
+                                </h3>
+                                <p>
+                                    ES EL COLESTEROL EL QUE DESENCADENA LA REACCIÓN DEL
+                                    ENVEJECIMIENTO EN EL CUERPO. Y es la obstrucción de los
+                                    vasos que acorta la vida de una persona dejándole menor
+                                    tiempo de vida.
+                                </p>
+                                <p>
+                                    <b>
+                                        En lugar de 100 años, las personas a menudo no sobreviven
+                                        hasta 70!</b>
+                                    Especialmente aquellos que tienen hipertensión relacionada
+                                    con la edad a los 40-50 años. Por cierto, es uno de los
+                                    síntomas más evidentes de obstrucción vascular.
+                                </p>
+                                <h3>
+                                    No solo del colesterol: ¡estas sustancias también obstruyen
+                                    tus vasos!
+                                </h3>
+                                <p><b>
+                                        <? echo $celName; ?>:</b></p>
+                                <p>
+                                    El colesterol no es todo, ¡hay dos sustancias más que se
+                                    acumulan en los vasos!
+                                </p>
+                                <p class="center">
+                                    <b>
+                                        Masa de coágulos</b>
+                                </p>
+                                <p>
+                                    Si el colesterol se parece a la grasa, entonces la masa de
+                                    trombos (coágulos de sangre) se parece al requesón. Se
+                                    forman acumulaciones de coágulos en las paredes internas de
+                                    los vasos. El riesgo de coágulos de sangre es aún mayor con
+                                    el colesterol. EN CUALQUIER MOMENTO, EL COÁGULO DE SANGRE
+                                    PUEDE DESPRENDERSE DE LA PARED DEL VASO Y LLEGAR AL CORAZÓN,
+                                    LO QUE PROVOCARÁ UN ATAQUE CARDÍACO O AL CEREBRO, LO QUE
+                                    CAUSARÁ UN DERRAME CEREBRAL.
+                                    <strong>Ambas enfermedades son fatales con una probabilidad muy
+                                        alta de muerte y discapacidad </strong>.
+                                </p>
+                                <p>
+                                    Cuanto mayor sea la persona, mayor será el riesgo de que el
+                                    coágulo se desprenda. Es por eso que las personas mayores a
+                                    menudo sufren de un accidente cerebrovascular o infarto.
+                                </p>
+                                <p class="center">
+                                    <b>
+                                        Cristales de calcio</b>
+                                </p>
+                                <p>
+                                    Se trata de sales de metales pesados, mercurio, diversas
+                                    sustancias químicas acumuladas durante su vida. Si una
+                                    persona, por ejemplo, trabajó en una producción peligrosa,
+                                    entonces tiene más depósitos de este tipo. Aunque teniendo
+                                    en cuenta la ecología actual, los depósitos de calcio se
+                                    acumulan en todos. Estas sustancias, como ya se ha
+                                    demostrado, son CANCERIGÉNICAS. Es decir, promueven la
+                                    división celular anormal, lo que lleva al cáncer.
+                                </p>
+                                <p>
+                                    En casi el 98% de los fallecidos por cáncer, se encuentran
+                                    altos niveles de depósitos cristalinos en la sangre. Todos
+                                    sabemos que el mercurio es dañino. Con una gran acumulación
+                                    de cristales de calcio, la sangre misma se vuelve dañina.
+                                </p>
+                                <figure class="Figure" style="text-align: center">
+                                    <img alt="img" src="img/content-3.jpg">
+                                    <span class="Figure-caption">
+                                        A la edad de 50 años, los vasos sanguíneos de una persona
+                                        están obstruidos en todo el cuerpo. Cuanto más obstruidos
+                                        están, más enfermedades crónicas aparecen, más rápido
+                                        envejece una persona y peor se siente.</span>
+                                </figure>
+                                <h3>
+                                    Evaluar el estado de los vasos sanguíneos para detectar
+                                    síntomas:
+                                </h3>
+                                <p>
+                                    Si tiene al menos 2 de los siguientes síntomas, ¡debe
+                                    limpiar sus vasos sanguíneos inmediatamente!
+                                </p>
+                                <ul>
+                                    <li>Hinchazón por la mañana</li>
+                                    <li>Zumbido de oídos</li>
+                                    <li>Moscas volantes en los ojos</li>
+                                    <li>Dolor en las articulaciones</li>
+                                    <li>Mareo</li>
+                                    <li>Insomnio de noche y somnolencia de día</li>
+                                    <li>Sensación de fatiga constante</li>
+                                    <li>Visión borrosa</li>
+                                    <li>Deterioro de la memoria</li>
+                                    <li>Venas varicosas</li>
+                                    <li>Disnea</li>
+                                    <li>Problemas gastrointestinales frecuentes</li>
+                                    <li>Problemas de sobrepeso</li>
+                                </ul>
+                                <p><b>
+                                        <? echo $celName; ?>:</b></p>
+                                <p>
+                                    Si nunca se ha ocupado de la limpieza de los vasos
+                                    sanguíneos, después de utilizar el producto, sentirá una
+                                    mejora desde el primer día.
+                                </p>
+                                <h3>
+                                    ¿Estás diciendo que limpiar los vasos sanguíneos puede
+                                    prolongar la vida de los ancianos y estabilizar la presión
+                                    arterial?
+                                </h3>
+                                <p><b>
+                                        <? echo $celName; ?>:</b></p>
+                                <p>
+                                    - Lo sé exactamente. En la clínica ahora prescribimos la
+                                    limpieza de los vasos a todos los pacientes mayores de 50
+                                    años (algunos mayores de 40 años). Y después de la limpieza,
+                                    ya los examinamos.
+                                    <span>EN 9 DE CADA 10 PERSONAS LA PRESIÓN SE NORMALIZA
+                                        INMEDIATAMENTE DESPUÉS DE LA LIMPIEZA Y NO REQUIERE
+                                        TRATAMIENTO</span>.
+                                </p>
+                                <p>
+                                    <b>
+                                        En otras palabras, es posible que muchos de los que ahora
+                                        toman pastillas diariamente para estabilizar su presión
+                                        arterial pudieran vivir sin ello. Todo lo que necesitan es
+                                        limpiar los vasos. ¡Incluso si la hipertensión no
+                                        desaparece por completo (y esto también sucede), se
+                                        sienten mucho mejor!</b>
+                                </p>
+                                <p style="border: 2px dashed red; padding: 10px">
+                                    Desafortunadamente, esta forma simple de normalizar la
+                                    presión arterial es escondida por médicos y compañías
+                                    farmacéuticas corruptas, que se benefician de tratamientos
+                                    largos y costosos. Después de todo, cuanto más tiempo esté
+                                    enferma una persona, más gastará en medicamentos. Es
+                                    beneficioso para ellos. La limpieza de los vasos sanguíneos
+                                    es fácil, económica y rápidamente ayuda a recuperarse.
+                                </p>
+                                <p></p>
+                                <h3>
+                                    Un método de limpieza de vasos sanguíneos para pensionados e
+                                    hipertensos.
+                                </h3>
+                                <p><b>
+                                        <? echo $celName; ?>:</b></p>
+                                <p>
+                                    - Hasta la fecha, solo hay un medicamento en Chile que
+                                    hace bien esta tarea. Se llama <a href="">Incasol</a>.
+                                    Este fármaco fue creado en 2021 por el Instituto Vascular y
+                                    Cardíaco. El medicamento contiene aproximadamente 40
+                                    componentes activos: extractos de plantas útiles para los
+                                    vasos sanguíneos, vitaminas, micro y macroelementos.
+                                </p>
+                                <!-- <img alt="img" class="uetgue" style="width: 100%" src="img/prod.png"> -->
+                                <p>
+                                    Me gustaría mencionar que este producto
+                                    <strong>no contiene sustancias químicas</strong>, solo
+                                    extractos concentrados de hierbas medicinales con
+                                    propiedades de limpieza de las células sanguíneas. Por eso
+                                    es tan beneficioso para el organismo.
+                                </p>
+                                <p>
+                                    La mayoría de los pacientes me siguen pidiendo consejo para
+                                    la purificación de los vasos sanguíneos. Últimamente, solo
+                                    les recomiendo este producto. Es altamente efectivo.
+                                </p>
+                                <p style="border: 2px dashed green; padding: 10px">
+                                    <b>Por cierto, Japón tiene el récord de esperanza de vida.
+                                        Vivir hasta los 100 años para los japoneses es algo común.
+                                        Si antes los japoneses limpiaban los vasos sanguíneos con
+                                        hierbas, ejercicio y yoga, ahora usan medicamentos
+                                        especiales basados en "oxígeno activo". Y hoy vemos el
+                                        resultado de tal decisión. los propios japoneses
+                                        comenzaron a prestar mayor atención a la limpieza de los
+                                        vasos sanguíneos a la edad mayor de 40-50 años, cuando se
+                                        adoptó el Programa Nacional de Mejoramiento de la Salud y
+                                        Longevidad. En esta ley, la limpieza de los vasos está
+                                        fijada por un párrafo separado.</b>
+                                </p>
+                                <h3>
+                                    ¿Cuánto tiempo se debe tomar
+                                    <b><a href="">Incasol</a></b> para que los vasos se
+                                    limpien?
+                                </h3>
+                                <p>
+                                    En promedio, el curso de tomar el medicamento es de 2 a 4
+                                    semanas. Cuando lo termines, debes mirar tu estado de salud.
+                                </p>
+                                <p>
+                                    Enumeraré lo que pueden hacer
+                                    <b><a href="">Incasol</a></b> con tu cuerpo y salud
+                                    durante la limpieza, así como varios meses después.
+                                </p>
+                                <p><b> Limpia y recuperará los vasos sanguíneos</b></p>
+                                <p style="background-color: #eff0df; padding: 5px">
+                                    Debido a las "moléculas activas de oxígeno",
+                                    <b><a href="">Incasol</a></b> disolverán los depósitos
+                                    de colesterol, los coágulos de sangre y las acumulaciones de
+                                    calcio. Además, gracias al extracto de Ginkgo Biloba, el
+                                    remedio aumenta el tono de los vasos sanguíneos y restaura
+                                    su elasticidad. Después de un curso de un mes, como lo
+                                    demuestran los datos de la investigación, los vasos se
+                                    vuelven tan limpios y elásticos como en los jóvenes de 25 a
+                                    30 años. Se restauran los pequeños capilares. Como
+                                    resultado, la presión de una persona deja de saltar, la
+                                    debilidad, la somnolencia desaparece y mejora la curación de
+                                    heridas y cortes. Además, aparece más energía. Tendrás mucha
+                                    energía, querrás hacer algo en casa.
+                                </p>
+                                <p>
+                                    <b> Restaurará los órganos internos y las articulaciones</b>
+                                </p>
+                                <p style="background-color: #eff0df; padding: 5px">
+                                    Después de limpiar los vasos, comenzará la restauración de
+                                    los órganos internos. Afortunadamente, la naturaleza nos ha
+                                    otorgado una propiedad: la regeneración celular. Como
+                                    resultado, muchas enfermedades desaparecen. Por ejemplo, si
+                                    te duele el páncreas o el bazo, dejará de doler. Muy a
+                                    menudo las úlceras del estómago y del duodeno se curan
+                                    después de limpiar los vasos sanguíneos. Además, se
+                                    restauran las articulaciones. Los crujidos y chasquidos en
+                                    el cuello, la espalda y las articulaciones desaparecen. Los
+                                    cartílagos cobran vida. Las rodillas y los dedos ya no
+                                    reaccionan a los cambios de clima. La movilidad de las
+                                    articulaciones vuelve a la normalidad.
+                                </p>
+                                <p><b> Derretirá el exceso de grasa</b></p>
+                                <p style="background-color: #eff0df; padding: 5px">
+                                    El exceso de peso es lo que agrava la condición de los
+                                    pacientes hipertensos y de personas mayores de 4 a 5 veces.
+                                    Cuanto mayor sea el peso, mayor será la carga en los vasos,
+                                    el corazón y las articulaciones. A menudo, la causa del
+                                    aumento de peso es la obstrucción de los vasos sanguíneos,
+                                    ya que la glucosa no puede excretarse de los tejidos en la
+                                    cantidad correcta. Después de limpiar los depósitos de los
+                                    vasos, el peso comienza a desaparecer automáticamente.
+                                    Además, <b><a href="">Incasol</a></b> tienen un extracto
+                                    de veneno de abeja, que acelera la descomposición de la
+                                    grasa. En promedio, un mes después de limpiar los vasos
+                                    sanguíneos, una persona pierde de 8 a 12 kg.
+                                </p>
+                                <p><b> Restaurará la vista y la memoria</b></p>
+                                <p style="background-color: #eff0df; padding: 5px">
+                                    <b><a href="">Incasol</a></b> contiene un extracto de
+                                    conos de alerce jóvenes, que puede restaurar los microvasos
+                                    del fondo de ojo, como resultado de lo cual la visión se
+                                    normaliza gradualmente. Muchas personas comienzan a ver
+                                    desde lejos los números de los autobuses y pueden volver a
+                                    insertar el hilo en la aguja. Hay una restauración total de
+                                    los vasos en los ojos. ¡Aquellos que tienen vasos sanguíneos
+                                    limpios no se enfrentan a la ceguera en absoluto! Todos los
+                                    oftalmólogos lo saben.
+                                </p>
+                                <p><b> ¡Restaura la potencia en los hombres!</b></p>
+                                <p style="background-color: #eff0df; padding: 5px">
+                                    Uno de los efectos sorprendentes de la limpieza de los vasos
+                                    sanguíneos es que la hormona testosterona comienza a
+                                    producirse nuevamente en los hombres. Como resultado, la
+                                    prostatitis desaparece y el adenoma de próstata se retrasa.
+                                    Y también vuelve la potencia. Si tienes menos de 70 años,
+                                    puedes volver a tener sexo.
+                                </p>
+
+                                <h3>
+                                    ¡Escasez de <b><a href="">Incasol</a></b> en las
+                                    farmacias chilenas!
+                                </h3>
+                                <h3>
+                                    Por lo que sabemos, comprar
+                                    <b><a href="">Incasol</a></b> en farmacias es
+                                    extremadamente difícil. Este medicamento rara vez está
+                                    disponible. ¿Es eso cierto? ¿Y qué podrías aconsejar a los
+                                    ciudadanos chilenos?
+                                </h3>
+                                <p>
+                                    - Sí, es cierto. <b><a href="">Incasol</a></b> se
+                                    producen en pequeños lotes limitados y, por lo tanto,
+                                    simplemente no llega a las farmacias. La mayoría va,
+                                    desafortunadamente, al extranjero, otra parte la compran
+                                    clínicas privadas.
+                                </p>
+
+                                <p>
+                                    Desafortunadamente, no tenemos este producto en una cantidad
+                                    suficiente para todos los pacientes hipertensos en Chile.
+                                    Por lo tanto, decidimos dárselo a aquellos que dejen la
+                                    solicitud en el sitio más rápido.
+                                </p>
+                                <!-- <p> Para participar en nuestro programa, debes hacer clic en el botón "GIRAR" en el
+                                    carrete con descuento a continuación. Dependiendo de lo que obtengas, puedes obtener
+                                    <b><a href="">Incasol</a></b> con descuento. Se puede girar el tambor
+                                    solo una vez.
+                                </p> -->
+
+                                <p>
+                                    <strong>
+                                        Si desea curar su hipertensión con este producto único, le
+                                        recomiendo que lo ordene lo antes posible mientras esté
+                                        disponible.</strong>
+                                </p>
+
+                                <p>
+                                    <b>
+                                        Condiciones para obtener <b><a href="">Incasol</a></b>:</b>
+                                </p>
+                                <ul>
+                                    <li>
+                                        Debes estar en Chile. No enviamos
+                                        <b><a href="">Incasol</a></b> fuera del país.
+                                    </li>
+                                    <li>
+                                        La compra de <b><a href="">Incasol</a></b> está
+                                        permitida
+                                        <span>SOLO PARA USO PERSONAL</span>.
+                                        ¡Les pido a los revendedores que dejen el remedio a la
+                                        gente! ¡Sacar provecho de los ancianos es inhumano!
+                                    </li>
+                                    <li>
+                                        Se puede solicitar el recibo en este sitio web completando
+                                        el formulario especial a continuación. En él hay que
+                                        indicar el número de teléfono para contactar con nuestro
+                                        médico consultor.
+                                    </li>
+                                </ul>
+
+                                <h3>
+                                    ¡Aprovecha esta oportunidad antes de que otros lo hagan!
+                                </h3>
+                                <p>
+                                    Si deseas mejorar la salud del cuerpo y eliminar los picos
+                                    repentinos de presión con la ayuda de una limpieza profunda
+                                    de los vasos sanguíneos, solicita el medicamento lo antes
+                                    posible, mientras aún esté disponible.
+                                </p>
+
+                                <br id="order0" class="cc">
+                                <div class="middle" id="toform">
+                                    <div class="spin-wrapper order-block-container" id="spin-wrapper" style="display: none">
+                                        <p class="ruletka-p"></p>
+                                        <h2 style="text-align: center">¡ATENCIÓN!</h2>
+                                        Nuestro sitio web ofrece descuentos al comprar
+                                        <b>Incasol</b>. Ponga a prueba su suerte haciendo clic
+                                        en GIRAR. ¡Si tiene suerte, podrás comprar este artículo
+                                        más económico de lo habitual! ¡Muchos éxitos!
+                                        <!-- <div id="toform"></div>
+                                        <p></p> -->
+                                        <div class="wheel-wrapper">
+                                            <div class="wheel">
+                                                <img alt="img" class="wheel-img" src="img/prizewheel-NY.gif">
+                                                <div class="wheel-cursor">
+                                                    <img alt="img" src="img/wheel-cursor.png" style="margin: 0 0 !important">
+                                                    <span class="cursor-text lt48 spining" onclick="spin();
+                                                    ">GIRAR</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="pred_form" style="display: block !important" id="form"></p>
+                                    <div class="order_block" style="display: block">
+                                        <form action="" class="order-form x_order_form" method="post" id="order_form">
+
+                                            <input type="hidden" name="data0" value="{subid}" />
+                                            <input type="hidden" name="data1" value="{b}" />
+                                            <input type="hidden" name="data2" value="{a}" />
+                                            <input type="hidden" name="data3" value="{x}" />
+                                            <input type="hidden" name="data4" value="<?php echo $off; ?>" />
+                                            <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
+                                            <input type="hidden" name="data6" value="{offer_id}" />
+                                            <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
+                                            <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
+                                            <input type="hidden" name="data9" value="<?php echo $price; ?>" />
+                                            <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
+                                            <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
+                                            <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
+                                            <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
+                                            <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
+                                            <div id="order_form_place" style="display: block">
+                                                <div style="text-align: center">
+                                                    <img alt="img" src="img/med.png" style="max-width: 100px">
+                                                    <h2>Formulario de solicitud oficial</h2>
+                                                    <span style="color: blue; font-size: 14px"><i>№ 4977 de 5000 a fecha
+                                                            <span class="date-0"></span>
+                                                        </i>
+                                                    </span>
+                                                </div>
+                                                <div style="text-align: center">
+                                                    <span style="font-size: 16px">
+                                                        para la obtención de Incasol a precio
+                                                        preferencial de (<b style="text-decoration: line-through">
+                                                            <span class="x_price_previous">$69.980</span>
+                                                            <span class="x_currency"></span></b>)
+                                                        <b style="font-size: larger"><span class="x_price_current">$34.990</span>
+                                                            <span class="x_currency"></span></b>
+                                                    </span>
+                                                </div>
+                                                <div style="
+                              margin: 45px 10px 25px 10px;
+                              border: 2px solid #0299ff;
+                              padding: 10px;
+                            ">
+                                                    <span>
+                                                        <b>Para obtener Incasol con descuento, indique
+                                                            su nombre y teléfono de contacto en los campos a
+                                                            continuación y haga clic en el botón "DEJAR
+                                                            SOLICITUD"
+                                                        </b>
+                                                    </span>
+                                                </div>
+                                                <div class="order_form_pole"></div>
+                                                <div class="order_form_pole">
+                                                    <label>Nombre y apellido:</label>
+                                                    <input type="text" name="name" value="" required placeholder="Nombre y apellido" autocomplete="name">
+                                                </div>
+                                                <div class="order_form_pole">
+                                                    <label>Número de teléfono:</label><input type="tel" name="phone" value="" required placeholder="Número de teléfono" autocomplete="tel">
+                                                </div>
+                                                <div style="margin-bottom: 20px">
+                                                    <button name="send_order" type="submit">
+                                                        DEJAR SOLICITUD
+                                                    </button>
+                                                </div>
+                                                <span class="center"></span><br>
+                                                <span class="center">*Sus datos se envían directamente al fabricante.
+                                                    Nadie más tiene acceso a ellos.</span>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="spin-result-wrapper">
+                                        <div class="pop-up-window">
+                                            <div class="close-popup"></div>
+                                            <span class="pop-up-heading">¡Enhorabuena!</span>
+                                            <p class="ruletka-p pop-up-text">
+                                                ¡Has ganado nuestro premio principal: !Incasol con
+                                                un 50% de descuento!
+                                            </p>
+                                            <button class="pop-up-button">OK</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rekl">
+                                <div class="rekl__wrapper">
+                                    <div class="rekl__item">
+                                        <a href="">
+                                            <img src="./img/r1.webp" alt="">
+                                            <div class="rekl__text">
+                                                Simple Asset Management Software | Learn More
+                                                <p>
+                                                    Asset Management | Search Ads
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="rekl__item">
+                                        <a href="">
+                                            <img src="./img/r2.webp" alt="">
+                                            <div class="rekl__text">
+                                                Personalized Content Tailored to Your Preferences - All in One Place
+                                                <p>
+                                                    DiscoveryFeed
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="rekl__item">
+                                        <a href="">
+                                            <img src="./img/r3.webp" alt="">
+                                            <div class="rekl__text">
+                                                Track star died from childbirth complications
+                                                <p>
+                                                    Elizabeth Cohen reports on the childbirth complication that led to American track and field champion Tori Bowie’s death, according to an autopsy
+                                                    report released by the Orange County, Florida, medical examiner’s office.
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="rekl__item">
+                                        <a href="">
+                                            <img src="./img/r4.webp" alt="">
+                                            <div class="rekl__text">
+                                                Night owls may have unhealthy habits that lead to early death, study says
+                                                <p>
+                                                    Going to bed late, also known as being a night owl, was linked to increased use of alcohol and tobacco and early death, a new study found.
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <a href="">
+            <img class="footer__b" src="./img/footer.png" alt="">
+            <img class="footer__s" src="./img/footer-s.png" alt="">
+        </a>
+    </footer>
+    <div class="ev-footer create_rom_footer" data-background-color="white" data-color_link="black" data-color_logo="orange"></div>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

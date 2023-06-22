@@ -1,0 +1,157 @@
+#bodyWrapper {
+  position: relative;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  z-index: 100;
+}
+
+header a {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+header img {
+  width: 100%;
+  display: block;
+}
+
+.header__b {
+  padding: 10px 0px;
+  background: #fff;
+}
+
+@media (max-width: 600px) {
+  .header__b {
+    display: none;
+  }
+}
+
+.header__s {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .header__s {
+    display: block;
+  }
+}
+
+#content .tauthor a {
+  color: #6e6e6e;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+#content .date-title {
+  margin: 10px 0 0 0;
+  color: #6e6e6e;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.photo-info {
+  color: #0c0c0c;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  line-height: 30px;
+  margin-top: 8px;
+  text-align: left;
+  display: block;
+}
+
+a {
+  color: #000;
+}
+
+.rekl {
+  margin-top: 30px;
+}
+
+.rekl__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rekl__item {
+  width: 250px;
+}
+
+.rekl__item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.rekl__text {
+  color: black;
+  margin: 0 0 5px 0;
+  text-align: left;
+  line-height: 1.25;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 250px;
+}
+
+.rekl__text P {
+  margin: 0 0 2px 0;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+footer {
+  margin-top: 20px;
+  width: 100%;
+  top: 0px;
+  z-index: 100;
+}
+
+footer a {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+footer img {
+  width: 100%;
+  display: block;
+}
+
+.footer__s {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .footer__s {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer__b {
+    display: none;
+  }
+}
+/*# sourceMappingURL=new-style.css.map */
