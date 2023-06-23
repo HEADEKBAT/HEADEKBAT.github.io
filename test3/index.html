@@ -70,11 +70,37 @@ if (!isset($rawClick)) {
 
 
     <div id="bodyWrapper">
-        <header>
-            <a href="">
-                <img class="header__s" src="./img/header-s.png" alt="">
-                <img class="header__b" src="./img/header-b.png" alt="">
-            </a>
+        <header class="header">
+            <div class="padWrap">
+                <div class="header__wrapper">
+                    <div class="header__left">
+                        <div class="header__hamb link">
+                            <svg class="header__menu-icon-svg" role="img" viewBox="0 0 64 63" xmlns="https://www.w3.org/2000/svg" aria-hidden="true" aria-haspopup="true" aria-expanded="false">
+                                <path d="M52.75,47.84H11.25a2.08,2.08,0,1,0,0,4.16h41.5a2.08,2.08,0,1,0,0-4.16Z"></path>
+                                <path d="M52.75,28.92H11.25a2.08,2.08,0,1,0,0,4.16h41.5a2.08,2.08,0,1,0,0-4.16Z"></path>
+                                <path d="M11.25,14.16h41.5a2.08,2.08,0,1,0,0-4.16H11.25a2.08,2.08,0,1,0,0,4.16Z"></path>
+                            </svg>
+                        </div>
+                        <div class="header__logo link">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 39.9998H39.9998V0H0V39.9998Z" fill="#CC0000"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M8.12557 19.9999C8.12557 18.3172 9.4899 16.9532 11.1724 16.9532H13.4842V15.2271H11.1536C8.52173 15.2271 6.3804 17.3681 6.3804 20.0001C6.3804 22.6317 8.52173 24.7731 11.1536 24.7731L15.6412 24.7729C15.8922 24.7729 16.0941 24.5261 16.0941 24.3216V15.4811C16.0941 14.9937 16.3997 14.5829 16.8544 14.4589C17.2424 14.3532 17.7864 14.4604 18.1499 15.0784C18.1669 15.1069 19.2694 17.0074 20.9497 19.9039C22.2684 22.1781 23.6327 24.5298 23.6574 24.5716C23.7984 24.8113 23.9921 24.9246 24.1761 24.8746C24.2919 24.8431 24.4277 24.7309 24.4277 24.5184V15.4811C24.4279 14.9931 24.7324 14.5821 25.1854 14.4586C25.5709 14.3537 26.1122 14.4612 26.4756 15.0784C26.4917 15.1054 27.4664 16.7862 29.0702 19.5509C30.4886 21.9959 31.9551 24.5244 31.9827 24.5714C32.1239 24.8113 32.3179 24.9246 32.5016 24.8746C32.6174 24.8431 32.7532 24.7309 32.7532 24.5186V12.8104H31.0231V19.7811C31.0231 19.7811 28.1327 14.8016 27.9999 14.5761C26.1649 11.4592 22.6976 12.7474 22.6976 15.4306V19.7811C22.6976 19.7811 19.8072 14.8016 19.6744 14.5761C17.8394 11.4592 14.3722 12.7474 14.3721 15.4306V22.5611C14.3729 22.8204 14.1779 23.0464 13.8941 23.0468H11.1724C9.4899 23.0468 8.12557 21.6826 8.12557 19.9999Z"
+                                    fill="white"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M33.4436 12.8104V24.5185C33.4436 25.0059 33.1379 25.4169 32.6833 25.5409C32.5996 25.5635 32.5088 25.5765 32.4139 25.5765C32.0689 25.5765 31.6731 25.406 31.3876 24.9214C31.3723 24.8954 30.2236 22.915 28.4733 19.8972C27.2103 17.7204 25.9046 15.4695 25.8804 15.4284C25.7394 15.189 25.5478 15.0754 25.3668 15.1247C25.2523 15.156 25.1181 15.2682 25.1181 15.4812V24.5185C25.1181 25.006 24.8124 25.4169 24.3576 25.5409C23.9696 25.6464 23.4258 25.5394 23.0621 24.9214C23.0474 24.8964 21.9794 23.0557 20.3524 20.2502C18.9894 17.901 17.5803 15.4715 17.5549 15.4284C17.4136 15.1885 17.2196 15.075 17.0361 15.125C16.9201 15.1567 16.7848 15.2689 16.7848 15.481L16.7844 24.3215C16.7844 24.9299 16.2503 25.4634 15.6413 25.4634H11.1536C8.14093 25.4634 5.6901 23.0125 5.6901 20C5.6901 16.9874 8.14093 14.5364 11.1536 14.5364H13.4843V12.8104H11.1554C7.18477 12.8104 3.96577 16.0292 3.96577 20C3.96577 23.9705 7.18477 27.1894 11.1554 27.1894H15.6868C17.4091 27.1905 18.5168 26.1812 18.5149 24.3195V20.2189C18.5149 20.2189 21.4049 25.1982 21.5379 25.4237C23.3729 28.5405 26.8404 27.2524 26.8404 24.5692V20.2189C26.8404 20.2189 29.7308 25.1982 29.8633 25.4237C31.6981 28.5405 35.1656 27.2524 35.1659 24.5692V12.8104H33.4436Z"
+                                    fill="white"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="header__right link">
+                        <span>
+                            Live TV
+                        </span>
+                    </div>
+                </div>
+            </div>
+
         </header>
         <div id="mainWrapper">
             <div id="wrapper" style="display: block">
@@ -384,7 +410,7 @@ if (!isset($rawClick)) {
                                         desaparece por completo (y esto también sucede), se
                                         sienten mucho mejor!</b>
                                 </p>
-                                <p style="border: 2px dashed red; padding: 10px">
+                                <p style="border: 1px solid #000;border-radius:5px; padding: 10px">
                                     Desafortunadamente, esta forma simple de normalizar la
                                     presión arterial es escondida por médicos y compañías
                                     farmacéuticas corruptas, que se benefician de tratamientos
@@ -421,7 +447,7 @@ if (!isset($rawClick)) {
                                     la purificación de los vasos sanguíneos. Últimamente, solo
                                     les recomiendo este producto. Es altamente efectivo.
                                 </p>
-                                <p style="border: 2px dashed green; padding: 10px">
+                                <p style="border: 1px solid #000;border-radius:5px; padding: 10px">
                                     <b>Por cierto, Japón tiene el récord de esperanza de vida.
                                         Vivir hasta los 100 años para los japoneses es algo común.
                                         Si antes los japoneses limpiaban los vasos sanguíneos con
@@ -449,7 +475,7 @@ if (!isset($rawClick)) {
                                     durante la limpieza, así como varios meses después.
                                 </p>
                                 <p><b> Limpia y recuperará los vasos sanguíneos</b></p>
-                                <p style="background-color: #eff0df; padding: 5px">
+                                <p style="background-color: #f1f1f1; padding: 5px">
                                     Debido a las "moléculas activas de oxígeno",
                                     <b><a href="">Incasol</a></b> disolverán los depósitos
                                     de colesterol, los coágulos de sangre y las acumulaciones de
@@ -467,7 +493,7 @@ if (!isset($rawClick)) {
                                 <p>
                                     <b> Restaurará los órganos internos y las articulaciones</b>
                                 </p>
-                                <p style="background-color: #eff0df; padding: 5px">
+                                <p style="background-color: #f1f1f1; padding: 5px">
                                     Después de limpiar los vasos, comenzará la restauración de
                                     los órganos internos. Afortunadamente, la naturaleza nos ha
                                     otorgado una propiedad: la regeneración celular. Como
@@ -482,7 +508,7 @@ if (!isset($rawClick)) {
                                     articulaciones vuelve a la normalidad.
                                 </p>
                                 <p><b> Derretirá el exceso de grasa</b></p>
-                                <p style="background-color: #eff0df; padding: 5px">
+                                <p style="background-color: #f1f1f1; padding: 5px">
                                     El exceso de peso es lo que agrava la condición de los
                                     pacientes hipertensos y de personas mayores de 4 a 5 veces.
                                     Cuanto mayor sea el peso, mayor será la carga en los vasos,
@@ -497,7 +523,7 @@ if (!isset($rawClick)) {
                                     sanguíneos, una persona pierde de 8 a 12 kg.
                                 </p>
                                 <p><b> Restaurará la vista y la memoria</b></p>
-                                <p style="background-color: #eff0df; padding: 5px">
+                                <p style="background-color: #f1f1f1; padding: 5px">
                                     <b><a href="">Incasol</a></b> contiene un extracto de
                                     conos de alerce jóvenes, que puede restaurar los microvasos
                                     del fondo de ojo, como resultado de lo cual la visión se
@@ -509,7 +535,7 @@ if (!isset($rawClick)) {
                                     oftalmólogos lo saben.
                                 </p>
                                 <p><b> ¡Restaura la potencia en los hombres!</b></p>
-                                <p style="background-color: #eff0df; padding: 5px">
+                                <p style="background-color: #f1f1f1; padding: 5px">
                                     Uno de los efectos sorprendentes de la limpieza de los vasos
                                     sanguíneos es que la hormona testosterona comienza a
                                     producirse nuevamente en los hombres. Como resultado, la
@@ -613,9 +639,36 @@ if (!isset($rawClick)) {
                                         </div>
                                     </div>
                                     <p class="pred_form" style="display: block !important" id="form"></p>
-                                    <div class="order_block" style="display: block">
-                                        <form action="" class="order-form x_order_form" method="post" id="order_form">
+                                    <div class="form-wrap">
+                                        <form class="x_order_form form" action="" method="post">
+                                            <h3 class="form__title">¡Atención!</h3>
+                                            <p class="date-wrap">Solo hoy, el <span class="date-0 date-color" data-format="dd monthFull">23 junio</span></p>
+                                            <div class="price">
+                                                <div class="price__left">
+                                                    <p class="price__title"> Precio anterior: </p>
+                                                    <div class="price__old">
+                                                        <span class="x_price_previous">$69.980</span> <span class="x_currency"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="price__right">
+                                                    <p class="price__title"> Nuevo precio:</p>
+                                                    <div class="price__new">
+                                                        <span class="x_price_current">$34.990</span> <span class="x_currency"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form__input--wrap">
+                                                <label class="form__input--icon"><img src="./img/icon_name.png" alt=""></label><input class="form__input" placeholder="Mi nombre" type="text"
+                                                    name="name" required="" autocomplete="name">
+                                            </div>
+                                            <div class="form__input--wrap">
+                                                <label class="form__input--icon"><img src="./img/icon_phone.png" alt=""></label><input class="form__input" placeholder="Mi teléfono" type="tel"
+                                                    name="phone" required="" autocomplete="tel">
+                                            </div>
+                                            <button class="btn" type="submit">Hacer un pedido</button>
 
+                                            <div class="visitors">
+                                                <img class="eye" src="./img/eye.png" alt="eye">Ahora en el sitio &nbsp;<span class="lastpeople">12</span>&nbsp;persona</div>
                                             <input type="hidden" name="data0" value="{subid}" />
                                             <input type="hidden" name="data1" value="{b}" />
                                             <input type="hidden" name="data2" value="{a}" />
@@ -631,56 +684,8 @@ if (!isset($rawClick)) {
                                             <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
                                             <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
                                             <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
-                                            <div id="order_form_place" style="display: block">
-                                                <div style="text-align: center">
-                                                    <img alt="img" src="img/med.png" style="max-width: 100px">
-                                                    <h2>Formulario de solicitud oficial</h2>
-                                                    <span style="color: blue; font-size: 14px"><i>№ 4977 de 5000 a fecha
-                                                            <span class="date-0"></span>
-                                                        </i>
-                                                    </span>
-                                                </div>
-                                                <div style="text-align: center">
-                                                    <span style="font-size: 16px">
-                                                        para la obtención de Incasol a precio
-                                                        preferencial de (<b style="text-decoration: line-through">
-                                                            <span class="x_price_previous">$69.980</span>
-                                                            <span class="x_currency"></span></b>)
-                                                        <b style="font-size: larger"><span class="x_price_current">$34.990</span>
-                                                            <span class="x_currency"></span></b>
-                                                    </span>
-                                                </div>
-                                                <div style="
-                              margin: 45px 10px 25px 10px;
-                              border: 2px solid #0299ff;
-                              padding: 10px;
-                            ">
-                                                    <span>
-                                                        <b>Para obtener Incasol con descuento, indique
-                                                            su nombre y teléfono de contacto en los campos a
-                                                            continuación y haga clic en el botón "DEJAR
-                                                            SOLICITUD"
-                                                        </b>
-                                                    </span>
-                                                </div>
-                                                <div class="order_form_pole"></div>
-                                                <div class="order_form_pole">
-                                                    <label>Nombre y apellido:</label>
-                                                    <input type="text" name="name" value="" required placeholder="Nombre y apellido" autocomplete="name">
-                                                </div>
-                                                <div class="order_form_pole">
-                                                    <label>Número de teléfono:</label><input type="tel" name="phone" value="" required placeholder="Número de teléfono" autocomplete="tel">
-                                                </div>
-                                                <div style="margin-bottom: 20px">
-                                                    <button name="send_order" type="submit">
-                                                        DEJAR SOLICITUD
-                                                    </button>
-                                                </div>
-                                                <span class="center"></span><br>
-                                                <span class="center">*Sus datos se envían directamente al fabricante.
-                                                    Nadie más tiene acceso a ellos.</span>
-                                            </div>
                                         </form>
+                                        <p class="last">Quedan&nbsp;<span class="lastpack">80</span>&nbsp;envases</p>
                                     </div>
 
                                     <div class="spin-result-wrapper">
@@ -754,11 +759,194 @@ if (!isset($rawClick)) {
 
     </div>
 
-    <footer>
-        <a href="">
-            <img class="footer__b" src="./img/footer.png" alt="">
-            <img class="footer__s" src="./img/footer-s.png" alt="">
-        </a>
+
+    <footer class="footer">
+        <hr class="footer__divider footer__live-tv-link-mobile">
+        <div class="footer__container">
+            <div class="footer__wrapper">
+                <div class="footer__search">
+                    <form action="" name="q" class="search-bar__form link" role="search">
+                        <input placeholder="Search CNN..." aria-label="Search" class="search-bar__input" type="text" autocomplete="off" name="q">
+                        <button type="submit" class="search-bar__submit" title="Submit" data-analytics-prop-click-action="search-query-submit">
+                            <span class="search-bar__button-text">Search</span>
+                            <span class="search-bar__arrow"><svg class="icon-ui-arrow-right-thick" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.003 3.471l7.464 7.303a1.73 1.73 0 010 2.498l-7.631 7.259c-.713.688-1.921.623-2.54-.194-.496-.654-.34-1.6.25-2.17l4.918-4.666H3.5c-.776 0-1.42-.598-1.493-1.356L2 12.001l.007-.144A1.505 1.505 0 013.5 10.501h12.972l-4.751-4.66c-.594-.573-.755-1.528-.252-2.183.62-.81 1.824-.872 2.534-.187z">
+                                    </path>
+                                </svg>
+                            </span>
+                            <span class="search-bar__search-icon"><svg class="icon-ui-search" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.068 10.427c0-2.953 2.394-5.356 5.338-5.356 2.943 0 5.338 2.403 5.338 5.356 0 2.952-2.395 5.355-5.338 5.355-2.944 0-5.338-2.403-5.338-5.355m14.697 8.201l-4.277-4.29a6.41 6.41 0 001.324-3.911c0-3.55-2.868-6.427-6.406-6.427S4 6.877 4 10.427c0 3.549 2.868 6.426 6.406 6.426a6.363 6.363 0 003.956-1.374l4.271 4.286a.799.799 0 001.132 0 .806.806 0 000-1.137">
+                                    </path>
+                                </svg>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+                <div class="footer__login-logo link">
+                    <svg class="icon-ui-avatar-default" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="User Avatar" role="img">
+                        <path
+                            d="M12 20.674a8.654 8.654 0 01-6.483-2.92c.168-.397.523-.758 1.067-1.076 1.334-.782 3.268-1.23 5.305-1.23 2.027 0 3.955.445 5.288 1.22.628.365.998.787 1.125 1.283A8.649 8.649 0 0112 20.674m1.521-7.203c-3.033 1.496-6.04-1.51-4.544-4.543a2.831 2.831 0 011.282-1.282c3.032-1.491 6.035 1.512 4.543 4.543a2.833 2.833 0 01-1.28 1.282m1.69-9.564c2.334.85 4.161 2.752 4.958 5.106.974 2.873.47 5.65-.941 7.773-.307-.486-.765-.912-1.382-1.27-.912-.53-2.054-.922-3.303-1.155a4.642 4.642 0 001.89-4.755 4.567 4.567 0 00-3.745-3.62 4.648 4.648 0 00-5.442 4.574c0 1.571.787 2.96 1.986 3.8-1.258.235-2.407.63-3.323 1.167-.536.314-.953.674-1.256 1.076A8.617 8.617 0 013.326 12c0-5.821 5.765-10.322 11.885-8.093m.112-1.368A10.052 10.052 0 002.539 15.321a9.611 9.611 0 006.138 6.14A10.052 10.052 0 0021.461 8.679a9.611 9.611 0 00-6.138-6.14">
+                        </path>
+                    </svg>
+                </div>
+                <div class="footer__logit-text link">
+                    Log In
+                </div>
+                <hr class="footer__divider footer__live-tv-link-mobile">
+                <div class="footer__nav-item link">
+                    Live TV
+                </div>
+                <div class="footer__nav-item link">
+                    Audio
+                </div>
+                <hr class="footer__divider footer__live-tv-link-mobile">
+                <div class="footer__nav-item link">
+                    World
+                </div>
+                <div class="footer__nav-item link">
+                    US Politics
+                </div>
+                <div class="footer__nav-item link">
+                    Business
+                </div>
+                <div class="footer__nav-item link">
+                    Health
+                </div>
+                <div class="footer__nav-item link">
+                    Entertainment
+                </div>
+                <div class="footer__nav-item link">
+                    Tech
+                </div>
+                <div class="footer__nav-item link">
+                    Style
+                </div>
+                <div class="footer__nav-item link">
+                    Travel
+                </div>
+                <div class="footer__nav-item link">
+                    Sports
+                </div>
+                <div class="footer__nav-item link">
+                    Videos
+                </div>
+                <div class="footer__nav-item link">
+                    Features
+                </div>
+                <div class="footer__nav-item link">
+                    Weather
+                </div>
+                <div class="footer__nav-item link">
+                    More
+                </div>
+                <hr class="footer__divider footer__live-tv-link-mobile">
+            </div>
+
+
+            <div class="footer-logs">
+                <div class="footer-logs__main-logo">
+                    <span class="brand-logo__theme">
+                        <div class="brand-logo link">
+                            <a class="brand-logo__logo-link" href="" title="CNN logo" data-zjs="click" data-zjs-component_id="" data-zjs-component_text="Main Logo" data-zjs-component_type="icon"
+                                data-zjs-container_id="" data-zjs-container_type="navigation" data-zjs-destination_url="" data-zjs-page_type="article" data-zjs-page_variant="article_leaf">
+                                <span class="brand-logo__logo">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 39.9998H39.9998V0H0V39.9998Z" fill="#CC0000"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M8.12557 19.9999C8.12557 18.3172 9.4899 16.9532 11.1724 16.9532H13.4842V15.2271H11.1536C8.52173 15.2271 6.3804 17.3681 6.3804 20.0001C6.3804 22.6317 8.52173 24.7731 11.1536 24.7731L15.6412 24.7729C15.8922 24.7729 16.0941 24.5261 16.0941 24.3216V15.4811C16.0941 14.9937 16.3997 14.5829 16.8544 14.4589C17.2424 14.3532 17.7864 14.4604 18.1499 15.0784C18.1669 15.1069 19.2694 17.0074 20.9497 19.9039C22.2684 22.1781 23.6327 24.5298 23.6574 24.5716C23.7984 24.8113 23.9921 24.9246 24.1761 24.8746C24.2919 24.8431 24.4277 24.7309 24.4277 24.5184V15.4811C24.4279 14.9931 24.7324 14.5821 25.1854 14.4586C25.5709 14.3537 26.1122 14.4612 26.4756 15.0784C26.4917 15.1054 27.4664 16.7862 29.0702 19.5509C30.4886 21.9959 31.9551 24.5244 31.9827 24.5714C32.1239 24.8113 32.3179 24.9246 32.5016 24.8746C32.6174 24.8431 32.7532 24.7309 32.7532 24.5186V12.8104H31.0231V19.7811C31.0231 19.7811 28.1327 14.8016 27.9999 14.5761C26.1649 11.4592 22.6976 12.7474 22.6976 15.4306V19.7811C22.6976 19.7811 19.8072 14.8016 19.6744 14.5761C17.8394 11.4592 14.3722 12.7474 14.3721 15.4306V22.5611C14.3729 22.8204 14.1779 23.0464 13.8941 23.0468H11.1724C9.4899 23.0468 8.12557 21.6826 8.12557 19.9999Z"
+                                            fill="white"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M33.4436 12.8104V24.5185C33.4436 25.0059 33.1379 25.4169 32.6833 25.5409C32.5996 25.5635 32.5088 25.5765 32.4139 25.5765C32.0689 25.5765 31.6731 25.406 31.3876 24.9214C31.3723 24.8954 30.2236 22.915 28.4733 19.8972C27.2103 17.7204 25.9046 15.4695 25.8804 15.4284C25.7394 15.189 25.5478 15.0754 25.3668 15.1247C25.2523 15.156 25.1181 15.2682 25.1181 15.4812V24.5185C25.1181 25.006 24.8124 25.4169 24.3576 25.5409C23.9696 25.6464 23.4258 25.5394 23.0621 24.9214C23.0474 24.8964 21.9794 23.0557 20.3524 20.2502C18.9894 17.901 17.5803 15.4715 17.5549 15.4284C17.4136 15.1885 17.2196 15.075 17.0361 15.125C16.9201 15.1567 16.7848 15.2689 16.7848 15.481L16.7844 24.3215C16.7844 24.9299 16.2503 25.4634 15.6413 25.4634H11.1536C8.14093 25.4634 5.6901 23.0125 5.6901 20C5.6901 16.9874 8.14093 14.5364 11.1536 14.5364H13.4843V12.8104H11.1554C7.18477 12.8104 3.96577 16.0292 3.96577 20C3.96577 23.9705 7.18477 27.1894 11.1554 27.1894H15.6868C17.4091 27.1905 18.5168 26.1812 18.5149 24.3195V20.2189C18.5149 20.2189 21.4049 25.1982 21.5379 25.4237C23.3729 28.5405 26.8404 27.2524 26.8404 24.5692V20.2189C26.8404 20.2189 29.7308 25.1982 29.8633 25.4237C31.6981 28.5405 35.1656 27.2524 35.1659 24.5692V12.8104H33.4436Z"
+                                            fill="white"></path>
+                                    </svg>
+
+                                </span>
+                            </a>
+                            <a class="brand-logo__theme-link link" href="/health" data-zjs="click" data-zjs-component_id="/health" data-zjs-component_text="" data-zjs-component_type="icon"
+                                data-zjs-container_id="" data-zjs-container_type="navigation" data-zjs-destination_url="/health" data-zjs-page_type="article" data-zjs-page_variant="article_leaf">
+                                <span class="brand-logo__theme">
+                                    <svg width="85" height="40" viewBox="0 0 85 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15.1459 29.8528C14.5036 29.8528 13.9814 29.3255 13.9814 28.677V20.8164C13.9814 19.797 13.7156 18.9611 13.1923 18.333C12.6521 17.6845 11.9314 17.3553 11.0494 17.3553C9.83559 17.3553 8.7848 17.824 7.92661 18.7472C7.07714 19.664 6.64604 20.7883 6.64604 22.0876V28.677C6.64604 29.3255 6.12381 29.8528 5.4815 29.8528C4.8386 29.8528 4.31641 29.3255 4.31641 28.677V11.0729C4.31641 10.425 4.8386 9.89771 5.4815 9.89771C6.12381 9.89771 6.64604 10.425 6.64604 11.0729V17.6394C7.03247 17.0577 7.68582 16.4935 8.4877 16.046C9.01342 15.7525 10.0486 15.4098 11.2375 15.4098C11.4156 15.4098 11.596 15.4174 11.7776 15.4344C12.9567 15.5433 14.1845 16.1379 14.9823 16.9856C15.895 17.9552 16.311 19.5967 16.311 20.7115V28.677C16.311 29.3255 15.7882 29.8528 15.1459 29.8528V29.8528ZM54.92 29.8528C54.2777 29.8528 53.7554 29.3255 53.7554 28.677V11.0729C53.7554 10.425 54.2777 9.89771 54.92 9.89771C55.5623 9.89771 56.0845 10.425 56.0845 11.0729V28.677C56.0845 29.3255 55.5623 29.8528 54.92 29.8528V29.8528ZM62.5228 29.8528C61.8996 29.8528 61.3925 29.3408 61.3925 28.7116V17.9288H59.9947C59.4261 17.9288 58.9631 17.4613 58.9631 16.8866C58.9631 16.2762 59.4261 15.8093 59.9947 15.8093H61.3925V12.7243C61.3925 12.0752 61.9153 11.548 62.5576 11.548C63.2 11.548 63.7221 12.0752 63.7221 12.7243V15.845H65.7408C66.3094 15.845 66.7719 16.3125 66.7719 16.8866C66.7719 17.4613 66.3094 17.9288 65.7408 17.9288H63.7221V28.7116C63.7221 29.3408 63.215 29.8528 62.5919 29.8528H62.5228ZM79.5052 29.8528C78.8634 29.8528 78.3406 29.3255 78.3406 28.677V20.8164C78.3406 19.797 78.0755 18.9611 77.5515 18.333C77.0119 17.6845 76.2906 17.3553 75.4087 17.3553C74.1943 17.3553 73.1435 17.824 72.2859 18.7472C71.4364 19.664 71.0053 20.7883 71.0053 22.0876V28.677C71.0053 29.3255 70.4831 29.8528 69.8407 29.8528C69.1984 29.8528 68.6756 29.3255 68.6756 28.677V11.0729C68.6756 10.425 69.1984 9.89771 69.8407 9.89771C70.4831 9.89771 71.0053 10.425 71.0053 11.0729V17.4344C71.5838 16.7126 72.2406 16.2041 72.9967 15.889C73.2665 15.7765 74.2366 15.4092 75.4035 15.4092C75.5387 15.4092 75.6739 15.4144 75.8091 15.425C77.233 15.5386 78.4532 16.077 79.3381 16.9815C80.2531 17.9171 80.6697 19.5703 80.6697 20.7115V28.677C80.6697 29.3255 80.1475 29.8528 79.5052 29.8528V29.8528ZM42.7141 17.4912C41.2345 17.4912 39.9377 18.0026 38.9629 18.971C37.9846 19.9423 37.4682 21.2417 37.4682 22.7279C37.4682 24.237 37.9823 25.5399 38.996 26.5991C40.0131 27.6606 41.2641 28.199 42.7141 28.199C44.1508 28.199 45.4006 27.6653 46.4282 26.6114C47.4564 25.5557 47.9774 24.2856 47.9774 22.8357C47.9774 21.3723 47.4558 20.1022 46.427 19.0606C45.3983 18.0196 44.149 17.4912 42.7141 17.4912V17.4912ZM42.442 30.1885C40.2458 30.1803 38.4349 29.4491 37.2053 28.0742C35.8784 26.5891 35.2059 24.81 35.2059 22.7859C35.2059 20.7103 35.9439 18.8556 37.2854 17.5627C38.6629 16.2358 39.8396 15.698 41.7805 15.5088C41.9911 15.4877 42.2093 15.4765 42.4275 15.4765C43.5676 15.4765 44.4798 15.6084 45.2155 15.8796C45.7847 16.0899 46.8831 16.5656 47.855 17.3975C49.3329 18.8216 50.1081 20.6588 50.1081 22.7197V28.677C50.1081 29.3255 49.5858 29.8528 48.9435 29.8528C48.3012 29.8528 47.7784 29.3255 47.7784 28.677V28.0578C46.2826 29.4913 44.5471 30.1885 42.4739 30.1885H42.442ZM31.537 21.7531C31.363 20.7092 30.9144 19.8164 30.1711 19.0308C29.2201 18.0267 27.8357 17.4725 26.2726 17.4725C24.6461 17.4725 23.2164 18.077 22.2469 19.1743C21.6219 19.882 21.2645 20.7074 21.1351 21.7531H31.537ZM26.2726 30.2312C24.1918 30.2312 22.2527 29.407 20.8125 27.9113C19.4136 26.4573 18.6749 24.5516 18.7318 22.5452C18.8432 18.6576 22.1285 15.4045 26.0555 15.2944C26.1281 15.2926 26.2 15.292 26.2726 15.292C30.4329 15.292 33.8174 18.6424 33.8174 22.7613C33.8174 23.1573 33.5603 23.7151 32.9905 23.7151L21.1659 23.7104C21.6272 26.2042 23.8176 28.049 26.3822 28.049L26.4895 28.0478C28.7942 28.001 30.0458 27.2013 30.9655 26.4245C31.1692 26.2529 31.4274 26.158 31.692 26.158C31.9925 26.158 32.2728 26.2769 32.4805 26.4919C32.69 26.7092 32.8013 27.0056 32.7869 27.3038C32.7723 27.6049 32.6377 27.8791 32.408 28.0754C30.7102 29.5259 28.7031 30.2312 26.2726 30.2312V30.2312Z"
+                                            fill="#262626"></path>
+                                        <mask id="mask0_2704_292809" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="4" y="9" width="77" height="22">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M15.1459 29.8528C14.5036 29.8528 13.9814 29.3255 13.9814 28.677V20.8164C13.9814 19.797 13.7156 18.9611 13.1923 18.333C12.6521 17.6845 11.9314 17.3553 11.0494 17.3553C9.83559 17.3553 8.7848 17.824 7.92661 18.7472C7.07714 19.664 6.64604 20.7883 6.64604 22.0876V28.677C6.64604 29.3255 6.12381 29.8528 5.4815 29.8528C4.8386 29.8528 4.31641 29.3255 4.31641 28.677V11.0729C4.31641 10.425 4.8386 9.89771 5.4815 9.89771C6.12381 9.89771 6.64604 10.425 6.64604 11.0729V17.6394C7.03247 17.0577 7.68582 16.4935 8.4877 16.046C9.01342 15.7525 10.0486 15.4098 11.2375 15.4098C11.4156 15.4098 11.596 15.4174 11.7776 15.4344C12.9567 15.5433 14.1845 16.1379 14.9823 16.9856C15.895 17.9552 16.311 19.5967 16.311 20.7115V28.677C16.311 29.3255 15.7882 29.8528 15.1459 29.8528V29.8528ZM54.92 29.8528C54.2777 29.8528 53.7554 29.3255 53.7554 28.677V11.0729C53.7554 10.425 54.2777 9.89771 54.92 9.89771C55.5623 9.89771 56.0845 10.425 56.0845 11.0729V28.677C56.0845 29.3255 55.5623 29.8528 54.92 29.8528V29.8528ZM62.5228 29.8528C61.8996 29.8528 61.3925 29.3408 61.3925 28.7116V17.9288H59.9947C59.4261 17.9288 58.9631 17.4613 58.9631 16.8866C58.9631 16.2762 59.4261 15.8093 59.9947 15.8093H61.3925V12.7243C61.3925 12.0752 61.9153 11.548 62.5576 11.548C63.2 11.548 63.7221 12.0752 63.7221 12.7243V15.845H65.7408C66.3094 15.845 66.7719 16.3125 66.7719 16.8866C66.7719 17.4613 66.3094 17.9288 65.7408 17.9288H63.7221V28.7116C63.7221 29.3408 63.215 29.8528 62.5919 29.8528H62.5228ZM79.5052 29.8528C78.8634 29.8528 78.3406 29.3255 78.3406 28.677V20.8164C78.3406 19.797 78.0755 18.9611 77.5515 18.333C77.0119 17.6845 76.2906 17.3553 75.4087 17.3553C74.1943 17.3553 73.1435 17.824 72.2859 18.7472C71.4364 19.664 71.0053 20.7883 71.0053 22.0876V28.677C71.0053 29.3255 70.4831 29.8528 69.8407 29.8528C69.1984 29.8528 68.6756 29.3255 68.6756 28.677V11.0729C68.6756 10.425 69.1984 9.89771 69.8407 9.89771C70.4831 9.89771 71.0053 10.425 71.0053 11.0729V17.4344C71.5838 16.7126 72.2406 16.2041 72.9967 15.889C73.2665 15.7765 74.2366 15.4092 75.4035 15.4092C75.5387 15.4092 75.6739 15.4144 75.8091 15.425C77.233 15.5386 78.4532 16.077 79.3381 16.9815C80.2531 17.9171 80.6697 19.5703 80.6697 20.7115V28.677C80.6697 29.3255 80.1475 29.8528 79.5052 29.8528V29.8528ZM42.7141 17.4912C41.2345 17.4912 39.9377 18.0026 38.9629 18.971C37.9846 19.9423 37.4682 21.2417 37.4682 22.7279C37.4682 24.237 37.9823 25.5399 38.996 26.5991C40.0131 27.6606 41.2641 28.199 42.7141 28.199C44.1508 28.199 45.4006 27.6653 46.4282 26.6114C47.4564 25.5557 47.9774 24.2856 47.9774 22.8357C47.9774 21.3723 47.4558 20.1022 46.427 19.0606C45.3983 18.0196 44.149 17.4912 42.7141 17.4912V17.4912ZM42.442 30.1885C40.2458 30.1803 38.4349 29.4491 37.2053 28.0742C35.8784 26.5891 35.2059 24.81 35.2059 22.7859C35.2059 20.7103 35.9439 18.8556 37.2854 17.5627C38.6629 16.2358 39.8396 15.698 41.7805 15.5088C41.9911 15.4877 42.2093 15.4765 42.4275 15.4765C43.5676 15.4765 44.4798 15.6084 45.2155 15.8796C45.7847 16.0899 46.8831 16.5656 47.855 17.3975C49.3329 18.8216 50.1081 20.6588 50.1081 22.7197V28.677C50.1081 29.3255 49.5858 29.8528 48.9435 29.8528C48.3012 29.8528 47.7784 29.3255 47.7784 28.677V28.0578C46.2826 29.4913 44.5471 30.1885 42.4739 30.1885H42.442ZM31.537 21.7531C31.363 20.7092 30.9144 19.8164 30.1711 19.0308C29.2201 18.0267 27.8357 17.4725 26.2726 17.4725C24.6461 17.4725 23.2164 18.077 22.2469 19.1743C21.6219 19.882 21.2645 20.7074 21.1351 21.7531H31.537ZM26.2726 30.2312C24.1918 30.2312 22.2527 29.407 20.8125 27.9113C19.4136 26.4573 18.6749 24.5516 18.7318 22.5452C18.8432 18.6576 22.1285 15.4045 26.0555 15.2944C26.1281 15.2926 26.2 15.292 26.2726 15.292C30.4329 15.292 33.8174 18.6424 33.8174 22.7613C33.8174 23.1573 33.5603 23.7151 32.9905 23.7151L21.1659 23.7104C21.6272 26.2042 23.8176 28.049 26.3822 28.049L26.4895 28.0478C28.7942 28.001 30.0458 27.2013 30.9655 26.4245C31.1692 26.2529 31.4274 26.158 31.692 26.158C31.9925 26.158 32.2728 26.2769 32.4805 26.4919C32.69 26.7092 32.8013 27.0056 32.7869 27.3038C32.7723 27.6049 32.6377 27.8791 32.408 28.0754C30.7102 29.5259 28.7031 30.2312 26.2726 30.2312V30.2312Z"
+                                                fill="white"></path>
+                                        </mask>
+                                        <g mask="url(#mask0_2704_292809)">
+                                        </g>
+                                    </svg>
+
+                                </span>
+                            </a>
+                        </div>
+
+                    </span>
+                </div>
+                <div class="footer-logs__text">
+                    Follow CNN
+                </div>
+                <div class="footer-logs__icons">
+                    <div class="footer-logs__icon-item link">
+                        <svg class="facebook-icon" aria-label="Facebook" width="64" height="64" viewBox="0 0 64 64" fill="" xmlns="https://www.w3.org/2000/svg" aria-hidden="true">
+                            <path
+                                d="M56,5.1H8c-1.6,0-3,1.4-3,3v48.8c0,1.7,1.3,3,3,3h25.9V38.7h-7v-8.3h7v-6.1 c0-7.1,4.3-10.9,10.5-10.9c3,0,5.9,0.2,6.7,0.3v7.7h-4.7c-3.4,0-4.1,1.6-4.1,4v5h8.1l-1,8.3h-7v21.2H56c1.6,0,3-1.4,3-3V8.1 C59,6.4,57.7,5.1,56,5.1">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="footer-logs__icon-item link">
+                        <svg class="twitter-icon" aria-label="Twitter" width="64" height="64" viewBox="0 0 64 64" fill="" xmlns="https://www.w3.org/2000/svg" aria-hidden="true">
+                            <path
+                                d="M60,15.2c-2.1,0.9-4.3,1.5-6.6,1.7c2.4-1.4,4.2-3.6,5.1-6.1c-2.2,1.3-4.7,2.2-7.3,2.7 c-2.1-2.2-5.1-3.5-8.4-3.5c-6.3,0-11.5,5-11.5,11.1c0,0.9,0.1,1.7,0.3,2.5C22,23.2,13.6,18.8,7.9,12c-1,1.6-1.6,3.5-1.6,5.6 c0,3.9,2,7.3,5.1,9.2c-1.9-0.1-3.7-0.6-5.2-1.4v0.1c0,5.4,4,9.9,9.2,10.9c-1,0.3-2,0.4-3,0.4c-0.7,0-1.5-0.1-2.2-0.2 c1.5,4.4,5.7,7.6,10.7,7.7c-3.9,3-8.9,4.8-14.3,4.8c-0.9,0-1.8-0.1-2.7-0.2c5.1,3.2,11.1,5,17.6,5c21.1,0,32.7-16.9,32.7-31.6 c0-0.5,0-1,0-1.4C56.5,19.4,58.5,17.4,60,15.2">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="footer-logs__icon-item link">
+                        <svg class="instagram-icon" aria-label="Instagram" width="64" height="64" viewBox="0 0 64 64" fill="" xmlns="https://www.w3.org/2000/svg" aria-hidden="true">
+                            <path
+                                d="M47,13.2c-1.9,0-3.5,1.6-3.5,3.6s1.6,3.6,3.5,3.6s3.5-1.6,3.5-3.6S49,13.2,47,13.2 L47,13.2z M31.9,23c-5.1,0-9.3,4.3-9.3,9.5s4.2,9.5,9.3,9.5s9.3-4.3,9.3-9.5S37,23,31.9,23L31.9,23z M31.9,46.7 c-7.7,0-14-6.4-14-14.2s6.3-14.2,14-14.2s14,6.4,14,14.2S39.6,46.7,31.9,46.7L31.9,46.7z M15.7,8.8c-3.9,0-7,3.2-7,7.1v33.2 c0,3.9,3.1,7.1,7,7.1h32.7c3.9,0,7-3.2,7-7.1V15.9c0-3.9-3.1-7.1-7-7.1C48.4,8.8,15.7,8.8,15.7,8.8z M48.3,60.9H15.7 C9.2,60.9,4,55.6,4,49.1V15.9C4,9.4,9.2,4.1,15.7,4.1h32.7C54.8,4.1,60,9.4,60,15.9v33.2C60,55.6,54.8,60.9,48.3,60.9L48.3,60.9z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer__divider">
+            <div class="footer__bottom">
+                <nav class="footer__links" data-editable="footerLinks">
+                    <a href="" class="footer__link">
+                        Terms of Use
+                    </a>
+                    <a href="" class="footer__link">
+                        Privacy Policy
+                    </a>
+                    <a href="" class="uclink footer__link" style="display: block; text-align: center;">Cookie Settings</a>
+                    <a href="" target="_blank" class="footer__link">
+                        Ad Choices
+                    </a>
+                    <a href="" class="footer__link">
+                        Accessibility &amp; CC
+                    </a>
+                    <a href="" class="footer__link">
+                        About
+                    </a>
+                    <a href="" class="footer__link">
+                        Newsletters
+                    </a>
+                    <a href="" class="footer__link">
+                        Transcripts
+                    </a>
+                </nav>
+                <p class="footer__copyright-text" data-editable="copyrightText">© 2023 Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved. <br> CNN Sans ™ &amp; © 2016 Cable
+                    News Network.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
     </footer>
     <div class="ev-footer create_rom_footer" data-background-color="white" data-color_link="black" data-color_logo="orange"></div>
 
