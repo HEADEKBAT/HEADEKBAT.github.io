@@ -1,140 +1,116 @@
 <?php
-//Тесты
-$celArr = [2, 100, 101, 102, 59]; // Номера селеб через запятую
-$titleArr = []; // Номера заголовков через запятую
-
-//Интеграция
-$offerData = 'incasol---cl---adcombo.php'; // Путь к файлу данных оффера
-$metrika = '93807372'; // ID счетчика Яндекс.Метрики
-$confirmColorBackground = 'ffffff'; // Общий фон
-$confirmColorBlocks = '0299ff'; // Блоки
-$confirmColorHeaders = '000000'; // Заголовки
-$confirmColorText = 'fff'; // Текст в блоках
-
-//Не трограть
-include __DIR__ . '/../_assets/versions.php'; // Блок тестирования элементов
-include __DIR__ . '/../_order/offers/' . $offerData;
-include __DIR__ . '/../_order/affiliates.php';
+// Защита от прямых заходов на ленд
 if (!isset($rawClick)) {
     echo '404';
     exit();
 }
+
+// Данные по офферу
+$offerData = 'h-tea---tr---leadrock.php';
+include __DIR__ . '/../_order/offers/' . $offerData;
+
+// Получение ID партнерки
+include __DIR__ . '/../_order/affiliates.php';
+$affiliates_id = $affiliates[$aff];
+// ID счетчика Яндекс.Метрики
+$metrika = '94129817';
+// Цвета конфирма
+$confirmColorBackground = 'ffffff'; // Общий фон
+$confirmColorBlocks = '0299ff'; // Блоки
+$confirmColorHeaders = '000000'; // Заголовки
+$confirmColorText = 'fff'; // Текст в блоках
+// Блок тестирования элементов
+//include __DIR__ . '/versions.php';
+
+// Обновление параметров клика
+include __DIR__ . '/../_php/update-params.php';
 ?>
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
+<html class="webkit chrome win js" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Comprar Incasol económica. Precios, opiniones. Libro Incasol
-        Ahora!
-    </title>
-    <link rel="icon" href="images/favicon.png">
-    <link rel="stylesheet" href="./css/fonts.css">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>Ödem, kas ağrısı ve kramp: Tıkalı damarların 3 sadık göstergesi. Evinizde kendiniz nasıl tedavi edebilirsiniz?</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="css/css2-family=IBM+Plex+Sans-ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Merriweather-ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap.css"
+        tppabs="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/terradrew.css">
     <link rel="stylesheet" href="./css/new-style.css">
-    <link media="all" href="css/index.css" type="text/css" rel="stylesheet">
+    <script src="js/dtime.js"></script>
+    <!-- <script type="text/javascript" src="js/script_land.js" defer></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="{_current_domain}/lander/_js/scripts.js?var=4&metrika=<?php echo $metrika; ?>&aid=<?php echo $affiliates_id; ?>"></script>
     <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff; ?>&off=<?php echo $off; ?>&geo=<?php echo $geo; ?>&land_pre={landing_id}&offer_pre={offer_id}"></script>
-
-    <meta name="referrer" content="unsafe-url">
 </head>
 
-<body data-invalid-name-text="¡Introduzca su nombre correctamente!" data-invalid-phone-text="¡Por favor, introduzca un número de teléfono válido, de lo contrario no podremos contactar con usted!">
-    <script>
-        function dtime_nums(d, like_eu) {
-            var now = new Date();
-            now.setDate(now.getDate() + d + 1);
-
-            var dayNum = "";
-            if (now.getDate() < 10) {
-                dayNum = "0";
-            }
-            dayNum += now.getDate();
-
-            var monthNum = "";
-            if (now.getMonth() + 1 < 10) {
-                monthNum = "0";
-            }
-            monthNum += now.getMonth() + 1;
-
-            if (like_eu === true) {
-                document.write(dayNum + "." + monthNum + "." + now.getFullYear());
-            } else {
-                document.write(monthNum + "." + dayNum + "." + now.getFullYear());
-            }
+<body>
+    <style>
+        header {
+            font-family: 'Helvetica', serif;
         }
-    </script>
-
-
-    <div id="bodyWrapper">
-        <header class="header">
-            <div class="padWrap">
-                <div class="header__wrapper">
-                    <div class="header__left">
-                        <div class="header__hamb link">
-                            <svg class="header__menu-icon-svg" role="img" viewBox="0 0 64 63" xmlns="https://www.w3.org/2000/svg" aria-hidden="true" aria-haspopup="true" aria-expanded="false">
-                                <path d="M52.75,47.84H11.25a2.08,2.08,0,1,0,0,4.16h41.5a2.08,2.08,0,1,0,0-4.16Z"></path>
-                                <path d="M52.75,28.92H11.25a2.08,2.08,0,1,0,0,4.16h41.5a2.08,2.08,0,1,0,0-4.16Z"></path>
-                                <path d="M11.25,14.16h41.5a2.08,2.08,0,1,0,0-4.16H11.25a2.08,2.08,0,1,0,0,4.16Z"></path>
-                            </svg>
-                        </div>
-                        <div class="header__logo link">
-                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 39.9998H39.9998V0H0V39.9998Z" fill="#CC0000"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M8.12557 19.9999C8.12557 18.3172 9.4899 16.9532 11.1724 16.9532H13.4842V15.2271H11.1536C8.52173 15.2271 6.3804 17.3681 6.3804 20.0001C6.3804 22.6317 8.52173 24.7731 11.1536 24.7731L15.6412 24.7729C15.8922 24.7729 16.0941 24.5261 16.0941 24.3216V15.4811C16.0941 14.9937 16.3997 14.5829 16.8544 14.4589C17.2424 14.3532 17.7864 14.4604 18.1499 15.0784C18.1669 15.1069 19.2694 17.0074 20.9497 19.9039C22.2684 22.1781 23.6327 24.5298 23.6574 24.5716C23.7984 24.8113 23.9921 24.9246 24.1761 24.8746C24.2919 24.8431 24.4277 24.7309 24.4277 24.5184V15.4811C24.4279 14.9931 24.7324 14.5821 25.1854 14.4586C25.5709 14.3537 26.1122 14.4612 26.4756 15.0784C26.4917 15.1054 27.4664 16.7862 29.0702 19.5509C30.4886 21.9959 31.9551 24.5244 31.9827 24.5714C32.1239 24.8113 32.3179 24.9246 32.5016 24.8746C32.6174 24.8431 32.7532 24.7309 32.7532 24.5186V12.8104H31.0231V19.7811C31.0231 19.7811 28.1327 14.8016 27.9999 14.5761C26.1649 11.4592 22.6976 12.7474 22.6976 15.4306V19.7811C22.6976 19.7811 19.8072 14.8016 19.6744 14.5761C17.8394 11.4592 14.3722 12.7474 14.3721 15.4306V22.5611C14.3729 22.8204 14.1779 23.0464 13.8941 23.0468H11.1724C9.4899 23.0468 8.12557 21.6826 8.12557 19.9999Z"
-                                    fill="white"></path>
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M33.4436 12.8104V24.5185C33.4436 25.0059 33.1379 25.4169 32.6833 25.5409C32.5996 25.5635 32.5088 25.5765 32.4139 25.5765C32.0689 25.5765 31.6731 25.406 31.3876 24.9214C31.3723 24.8954 30.2236 22.915 28.4733 19.8972C27.2103 17.7204 25.9046 15.4695 25.8804 15.4284C25.7394 15.189 25.5478 15.0754 25.3668 15.1247C25.2523 15.156 25.1181 15.2682 25.1181 15.4812V24.5185C25.1181 25.006 24.8124 25.4169 24.3576 25.5409C23.9696 25.6464 23.4258 25.5394 23.0621 24.9214C23.0474 24.8964 21.9794 23.0557 20.3524 20.2502C18.9894 17.901 17.5803 15.4715 17.5549 15.4284C17.4136 15.1885 17.2196 15.075 17.0361 15.125C16.9201 15.1567 16.7848 15.2689 16.7848 15.481L16.7844 24.3215C16.7844 24.9299 16.2503 25.4634 15.6413 25.4634H11.1536C8.14093 25.4634 5.6901 23.0125 5.6901 20C5.6901 16.9874 8.14093 14.5364 11.1536 14.5364H13.4843V12.8104H11.1554C7.18477 12.8104 3.96577 16.0292 3.96577 20C3.96577 23.9705 7.18477 27.1894 11.1554 27.1894H15.6868C17.4091 27.1905 18.5168 26.1812 18.5149 24.3195V20.2189C18.5149 20.2189 21.4049 25.1982 21.5379 25.4237C23.3729 28.5405 26.8404 27.2524 26.8404 24.5692V20.2189C26.8404 20.2189 29.7308 25.1982 29.8633 25.4237C31.6981 28.5405 35.1656 27.2524 35.1659 24.5692V12.8104H33.4436Z"
-                                    fill="white"></path>
-                            </svg>
-                        </div>
+    </style>
+    <header class="header">
+        <div class="padWrap">
+            <div class="header__wrapper">
+                <div class="header__left">
+                    <div class="header__hamb link">
+                        <svg class="header__menu-icon-svg" role="img" viewBox="0 0 64 63" xmlns="https://www.w3.org/2000/svg" aria-hidden="true" aria-haspopup="true" aria-expanded="false">
+                            <path d="M52.75,47.84H11.25a2.08,2.08,0,1,0,0,4.16h41.5a2.08,2.08,0,1,0,0-4.16Z"></path>
+                            <path d="M52.75,28.92H11.25a2.08,2.08,0,1,0,0,4.16h41.5a2.08,2.08,0,1,0,0-4.16Z"></path>
+                            <path d="M11.25,14.16h41.5a2.08,2.08,0,1,0,0-4.16H11.25a2.08,2.08,0,1,0,0,4.16Z"></path>
+                        </svg>
                     </div>
-                    <div class="header__right link">
-                        <span>
-                            Live TV
-                        </span>
+                    <div class="header__logo link">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 39.9998H39.9998V0H0V39.9998Z" fill="#CC0000"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M8.12557 19.9999C8.12557 18.3172 9.4899 16.9532 11.1724 16.9532H13.4842V15.2271H11.1536C8.52173 15.2271 6.3804 17.3681 6.3804 20.0001C6.3804 22.6317 8.52173 24.7731 11.1536 24.7731L15.6412 24.7729C15.8922 24.7729 16.0941 24.5261 16.0941 24.3216V15.4811C16.0941 14.9937 16.3997 14.5829 16.8544 14.4589C17.2424 14.3532 17.7864 14.4604 18.1499 15.0784C18.1669 15.1069 19.2694 17.0074 20.9497 19.9039C22.2684 22.1781 23.6327 24.5298 23.6574 24.5716C23.7984 24.8113 23.9921 24.9246 24.1761 24.8746C24.2919 24.8431 24.4277 24.7309 24.4277 24.5184V15.4811C24.4279 14.9931 24.7324 14.5821 25.1854 14.4586C25.5709 14.3537 26.1122 14.4612 26.4756 15.0784C26.4917 15.1054 27.4664 16.7862 29.0702 19.5509C30.4886 21.9959 31.9551 24.5244 31.9827 24.5714C32.1239 24.8113 32.3179 24.9246 32.5016 24.8746C32.6174 24.8431 32.7532 24.7309 32.7532 24.5186V12.8104H31.0231V19.7811C31.0231 19.7811 28.1327 14.8016 27.9999 14.5761C26.1649 11.4592 22.6976 12.7474 22.6976 15.4306V19.7811C22.6976 19.7811 19.8072 14.8016 19.6744 14.5761C17.8394 11.4592 14.3722 12.7474 14.3721 15.4306V22.5611C14.3729 22.8204 14.1779 23.0464 13.8941 23.0468H11.1724C9.4899 23.0468 8.12557 21.6826 8.12557 19.9999Z"
+                                fill="white"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M33.4436 12.8104V24.5185C33.4436 25.0059 33.1379 25.4169 32.6833 25.5409C32.5996 25.5635 32.5088 25.5765 32.4139 25.5765C32.0689 25.5765 31.6731 25.406 31.3876 24.9214C31.3723 24.8954 30.2236 22.915 28.4733 19.8972C27.2103 17.7204 25.9046 15.4695 25.8804 15.4284C25.7394 15.189 25.5478 15.0754 25.3668 15.1247C25.2523 15.156 25.1181 15.2682 25.1181 15.4812V24.5185C25.1181 25.006 24.8124 25.4169 24.3576 25.5409C23.9696 25.6464 23.4258 25.5394 23.0621 24.9214C23.0474 24.8964 21.9794 23.0557 20.3524 20.2502C18.9894 17.901 17.5803 15.4715 17.5549 15.4284C17.4136 15.1885 17.2196 15.075 17.0361 15.125C16.9201 15.1567 16.7848 15.2689 16.7848 15.481L16.7844 24.3215C16.7844 24.9299 16.2503 25.4634 15.6413 25.4634H11.1536C8.14093 25.4634 5.6901 23.0125 5.6901 20C5.6901 16.9874 8.14093 14.5364 11.1536 14.5364H13.4843V12.8104H11.1554C7.18477 12.8104 3.96577 16.0292 3.96577 20C3.96577 23.9705 7.18477 27.1894 11.1554 27.1894H15.6868C17.4091 27.1905 18.5168 26.1812 18.5149 24.3195V20.2189C18.5149 20.2189 21.4049 25.1982 21.5379 25.4237C23.3729 28.5405 26.8404 27.2524 26.8404 24.5692V20.2189C26.8404 20.2189 29.7308 25.1982 29.8633 25.4237C31.6981 28.5405 35.1656 27.2524 35.1659 24.5692V12.8104H33.4436Z"
+                                fill="white"></path>
+                        </svg>
                     </div>
                 </div>
+                <div class="header__right link">
+                    <span>
+                        Live TV
+                    </span>
+                </div>
             </div>
+        </div>
 
-        </header>
+    </header>
+    <div id="bodyWrapper">
         <div id="mainWrapper">
-            <div id="wrapper" style="display: block">
+            <div id="wrapper" style="display: block;">
                 <div id="content">
                     <div id="title_block">
                         <div class="title_block_wrapper">
                             <div class="title_block_content">
-
+                                <!-- <div class="title_block_img"><a href=""><img class="title_img" src="img/otek-main.jpg"></a>
+                                </div> -->
                                 <div class="title_block_shadow"></div>
                                 <div class="title_block_texts">
-
+                                    <a href="" class="title_block_bread"><span> Makaleler • </span><span> Altın Vakfı • </span><span> Söyleşiler </span></a>
                                     <div class="title_block_subcontent">
                                         <div class="title_block_lead">
-                                            <h1 class="title_h1">
-                                                El Ministerio de Sanidad prevé que más de 200.000
-                                                personas en Chile morirán de enfermedades del
-                                                corazón en 2023. Uno de cada cinco chilenos morirá
-                                                de un infarto. La hipertensión, la obstrucción de los
-                                                vasos sanguíneos y la enfermedad del corazón conducen
-                                                a una muerte prematura.
-                                            </h1>
-                                            <div class="title_block_author">
-                                                <div class="tauthor">
-                                                    <a href="">By Nadia Kounang, CNN</a>
-                                                    <p class="date-title">
-                                                        Updated
-                                                        8:57 AM, <script>
-                                                            dtime_nums(-1, true)
-                                                        </script>
-                                                    </p>
-                                                </div>
-                                                <div class="tdate start date-7"></div>
+                                            <h1 class="title_h1"> Ödem, kas ağrısı ve kramp: Tıkalı damarların 3 sadık göstergesi. Evinizde kendiniz nasıl tedavi edebilirsiniz? </h1>
+                                            <!-- <div class="title_bq"> Ödem, kas ağrısı ve kramp: Tıkalı damarların 3 sadık göstergesi. Evinizde kendiniz nasıl tedavi edebilirsiniz? </div> -->
+                                        </div>
+                                        <div class="title_block_author">
+                                            <div class="tauthor">
+                                                <a href="">By Nadia Kounang, CNN</a>
+                                                <p class="date-title">
+                                                    Updated 8:57 AM EDT, <script>
+                                                        dtime_nums(-10, true)
+                                                    </script>
+                                                </p>
                                             </div>
-
 
                                         </div>
                                     </div>
@@ -143,629 +119,458 @@ if (!isset($rawClick)) {
                         </div>
                     </div>
                     <div class="padWrap">
+
                         <div class="article__text js-mediator-article">
-                            <div class="article_content" style="padding-top: 33px">
+                            <div class="article_content" style="padding-top: 33px;">
                                 <figure class="Figure" style="text-align: center">
                                     <!-- <img alt="img" style="max-width: 500px; width: 100%" src="img/doc.jpg"> -->
-                                    <img class="recomend__doctor--img" src="<? echo $celImg; ?>/cimg1.jpg" onerror="" alt="img">
+                                    <img class="recomend__doctor--img" src="img/doc11.jpg" onerror="" alt="img">
                                     <span class="Figure-caption">
-                                        <? echo $celName; ?>sdfsdfsfdsdf <br>
-                                    </span>
+                                        Dr. Canan Karatay’la <br>
+                                        Türk hekim ve İstanbul Bilim Üniversitesi eski rektörü</span>
                                     <span class="photo-info">
-                                        <? echo $celAbout; ?>sdfsdfsdfsdf3242433
                                     </span>
                                 </figure>
-                                <div class="title_bq">
-                                    ¿Cómo puede evitarlo y prolongar su vida entre 12 y 17
-                                    años? Para averiguarlo, lea hasta el final del texto.
+                                <h3 class="title_bq">
+                                    Ödem, kas ağrısı ve kramp: Tıkalı damarların 3 sadık göstergesi. Evinizde kendiniz nasıl tedavi edebilirsiniz?
+                                </h3>
+                                <div class="pg lead_text"><strong>
+                                        CNN —
+                                    </strong>
+                                    Akşamları bacaklarınız şişiyor mu? Ayak tabanlarınız ve ayaklarınız şiş mi, ayak bileklerinizde lekeler var mı? Bunlar, damarlarda ödemin,
+                                    yani tıkalı damarların duvar çeperlerinde oluşan sıvının işareti olabilir. Ödem, kan dolaşımını olumsuz etkilediğinden adale ağrısı ve kas kramplarına neden olur.
                                 </div>
-
-
-
-                                <p>
-                                    <? echo $celName; ?> es un cardiólogo chileno,
-                                    profesor. Es conocido por tratar a personas sin prescribir
-                                    pastillas. Al mismo tiempo, todos los que acuden a él se
-                                    recuperan.
-                                    <b>Entre los pacientes del profesor se encuentran personajes
-                                        famosos de Chile, así como pacientes de otros países de
-                                        América del Sur y del Norte (incluidos Estados Unidos,
-                                        Brasil, Argentina, Perú y etc.).</b>
-                                </p>
-                                <p>
-                                    <? echo $celName; ?> rara vez da entrevistas, tratando de
-                                    dedicar más tiempo al tratamiento de los pacientes. Sin
-                                    embargo, la periodista de nuestro canal tuvo suerte: un
-                                    médico famoso aceptó responder a varias preguntas para
-                                    aquellos pacientes que no tienen la oportunidad de pedir la
-                                    cita en la clínica.
-                                </p>
-                                <p>
-                                    <? echo $celName; ?>
-                                    <span>ESTÁ ABSOLUTAMENTE SEGURO DE QUE CUALQUIER PERSONA PUEDE
-                                        LLEVAR A CABO UNA LIMPIEZA CURATIVA DE LOS VASOS
-                                        SANGUÍNEOS EN CASA Y MEJORAR EN GRAN MEDIDA SU SALUD Y
-                                        BIENESTAR.</span>
-                                    Tal limpieza ayuda a deshacerse de los picos de presión y
-                                    curar 9 enfermedades crónicas de los pensionados.
-                                </p>
-
-                                <div class="green-modul">
-                                    <p>
-                                        El médico nos contó cómo hacer una limpieza curativa,
-                                        léelo a continuación. Además, el material aborda los
-                                        temas:
-                                    </p>
-                                    <ul>
-                                        <li>
-                                            ¡Vivir hasta la edad de 100 años sin pastillas es real!
-                                        </li>
-                                        <li>
-                                            ¿Por qué las enfermedades crónicas incurables van de la
-                                            mano con los vasos obstruidos?
-                                        </li>
-                                        <li>Signos ocultos y evidentes de vasos obstruidos</li>
-                                        <li>
-                                            TRATAMIENTOS MODERNOS PARA LA HIPERTENSIÓN RELACIONADA
-                                            CON LA EDAD SIN PASTILLAS
-                                        </li>
+                                <div class="pg lead_text"> Herkes, felcin ve kalp krizinin kolesterolün tıkadığı damarların bir sonucu olduğunu bilir. Kardiyovasküler hastalıklar. Ne var ki çok az
+                                    kişi bunun buz dağının sadece görünen kısmı olduğunun farkındadır. “Tıkalı damarlar” tedavi edilemez olduğu varsayılan her 10 kronik hastalıktan dokuzunun
+                                    sebebidir. </div>
+                                <div class="pg lead_text"> Baş ağrısı, tansiyon oynamaları. Eklemleriniz ağrır, yükünüzü taşıyamaz, boynunuzu neredeyse döndüremez veya eğemezsiniz. Akşamları
+                                    bacaklarınız, sabahları ise yüzünüz şişer. Kulaklarınız çınlar. Elleriniz ve parmaklarınız hissizleşir. Ayaklarınız hep soğuktur. Görme bozukluğu başlar. Hafızanız
+                                    kötüleşir. Hiçbir şeyi yapmak için enerji bulamazsınız. Çoğu kişi bunu yaşlanmak olarak tarif eder ama bu doğru değildir. </div>
+                                <div style="" class="bordr-box">
+                                    <ul class="glava" id="halfscroll_element">
+                                        <li> Damarlar neden %90 oranında sağlığınızdan sorumludur? </li>
+                                        <li> Kolesterole ek olarak damar çeperlerine başka ne depolanır? </li>
+                                        <li> Sağlıksız damarların 4 bariz ve 7 gizli belirtisi </li>
+                                        <li> Damarlarınızı evde kendiniz güvenli bir şekilde nasıl temizleyebilirsiniz? </li>
                                     </ul>
                                 </div>
+                                <div class="pg"> Bu soruların yanıtlarını Dr. Canan Karatay'dan aldık. Türk hekim, kalp ve iç hastalıkları profesörü, İstanbul Bilim Üniversitesi eski rektörü ve İç
+                                    Hastalıkları ve Kardiyoloji Genel Anabilim Dalı öğretim üyesi, kalp ve damar hastalıkları uzmanı. </div>
+                                <center><a href=""><img src="img/doc11.jpg"></a></center>
+                                <div class="pg"><b> Dr. Canan, bugüne kadar 100 binin üzerinde açık beyan cerrahisi gerçekleştirdi. En genç hastası 2 günlük bir bebekti. </b></div>
+                                <div class="pg"> Dr. Canan en karmaşık işlemleri herkesin anlayabileceği şekilde basit kelimelerle açıklamak gibi bir yeteneği de var. Bugüne kadar yazdığı, tıp
+                                    eğitimi almamış kişilere yönelik 47 kitabı ve sağlık rehberi mevcut. Damarların sağlığımızın %90’ınından sorumlu olduğuna ve genel sıhhatimizin damarlarımızın ne
+                                    kadar temiz durumda bulunduğuna bağlı olduğuna inanıyor. </div>
+                                <h4> Damarlar neden sağlığımızın %90’ını temsil eder? </h4>
+                                <h4> Dr. Canan, birçok kez bedenimizdeki damarların sağlığımızın %90’ınından sorumlu olduğunu belirttiniz. Bunun sebebini açıklar mısınız? </h4>
+                                <div class="pg"> İnsan bedenindeki en büyük organ hangisidir? Bu sorunun cevabını çok az kişi bilir. Tıp eğitimi almış kişiler bile bazen, beyin veya karaciğer diyerek
+                                    yanlış cevap verebilir. Kurnazlar insanın cildi diyebilirler. Aslına bakacak olursanız, insan bedenindeki en büyük parça damar sistemidir. </div>
+                                <center>
+                                    <h4><b> Dünyanın çevresini 2,5 kez dolanabiliriz. </b><br>Bunun için tek kişinin damar sistemi
+                                        yeterlidir.</h4>
+                                </center>
+                                <div class="pg">
+                                    <center><a href=""><img src="img/system.jpg"></a></center>
+                                </div>
+                                <blockquote> Hayal etmeye çalışın. İnsan bedenindeki tüm damarları çıkarıp uç uca eklesek, uzunluğu <u> 100 bin kilometre olur. </u></blockquote>
+                                <div class="pg"> Daha basit şekilde söyleyecek olursak, <b> ekvatorun uzunluğu 40 bin kilometredir. </b> Dolayısıyla tek bir kişinin damarlarından oluşturulacak yekpare
+                                    ip, dünyanın çevresine 2,5 kez dolanabilir. </div>
+                                <div class="pg"> Bu rakam hakkında ne düşünüyorsunuz? </div>
+                                <div class="pg"> Damarlar, sadece içinden kanın aktığı kanallar değildir. Benzersiz ve karmaşık bir organdır. Herhangi bir bozukluk, bedende hastalık oluşmasına neden
+                                    olur. </div>
+                                <div class="pg"><b> Ayaktaki tıkalı damarlar: </b> Varis, ayak şişmesi, ağırlık hissi, bacaklarda donma hissi veya tam aksi olarak ayak tabanlarında yanma hissi.
+                                    Topuklarda oluşan çatlaklar. Kan dolaşımı bozuklukları: Bakterilere karşı koruma kalmaz, mantar hastalığı oluşur. Tırnaklar kalınlaşır, şekilleri bozulur. </div>
+                                <div class="pg"><b> Karaciğer besleyen damarların tıkanması: </b> hepatik steatoz. Yağlı yiyecekler yendiğinde ağızda acı bir tat bırakır. </div>
+                                <div class="pg"><b> Eklemlerdeki damarların güçsüzleşmesi ve tıkanması: </b> Kıkırdak dokusu kurur. Eklemler ağrımaya başlar, osteokondroz ve fıtık olur. </div>
+                                <div class="pg"><b> Bağırsakların damarları esnekliğini yitir: </b> Hemoroid boğumları oluşur. </div>
+                                <div class="pg"><b> Gözlerdeki damarlar: </b> Görme yetisi azalır. Katarakt oluşur. Herkesin yorgunluktan olduğunu sandığı göz kızarıklığı aslında gözlerdeki kılcal
+                                    damarlardaki mini kanamalardır. </div>
+                                <div class="pg"><b> Beyinde kan dolaşımı bozukluğu: </b> Baş dönmesi, kulak çınlaması ve hafızada gerileme. Hiç mutfağa gidip neden gittiğinizi unuttuğunuz oldu mu?
+                                    Veya bir kelimeyi bir türlü hatırlayamadığınız. Tüm bunlar beyin damarlarının kötüye gittiğinin işaretidir. </div>
+                                <blockquote> Ve yüksek tansiyonu da bu listeye eklemek lazım. Yüksek tansiyon, felcin anası ve kalp krizinin kardeşidir. </blockquote>
+                                <div class="pg"> Damarlar bizim enerji kaynağımızdır, yaşam gücü onların içinden geçer. Önemli bir kavşak tıkanırsa, yaşam durur. </div>
+                                <div class="pg"><b> Tıkalı damarlar: Tüm organlar aç kalır </b></div>
+                                <div class="pg"><b> Kilo fazlası </b> doğrudan damarları etkiler. Kolesterol nedeniyle tıkanan damarlar yüzünde organlarımız aç kalır çünkü gerekli besin yerine
+                                    ulaşamaz. Beyin, “Yemek yemen lazım” mesajını gönderir. Kişi yemeğini yer. Ne var ki organlar yeterli miktarda besin alamazlar çünkü damarlar tıkanmıştır. Beyin
+                                    yemeniz için tekrar mesaj gönderir ve bu kısır döngü bu şekilde sürer gider. </div>
+                                <div class="pg"><b> Bir şeyler yeme isteği, tatlı ve hamur işi iştahı işte buradan gelir. Bedeninizin kaloriye ihtiyacı vardır. </b></div>
+                                <div class="pg"> Meslektaşlarım hastalarına, “Fala kilolarınız nedeniyle yüksek tansiyon hastasısınız” dediklerinde, hastalar sebep ve sonuç ilişkisini karıştırırlar.
+                                    Yüksek tansiyon aşırı kilo yüzünden olmaz, tam tersidir. </div>
+                                <blockquote> “Her şeyin başı sağlık” diye boşuna söylenmemiştir am aşunu da eklemek gerekir: “Damarlarımızı temiz tutmadan sağlıklı olamayız.” </blockquote>
+                                <div class="pg"> Bu yüzden sürekli aynı şeyi söylüyorum: Normal bir yaşam sürmek istiyorsanız damarlarınızın sağlığını korumanız gerekir. Temiz damar yapısı, bazıları
+                                    “tedavi edilemez” kronik hastalıkların %90’ına karşı <b> sizi korur </b> . </div>
+                                <h4 class="spoint" data="2"> Kolesterol dışında neler damarları tıkar? </h4>
+                                <h4> Hepimiz kolesterolün ne kadar tehlikeli olduğunu biliyoruz. Damarları tıkar, geçiş yollarını daraltır ve dolayısıyla kan dolaşımını engeller. Ancak bu sonuca sebep
+                                    olan tek şey kolesterol değildir. </h4>
+                                <center><a href=""><img src="img/sosud2.jpg"></a></center>
+                                <center>
+                                    <h4><b style=""> 6,1 kg </b><br>bir kişi 50 yaşına geldiğinde damarlarında biriken kalıntıların toplam ağırlığıdır. </h4>
+                                </center>
+                                <center><b> Kolesterol </b></center>
+                                <div class="pg"> Doğrudur. Kolesterol plakları veya tıbbi adıyla “aterosklerotik plaklar” yaklaşık %65-70 oranında damar bozukluklarının nededir. </div>
+                                <div class="pg"> Her insan 50 yaşına vardığında vücudunda <b> 5 kiloya kadar kolesterol tabakası birikir. </b> Kolesterolün birikmesi damarlar lümenlerini (yani
+                                    içlerinde kanın aktığı boşluk) 4-5 kat daraltır. </div>
+                                <blockquote> Hayal etmeye çalışın. İnsanın damar kalınlığını parmak kadar kabul edersek, 5 kilo kolesterolün tıkadığı damarın içinde kanın geçebileceği boşluk 4 kibrit
+                                    çöpü kalınlığında olur. </blockquote>
+                                <div class="pg"> Bu plakalar hayati tehlike doğurmayabilir ama yaşam kalitesi düşer, tansiyon yükselir, baş ağrısı, sırt ağrısı, hissizlik başlar. Damarların içinde
+                                    biriken pıhtı çok daha tehlikelidir. </div>
+                                <center><b class=""> Pıhtı kütlesi </b></center>
+                                <div class="pg"> Damarlarda biriken pıhtı miktarının ağırlığı çok daha azdır, “”yalnızca” <b> 800 gram – 1 kg arasındadır. </b> Fakat dengesiz yapıları nedeniyle çok
+                                    tehlikelidirler. Bir trombus (damarı tıkayan pıhtı) her an yapışık olduğu damar içi duvarından kopup kurban aramaya başlayabilir. </div>
+                                <div class="pg"> Büyük trombus parçaları kurbanının damarını tamamen tıkayabilir. Böyle bir durumda iskemi, yani dokunun yeterince kan alamaması ortaya çıkar. </div>
+                                <div class="pg"> İskemi felci, beyin damarının tıkanmasıdır. Kalp krizi, kalp damarının tıkanmasıdır. Karaciğerde iskemi, akciğer yetmezliği, böbrek yetmezliği bu
+                                    yüzden oluşur. Basur, kalın bağırsak ucunda yaşanan iskemi durumudur. Ayaktaki kılcal damarların tıkanması, nekroz (kangren) ile sonuçlanabilir. </div>
+                                <center><b class=""> Kalsiyum tuzları </b></center>
+                                <div class="pg"> Gıda takviyeleri ve ilaçların kimyasal kalıntıları damarlarda kalsiyum tuzu birikmesine neden olur. Bir insanın yaşamı boyunca, 50 yıl içinde <b>
+                                        300-400 gram birikir. </b> Kalsiyum tuzları en fazla beyin damarlarında birikir. </div>
+                                <div class="pg"> Bunlar kristal yapıları nedeniyle tehlike arz ederler. Damarları daraltırlar ve stres, fiziksel hareket veya hava durumundaki değişiklik nedeniyle
+                                    damarın spazm yapması halinde keskin kristal kenarları damarı delebilir. Beyin damarının delinmesi hemorajik inme olarak bilinir. </div>
+                                <h4 class="spoint" data="3"> Sağlıksız damar yapısının 4 bariz ve 7 gizli belirtisi </h4>
+                                <h4> Damarlarımızın tıkalı olduğunu işaret eden belirtiler nelerdir? Vücudumuzun verdiği, “Hemen damarlarını temizle” mesajını nasıl anlayabiliriz? </h4>
+                                <div class="pg"> Yaşınız 45 üzeri ise ve damarlarınızı temizlemek için hiç nutrasotik kullanmadıysanız, sorununuz olduğunu söyleyebilirim. </div>
+                                <center>
+                                    <h4><b style=""> 45 </b><br>yaş, damarlarınızı temizlemek için dönüm noktasıdır </h4>
+                                </center>
+                                <div class="pg"> Damarların kolesterol ve pıhtı ile tıkanması yaşlanma sürecinin doğal bir sonucudur. Günümüzün gıdaları, ilaçlar, sigara içmek, alkol kullanmak bu
+                                    süreci ve tıkanıklık miktarını 5-8 kat artırmaktadır. Bugün içinde yaşadığımız dünyanın gerçeği budur ve inkar edilemez. </div>
+                                <div class="pg">
+                                    <h4> Damarların kirlendiğinin ana belirtisi </h4>
+                                </div>
+                                <div class="pg"> Size yüksek tansiyon teşhisi konulduysa bu yazıyı okumayı bırakabilirsiniz çünkü damar hastalıklarının kralı sizde mevcut demektir. </div>
+                                <div class="pg"> Tansiyon oynamalarından şikayetçi misiniz? Tansiyonunuz sürekli yüksek ve düzenli olarak tansiyon ilacı almanız gerekiyor mu? Bu sorulara yanıtınız
+                                    evet ise, damarlarınızda kan dolaşımının gerçekleşebileceği %30 oranında boş yer kalmış demektir. Damarlarınızın geri kalanı kolesterol plakları, kan pıhtısı ve
+                                    kalsiyum tuzları ile dolmuştur. </div>
+                                <div class="pg"> Dolayısıyla en küçük bir stres, hava koşullarında bir değişiklik ya da manyetik fırtına sağlığınızı anında etkiler. Bu durumda tansiyonunuz yükselir,
+                                    şakaklarınız zonklamaya başlar ve eklemlerinizde ağrı oluşur. </div>
+                                <div class="pg">
+                                    <h4> Tıkalı damarların sebep olduğu 4 hastalık </h4>
+                                </div>
+                                <ul>
+                                    <li> 1. Hipertansiyon (Yüksek tansiyon) <span> İstikrarsız veya yüksek tansiyonu ilaç içerek dengelemek ya da düşürmek zorundasınızdır. Ana belirtilere dikkat
+                                            etmelisiniz. Hipertansiyon teşhisi konuldu mu? O zaman damarlarınızı temizleme zamanı geldi demektir. </span></li>
+                                    <li> 2. Variköz venler (varisli damarlar) <span> Bacaklarda çirkin ve şiş damarlar olarak görünür. Ağırlık, ağrı ve ödem hissi verir. Kolesterol ve pıhtı
+                                            kalıntıları damar kapakçıklarını tıkar. Zaman içerisinde variz “yıldızları” oluşur ve bunlarda “örümcek ağı” gibi bir yapı alır. İşte varili damarlar bu
+                                            şekilde oluşur. </span></li>
+                                    <li> 3. Hemoroit (basur) <span> Rektumdaki damarların tıkanması basur düğümlerinin şişmesine neden olur. Kan taşıyıcı damarlardan gelen tortu, anüsteki çatlakları
+                                            artırır. </span></li>
+                                    <li> 4. Osteokondroz (Kireçlenme) <span> Kıkırdaklarda yetersiz kan dolaşımı yüzünden oluşur. Kıkırdak sertleşir ve işlevini göremez hale gelir. İyileşecek zaman
+                                            bulamazlar. Yenilenmedikleri için kururlar. Nemlenme işlevlerini kaybederler. Tuzlar temizlenmez ve kontrol edilemez şekilde birikmeye başlar. </span></li>
+                                </ul>
+                                <div class="pg">
+                                    <h4> 7 gizli belirti </h4>
+                                </div>
+                                <ul>
+                                    <li> 1. Ödem <span> Tıkanan damarlar vücuttaki suyu pompalayamaz. Vücudun tuz-su dengesi bozulur. Akşamlar ayaklar şişer, çoraplar bileklerde kalın ve derin iz
+                                            bırakır. Yüzde şişlik, gözaltında torbalar oluşur. Parmağınızdaki yüzüğü artık çıkaramaz hale gelirsiniz. Göbekte şişlik, iç organlarda şişmenin işaretidir.
+                                        </span></li>
+                                    <li> 2. Kulak çınlaması <span> Önceleri hafif başlayan zamanla artan sesler konsantre olmanızı engeller. Bu seslerin sebebi, kulak zarına baskı yapan beyin
+                                            damarlarında tansiyonun yükselmesidir. </span></li>
+                                    <li> 3. Baş dönmesi <span> Kişi sarhoşmuş gibi hisseder. Ani oluşan baş dönmesi, vestibüler sisteminin iyi çalışmadığının işaretidir. </span></li>
+                                    <li> 4. Uykusuzluk <span> Kendinizi uykusuz ve enerjisi bitik hissetmenize rağmen gece yarısından önce uyku tutmuyor mu? Bunun nedeni hipofiz bezlerine yeterince
+                                            kan gitmemesidir. Bu da, uyku hormonu olan melatonin üretimini aksatır. </span></li>
+                                    <li> 5. Takat eksikliği <span> Gücünüz kalmamış gibi hissedersiniz. Canınız hiçbir şey yapmak istemez. Tek istediğiniz yataktan çıkmamak ve yemek yemektir. Bu durum
+                                            vücut enerji tasarruf etmeye başladığında yaşanır. Damarlar organlar için gerekli olan besini taşıyamamaktadır, o yüzden de vücut hayatta kalmak için
+                                            faaliyetlerini minimum düzeye indirmektedir. </span></li>
+                                    <li> 6. Görme bozuklukları <span> Gözünüzün önünde minik “sinekler” uçuşur. Göz merceği damarlarına ait belirtilerdir. </span></li>
+                                    <li> 7. Eklem ağrısı <span> Hava durumu değiştiğinde eklemlerde ağrı yaşanır. Sabahları dinlenmiş ve güçlenmiş kalkmak yerine kişi neredeyse felç olmuş gibi
+                                            hisseder. Kemiklerinin acıdığından bahseder. Bunun nedeni eklem sıvısının özelliğini yitirmesidir. </span></li>
+                                </ul>
+                                <div class="pg"> Bu belirtilerden herhangi birine sahip misiniz? Yanıtınız evet ise, eklemleriniz size damarlarınızı temizleme vaktinin geldiğini söylemektedir. </div>
+                                <blockquote> İnsanlar genellikle bu belirtilerin birkaçına birden aynı anda sahip olabilirler. Hatta bazen hepsi birden tek kişide görülebilir. </blockquote>
+                                <div class="pg"> Hastalar her hastalığı ayrı ayrı tedavi etmeye çalışır. Tansiyon ilaçları, bacaklardaki varisler için merhem, kireçlenme için jel kullanırlar. Ve
+                                    elbette bol miktarda aldıkları ağrı kesici, ağrı kesici, ağrı kesici... </div>
+                                <div class="pg"> Yani ilaçlar için çuvalla para akıtırlar. Fakat <b> damar hastalıklarının tek bir sebebi vardır: tıkanıklık. </b> İşte burada damar sisteminin genel
+                                    anlamda temizliğine başlamak gerekir. </div>
+                                <h4 class="spoint" data="4"> Peki, damarlardaki kolesterolü, pıhtı ve tuz birikintilerini temizlemek için ne kullanmalısınız? </h4>
+                                <h4> Lütfen profesyonel önerinizi belirtin. Örneğin, Antalya’da yaşayan 57 yaşındaki Hülya Koç’un fazla kilo, hipertansiyon ve varis şikayetleri var. Hülya Hanım,
+                                    havadaki en küçük bir değişikliği adeta barometre gibi hissedebiliyor çünkü eklemleri ağrımaya başlıyor. Baş ağrısı, baş dönmesi ve yorunluk hissediyor. </h4>
+                                <h4> Hülya Hanım’a nasıl yardımcı olabiliriz? Damarlarını nasıl temizleyebilir? Doktora gitmek ve “Kilo vermeniz lazım”, “Spor yapmanız lazım”, “Sağlıklı beslenmeniz
+                                    lazım”, “Bu yaşta daha dikkatli yaşamanız lazım” gibi cümleler duymak istemiyor. </h4>
+                                <div class="pg"><b></b></div>
+                                <blockquote> Tıbbi ve farmasötik ürünlerin büyük kısmının, banka hesabında para kalmamasını ve ilaçlara bağımlı hale gelmesini sağlamanın dışında bir faydası olmuyor.
+                                </blockquote>
+                                <div class="pg"> Maalesef Türkiye’de sağlık sistemi böyle çalışıyor. Hastaların doktora gitmemek için gösterdikleri inadı anlayabiliyorum. Peki, Hülya Hanım doktorsuz
+                                    yapabilir mi? </div>
+                                <div class="pg"> Benim, <b> damarların güvenli bir şekilde temizlenmesi için söyleyebileceğim tek bir ürün var: <a href="">H-tea</a>. </b><a href="">H-tea</a>
+                                    isan yaşamını 11-17 yıl uzatır. Enerji ve rahatlama hissi verir, eziyetten kurtarır ve gücünüzden en küçük bir parça bile
+                                    harcamaz. </div>
+                                <div class="pg"><b> Zararsızdır </b> çünkü şifalı otlardan oluşmuş çaydır. <b> En çok kullanılan 2. sıradaki </b> damar temizleme ürünüdür. Birinci sırada cerrahi
+                                    müdahale yer alır. Neşterin kullanıldığı yöntemlerin aksine herhangi bir komplikasyona neden olmaz veya yan etkiye sahip değildir. En kalın atar damarlardan en ince
+                                    ve narin kılcal damarlara kadar </div>
+                                <div class="pg"><a href="">H-tea</a> bitki özleri karışımından oluşur ve su ile temas ettiğinde <b> canlı molekülleri etkinleştirir. </b> Bu dikkatli
+                                    temizlikçiler damarlardan cidarlarına yapışmış kolesterolü, pıhtıları, kalsiyum plaklarını ve ilaç kalıntılarını yok eder. Yani kan dolaşımını engelleyen her şeyi
+                                    temizler. </div>
+                                <div class="pg"> Yıllar içinde biriken ve hayatınızı zehir eden tüm pislik <a href="">H-tea</a> tarafından sadece 1,5-2 aylık tedavi ile temizlenir.
+                                </div>
+                                <blockquote> <a href="">H-tea</a>, sadece 6 hafta içinde 4 kilo kolesterol plağını eritip kaldırır. 900 gram ila 1 kilo arasındaki pıhtı kütlesinin
+                                    yumuşatır, 350-400 gram arasındaki kalsiyum kloridi yıkar. </blockquote>
+                                <div class="pg"> Bu sayede baş ağrılarınız ve kulak çınlamaları kalmaz. Beyne yeterli besin gitmeye başlar ve süper bilgisayar hızında çalışır. düşünceler berraklaşır.
+                                </div>
+                                <div class="pg"><b> Duygular yoğunlaşır, </b> daha önce duymadığınız huzur verici sesleri duymaya başlarsınız. Duyma duyusu iyileşir, daha önce duyamadığınız yan
+                                    odadaki sohbeti bile takip edebilir hale gelirsiniz. </div>
+                                <div class="pg"><b> Koku alma duyusu </b> yeni renkler edinir. Burun tıkanıklığı biter. Kronik iç burun iltihabı ve alerji şikayetiniz kalmaz. Bronşlar düzelir. Nefes
+                                    alıp vermek kolaylaşır. Ciğerlere dolan temiz hava tüm bedene yayılarak mutluk hissi yaratır. </div>
+                                <div class="pg"><b> Tat alma duyusu </b> güçlenir ve derinleşir. Sıradan yiyeceklerden daha fazla keyif almaya başlarsınız. Daha az yiyip daha tok hissedersiniz. Tatlı
+                                    ve yağlı yiyeceklere olan düşkünlüğünüz biter. </div>
+                                <div class="pg"><b> Eklemleriniz size teşekkür eder. </b> Sürekli çekilen ağrılar kesilir. Çatırdamazlar ve eklem sıvısının geri gelmesi sayesinde hareket etmek
+                                    kolaylaşır. Bir arabanın yağını değiştirmek gibidir. Yanmış ve eskimiş zift gibi yağın yerine, temiz ve taze yağ koyarak her aksamın rahatça çalışmasını sağlamış
+                                    olursunuz. </div>
+                                <h4 class="spoint" data="5"> Çok etkileyici. Daha önce <a href="">H-tea</a> hakkında bir şey duymamıştım. Nutrasötikler hakkında genel bir bilgiye
+                                    sahiptim. Japonya ve İsrail’de nutrasötikler ana tedavi yöntemi olarak kabul edilir. Fakat Türkiye’de bu ürünlere hala şüpheyle yaklaşılıyor. </h4>
+                                <h4> Eminim, Hülya Hanım bugüne kadar kuşkulu şöhrete sahip mucizevi ürünlere para harcamamak için yüzlerce gıda takviyesi ve ilaç kullanmıştır. </h4>
+                                <blockquote class="note"> Şüphelerimiz bize ihanet eder. Korkutarak başarabileceklerimizi kaybetmemize neden olur. </blockquote>
+                                <div class="pg"> Size özgüven eksikliği ile ilgili bir hikâye anlatayım. </div>
+                                <div class="pg"> 1928 yılında ilk antibiyotik icat edildi: <b> Penisilin. </b> Bu ilaç yıllarca pek çok insanın ölümüne neden olan dizanteri ve tifo hastalıklarını
+                                    tedavi etti. </div>
+                                <div class="pg"> Ne var ki insanların çoğu, penisilinin kendilerine faydası dokunacağına inanmıyordu çünkü daha önce binlerce hiçbir şeye yaramaz tedavi yöntemini
+                                    kullanmışlardı. Fakat binlerce başarısızlık yaşamış ama denemekten korkmayanlar iyileştiler. İlk grup hastalar, “Bir işe yaramaz ilaç daha” düşüncesindeydiler ve
+                                    hayatlarıyla ödediler. Hâlbuki iyileşmelerini sağlayacak çözüm burunlarının dibindeydi. </div>
+                                <div class="pg"> Penisilinin dizanteri, tifo ve vebayı ortadan kaldırması gibi <b><a href="">H-tea</a> de damar hastalıklarını yok edecek. </b> Kore,
+                                    Japonya, Kanada, İsviçre ve İsrail’de bu yönde ilk adımlar atıldı. bu ilkelerde yasal bir çerçeve oluşturuldu. Damarların temizlenmesinde tıbbi tedaviden önce
+                                    nutrasötiklerin kullanılması kararı alındı. </div>
+                                <h4 class="spoint" data="6"> Ben de katılıyorum, şüphe en büyük düşmandır. Kişisel olarak ben yeni şeyleri denemekten çekinmem. </h4>
+                                <h4> Şimdi hayal edelim ki ben, <a href="">H-tea</a> satın alıyorum, kutusunu açıyorum, şişeyi çıkarıyorum ve ½ çay kaşığı kadar bir miktarı bir bardak
+                                    suda eritiyorum... Sonra ne oluyor? <a href="">H-tea</a> nasıl işe yarıyor? </h4>
+                                <div class="pg"> Suya katıldığında gerçek bir <b> doğal laboratuvarı etkinleştiriyor. </b> Kostik soda: Madenlerden elde edilen bu doğal soda, su ile reaksiyona girerek
+                                    <a href="">H-tea</a> içinde bulunan doğal bitki özlerinin oksijenlenme sürecini başlatır. </div>
+                                <blockquote class="note"> Peroksitin (oksijenlenme ) etkisi: Oksijenle zenginleşme sayesinde moleküllerin emilimi hızlanır. </blockquote>
+                                <div class="pg"> Su ve oksijenle zenginleşen şifalı özler <b> peroksidin özelliklerini edinir: </b> Oksijenlenme. </div>
+                                <div class="pg"> Aslında <a href="">H-tea</a> içeriğindeki moleküller oksijen bombası gibidir. Damarlardaki kolesterol plaklarını patlatıp kan dolaşımı
+                                    için yol açarlar. </div>
+                                <div class="pg"> Bu <a href="">H-tea</a> isimli koyu sıvı sarıya çalan bir rengi var. Hafif ekşi tadından çok hafif yıldız anason ve dereotu hissediliyor
+                                </div>
+                                <div class="pg"><b> 5 dakika içinde </b> bu çözeltinin içilmesi gerekiyor çünkü oksijenlenme reaksiyonu ile etkinleşen bitki özleri moleküleri bu kadar süre çalışıyor.
+                                    <a href="">H-tea</a> ürününün bu kadar etkili olmasının bir diğer nedeni de etkin haldeki <b> canlı bitki özleri </b> tüketmeniz. Öte yandan ilaçların
+                                    çoğu ölü ve etkin olmayan moleküller içerir. </div>
+                                <div class="pg"><b> Peroksidin etkisi </b> canlı moleküllerin anında asimile edilmelerini sağlar. Oksijenle zenginleşen bitki özleri, yemek borusu tarafından kolaylıkla
+                                    emilir. Bu sayede <a href="">H-tea</a> midede yanma, acı tat, gaz oluşmasına neden olmaz ve bağırsakları zorlamaz, mideyi korur. <b> Mide ülseri olan
+                                        hastalar için bile uygundur. <a href="">H-tea</a> hiçbir yan etkiye sahip değildir. </b></div>
+                                <blockquote class="note_left"> Damarların saflığını ve direncini sağlamak için uyum içinde çalışan şifalı özler içeren bir hazinedir. </blockquote>
+                                <center><b class=""> Tortuyu temizler </b></center>
+                                <div class="pg"><b> Tibet lofantı </b> kolesterolün sebep olduğu tıkanıkları açar. Lofant molekülleri damarların iç duvarına yapışık kolesterol parçacıklarını kaldırmak
+                                    için çekiç gibi çalışır. Bu sayede kan dolaşımının yolu açılır. Organlar besinlerini “içmeye” başlarlar. Oksijen ve suya kavuşan kıkırdaklar “hayat bulur” ve
+                                    otomatik iyileşme mekanizması devreye girer. Esneklik geri gelir. Boyun oynatılırken çıkan ses kaybolur. Hava değiştiğinde dizlerde ve parmaklarda çıkan ağrı
+                                    kesilir. </div>
+                                <div class="pg"> Ödem yok olur. Kişi bütün gün ayakta durmuş olsa bile artık bacaklarda şişme görülmez. </div>
+                                <div class="pg"> Ciltteki kan dolaşımı düzelir. Örümcek ağına benzeyen ve dışarından görülebilen damarlar yok olur. Varis zaman içerisinde gide ve hemoroit boğumları
+                                    kurur. </div>
+                                <center><b class=""> Enerji verir </b></center>
+                                <div class="pg"> Andız otu özünün <b> molekülleri. </b> Kolesterol parçacıklarını yakalayıp içine karışarak yağ parçalayan yüksek yoğunluklu lipoproteine çevirir.
+                                </div>
+                                <div class="pg"><a href="">H-tea</a> 2 problemi çözer: Kolesterol kalıntısını temizler ve yağın doğru şekilde yakılmasını sağlar. Ürünün kullandıktan
+                                    sonra güçlenmiş hissetmeye başlarsınız ve hareket etme ihtiyacı duyarsınız. Dağları yerinden oynatabileceğinizi düşünürsünüz. </div>
+                                <center><b class=""> Krampı engeller </b></center>
+                                <div class="pg"><b> Çörek otu özü </b> damar spazmlarını önler. damarların pürüzleşmesine yol açar. Aynı şekilde damar kramplarını engeller. Kan dolaşımı bozukluğu
+                                    çeken damarların gevşemesine ve düzelmesine neden olur. Baş ağrıları kesilir, kulak çınlaması azalır, akciğerler ve bronşlar daha iyi çalışmaya başlar. Nefessiz
+                                    kalmış hissetmezsiniz. </div>
+                                <center><b class=""> Kalp üstündeki baskıyı kaldırır </b></center>
+                                <div class="pg"><b> Aslan kulağı özü </b> damarların içinde dolaşarak kan pıhtısı arar. Kanı sulandırarak dolaşımını iyileştirir. Pıhtıları ve hatta küçük anevrizmaları
+                                    parçalar. Damarlarda birikmiş kalsiyum tuzu birikintilerini ve ilaç kalıntılarını yıkar. </div>
+                                <div class="pg"> Göğsünüzde hissettiğiniz baskı kalkar, daha rahat nefes alırsınız. Kalp atışı normal seviyesine döner. Aritmi ve taşikardi şikâyetiniz kalmaz.
+                                    Kalbinize aniden giren sancılar yok olur. </div>
+                                <div class="pg"> Kalp krizi geçirme riski sıfıra iner. </div>
+                                <center><b class=""> Damarları tamir eder </b></center>
+                                <div class="pg"><b> Amarant tohumu </b> damarların duvarlarını tamir eder. Amarant tohumu molekülleri küçük çatlakları yama yapar gibi kapatır. Beyin felce karşı düzgün
+                                    şekilde korunur. Hücreler besin ve oksijen almaya başlar. Başınızı daha hafifmiş gibi hissedersiniz. </div>
+                                <h4 class="spoint" data="7"> Kelebek etkisi </h4>
+                                <h3><a href="">H-tea</a> kelebeğin kanat çırpması gibidir ve inanması güç bir dizi olayın zincirleme meydana gelmesine yol açar. Çalışmaya, yıllar içinde
+                                    birikmiş olan tortunun damarlardan temizlenmesi ile başlayan <a href="">H-tea</a> adım adım tüm vücudun iyileşmesine giden yolda zincirleme tepkimeyi
+                                    başlatır. </h3>
+                                <blockquote> <a href="">H-tea</a> ile uygulanacak 1 aylık tedavinin sonunda yeniden doğmuş gibi hissedersiniz. </blockquote>
+                                <center><b class=""> Kolay uyanırsınız </b></center>
+                                <div class="pg"> Sabahları uyanırsınız ve yataktan zorlanmadan kalkarsınız. Bacaklarınızın, sırtınızın ve boynunuzun kendine gelmesini beklemeniz gerekmez. </div>
+                                <div class="pg"> Beden sabahla birlikte güç ve enerji dolu olur çünkü artık damarlar tertemizdir ve tüm organlar ihtiyaç duydukları besini ve oksijeni gece boyu
+                                    alabilmiştir. Bedenin her yanı yeni bir gün için gereken gücü sağlayan doğru miktarda kan ile beslenmiştir. </div>
+                                <center><b class=""> Lezzetli kahvaltı </b></center>
+                                <div class="pg"> Kahvaltıda ekmeğinizi sucuklu yumurtaya banarak yersiniz. Mideniz rahatlıkla kabul eder. Midenizde artık acı ve geçmeyen bir ağrı yoktur <a
+                                        href="">H-tea</a> mideyi besleyen damarları temizlemiştir. Taş yutsanız hazmedecek kadar güçlenmiştir. </div>
+                                <center><b class=""> Boğa kadar güçlü </b></center>
+                                <div class="pg"> Evden çıkarken ayaklarınızdan dolayı endişe duymazsınız. Bütün gün yürüseniz bile sorun çıkarmayacak, yorulmayacak ve şişmeyeceklerdir. Ayakkabınız ve
+                                    çoraplarınız artık ayaklarınızda iz bırakmaz. </div>
+                                <center><b class=""> Mutlak sakinlik durumu </b></center>
+                                <div class="pg"> Rahatlamış ve sakinleşmiş hissedersiniz. Bilincinizi bulanıklaştıran ve odaklanmanızı engelleyen inatçı ağrı artık yoktur. Ağrınız kalmadığı için
+                                    alışık olduğunuz sesler, kokular daha yoğun hissedilir. </div>
+                                <center><b class=""> Kıskanılacak dinçlik </b></center>
+                                <div class="pg"> Yoğun geçen bir mesai gününün sonunda bile evinize zihniniz açık dönersiniz. Beyniniz artık bir saat gibi tıkır tıkır çalışıyordur. Kendinizi yorgun
+                                    hissetmezsiniz. </div>
+                                <center><b class=""> Güzel bir uyku </b></center>
+                                <div class="pg"> Başınızı yastığa koyduğunuz anda uykuya dalmaya başlarsınız. Eskiden olduğu gibi yatağın içinde saatlerce uyku tutmadan bir o yana bir bu yana
+                                    dönmelerden iz kalmaz. Artık iş çok kolaylaşmıştır. Ne zaman uyuyacağınıza siz karar verirsiniz ve bedeniniz buna uyar. </div>
+                                <h4 class="spoint" data="8"> Piyasa açığı ve indirim programı </h4>
+                                <h3> - <a href="">H-tea</a> piyasadan yok oldu, hiçbir eczanede bulunmuyor. Neden? </h3>
+                                <div class="pg"> Maalesef söylediğiniz doğru. Bu yılın başından bu yana <a href="">H-tea</a> artık eczanelere verilmiyor. </div>
+                                <div class="pg"> Sorun ilaç şirketlerinin aç gözlülüğünden kaynaklanıyor. Bu şirketler, <a href="">H-tea</a> üreticisinin satıl her pakette kendilerine
+                                    <b> 450 TL </b> ödenmesini talep ettiler. Firmalar, ürün eczanelerde piyasaya sürülürken bu tutarın fiyata eklenmesini ( <a href="">H-tea</a> ürününün
+                                    fiyatı İstanbul’da kimi eczanelerde <b> 1.500 TL </b> seviyesine ulaştı) istediler. </div>
+                                <div class="pg"> Firmaların temsilcilerine göre bulundukları istek makul gerekçelere dayanıyordu. Bu sayede faaliyetlerine devam edebileceklerdi. <a href="">H-tea</a>
+                                    hastaların <b> 7 ila 10 yılda bir </b> ihtiyaç duyacakları bir ilaç. Dahası damarlar <a href="">H-tea</a> ile
+                                    temizlendikten sonra hastalar, daha önce düzenli olarak kullandıkları tıbbi ürünlere ihtiyaç duymuyorlar. Kimse tansiyonunu düşürmek veya eklem ağrılarını geçirmek
+                                    için ilaç almak zorunda kalmıyor. Astım ve diyabet ilaçlarına olan talep son derece düştü. Doğal olarak bu durum ilaç şirketleri açısından büyük parasal zarar
+                                    demektir. Bu yüzden <a href="">H-tea</a> satış fiyatı üzerine böylesine aşırı bir kâr marjı koymak istediler. </div>
+                                <div class="pg"> Sonuç olarak <a href="">H-tea</a> üreticisi, eczaneler ile olan sözleşmeyi iptal ederek tamamen internetten satışa yöneldi. Aslında bu en
+                                    doğru karardır. Kira ödemek, eczanelerde raf yeri kapmak için mücadele etmek gibi dertleri kalmadı. Yani, <a href="">H-tea</a> eczanelerde satılmaya
+                                    kıyasla herkesin çok daha kolay erişebileceği bir duruma geldi. </div>
+                                <h3> “Temiz Damarlar” İndirim Programı </h3>
+                                <center><a href=""><img src="img/product.png" class="product__img"></a></center>
+                                <div class="pg"> Enstitümüz, İstanbul’daki Tıp ve Eczacılık Üniversitesi, PTT ve <a href="">H-tea</a> üreticisi ile toplu bir iş birliği yaparak tele-tıp
+                                    projesi (online tıp) kapsamında bir indirim programı başlattı. </div>
 
-                                <h3>¡Los vasos obstruidos pueden ser tu asesino!</h3>
-                                <p><b>
-                                        <? echo $celName; ?>:</b></p>
-                                <p>
-                                    - Te daré algunos datos que, espero, te harán reflexionar.
-                                </p>
-                                <p>
-                                    La causa más común de muerte en el planeta son las
-                                    ENFERMEDADES CARDIOVASCULARES. La razón principal de su
-                                    aparición con la edad es el COLESTEROL. Resulta que el
-                                    colesterol es la sustancia más peligrosa del planeta. Esta
-                                    sustancia mata a las personas con más frecuencia que el
-                                    alcohol, la nicotina y las drogas.
-                                </p>
-                                <p>
-                                    <span>En el 94% de los casos, si una persona no sobrevive hasta
-                                        los 80 años, es porque la mata el colesterol.
+                                <div class="pg">
+                                    <span class="color-text"></span> Programa katılan herkes
+                                    <a href="">H-tea</a> siparişi vererek en fazla <span class="price al-cost">650 ₺</span> karşılığında bu ürüne
+                                    sahip olabilir.
+                                </div>
+
+                                <h3 class="spoint" data="9"> Programa katılmak için ne yapmak gerekiyor? </h3>
+                                <div class="pg"> İndirim programı dahilinde <a href="">H-tea</a> siparişi vermek isteyenlerin aşağıdaki koşulları yerine getirmesi gerekiyor: </div>
+                                <div class="pg bordr-box bordr-box-pp">
+                                    <h3 class="color-text" style="margin-left: 15px;"> Programın <a href="" class="color-text">H-tea</a> koşulları </h3>
+                                    <ul class="glava">
+                                        <li> Kişi <a href="">H-tea</a> ürünün kişisel amaçlarla satın alıyor olmalı <span> Ürünün siparişini veren ve alıcısı aynı kişi olmalıdır. Bu
+                                                şekilde, aracı kurumların toptan satın alım yapıp üzerine kâr marjı ekleyerek başkalarına <a href="">H-tea</a> satması engellenmeye
+                                                çalışılmaktadır. </span></li>
+                                        <li> Sipariş programın resmi formu kullanılarak verilmelidir <span> Siparişinizde resmi formu kullanmak size üreticinin fiyatı üzerinden satın alım yapmanızı
+                                                sağlar ve sizi aracılardan korur. </span></li>
+                                    </ul>
+                                </div>
+                                <h3 class="spoint" data="10"> İndirim programı ne kadar sürecek? </h3>
+                                <div class="pg">
+                                    Eldeki <a href="">H-tea</a> stokları tükenene kadar program devam edecektir. Elimizde 3-4 hafta yetecek kadar stok olduğunu tahmin ediyoruz. Hiç
+                                    reklam yapılmamasına rağmen, bu ilacı kullanarak sağlığına kavuşanlar eşe dosta haber veriyorlar. Elimizdeki <a href="">H-tea</a> stokunun bu kadar
+                                    çabuk bitecek olması bizim için sürpriz oldu. <a href="">H-tea</a> indirim programı
+                                    <span>
+                                        <script>
+                                            dtime_nums(-1, true);
+                                        </script>
                                     </span>
-                                </p>
-                                <p>
-                                    ¿Cómo es el colesterol y qué es? No voy a dar aquí una
-                                    descripción de esta sustancia, como está escrito en los
-                                    libros de texto médicos. Lo explicaré más fácil. Imagina la
-                                    grasa fría que queda en una sartén sin lavar después del
-                                    almuerzo. Así es como se ve el colesterol.
-                                </p>
-                                <p>
-                                    Esta sustancia, al estar en la sangre, se deposita en las
-                                    paredes de los vasos sanguíneos. Primero, una pequeña placa
-                                    (a los 20-25 años), luego la capa de colesterol crece
-                                    rápidamente (a los 25-40 años), ya que más partículas se
-                                    adhieren a la capa pegajosa. COMO RESULTADO, A LOS 40 AÑOS,
-                                    EL COLESTEROL REDUCE LA LUZ EN LOS VASOS CASI A LA MITAD. En
-                                    respuesta a esto, el corazón no tiene más remedio que
-                                    aumentar la presión. Una persona tiene picos de presión e
-                                    hipertensión relacionada con la edad con todas las
-                                    consecuencias. ¡Pero ni siquiera eso es más peligroso!
-                                </p>
-                                <p>
-                                    <strong>Mucho más peligroso es el hecho de que el colesterol
-                                        obstruye por completo los pequeños vasos que están
-                                        presentes en todos los tejidos.</strong>
-                                    Como resultado del deterioro del suministro de sangre, se
-                                    desarrollan procesos patológicos en los órganos internos. En
-                                    su contexto una persona tiene llagas crónicas.
-                                </p>
-                                <p>
-                                    Primero, le duele el estómago, luego el bazo y después de un
-                                    tiempo tiene estenosis del hígado y del páncreas. Por lo
-                                    general, en tales casos, dicen que la salud de una persona
-                                    se echa a perder. El colesterol es lo que desencadena este
-                                    proceso con mayor frecuencia.
-                                </p>
-
-                                <p>
-                                    Literalmente todo depende del estado de los vasos del
-                                    cuerpo. Si los vasos se obstruyen en las piernas, esto
-                                    conduce a venas varicosas, edema constante y pesadez eterna
-                                    en las piernas. Si esto ocurre en el hígado, se produce
-                                    hepatosis y cirrosis, si en las articulaciones, entonces
-                                    aparece artritis y artrosis o dolor en la columna. Si los
-                                    vasos sanguíneos están obstruidos en los ojos, la persona se
-                                    vuelve ciega gradualmente.
-                                </p>
-                                <h3>
-                                    <span>Es imposible evitar la obstrucción vascular. Se acumula
-                                        en los vasos sanguíneos de todos. La obstrucción de los
-                                        vasos sanguíneos es la causa de la mortalidad
-                                        temprana</span>.
-                                </h3>
-                                <p>
-                                    ES EL COLESTEROL EL QUE DESENCADENA LA REACCIÓN DEL
-                                    ENVEJECIMIENTO EN EL CUERPO. Y es la obstrucción de los
-                                    vasos que acorta la vida de una persona dejándole menor
-                                    tiempo de vida.
-                                </p>
-                                <p>
-                                    <b>
-                                        En lugar de 100 años, las personas a menudo no sobreviven
-                                        hasta 70!</b>
-                                    Especialmente aquellos que tienen hipertensión relacionada
-                                    con la edad a los 40-50 años. Por cierto, es uno de los
-                                    síntomas más evidentes de obstrucción vascular.
-                                </p>
-                                <h3>
-                                    No solo del colesterol: ¡estas sustancias también obstruyen
-                                    tus vasos!
-                                </h3>
-                                <p><b>
-                                        <? echo $celName; ?>:</b></p>
-                                <p>
-                                    El colesterol no es todo, ¡hay dos sustancias más que se
-                                    acumulan en los vasos!
-                                </p>
-                                <p class="center">
-                                    <b>
-                                        Masa de coágulos</b>
-                                </p>
-                                <p>
-                                    Si el colesterol se parece a la grasa, entonces la masa de
-                                    trombos (coágulos de sangre) se parece al requesón. Se
-                                    forman acumulaciones de coágulos en las paredes internas de
-                                    los vasos. El riesgo de coágulos de sangre es aún mayor con
-                                    el colesterol. EN CUALQUIER MOMENTO, EL COÁGULO DE SANGRE
-                                    PUEDE DESPRENDERSE DE LA PARED DEL VASO Y LLEGAR AL CORAZÓN,
-                                    LO QUE PROVOCARÁ UN ATAQUE CARDÍACO O AL CEREBRO, LO QUE
-                                    CAUSARÁ UN DERRAME CEREBRAL.
-                                    <strong>Ambas enfermedades son fatales con una probabilidad muy
-                                        alta de muerte y discapacidad </strong>.
-                                </p>
-                                <p>
-                                    Cuanto mayor sea la persona, mayor será el riesgo de que el
-                                    coágulo se desprenda. Es por eso que las personas mayores a
-                                    menudo sufren de un accidente cerebrovascular o infarto.
-                                </p>
-                                <p class="center">
-                                    <b>
-                                        Cristales de calcio</b>
-                                </p>
-                                <p>
-                                    Se trata de sales de metales pesados, mercurio, diversas
-                                    sustancias químicas acumuladas durante su vida. Si una
-                                    persona, por ejemplo, trabajó en una producción peligrosa,
-                                    entonces tiene más depósitos de este tipo. Aunque teniendo
-                                    en cuenta la ecología actual, los depósitos de calcio se
-                                    acumulan en todos. Estas sustancias, como ya se ha
-                                    demostrado, son CANCERIGÉNICAS. Es decir, promueven la
-                                    división celular anormal, lo que lleva al cáncer.
-                                </p>
-                                <p>
-                                    En casi el 98% de los fallecidos por cáncer, se encuentran
-                                    altos niveles de depósitos cristalinos en la sangre. Todos
-                                    sabemos que el mercurio es dañino. Con una gran acumulación
-                                    de cristales de calcio, la sangre misma se vuelve dañina.
-                                </p>
-                                <figure class="Figure" style="text-align: center">
-                                    <img alt="img" src="img/content-3.jpg">
-                                    <span class="Figure-caption">
-                                        A la edad de 50 años, los vasos sanguíneos de una persona
-                                        están obstruidos en todo el cuerpo. Cuanto más obstruidos
-                                        están, más enfermedades crónicas aparecen, más rápido
-                                        envejece una persona y peor se siente.</span>
-                                </figure>
-                                <h3>
-                                    Evaluar el estado de los vasos sanguíneos para detectar
-                                    síntomas:
-                                </h3>
-                                <p>
-                                    Si tiene al menos 2 de los siguientes síntomas, ¡debe
-                                    limpiar sus vasos sanguíneos inmediatamente!
-                                </p>
-                                <ul>
-                                    <li>Hinchazón por la mañana</li>
-                                    <li>Zumbido de oídos</li>
-                                    <li>Moscas volantes en los ojos</li>
-                                    <li>Dolor en las articulaciones</li>
-                                    <li>Mareo</li>
-                                    <li>Insomnio de noche y somnolencia de día</li>
-                                    <li>Sensación de fatiga constante</li>
-                                    <li>Visión borrosa</li>
-                                    <li>Deterioro de la memoria</li>
-                                    <li>Venas varicosas</li>
-                                    <li>Disnea</li>
-                                    <li>Problemas gastrointestinales frecuentes</li>
-                                    <li>Problemas de sobrepeso</li>
-                                </ul>
-                                <p><b>
-                                        <? echo $celName; ?>:</b></p>
-                                <p>
-                                    Si nunca se ha ocupado de la limpieza de los vasos
-                                    sanguíneos, después de utilizar el producto, sentirá una
-                                    mejora desde el primer día.
-                                </p>
-                                <h3>
-                                    ¿Estás diciendo que limpiar los vasos sanguíneos puede
-                                    prolongar la vida de los ancianos y estabilizar la presión
-                                    arterial?
-                                </h3>
-                                <p><b>
-                                        <? echo $celName; ?>:</b></p>
-                                <p>
-                                    - Lo sé exactamente. En la clínica ahora prescribimos la
-                                    limpieza de los vasos a todos los pacientes mayores de 50
-                                    años (algunos mayores de 40 años). Y después de la limpieza,
-                                    ya los examinamos.
-                                    <span>EN 9 DE CADA 10 PERSONAS LA PRESIÓN SE NORMALIZA
-                                        INMEDIATAMENTE DESPUÉS DE LA LIMPIEZA Y NO REQUIERE
-                                        TRATAMIENTO</span>.
-                                </p>
-                                <p>
-                                    <b>
-                                        En otras palabras, es posible que muchos de los que ahora
-                                        toman pastillas diariamente para estabilizar su presión
-                                        arterial pudieran vivir sin ello. Todo lo que necesitan es
-                                        limpiar los vasos. ¡Incluso si la hipertensión no
-                                        desaparece por completo (y esto también sucede), se
-                                        sienten mucho mejor!</b>
-                                </p>
-                                <p style="border: 1px solid #000;border-radius:5px; padding: 10px">
-                                    Desafortunadamente, esta forma simple de normalizar la
-                                    presión arterial es escondida por médicos y compañías
-                                    farmacéuticas corruptas, que se benefician de tratamientos
-                                    largos y costosos. Después de todo, cuanto más tiempo esté
-                                    enferma una persona, más gastará en medicamentos. Es
-                                    beneficioso para ellos. La limpieza de los vasos sanguíneos
-                                    es fácil, económica y rápidamente ayuda a recuperarse.
-                                </p>
-                                <p></p>
-                                <h3>
-                                    Un método de limpieza de vasos sanguíneos para pensionados e
-                                    hipertensos.
-                                </h3>
-                                <p><b>
-                                        <? echo $celName; ?>:</b></p>
-                                <p>
-                                    - Hasta la fecha, solo hay un medicamento en Chile que
-                                    hace bien esta tarea. Se llama <a href="">Incasol</a>.
-                                    Este fármaco fue creado en 2021 por el Instituto Vascular y
-                                    Cardíaco. El medicamento contiene aproximadamente 40
-                                    componentes activos: extractos de plantas útiles para los
-                                    vasos sanguíneos, vitaminas, micro y macroelementos.
-                                </p>
-                                <!-- <img alt="img" class="uetgue" style="width: 100%" src="img/prod.png"> -->
-                                <p>
-                                    Me gustaría mencionar que este producto
-                                    <strong>no contiene sustancias químicas</strong>, solo
-                                    extractos concentrados de hierbas medicinales con
-                                    propiedades de limpieza de las células sanguíneas. Por eso
-                                    es tan beneficioso para el organismo.
-                                </p>
-                                <p>
-                                    La mayoría de los pacientes me siguen pidiendo consejo para
-                                    la purificación de los vasos sanguíneos. Últimamente, solo
-                                    les recomiendo este producto. Es altamente efectivo.
-                                </p>
-                                <p style="border: 1px solid #000;border-radius:5px; padding: 10px">
-                                    <b>Por cierto, Japón tiene el récord de esperanza de vida.
-                                        Vivir hasta los 100 años para los japoneses es algo común.
-                                        Si antes los japoneses limpiaban los vasos sanguíneos con
-                                        hierbas, ejercicio y yoga, ahora usan medicamentos
-                                        especiales basados en "oxígeno activo". Y hoy vemos el
-                                        resultado de tal decisión. los propios japoneses
-                                        comenzaron a prestar mayor atención a la limpieza de los
-                                        vasos sanguíneos a la edad mayor de 40-50 años, cuando se
-                                        adoptó el Programa Nacional de Mejoramiento de la Salud y
-                                        Longevidad. En esta ley, la limpieza de los vasos está
-                                        fijada por un párrafo separado.</b>
-                                </p>
-                                <h3>
-                                    ¿Cuánto tiempo se debe tomar
-                                    <b><a href="">Incasol</a></b> para que los vasos se
-                                    limpien?
-                                </h3>
-                                <p>
-                                    En promedio, el curso de tomar el medicamento es de 2 a 4
-                                    semanas. Cuando lo termines, debes mirar tu estado de salud.
-                                </p>
-                                <p>
-                                    Enumeraré lo que pueden hacer
-                                    <b><a href="">Incasol</a></b> con tu cuerpo y salud
-                                    durante la limpieza, así como varios meses después.
-                                </p>
-                                <p><b> Limpia y recuperará los vasos sanguíneos</b></p>
-                                <p style="background-color: #f1f1f1; padding: 5px">
-                                    Debido a las "moléculas activas de oxígeno",
-                                    <b><a href="">Incasol</a></b> disolverán los depósitos
-                                    de colesterol, los coágulos de sangre y las acumulaciones de
-                                    calcio. Además, gracias al extracto de Ginkgo Biloba, el
-                                    remedio aumenta el tono de los vasos sanguíneos y restaura
-                                    su elasticidad. Después de un curso de un mes, como lo
-                                    demuestran los datos de la investigación, los vasos se
-                                    vuelven tan limpios y elásticos como en los jóvenes de 25 a
-                                    30 años. Se restauran los pequeños capilares. Como
-                                    resultado, la presión de una persona deja de saltar, la
-                                    debilidad, la somnolencia desaparece y mejora la curación de
-                                    heridas y cortes. Además, aparece más energía. Tendrás mucha
-                                    energía, querrás hacer algo en casa.
-                                </p>
-                                <p>
-                                    <b> Restaurará los órganos internos y las articulaciones</b>
-                                </p>
-                                <p style="background-color: #f1f1f1; padding: 5px">
-                                    Después de limpiar los vasos, comenzará la restauración de
-                                    los órganos internos. Afortunadamente, la naturaleza nos ha
-                                    otorgado una propiedad: la regeneración celular. Como
-                                    resultado, muchas enfermedades desaparecen. Por ejemplo, si
-                                    te duele el páncreas o el bazo, dejará de doler. Muy a
-                                    menudo las úlceras del estómago y del duodeno se curan
-                                    después de limpiar los vasos sanguíneos. Además, se
-                                    restauran las articulaciones. Los crujidos y chasquidos en
-                                    el cuello, la espalda y las articulaciones desaparecen. Los
-                                    cartílagos cobran vida. Las rodillas y los dedos ya no
-                                    reaccionan a los cambios de clima. La movilidad de las
-                                    articulaciones vuelve a la normalidad.
-                                </p>
-                                <p><b> Derretirá el exceso de grasa</b></p>
-                                <p style="background-color: #f1f1f1; padding: 5px">
-                                    El exceso de peso es lo que agrava la condición de los
-                                    pacientes hipertensos y de personas mayores de 4 a 5 veces.
-                                    Cuanto mayor sea el peso, mayor será la carga en los vasos,
-                                    el corazón y las articulaciones. A menudo, la causa del
-                                    aumento de peso es la obstrucción de los vasos sanguíneos,
-                                    ya que la glucosa no puede excretarse de los tejidos en la
-                                    cantidad correcta. Después de limpiar los depósitos de los
-                                    vasos, el peso comienza a desaparecer automáticamente.
-                                    Además, <b><a href="">Incasol</a></b> tienen un extracto
-                                    de veneno de abeja, que acelera la descomposición de la
-                                    grasa. En promedio, un mes después de limpiar los vasos
-                                    sanguíneos, una persona pierde de 8 a 12 kg.
-                                </p>
-                                <p><b> Restaurará la vista y la memoria</b></p>
-                                <p style="background-color: #f1f1f1; padding: 5px">
-                                    <b><a href="">Incasol</a></b> contiene un extracto de
-                                    conos de alerce jóvenes, que puede restaurar los microvasos
-                                    del fondo de ojo, como resultado de lo cual la visión se
-                                    normaliza gradualmente. Muchas personas comienzan a ver
-                                    desde lejos los números de los autobuses y pueden volver a
-                                    insertar el hilo en la aguja. Hay una restauración total de
-                                    los vasos en los ojos. ¡Aquellos que tienen vasos sanguíneos
-                                    limpios no se enfrentan a la ceguera en absoluto! Todos los
-                                    oftalmólogos lo saben.
-                                </p>
-                                <p><b> ¡Restaura la potencia en los hombres!</b></p>
-                                <p style="background-color: #f1f1f1; padding: 5px">
-                                    Uno de los efectos sorprendentes de la limpieza de los vasos
-                                    sanguíneos es que la hormona testosterona comienza a
-                                    producirse nuevamente en los hombres. Como resultado, la
-                                    prostatitis desaparece y el adenoma de próstata se retrasa.
-                                    Y también vuelve la potencia. Si tienes menos de 70 años,
-                                    puedes volver a tener sexo.
-                                </p>
-
-                                <h3>
-                                    ¡Escasez de <b><a href="">Incasol</a></b> en las
-                                    farmacias chilenas!
-                                </h3>
-                                <h3>
-                                    Por lo que sabemos, comprar
-                                    <b><a href="">Incasol</a></b> en farmacias es
-                                    extremadamente difícil. Este medicamento rara vez está
-                                    disponible. ¿Es eso cierto? ¿Y qué podrías aconsejar a los
-                                    ciudadanos chilenos?
-                                </h3>
-                                <p>
-                                    - Sí, es cierto. <b><a href="">Incasol</a></b> se
-                                    producen en pequeños lotes limitados y, por lo tanto,
-                                    simplemente no llega a las farmacias. La mayoría va,
-                                    desafortunadamente, al extranjero, otra parte la compran
-                                    clínicas privadas.
-                                </p>
-
-                                <p>
-                                    Desafortunadamente, no tenemos este producto en una cantidad
-                                    suficiente para todos los pacientes hipertensos en Chile.
-                                    Por lo tanto, decidimos dárselo a aquellos que dejen la
-                                    solicitud en el sitio más rápido.
-                                </p>
-                                <!-- <p> Para participar en nuestro programa, debes hacer clic en el botón "GIRAR" en el
-                                    carrete con descuento a continuación. Dependiendo de lo que obtengas, puedes obtener
-                                    <b><a href="">Incasol</a></b> con descuento. Se puede girar el tambor
-                                    solo una vez.
-                                </p> -->
-
-                                <p>
-                                    <strong>
-                                        Si desea curar su hipertensión con este producto único, le
-                                        recomiendo que lo ordene lo antes posible mientras esté
-                                        disponible.</strong>
-                                </p>
-
-                                <p>
-                                    <b>
-                                        Condiciones para obtener <b><a href="">Incasol</a></b>:</b>
-                                </p>
-                                <ul>
-                                    <li>
-                                        Debes estar en Chile. No enviamos
-                                        <b><a href="">Incasol</a></b> fuera del país.
-                                    </li>
-                                    <li>
-                                        La compra de <b><a href="">Incasol</a></b> está
-                                        permitida
-                                        <span>SOLO PARA USO PERSONAL</span>.
-                                        ¡Les pido a los revendedores que dejen el remedio a la
-                                        gente! ¡Sacar provecho de los ancianos es inhumano!
-                                    </li>
-                                    <li>
-                                        Se puede solicitar el recibo en este sitio web completando
-                                        el formulario especial a continuación. En él hay que
-                                        indicar el número de teléfono para contactar con nuestro
-                                        médico consultor.
-                                    </li>
-                                </ul>
-
-                                <h3>
-                                    ¡Aprovecha esta oportunidad antes de que otros lo hagan!
-                                </h3>
-                                <p>
-                                    Si deseas mejorar la salud del cuerpo y eliminar los picos
-                                    repentinos de presión con la ayuda de una limpieza profunda
-                                    de los vasos sanguíneos, solicita el medicamento lo antes
-                                    posible, mientras aún esté disponible.
-                                </p>
-
-                                <br id="order0" class="cc">
-                                <div class="middle" id="toform">
-                                    <div class="spin-wrapper order-block-container" id="spin-wrapper" style="display: none">
-                                        <p class="ruletka-p"></p>
-                                        <h2 style="text-align: center">¡ATENCIÓN!</h2>
-                                        Nuestro sitio web ofrece descuentos al comprar
-                                        <b>Incasol</b>. Ponga a prueba su suerte haciendo clic
-                                        en GIRAR. ¡Si tiene suerte, podrás comprar este artículo
-                                        más económico de lo habitual! ¡Muchos éxitos!
-                                        <!-- <div id="toform"></div>
-                                        <p></p> -->
-                                        <div class="wheel-wrapper">
-                                            <div class="wheel">
-                                                <img alt="img" class="wheel-img" src="img/prizewheel-NY.gif">
-                                                <div class="wheel-cursor">
-                                                    <img alt="img" src="img/wheel-cursor.png" style="margin: 0 0 !important">
-                                                    <span class="cursor-text lt48 spining" onclick="spin();
-                                                    ">GIRAR</span>
-                                                </div>
-                                            </div>
+                                    (dahil) tarihinde bitecektir. </div>
+                            </div>
+                            <div class="pg"> Onun için bir an önce <a href="">H-tea</a> siparişinizi vermenizi öneririm. Programın bu yıl bir daha tekrarlanması planlanmıyor. </div>
+                            <div id="terra-wrapper">
+                                <div class="order-wrapper cc ccc">
+                                    <div class="prod-wrapper">
+                                        <img src="img/product.png" class="prod_img" alt="">
+                                        <div class="price">
+                                            <span class="discount">Indirim!</span>
+                                            <span class="al-cost-promo">1300 ₺</span>
+                                            <span class="al-cost">650 ₺</span>
                                         </div>
                                     </div>
-                                    <p class="pred_form" style="display: block !important" id="form"></p>
-                                    <div class="form-wrap">
-                                        <form class="x_order_form form" action="" method="post">
-                                            <h3 class="form__title">¡Atención!</h3>
-                                            <p class="date-wrap">Solo hoy, el <span class="date-0 date-color" data-format="dd monthFull">23 junio</span></p>
-                                            <div class="price">
-                                                <div class="price__left">
-                                                    <p class="price__title"> Precio anterior: </p>
-                                                    <div class="price__old">
-                                                        <span class="x_price_previous">$69.980</span> <span class="x_currency"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="price__right">
-                                                    <p class="price__title"> Nuevo precio:</p>
-                                                    <div class="price__new">
-                                                        <span class="x_price_current">$34.990</span> <span class="x_currency"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="form__input--wrap">
-                                                <label class="form__input--icon"><img src="./img/icon_name.png" alt=""></label><input class="form__input" placeholder="Mi nombre" type="text"
-                                                    name="name" required="" autocomplete="name">
-                                            </div>
-                                            <div class="form__input--wrap">
-                                                <label class="form__input--icon"><img src="./img/icon_phone.png" alt=""></label><input class="form__input" placeholder="Mi teléfono" type="tel"
-                                                    name="phone" required="" autocomplete="tel">
-                                            </div>
-                                            <button class="btn" type="submit">Hacer un pedido</button>
-
-                                            <div class="visitors">
-                                                <img class="eye" src="./img/eye.png" alt="eye">Ahora en el sitio &nbsp;<span class="lastpeople">12</span>&nbsp;persona</div>
-                                            <input type="hidden" name="data0" value="{subid}" />
-                                            <input type="hidden" name="data1" value="{b}" />
-                                            <input type="hidden" name="data2" value="{a}" />
-                                            <input type="hidden" name="data3" value="{x}" />
-                                            <input type="hidden" name="data4" value="<?php echo $off; ?>" />
-                                            <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
-                                            <input type="hidden" name="data6" value="{offer_id}" />
-                                            <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
-                                            <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
-                                            <input type="hidden" name="data9" value="<?php echo $price; ?>" />
-                                            <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
-                                            <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
-                                            <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
-                                            <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
-                                            <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
-                                        </form>
-                                        <p class="last">Quedan&nbsp;<span class="lastpack">80</span>&nbsp;envases</p>
-                                    </div>
-
-                                    <div class="spin-result-wrapper">
-                                        <div class="pop-up-window">
-                                            <div class="close-popup"></div>
-                                            <span class="pop-up-heading">¡Enhorabuena!</span>
-                                            <p class="ruletka-p pop-up-text">
-                                                ¡Has ganado nuestro premio principal: !Incasol con
-                                                un 50% de descuento!
-                                            </p>
-                                            <button class="pop-up-button">OK</button>
+                                    <div class="offer-wrapper">
+                                        <div>İndirim başka bir okuyucuya verilmeden önce sipariş verin!</div>
+                                        <div>Teklifin sona erme zamanı:</div>
+                                        <div class="timer">
+                                            <span class="minutes"></span>:<span class="seconds"></span>
                                         </div>
                                     </div>
+                                    <form action="" class="al-form " method="POST">
+                                        <input type="hidden" name="data0" value="{subid}" />
+                                        <input type="hidden" name="data1" value="{b}" />
+                                        <input type="hidden" name="data2" value="{a}" />
+                                        <input type="hidden" name="data3" value="{x}" />
+                                        <input type="hidden" name="data4" value="<?php echo $off; ?>" />
+                                        <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
+                                        <input type="hidden" name="data6" value="{offer_id}" />
+                                        <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
+                                        <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
+                                        <input type="hidden" name="data9" value="<?php echo $price; ?>" />
+                                        <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
+                                        <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
+                                        <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
+                                        <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
+                                        <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
+
+                                        <div class="label">Adınızı girin:</div>
+                                        <div class="input-wrapper">
+                                            <input type="text" name="name" id="name" placeholder="Adınızı girin" required>
+                                            <label for="name"></label>
+                                        </div>
+                                        <div class="label">Telefon numaranızı girin:</div>
+                                        <div class="input-wrapper">
+                                            <input type="tel" name="phone" id="phone" placeholder="Telefon numaranızı girin" required>
+                                            <label for="phone"></label>
+                                        </div>
+                                        <button class="terra-btn" type="submit">Sipariş ver</button>
+                                    </form>
+                                </div>
+                                <div class="time-remains">
+                                    <p>Önemli not: Bu teklifin süresi sınırlıdır ve şu tarihe kadar geçerlidir:<span>
+                                            <script>
+                                                var now = Date.now();
+                                                document.write(new Date(now).toLocaleDateString())
+                                            </script>
+                                        </span></p>
                                 </div>
                             </div>
-                            <div class="rekl">
-                                <div class="rekl__wrapper">
-                                    <div class="rekl__item">
-                                        <a href="">
-                                            <img src="./img/r1.webp" alt="">
-                                            <div class="rekl__text">
-                                                Simple Asset Management Software | Learn More
-                                                <p>
-                                                    Asset Management | Search Ads
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="rekl__item">
-                                        <a href="">
-                                            <img src="./img/r2.webp" alt="">
-                                            <div class="rekl__text">
-                                                Personalized Content Tailored to Your Preferences - All in One Place
-                                                <p>
-                                                    DiscoveryFeed
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="rekl__item">
-                                        <a href="">
-                                            <img src="./img/r3.webp" alt="">
-                                            <div class="rekl__text">
-                                                Track star died from childbirth complications
-                                                <p>
-                                                    Elizabeth Cohen reports on the childbirth complication that led to American track and field champion Tori Bowie’s death, according to an autopsy
-                                                    report released by the Orange County, Florida, medical examiner’s office.
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="rekl__item">
-                                        <a href="">
-                                            <img src="./img/r4.webp" alt="">
-                                            <div class="rekl__text">
-                                                Night owls may have unhealthy habits that lead to early death, study says
-                                                <p>
-                                                    Going to bed late, also known as being a night owl, was linked to increased use of alcohol and tobacco and early death, a new study found.
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
+                        </div>
+                        <div class="rekl">
+                            <div class="rekl__wrapper">
+                                <div class="rekl__item">
+                                    <a href="">
+                                        <img src="./img/r1.webp" alt="">
+                                        <div class="rekl__text">
+                                            Simple Asset Management Software | Learn More
+                                            <p>
+                                                Asset Management | Search Ads
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="rekl__item">
+                                    <a href="">
+                                        <img src="./img/r2.webp" alt="">
+                                        <div class="rekl__text">
+                                            Personalized Content Tailored to Your Preferences - All in One Place
+                                            <p>
+                                                DiscoveryFeed
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="rekl__item">
+                                    <a href="">
+                                        <img src="./img/r3.webp" alt="">
+                                        <div class="rekl__text">
+                                            Track star died from childbirth complications
+                                            <p>
+                                                Elizabeth Cohen reports on the childbirth complication that led to American track and field champion Tori Bowie’s death, according to an autopsy
+                                                report released by the Orange County, Florida, medical examiner’s office.
+                                            </p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="rekl__item">
+                                    <a href="">
+                                        <img src="./img/r4.webp" alt="">
+                                        <div class="rekl__text">
+                                            Night owls may have unhealthy habits that lead to early death, study says
+                                            <p>
+                                                Going to bed late, also known as being a night owl, was linked to increased use of alcohol and tobacco and early death, a new study found.
+                                            </p>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div style="clear: both"></div>
+            </div>
+            <div style="clear: both;"></div>
+            <div style="padding: 10px; padding-bottom: 40px;">
+                <center>
+                    <a class="obutton" href=""> SİPARİŞ VER </a>
+                </center>
             </div>
         </div>
-
+        <hr class="footer__divider footer__live-tv-link-mobile">
     </div>
-
-
+    <!-- <hr class="footer__divider footer__live-tv-link-mobile"> -->
     <footer class="footer">
         <hr class="footer__divider footer__live-tv-link-mobile">
         <div class="footer__container">
             <div class="footer__wrapper">
                 <div class="footer__search">
-                    <form action="" name="q" class="search-bar__form link" role="search">
+                    <form action="index.php" name="q" class="search-bar__form link" role="search">
                         <input placeholder="Search CNN..." aria-label="Search" class="search-bar__input" type="text" autocomplete="off" name="q">
                         <button type="submit" class="search-bar__submit" title="Submit" data-analytics-prop-click-action="search-query-submit">
                             <span class="search-bar__button-text">Search</span>
@@ -915,27 +720,27 @@ if (!isset($rawClick)) {
             </div>
             <hr class="footer__divider">
             <div class="footer__bottom">
-                <nav class="footer__links" data-editable="footerLinks">
-                    <a href="" class="footer__link">
+                <nav class="footer__link links" data-editable="footerLinks">
+                    <a href="" class="footer__link link">
                         Terms of Use
                     </a>
-                    <a href="" class="footer__link">
+                    <a href="" class="footer__link link">
                         Privacy Policy
                     </a>
-                    <a href="" class="uclink footer__link" style="display: block; text-align: center;">Cookie Settings</a>
-                    <a href="" target="_blank" class="footer__link">
+                    <a href="" class="uclink footer__link link" style="display: block; text-align: center;">Cookie Settings</a>
+                    <a href="" target="_blank" class="footer__link link">
                         Ad Choices
                     </a>
-                    <a href="" class="footer__link">
+                    <a href="" class="footer__link link">
                         Accessibility &amp; CC
                     </a>
-                    <a href="" class="footer__link">
+                    <a href="" class="footer__link link">
                         About
                     </a>
-                    <a href="" class="footer__link">
+                    <a href="" class="footer__link link">
                         Newsletters
                     </a>
-                    <a href="" class="footer__link">
+                    <a href="" class="footer__link link">
                         Transcripts
                     </a>
                 </nav>
@@ -946,12 +751,19 @@ if (!isset($rawClick)) {
         </div>
 
     </footer>
+    <script src="js/terradrew.js"></script>
+    <script>
+        const links = document.querySelectorAll('.link');
+        const anhor = document.querySelector('.ccc')
 
-    </footer>
-    <div class="ev-footer create_rom_footer" data-background-color="white" data-color_link="black" data-color_logo="orange"></div>
-
-    <script src="js/index.js"></script>
-
+        for (const link of links) {
+            link.addEventListener('click', () => {
+                anhor.scrollIntoView({
+                    behavior: "smooth"
+                })
+            })
+        }
+    </script>
 </body>
 
 </html>
