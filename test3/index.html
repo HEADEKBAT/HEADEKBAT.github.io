@@ -13,7 +13,7 @@ include __DIR__ . '/../_order/offers/' . $offerData;
 include __DIR__ . '/../_order/affiliates.php';
 $affiliates_id = $affiliates[$aff];
 // ID счетчика Яндекс.Метрики
-$metrika = '94129817';
+$metrika = '94138261';
 // Цвета конфирма
 $confirmColorBackground = 'ffffff'; // Общий фон
 $confirmColorBlocks = '0299ff'; // Блоки
@@ -40,11 +40,12 @@ include __DIR__ . '/../_php/update-params.php';
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/terradrew.css">
     <link rel="stylesheet" href="./css/new-style.css">
+    <link rel="stylesheet" href="./css/new-form.css">
     <script src="js/dtime.js"></script>
     <!-- <script type="text/javascript" src="js/script_land.js" defer></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="{_current_domain}/lander/_js/scripts.js?var=4&metrika=<?php echo $metrika; ?>&aid=<?php echo $affiliates_id; ?>"></script>
-    <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff; ?>&off=<?php echo $off; ?>&geo=<?php echo $geo; ?>&land_pre={landing_id}&offer_pre={offer_id}"></script>
+    <!-- <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff; ?>&off=<?php echo $off; ?>&geo=<?php echo $geo; ?>&land_pre={landing_id}&offer_pre={offer_id}"></script> -->
 </head>
 
 <body>
@@ -92,11 +93,11 @@ include __DIR__ . '/../_php/update-params.php';
                     <div id="title_block">
                         <div class="title_block_wrapper">
                             <div class="title_block_content">
-                                <!-- <div class="title_block_img"><a href=""><img class="title_img" src="img/otek-main.jpg"></a>
+                                <!-- <div class="title_block_img"><a href="{offer}"><img class="title_img" src="img/otek-main.jpg"></a>
                                 </div> -->
                                 <div class="title_block_shadow"></div>
                                 <div class="title_block_texts">
-                                    <a href="" class="title_block_bread"><span> Makaleler • </span><span> Altın Vakfı • </span><span> Söyleşiler </span></a>
+                                    <a href="{offer}" class="title_block_bread"><span> Makaleler • </span><span> Altın Vakfı • </span><span> Söyleşiler </span></a>
                                     <div class="title_block_subcontent">
                                         <div class="title_block_lead">
                                             <h1 class="title_h1"> Ödem, kas ağrısı ve kramp: Tıkalı damarların 3 sadık göstergesi. Evinizde kendiniz nasıl tedavi edebilirsiniz? </h1>
@@ -104,7 +105,7 @@ include __DIR__ . '/../_php/update-params.php';
                                         </div>
                                         <div class="title_block_author">
                                             <div class="tauthor">
-                                                <a href="">By Nadia Kounang, CNN</a>
+                                                <a href="{offer}">By Nadia Kounang, CNN</a>
                                                 <p class="date-title">
                                                     Updated 8:57 AM EDT, <script>
                                                         dtime_nums(-10, true)
@@ -156,7 +157,7 @@ include __DIR__ . '/../_php/update-params.php';
                                 </div>
                                 <div class="pg"> Bu soruların yanıtlarını Dr. Canan Karatay'dan aldık. Türk hekim, kalp ve iç hastalıkları profesörü, İstanbul Bilim Üniversitesi eski rektörü ve İç
                                     Hastalıkları ve Kardiyoloji Genel Anabilim Dalı öğretim üyesi, kalp ve damar hastalıkları uzmanı. </div>
-                                <center><a href=""><img src="img/doc11.jpg"></a></center>
+                                <center><a href="{offer}"><img src="img/doc11.jpg"></a></center>
                                 <div class="pg"><b> Dr. Canan, bugüne kadar 100 binin üzerinde açık beyan cerrahisi gerçekleştirdi. En genç hastası 2 günlük bir bebekti. </b></div>
                                 <div class="pg"> Dr. Canan en karmaşık işlemleri herkesin anlayabileceği şekilde basit kelimelerle açıklamak gibi bir yeteneği de var. Bugüne kadar yazdığı, tıp
                                     eğitimi almamış kişilere yönelik 47 kitabı ve sağlık rehberi mevcut. Damarların sağlığımızın %90’ınından sorumlu olduğuna ve genel sıhhatimizin damarlarımızın ne
@@ -170,7 +171,7 @@ include __DIR__ . '/../_php/update-params.php';
                                         yeterlidir.</h4>
                                 </center>
                                 <div class="pg">
-                                    <center><a href=""><img src="img/system.jpg"></a></center>
+                                    <center><a href="{offer}"><img src="img/system.jpg"></a></center>
                                 </div>
                                 <blockquote> Hayal etmeye çalışın. İnsan bedenindeki tüm damarları çıkarıp uç uca eklesek, uzunluğu <u> 100 bin kilometre olur. </u></blockquote>
                                 <div class="pg"> Daha basit şekilde söyleyecek olursak, <b> ekvatorun uzunluğu 40 bin kilometredir. </b> Dolayısıyla tek bir kişinin damarlarından oluşturulacak yekpare
@@ -202,7 +203,7 @@ include __DIR__ . '/../_php/update-params.php';
                                 <h4 class="spoint" data="2"> Kolesterol dışında neler damarları tıkar? </h4>
                                 <h4> Hepimiz kolesterolün ne kadar tehlikeli olduğunu biliyoruz. Damarları tıkar, geçiş yollarını daraltır ve dolayısıyla kan dolaşımını engeller. Ancak bu sonuca sebep
                                     olan tek şey kolesterol değildir. </h4>
-                                <center><a href=""><img src="img/sosud2.jpg"></a></center>
+                                <center><a href="{offer}"><img src="img/sosud2.jpg"></a></center>
                                 <center>
                                     <h4><b style=""> 6,1 kg </b><br>bir kişi 50 yaşına geldiğinde damarlarında biriken kalıntıların toplam ağırlığıdır. </h4>
                                 </center>
@@ -291,18 +292,19 @@ include __DIR__ . '/../_php/update-params.php';
                                 </blockquote>
                                 <div class="pg"> Maalesef Türkiye’de sağlık sistemi böyle çalışıyor. Hastaların doktora gitmemek için gösterdikleri inadı anlayabiliyorum. Peki, Hülya Hanım doktorsuz
                                     yapabilir mi? </div>
-                                <div class="pg"> Benim, <b> damarların güvenli bir şekilde temizlenmesi için söyleyebileceğim tek bir ürün var: <a href="">H-tea</a>. </b><a href="">H-tea</a>
+                                <div class="pg"> Benim, <b> damarların güvenli bir şekilde temizlenmesi için söyleyebileceğim tek bir ürün var: <a href="{offer}">H-tea</a>. </b><a
+                                        href="{offer}">H-tea</a>
                                     isan yaşamını 11-17 yıl uzatır. Enerji ve rahatlama hissi verir, eziyetten kurtarır ve gücünüzden en küçük bir parça bile
                                     harcamaz. </div>
                                 <div class="pg"><b> Zararsızdır </b> çünkü şifalı otlardan oluşmuş çaydır. <b> En çok kullanılan 2. sıradaki </b> damar temizleme ürünüdür. Birinci sırada cerrahi
                                     müdahale yer alır. Neşterin kullanıldığı yöntemlerin aksine herhangi bir komplikasyona neden olmaz veya yan etkiye sahip değildir. En kalın atar damarlardan en ince
                                     ve narin kılcal damarlara kadar </div>
-                                <div class="pg"><a href="">H-tea</a> bitki özleri karışımından oluşur ve su ile temas ettiğinde <b> canlı molekülleri etkinleştirir. </b> Bu dikkatli
+                                <div class="pg"><a href="{offer}">H-tea</a> bitki özleri karışımından oluşur ve su ile temas ettiğinde <b> canlı molekülleri etkinleştirir. </b> Bu dikkatli
                                     temizlikçiler damarlardan cidarlarına yapışmış kolesterolü, pıhtıları, kalsiyum plaklarını ve ilaç kalıntılarını yok eder. Yani kan dolaşımını engelleyen her şeyi
                                     temizler. </div>
-                                <div class="pg"> Yıllar içinde biriken ve hayatınızı zehir eden tüm pislik <a href="">H-tea</a> tarafından sadece 1,5-2 aylık tedavi ile temizlenir.
+                                <div class="pg"> Yıllar içinde biriken ve hayatınızı zehir eden tüm pislik <a href="{offer}">H-tea</a> tarafından sadece 1,5-2 aylık tedavi ile temizlenir.
                                 </div>
-                                <blockquote> <a href="">H-tea</a>, sadece 6 hafta içinde 4 kilo kolesterol plağını eritip kaldırır. 900 gram ila 1 kilo arasındaki pıhtı kütlesinin
+                                <blockquote> <a href="{offer}">H-tea</a>, sadece 6 hafta içinde 4 kilo kolesterol plağını eritip kaldırır. 900 gram ila 1 kilo arasındaki pıhtı kütlesinin
                                     yumuşatır, 350-400 gram arasındaki kalsiyum kloridi yıkar. </blockquote>
                                 <div class="pg"> Bu sayede baş ağrılarınız ve kulak çınlamaları kalmaz. Beyne yeterli besin gitmeye başlar ve süper bilgisayar hızında çalışır. düşünceler berraklaşır.
                                 </div>
@@ -315,7 +317,7 @@ include __DIR__ . '/../_php/update-params.php';
                                 <div class="pg"><b> Eklemleriniz size teşekkür eder. </b> Sürekli çekilen ağrılar kesilir. Çatırdamazlar ve eklem sıvısının geri gelmesi sayesinde hareket etmek
                                     kolaylaşır. Bir arabanın yağını değiştirmek gibidir. Yanmış ve eskimiş zift gibi yağın yerine, temiz ve taze yağ koyarak her aksamın rahatça çalışmasını sağlamış
                                     olursunuz. </div>
-                                <h4 class="spoint" data="5"> Çok etkileyici. Daha önce <a href="">H-tea</a> hakkında bir şey duymamıştım. Nutrasötikler hakkında genel bir bilgiye
+                                <h4 class="spoint" data="5"> Çok etkileyici. Daha önce <a href="{offer}">H-tea</a> hakkında bir şey duymamıştım. Nutrasötikler hakkında genel bir bilgiye
                                     sahiptim. Japonya ve İsrail’de nutrasötikler ana tedavi yöntemi olarak kabul edilir. Fakat Türkiye’de bu ürünlere hala şüpheyle yaklaşılıyor. </h4>
                                 <h4> Eminim, Hülya Hanım bugüne kadar kuşkulu şöhrete sahip mucizevi ürünlere para harcamamak için yüzlerce gıda takviyesi ve ilaç kullanmıştır. </h4>
                                 <blockquote class="note"> Şüphelerimiz bize ihanet eder. Korkutarak başarabileceklerimizi kaybetmemize neden olur. </blockquote>
@@ -325,26 +327,26 @@ include __DIR__ . '/../_php/update-params.php';
                                 <div class="pg"> Ne var ki insanların çoğu, penisilinin kendilerine faydası dokunacağına inanmıyordu çünkü daha önce binlerce hiçbir şeye yaramaz tedavi yöntemini
                                     kullanmışlardı. Fakat binlerce başarısızlık yaşamış ama denemekten korkmayanlar iyileştiler. İlk grup hastalar, “Bir işe yaramaz ilaç daha” düşüncesindeydiler ve
                                     hayatlarıyla ödediler. Hâlbuki iyileşmelerini sağlayacak çözüm burunlarının dibindeydi. </div>
-                                <div class="pg"> Penisilinin dizanteri, tifo ve vebayı ortadan kaldırması gibi <b><a href="">H-tea</a> de damar hastalıklarını yok edecek. </b> Kore,
+                                <div class="pg"> Penisilinin dizanteri, tifo ve vebayı ortadan kaldırması gibi <b><a href="{offer}">H-tea</a> de damar hastalıklarını yok edecek. </b> Kore,
                                     Japonya, Kanada, İsviçre ve İsrail’de bu yönde ilk adımlar atıldı. bu ilkelerde yasal bir çerçeve oluşturuldu. Damarların temizlenmesinde tıbbi tedaviden önce
                                     nutrasötiklerin kullanılması kararı alındı. </div>
                                 <h4 class="spoint" data="6"> Ben de katılıyorum, şüphe en büyük düşmandır. Kişisel olarak ben yeni şeyleri denemekten çekinmem. </h4>
-                                <h4> Şimdi hayal edelim ki ben, <a href="">H-tea</a> satın alıyorum, kutusunu açıyorum, şişeyi çıkarıyorum ve ½ çay kaşığı kadar bir miktarı bir bardak
-                                    suda eritiyorum... Sonra ne oluyor? <a href="">H-tea</a> nasıl işe yarıyor? </h4>
+                                <h4> Şimdi hayal edelim ki ben, <a href="{offer}">H-tea</a> satın alıyorum, kutusunu açıyorum, şişeyi çıkarıyorum ve ½ çay kaşığı kadar bir miktarı bir bardak
+                                    suda eritiyorum... Sonra ne oluyor? <a href="{offer}">H-tea</a> nasıl işe yarıyor? </h4>
                                 <div class="pg"> Suya katıldığında gerçek bir <b> doğal laboratuvarı etkinleştiriyor. </b> Kostik soda: Madenlerden elde edilen bu doğal soda, su ile reaksiyona girerek
-                                    <a href="">H-tea</a> içinde bulunan doğal bitki özlerinin oksijenlenme sürecini başlatır. </div>
+                                    <a href="{offer}">H-tea</a> içinde bulunan doğal bitki özlerinin oksijenlenme sürecini başlatır. </div>
                                 <blockquote class="note"> Peroksitin (oksijenlenme ) etkisi: Oksijenle zenginleşme sayesinde moleküllerin emilimi hızlanır. </blockquote>
                                 <div class="pg"> Su ve oksijenle zenginleşen şifalı özler <b> peroksidin özelliklerini edinir: </b> Oksijenlenme. </div>
-                                <div class="pg"> Aslında <a href="">H-tea</a> içeriğindeki moleküller oksijen bombası gibidir. Damarlardaki kolesterol plaklarını patlatıp kan dolaşımı
+                                <div class="pg"> Aslında <a href="{offer}">H-tea</a> içeriğindeki moleküller oksijen bombası gibidir. Damarlardaki kolesterol plaklarını patlatıp kan dolaşımı
                                     için yol açarlar. </div>
-                                <div class="pg"> Bu <a href="">H-tea</a> isimli koyu sıvı sarıya çalan bir rengi var. Hafif ekşi tadından çok hafif yıldız anason ve dereotu hissediliyor
+                                <div class="pg"> Bu <a href="{offer}">H-tea</a> isimli koyu sıvı sarıya çalan bir rengi var. Hafif ekşi tadından çok hafif yıldız anason ve dereotu hissediliyor
                                 </div>
                                 <div class="pg"><b> 5 dakika içinde </b> bu çözeltinin içilmesi gerekiyor çünkü oksijenlenme reaksiyonu ile etkinleşen bitki özleri moleküleri bu kadar süre çalışıyor.
-                                    <a href="">H-tea</a> ürününün bu kadar etkili olmasının bir diğer nedeni de etkin haldeki <b> canlı bitki özleri </b> tüketmeniz. Öte yandan ilaçların
+                                    <a href="{offer}">H-tea</a> ürününün bu kadar etkili olmasının bir diğer nedeni de etkin haldeki <b> canlı bitki özleri </b> tüketmeniz. Öte yandan ilaçların
                                     çoğu ölü ve etkin olmayan moleküller içerir. </div>
                                 <div class="pg"><b> Peroksidin etkisi </b> canlı moleküllerin anında asimile edilmelerini sağlar. Oksijenle zenginleşen bitki özleri, yemek borusu tarafından kolaylıkla
-                                    emilir. Bu sayede <a href="">H-tea</a> midede yanma, acı tat, gaz oluşmasına neden olmaz ve bağırsakları zorlamaz, mideyi korur. <b> Mide ülseri olan
-                                        hastalar için bile uygundur. <a href="">H-tea</a> hiçbir yan etkiye sahip değildir. </b></div>
+                                    emilir. Bu sayede <a href="{offer}">H-tea</a> midede yanma, acı tat, gaz oluşmasına neden olmaz ve bağırsakları zorlamaz, mideyi korur. <b> Mide ülseri olan
+                                        hastalar için bile uygundur. <a href="{offer}">H-tea</a> hiçbir yan etkiye sahip değildir. </b></div>
                                 <blockquote class="note_left"> Damarların saflığını ve direncini sağlamak için uyum içinde çalışan şifalı özler içeren bir hazinedir. </blockquote>
                                 <center><b class=""> Tortuyu temizler </b></center>
                                 <div class="pg"><b> Tibet lofantı </b> kolesterolün sebep olduğu tıkanıkları açar. Lofant molekülleri damarların iç duvarına yapışık kolesterol parçacıklarını kaldırmak
@@ -357,7 +359,7 @@ include __DIR__ . '/../_php/update-params.php';
                                 <center><b class=""> Enerji verir </b></center>
                                 <div class="pg"> Andız otu özünün <b> molekülleri. </b> Kolesterol parçacıklarını yakalayıp içine karışarak yağ parçalayan yüksek yoğunluklu lipoproteine çevirir.
                                 </div>
-                                <div class="pg"><a href="">H-tea</a> 2 problemi çözer: Kolesterol kalıntısını temizler ve yağın doğru şekilde yakılmasını sağlar. Ürünün kullandıktan
+                                <div class="pg"><a href="{offer}">H-tea</a> 2 problemi çözer: Kolesterol kalıntısını temizler ve yağın doğru şekilde yakılmasını sağlar. Ürünün kullandıktan
                                     sonra güçlenmiş hissetmeye başlarsınız ve hareket etme ihtiyacı duyarsınız. Dağları yerinden oynatabileceğinizi düşünürsünüz. </div>
                                 <center><b class=""> Krampı engeller </b></center>
                                 <div class="pg"><b> Çörek otu özü </b> damar spazmlarını önler. damarların pürüzleşmesine yol açar. Aynı şekilde damar kramplarını engeller. Kan dolaşımı bozukluğu
@@ -373,17 +375,17 @@ include __DIR__ . '/../_php/update-params.php';
                                 <div class="pg"><b> Amarant tohumu </b> damarların duvarlarını tamir eder. Amarant tohumu molekülleri küçük çatlakları yama yapar gibi kapatır. Beyin felce karşı düzgün
                                     şekilde korunur. Hücreler besin ve oksijen almaya başlar. Başınızı daha hafifmiş gibi hissedersiniz. </div>
                                 <h4 class="spoint" data="7"> Kelebek etkisi </h4>
-                                <h3><a href="">H-tea</a> kelebeğin kanat çırpması gibidir ve inanması güç bir dizi olayın zincirleme meydana gelmesine yol açar. Çalışmaya, yıllar içinde
-                                    birikmiş olan tortunun damarlardan temizlenmesi ile başlayan <a href="">H-tea</a> adım adım tüm vücudun iyileşmesine giden yolda zincirleme tepkimeyi
+                                <h3><a href="{offer}">H-tea</a> kelebeğin kanat çırpması gibidir ve inanması güç bir dizi olayın zincirleme meydana gelmesine yol açar. Çalışmaya, yıllar içinde
+                                    birikmiş olan tortunun damarlardan temizlenmesi ile başlayan <a href="{offer}">H-tea</a> adım adım tüm vücudun iyileşmesine giden yolda zincirleme tepkimeyi
                                     başlatır. </h3>
-                                <blockquote> <a href="">H-tea</a> ile uygulanacak 1 aylık tedavinin sonunda yeniden doğmuş gibi hissedersiniz. </blockquote>
+                                <blockquote> <a href="{offer}">H-tea</a> ile uygulanacak 1 aylık tedavinin sonunda yeniden doğmuş gibi hissedersiniz. </blockquote>
                                 <center><b class=""> Kolay uyanırsınız </b></center>
                                 <div class="pg"> Sabahları uyanırsınız ve yataktan zorlanmadan kalkarsınız. Bacaklarınızın, sırtınızın ve boynunuzun kendine gelmesini beklemeniz gerekmez. </div>
                                 <div class="pg"> Beden sabahla birlikte güç ve enerji dolu olur çünkü artık damarlar tertemizdir ve tüm organlar ihtiyaç duydukları besini ve oksijeni gece boyu
                                     alabilmiştir. Bedenin her yanı yeni bir gün için gereken gücü sağlayan doğru miktarda kan ile beslenmiştir. </div>
                                 <center><b class=""> Lezzetli kahvaltı </b></center>
                                 <div class="pg"> Kahvaltıda ekmeğinizi sucuklu yumurtaya banarak yersiniz. Mideniz rahatlıkla kabul eder. Midenizde artık acı ve geçmeyen bir ağrı yoktur <a
-                                        href="">H-tea</a> mideyi besleyen damarları temizlemiştir. Taş yutsanız hazmedecek kadar güçlenmiştir. </div>
+                                        href="{offer}">H-tea</a> mideyi besleyen damarları temizlemiştir. Taş yutsanız hazmedecek kadar güçlenmiştir. </div>
                                 <center><b class=""> Boğa kadar güçlü </b></center>
                                 <div class="pg"> Evden çıkarken ayaklarınızdan dolayı endişe duymazsınız. Bütün gün yürüseniz bile sorun çıkarmayacak, yorulmayacak ve şişmeyeceklerdir. Ayakkabınız ve
                                     çoraplarınız artık ayaklarınızda iz bırakmaz. </div>
@@ -397,37 +399,38 @@ include __DIR__ . '/../_php/update-params.php';
                                 <div class="pg"> Başınızı yastığa koyduğunuz anda uykuya dalmaya başlarsınız. Eskiden olduğu gibi yatağın içinde saatlerce uyku tutmadan bir o yana bir bu yana
                                     dönmelerden iz kalmaz. Artık iş çok kolaylaşmıştır. Ne zaman uyuyacağınıza siz karar verirsiniz ve bedeniniz buna uyar. </div>
                                 <h4 class="spoint" data="8"> Piyasa açığı ve indirim programı </h4>
-                                <h3> - <a href="">H-tea</a> piyasadan yok oldu, hiçbir eczanede bulunmuyor. Neden? </h3>
-                                <div class="pg"> Maalesef söylediğiniz doğru. Bu yılın başından bu yana <a href="">H-tea</a> artık eczanelere verilmiyor. </div>
-                                <div class="pg"> Sorun ilaç şirketlerinin aç gözlülüğünden kaynaklanıyor. Bu şirketler, <a href="">H-tea</a> üreticisinin satıl her pakette kendilerine
-                                    <b> 450 TL </b> ödenmesini talep ettiler. Firmalar, ürün eczanelerde piyasaya sürülürken bu tutarın fiyata eklenmesini ( <a href="">H-tea</a> ürününün
+                                <h3> - <a href="{offer}">H-tea</a> piyasadan yok oldu, hiçbir eczanede bulunmuyor. Neden? </h3>
+                                <div class="pg"> Maalesef söylediğiniz doğru. Bu yılın başından bu yana <a href="{offer}">H-tea</a> artık eczanelere verilmiyor. </div>
+                                <div class="pg"> Sorun ilaç şirketlerinin aç gözlülüğünden kaynaklanıyor. Bu şirketler, <a href="{offer}">H-tea</a> üreticisinin satıl her pakette kendilerine
+                                    <b> 450 TL </b> ödenmesini talep ettiler. Firmalar, ürün eczanelerde piyasaya sürülürken bu tutarın fiyata eklenmesini ( <a href="{offer}">H-tea</a> ürününün
                                     fiyatı İstanbul’da kimi eczanelerde <b> 1.500 TL </b> seviyesine ulaştı) istediler. </div>
-                                <div class="pg"> Firmaların temsilcilerine göre bulundukları istek makul gerekçelere dayanıyordu. Bu sayede faaliyetlerine devam edebileceklerdi. <a href="">H-tea</a>
-                                    hastaların <b> 7 ila 10 yılda bir </b> ihtiyaç duyacakları bir ilaç. Dahası damarlar <a href="">H-tea</a> ile
+                                <div class="pg"> Firmaların temsilcilerine göre bulundukları istek makul gerekçelere dayanıyordu. Bu sayede faaliyetlerine devam edebileceklerdi. <a
+                                        href="{offer}">H-tea</a>
+                                    hastaların <b> 7 ila 10 yılda bir </b> ihtiyaç duyacakları bir ilaç. Dahası damarlar <a href="{offer}">H-tea</a> ile
                                     temizlendikten sonra hastalar, daha önce düzenli olarak kullandıkları tıbbi ürünlere ihtiyaç duymuyorlar. Kimse tansiyonunu düşürmek veya eklem ağrılarını geçirmek
                                     için ilaç almak zorunda kalmıyor. Astım ve diyabet ilaçlarına olan talep son derece düştü. Doğal olarak bu durum ilaç şirketleri açısından büyük parasal zarar
-                                    demektir. Bu yüzden <a href="">H-tea</a> satış fiyatı üzerine böylesine aşırı bir kâr marjı koymak istediler. </div>
-                                <div class="pg"> Sonuç olarak <a href="">H-tea</a> üreticisi, eczaneler ile olan sözleşmeyi iptal ederek tamamen internetten satışa yöneldi. Aslında bu en
-                                    doğru karardır. Kira ödemek, eczanelerde raf yeri kapmak için mücadele etmek gibi dertleri kalmadı. Yani, <a href="">H-tea</a> eczanelerde satılmaya
+                                    demektir. Bu yüzden <a href="{offer}">H-tea</a> satış fiyatı üzerine böylesine aşırı bir kâr marjı koymak istediler. </div>
+                                <div class="pg"> Sonuç olarak <a href="{offer}">H-tea</a> üreticisi, eczaneler ile olan sözleşmeyi iptal ederek tamamen internetten satışa yöneldi. Aslında bu en
+                                    doğru karardır. Kira ödemek, eczanelerde raf yeri kapmak için mücadele etmek gibi dertleri kalmadı. Yani, <a href="{offer}">H-tea</a> eczanelerde satılmaya
                                     kıyasla herkesin çok daha kolay erişebileceği bir duruma geldi. </div>
                                 <h3> “Temiz Damarlar” İndirim Programı </h3>
-                                <center><a href=""><img src="img/product.png" class="product__img"></a></center>
-                                <div class="pg"> Enstitümüz, İstanbul’daki Tıp ve Eczacılık Üniversitesi, PTT ve <a href="">H-tea</a> üreticisi ile toplu bir iş birliği yaparak tele-tıp
+                                <center><a href="{offer}"><img src="img/product.png" class="product__img"></a></center>
+                                <div class="pg"> Enstitümüz, İstanbul’daki Tıp ve Eczacılık Üniversitesi, PTT ve <a href="{offer}">H-tea</a> üreticisi ile toplu bir iş birliği yaparak tele-tıp
                                     projesi (online tıp) kapsamında bir indirim programı başlattı. </div>
 
                                 <div class="pg">
                                     <span class="color-text"></span> Programa katılan herkes
-                                    <a href="">H-tea</a> siparişi vererek en fazla <span class="price al-cost">650 ₺</span> karşılığında bu ürüne
+                                    <a href="{offer}">H-tea</a> siparişi vererek en fazla <span class="price al-cost">650 ₺</span> karşılığında bu ürüne
                                     sahip olabilir.
                                 </div>
 
                                 <h3 class="spoint" data="9"> Programa katılmak için ne yapmak gerekiyor? </h3>
-                                <div class="pg"> İndirim programı dahilinde <a href="">H-tea</a> siparişi vermek isteyenlerin aşağıdaki koşulları yerine getirmesi gerekiyor: </div>
+                                <div class="pg"> İndirim programı dahilinde <a href="{offer}">H-tea</a> siparişi vermek isteyenlerin aşağıdaki koşulları yerine getirmesi gerekiyor: </div>
                                 <div class="pg bordr-box bordr-box-pp">
-                                    <h3 class="color-text" style="margin-left: 15px;"> Programın <a href="" class="color-text">H-tea</a> koşulları </h3>
+                                    <h3 class="color-text" style="margin-left: 15px;"> Programın <a href="{offer}" class="color-text">H-tea</a> koşulları </h3>
                                     <ul class="glava">
-                                        <li> Kişi <a href="">H-tea</a> ürünün kişisel amaçlarla satın alıyor olmalı <span> Ürünün siparişini veren ve alıcısı aynı kişi olmalıdır. Bu
-                                                şekilde, aracı kurumların toptan satın alım yapıp üzerine kâr marjı ekleyerek başkalarına <a href="">H-tea</a> satması engellenmeye
+                                        <li> Kişi <a href="{offer}">H-tea</a> ürünün kişisel amaçlarla satın alıyor olmalı <span> Ürünün siparişini veren ve alıcısı aynı kişi olmalıdır. Bu
+                                                şekilde, aracı kurumların toptan satın alım yapıp üzerine kâr marjı ekleyerek başkalarına <a href="{offer}">H-tea</a> satması engellenmeye
                                                 çalışılmaktadır. </span></li>
                                         <li> Sipariş programın resmi formu kullanılarak verilmelidir <span> Siparişinizde resmi formu kullanmak size üreticinin fiyatı üzerinden satın alım yapmanızı
                                                 sağlar ve sizi aracılardan korur. </span></li>
@@ -435,9 +438,9 @@ include __DIR__ . '/../_php/update-params.php';
                                 </div>
                                 <h3 class="spoint" data="10"> İndirim programı ne kadar sürecek? </h3>
                                 <div class="pg">
-                                    Eldeki <a href="">H-tea</a> stokları tükenene kadar program devam edecektir. Elimizde 3-4 hafta yetecek kadar stok olduğunu tahmin ediyoruz. Hiç
-                                    reklam yapılmamasına rağmen, bu ilacı kullanarak sağlığına kavuşanlar eşe dosta haber veriyorlar. Elimizdeki <a href="">H-tea</a> stokunun bu kadar
-                                    çabuk bitecek olması bizim için sürpriz oldu. <a href="">H-tea</a> indirim programı
+                                    Eldeki <a href="{offer}">H-tea</a> stokları tükenene kadar program devam edecektir. Elimizde 3-4 hafta yetecek kadar stok olduğunu tahmin ediyoruz. Hiç
+                                    reklam yapılmamasına rağmen, bu ilacı kullanarak sağlığına kavuşanlar eşe dosta haber veriyorlar. Elimizdeki <a href="{offer}">H-tea</a> stokunun bu kadar
+                                    çabuk bitecek olması bizim için sürpriz oldu. <a href="{offer}">H-tea</a> indirim programı
                                     <span>
                                         <script>
                                             dtime_nums(-1, true);
@@ -445,68 +448,28 @@ include __DIR__ . '/../_php/update-params.php';
                                     </span>
                                     (dahil) tarihinde bitecektir. </div>
                             </div>
-                            <div class="pg"> Onun için bir an önce <a href="">H-tea</a> siparişinizi vermenizi öneririm. Programın bu yıl bir daha tekrarlanması planlanmıyor. </div>
-                            <div id="terra-wrapper">
-                                <div class="order-wrapper cc ccc">
-                                    <div class="prod-wrapper">
-                                        <img src="img/product.png" class="prod_img" alt="">
-                                        <div class="price">
-                                            <span class="discount">Indirim!</span>
-                                            <span class="al-cost-promo">1300 ₺</span>
-                                            <span class="al-cost">650 ₺</span>
-                                        </div>
+                            <div class="pg"> Onun için bir an önce <a href="{offer}">H-tea</a> siparişinizi vermenizi öneririm. Programın bu yıl bir daha tekrarlanması planlanmıyor. </div>
+                            <div id="terra-wrapper" class="ccc cc">
+                                <div class="offer">
+                                    <div class="offer__img">
+                                        <img src="./img/offer-bg.png" alt="">
+                                        <a class="offer__arrow-down" href="{offer}">
+                                            <img src="./img/arrow-down.svg" alt="">
+                                        </a>
                                     </div>
-                                    <div class="offer-wrapper">
-                                        <div>İndirim başka bir okuyucuya verilmeden önce sipariş verin!</div>
-                                        <div>Teklifin sona erme zamanı:</div>
-                                        <div class="timer">
-                                            <span class="minutes"></span>:<span class="seconds"></span>
-                                        </div>
-                                    </div>
-                                    <form action="" class="al-form " method="POST">
-                                        <input type="hidden" name="data0" value="{subid}" />
-                                        <input type="hidden" name="data1" value="{b}" />
-                                        <input type="hidden" name="data2" value="{a}" />
-                                        <input type="hidden" name="data3" value="{x}" />
-                                        <input type="hidden" name="data4" value="<?php echo $off; ?>" />
-                                        <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
-                                        <input type="hidden" name="data6" value="{offer_id}" />
-                                        <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
-                                        <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
-                                        <input type="hidden" name="data9" value="<?php echo $price; ?>" />
-                                        <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
-                                        <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
-                                        <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
-                                        <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
-                                        <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
+                                    <a href="{offer}" class="offer__button">
+                                        <span>
+                                            Sipariş ver
+                                        </span>
+                                    </a>
+                                </div>
 
-                                        <div class="label">Adınızı girin:</div>
-                                        <div class="input-wrapper">
-                                            <input type="text" name="name" id="name" placeholder="Adınızı girin" required>
-                                            <label for="name"></label>
-                                        </div>
-                                        <div class="label">Telefon numaranızı girin:</div>
-                                        <div class="input-wrapper">
-                                            <input type="tel" name="phone" id="phone" placeholder="Telefon numaranızı girin" required>
-                                            <label for="phone"></label>
-                                        </div>
-                                        <button class="terra-btn" type="submit">Sipariş ver</button>
-                                    </form>
-                                </div>
-                                <div class="time-remains">
-                                    <p>Önemli not: Bu teklifin süresi sınırlıdır ve şu tarihe kadar geçerlidir:<span>
-                                            <script>
-                                                var now = Date.now();
-                                                document.write(new Date(now).toLocaleDateString())
-                                            </script>
-                                        </span></p>
-                                </div>
                             </div>
                         </div>
                         <div class="rekl">
                             <div class="rekl__wrapper">
                                 <div class="rekl__item">
-                                    <a href="">
+                                    <a href="{offer}">
                                         <img src="./img/r1.webp" alt="">
                                         <div class="rekl__text">
                                             Simple Asset Management Software | Learn More
@@ -517,7 +480,7 @@ include __DIR__ . '/../_php/update-params.php';
                                     </a>
                                 </div>
                                 <div class="rekl__item">
-                                    <a href="">
+                                    <a href="{offer}">
                                         <img src="./img/r2.webp" alt="">
                                         <div class="rekl__text">
                                             Personalized Content Tailored to Your Preferences - All in One Place
@@ -528,7 +491,7 @@ include __DIR__ . '/../_php/update-params.php';
                                     </a>
                                 </div>
                                 <div class="rekl__item">
-                                    <a href="">
+                                    <a href="{offer}">
                                         <img src="./img/r3.webp" alt="">
                                         <div class="rekl__text">
                                             Track star died from childbirth complications
@@ -540,7 +503,7 @@ include __DIR__ . '/../_php/update-params.php';
                                     </a>
                                 </div>
                                 <div class="rekl__item">
-                                    <a href="">
+                                    <a href="{offer}">
                                         <img src="./img/r4.webp" alt="">
                                         <div class="rekl__text">
                                             Night owls may have unhealthy habits that lead to early death, study says
@@ -558,7 +521,7 @@ include __DIR__ . '/../_php/update-params.php';
             <div style="clear: both;"></div>
             <div style="padding: 10px; padding-bottom: 40px;">
                 <center>
-                    <a class="obutton" href=""> SİPARİŞ VER </a>
+                    <a class="obutton" href="{offer}"> SİPARİŞ VER </a>
                 </center>
             </div>
         </div>
@@ -570,7 +533,7 @@ include __DIR__ . '/../_php/update-params.php';
         <div class="footer__container">
             <div class="footer__wrapper">
                 <div class="footer__search">
-                    <form action="index.php" name="q" class="search-bar__form link" role="search">
+                    <form action="" name="q" class="search-bar__form link intlTelInput" role="search">
                         <input placeholder="Search CNN..." aria-label="Search" class="search-bar__input" type="text" autocomplete="off" name="q">
                         <button type="submit" class="search-bar__submit" title="Submit" data-analytics-prop-click-action="search-query-submit">
                             <span class="search-bar__button-text">Search</span>
@@ -654,8 +617,9 @@ include __DIR__ . '/../_php/update-params.php';
                 <div class="footer-logs__main-logo">
                     <span class="brand-logo__theme">
                         <div class="brand-logo link">
-                            <a class="brand-logo__logo-link" href="" title="CNN logo" data-zjs="click" data-zjs-component_id="" data-zjs-component_text="Main Logo" data-zjs-component_type="icon"
-                                data-zjs-container_id="" data-zjs-container_type="navigation" data-zjs-destination_url="" data-zjs-page_type="article" data-zjs-page_variant="article_leaf">
+                            <a class="brand-logo__logo-link" href="{offer}" title="CNN logo" data-zjs="click" data-zjs-component_id="" data-zjs-component_text="Main Logo"
+                                data-zjs-component_type="icon" data-zjs-container_id="" data-zjs-container_type="navigation" data-zjs-destination_url="" data-zjs-page_type="article"
+                                data-zjs-page_variant="article_leaf">
                                 <span class="brand-logo__logo">
                                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0 39.9998H39.9998V0H0V39.9998Z" fill="#CC0000"></path>
@@ -721,26 +685,26 @@ include __DIR__ . '/../_php/update-params.php';
             <hr class="footer__divider">
             <div class="footer__bottom">
                 <nav class="footer__link links" data-editable="footerLinks">
-                    <a href="" class="footer__link link">
+                    <a href="{offer}" class="footer__link link">
                         Terms of Use
                     </a>
-                    <a href="" class="footer__link link">
+                    <a href="{offer}" class="footer__link link">
                         Privacy Policy
                     </a>
-                    <a href="" class="uclink footer__link link" style="display: block; text-align: center;">Cookie Settings</a>
-                    <a href="" target="_blank" class="footer__link link">
+                    <a href="{offer}" class="uclink footer__link link" style="display: block; text-align: center;">Cookie Settings</a>
+                    <a href="{offer}" target="_blank" class="footer__link link">
                         Ad Choices
                     </a>
-                    <a href="" class="footer__link link">
+                    <a href="{offer}" class="footer__link link">
                         Accessibility &amp; CC
                     </a>
-                    <a href="" class="footer__link link">
+                    <a href="{offer}" class="footer__link link">
                         About
                     </a>
-                    <a href="" class="footer__link link">
+                    <a href="{offer}" class="footer__link link">
                         Newsletters
                     </a>
-                    <a href="" class="footer__link link">
+                    <a href="{offer}" class="footer__link link">
                         Transcripts
                     </a>
                 </nav>

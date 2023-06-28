@@ -84,25 +84,6 @@ const initWheel = () => {
         }
     }
 
-    // if wheel disabled, display form
-    function checkWheel() {
-        if (!resultWrapper || !spin_wrapper) {
-            order_wrapper.style.display = "block";
-            localStorage.setItem('init', true);
-            setTimerTime()
-            Timer();
-        }
-        if ((!wheel || localStorage.getItem('init') &&
-                localStorage.getItem(urlClean) == urlClean) &&
-            !config.updateTimeRelaod) {
-            localStorage.setItem('init', true);
-            if (spin_wrapper != null) spin_wrapper.style.display = "none";
-            order_wrapper.style.display = "block";
-            Timer();
-        }
-    }
-    // init check wheel
-    checkWheel()
 
 
 
