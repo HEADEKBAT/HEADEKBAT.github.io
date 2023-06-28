@@ -19,8 +19,8 @@
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   margin-bottom: 20px;
-  -webkit-animation: push 1s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
-          animation: push 1s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-animation: puls 1s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+          animation: puls 1s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .offer__arrow-down img {
@@ -48,6 +48,8 @@
   min-height: 40px;
   border-radius: 5px;
   background: #dc240b;
+  -webkit-animation: pulsColor 1s infinite cubic-bezier(0.47, 0, 0.745, 0.715);
+          animation: pulsColor 1s infinite cubic-bezier(0.47, 0, 0.745, 0.715);
   cursor: pointer;
 }
 
@@ -61,7 +63,7 @@
   text-transform: uppercase;
 }
 
-@-webkit-keyframes push {
+@-webkit-keyframes puls {
   0% {
     -webkit-transform: translate(-50%, 0) scale(1);
             transform: translate(-50%, 0) scale(1);
@@ -76,7 +78,7 @@
   }
 }
 
-@keyframes push {
+@keyframes puls {
   0% {
     -webkit-transform: translate(-50%, 0) scale(1);
             transform: translate(-50%, 0) scale(1);
@@ -88,6 +90,30 @@
   100% {
     -webkit-transform: translate(-50%, 0) scale(1);
             transform: translate(-50%, 0) scale(1);
+  }
+}
+
+@-webkit-keyframes pulsColor {
+  0% {
+    background: #dc240b;
+  }
+  50% {
+    background: #dc460b;
+  }
+  100% {
+    background: #dc240b;
+  }
+}
+
+@keyframes pulsColor {
+  0% {
+    background: #dc240b;
+  }
+  50% {
+    background: #dc460b;
+  }
+  100% {
+    background: #dc240b;
   }
 }
 /*# sourceMappingURL=new-form.css.map */
