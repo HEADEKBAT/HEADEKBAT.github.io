@@ -1,30 +1,26 @@
-<!--?php
-// Защита от прямых заходов на ленд
+<?php
+//Тесты
+$celArr = [59]; // Номера селеб через запятую
+$titleArr = [1,2,6]; // Номера заголовков через запятую
+
+//Интеграция
+$offerData = 'incasol---cl---adcombo.php'; // Путь к файлу данных оффера
+$metrika = '93612075'; // ID счетчика Яндекс.Метрики
+$confirmColorBackground = 'ffffff'; // Цвет общего фона конфирма
+$confirmColorBlocks = 'ed6e6f'; // Цвет фона блоков конфирма
+$confirmColorHeaders = '000000'; // Цвет заголовков конфирма
+$confirmColorText = 'fff'; // Цвет текста конфирма
+
+//Не трограть
+include __DIR__ . '/../_assets/versions.php'; // Блок тестирования элементов
+include __DIR__ . '/../_order/offers/' . $offerData;
+include __DIR__ . '/../_order/affiliates.php';
 if (!isset($rawClick)) {
     echo '404';
     exit();
 }
+?>
 
-// Данные по офферу
-$offerData = 'hypercaps---me---leadrock.php';
-include __DIR__ . '/../_order/offers/' . $offerData;
-
-// Получение ID партнерки
-include __DIR__ . '/../_order/affiliates.php';
-$affiliates_id = $affiliates[$aff];
-// ID счетчика Яндекс.Метрики
-$metrika = '93789418';
-// Цвета конфирма
-$confirmColorBackground = 'ffffff'; // Общий фон
-$confirmColorBlocks = 'fffc18'; // Блоки
-$confirmColorHeaders = '000000'; // Заголовки
-$confirmColorText = '000'; // Текст в блоках
-// Блок тестирования элементов
-//include __DIR__ . '/versions.php';
-
-// Обновление параметров клика
-include __DIR__ . '/../_php/update-params.php';
-?-->
 <!DOCTYPE html>
 <html lang="ec" dir="ltr">
 
@@ -33,290 +29,129 @@ include __DIR__ . '/../_php/update-params.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#ffffff">
-    <title>Buy cheap Cardioton. Prices, opinions. Order Cardioton now!</title>
+    <title>Comprar Incasol económica. Precios, opiniones. Libro Incasol Ahora!
+    </title>
     <link rel="icon" href="./img/heart.png" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="{_current_domain}/lander/_js/scripts.js?var=4&metrika=<?php echo $metrika;?>&aid=<?php echo $affiliates_id;?>"></script>
-    <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff;?>&off=<?php echo $off;?>&geo=<?php echo $geo;?>&land_pre={landing_id}&offer_pre={offer_id}"></script>
-    <link rel="stylesheet" href="./css/new_css.css">
+    <script src="{_current_domain}/lander/_js/scripts.js?var=4&metrika=<?php echo $metrika; ?>&aid=<?php echo $affiliates_id; ?>"></script>
+    <script src="{_current_domain}/lander/_js/back.js?x={x}&b={b}&a={a}&aff=<?php echo $aff; ?>&off=<?php echo $off; ?>&geo=<?php echo $geo; ?>&land_pre={landing_id}&offer_pre={offer_id}"></script>
+    <link rel="stylesheet" href="css/style.css?v=1">
     <link rel="stylesheet" href="./css/new-style.css">
-    <script data-polyfil="webp">
-        !(function (e, n, A) {
-            function o(e, n) {
-                return typeof e === n;
-            }
-
-            function t() {
-                var e, n, A, t, a, i, l;
-                for (var f in r)
-                    if (r.hasOwnProperty(f)) {
-                        if (((e = []), (n = r[f]), n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n
-                                .options.aliases.length)))
-                            for (A = 0; A < n.options.aliases.length; A++) e.push(n.options.aliases[A].toLowerCase());
-                        for (t = o(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++)
-                            (i = e[a]),
-                            (l = i.split(".")),
-                            1 === l.length ? (Modernizr[l[0]] = t) : (!Modernizr[l[0]] || Modernizr[l[0]] instanceof Boolean || (
-                                Modernizr[l[0]] = new Boolean(Modernizr[l[0]])), (Modernizr[l[0]][l[1]] = t)),
-                            s.push((t ? "" : "no-") + l.join("-"));
-                    }
-            }
-
-            function a(e) {
-                var n = u.className,
-                    A = Modernizr._config.classPrefix || "";
-                if ((c && (n = n.baseVal), Modernizr._config.enableJSClass)) {
-                    var o = new RegExp("(^|\s)" + A + "no-js(\s|$)");
-                    n = n.replace(o, "$1" + A + "js$2");
-                }
-                Modernizr._config.enableClasses && ((n += " " + A + e.join(" " + A)), c ? (u.className.baseVal = n) : (u
-                    .className = n));
-            }
-
-            function i(e, n) {
-                if ("object" == typeof e)
-                    for (var A in e) f(e, A) && i(A, e[A]);
-                else {
-                    e = e.toLowerCase();
-                    var o = e.split("."),
-                        t = Modernizr[o[0]];
-                    if ((2 == o.length && (t = t[o[1]]), "undefined" != typeof t)) return Modernizr;
-                    (n = "function" == typeof n ? n() : n),
-                    1 == o.length ? (Modernizr[o[0]] = n) : (!Modernizr[o[0]] || Modernizr[o[0]] instanceof Boolean || (
-                            Modernizr[o[0]] = new Boolean(Modernizr[o[0]])), (Modernizr[o[0]][o[1]] = n)),
-                        a([(n && 0 != n ? "" : "no-") + o.join("-")]),
-                        Modernizr._trigger(e, n);
-                }
-                return Modernizr;
-            }
-            var s = [],
-                r = [],
-                l = {
-                    _version: "3.6.0",
-                    _config: {
-                        classPrefix: "",
-                        enableClasses: !0,
-                        enableJSClass: !0,
-                        usePrefixes: !0
-                    },
-                    _q: [],
-                    on: function (e, n) {
-                        var A = this;
-                        setTimeout(function () {
-                            n(A[e]);
-                        }, 0);
-                    },
-                    addTest: function (e, n, A) {
-                        r.push({
-                            name: e,
-                            fn: n,
-                            options: A
-                        });
-                    },
-                    addAsyncTest: function (e) {
-                        r.push({
-                            name: null,
-                            fn: e
-                        });
-                    },
-                },
-                Modernizr = function () {};
-            (Modernizr.prototype = l), (Modernizr = new Modernizr());
-            var f,
-                u = n.documentElement,
-                c = "svg" === u.nodeName.toLowerCase();
-            !(function () {
-                var e = {}.hasOwnProperty;
-                f =
-                    o(e, "undefined") || o(e.call, "undefined") ?
-                    function (e, n) {
-                        return n in e && o(e.constructor.prototype[n], "undefined");
-                    } :
-                    function (n, A) {
-                        return e.call(n, A);
-                    };
-            })(),
-            (l._l = {}),
-            (l.on = function (e, n) {
-                this._l[e] || (this._l[e] = []),
-                    this._l[e].push(n),
-                    Modernizr.hasOwnProperty(e) &&
-                    setTimeout(function () {
-                        Modernizr._trigger(e, Modernizr[e]);
-                    }, 0);
-            }),
-            (l._trigger = function (e, n) {
-                if (this._l[e]) {
-                    var A = this._l[e];
-                    setTimeout(function () {
-                            var e, o;
-                            for (e = 0; e < A.length; e++)(o = A[e])(n);
-                        }, 0),
-                        delete this._l[e];
-                }
-            }),
-            Modernizr._q.push(function () {
-                    l.addTest = i;
-                }),
-                Modernizr.addAsyncTest(function () {
-                    function e(e, n, A) {
-                        function o(n) {
-                            var o = n && "load" === n.type ? 1 == t.width : !1,
-                                a = "webp" === e;
-                            i(e, a && o ? new Boolean(o) : o), A && A(n);
-                        }
-                        var t = new Image();
-                        (t.onerror = o), (t.onload = o), (t.src = n);
-                    }
-                    var n = [{
-                                uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",
-                                name: "webp"
-                            },
-                            {
-                                uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",
-                                name: "webp.alpha"
-                            },
-                            {
-                                uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",
-                                name: "webp.animation"
-                            },
-                            {
-                                uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",
-                                name: "webp.lossless"
-                            },
-                        ],
-                        A = n.shift();
-                    e(A.name, A.uri, function (A) {
-                        if (A && "load" === A.type)
-                            for (var o = 0; o < n.length; o++) e(n[o].name, n[o].uri);
-                    });
-                }),
-                t(),
-                a(s),
-                delete l.addTest,
-                delete l.addAsyncTest;
-            for (var p = 0; p < Modernizr._q.length; p++) Modernizr._q[p]();
-            e.Modernizr = Modernizr;
-        })(window, document);
-    </script>
 
 </head>
 
-<body class="timer-different ev-date no-webp" data-invalid-name-text="¡Introduzca su nombre correctamente!"
+<body class="timer-different ev-date" data-invalid-name-text="¡Introduzca su nombre correctamente!"
     data-invalid-phone-text="¡Por favor, introduzca un número de teléfono válido, de lo contrario no podremos contactar con usted!">
-    <header class="header link">
+    <header class="header">
         <div class="container">
-            <div class="header__wrapper">
-                <div class="header__logo">
-                    <img class="header__logo--img" src="./img/logo.png" alt="logotype">
-                    <h2 class="header__logo--name"> Cardioton</h2>
-                </div>
-                <nav class="header__nav">
-                    <a class="nav__item scroll-link" href>
-                        <picture>
-                            <source media="(max-width: 999px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==">
-                            <img class="nav__item-image" src="./img/header_icon_rev.png" alt="reviews">
-                        </picture>
-                        <span class="nav__item-text"> Comments</span>
-                    </a>
-                    <a class="nav__item scroll-link" href>
-                        <picture>
-                            <source media="(max-width: 999px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==">
-                            <img class="nav__item-image" src="./img/header_icon_cons.png" alt="consist">
-                        </picture>
-                        <span class="nav__item-text"> How to order?</span>
-                    </a>
-                </nav>
-                <div class="header__timer">
-                    <div class="timer__text"> There is still time left until the end of the offer</div>
-                    <div class="timer__block">
-                        <div class="timer__hours"><span class="hours  min"></span></div>
-                        <span class="timer__dots">:</span>
-                        <div class="timer__minutes"><span class="minutes sec"></span></div>
-                        <span class="timer__dots">:</span>
-                        <div class="timer__seconds"><span class="seconds msec"></span></div>
-                    </div>
-                </div>
-                <button class="btn ever-popup-btn header__button"> To order</button>
+            <div class="header__logo">
+                INCASOL
             </div>
+            <p class="header__text">
+                La presión sanguínea vuelve a la
+                <span class="green-text">
+                    normalidad 20-40 minutos
+                </span>
+                después de la ingestión
+            </p>
+
         </div>
     </header>
-    <section class="promo block">
+    <div class="doc-info">
+        <h3 class="doc-info__text">
+            Dr. Felipe Heusser recomienda Incasol:
+        </h3>
         <div class="container">
-            <div class="promo__content">
-
-                <div class="promo__description">
-                    <div class="promo__title">
-                        <h1> Cardioton:</h1>
-                        <h2 class="title"> The key to 120/80 blood pressure, good sleep and longevity</h2>
-                    </div>
-                    <p class="subtitle"> After 15 days of taking Cardioton, you will forget about</p>
-
+            <div class="doc-info__wrapper">
+                <div class="doc-info__bg">
+                    <img src="./img/doc-main1.png" alt="">
                 </div>
-
-            </div>
-            <div class="flex-items">
-                <div class="flex-items__item">
-                    <div class="flex-items__logo">
-                        <img src="./img/icon-l.png" alt>
-                    </div>
-                    <div class="flex-items__text"> High blood pressure, headaches and migraines</div>
-                    <div class="flex-items__text"> Tinnitus, sweating, facial flushing</div>
-                    <div class="flex-items__text"> Depression and fear for one's own life</div>
+                <div class="doc-info__list-body">
+                    <ul>
+                        <p>
+                            Incasol puede ayudarte si sufres de:
+                        </p>
+                        <li>
+                            Dolor de cabeza
+                        </li>
+                        <li>
+                            Vértigos
+                        </li>
+                        <li>
+                            Acúfenos o zumbidos en los oídos
+                        </li>
+                        <li>
+                            Dolores torácicos
+                        </li>
+                        <li>
+                            Falta de aliento o dificultad para respirar
+                        </li>
+                        <div class="doc-info__info-logo">
+                            <img src="./img/info-logo.png" alt="">
+                        </div>
+                    </ul>
                 </div>
-                <div class="flex-items__item flex-items__item--green-text">
-                    <div class="flex-items__logo">
-                        <img src="./img/icon-r.png" alt>
-                    </div>
-                    <div class="flex-items__text"> Your blood pressure will stabilize from day one</div>
-                    <div class="flex-items__text"> Symptoms of hypertension decrease day by day</div>
-                    <div class="flex-items__text"> With Cardioton you will get the peace and energy you need</div>
-                </div>
-            </div>
-            <div class="promo-bottom">
-                <img src="./img/bottom-logo.png" alt>
             </div>
         </div>
-    </section>
-    <section class="block-doc bg">
+    </div>
+    <section class="promo block">
         <div class="container">
-
-
-            <div class="block-doc__container">
-                <h2 class="title recomend__title"> Dr. Vinka Vujinobic recommends Cardioton</h2>
-                <div class="recomend__content">
-                    <div class="recomend__doctor">
-                        <!-- <img class="recomend__doctor--img" src="../_assets/60/cimg1.jpg" onerror="this.src=''" alt="img"> -->
-                        <img class="recomend__doctor--img" src="./img/doc.jpg" onerror="this.src=''" alt="img">
+            <h3 class="promo__title">
+                INCASOL <br>
+                Un remedio después del cual su presión arterial siempre será de 120/80
+            </h3>
+            <div class="promo__images">
+                <div class="promo__left-img">
+                    <div class="promo__left-item">
+                        <img src="./img/item1.png" alt="">
                     </div>
-                    <div class="recomend__info">
-                        <p class="bg-text"> I recommend this product to all people over the age of 50 who suffer from hypertension.</p>
-                        <div class="text"> "Cardioton has been shown to be highly effective in lowering blood pressure in older people, as well as in clearing blood vessels (increasing the brightness
-                            of arterial vessels by up to 75%). The product will help you feel better immediately after use."</div>
-
-                        <div class="sign">
-                            <div class="sign__doctor">
-                                <p class="sign__doctor--name"> Dr. Vinka Vujinobic,</p>
-                                <p class="sign__doctor--post"> President of the Association of Cardiologists.</p>
-                            </div>
-                        </div>
+                    <div class="promo__left-item promo__left-item--2 ">
+                        <img src="./img/item2.png" alt="">
+                    </div>
+                    <div class="promo__left-item promo__left-item--3">
+                        <img src="./img/item3.png" alt="">
                     </div>
                 </div>
+                <div class="promo__right-img">
+                    <img src="./img/prod.png" alt="">
+                </div>
             </div>
+
+
+
+
+        </div>
+        <div class="container">
+
+            <div class="recomend__content">
+                <h3 class="recomend__title">
+                    Dr. Felipe Heusser:
+                </h3>
+                <div class="recomend__info">
+                    <p class="bg-text">«Recomiendo este remedio a todas las personas mayores de 50 años con hipertensión»</p>
+                    <p class="content-text">
+                        «Incasol es un verdadero descubrimiento en el mundo de la medicina! Su fórmula única permite no sólo controlar eficazmente la presión arterial, sino también fortalecer el
+                        sistema cardiovascular en su conjunto.
+                        <br>Según los comentarios que recibimos de las personas que han tomado Incasol - notan mejoras notables ya después de las primeras semanas de uso.»
+                    </p>
+
+                </div>
+            </div>
+        </div>
         </div>
     </section>
     <section class="statistic block">
         <div class="container">
-            <h2 class="title statistic__title"> High blood pressure kills millions of people every year!</h2>
+            <h2 class="title statistic__title">¡La hipertensión mata a millones de personas al año!</h2>
             <div class="graph">
                 <ul class="graph__name">
-                    <li class="graph__name--item"> Hypertension</li>
-                    <li class="graph__name--item"> Oncological diseases</li>
-                    <li class="graph__name--item"> diabetes</li>
+                    <li class="graph__name--item"> Hipertensión</li>
+                    <li class="graph__name--item"> Enfermedades oncológicas
+                    </li>
+                    <li class="graph__name--item"> Diabetes</li>
                 </ul>
                 <div class="graph__value">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="830" viewBox="0 0 830 450">
-                        <style></style>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="830" viewbox="0 0 830 450">
                         <text class="main test" x="27" y="50">
                             16
                             <!-- <tspan class="main-sub">millones</tspan> -->
@@ -374,37 +209,37 @@ include __DIR__ . '/../_php/update-params.php';
                         <text class="main" x="764" y="442">
                             <tspan id="yyyy-0">2020</tspan>
                         </text>
-                        <path d="M70 45 785 45 785 405 70 405 70 45" stroke="#d1d1d1" stroke-width="1" fill="transparent"></path>
-                        <line x1="70" y1="85" x2="785" y2="85" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="70" y1="125" x2="785" y2="125" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="70" y1="165" x2="785" y2="165" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="70" y1="205" x2="785" y2="205" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="70" y1="245" x2="785" y2="245" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="70" y1="285" x2="785" y2="285" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="70" y1="325" x2="785" y2="325" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="70" y1="365" x2="785" y2="365" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="250" y1="45" x2="250" y2="405" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="427" y1="45" x2="427" y2="405" stroke="#d1d1d1" stroke-width="1"></line>
-                        <line x1="605" y1="45" x2="605" y2="405" stroke="#d1d1d1" stroke-width="1"></line>
-                        <circle cx="70" cy="205" r="7" fill="#36ad23"></circle>
-                        <circle cx="250" cy="185" r="7" fill="#36ad23"></circle>
-                        <circle cx="427" cy="165" r="7" fill="#36ad23"></circle>
-                        <circle cx="605" cy="105" r="7" fill="#36ad23"></circle>
-                        <circle cx="785" cy="45" r="7" fill="#36ad23"></circle>
-                        <path d="M70 205 427 165 785 45" stroke="#36ad23" stroke-width="2" fill="transparent"></path>
-                        <circle cx="70" cy="304" r="7" fill="#4758a5"></circle>
-                        <circle cx="250" cy="291" r="7" fill="#4758a5"></circle>
-                        <circle cx="427" cy="289" r="7" fill="#4758a5"></circle>
-                        <circle cx="605" cy="270" r="7" fill="#4758a5"></circle>
-                        <circle cx="785" cy="253" r="7" fill="#4758a5"></circle>
-                        <path d="M70 304 250 291 427 289 605 270 785 253" stroke="#4758a5" stroke-width="2" fill="transparent"></path>
+                        <path d="M70 45 785 45 785 405 70 405 70 45" stroke="#d1d1d1" stroke-width="1" fill="transparent" />
+                        <line x1="70" y1="85" x2="785" y2="85" stroke="#d1d1d1" stroke-width="1" />
+                        <line x1="70" y1="125" x2="785" y2="125" stroke="#d1d1d1" stroke-width="1" />
+                        <line x1="70" y1="165" x2="785" y2="165" stroke="#d1d1d1" stroke-width="1" />
+                        <line x1="70" y1="205" x2="785" y2="205" stroke="#d1d1d1" stroke-width="1" />
+                        <line x1="70" y1="245" x2="785" y2="245" stroke="#d1d1d1" stroke-width="1" />
+                        <line x1="70" y1="285" x2="785" y2="285" stroke="#d1d1d1" stroke-width="1" />
+                        <line x1="70" y1="325" x2="785" y2="325" stroke="#d1d1d1" stroke-width="1" />
+                        <line x1="70" y1="365" x2="785" y2="365" stroke="#d1d1d1" stroke-width="1" />
+                        <line x1="250" y1="45" x2="250" y2="405" stroke="#d1d1d1" stroke-width="1" />
+                        <line x1="427" y1="45" x2="427" y2="405" stroke="#d1d1d1" stroke-width="1" />
+                        <line x1="605" y1="45" x2="605" y2="405" stroke="#d1d1d1" stroke-width="1" />
+                        <circle cx="70" cy="205" r="7" fill="#ed6e6f" />
+                        <circle cx="250" cy="185" r="7" fill="#ed6e6f" />
+                        <circle cx="427" cy="165" r="7" fill="#ed6e6f" />
+                        <circle cx="605" cy="105" r="7" fill="#ed6e6f" />
+                        <circle cx="785" cy="45" r="7" fill="#ed6e6f" />
+                        <path d="M70 205 427 165 785 45" stroke="#ed6e6f" stroke-width="2" fill="transparent" />
+                        <circle cx="70" cy="304" r="7" fill="#4758a5" />
+                        <circle cx="250" cy="291" r="7" fill="#4758a5" />
+                        <circle cx="427" cy="289" r="7" fill="#4758a5" />
+                        <circle cx="605" cy="270" r="7" fill="#4758a5" />
+                        <circle cx="785" cy="253" r="7" fill="#4758a5" />
+                        <path d="M70 304 250 291 427 289 605 270 785 253" stroke="#4758a5" stroke-width="2" fill="transparent" />
 
-                        <circle cx="70" cy="365" r="7" fill="#7c7c7c"></circle>
-                        <circle cx="250" cy="342" r="7" fill="#7c7c7c"></circle>
-                        <circle cx="427" cy="336" r="7" fill="#7c7c7c"></circle>
-                        <circle cx="605" cy="333" r="7" fill="#7c7c7c"></circle>
-                        <circle cx="785" cy="350" r="7" fill="#7c7c7c"></circle>
-                        <path d="M70 365 250 342 427 336 605 333 785 350" stroke="#7c7c7c" stroke-width="2" fill="transparent"></path>
+                        <circle cx="70" cy="365" r="7" fill="#7c7c7c" />
+                        <circle cx="250" cy="342" r="7" fill="#7c7c7c" />
+                        <circle cx="427" cy="336" r="7" fill="#7c7c7c" />
+                        <circle cx="605" cy="333" r="7" fill="#7c7c7c" />
+                        <circle cx="785" cy="350" r="7" fill="#7c7c7c" />
+                        <path d="M70 365 250 342 427 336 605 333 785 350" stroke="#7c7c7c" stroke-width="2" fill="transparent" />
 
                         <text class="value" x="205" y="170">
                             8,5
@@ -425,285 +260,268 @@ include __DIR__ . '/../_php/update-params.php';
                     </svg>
                 </div>
             </div>
-            <p class="statistic__info"> According to expert research, in the end<span class="date-1" data-format="year"></span>,<span class="bg-white text-nowrap"> 1,130 million</span> people in the
-                world suffer from high blood pressure<span class="bg-white text-nowrap"> two out of five</span> people are not aware of their diagnosis and only one in ten people suffering from
-                hypertension has their disease under control.</p>
+            <p class="statistic__info">
+                Según la OMS, a finales de <span class="date-1" data-format="year"></span>, <span class="bg-white text-nowrap">1.130 millones </span> de personas en el
+                mundo padecen hipertensión arterial, <span class="bg-white text-nowrap">dos de cada cinco</span> personas
+                desconocen su diagnóstico y solo uno de cada diez hipertensos tiene su enfermedad bajo control.
+            </p>
         </div>
     </section>
     <section class="illness block bg">
         <div class="container">
-            <h2 class="title illness__title"> Untreated hypertension leads to:</h2>
+            <h2 class="title illness__title">La hipertensión no atendida conduce a:</h2>
             <div class="illness__content">
                 <div class="illness__box active">
                     <h3 class="illness-box__title">
                         <svg class="icon illness-box__title--icon illness-box__title--icon1">
-                            <use href="#illness-icon1" />
-                        </svg> Myocardial infarction</h3>
+                            <use xlink:href="#illness-icon1" />
+                        </svg>
+                        Infarto de miocardio
+                    </h3>
                     <div class="illness__item">
                         <div class="illness-item__img">
-                            <picture>
-
-                                <img src="./img/illness-img1.webp" alt="image">
-                            </picture>
+                            <img src="./img/illness-img1.webp" alt="image">
                         </div>
                         <div class="illness-item__sub">
                             <div class="illness-item__title">
                                 <svg class="icon illness-item__title--icon">
-                                    <use href="#illness-icon1" />
-                                </svg> Myocardial infarction</div>
-                            <p class="illness-item__info"> Death of part of the heart muscle due to interruption of blood flow through the heart's main artery can lead to complete cardiac arrest.</p>
+                                    <use xlink:href="#illness-icon1" />
+                                </svg>
+                                Infarto de miocardio
+                            </div>
+                            <p class="illness-item__info">La muerte de una parte del músculo cardíaco debido a la interrupción del
+                                flujo sanguíneo a través de una arteria principal del corazón, puede conducir a un paro cardíaco
+                                completo.</p>
                         </div>
-                        <h4 class="illness__attention"> Suffering from high blood pressure is life-threatening!</h4>
+                        <h4 class="illness__attention">¡Sufrir de hipertensión arterial es una amenaza para la vida!</h4>
                     </div>
                 </div>
+
+
                 <div class="illness__box">
                     <h3 class="illness-box__title">
                         <svg class="icon illness-box__title--icon illness-box__title--icon2">
-                            <use href="#illness-icon2" />
-                        </svg> Impact</h3>
+                            <use xlink:href="#illness-icon2" />
+                        </svg>
+                        Derrame cerebral
+                    </h3>
                     <div class="illness__item">
                         <div class="illness-item__img">
                             <picture>
-
                                 <img src="./img/illness-img2.webp" alt="image">
                             </picture>
                         </div>
                         <div class="illness-item__sub">
                             <div class="illness-item__title">
                                 <svg class="icon illness-item__title--icon">
-                                    <use href="#illness-icon2" />
-                                </svg> Impact</div>
-                            <p class="illness-item__info"> Hemorrhage, interruption of blood flow to the brain, which always has unpredictable consequences and is usually fatal.</p>
+                                    <use xlink:href="#illness-icon2" />
+                                </svg>
+                                Derrame cerebral
+                            </div>
+                            <p class="illness-item__info">Hemorragia, interrupción del suministro de sangre al cerebro, que siempre
+                                tiene consecuencias irreversibles y suele ser mortal.</p>
                         </div>
-                        <h4 class="illness__attention"> Suffering from high blood pressure is life-threatening!</h4>
+                        <h4 class="illness__attention">¡Sufrir de hipertensión arterial es una amenaza para la vida!</h4>
                     </div>
                 </div>
+
                 <div class="illness__box">
                     <h3 class="illness-box__title">
                         <svg class="icon illness-box__title--icon illness-box__title--icon3">
-                            <use href="#illness-icon3" />
-                        </svg> Renal insufficiency</h3>
+                            <use xlink:href="#illness-icon3" />
+                        </svg>
+                        Insuficiencia renal
+                    </h3>
                     <div class="illness__item">
                         <div class="illness-item__img">
-                            <picture>
-
-                                <img src="./img/illness-img3.webp" alt="image">
-                            </picture>
+                            <img src="./img/illness-img3.webp" alt="image">
                         </div>
                         <div class="illness-item__sub">
                             <div class="illness-item__title">
                                 <svg class="icon illness-item__title--icon">
-                                    <use href="#illness-icon3" />
-                                </svg> Renal insufficiency</div>
-                            <p class="illness-item__info"> Kidney dysfunction, partial or complete loss of control over kidney function.</p>
+                                    <use xlink:href="#illness-icon3" />
+                                </svg>
+                                Insuficiencia renal
+                            </div>
+                            <p class="illness-item__info">Disfunción renal, pérdida parcial o total del control de la función renal.
+                            </p>
                         </div>
-                        <h4 class="illness__attention"> Suffering from high blood pressure is life-threatening!</h4>
+                        <h4 class="illness__attention">¡Sufrir de hipertensión arterial es una amenaza para la vida!</h4>
                     </div>
                 </div>
                 <div class="illness__box">
                     <h3 class="illness-box__title">
                         <svg class="icon illness-box__title--icon illness-box__title--icon4">
-                            <use href="#illness-icon4" />
-                        </svg> Blindness</h3>
+                            <use xlink:href="#illness-icon4" />
+                        </svg>
+                        Ceguera
+                    </h3>
                     <div class="illness__item">
                         <div class="illness-item__img">
-                            <picture>
-
-                                <img src="./img/illness-img4.webp" alt="image">
-                            </picture>
+                            <img src="./img/illness-img4.webp" alt="image">
                         </div>
                         <div class="illness-item__sub">
                             <div class="illness-item__title">
                                 <svg class="icon illness-item__title--icon">
-                                    <use href="#illness-icon4" />
-                                </svg> Blindness</div>
-                            <p class="illness-item__info"> Damage to blood vessels that causes partial or complete loss of vision.</p>
+                                    <use xlink:href="#illness-icon4" />
+                                </svg>
+                                Ceguera
+                            </div>
+                            <p class="illness-item__info">Daños en los vasos sanguíneos que provocan la pérdida de visión o la pérdida
+                                total de la misma.</p>
                         </div>
-                        <h4 class="illness__attention"> Suffering from high blood pressure is life-threatening!</h4>
+                        <h4 class="illness__attention">¡Sufrir de hipertensión arterial es una amenaza para la vida!</h4>
                     </div>
                 </div>
                 <div class="illness__box">
                     <h3 class="illness-box__title">
                         <svg class="icon illness-box__title--icon illness-box__title--icon5">
-                            <use href="#illness-icon5" />
-                        </svg> Arrhythmia</h3>
+                            <use xlink:href="#illness-icon5" />
+                        </svg>
+                        Arritmia
+                    </h3>
                     <div class="illness__item">
                         <div class="illness-item__img">
-                            <picture>
-
-                                <img src="./img/illness-img5.webp" alt="image">
-                            </picture>
+                            <img src="./img/illness-img5.webp" alt="image">
                         </div>
                         <div class="illness-item__sub">
                             <div class="illness-item__title">
                                 <svg class="icon illness-item__title--icon">
-                                    <use href="#illness-icon5" />
-                                </svg> Arrhythmia</div>
-                            <p class="illness-item__info"> Abnormal heart rhythm, when it beats too slowly or too fast.</p>
+                                    <use xlink:href="#illness-icon5" />
+                                </svg>
+                                Arritmia
+                            </div>
+                            <p class="illness-item__info">Ritmo cardíaco anormal, con el corazón latiendo demasiado lento o demasiado
+                                rápido.</p>
                         </div>
-                        <h4 class="illness__attention"> Suffering from high blood pressure is life-threatening!</h4>
+                        <h4 class="illness__attention">¡Sufrir de hipertensión arterial es una amenaza para la vida!</h4>
                     </div>
                 </div>
                 <div class="illness__box">
                     <h3 class="illness-box__title">
                         <svg class="icon illness-box__title--icon illness-box__title--icon6">
-                            <use href="#illness-icon6" />
-                        </svg> Heart failure</h3>
+                            <use xlink:href="#illness-icon6" />
+                        </svg>
+                        Insuficiencia cardíaca
+                    </h3>
                     <div class="illness__item">
                         <div class="illness-item__img">
-                            <picture>
-
-                                <img src="./img/illness-img6.webp" alt="image">
-                            </picture>
+                            <img src="./img/illness-img6.webp" alt="image">
                         </div>
                         <div class="illness-item__sub">
                             <div class="illness-item__title">
                                 <svg class="icon illness-item__title--icon">
-                                    <use href="#illness-icon6" />
-                                </svg> Heart failure</div>
-                            <p class="illness-item__info"> The heart cannot supply the organs and tissues with enough blood, and the body lacks oxygen and nutrients.</p>
+                                    <use xlink:href="#illness-icon6" />
+                                </svg>
+                                Insuficiencia cardíaca
+                            </div>
+                            <p class="illness-item__info">El corazón no puede suministrar suficiente sangre a los órganos y tejidos y
+                                el cuerpo carece de oxígeno y nutrientes.</p>
                         </div>
-                        <h4 class="illness__attention"> A high blood pressure patnia is a girdle of life!</h4>
+                        <h4 class="illness__attention">¡Sufrir de hipertensión arterial es una amenaza para la vida!</h4>
                     </div>
                 </div>
             </div>
-
             <div class="illness__prod">
-                <h3 class="illness-prod__title title green-text"> THERE IS A SOLUTION!</h3>
-                <p class="tac">
-                    <strong> Herbal tablets to stabilize blood pressure and prevent heart problems - a real lifesaver for anyone suffering from hypertension</strong>
-                </p>
+                <h3 class="illness-prod__title title">¿Sufre de hipertensión? <span class="illness-prod__title--small">Puede que
+                        pronto se sienta peor</span></h3>
                 <div class="illness-prod__item">
-                    <br>
                     <picture>
 
                         <img src="./img/prod.png" alt="image">
                     </picture>
                 </div>
-                <div class="illness-prod-flex__items">
-                    <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l">
-                            <img src="./img/stars.png" class="illness-prod-flex__item--img" alt>
-                        </div>
-                        <div class="illness-prod-flex__r"> 4,159 reviews</div>
-                    </div>
-                    <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l"> Type</div>
-                        <div class="illness-prod-flex__r">
-                            <strong> A collection of plants</strong>
-                        </div>
-                    </div>
-                    <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l"> Prescribing medicines</div>
-                        <div class="illness-prod-flex__r">
-                            <strong> For hypertension, heart, blood vessels and good sleep</strong>
-                        </div>
-                    </div>
-                    <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l"> Product brand</div>
-                        <div class="illness-prod-flex__r illness-prod-flex__r--toImage">
-                            <strong> Cardioton</strong>
-                            <img src="./img/blue-logo.png" alt>
-                        </div>
-                    </div>
-                    <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l"> Amount of capsules</div>
-                        <div class="illness-prod-flex__r">
-                            <strong> 60</strong>
-                        </div>
-                    </div>
-                    <div class="illness-prod-flex__item">
-                        <div class="illness-prod-flex__l"> Country of origin</div>
-                        <div class="illness-prod-flex__r">
-                            <strong> Germany</strong>
-                        </div>
-                    </div>
-                </div>
-                <br><br>
-                <p class="tac">
-                    <strong> Cardioton has passed all certification stages </strong>
-                </p>
-                <div class="illness-images btns" data-path="modal--1">
-                    <img src="./img/sert.png" alt>
-                </div>
-                <button class="btn illness__btn ever-popup-btn link1"> I WANT TO BUY AND BE HEALTHY</button>
+                <button class="btn illness__btn ever-popup-btn link">Hacer un pedido</button>
             </div>
         </div>
     </section>
     <section class="innovation block">
         <div class="container">
-            <h2 class="title innovation__title"> Cardioton were developed by leading experts from Germany and the USA</h2>
+            <h2 class="title innovation__title">Pastillas de hierbas para estabilizar la presión arterial y prevenir
+                la
+                función cardíaca: una verdadera salvación para los hipertensos</h2>
             <div class="innovation__content">
                 <div class="innovation__image">
                     <div class="image-wrap">
-                        <img class="innovation__doctor" src="./img/main1.jpg" alt>
+                        <img class="innovation__doctor" src="./img/innovation.webp" alt="">
                     </div>
                     <div class="innovation__centr">
                         <img class="innovation__centr--logo" src="./img/heart.png" alt="heart">
-                        <p class="innovation__centr--name"> CARDIOLOGY RESEARCH CENTER</p>
+                        <p class="innovation__centr--name">CENTRO DE INVESTIGACIÓN CARDIOLÓGICA</p>
                     </div>
                 </div>
                 <div class="innovation__info">
-                    <p class="content-text"> Scientists around the world have been searching for the best way to normalize blood pressure in hypertensive patients for a long time.<b> and very often
-                            they faced the same problem - a short-term decrease in pressure and a multitude of side effects on the heart and blood vessels.</b> This is exactly what the experts wanted
-                        to solve.</p>
-                    <p class="content-text"> They conducted studies for several years and discovered<b> herbal formula that has proven to be the most effective.</b> A complex of plants<b> Cardioton
-                        </b>, enriched with vitamins and minerals,<b> gradually accumulates in the body and promotes a gradual reduction of pressure and regulation of the cardiovascular
-                            system</b> in whole.</p>
-                    <p class="innovation__desc"> Cardioton were developed based on the best practices of experts from around the world in the field of vascular cleansing and hypertension.</p>
+                    <p class="content-text">
+                        Los científicos de todo el mundo llevan mucho tiempo buscando la mejor manera de normalizar la presión
+                        arterial de los pacientes hipertensos.
+                        <b>Y muy a menudo se enfrentaron al mismo problema - es una reducción de la presión a corto plazo y
+                            muchos
+                            efectos secundarios en el corazón y los vasos sanguíneos.</b>
+                        Esto es exactamente lo que los expertos querían resolver.
+                    </p>
+                    <p class="content-text">
+                        Se han realizado estudios durante varios años y es
+                        <b>la fórmula a base de hierbas que ha demostrado la mayor eficacia.</b>
+                        El complejo vegetal <b>Incasol</b>, enriquecido con vitaminas y minerales, <b>se acumula gradualmente
+                            en el
+                            cuerpo y promueve una reducción gradual de la presión y la regulación del sistema
+                            cardiovascular</b> en su conjunto.
+                    </p>
+                    <p class="innovation__desc">Incasol ha sido desarrollado sobre la base de las mejores prácticas de
+                        especialistas de todo el mundo en el campo de la limpieza vascular
+                        y la hipertensión.</p>
                 </div>
             </div>
         </div>
     </section>
     <section class="peel block bg">
         <div class="container">
-            <h2 class="title peel__title"> How exactly does the herb mix work?</h2>
+            <h2 class="title peel__title">Por qué la limpieza vascular es vital para la hipertensión</h2>
             <div class="peel__content">
                 <div class="peel__box">
                     <div class="peel-box__img">
-
-                        <img src="./img/peel-img1.jpg" alt="image">
-
+                        <img src="./img/peel-img1.webp" alt="image">
                     </div>
-                    <div class="peel-box__icon"><img class="peel-box__icon1" src="./img/peel-icon1.png" alt></div>
-                    <p class="peel-box__text"> Cleans blood vessels of calcium and cholesterol crystals. Accumulation of lipids in the inner walls causes myocardial infarction and atherosclerosis in
-                        94% of cases.</p>
+                    <div class="peel-box__icon"><img class="peel-box__icon1" src="./img/peel-icon1.png" alt=""></div>
+                    <p class="peel-box__text">Los coágulos de sangre pueden provocar obstrucciones arteriales e incluso
+                        un paro
+                        cardíaco completo</p>
                 </div>
                 <div class="peel__box">
                     <div class="peel-box__img">
-
-                        <img src="./img/peel-img2.jpg" alt="image">
-
+                        <img src="./img/peel-img2.webp" alt="image">
                     </div>
-                    <div class="peel-box__icon"><img class="peel-box__icon2" src="./img/peel-icon2.png" alt></div>
-                    <p class="peel-box__text"> Eliminates the hormone homocysteine. Its excess causes vasoconstriction and arterial hypertension.</p>
+                    <div class="peel-box__icon"><img class="peel-box__icon2" src="./img/peel-icon2.png" alt=""></div>
+                    <p class="peel-box__text">Las placas de colesterol provocan una alteración del flujo sanguíneo en los vasos
+                        sanguíneos y aumentan la presión arterial</p>
                 </div>
                 <div class="peel__box">
                     <div class="peel-box__img">
-
-                        <img src="./img/peel-img3.jpg" alt="image">
-
+                        <img src="./img/peel-img3.webp" alt="image">
                     </div>
-                    <div class="peel-box__icon"><img class="peel-box__icon3" src="./img/peel-icon3.png" alt></div>
-                    <p class="peel-box__text"> It has a calming effect, reduces the negative effects of stress on the body and normalizes sleep.</p>
+                    <div class="peel-box__icon"><img class="peel-box__icon3" src="./img/peel-icon3.png" alt=""></div>
+                    <p class="peel-box__text">Los vasos sanguíneos obstruidos se vuelven frágiles, lo que provoca un mal
+                        funcionamiento de los órganos internos</p>
                 </div>
             </div>
-            <h3 class="peel__info"> Clean blood vessels: the key to longevity, good health and restful sleep</h3>
+            <h3 class="peel__info">Unos vasos sanguíneos sanos son la clave para un corazón estable y una vida
+                sin hipertensión</h3>
             <div class="action">
-                <h2 class="title action__title"> Attention!</h2>
+                <h2 class="title action__title">¡Atención!</h2>
                 <div class="action__box">
-                    <h3 class="action__subtitle"> Only today<span class="date-0 action__subtitle--accent" data-format="dd monthFull"> 45072</span>
+                    <h3 class="action__subtitle">
+                        Solo hoy, el <span class="date-0 action__subtitle--accent" data-format="dd monthFull">25 августа </span>
                     </h3>
                     <div class="action__price">
                         <div class="action__price-old">
-                            <p class="action__price-title"> Standard price</p>
+                            <p class="action__price-title"> Precio anterior: </p>
                             <div class="action__old">
-                                <span class="x_price_previous"> 1298</span> <span class="x_currency"> ZAR</span>
+                                <span class="x_price_previous">69 980</span> <span class="x_currency">CLP</span>
                             </div>
                         </div>
                         <div class="action__price-new">
-                            <p class="action__price-title"> Promotional price</p>
-                            <span class="x_price_current"> 649</span> <span class="x_currency"> ZAR</span>
+                            <p class="action__price-title"> Nuevo precio:</p>
+                            <span class="x_price_current">34990</span> <span class="x_currency">CLP</span>
                         </div>
                     </div>
                     <div class="action__pack">
@@ -713,7 +531,7 @@ include __DIR__ . '/../_php/update-params.php';
                         </picture>
                     </div>
                     <div class="action__timer">
-                        <div class="timer__text"> Remaining until the end of the promotion</div>
+                        <div class="timer__text">Hasta el fin de la oferta queda:</div>
                         <div class="timer__block">
                             <div class="timer__hours"><span class="hours min> min"></span></div>
                             <span class="timer__dots">:</span>
@@ -724,31 +542,31 @@ include __DIR__ . '/../_php/update-params.php';
                     </div>
                 </div>
                 <div class="action__form">
-                    <form class="x_order_form" action method="post">
+                    <form class="x_order_form" action="" method="post">
                         <label class="form__input--wrap">
-                            <span class="form__input--icon"><img src="./img/icon_name.png" alt></span>
-                            <input class="form__input" placeholder="Name and surname" type="text" name="name" required autocomplete="name">
+                            <span class="form__input--icon"><img src="./img/icon_name.png" alt=""></span>
+                            <input class="form__input" placeholder="Mi nombre" type="text" name="name" required autocomplete="name">
                         </label>
                         <label class="form__input--wrap">
-                            <span class="form__input--icon"><img src="./img/icon_phone.png" alt></span>
-                            <input class="form__input" placeholder="My contact phone number" type="tel" name="phone" required autocomplete="tel">
+                            <span class="form__input--icon"><img src="./img/icon_phone.png" alt=""></span>
+                            <input class="form__input" placeholder="Mi teléfono" type="tel" name="phone" required autocomplete="tel">
                         </label>
-                        <button class="btn action__btn" type="submit"> To order</button>
-                        <input type="hidden" name="data0" value="{subid}">
-                        <input type="hidden" name="data1" value="{b}">
-                        <input type="hidden" name="data2" value="{a}">
-                        <input type="hidden" name="data3" value="{x}">
-                        <input type="hidden" name="data4" value="<?php echo $off;?>">
-                        <input type="hidden" name="data5" value="<?php echo $geo;?>">
-                        <input type="hidden" name="data6" value="{offer_id}">
-                        <input type="hidden" name="data7" value="<?php echo $flowID;?>">
-                        <input type="hidden" name="data8" value="<?php echo $productID;?>">
-                        <input type="hidden" name="data9" value="<?php echo $price;?>">
-                        <input type="hidden" name="data10" value="<?php echo $payout;?>">
-                        <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground;?>">
-                        <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks;?>">
-                        <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders;?>">
-                        <input type="hidden" name="cct" value="<?php echo $confirmColorText;?>">
+                        <button class="btn action__btn" type="submit">Hacer un pedido</button>
+                        <input type="hidden" name="data0" value="{subid}" />
+                        <input type="hidden" name="data1" value="{b}" />
+                        <input type="hidden" name="data2" value="{a}" />
+                        <input type="hidden" name="data3" value="{x}" />
+                        <input type="hidden" name="data4" value="<?php echo $off; ?>" />
+                        <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
+                        <input type="hidden" name="data6" value="{offer_id}" />
+                        <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
+                        <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
+                        <input type="hidden" name="data9" value="<?php echo $price; ?>" />
+                        <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
+                        <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
+                        <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
+                        <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
+                        <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
                     </form>
                 </div>
             </div>
@@ -757,12 +575,19 @@ include __DIR__ . '/../_php/update-params.php';
     <section class="control block">
         <div class="container">
             <div class="control__info">
-                <h2 class="title control__title"> Cardioton helps regulate the cardiovascular system and clean blood vessels</h2>
-                <p class="control__text"> Long-term use of the product helps<b> to have clean blood vessels</b> from cholesterol plaques, to strengthen the walls and restore their elasticity. This
-                    ensures stable blood circulation without pressure on the vascular wall.</p>
-                <p class="control__text"> Due to the cumulative effect of plant extracts, you can<b> normalize the cardiovascular system.</b>
+                <h2 class="title control__title">
+                    Incasol ayuda a regular el sistema cardiovascular y a limpiar
+                    los vasos sanguíneos
+                </h2>
+                <p class="control__text">
+                    El uso prolongado del producto ayuda a <b>limpiar los vasos sanguíneos</b> de las placas de colesterol, a
+                    fortalecer las paredes y a devolverles la elasticidad. Esto garantiza una circulación sanguínea estable sin
+                    ejercer presión sobre la pared vascular.
                 </p>
-                <p class="control__text"> like this,<b> Cardioton helps to neutralize the causes of high blood pressure.</b>
+                <p class="control__text">Debido al efecto acumulativo del complejo de extractos de plantas, puede producirse una
+                    <b>normalización del sistema cardiovascular.</b>
+                </p>
+                <p class="control__text">Así, <b>Incasol ayuda a neutralizar las causas de la presión arterial alta.</b>
                 </p>
             </div>
             <div class="control__box">
@@ -772,10 +597,7 @@ include __DIR__ . '/../_php/update-params.php';
                         <img src="./img/prod.png" alt="image">
                     </picture>
                     <div class="control__medal animation-medal">
-                        <picture>
-                            <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/quality3.webp" type="image/webp">
-                            <img src="./img/quality3.png" alt="image">
-                        </picture>
+                        <img src="./img/quality3.png" alt="image">
                     </div>
                 </div>
             </div>
@@ -783,68 +605,64 @@ include __DIR__ . '/../_php/update-params.php';
     </section>
     <section class="composition block bg">
         <div class="container">
-            <h2 class="title composition__title"> The effectiveness of Cardioton lies in its composition</h2>
-            <h3 class="composition__subtitle"> The special composition of the complex helps prevent the formation of blood clots</h3>
+            <h2 class="title composition__title">La eficacia de Incasol radica en su composición</h2>
+            <h3 class="composition__subtitle">
+                La composición especial del complejo ayuda a prevenir los coágulos de sangre
+            </h3>
             <div class="composition__content">
                 <div class="composition__box active">
                     <div class="composition-box__item composition-box__item--capsule">
                         <div class="composition-item__ingredient">
                             <div class="composition-item__img composition-item__img1">
-                                <picture>
-
-                                    <img src="./img/composition1.webp" alt>
-                                </picture>
+                                <img src="./img/composition1.webp" alt="">
                             </div>
                             <p class="composition-item__info">
-                                <b> Turnip<br>
-                                </b> helps improve metabolism and normalize kidney and liver function.</p>
+                                <b>Remolacha<br>
+                                </b>
+                                ayuda a mejorar el metabolismo y a normalizar la función renal y hepática.
+                            </p>
                         </div>
                         <div class="composition-item__ingredient">
                             <div class="composition-item__img composition-item__img2">
-                                <picture>
-                                    <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/composition2.webp" type="image/webp">
-                                    <img src="./img/composition2.webp" alt>
-                                </picture>
+                                <img src="./img/composition2.webp" alt="">
                             </div>
-                            <p class="composition-item__info"><b> Magnesium<br></b> regulator of vascular tone, blood pressure and peripheral circulation.</p>
+                            <p class="composition-item__info"><b>Magnesio<br></b> regulador del tono vascular, la presión
+                                arterial y la circulación periférica.</p>
                         </div>
                         <div class="composition-item__ingredient">
                             <div class="composition-item__img composition-item__img3">
-                                <picture>
-
-                                    <img src="./img/composition3.webp" alt>
-                                </picture>
+                                <img src="./img/composition3.webp" alt="">
                             </div>
-                            <p class="composition-item__info"><b> Garlic</b><br> It contains sulfur compounds, such as allicin, which can help increase blood flow and relax blood vessels.</p>
+                            <p class="composition-item__info"><b>Ajo</b><br> contiene compuestos azufrados, como la alicina, que pueden ayudar a aumentar el flujo sanguíneo y a relajar los vasos
+                                sanguíneos.</p>
                         </div>
                         <div class="composition-item__ingredient">
                             <div class="composition-item__img composition-item__img3">
-                                <picture>
-
-                                    <img src="./img/composition4.webp" alt>
-                                </picture>
+                                <img src="./img/composition4.webp" alt="">
                             </div>
-                            <p class="composition-item__info"><b> Vitamin B3</b><br> It is responsible for cellular respiration and the metabolism of carbohydrates, proteins and fats.</p>
+                            <p class="composition-item__info"><b>Vitamina B3 </b><br> Es responsable de la respiración celular y del metabolismo de los hidratos de carbono, las proteínas y las grasas.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="composition__form">
                 <div class="action">
-                    <h2 class="title action__title"> Attention!</h2>
+                    <h2 class="title action__title">¡Atención!</h2>
                     <div class="action__box">
-                        <h3 class="action__subtitle"> Only today<span class="date-0 action__subtitle--accent" data-format="dd monthFull"> 45072</span>
+                        <h3 class="action__subtitle">
+                            Solo hoy, el <span class="date-0 action__subtitle--accent" data-format="dd monthFull">25 августа </span>
                         </h3>
                         <div class="action__price">
                             <div class="action__price-old">
-                                <p class="action__price-title"> Standard price</p>
+                                <p class="action__price-title"> Precio anterior: </p>
                                 <div class="action__old">
-                                    <span class="x_price_previous"> 1298</span> <span class="x_currency"> ZAR</span>
+                                    <span class="x_price_previous">69 980</span> <span class="x_currency">CLP</span>
                                 </div>
                             </div>
                             <div class="action__price-new">
-                                <p class="action__price-title"> Promotional price</p>
-                                <span class="x_price_current"> 649</span> <span class="x_currency"> ZAR</span>
+                                <p class="action__price-title"> Nuevo precio:</p>
+                                <span class="x_price_current">34990</span> <span class="x_currency">CLP</span>
                             </div>
                         </div>
                         <div class="action__pack">
@@ -854,7 +672,7 @@ include __DIR__ . '/../_php/update-params.php';
                             </picture>
                         </div>
                         <div class="action__timer">
-                            <div class="timer__text"> Remaining until the end of the promotion</div>
+                            <div class="timer__text">Hasta el fin de la oferta queda:</div>
                             <div class="timer__block">
                                 <div class="timer__hours"><span class="hours min> min"></span></div>
                                 <span class="timer__dots">:</span>
@@ -865,31 +683,31 @@ include __DIR__ . '/../_php/update-params.php';
                         </div>
                     </div>
                     <div class="action__form">
-                        <form class="x_order_form" action method="post">
+                        <form class="x_order_form" action="" method="post">
                             <label class="form__input--wrap">
-                                <span class="form__input--icon"><img src="./img/icon_name.png" alt></span>
-                                <input class="form__input" placeholder="Name and surname" type="text" name="name" required autocomplete="name">
+                                <span class="form__input--icon"><img src="./img/icon_name.png" alt=""></span>
+                                <input class="form__input" placeholder="Mi nombre" type="text" name="name" required autocomplete="name">
                             </label>
                             <label class="form__input--wrap">
-                                <span class="form__input--icon"><img src="./img/icon_phone.png" alt></span>
-                                <input class="form__input" placeholder="My contact phone number" type="tel" name="phone" required autocomplete="tel">
+                                <span class="form__input--icon"><img src="./img/icon_phone.png" alt=""></span>
+                                <input class="form__input" placeholder="Mi teléfono" type="tel" name="phone" required autocomplete="tel">
                             </label>
-                            <button class="btn action__btn" type="submit"> To order</button>
-                            <input type="hidden" name="data0" value="{subid}">
-                            <input type="hidden" name="data1" value="{b}">
-                            <input type="hidden" name="data2" value="{a}">
-                            <input type="hidden" name="data3" value="{x}">
-                            <input type="hidden" name="data4" value="<?php echo $off;?>">
-                            <input type="hidden" name="data5" value="<?php echo $geo;?>">
-                            <input type="hidden" name="data6" value="{offer_id}">
-                            <input type="hidden" name="data7" value="<?php echo $flowID;?>">
-                            <input type="hidden" name="data8" value="<?php echo $productID;?>">
-                            <input type="hidden" name="data9" value="<?php echo $price;?>">
-                            <input type="hidden" name="data10" value="<?php echo $payout;?>">
-                            <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground;?>">
-                            <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks;?>">
-                            <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders;?>">
-                            <input type="hidden" name="cct" value="<?php echo $confirmColorText;?>">
+                            <button class="btn action__btn" type="submit">Hacer un pedido</button>
+                            <input type="hidden" name="data0" value="{subid}" />
+                            <input type="hidden" name="data1" value="{b}" />
+                            <input type="hidden" name="data2" value="{a}" />
+                            <input type="hidden" name="data3" value="{x}" />
+                            <input type="hidden" name="data4" value="<?php echo $off; ?>" />
+                            <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
+                            <input type="hidden" name="data6" value="{offer_id}" />
+                            <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
+                            <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
+                            <input type="hidden" name="data9" value="<?php echo $price; ?>" />
+                            <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
+                            <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
+                            <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
+                            <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
+                            <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
                         </form>
                     </div>
                 </div>
@@ -899,21 +717,24 @@ include __DIR__ . '/../_php/update-params.php';
     </section>
     <section class="study block">
         <div class="container">
-            <h2 class="title study__title"> Results of Cardioton research in research centers in America</h2>
-            <h3 class="study__subtitle"> Code total<span class="study__subtitle--accent"> 2348</span> participants who took part in the research</h3>
+            <h2 class="title study__title">
+                Los resultados de la investigación de Incasol en centros de investigación de Estados Unidos y Chile
+            </h2>
+            <h3 class="study__subtitle">Un total de <span class="study__subtitle--accent">2348</span>
+                participantes tomaron parte en el estudio</h3>
             <ul class="study__content">
                 <li class="study__box">
-                    <svg class="study-box__circle study-box__circle1" viewBox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="study-box__circle study-box__circle1" viewbox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="66.5" cy="66.5" r="58" />
                     </svg>
                     <div class="study-box__num">
                         <span class="number" data-num="96" data-state="true">0</span>
                         <span class="study-box__num--small">%</span>
                     </div>
-                    <p class="study-box__text"> pressure normalizes after treatment</p>
+                    <p class="study-box__text"> La presión se normaliza después de un curso</p>
                 </li>
                 <li class="study__box study__box--border">
-                    <svg class="study-box__circle study-box__circle2" viewBox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="study-box__circle study-box__circle2" viewbox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="66.5" cy="66.5" r="58" />
                     </svg>
                     <div class="study-box__num">
@@ -921,10 +742,10 @@ include __DIR__ . '/../_php/update-params.php';
 
                         <span class="study-box__num--small">%</span>
                     </div>
-                    <p class="study-box__text"> BP remained normal two months after the same treatment</p>
+                    <p class="study-box__text"> La PA se mantuvo normal 2 meses después del curso</p>
                 </li>
                 <li class="study__box">
-                    <svg class="study-box__circle study-box__circle3" viewBox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="study-box__circle study-box__circle3" viewbox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="66.5" cy="66.5" r="58" />
                     </svg>
                     <div class="study-box__num">
@@ -932,80 +753,32 @@ include __DIR__ . '/../_php/update-params.php';
 
                         <span class="study-box__num--small">%</span>
                     </div>
-                    <p class="study-box__text"> Improves general well-being</p>
+                    <p class="study-box__text"> Mejora del bienestar general</p>
                 </li>
             </ul>
-            <div class="study__accent"> *Results may vary depending on individual needs</div>
-        </div>
-    </section>
-    <section class="recomend block bg">
-        <div class="container">
-            <h2 class="title recomend__title"> Ph.D. Nemanja Tomić answers questions about Cardioton</h2>
-            <div class="recomend__content">
-                <div class="recomend__doctor">
-
-                    <img class="recomend__doctor--img" src="./img/doc.jpg" alt>
-
-                </div>
-                <div class="recomend__info">
-                    <div class="details-block">
-                        <details class="spisok">
-                            <summary><strong> Has the effectiveness of the drug been confirmed?</strong></summary>
-                            <ul>
-                                <li> Yes, Cardioton has INVIMA certificate and GMP international quality standard. You can check them out HERE.</li>
-
-                            </ul>
-                        </details>
-                        <details class="spisok">
-                            <summary><strong> How many weeks does it take to feel better on Cardioton ?</strong></summary>
-                            <ul>
-                                <li> The duration of therapy depends on the individual needs of the patient and the severity of his health condition. However, blood pressure spikes and headaches will
-                                    stop after 14 days.</li>
-
-                            </ul>
-                        </details>
-                        <details class="spisok">
-                            <summary><strong> At what time of day should the medicine be taken?</strong></summary>
-                            <ul>
-                                <li> Also take one capsule in the evening.</li>
-
-                            </ul>
-                        </details>
-                        <details class="spisok">
-                            <summary><strong> Can hypertensive diabetics take Cardioton?</strong></summary>
-                            <ul>
-                                <li> If I could. Cardioton is compatible with other drugs.</li>
-
-                            </ul>
-                        </details>
-                    </div>
-                    <div class="sign">
-                        <div class="sign__doctor">
-                            <p class="sign__doctor--name"> Ph.D. Nemanja Tonic</p>
-                            <p class="sign__doctor--post"> President of the cardiology society.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="study__accent">*Los resultados pueden variar en función de las necesidades individuales
             </div>
         </div>
     </section>
+
     <section class="recomend__action block">
         <div class="container">
             <div class="action">
-                <h2 class="title action__title"> Attention!</h2>
+                <h2 class="title action__title">¡Atención!</h2>
                 <div class="action__box">
-                    <h3 class="action__subtitle"> Only today<span class="date-0 action__subtitle--accent" data-format="dd monthFull"> 45072</span>
+                    <h3 class="action__subtitle">
+                        Solo hoy, el <span class="date-0 action__subtitle--accent" data-format="dd monthFull">25 августа </span>
                     </h3>
                     <div class="action__price">
                         <div class="action__price-old">
-                            <p class="action__price-title"> Standard price</p>
+                            <p class="action__price-title"> Precio anterior: </p>
                             <div class="action__old">
-                                <span class="x_price_previous"> 1298</span> <span class="x_currency"> ZAR</span>
+                                <span class="x_price_previous">69 980</span> <span class="x_currency">CLP</span>
                             </div>
                         </div>
                         <div class="action__price-new">
-                            <p class="action__price-title"> Promotional price</p>
-                            <span class="x_price_current"> 649</span> <span class="x_currency"> ZAR</span>
+                            <p class="action__price-title"> Nuevo precio:</p>
+                            <span class="x_price_current">34990</span> <span class="x_currency">CLP</span>
                         </div>
                     </div>
                     <div class="action__pack">
@@ -1015,7 +788,7 @@ include __DIR__ . '/../_php/update-params.php';
                         </picture>
                     </div>
                     <div class="action__timer">
-                        <div class="timer__text"> Remaining until the end of the promotion</div>
+                        <div class="timer__text">Hasta el fin de la oferta queda:</div>
                         <div class="timer__block">
                             <div class="timer__hours"><span class="hours min> min"></span></div>
                             <span class="timer__dots">:</span>
@@ -1027,66 +800,67 @@ include __DIR__ . '/../_php/update-params.php';
                 </div>
             </div>
             <div class="action__form">
-                <form class="x_order_form" action method="post">
+                <form class="x_order_form" action="" method="post">
                     <label class="form__input--wrap">
-                        <span class="form__input--icon"><img src="./img/icon_name.png" alt></span>
-                        <input class="form__input" placeholder="Name and surname" type="text" name="name" required autocomplete="name">
+                        <span class="form__input--icon"><img src="./img/icon_name.png" alt=""></span>
+                        <input class="form__input" placeholder="Mi nombre" type="text" name="name" required autocomplete="name">
                     </label>
                     <label class="form__input--wrap">
-                        <span class="form__input--icon"><img src="./img/icon_phone.png" alt></span>
-                        <input class="form__input" placeholder="My contact phone number" type="tel" name="phone" required autocomplete="tel">
+                        <span class="form__input--icon"><img src="./img/icon_phone.png" alt=""></span>
+                        <input class="form__input" placeholder="Mi teléfono" type="tel" name="phone" required autocomplete="tel">
                     </label>
-                    <button class="btn action__btn" type="submit"> To order</button>
-                    <input type="hidden" name="data0" value="{subid}">
-                    <input type="hidden" name="data1" value="{b}">
-                    <input type="hidden" name="data2" value="{a}">
-                    <input type="hidden" name="data3" value="{x}">
-                    <input type="hidden" name="data4" value="<?php echo $off;?>">
-                    <input type="hidden" name="data5" value="<?php echo $geo;?>">
-                    <input type="hidden" name="data6" value="{offer_id}">
-                    <input type="hidden" name="data7" value="<?php echo $flowID;?>">
-                    <input type="hidden" name="data8" value="<?php echo $productID;?>">
-                    <input type="hidden" name="data9" value="<?php echo $price;?>">
-                    <input type="hidden" name="data10" value="<?php echo $payout;?>">
-                    <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground;?>">
-                    <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks;?>">
-                    <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders;?>">
-                    <input type="hidden" name="cct" value="<?php echo $confirmColorText;?>">
+                    <button class="btn action__btn" type="submit">Hacer un pedido</button>
+                    <input type="hidden" name="data0" value="{subid}" />
+                    <input type="hidden" name="data1" value="{b}" />
+                    <input type="hidden" name="data2" value="{a}" />
+                    <input type="hidden" name="data3" value="{x}" />
+                    <input type="hidden" name="data4" value="<?php echo $off; ?>" />
+                    <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
+                    <input type="hidden" name="data6" value="{offer_id}" />
+                    <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
+                    <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
+                    <input type="hidden" name="data9" value="<?php echo $price; ?>" />
+                    <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
+                    <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
+                    <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
+                    <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
+                    <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
                 </form>
             </div>
         </div>
 
 
-
+        </div>
     </section>
     <section class="reviews block bg" id="reviews">
         <div class="container">
-            <h2 class="title reviews__title"> Feedback from people who have used Cardioton</h2>
+            <h2 class="title reviews__title">Comentarios de personas que se han beneficiado
+                de Incasol</h2>
             <div class="reviews-content">
                 <div class="reviews-panel">
                     <div class="star-box">
                         <div class="reviews-headStar" style="width: 89px;"></div>
-                        <div class="reviews-amount"> 30 comments</div>
+                        <div class="reviews-amount">30 comentarios</div>
                     </div>
-                    <button class="btn reviews-btn"> Leave a comment</button>
+                    <button class="btn reviews-btn">Escribir un comentario</button>
                 </div>
                 <div class="feedback">
                     <div class="feedback-form">
                         <div class="feedback-top">
-                            <label class="feedback-name"><input class="feedback-name-input input__val-1" type="text" name="name" required placeholder="Name and surname" autocomplete="name"></label>
-                            <div class="feedback-assessment"> Your rating</div>
+                            <label class="feedback-name"><input class="feedback-name-input input__val-1" type="text" name="name" required placeholder="Mi nombre" autocomplete="name"></label>
+                            <div class="feedback-assessment">Su puntuación</div>
                             <div class="feedback-rating">
-                                <img class="star1" src="./img/star.png" alt><img class="star2" src="./img/star.png" alt><img class="star3" src="./img/star.png" alt><img class="star4"
-                                    src="./img/star.png" alt><img class="star5" src="./img/star.png" alt>
+                                <img class="star1" src="./img/star.png" alt=""><img class="star2" src="./img/star.png" alt=""><img class="star3" src="./img/star.png" alt=""><img class="star4"
+                                    src="./img/star.png" alt=""><img class="star5" src="./img/star.png" alt="">
                             </div>
                         </div>
-                        <label class="feedback-text"><textarea class="feedback-text-input input__val-4" placeholder="Message"></textarea></label>
-                        <div class="feedback-btn btn reviews-btn"> Send</div>
+                        <label class="feedback-text"><textarea class="feedback-text-input input__val-4" placeholder="Mensajes"></textarea></label>
+                        <div class="feedback-btn btn reviews-btn">Enviar</div>
                     </div>
                     <div class="feedback-modal">
                         <div class="feedback-modal__inner">
-                            <div class="feedback-modal__title"> Thank you!</div>
-                            <div class="feedback-modal__text"> Your comment has been sent</div>
+                            <div class="feedback-modal__title">¡Gracias!</div>
+                            <div class="feedback-modal__text">Su comentario se envió a moderación</div>
                         </div>
                     </div>
                 </div>
@@ -1095,14 +869,15 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">J</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Milan Bogdanović</h4>
+                                <h4 class="reviews-item__name"> Jorge Salazar</h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> Good for reducing pressure, little by little, I'm satisfied. Can't complain at all.</div>
+                        <div class="reviews-item__text"> Bueno para bajar la presión arterial, poco a poco, estoy satisfecho y tomo
+                            todo el curso. No puedo quejarme en absoluto.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 19</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">19</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1113,14 +888,14 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">A</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Katarina Gajić</h4>
+                                <h4 class="reviews-item__name"> Ana Garcia</h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> I have been drinking for 15 days now and I can tell you that I am very happy with the results</div>
+                        <div class="reviews-item__text"> Llevo quince días tomándolo y puedo decir que me ayuda.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 12</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">12</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">1</span></div>
                             </div>
@@ -1131,14 +906,15 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">J</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Andrea Mihajlovic</h4>
+                                <h4 class="reviews-item__name"> Juana Lopez</h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> Blood pressure increased from 140 / 90 to 120 / 80. I recommend.</div>
+                        <div class="reviews-item__text"> La presión arterial pasó de 140 sobre 90 a 120 sobre 80. Recomiendo a
+                            comprar.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 44</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">44</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1149,14 +925,14 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">R</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Aleksa Glišić</h4>
+                                <h4 class="reviews-item__name"> Raul Chavez</h4>
                             </div>
                             <div class="reviews-item__rating" style="width: 95px;"></div>
                         </div>
-                        <div class="reviews-item__text"> Excellent product. I'm getting unexpected results</div>
+                        <div class="reviews-item__text"> Muy buen producto para tomar, funciona muy bien.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 24</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">24</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">1</span></div>
                             </div>
@@ -1167,15 +943,17 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">M</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Marija Stefanović</h4>
+                                <h4 class="reviews-item__name"> Margarita Contreras
+                                </h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> Blood pressure headaches are a thing of the past and I feel great. I took it for my sister and mother because they also have problems with
-                            hypertension.</div>
+                        <div class="reviews-item__text"> Los dolores de cabeza por la presión arterial son cosa del pasado y me
+                            siento muy bien. Lo tomé para mi hermana y mi madre, ya que también tienen problemas de hipertensión.
+                        </div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 46</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">46</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1186,14 +964,15 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">C</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Jovana Marjanović</h4>
+                                <h4 class="reviews-item__name"> Carmen Garcia
+                                </h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> I got rid of hypertension in record time! In just four weeks!</div>
+                        <div class="reviews-item__text"> ¡Acabé con la hipertensión en tiempo récord! ¡En solo cuatro semanas!</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 39</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">39</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1204,14 +983,15 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">L</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Mitar Jovanovic</h4>
+                                <h4 class="reviews-item__name"> Luis Rodriguez</h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> I bought it and I don't regret it, because I already forgot about the pressure jump. I don't have any problem anymore.</div>
+                        <div class="reviews-item__text"> Lo compré y no me arrepiento, porque ya me he olvidado de los saltos de
+                            tensión. No tengo ningún problema con ello.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 19</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">19</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1222,14 +1002,16 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">J</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Pavle Ljubisavljević</h4>
+                                <h4 class="reviews-item__name"> Juan Gonzalez
+                                </h4>
                             </div>
                             <div class="reviews-item__rating" style="width: 76px; margin-right: 18px;"></div>
                         </div>
-                        <div class="reviews-item__text"> I waited a little longer for the delivery, but I am very happy with the product.</div>
+                        <div class="reviews-item__text"> Retraso en la oficina de correos pero estoy muy contento con el producto.
+                        </div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 15</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">15</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">4</span></div>
                             </div>
@@ -1240,15 +1022,15 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">J</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Ognjen Peković</h4>
+                                <h4 class="reviews-item__name"> Jose Cardenas</h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> Now I can live normally because my pressure is always normal. I don't have a headache, I don't take painkillers. It's amazing how much this
-                            helps.</div>
+                        <div class="reviews-item__text"> Ahora puedo vivir con normalidad, ya que mi presión arterial es siempre
+                            normal. No hay dolores de cabeza, no tomo analgésicos. Es sorprendente lo bien que ayuda esto.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 46</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">46</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1259,14 +1041,14 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">P</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Strahinja Radonjić</h4>
+                                <h4 class="reviews-item__name"> Pedro Hernandez</h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> It helps!</div>
+                        <div class="reviews-item__text"> Ayuda.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 12</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">12</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1277,11 +1059,11 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">A</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Andrea Mojović</h4>
+                                <h4 class="reviews-item__name"> Adriana Ramirez</h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> It saves me from high blood pressure when the weather changes. Thank you!</div>
+                        <div class="reviews-item__text"> Me salva de la hipertensión cuando el tiempo cambia. ¡Gracias!</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
                                 <div class="social__button"><span class="like social__img"> </span><span class="social__count">6</span>
@@ -1295,14 +1077,15 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">A</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Andrea Mojović</h4>
+                                <h4 class="reviews-item__name">Alma Fernandez
+                                    s</h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> It's all right, the effects are real.</div>
+                        <div class="reviews-item__text"> Todo es bueno, se puede comprar, los efectos son reales.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 17</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">17</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1313,15 +1096,16 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">J</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Nevena Rackovic</h4>
+                                <h4 class="reviews-item__name"> Juana Flores
+                                </h4>
                             </div>
                             <div class="reviews-item__rating" style="width: 76px; margin-right: 18px;"></div>
                         </div>
-                        <div class="reviews-item__text"> My blood pressure always increases when it's hot, but after treatment with this medicine it seems that I no longer have these problems. But I
-                            have to avoid alcohol and fatty foods.</div>
+                        <div class="reviews-item__text"> Mi presión arterial siempre se eleva cuando hace calor, pero después de un
+                            curso de este remedio parece que no. Pero también tengo que evitar el alcohol y la comida grasosa.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 42</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">42</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">3</span></div>
                             </div>
@@ -1332,11 +1116,11 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">M</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Milena Savić</h4>
+                                <h4 class="reviews-item__name"> Margarita Hernandez</h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> I am very satisfied with the product</div>
+                        <div class="reviews-item__text"> Estoy contenta con mi compra.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
                                 <div class="social__button"><span class="like social__img"> </span><span class="social__count">9</span>
@@ -1350,14 +1134,15 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">A</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Marica Lončarević</h4>
+                                <h4 class="reviews-item__name"> Ana Castro</h4>
                             </div>
                             <div class="reviews-item__rating" style="width: 76px; margin-right: 18px;"></div>
                         </div>
-                        <div class="reviews-item__text"> It basically does what it's supposed to do, which is achieve lower pressure. What more can I say?</div>
+                        <div class="reviews-item__text"> Básicamente hace lo que se supone que debe hacer, que es bajar la presión.
+                            ¿Qué más puedo decir?</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 25</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">25</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">8</span></div>
                             </div>
@@ -1368,14 +1153,14 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">B</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Vesna Marinković</h4>
+                                <h4 class="reviews-item__name"> Blanca Aguirre</h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> Completely satisfied</div>
+                        <div class="reviews-item__text"> Completamente satisfecha.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 29</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">29</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1386,14 +1171,14 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">M</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Olga Komatović</h4>
+                                <h4 class="reviews-item__name"> Margarita Rodriguez</h4>
                             </div>
                             <div class="reviews-item__rating" style="width: 90px;"></div>
                         </div>
-                        <div class="reviews-item__text"> Everything is going well. Fast delivery and pressure become a thing of the past</div>
+                        <div class="reviews-item__text"> Todo está bien, entrega rápida y no molesta la presión.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 18</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">18</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1402,15 +1187,17 @@ include __DIR__ . '/../_php/update-params.php';
                     </li>
                     <li class="reviews-list-item">
                         <div class="reviews-item-top">
-                            <div class="reviews-item-avatar"> O/div><div class="reviews-item-title">
-                                    <h4 class="reviews-item__name"> Miroslav Joksimović</h4>
+                            <div class="reviews-item-avatar">O/div>
+                                <div class="reviews-item-title">
+                                    <h4 class="reviews-item__name"> Oscar Mendez</h4>
                                 </div>
                                 <div class="reviews-item__rating"></div>
                             </div>
-                            <div class="reviews-item__text"> Take the product as directed and do not skip days, then it will surely work.</div>
+                            <div class="reviews-item__text"> Tómalo según las instrucciones y no te saltes días, entonces funcionará.
+                            </div>
                             <div class="reviews-bottom">
                                 <div class="reviews-assessment">
-                                    <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 28</span>
+                                    <div class="social__button"><span class="like social__img"> </span><span class="social__count">28</span>
                                     </div>
                                     <div class="social__button"><span class="dislike social__img"></span><span class="social__count">2</span></div>
                                 </div>
@@ -1422,14 +1209,15 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">M</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Dimitrije Rakić</h4>
+                                <h4 class="reviews-item__name"> Marco Salas
+                                </h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> It's better than taking painkillers for a headache.</div>
+                        <div class="reviews-item__text"> Es mejor que tomar analgésicos para el dolor de cabeza.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 34</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">34</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1440,14 +1228,15 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">V</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Nataša Vukićević</h4>
+                                <h4 class="reviews-item__name"> Veronica Ruiz</h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> I took this product on the advice of a specialist and I don't regret it, my blood pressure is stable and normal.</div>
+                        <div class="reviews-item__text"> Tomé este producto por consejo de un especialista y no me arrepiento, mi
+                            presión arterial es estable y normal.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 24</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">24</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1458,14 +1247,15 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">М</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Milena Ignjatović</h4>
+                                <h4 class="reviews-item__name"> Margarita Gomez
+                                </h4>
                             </div>
                             <div class="reviews-item__rating" style="width: 94px;"></div>
                         </div>
-                        <div class="reviews-item__text"> It works much better than I expected.</div>
+                        <div class="reviews-item__text"> Funcionó incluso mejor en mi presión arterial de lo que esperaba.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 29</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">29</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1476,11 +1266,12 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">R</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Iskra Đurić</h4>
+                                <h4 class="reviews-item__name"> Rosa Ramirez
+                                </h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> It works</div>
+                        <div class="reviews-item__text"> Ayuda.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
                                 <div class="social__button"><span class="like social__img"> </span><span class="social__count">7</span>
@@ -1494,15 +1285,17 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">M</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Danica Zivanovic</h4>
+                                <h4 class="reviews-item__name"> Maria Castillo
+                                </h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> All my friends at work were using Cardioton capsules so I decided to drink them too. I ordered and got a discount. From the moment I started
-                            drinking them, the pressure has not bothered me yet.</div>
+                        <div class="reviews-item__text"> Todas mis amigas del trabajo han tomado el curso de Incasol, así que decidí
+                            hacerlo yo también. Lo pedí y obtuve un descuento. Ahora lo tomo y la presión arterial no me ha molestado
+                            todavía.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 41</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">41</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1513,14 +1306,14 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">A</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Djordje Dimitrijevic</h4>
+                                <h4 class="reviews-item__name"> Arturo Rodriguez</h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> I bought this product because of its composition and I am satisfied with it.</div>
+                        <div class="reviews-item__text">Compré este producto por su composición y estoy satisfecho con él.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 47</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">47</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1531,14 +1324,15 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">M</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Andjela Milosavljević</h4>
+                                <h4 class="reviews-item__name"> Maria Castillo
+                                </h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> Fast delivery to the address</div>
+                        <div class="reviews-item__text"> Entrega rápida, manageres amables.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 29</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">29</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1549,14 +1343,16 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">P</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Nadja Stevanović</h4>
+                                <h4 class="reviews-item__name"> Pedro Dominguez
+                                </h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> A very effective product with a huge effect, I've been using it for the third week and I feel fantastic</div>
+                        <div class="reviews-item__text"> Este producto tiene un gran efecto y ya estoy en mi tercera semana de
+                            curso.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 24</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">24</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1567,14 +1363,15 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">L</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Relja Cvetković</h4>
+                                <h4 class="reviews-item__name"> Luis Moreno
+                                </h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> It seems to be working</div>
+                        <div class="reviews-item__text"> Parece estar bien.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 21</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">21</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1585,14 +1382,14 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">P</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Nikolina Milovanović</h4>
+                                <h4 class="reviews-item__name"> Patricia Avila</h4>
                             </div>
                             <div class="reviews-item__rating"></div>
                         </div>
-                        <div class="reviews-item__text"> Excellent for lowering blood pressure</div>
+                        <div class="reviews-item__text"> Reduce bien la presión arterial.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 34</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">34</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1603,14 +1400,15 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">I</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Jana Vasić</h4>
+                                <h4 class="reviews-item__name"> Irma Cortes</h4>
                             </div>
                             <div class="reviews-item__rating" style="width: 88px;"></div>
                         </div>
-                        <div class="reviews-item__text"> I will forever have these in my home medicine cabinet to prevent pressure issues from happening again</div>
+                        <div class="reviews-item__text"> Estará siempre en mi botiquín de casa para evitar los saltos de presión.
+                        </div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 31</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">31</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1621,14 +1419,14 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="reviews-item-top">
                             <div class="reviews-item-avatar">M</div>
                             <div class="reviews-item-title">
-                                <h4 class="reviews-item__name"> Una Lazarevic</h4>
+                                <h4 class="reviews-item__name"> Monica Lopez</h4>
                             </div>
                             <div class="reviews-item__rating" style="width: 80px;"></div>
                         </div>
-                        <div class="reviews-item__text"> They are easy to consume, act quickly and without side effects</div>
+                        <div class="reviews-item__text"> Fácil de tomar, ayuda rápidamente, sin efectos secundarios.</div>
                         <div class="reviews-bottom">
                             <div class="reviews-assessment">
-                                <div class="social__button"><span class="like social__img"> </span><span class="social__count"> 28</span>
+                                <div class="social__button"><span class="like social__img"> </span><span class="social__count">28</span>
                                 </div>
                                 <div class="social__button"><span class="dislike social__img"></span><span class="social__count">0</span></div>
                             </div>
@@ -1641,22 +1439,22 @@ include __DIR__ . '/../_php/update-params.php';
     </section>
     <section class="use block">
         <div class="container">
-            <h2 class="title use__title"> How to take Cardioton</h2>
+            <h2 class="title use__title">Cómo tomar Incasol</h2>
             <div class="use__content">
                 <div class="use__box">
-                    <div class="use-box__icon"><img src="./img/use-icon1.png" alt></div>
-                    <h3 class="use-box__title"> Drink 2 times a day. Morning and evening</h3>
+                    <div class="use-box__icon"><img src="./img/peel-icon1.png" alt=""></div>
+                    <h3 class="use-box__title">Tomar 3 pastillas al día. </h3>
                 </div>
 
                 <div class="use__pack">
-                    <picture>
-
-                        <img src="./img/use-bottle.webp" alt>
-                    </picture>
+                    <img src="./img/use-bottle.webp" alt="">
                 </div>
                 <div class="use__box">
-                    <div class="use-box__icon"><img src="./img/use-icon2.png" alt></div>
-                    <h3 class="use-box__title"> The duration of therapy depends on the individual needs of the patient and the severity of his health condition.</h3>
+                    <div class="use-box__icon"><img src="./img/use-icon2.png" alt=""></div>
+                    <h3 class="use-box__title">
+                        El curso de la terapia depende de las necesidades individuales del paciente
+                        y de la gravedad de su estado de salud.
+                    </h3>
                 </div>
             </div>
         </div>
@@ -1666,156 +1464,168 @@ include __DIR__ . '/../_php/update-params.php';
             <div class="doctor__content">
                 <ul class="doctor__list">
                     <li class="doctor-list__item doctor-list__item1">
-                        <b> To improve the performance of Cardioton,</b> fatty foods and alcohol should be avoided.</li>
+                        <b> Para potenciar el efecto de Incasol,</b>
+                        debes evitar los alimentos grasos y el alcohol
+                    </li>
                     <li class="doctor-list__item doctor-list__item2">
-                        <b> Try to avoid putting extra strain on your heart</b> to maximize the effect of Cardioton</li>
+                        <b> Intenta evitar un esfuerzo extra para tu corazón</b>
+                        para maximizar el efecto de Incasol
+                    </li>
                     <li class="doctor-list__item doctor-list__item3">
-                        <b> You should also keep your diet consistent and your blood vessels in check.</b> for the prevention of hypertension</li>
+                        <b> También debes mantener una dieta constante y tus vasos sanguíneos bajo control</b>
+                        para prevenir la hipertensió
+                    </li>
                 </ul>
-                <div class="doctor__info">
-                    <h3 class="doctor-info__name"> Council Mihajla Stanković<span class="doctor-info__name--prof"> leading specialist of the Center for Cardiology and Surgery,<br> 20 years of
-                            experience</span>
-                    </h3>
-                </div>
             </div>
         </div>
     </section>
     <section class="order block" id="order">
         <div class="container">
-            <h2 class="title order__title"> How to order Cardioton?</h2>
+            <h2 class="title order__title">Cómo pedir Incasol</h2>
             <ul class="order__list">
                 <li class="order__item">
                     <div class="order-item__icon">
-                        <img src="./img/order-1.png" alt><svg class="order-item__icon-circle" viewBox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
+                        <img src="./img/order-1.png" alt=""><svg class="order-item__icon-circle" viewbox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="66.5" cy="66.5" r="64" />
                         </svg>
                     </div>
-                    <h3 class="order-item__title"> Fill out the order form</h3>
-                    <p class="order-item__text"> Please provide your name and phone number</p>
+                    <h3 class="order-item__title">
+                        Rellena el formulario de pedido
+                    </h3>
+                    <p class="order-item__text">
+                        Indica el nombre y el número
+                        de teléfono
+                    </p>
                 </li>
                 <li class="order__item">
                     <div class="order-item__icon">
-                        <img src="./img/order-2.png" alt><svg class="order-item__icon-circle order-item__icon-circle2" viewBox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
+                        <img src="./img/order-2.png" alt=""><svg class="order-item__icon-circle order-item__icon-circle2" viewbox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="66.5" cy="66.5" r="64" />
                         </svg>
                     </div>
-                    <h3 class="order-item__title"> Accept the call from the operator</h3>
-                    <p class="order-item__text"> An expert will consult you and give him the delivery information.</p>
+                    <h3 class="order-item__title">
+                        Acepta una llamada
+                        de un operador
+                    </h3>
+                    <p class="order-item__text">Un especialista va a consultarte y a aclarar los datos
+                        de la dirección</p>
                 </li>
                 <li class="order__item">
                     <div class="order-item__icon">
-                        <img src="./img/order-3.png" alt><svg class="order-item__icon-circle order-item__icon-circle3" viewBox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
+                        <img src="./img/order-3.png" alt=""><svg class="order-item__icon-circle order-item__icon-circle3" viewbox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="66.5" cy="66.5" r="64" />
                         </svg>
                     </div>
-                    <h3 class="order-item__title"> You pay when you download</h3>
-                    <p class="order-item__text"> No need to pay in advance</p>
+                    <h3 class="order-item__title">
+                        Pagar después de recibirlo
+                    </h3>
+                    <p class="order-item__text">
+                        No es necesario pagar
+                        por adelantado
+                    </p>
                 </li>
                 <li class="order__item">
                     <div class="order-item__icon">
-                        <img src="./img/order-4.png" alt><svg class="order-item__icon-circle order-item__icon-circle4" viewBox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
+                        <img src="./img/order-4.png" alt=""><svg class="order-item__icon-circle order-item__icon-circle4" viewbox="0 0 133 133" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="66.5" cy="66.5" r="64" />
                         </svg>
                     </div>
-                    <h3 class="order-item__title"> Enjoy the results</h3>
-                    <p class="order-item__text"> Get your blood pressure back</p>
+                    <h3 class="order-item__title">
+                        Disfruta del efecto
+                    </h3>
+                    <p class="order-item__text">
+                        Recupera la presión
+                        arterial
+                    </p>
                 </li>
             </ul>
         </div>
     </section>
-    <section class="promo promo--last block ccc cc">
+    <section class="promo promo--last block">
         <div class="container">
             <div class="promo__content">
                 <div class="promo__product">
-                    <picture>
+                    <img class="man" src="./img/man.png" alt="man">
+                    <div class="product-wrap animation-pack ccc">
+                        <img class="product-image" src="./img/prod.png" alt="prod">
 
-                        <!--            <source srcset="//evrhst-a.akamaihd.net/26262_4fda694e-c9fc-4ed4-b856-efdc70f94a40/img/man.webp" type="image/webp">-->
-                        <img class="man" src="./img/man.png" alt="man">
-                    </picture>
-                    <div class="product-wrap animation-pack">
-                        <picture>
-
-                            <img class="product-image" src="./img/prod.png" alt="prod">
-                        </picture>
-
-                        <div class="medal animation-medal"><img src="./img/quality3.png" alt></div>
+                        <div class="medal animation-medal"><img src="./img/quality3.png" alt=""></div>
                     </div>
                 </div>
-                <ul class="promo__quality">
-                    <li class="promo__quality--item"><img class="quality" src="./img/quality1.png" alt="prod"><span> Recommended by leading experts in the country</span></li>
-                </ul>
                 <div class="promo__description">
                     <div class="promo__title">
-                        <h1> Cardioton:</h1>
-                        <h2 class="title"> The key to 120/80 blood pressure, good sleep and longevity</h2>
+                        <h1>Incasol:</h1>
+                        <h2 class="title">
+                            <? echo $title; ?>
+                        </h2>
                     </div>
-                    <p class="subtitle"> Regulates the cardiovascular system with herbal ingredients</p>
-                    <div class="flex-items">
-                        <div class="flex-items__item">
-                            <div class="flex-items__logo">
-                                <img src="./img/icon-l.png" alt>
-                            </div>
-                            <div class="flex-items__text"> High blood pressure, headaches and migraines</div>
-                            <div class="flex-items__text"> Tinnitus, sweating, facial flushing</div>
-                            <div class="flex-items__text"> Depressive state and fear for one's own life</div>
-                        </div>
-                        <div class="flex-items__item flex-items__item--green-text">
-                            <div class="flex-items__logo">
-                                <img src="./img/icon-r.png" alt>
-                            </div>
-                            <div class="flex-items__text"> Your blood pressure will stabilize from day one</div>
-                            <div class="flex-items__text"> Symptoms of hypertension disappear day by day</div>
-                            <div class="flex-items__text"> With Cardioton you will get peace and a lot of energy</div>
-                        </div>
-                    </div>
+                    <p class="subtitle">Incasol puede ayudarte si sufres de:</p>
+                    <ul class="promo__list">
+                        <li class="promo__list--item">
+                            <h6>Dolor de cabeza</h6>
+                            <!-- <p></p> -->
+                        </li>
+                        <li class="promo__list--item">
+                            <h6>Vértigos</h6>
+                        </li>
+                        <li class="promo__list--item">
+                            <h6>Acúfenos o zumbidos en los oídos</h6>
+                        </li>
+                        <li class="promo__list--item">
+                            <h6>Dolores torácicos</h6>
+                        </li>
+                        <li class="promo__list--item">
+                            <h6>Falta de aliento o dificultad para respirar</h6>
+                        </li>
+                    </ul>
                 </div>
                 <div class="promo__form">
                     <div class="form-wrap">
-                        <form class="x_order_form form" action method="post">
-                            <h3 class="form__title"> Attention!</h3>
-                            <p class="date-wrap"> Only today<span class="date-0 date-color" data-format="dd monthFull"></span></p>
+                        <form class="x_order_form form" action="" method="post">
+                            <h3 class="form__title">¡Atención!</h3>
+                            <p class="date-wrap">Solo hoy, el <span class="date-0 date-color" data-format="dd monthFull"></span></p>
                             <div class="price">
                                 <div class="price__left">
-                                    <p class="price__title"> Standard price</p>
+                                    <p class="price__title"> Precio anterior: </p>
                                     <div class="price__old">
-                                        <span class="x_price_previous"> 1298</span> <span class="x_currency"> ZAR</span>
+                                        <span class="x_price_previous">69 980</span> <span class="x_currency">CLP</span>
                                     </div>
                                 </div>
                                 <div class="price__right">
-                                    <p class="price__title"> Promotional price</p>
+                                    <p class="price__title"> Nuevo precio:</p>
                                     <div class="price__new">
-                                        <span class="x_price_current"> 649</span> <span class="x_currency"> ZAR</span>
+                                        <span class="x_price_current">34990</span> <span class="x_currency">CLP</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="form__input--wrap">
-                                <label class="form__input--icon"><img src="./img/icon_name.png" alt></label><input class="form__input" placeholder="Name and surname" type="text" name="name" required
+                                <label class="form__input--icon"><img src="./img/icon_name.png" alt=""></label><input class="form__input" placeholder="Mi nombre" type="text" name="name" required
                                     autocomplete="name">
                             </div>
                             <div class="form__input--wrap">
-                                <label class="form__input--icon"><img src="./img/icon_phone.png" alt></label><input class="form__input" placeholder="My contact phone number" type="tel" name="phone"
-                                    required autocomplete="tel">
+                                <label class="form__input--icon"><img src="./img/icon_phone.png" alt=""></label><input class="form__input" placeholder="Mi teléfono" type="tel" name="phone" required
+                                    autocomplete="tel">
                             </div>
-                            <button class="btn" type="submit"> A row</button>
+                            <button class="btn" type="submit">Hacer un pedido</button>
 
-                            <div class="visitors"><img class="eye" src="./img/eye.png" alt="eye"> Now<span class="lastpeople"> 12</span> a person</div>
-                            <input type="hidden" name="data0" value="{subid}">
-                            <input type="hidden" name="data1" value="{b}">
-                            <input type="hidden" name="data2" value="{a}">
-                            <input type="hidden" name="data3" value="{x}">
-                            <input type="hidden" name="data4" value="<?php echo $off;?>">
-                            <input type="hidden" name="data5" value="<?php echo $geo;?>">
-                            <input type="hidden" name="data6" value="{offer_id}">
-                            <input type="hidden" name="data7" value="<?php echo $flowID;?>">
-                            <input type="hidden" name="data8" value="<?php echo $productID;?>">
-                            <input type="hidden" name="data9" value="<?php echo $price;?>">
-                            <input type="hidden" name="data10" value="<?php echo $payout;?>">
-                            <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground;?>">
-                            <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks;?>">
-                            <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders;?>">
-                            <input type="hidden" name="cct" value="<?php echo $confirmColorText;?>">
+                            <div class="visitors"><img class="eye" src="./img/eye.png" alt="eye">Ahora en el sitio  <span class="lastpeople">12</span> persona</div>
+                            <input type="hidden" name="data0" value="{subid}" />
+                            <input type="hidden" name="data1" value="{b}" />
+                            <input type="hidden" name="data2" value="{a}" />
+                            <input type="hidden" name="data3" value="{x}" />
+                            <input type="hidden" name="data4" value="<?php echo $off; ?>" />
+                            <input type="hidden" name="data5" value="<?php echo $geo; ?>" />
+                            <input type="hidden" name="data6" value="{offer_id}" />
+                            <input type="hidden" name="data7" value="<?php echo $flowID; ?>" />
+                            <input type="hidden" name="data8" value="<?php echo $productID; ?>" />
+                            <input type="hidden" name="data9" value="<?php echo $price; ?>" />
+                            <input type="hidden" name="data10" value="<?php echo $payout; ?>" />
+                            <input type="hidden" name="ccbg" value="<?php echo $confirmColorBackground; ?>" />
+                            <input type="hidden" name="ccb" value="<?php echo $confirmColorBlocks; ?>" />
+                            <input type="hidden" name="cch" value="<?php echo $confirmColorHeaders; ?>" />
+                            <input type="hidden" name="cct" value="<?php echo $confirmColorText; ?>" />
                         </form>
-                        <p class="last"> Remaining quantity<span class="lastpack"> 80</span> packaging</p>
+                        <p class="last">Quedan <span class="lastpack">80</span> envases</p>
                     </div>
                 </div>
             </div>
@@ -1826,27 +1636,24 @@ include __DIR__ . '/../_php/update-params.php';
         <div class="container">
             <div class="banner__content">
                 <div class="banner__pack">
-                    <picture>
-
-                        <img src="./img/prod.png" alt="prod">
-                    </picture>
+                    <img src="./img/prod.png" alt="prod">
                 </div>
-                <div class="banner__title"> Only today<span class="date-0 text-nowrap banner__title--accent" data-format="dd monthFull"> </span> </div>
+                <div class="banner__title">Solo hoy, el <span class="date-0 text-nowrap banner__title--accent" data-format="dd monthFull"> </span> </div>
 
                 <div class="action__price banner__price">
                     <div class="action__price-old">
-                        <p class="action__price-title"> Standard price</p>
+                        <p class="action__price-title"> Precio anterior: </p>
                         <div class="action__old">
-                            <span class="x_price_previous"> 1298</span> <span class="x_currency"> ZAR</span>
+                            <span class="x_price_previous">69 980</span> <span class="x_currency">CLP</span>
                         </div>
                     </div>
                     <div class="action__price-new">
-                        <p class="action__price-title"> Promotional price</p>
-                        <span class="x_price_current"> 649</span> <span class="x_currency"> ZAR</span>
+                        <p class="action__price-title"> Nuevo precio:</p>
+                        <span class="x_price_current">34990</span> <span class="x_currency">CLP</span>
                     </div>
                 </div>
                 <div class="banner__timer">
-                    <div class="timer__text"> Remaining until the end of the promotion</div>
+                    <div class="timer__text">Hasta el fin de la oferta queda:</div>
                     <div class="timer__block">
                         <div class="timer__hours"><span class="hours min> min"></span></div>
                         <span class="timer__dots">:</span>
@@ -1855,11 +1662,17 @@ include __DIR__ . '/../_php/update-params.php';
                         <div class="timer__seconds"><span class="seconds msec"></span></div>
                     </div>
                 </div>
-                <button class="banner__btn btn ever-popup-btn"> A row</button>
+                <button class="banner__btn btn ever-popup-btn">Pedir una llamada</button>
             </div>
         </div>
     </div>
-
+    <footer>
+        INNOVACIONES MÉDICAS S.A.S.
+        <br>
+        © 2023
+        <br>
+        Todos los derechos reservados y pertenecen a los titulares de los derechos de autor
+    </footer>
     <script>
         var time = 600 * 100;
         var intr;
@@ -1884,27 +1697,18 @@ include __DIR__ . '/../_php/update-params.php';
             $(".min").html("0" + mins);
             $(".sec").html(secs);
             $(".msec").html(msecs);
-
         }
 
         start_timer();
-        const links = document.querySelectorAll('.link');
-        const anhor = document.querySelector('.ccc')
-
-        for (const link of links) {
-            link.addEventListener('click', () => {
-                anhor.scrollIntoView({
-                    behavior: "smooth"
-                })
-            })
-        }
     </script>
+
+
     <svg style="display: none;" width="0" height="0" class="hidden">
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.619 64.133" id="illness-icon1">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 59.619 64.133" id="illness-icon1">
             <defs>
-                <clipPath>
+                <clippath>
                     <path d="M0 48.1h44.714V0H0z" />
-                </clipPath>
+                </clippath>
             </defs>
             <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 64.133)">
                 <path
@@ -1912,11 +1716,11 @@ include __DIR__ . '/../_php/update-params.php';
 
             </g>
         </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.06 77.333" id="illness-icon2">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 77.06 77.333" id="illness-icon2">
             <defs>
-                <clipPath>
+                <clippath>
                     <path d="M0 58h57.795V0H0z" />
-                </clipPath>
+                </clippath>
             </defs>
             <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 77.333)">
                 <path d="M9.408 46l4 12H2.625L0 44h5.956L3.07 24.763a.657.657 0 0 1 .154-.532.666.666 0 0 1 1.107.156L14.236 46z" />
@@ -1929,11 +1733,11 @@ include __DIR__ . '/../_php/update-params.php';
 
             </g>
         </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.149 64.021" id="illness-icon3">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 80.149 64.021" id="illness-icon3">
             <defs>
-                <clipPath>
+                <clippath>
                     <path d="M0 48.016h60.112V0H0z" />
-                </clipPath>
+                </clippath>
             </defs>
             <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 64.02)">
                 <path
@@ -1941,11 +1745,11 @@ include __DIR__ . '/../_php/update-params.php';
 
             </g>
         </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.699 42.733" id="illness-icon4">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 42.699 42.733" id="illness-icon4">
             <defs>
-                <clipPath>
+                <clippath>
                     <path d="M0 32.05h32.024V0H0z" />
-                </clipPath>
+                </clippath>
             </defs>
             <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 42.733)">
                 <path
@@ -1953,11 +1757,11 @@ include __DIR__ . '/../_php/update-params.php';
 
             </g>
         </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 109.447 77.289" id="illness-icon5">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 109.447 77.289" id="illness-icon5">
             <defs>
-                <clipPath>
+                <clippath>
                     <path d="M0 57.967h82.085V0H0z" />
-                </clipPath>
+                </clippath>
             </defs>
             <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 77.289)">
                 <path
@@ -1965,11 +1769,11 @@ include __DIR__ . '/../_php/update-params.php';
 
             </g>
         </symbol>
-        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34.369 32.093" id="illness-icon6">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 34.369 32.093" id="illness-icon6">
             <defs>
-                <clipPath>
+                <clippath>
                     <path d="M0 24.07h25.776V0H0z" />
-                </clipPath>
+                </clippath>
             </defs>
             <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 32.093)">
                 <path
@@ -1980,23 +1784,19 @@ include __DIR__ . '/../_php/update-params.php';
     </svg>
 
 
-
-
-
-
-
     <script src="./js/index.js"></script>
-    <script type="text/javascript">
-        var transit_fb_id = null;
-        var landing_fb_id = null;
-        var thankyou_fb_id = 574507687964518;
+    <script>
+        const links = document.querySelectorAll('.link');
+        const anhor = document.querySelector('.ccc')
+
+        for (const link of links) {
+            link.addEventListener('click', () => {
+                anhor.scrollIntoView({
+                    behavior: "smooth"
+                })
+            })
+        }
     </script>
-    <script></script>
-
-
-
-
-
 </body>
 
 </html>
