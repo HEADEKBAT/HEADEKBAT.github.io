@@ -86,7 +86,7 @@ img {
 }
 
 body {
-    font-family: OpenSans, sans-serif;
+    font-family: "Merriweather", OpenSans, sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 125%;
@@ -105,7 +105,8 @@ html {
 
 .text {
     margin-top: 1rem;
-    line-height: 125%;
+    line-height: 27px;
+    font-size: 18px;
 }
 
 .title {
@@ -129,7 +130,9 @@ html {
 }
 
 .text_md {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 27px;
+    color:#222;
 }
 
 .text_xl {
@@ -185,7 +188,7 @@ html {
 
 .header-cap {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1fr);
     position: relative;
     padding: 12px 20px;
     background-color: #0B5891;
@@ -1069,11 +1072,12 @@ aside {
     }
 
     .text {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .text_md {
         font-size: 18px;
+        
     }
 
     .title {
@@ -2463,7 +2467,8 @@ td {
 }
 
 .form-price__img {
-
+max-width: 300px;
+padding: 20px;
 }
 
 .form-description {
@@ -2966,7 +2971,7 @@ footer {
     margin-top: 75px;
     padding-top: 35px;
     padding-bottom: 75px;
-    border-top: 4px solid #27578D;
+    border-top: 1px solid rgb(133, 133, 133);
 }
 
 .footer-container {

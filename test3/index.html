@@ -1,25 +1,7 @@
-<!--?php
-//Тесты
-$celArr = []; // Номера селеб через запятую
-$titleArr = []; // Номера заголовков через запятую
+<!DOCTYPE html>
+<html lang="en">
 
-//Интеграция
-$offerData = 'graciola---co---leadreaktor.php'; // Путь к файлу данных оффера
-$metrika = '93979095'; // ID счетчика Яндекс.Метрики
-$confirmColorBackground = 'ffffff'; // Цвет общего фона конфирма
-$confirmColorBlocks = '9f116b'; // Цвет фона блоков конфирма
-$confirmColorHeaders = '000000'; // Цвет заголовков конфирма
-$confirmColorText = 'fff'; // Цвет текста конфирма
-
-//Не трограть
-include __DIR__ . '/../_assets/versions.php'; // Блок тестирования элементов
-include __DIR__ . '/../_order/offers/' . $offerData;
-include __DIR__ . '/../_order/affiliates.php';
-if (!isset($rawClick)) {
-    echo '404';
-    exit();
-}
-?--><!DOCTYPE html><html lang="en"><head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yağ vücudunuza günlük beslenmeniz yoluyla girer</title>
@@ -37,55 +19,91 @@ if (!isset($rawClick)) {
     <link rel="stylesheet" href="css/intlTelInput.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="./css/new-style.css">
 </head>
 
 <body>
+    <script>
+        function dtime_nums(d, like_eu) {
+            var now = new Date();
+            now.setDate(now.getDate() + d + 1);
+
+            var dayNum = "";
+            if (now.getDate() < 10) {
+                dayNum = "0";
+            }
+            dayNum += now.getDate();
+
+            var monthNum = "";
+            if (now.getMonth() + 1 < 10) {
+                monthNum = "0";
+            }
+            monthNum += now.getMonth() + 1;
+
+            if (like_eu === true) {
+                document.write(dayNum + "." + monthNum + "." + now.getFullYear());
+            } else {
+                document.write(monthNum + "." + dayNum + "." + now.getFullYear());
+            }
+        }
+    </script>
     <header>
-        <div class="header-cap">
-            <div class="cap-block">
-                <a href>
-                    <img src="img/burger_blue.svg" alt class="burger_sm burger">
-                </a>
-                <a href class="link cap__btn cap__btn_search">
-                    <img src="img/search.svg" alt class="search">
-                </a>
-                <a href class="link cap__btn cap__btn_sessiones"> OTURUMLAR<img src="img/burger.svg" alt class="burger">
-                </a>
+
+        <div class="header">
+            <div class="header__wrapper">
+                <div class="header__left">
+                    <a class="header__humb" href="">
+                        <img src="./img/humb.svg" alt="">
+                    </a>
+                </div>
+                <div class="header__mid">
+                    <div class="header__logo">
+                        <img src="./img/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="header__right">
+                    <div class="header__logo-items">
+                        <a href="" class="header__logo-item">
+                            <img src="./img/logo1.svg" alt="">
+                        </a>
+                        <a href="" class="header__logo-item">
+                            <img src="./img/logo2.svg" alt="">
+                        </a>
+                        <a href="" class="header__logo-item">
+                            <img src="./img/logo3.svg" alt="">
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a href class="cap-block">
-                <img src="img/logo_white.png" alt class="logo cap__logo">
-                <img src="img/logo_blue.png" alt class="logo cap__logo_sm cap__logo">
-            </a>
-            <div class="cap-block">
-                <a href class="link cap__btn cap__btn_red"> ABONE OL X $2700<span class="text-slim"> /3 AY</span>
-                </a>
-                <div class="cap__separate-line"></div>
-                <a href class="link cap__btn cap__btn_person">
-                    <img src="img/person_white.svg" alt class="person">
-                    <span class="person-btn__text"> OTURUM BAŞLAT</span>
-                </a>
-                <a href class="link cap__btn cap__btn_star">
-                    <img src="img/star_white.svg" alt class="star"> HABERLERİM</a>
-                <a href>
-                    <img src="img/person_blue.svg" alt class="person person_sm">
-                </a>
-                <a href>
-                    <img src="img/star_blue.svg" alt class="star star_sm">
-                </a>
+            <div class="service-header-band mb-3">
+                <div class="service-header-band-inner">
+                    <h3 class="service-name"><a href="" title="HABER">HABER</a> </h3>
+                    <div class="iscroll-box-wrap">
+                        <div class="iscroll-box2">
+                            <div class="iscroll-box-inner">
+                                <ul>
+                                    <li class="service-menu-item"> <a title="Güncel" href="">Güncel</a> </li>
+                                    <li class="service-menu-item"> <a title="Politika" href="">Politika</a> </li>
+                                    <li class="service-menu-item"> <a title="Dünya" href="">Dünya</a> </li>
+                                    <li class="service-menu-item"> <a title="Yaşam" href="">Yaşam</a> </li>
+                                    <li class="service-menu-item"> <a title="Sağlık" href="">Sağlık</a> </li>
+                                    <li class="service-menu-item"> <a title="Yurt Haber" href="">Yurt Haber</a> </li>
+                                    <li class="service-menu-item"> <a title="Son Dakika" href="">Son Dakika</a> </li>
+                                    <li class="service-menu-item"> <a title="Otomobil" href="">Otomobil</a> </li>
+                                    <li class="service-menu-item"> <a title="Eğitim" href="">Eğitim</a> </li>
+                                    <li class="service-menu-item"> <a title="Teknoloji" href="">Teknoloji</a> </li>
+                                    <li class="service-menu-item"> <a title="İlginç Haberler" href="">İlginç Haberler</a> </li>
+                                    <li class="service-menu-item"> <a title="Seçim" href="">Seçim</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <nav>
-            <div class="nav__inner">
-                <a href class="link nav__link nav__link_xl"> KÜLTÜR</a>
-                <div class="nav__separate-line"></div>
-                <a href class="link nav__link"> SİNEMA & TV</a>
-                <a href class="link nav__link"> SANAT & TİYATRO</a>
-                <a href class="link nav__link"> MÜZİK & KİTAPLAR</a>
-                <a href class="link nav__link"> GASTRONOMİ</a>
-                <a href class="link nav__link"> EĞLENCE</a>
-                <a href class="link nav__link text_bold"> İNSANLAR</a>
-            </div>
-        </nav>
+
+
+
     </header>
     <aside>
         <p class="media__title"> Satın Al</p>
@@ -106,88 +124,76 @@ if (!isset($rawClick)) {
     </aside>
     <main>
         <div class="content-container">
-            <article>
-                <div class="article__poster-wrap">
-                    <img src="img/article-poster.jpg" alt class="article__poster">
-                    <div class="article__poster-text-wrap">
-                        <p class="article__poster-text"> Şişman girer</p>
-                        <p class="article__poster-text"> günlük beslenmeniz yoluyla vücudunuza</p>
-                        <p class="article__poster-text article__poster-text_sm"> Yağ organizmanıza günlük beslenmeniz yoluyla girer.</p>
-                    </div>
+
+            <div class="bread-dots">
+                <ul class="bread-dots__items">
+                    <li class="bread-dots__item link">
+                        <img src="./img/home-logo.svg" alt="">
+                    </li>
+                    <li class="bread-dots__item link">
+                        <span>
+                            HABER
+                        </span>
+                    </li>
+                    <li class="bread-dots__item link">
+                        <span>
+                            Sağlık
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <h1>
+                Şişman girer günlük beslenmeniz yoluyla vücudunuza
+            </h1>
+            <div class="info-date">
+                <div class="info-date__title">
+                    <strong>
+                        Son Güncelleme:
+                    </strong>
+                    <span>
+                        <script>
+                            dtime_nums(-5, true);
+                        </script>
+                        15:03
+                    </span>
                 </div>
-                <div class="article-description">
-                    <p class="article-description__text"> Dr. Carlos Jamilio'nun Metabolik Mucizesi. BİLGİ<a href> https://www.amazon.com/El-milagro-metabólico</a>
-                    </p>
-                    <h4 class="article-description__title"> Ancak egzersiz yapmadan, kendinizi aç bırakmadan ve vücudunuzu zehirlemeden 15 kg fazla yağı almak mümkündür.</h4>
-                    <div class="article-description__pros">
-                        <p class="article-description__pros-el article-description__pros-el_blue"> İLGİLİ:</p>
-                        <div class="article-description__pros-separate-line"></div>
-                        <p class="article-description__pros-el"> Carlos Jaramillo</p>
-                        <div class="article-description__pros-separate-line"></div>
-                        <p class="article-description__pros-el"> Kilo kaybı</p>
-                        <div class="article-description__pros-separate-line"></div>
-                        <p class="article-description__pros-el"> Yemek</p>
-                        <div class="article-description__pros-separate-line"></div>
-                        <p class="article-description__pros-el"> Besin takviyeleri</p>
-                    </div>
+                <div class="info-date__google-logo">
+                    <a href="">
+                        <img src="./img/google-news.svg" alt="">
+                    </a>
                 </div>
-                <div class="article-media">
-                    <div class="article-media__author">
-                        <div class="article-media__author-avatar"> ST</div>
-                        <div class="article-media__author-description">
-                            <p class="article-media__author-text article-media__author-name"> EĞILIMLER ZAMAN</p>
-                            <p class="article-media__author-text">
-                                <script>
-                                let lang_locale = 'es';
-                                dtime(-5);
-                                </script>, 10:52 A. M.</p>
-                        </div>
-                    </div>
-                    <div class="article-media__links">
-                        <a href class="article-media__links-el link">
-                            <img src="img/article-media1.svg" alt class="article-media__link-img">
-                            <p class="article-media__link-text"> Takip et<br> İnsanlar</p>
-                        </a>
-                        <a href class="article-media__links-el link">
-                            <img src="img/article-media2.svg" alt class="article-media__link-img">
-                            <p class="article-media__link-text"> Yorum</p>
-                        </a>
-                        <a href class="article-media__links-el link">
-                            <img src="img/article-media3.svg" alt class="article-media__link-img">
-                            <p class="article-media__link-text"> Kaydet</p>
-                        </a>
-                        <a href class="article-media__links-el link">
-                            <img src="img/article-media4.svg" alt class="article-media__link-img">
-                            <p class="article-media__link-text"> Rapor</p>
-                        </a>
-                        <a href class="article-media__links-el link">
-                            <img src="img/article-media5.svg" alt class="article-media__link-img">
-                            <p class="article-media__link-text"> Ana Sayfa</p>
-                        </a>
-                    </div>
-                </div>
-            </article>
+            </div>
+
+            <h2>
+                Ancak egzersiz yapmadan, kendinizi aç bırakmadan ve vücudunuzu zehirlemeden 15 kg fazla yağı almak mümkündür.
+            </h2>
+
+
             <div class="main-content">
                 <div class="person-block">
                     <img src="img/person.jpg" alt class="person__img">
-                    <img src="img/person-media.png" alt class="person-media">
+                    <!-- <img src="img/person-media.png" alt class="person-media"> -->
                     <div class="person-description">
                         <div class="person-description__title-wrap">
-                            <h4 class="person-description__title"> Dr. Carlos Jaramillo-</h4>
-                            <img src="img/person-partner.png" alt class="person-partner__img">
+                            <h4 class="person-description__title"> Dr. Ayşegül Çoruhlu-</h4>
+                            <!-- <img src="img/person-partner.png" alt class="person-partner__img"> -->
                         </div>
                         <p class="text person__text text_md">
-                            <span class="person__text_first-line"> tedaviyi ele alır,</span> Diyabet, obezite, gastrointestinal hastalıklar, metabolik sendrom, otoimmün hastalıklar gibi kronik hastalıkların kökten tedavisi, diğerlerinin yanı sıra, profesörlerinden ve dünya liderlerinden ilham alarak tıbbın yaratılma şeklini değiştirmeye ikna olduğu fonksiyonel tıp açısından. Kolombiya, Bogota'daki Fonksiyonel Tıp Enstitüsü'nün kurucusu ve yöneticisi.</p>
+                            <span class="person__text_first-line"> tedaviyi ele alır,</span> Diyabet, obezite, gastrointestinal hastalıklar, metabolik sendrom, otoimmün hastalıklar gibi kronik
+                            hastalıkların kökten tedavisi, diğerlerinin yanı sıra, profesörlerinden ve dünya liderlerinden ilham alarak tıbbın yaratılma şeklini değiştirmeye ikna olduğu fonksiyonel
+                            tıp açısından. Kolombiya, Bogota'daki Fonksiyonel Tıp Enstitüsü'nün kurucusu ve yöneticisi.</p>
                     </div>
                 </div>
                 <div class="main__separate-line"></div>
                 <div class="plaster-text__wrap">
                     <img src="img/plaster.svg" alt class="plaster">
                     <p class="text plaster__text">
-                        <span class="text_bold"> Aşırı kilo başlı başına bir durum ve eşi benzeri görülmemiş bir halk sağlığı sorunudur.</span> ve eşi benzeri görülmemiş bir halk sağlığı sorunudur; OECD'den sonra ikinci sırada</p>
+                        <span class="text_bold"> Aşırı kilo başlı başına bir durum ve eşi benzeri görülmemiş bir halk sağlığı sorunudur.</span> ve eşi benzeri görülmemiş bir halk sağlığı sorunudur;
+                        OECD'den sonra ikinci sırada</p>
                 </div>
                 <h4 class="title"> BIRAZ ISTATISTIK</h4>
-                <p class="text text_bold"> Ulusal Sağlık ve Beslenme Araştırmasına göre, Kolombiya'da 20 yaş ve üzeri yetişkin nüfusta aşırı kilo ve obezite prevalansı %75,2, 12-19 yaş arası gençlerde %35,8, 5-11 yaş arası çocuklarda %35,6 ve 0-4 yaş arası nüfusun %8,2'si aşırı kilolu ve %22,2'si aşırı kilolu olma riski altındadır.</p>
+                <p class="text text_bold"> Ulusal Sağlık ve Beslenme Araştırmasına göre, Kolombiya'da 20 yaş ve üzeri yetişkin nüfusta aşırı kilo ve obezite prevalansı %75,2, 12-19 yaş arası gençlerde
+                    %35,8, 5-11 yaş arası çocuklarda %35,6 ve 0-4 yaş arası nüfusun %8,2'si aşırı kilolu ve %22,2'si aşırı kilolu olma riski altındadır.</p>
                 <div class="plaster-text__wrap">
                     <img src="img/plaster.svg" alt class="plaster">
                     <p class="text text_bold plaster__text"> Aşırı kilo ve obezite ülkedeki ölümlerin kadınlarda %32'sine, erkeklerde ise %20'sine neden olmaktadır.</p>
@@ -198,23 +204,28 @@ if (!isset($rawClick)) {
                     <div class="person-university-description">
                         <div class="person-university-description__label">
                             <img src="img/university.png" alt class="person-university-description__label-img">
-                            <p class="person-university-description__label-text"> Dr. Carlos<br>
-                                <span class="person__second-string"> Jaramillo</span>
+                            <p class="person-university-description__label-text"> Dr. Ayşegül<br>
+                                <span class="person__second-string"> Çoruhlu</span>
                             </p>
                         </div>
-                        <p class="person-university-description__text text"> Savannah Üniversitesi'nden sağlık yönetimi alanında uzmanlaşmış bir doktor, cerrahi ve klinik beslenme alanında kıdemli bir klinik araştırmacı ve Amerika Birleşik Devletleri'ndeki Yale Üniversitesi'nde tıp fakültesi üyesidir.</p>
+                        <p class="person-university-description__text text"> Savannah Üniversitesi'nden sağlık yönetimi alanında uzmanlaşmış bir doktor, cerrahi ve klinik beslenme alanında kıdemli bir
+                            klinik araştırmacı ve Amerika Birleşik Devletleri'ndeki Yale Üniversitesi'nde tıp fakültesi üyesidir.</p>
                     </div>
                     <img src="img/university-person.jpg" alt class="person-university__img">
                 </div>
                 <div class="plaster-text__wrap">
                     <img src="img/plaster.svg" alt class="plaster">
-                    <p class="text text_bold plaster__text"> Birçok ulusal ve çoklu Latin şirketleri için konuşmacı ve danışman, üniversite profesörü, çok sayıda medya için beslenme, nutrasötikler ve fonksiyonel tıp alanında kanaat önderi, Kolombiya'da yılın en çok satan kitaplarında birinci ve ikinci sırada yer alan iki eserin tek yazarı olan "Milagro Metabólico" ve "Milagro Antiestrésés" kitaplarının yazarıdır.</p>
+                    <p class="text text_bold plaster__text"> Birçok ulusal ve çoklu Latin şirketleri için konuşmacı ve danışman, üniversite profesörü, çok sayıda medya için beslenme, nutrasötikler ve
+                        fonksiyonel tıp alanında kanaat önderi, Kolombiya'da yılın en çok satan kitaplarında birinci ve ikinci sırada yer alan iki eserin tek yazarı olan "Milagro Metabólico" ve
+                        "Milagro Antiestrésés" kitaplarının yazarıdır.</p>
                 </div>
                 <div class="main__separate-line"></div>
                 <div class="quote">
                     <img src="img/quote__img.png" alt class="quote__img">
                     <p class="quote__text text text_italic text_md">
-                        <span class="quote__mark"> "</span> Diyetler, spor, haplar ve liposuction genellikle aşırı kilolarla mücadelede kullanılan başlıca yöntemlerdir, ancak obezite hastalarının sayısının artmaya devam ettiği gerçeğinden hareketle, bu yöntemlerin hiçbirinin etkili olmadığı sonucuna vardık.<span class="text_bold"> Doğal yollarla kilo vermeyi teşvik eden bir ilaç satışa çıktığında her şey değişti.</span> ".</p>
+                        <span class="quote__mark"> "</span> Diyetler, spor, haplar ve liposuction genellikle aşırı kilolarla mücadelede kullanılan başlıca yöntemlerdir, ancak obezite hastalarının
+                        sayısının artmaya devam ettiği gerçeğinden hareketle, bu yöntemlerin hiçbirinin etkili olmadığı sonucuna vardık.<span class="text_bold"> Doğal yollarla kilo vermeyi teşvik eden
+                            bir ilaç satışa çıktığında her şey değişti.</span> ".</p>
                 </div>
                 <p class="text"> Günlük diyet yetersizdir, vitamin ve eser element eksiklikleri vardır ve bu da gıda yoluyla alınan yağların sentezlenmesine ve parçalanmasına hiç yardımcı olmaz.</p>
                 <section class="table__section">
@@ -229,8 +240,9 @@ if (!isset($rawClick)) {
                                             <p class="table__header-title">
                                                 <span class="table__header-date">
                                                     <script>
-                                                    dtimes(-5);
-                                                    </script> |</span> Obezite ve aşırı kilo tedavisinin sonuçlarının analizi.</p>
+                                                        dtimes(-5);
+                                                    </script> |
+                                                </span> Obezite ve aşırı kilo tedavisinin sonuçlarının analizi.</p>
                                         </div>
                                     </div>
 
@@ -278,12 +290,12 @@ if (!isset($rawClick)) {
                                             <td>
                                                 <div class="table__cell-block">
                                                     <img src="img/table-img1.png" alt class="table__cell-img">
-                                                    <p class="table__cell-text"> Graciola</p>
+                                                    <p class="table__cell-text"> G-tea </p>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="table__cell-block">
-                                                    <p class="table__cell-text"><span class="table__cell-text_xl"> 139000</span> COL$</p>
+                                                    <p class="table__cell-text"><span class="table__cell-text_xl"> 650 ₺ </span> </p>
                                                 </div>
                                             </td>
                                             <td>
@@ -312,7 +324,7 @@ if (!isset($rawClick)) {
                                             </td>
                                             <td>
                                                 <div class="table__cell-block">
-                                                    <p class="table__cell-text"> Kurs fiyatı<span class="inline-block"> 200 000 COL$</span>
+                                                    <p class="table__cell-text"> Kurs fiyatı<span class="inline-block"> 850 ₺ </span>
                                                     </p>
                                                 </div>
                                             </td>
@@ -342,7 +354,7 @@ if (!isset($rawClick)) {
                                             </td>
                                             <td>
                                                 <div class="table__cell-block">
-                                                    <p class="table__cell-text"> itibaren<br> <span class="table__cell-text_xl"> 90000</span> COL$</p>
+                                                    <p class="table__cell-text"> itibaren<br> <span class="table__cell-text_xl"> 577 ₺</span> 577 ₺</p>
                                                 </div>
                                             </td>
                                             <td>
@@ -396,7 +408,8 @@ if (!isset($rawClick)) {
                             </div>
                             <div class="table__footer">
                                 <div class="table__footer-text-wrap">
-                                    <p class="table__footer-text"> Graciola'nın etkinliği üzerine bir çalışma "Bolivarcı Üniversite Ulusal Kliniği", "Columbia Fonksiyonel Tıp Enstitüsü" ve "Columbia Sağlık Bakanlığı" tarafından yürütülmüştür.</p>
+                                    <p class="table__footer-text"> G-tea 'nın etkinliği üzerine bir çalışma "Bolivarcı Üniversite Ulusal Kliniği", "Columbia Fonksiyonel Tıp Enstitüsü" ve "Columbia
+                                        Sağlık Bakanlığı" tarafından yürütülmüştür.</p>
                                 </div>
                                 <img src="img/table__logo2.png" alt class="table__footer-logo">
                             </div>
@@ -405,73 +418,82 @@ if (!isset($rawClick)) {
                 </section>
                 <div class="plaster-text__wrap">
                     <img src="img/plaster.svg" alt class="plaster">
-                    <p class="text text_bold plaster__text"> Ek<a href class="product__link link"> Graciola</a> bugün aşırı kilo, hormonal dalgalanmalar ve vücudun yaşa bağlı olarak yeniden yapılandırılmasının neden olduğu obezite ile mücadelede en güçlü ve etkili üründür. Şüphesiz, bu şimdiye kadarki en hızlı ve en rahat kilo kaybıdır!</p>
+                    <p class="text text_bold plaster__text"> Ek<a href class="product__link link"> G-tea </a> bugün aşırı kilo, hormonal dalgalanmalar ve vücudun yaşa bağlı olarak yeniden
+                        yapılandırılmasının neden olduğu obezite ile mücadelede en güçlü ve etkili üründür. Şüphesiz, bu şimdiye kadarki en hızlı ve en rahat kilo kaybıdır!</p>
                 </div>
-                <p class="text"> Ana avantajı<a href class="product__link link"> Graciola</a> en sorunlu bölgeleri hedef alan yoğun yağ yakımıdır: bel ve kalçalar. Bu nedenle, üretimi aldığınız ilk haftadan itibaren figürün hacminde önemli bir azalma göreceksiniz.</p>
+                <p class="text"> Ana avantajı<a href class="product__link link"> G-tea </a> en sorunlu bölgeleri hedef alan yoğun yağ yakımıdır: bel ve kalçalar. Bu nedenle, üretimi aldığınız ilk
+                    haftadan itibaren figürün hacminde önemli bir azalma göreceksiniz.</p>
                 <div class="main__separate-line"></div>
-                <h4 class="title title_after-line"> GRACIOLA NEDİR?</h4>
+                <h4 class="title title_after-line"> G-tea NEDİR?</h4>
                 <p class="text">
-                    <a href class="product__link link"> Graciola</a> - doğal bir konsantredir. Bir karışım farklı özler içerir, bu nedenle yağ yakma oranı 10 kat artar! Klinik olarak kanıtlanmıştır ki<a href class="product__link link"> Graciola</a> metabolizmayı hızlandırır, endokrin sistemi onarır, doku yenilenmesini uyarır ve açlık hissini bastırır. Ürün tamamen doğaldır ve insan vücudundaki doğal süreçlerin aktif bir uyarıcısıdır. Yağ kütlesinin yakılması hızlı metabolizma yoluyla gerçekleştiğinden, sıkı bir diyet gerekli değildir. Metabolizmayı korumak için dengeli bir diyet yeterlidir. Bu durumda yoğun fiziksel efor gerekli değildir.</p>
-                <h4 class="title"> DEGRACIOLA'NIN TEMEL ÖZELLİKLERİ</h4>
+                    <a href class="product__link link"> G-tea </a> - doğal bir konsantredir. Bir karışım farklı özler içerir, bu nedenle yağ yakma oranı 10 kat artar! Klinik olarak kanıtlanmıştır
+                    ki<a href class="product__link link"> G-tea </a> metabolizmayı hızlandırır, endokrin sistemi onarır, doku yenilenmesini uyarır ve açlık hissini bastırır. Ürün tamamen doğaldır ve
+                    insan vücudundaki doğal süreçlerin aktif bir uyarıcısıdır. Yağ kütlesinin yakılması hızlı metabolizma yoluyla gerçekleştiğinden, sıkı bir diyet gerekli değildir. Metabolizmayı
+                    korumak için dengeli bir diyet yeterlidir. Bu durumda yoğun fiziksel efor gerekli değildir.</p>
+                <h4 class="title"> DEG-tea 'NIN TEMEL ÖZELLİKLERİ</h4>
                 <div class="principle-block">
                     <div class="principle-list">
                         <div class="principle-el">
                             <p class="principle-el__number"> 1</p>
                             <p class="principle-el__text text text_md">
-                                <span class="text_bold"> Birinci</span> Vücut toksinlerden ve fazla sıvıdan arındırılır. Kolesterol seviyesi düşürülür, iç organların çalışması iyileştirilir, metabolizma hızlandırılır.</p>
+                                <span class="text_bold"> Birinci</span> Vücut toksinlerden ve fazla sıvıdan arındırılır. Kolesterol seviyesi düşürülür, iç organların çalışması iyileştirilir,
+                                metabolizma hızlandırılır.</p>
                         </div>
                         <div class="principle-el">
                             <p class="principle-el__number"> 2</p>
                             <p class="principle-el__text text text_md">
-                                <span class="text_bold"> İkinci</span> Hormonal arka plan normalleşir, stres kaybolur, iştah azalır. Sorunlu bölgelerde aktif bir yağ dokusu yakımı olur, kilo yoğun bir şekilde düşer.</p>
+                                <span class="text_bold"> İkinci</span> Hormonal arka plan normalleşir, stres kaybolur, iştah azalır. Sorunlu bölgelerde aktif bir yağ dokusu yakımı olur, kilo yoğun bir
+                                şekilde düşer.</p>
                         </div>
                         <div class="principle-el">
                             <p class="principle-el__number"> 3</p>
                             <p class="principle-el__text text text_md">
-                                <span class="text_bold"> Üçüncü</span> Üçüncüsü: Graviola aktif maddeleri vücutta birikerek katekolamin hormonlarının üretimini engeller ve böylece yeni yağ birikintilerinin oluşmasını önler.</p>
+                                <span class="text_bold"> Üçüncü</span> Üçüncüsü: Graviola aktif maddeleri vücutta birikerek katekolamin hormonlarının üretimini engeller ve böylece yeni yağ
+                                birikintilerinin oluşmasını önler.</p>
                         </div>
                     </div>
                 </div>
                 <div class="plaster-text__wrap">
                     <img src="img/plaster.svg" alt class="plaster">
-                    <p class="text plaster__text"> Kolombiya'da bu takviye nispeten yakın zamanda ortaya çıktı, ancak şimdiden eğitmenlerin ve vücut geliştirme sporcularının favori ürünlerinden biri olarak kendini kanıtladı<span class="text_bold"> hızlı kilo vermek ve düşük vücut yağ oranını korumak için.</span>
+                    <p class="text plaster__text"> Kolombiya'da bu takviye nispeten yakın zamanda ortaya çıktı, ancak şimdiden eğitmenlerin ve vücut geliştirme sporcularının favori ürünlerinden biri
+                        olarak kendini kanıtladı<span class="text_bold"> hızlı kilo vermek ve düşük vücut yağ oranını korumak için.</span>
                     </p>
                 </div>
                 <p class="text">
                     <span class="text_bold">
-                        <a href class="product__link link"> Graciola</a>
+                        <a href class="product__link link"> G-tea </a>
                     </span> aşırı kilonun nedeninin hormonal bozulma olduğu durumlarda bile etkilidir.</p>
-                <h4 class="title"> GRACIOLA TAKVIYESI ALDIKTAN SONRA KILO KAYBI SONUCU</h4>
+                <h4 class="title"> G-tea TAKVIYESI ALDIKTAN SONRA KILO KAYBI SONUCU</h4>
                 <div class="result-block">
                     <div class="result-list">
                         <div class="result-el">
                             <img src="img/result1.jpg" alt class="result-el__img">
                             <div class="result-el__text-wrap">
-                                <p class="result-el__text text text_md"> Sonuç 30 gün sonra<br> GRACIOLA alma oranı: -14 kg</p>
+                                <p class="result-el__text text text_md"> Sonuç 30 gün sonra<br> G-tea alma oranı: -14 kg</p>
                             </div>
                         </div>
                         <div class="result-el">
                             <img src="img/result2.jpg" alt class="result-el__img">
                             <div class="result-el__text-wrap">
-                                <p class="result-el__text text text_md"> 38 gün sonra sonuç<br> GRACIOLA alma oranı: -37 kg</p>
+                                <p class="result-el__text text text_md"> 38 gün sonra sonuç<br> G-tea alma oranı: -37 kg</p>
                             </div>
                         </div>
                         <div class="result-el">
                             <img src="img/result3.jpg" alt class="result-el__img">
                             <div class="result-el__text-wrap">
-                                <p class="result-el__text text text_md"> Alındıktan 46 gün sonra sonuç<br> GRACIOLA alma oranı: -36 kg</p>
+                                <p class="result-el__text text text_md"> Alındıktan 46 gün sonra sonuç<br> G-tea alma oranı: -36 kg</p>
                             </div>
                         </div>
                         <div class="result-el">
                             <img src="img/result4.jpg" alt class="result-el__img">
                             <div class="result-el__text-wrap">
-                                <p class="result-el__text text text_md"> 67 gün sonra sonuç<br> GRACIOLA alma oranı: -49 kg</p>
+                                <p class="result-el__text text text_md"> 67 gün sonra sonuç<br> G-tea alma oranı: -49 kg</p>
                             </div>
                         </div>
                         <div class="result-el">
                             <img src="img/result5.jpg" alt class="result-el__img">
                             <div class="result-el__text-wrap">
-                                <p class="result-el__text text text_md"> 37 gün sonra sonuç<br> GRACIOLA alma oranı: -21 kg</p>
+                                <p class="result-el__text text text_md"> 37 gün sonra sonuç<br> G-tea alma oranı: -21 kg</p>
                             </div>
                         </div>
                     </div>
@@ -485,14 +507,21 @@ if (!isset($rawClick)) {
                         <div class="doctor-description__wrap">
                             <img src="img/doctor1-footer.png" alt class="doctor-partner__img">
                             <div class="doctor-cap-description">
-                                <p class="doctor-label__text"> Dr. Santiago Rojas</p>
-                                <p class="text text_bold text_md doctor-cap-description__text doctor_xl"> Rosario ve Bogota Ulusal Üniversitesi'nde lisansüstü alternatif tıp profesörü ve Bogota Askeri Üniversitesi Tıp Fakültesi'nde lisans tıp profesörü olarak görev yapmaktadır.<br><br> 37 yıllık deneyim</p>
+                                <p class="doctor-label__text"> Dr Emir Aksoy </p>
+                                <p class="text text_bold text_md doctor-cap-description__text doctor_xl"> Rosario ve Bogota Ulusal Üniversitesi'nde lisansüstü alternatif tıp profesörü ve Bogota Askeri
+                                    Üniversitesi Tıp Fakültesi'nde lisans tıp profesörü olarak görev yapmaktadır.<br><br> 37 yıllık deneyim</p>
                             </div>
                         </div>
                     </div>
                     <div class="doctor-body">
-                        <p class="text text_bold text_md doctor-cap-description__text doctor_sm"> Rosario'da ve Bogota Ulusal Üniversitesi'nde alternatif tıp alanında lisansüstü profesör ve Bogota Askeri Üniversitesi Tıp Fakültesi'nde lisans tıbbı profesörü olarak görev yapmaktadır.<br><br> 37 yıllık deneyim</p>
-                        <p class="text text_md"> "Kilo vermekle ilgili en önemli şey vücudunuza zarar vermemektir. Ne yazık ki kilo vermenin popüler yollarının çoğu bu konuda övünemez. Sürekli bir diyet uygulayamazsınız ve herkes buna dayanamaz. İnsanlar hedefe ulaşamadan, büyük çoğunluğu sadece vücudu depresyona sokan, hormon, bağışıklık sistemi ve karaciğer yetmezliğine neden olan haplara başvururlar. Kilo verme doğal olmalı ve vücuttaki iç süreçleri bozmamalıdır. Bugüne kadar,<a href class="product__link link"> Graciola</a> bu görevleri yerine getiren tek ortamdır. Aktif eser elementler<a href class="product__link link"> Graciola</a> metabolizmanın hızlanmasına ve yağ kütlesinin yakılmasına neden olur ve Graciola toz konsantresi bu süreçleri en az 10 kat iyileştirir. Bu preparatın bugün modern diyetetikte var olan en iyisi olduğuna inanıyorum. Ayrıca tamamen güvenebileceğiniz güvenilir bir üründür.</p>
+                        <p class="text text_bold text_md doctor-cap-description__text doctor_sm"> Rosario'da ve Bogota Ulusal Üniversitesi'nde alternatif tıp alanında lisansüstü profesör ve Bogota
+                            Askeri Üniversitesi Tıp Fakültesi'nde lisans tıbbı profesörü olarak görev yapmaktadır.<br><br> 37 yıllık deneyim</p>
+                        <p class="text text_md"> "Kilo vermekle ilgili en önemli şey vücudunuza zarar vermemektir. Ne yazık ki kilo vermenin popüler yollarının çoğu bu konuda övünemez. Sürekli bir
+                            diyet uygulayamazsınız ve herkes buna dayanamaz. İnsanlar hedefe ulaşamadan, büyük çoğunluğu sadece vücudu depresyona sokan, hormon, bağışıklık sistemi ve karaciğer
+                            yetmezliğine neden olan haplara başvururlar. Kilo verme doğal olmalı ve vücuttaki iç süreçleri bozmamalıdır. Bugüne kadar,<a href class="product__link link"> G-tea </a>
+                            bu görevleri yerine getiren tek ortamdır. Aktif eser elementler<a href class="product__link link"> G-tea </a> metabolizmanın hızlanmasına ve yağ kütlesinin yakılmasına
+                            neden olur ve G-tea toz konsantresi bu süreçleri en az 10 kat iyileştirir. Bu preparatın bugün modern diyetetikte var olan en iyisi olduğuna inanıyorum. Ayrıca tamamen
+                            güvenebileceğiniz güvenilir bir üründür.</p>
                         <div class="doctor-footer">
                             <img src="img/doctor1-footer.png" alt class="doctor-footer__img doctor_xl">
                         </div>
@@ -504,60 +533,73 @@ if (!isset($rawClick)) {
                         <div class="doctor-description-wrap">
                             <img src="img/doctor2-footer.png" alt class="doctor-partner__img doctor_sm">
                             <div class="doctor-cap-description">
-                                <p class="doctor-label__text"> Dr. Milena<br> Castillo Mejia</p>
-                                <p class="text text_bold text_md doctor-cap-description__text doctor_xl"> Obezite ve metabolik bozukluklarla ilgili hastalıkların derinlemesine incelenmesinde uzmanlaşmış beslenme ve endokrinoloji uzmanı.<br><br> 21 yıllık deneyim.</p>
+                                <p class="doctor-label__text">Dr Aylin Öztürk</p>
+                                <p class="text text_bold text_md doctor-cap-description__text doctor_xl"> Obezite ve metabolik bozukluklarla ilgili hastalıkların derinlemesine incelenmesinde
+                                    uzmanlaşmış beslenme ve endokrinoloji uzmanı.<br><br> 21 yıllık deneyim.</p>
                             </div>
                         </div>
                         <img src="img/doctor2.jpg" alt class="doctor__img">
                     </div>
                     <div class="doctor-body">
-                        <p class="text text_bold text_md doctor-cap-description__text doctor_sm"> Obezite ile ilgili hastalıkların ve metabolik bozuklukların derinlemesine incelenmesinde uzmanlaşmış beslenme ve endokrinoloji uzmanı.<br><br> 21 yıllık deneyim.</p>
-                        <p class="text text_md"> "Çoğu zaman kadınlar bana gözyaşları içinde geliyor. Her şeyi deniyorlar ama nafile, kiloları geri gelmeye devam ediyor. Eskiden onlara sakinleşmelerini, iyileşmelerini ve yeniden başlamalarını tavsiye ederdim. Bugün daha iyi bir çıkış yolu var<a href class="product__link link"> Graciola</a> .<br> Sadece bir besin takviyesi olarak alabilir ve kesinlikle doğal bir şekilde ayda 15 kg kaybedebilirsiniz. Cinsiyet, yaş veya sağlık durumu ne olursa olsun herkese uyan tamamen doğal bir üründür.<br> Kilo kaybı, vücudu susuz bırakarak değil, yalnızca yağ kütlesini yakarak sağlanır, sorunlu bölgelerde etki bir hafta sonra fark edilir hale gelir.<br>
-                            <a href class="product__link link"> Graciola</a> Batı diyetetiğinde uzun süredir kullanılıyor ve şimdi Kolombiya'da popülerlik kazanıyor. Şahsen ben tüm hastalarıma tavsiye ediyorum ve henüz herhangi bir şikayet duymadım."</p>
+                        <p class="text text_bold text_md doctor-cap-description__text doctor_sm"> Obezite ile ilgili hastalıkların ve metabolik bozuklukların derinlemesine incelenmesinde uzmanlaşmış
+                            beslenme ve endokrinoloji uzmanı.<br><br> 21 yıllık deneyim.</p>
+                        <p class="text text_md"> "Çoğu zaman kadınlar bana gözyaşları içinde geliyor. Her şeyi deniyorlar ama nafile, kiloları geri gelmeye devam ediyor. Eskiden onlara
+                            sakinleşmelerini, iyileşmelerini ve yeniden başlamalarını tavsiye ederdim. Bugün daha iyi bir çıkış yolu var<a href class="product__link link"> G-tea </a> .<br> Sadece
+                            bir besin takviyesi olarak alabilir ve kesinlikle doğal bir şekilde ayda 15 kg kaybedebilirsiniz. Cinsiyet, yaş veya sağlık durumu ne olursa olsun herkese uyan tamamen
+                            doğal bir üründür.<br> Kilo kaybı, vücudu susuz bırakarak değil, yalnızca yağ kütlesini yakarak sağlanır, sorunlu bölgelerde etki bir hafta sonra fark edilir hale
+                            gelir.<br>
+                            <a href class="product__link link"> G-tea </a> Batı diyetetiğinde uzun süredir kullanılıyor ve şimdi Kolombiya'da popülerlik kazanıyor. Şahsen ben tüm hastalarıma tavsiye
+                            ediyorum ve henüz herhangi bir şikayet duymadım."</p>
                         <div class="doctor-footer">
                             <img src="img/doctor2-footer.png" alt class="doctor-footer__img doctor_xl">
                         </div>
                     </div>
                 </div>
 
-                <h4 class="title title_before-line"> GRACIOLA'NIN İYİLEŞTİRİCİ ÖZELLİKLERİ</h4>
+                <h4 class="title title_before-line"> G-tea 'NIN İYİLEŞTİRİCİ ÖZELLİKLERİ</h4>
 
                 <div class="facts-block">
                     <div class="facts-list">
                         <div class="main__separate-line"></div>
                         <div class="facts-el">
                             <img src="img/fact1.png" alt class="facts-el__img">
-                            <p class="facts-el__text text text_md"> Diyet lifleri sindirim sistemi üzerinde temizleyici ve yatıştırıcı bir etkiye sahiptir. Bağırsağın iç duvarlarını sarar, gastrointestinal sistemi normalleştirir ve toksinleri ve birikmiş atık ürünleri ortadan kaldırır.</p>
+                            <p class="facts-el__text text text_md"> Diyet lifleri sindirim sistemi üzerinde temizleyici ve yatıştırıcı bir etkiye sahiptir. Bağırsağın iç duvarlarını sarar,
+                                gastrointestinal sistemi normalleştirir ve toksinleri ve birikmiş atık ürünleri ortadan kaldırır.</p>
                         </div>
                         <div class="main__separate-line"></div>
                         <div class="facts-el">
                             <img src="img/fact2.png" alt class="facts-el__img">
-                            <p class="facts-el__text text text_md"> Bitkisel yağlar yüksek lif ile birleştiğinde ketenin bir diyet ürünü olarak değerini artırır. Sadece düşük kalorili içeriği nedeniyle değil, aynı zamanda temizleyici etkisi ve gelişmiş bağırsak fonksiyonu nedeniyle kilo kaybını teşvik eder.</p>
+                            <p class="facts-el__text text text_md"> Bitkisel yağlar yüksek lif ile birleştiğinde ketenin bir diyet ürünü olarak değerini artırır. Sadece düşük kalorili içeriği
+                                nedeniyle değil, aynı zamanda temizleyici etkisi ve gelişmiş bağırsak fonksiyonu nedeniyle kilo kaybını teşvik eder.</p>
                         </div>
                         <div class="main__separate-line"></div>
                         <div class="facts-el">
                             <img src="img/fact3.png" alt class="facts-el__img">
-                            <p class="facts-el__text text text_md"> Çoklu doymamış yağ asitleri kalp fonksiyonlarını normalleştirir, diyabet ve astım sağlığını iyileştirir, kolesterol seviyelerini düşürür ve kan basıncını normalleştirir. Kan damarlarını iltihaptan korur ve kan pıhtılaşmasını önler.</p>
+                            <p class="facts-el__text text text_md"> Çoklu doymamış yağ asitleri kalp fonksiyonlarını normalleştirir, diyabet ve astım sağlığını iyileştirir, kolesterol seviyelerini
+                                düşürür ve kan basıncını normalleştirir. Kan damarlarını iltihaptan korur ve kan pıhtılaşmasını önler.</p>
                         </div>
                         <div class="main__separate-line"></div>
                         <div class="facts-el">
                             <img src="img/fact4.png" alt class="facts-el__img">
-                            <p class="facts-el__text text text_md"> Vitaminler ve mikro besinler tüm vücudun işleyişini sürdürür, bağışıklık sistemini güçlendirir ve çeşitli hastalıkların gelişmesini önler. Bağışıklık sistemini destekler ve çeşitli hastalıkların gelişmesini önlerler.</p>
+                            <p class="facts-el__text text text_md"> Vitaminler ve mikro besinler tüm vücudun işleyişini sürdürür, bağışıklık sistemini güçlendirir ve çeşitli hastalıkların gelişmesini
+                                önler. Bağışıklık sistemini destekler ve çeşitli hastalıkların gelişmesini önlerler.</p>
                         </div>
                         <div class="main__separate-line"></div>
                         <div class="facts-el">
                             <img src="img/fact5.png" alt class="facts-el__img">
-                            <p class="facts-el__text text text_md"> Amino asitler, cilt ve saç hastalıkları üzerinde belirgin bir terapötik etkiye sahip olan dokular üzerinde rejeneratif bir etkiye sahiptir.</p>
+                            <p class="facts-el__text text text_md"> Amino asitler, cilt ve saç hastalıkları üzerinde belirgin bir terapötik etkiye sahip olan dokular üzerinde rejeneratif bir etkiye
+                                sahiptir.</p>
                         </div>
                         <div class="main__separate-line"></div>
                         <div class="facts-el">
                             <img src="img/fact6.png" alt class="facts-el__img">
-                            <p class="facts-el__text text text_md"> Bağırsak mikroflorasını geri yükleyerek peristaltizmini güçlendirir. Pektinlerin varlığı bağırsak mukozasını kimyasal tahriş edicilerden, patojenlerden ve kanserojen maddelerden korur, bunun sonucunda disbakteriyoz ve kabızlık ortadan kalkar.</p>
+                            <p class="facts-el__text text text_md"> Bağırsak mikroflorasını geri yükleyerek peristaltizmini güçlendirir. Pektinlerin varlığı bağırsak mukozasını kimyasal tahriş
+                                edicilerden, patojenlerden ve kanserojen maddelerden korur, bunun sonucunda disbakteriyoz ve kabızlık ortadan kalkar.</p>
                         </div>
                         <div class="main__separate-line"></div>
                     </div>
                 </div>
-                <h4 class="title"> GRACIOLA'NIN BILEŞIMINDEKI AKTIF BILEŞENLER:</h4>
+                <h4 class="title"> G-tea 'NIN BILEŞIMINDEKI AKTIF BILEŞENLER:</h4>
                 <div class="ingredients-block">
                     <div class="ingredients__poster-wrap">
                         <img src="img/product.png" alt class="ingredients__poster">
@@ -587,9 +629,10 @@ if (!isset($rawClick)) {
                 </div>
                 <div class="plaster-text__wrap">
                     <img src="img/plaster.svg" alt class="plaster">
-                    <p class="text plaster__text"> Bir ay boyunca aşırı kilolu bir grup denek (100 kişi)<a href class="product__link link"> Graciola</a> normal diyetlerini değiştirmeden günlük olarak besin takviyesi olarak. Çalışma sırasında aşağıdaki sonuçlar elde edilmiştir:</p>
+                    <p class="text plaster__text"> Bir ay boyunca aşırı kilolu bir grup denek (100 kişi)<a href class="product__link link"> G-tea </a> normal diyetlerini değiştirmeden günlük olarak
+                        besin takviyesi olarak. Çalışma sırasında aşağıdaki sonuçlar elde edilmiştir:</p>
                 </div>
-                <h4 class="title"> KOLOMBİYA ULUSAL ÖZERK ÜNİVERSİTESİ'NDE GRACIOLA ÜZERİNE YAPILAN LABORATUVAR TESTLERİNİN SONUÇLARI</h4>
+                <h4 class="title"> KOLOMBİYA ULUSAL ÖZERK ÜNİVERSİTESİ'NDE G-tea ÜZERİNE YAPILAN LABORATUVAR TESTLERİNİN SONUÇLARI</h4>
                 <div class="research-block">
                     <img src="img/bg6.png" alt class="research-bg1">
                     <img src="img/bg7.png" alt class="research-bg2">
@@ -628,7 +671,8 @@ if (!isset($rawClick)) {
                         </div>
                     </div>
                     <div class="research-footer">
-                        <p class="research-footer__text"> Graciola'nın etkinliği üzerine bir çalışma "Bolivarcı Üniversite Ulusal Kliniği", "Columbia Fonksiyonel Tıp Enstitüsü" ve "Columbia Sağlık Bakanlığı" tarafından yürütülmüştür.</p>
+                        <p class="research-footer__text"> G-tea 'nın etkinliği üzerine bir çalışma "Bolivarcı Üniversite Ulusal Kliniği", "Columbia Fonksiyonel Tıp Enstitüsü" ve "Columbia Sağlık
+                            Bakanlığı" tarafından yürütülmüştür.</p>
                         <img src="img/research-footer.png" alt class="research-footer__img">
                     </div>
                 </div>
@@ -636,8 +680,10 @@ if (!isset($rawClick)) {
                 <div class="quote quote_right">
                     <div class="quote-description">
                         <p class="quote__text text text_md">
-                            <span class="quote__mark"> "</span> Bir dizi klinik çalışma yürüttük ve şu sonuca vardık<a href class="product__link link"> Graciola</a> mide, sindirim sistemi ve genel sağlık için güvenlidir. Metabolizmanın hızlandırılması ve yağ kütlesinin yakılması üzerinde güçlü bir etkiye sahiptir, endokrin sistemin aktivitesini geri kazandırır, doku rejenerasyonunu uyarır ve açlığı bastırır. Aşırı kilolu, obez, metabolizma bozukluğu ve şeker hastalığı olan kişilerde kullanım için endikedir."</p>
-                        <p class="quote__author text_xl"> - Dr. Carlos Jaramillo</p>
+                            <span class="quote__mark"> "</span> Bir dizi klinik çalışma yürüttük ve şu sonuca vardık<a href class="product__link link"> G-tea </a> mide, sindirim sistemi ve genel
+                            sağlık için güvenlidir. Metabolizmanın hızlandırılması ve yağ kütlesinin yakılması üzerinde güçlü bir etkiye sahiptir, endokrin sistemin aktivitesini geri kazandırır, doku
+                            rejenerasyonunu uyarır ve açlığı bastırır. Aşırı kilolu, obez, metabolizma bozukluğu ve şeker hastalığı olan kişilerde kullanım için endikedir."</p>
+                        <p class="quote__author text_xl"> - Dr. Ayşegül Çoruhlu</p>
                     </div>
                     <img src="img/quote2.jpg" alt class="quote__img">
                 </div>
@@ -664,7 +710,7 @@ if (!isset($rawClick)) {
                         <div class="modal__content form-modal__content">
                             <img src="img/modal__cross.png" alt class="modal__cross">
                             <h4 class="modal__title form-modal__title"> Tebrikler!</h4>
-                            <p class="modal__text form-modal__text"> Büyük ödülümüzü kazandınız: %50 indirimli GRACIOLA!</p>
+                            <p class="modal__text form-modal__text"> Büyük ödülümüzü kazandınız: %50 indirimli G-tea !</p>
                             <button class="modal__btn form-modal__btn"> TAMAM</button>
                         </div>
                     </div>
@@ -674,7 +720,7 @@ if (!isset($rawClick)) {
                         <h4 class="spin__title spin__title_bg"> Çekiliş başladı!</h4>
 
                         <h4 class="spin__title spin__title_sm"> Unutmayın, özel promosyon<br> kadar geçerlidir:<script>
-                            dtime_nums(-1, true);
+                                dtime_nums(-1, true);
                             </script> (dahil)!</h4>
 
                         <div class="spin__window">
@@ -733,9 +779,10 @@ if (!isset($rawClick)) {
                         </div>
 
                         <p class="spin__text">
-                            <span class="spin__attention"> DİKKAT!</span> Portalımız GRACIOLA'da ek bir indirim sunmaktadır. Şansınızı deneyin ve<span class="spin__text_underlined"> ok düğmesi</span> . Eğer şanslıysanız, ürünü daha da ucuza sipariş edebilirsiniz!</p>
+                            <span class="spin__attention"> DİKKAT!</span> Portalımız G-tea 'da ek bir indirim sunmaktadır. Şansınızı deneyin ve<span class="spin__text_underlined"> ok düğmesi</span>
+                            . Eğer şanslıysanız, ürünü daha da ucuza sipariş edebilirsiniz!</p>
                         <div class="spin__label-wrap">
-                            <p class="spin__label-text"> 139 000 $</p>
+                            <p class="spin__label-text"> 650 ₺</p>
                         </div>
                     </div>
                 </div>
@@ -762,13 +809,14 @@ if (!isset($rawClick)) {
                     <div class="form-content">
                         <div class="form-price__block">
                             <div class="form-price">
-                                <p class="form-price__text_old"> 278 000 $</p>
-                                <div class="form-price__text_new"> 139 000 $</div>
+                                <p class="form-price__text_old"> 1300 ₺</p>
+                                <div class="form-price__text_new"> 650 ₺</div>
                             </div>
                             <img src="img/form-product.png" alt class="form-price__img">
                         </div>
                         <div class="form-description">
-                            <p class="form-description__text text_xl"> GRACIOLA'yı indirimli olarak temin etmek için lütfen aşağıdaki alanlara adınızı ve irtibat telefon numaranızı girin ve butona tıklayın<span class="text_red inline-block"> "AYRILMA TALEBI" DÜĞMESI</span>
+                            <p class="form-description__text text_xl"> G-tea 'yı indirimli olarak temin etmek için lütfen aşağıdaki alanlara adınızı ve irtibat telefon numaranızı girin ve butona
+                                tıklayın<span class="text_red inline-block"> "AYRILMA TALEBI" DÜĞMESI</span>
                             </p>
                         </div>
 
@@ -800,7 +848,8 @@ if (!isset($rawClick)) {
                                     <img src="img/form-input__img2.svg" alt class="form-input__img">
                                     <div class="form-input__wrap">
                                         <label for="phone" class="form-label text_xl"> İletişim telefon numaranız:</label>
-                                        <input name="phone" id="phone" inputmode="numeric" required type="tel" value style="padding-left: 52px;" autocomplete="off" ` data-intl-tel-input-id="0" placeholder="+57 601 422 3000" class="form-input form__input">
+                                        <input name="phone" id="phone" inputmode="numeric" required type="tel" value style="padding-left: 52px;" autocomplete="off" ` data-intl-tel-input-id="0"
+                                            placeholder="+57 601 422 3000" class="form-input form__input">
                                         <div class="input__tel-result">
                                             <span id="valid-msg" class="iti__hide text" style="display: none;"> Geçerli</span>
                                             <span id="error-msg" class="iti__hide text" style="display: none;"></span>
@@ -825,10 +874,10 @@ if (!isset($rawClick)) {
                         <div class="review-el">
                             <img src="img/avatar1.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Licia Flórez Briones:</p>
+                                <p class="review-el__name"> Elif Flores Baran:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-5, true);
+                                        dtime_nums(-5, true);
                                     </script>
                                 </p>
                                 <p class="review-el__text"> Karışımı her gün almak uygun, yeni başladım ama sonuçları şimdiden görebiliyorum.</p>
@@ -844,7 +893,7 @@ if (!isset($rawClick)) {
                                 <p class="review-el__name"> Tito Arellano Argüello:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-5, true);
+                                        dtime_nums(-5, true);
                                     </script>
                                 </p>
                                 <p class="review-el__text"> İyi günler, ürünle ilgileniyorum.... nasıl sipariş verebilirim? Ben Bagota, Kolombiya'danım.</p>
@@ -856,10 +905,12 @@ if (!isset($rawClick)) {
                                 <p class="review-el__name"> Lucia Vera:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-5, true);
+                                        dtime_nums(-5, true);
                                     </script>
                                 </p>
-                                <p class="review-el__text"> İyi günler, sizinle sonuçlarımı paylaşmak istiyorum. Kasım 2021'de klinik araştırma grubundaydım. Çok iyi sonuçlar elde ettik. Bu ürünün ne kadar etkili olduğuna şaşırdım. Bu klinik çalışmalara katıldığım için çok mutluyum, hayatım değişti ve çok daha iyi hale geldi! Bakın, işte deneyin başlangıcındaki ve sonundaki sonuçlarım, vücut ağırlığım %35'ten fazla düştü!</p>
+                                <p class="review-el__text"> İyi günler, sizinle sonuçlarımı paylaşmak istiyorum. Kasım 2021'de klinik araştırma grubundaydım. Çok iyi sonuçlar elde ettik. Bu ürünün ne
+                                    kadar etkili olduğuna şaşırdım. Bu klinik çalışmalara katıldığım için çok mutluyum, hayatım değişti ve çok daha iyi hale geldi! Bakın, işte deneyin başlangıcındaki
+                                    ve sonundaki sonuçlarım, vücut ağırlığım %35'ten fazla düştü!</p>
                                 <div class="review-el__img-wrap review-el__img-wrap_few">
                                     <img src="img/review3.jpg" alt class="review-el__img">
                                     <div class="review-el__img-wrap-group">
@@ -872,13 +923,14 @@ if (!isset($rawClick)) {
                         <div class="review-el">
                             <img src="img/avatar4.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Katherine Morales:</p>
+                                <p class="review-el__name">Katerina Morales:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-5, true);
+                                        dtime_nums(-5, true);
                                     </script>
                                 </p>
-                                <p class="review-el__text"> Bunu doğrulayabilirim! Graciola sorunlu bölgelerde bile çok iyi çalışıyor, yağ tüm vücutta eşit olarak kayboluyor. Daha ilk birkaç günde ürünün işe yaradığı açıkça görülüyor.</p>
+                                <p class="review-el__text"> Bunu doğrulayabilirim! G-tea sorunlu bölgelerde bile çok iyi çalışıyor, yağ tüm vücutta eşit olarak kayboluyor. Daha ilk birkaç günde
+                                    ürünün işe yaradığı açıkça görülüyor.</p>
                             </div>
                         </div>
                         <div class="review-el">
@@ -887,19 +939,20 @@ if (!isset($rawClick)) {
                                 <p class="review-el__name"> Melina Galeano:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-5, true);
+                                        dtime_nums(-5, true);
                                     </script>
                                 </p>
-                                <p class="review-el__text"> Bir aydır kullanıyorum ve gerçek şu ki yaklaşık 14 kilo verdim, ama en önemlisi normal yürüyebiliyorum ve kan testlerim hemen düzeliyor. Ateroskleroz ve hipertansiyon geliştirdim, artık merdivenlerden birinci kata çıkamıyordum ve şimdi bir tavşan gibi koşuyorum.</p>
+                                <p class="review-el__text"> Bir aydır kullanıyorum ve gerçek şu ki yaklaşık 14 kilo verdim, ama en önemlisi normal yürüyebiliyorum ve kan testlerim hemen düzeliyor.
+                                    Ateroskleroz ve hipertansiyon geliştirdim, artık merdivenlerden birinci kata çıkamıyordum ve şimdi bir tavşan gibi koşuyorum.</p>
                             </div>
                         </div>
                         <div class="review-el">
                             <img src="img/avatar6.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Dagmar Raya Sedillo:</p>
+                                <p class="review-el__name"> Deniz Raya Sedillo:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-5, true);
+                                        dtime_nums(-5, true);
                                     </script>
                                 </p>
                                 <p class="review-el__text"> Nasıl alacağımı, şişenin ne kadar süre saklanabileceğini, 15 kilo vermek istiyorsam ne kadar almam gerektiğini bilmem gerekiyor?</p>
@@ -908,18 +961,16 @@ if (!isset($rawClick)) {
                         <div class="review-el">
                             <img src="img/avatar7.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Carina Barrera Carrera:</p>
+                                <p class="review-el__name"> Cansu Baran Kartal:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-5, true);
+                                        dtime_nums(-5, true);
                                     </script>
                                 </p>
-                                <p class="review-el__text"> Günümüzde herkes güzel ve ince bir vücuda sahip olabilir, sadece genetiği iyi olan ve her gün spor salonuna gitmek için çok fazla boş zamanı olan insanlar değil, bana yeni bir hayat verdiği için Dr. Carlos Jamilho'ya teşekkürler.</p>
+                                <p class="review-el__text"> Günümüzde herkes güzel ve ince bir vücuda sahip olabilir, sadece genetiği iyi olan ve her gün spor salonuna gitmek için çok fazla boş zamanı
+                                    olan insanlar değil, bana yeni bir hayat verdiği için Dr. Ayşegül Jamilho'ya teşekkürler.</p>
 
-                                <div class="review-el__img-wrap">
-                                    <img src="img/review7.jpg" alt class="review-el__img">
-                                    <img src="img/plaster.svg" alt class="review-el__img-plaster">
-                                </div>
+
                             </div>
                         </div>
                         <div class="review-el">
@@ -928,10 +979,11 @@ if (!isset($rawClick)) {
                                 <p class="review-el__name"> Iris Bentini:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-5, true);
+                                        dtime_nums(-5, true);
                                     </script>
                                 </p>
-                                <p class="review-el__text"> Bu ürün harika. Almaya başladım ve kilolarım gelmeye başladı, ama ne kadar enerjim var. Umarım kilo vermeme yardımcı olur. Tadı normal, nötr. Günde iki kez alıyorum.</p>
+                                <p class="review-el__text"> Bu ürün harika. Almaya başladım ve kilolarım gelmeye başladı, ama ne kadar enerjim var. Umarım kilo vermeme yardımcı olur. Tadı normal,
+                                    nötr. Günde iki kez alıyorum.</p>
                             </div>
                         </div>
                         <div class="review-el">
@@ -940,7 +992,7 @@ if (!isset($rawClick)) {
                                 <p class="review-el__name"> Erlinda Amaya Mateo:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-4, true);
+                                        dtime_nums(-4, true);
                                     </script>
                                 </p>
                                 <p class="review-el__text"> Çok etkili bir ürün. Klinik deneylere katıldım. Gerçekten kilo verdim ve en önemlisi daha fazla kilo almadım.</p>
@@ -949,10 +1001,10 @@ if (!isset($rawClick)) {
                         <div class="review-el">
                             <img src="img/avatar10.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Jorge Liguori Cano:</p>
+                                <p class="review-el__name"> Cem Ligori Cano:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-4, true);
+                                        dtime_nums(-4, true);
                                     </script>
                                 </p>
                                 <p class="review-el__text"> Tedavi sırasında bazen alkollü içecekler tüketebilir miyim? Ve söyleyin bana, ne kadar sürüyor?</p>
@@ -964,19 +1016,20 @@ if (!isset($rawClick)) {
                                 <p class="review-el__name"> Ricardo Trevino:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-5, true);
+                                        dtime_nums(-5, true);
                                     </script>
                                 </p>
-                                <p class="review-el__text"> Bu ürün bana klinik deneylere katılan bir arkadaşım tarafından önerildi, diyet yapmadan 2 ayda 23 kilodan fazla verdim, ancak iyi kaslara sahip olmak için spor salonuna gittim. Bu ürün harika ve onunla kilo vermek çok kolay.</p>
+                                <p class="review-el__text"> Bu ürün bana klinik deneylere katılan bir arkadaşım tarafından önerildi, diyet yapmadan 2 ayda 23 kilodan fazla verdim, ancak iyi kaslara
+                                    sahip olmak için spor salonuna gittim. Bu ürün harika ve onunla kilo vermek çok kolay.</p>
                             </div>
                         </div>
                         <div class="review-el">
                             <img src="img/avatar12.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Merle Chapa Guajardo:</p>
+                                <p class="review-el__name"> Meral Çapa Güleç:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-4, true);
+                                        dtime_nums(-4, true);
                                     </script>
                                 </p>
                                 <p class="review-el__text"> Söyler misiniz, bu ürünü İspanya'ya mı yoksa sadece Kolombiya'ya mı gönderiyorsunuz?</p>
@@ -985,25 +1038,27 @@ if (!isset($rawClick)) {
                         <div class="review-el">
                             <img src="img/avatar13.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Odín Rincón Arce:</p>
+                                <p class="review-el__name"> Orhan Rincón Akça:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-4, true);
+                                        dtime_nums(-4, true);
                                     </script>
                                 </p>
-                                <p class="review-el__text"> Ben de sipariş vermek istiyorum. İnanılmaz sonuçlar! Bu ürüne sahip olmak istiyorum. Kendim ve eşim için iki şişe sipariş edersem, ek bir indirim alabilir miyim?</p>
+                                <p class="review-el__text"> Ben de sipariş vermek istiyorum. İnanılmaz sonuçlar! Bu ürüne sahip olmak istiyorum. Kendim ve eşim için iki şişe sipariş edersem, ek bir
+                                    indirim alabilir miyim?</p>
                             </div>
                         </div>
                         <div class="review-el">
                             <img src="img/avatar14.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Zarina Santiago Reyes:</p>
+                                <p class="review-el__name"> Zara Santiago Reis:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-5, true);
+                                        dtime_nums(-5, true);
                                     </script>
                                 </p>
-                                <p class="review-el__text"> Bu çok etkili ürün için teşekkür ederim. Graciola kilo vermeme gerçekten yardımcı oldu. Şikayet edecek hiçbir şeyim yok ve sadece tavsiye edebilirim. Başarılarımı sizinle paylaşıyorum.</p>
+                                <p class="review-el__text"> Bu çok etkili ürün için teşekkür ederim. G-tea kilo vermeme gerçekten yardımcı oldu. Şikayet edecek hiçbir şeyim yok ve sadece tavsiye
+                                    edebilirim. Başarılarımı sizinle paylaşıyorum.</p>
                                 <div class="review-el__img-wrap review-el__img-wrap_few">
                                     <img src="img/review14.jpg" alt class="review-el__img">
                                     <div class="review-el__img-wrap-group">
@@ -1019,7 +1074,7 @@ if (!isset($rawClick)) {
                                 <p class="review-el__name"> Clarisa Montealegre:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-4, true);
+                                        dtime_nums(-4, true);
                                     </script>
                                 </p>
                                 <p class="review-el__text"> Ne kadar zamandır kullanıyorsunuz?</p>
@@ -1028,10 +1083,10 @@ if (!isset($rawClick)) {
                         <div class="review-el">
                             <img src="img/avatar16.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Zarina Santiago Reyes:</p>
+                                <p class="review-el__name"> - Zara Santiago Reis:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-4, true);
+                                        dtime_nums(-4, true);
                                     </script>
                                 </p>
                                 <p class="review-el__text"> Clarisa, yaklaşık 5 haftadır, ama daha iyi bir sonuç elde etmek için hala alıyorum!</p>
@@ -1040,25 +1095,27 @@ if (!isset($rawClick)) {
                         <div class="review-el">
                             <img src="img/avatar17.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Carlos Davila:</p>
+                                <p class="review-el__name"> Cem Davut:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-3, true);
+                                        dtime_nums(-3, true);
                                     </script>
                                 </p>
-                                <p class="review-el__text"> 50 indirim aldım ve ayrıca ilacı 4-5 gün içinde teslim edeceklerini söylediler, umarım sizi hayal kırıklığına uğratmazlar! Compadritos, siteyi düzeltmeyi unutmayın, bazen düğmeler çalışmıyor gibi görünüyor =( Bana telefonda evet dendi.</p>
+                                <p class="review-el__text"> 50 indirim aldım ve ayrıca ilacı 4-5 gün içinde teslim edeceklerini söylediler, umarım sizi hayal kırıklığına uğratmazlar! Compadritos,
+                                    siteyi düzeltmeyi unutmayın, bazen düğmeler çalışmıyor gibi görünüyor =( Bana telefonda evet dendi.</p>
                             </div>
                         </div>
                         <div class="review-el">
                             <img src="img/avatar18.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Paulina Bustos:</p>
+                                <p class="review-el__name"> Pelin Büyük:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-3, true);
+                                        dtime_nums(-3, true);
                                     </script>
                                 </p>
-                                <p class="review-el__text"> Satın alma ve teslimat hizmetleri eşittir, satın alma işleminin çok kolay ve hızlı olduğunu söylemeliyim, risk yok. Herhangi bir sorun olmadan bana ulaştı.</p>
+                                <p class="review-el__text"> Satın alma ve teslimat hizmetleri eşittir, satın alma işleminin çok kolay ve hızlı olduğunu söylemeliyim, risk yok. Herhangi bir sorun
+                                    olmadan bana ulaştı.</p>
                                 <div class="review-el__img-wrap">
                                     <img src="img/review18.jpg" alt class="review-el__img">
                                     <img src="img/plaster.svg" alt class="review-el__img-plaster">
@@ -1068,10 +1125,10 @@ if (!isset($rawClick)) {
                         <div class="review-el">
                             <img src="img/avatar19.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Ana Miranda</p>
+                                <p class="review-el__name">Ayşe Miranda: </p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-3, true);
+                                        dtime_nums(-3, true);
                                     </script>
                                 </p>
                                 <p class="review-el__text"> Ben 3 yıldır uzaktan çalışıyorum ve kilo aldım, bu yüzden bunun bana yardımcı olacağını umuyorum.</p>
@@ -1080,10 +1137,10 @@ if (!isset($rawClick)) {
                         <div class="review-el">
                             <img src="img/avatar20.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Hercilia Viera Camarillo:</p>
+                                <p class="review-el__name"> Hazal Viera Kamar:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-3, true);
+                                        dtime_nums(-3, true);
                                     </script>
                                 </p>
                                 <p class="review-el__text"> Tip 2 diyabeti olan kişiler alabilir mi?</p>
@@ -1092,34 +1149,36 @@ if (!isset($rawClick)) {
                         <div class="review-el">
                             <img src="img/avatar21.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Emilia Huerta-Flores:</p>
+                                <p class="review-el__name"> Emine Huerta-Flores:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-3, true);
+                                        dtime_nums(-3, true);
                                     </script>
                                 </p>
-                                <p class="review-el__text"> Bir sorum var, Graciola'yı herkes alabilir mi? Çünkü annem 56 yaşında ve o yaşta ona zarar verip vermeyeceğini bilmiyorum? Tabii ki klinik çalışmalarda o yaşlarda insanlar olduğunu okudum ama yine de şüpheliyim.....</p>
+                                <p class="review-el__text"> Bir sorum var, G-tea 'yı herkes alabilir mi? Çünkü annem 56 yaşında ve o yaşta ona zarar verip vermeyeceğini bilmiyorum? Tabii ki klinik
+                                    çalışmalarda o yaşlarda insanlar olduğunu okudum ama yine de şüpheliyim.....</p>
                             </div>
                         </div>
                         <div class="review-el">
                             <img src="img/avatar22.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Malita Ortis:</p>
+                                <p class="review-el__name">Meral Ortis:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-3, true);
+                                        dtime_nums(-3, true);
                                     </script>
                                 </p>
-                                <p class="review-el__text"> Emilia, sorun değil, 65 yaşındaki annem Graciola kullanıyor ve şimdiden 14 kilo verdi, kendini çok daha iyi hissetmeye başladı. Karışım %100 doğal, yani ona hiçbir şey olmayacak.</p>
+                                <p class="review-el__text"> Emilia, sorun değil, 65 yaşındaki annem G-tea kullanıyor ve şimdiden 14 kilo verdi, kendini çok daha iyi hissetmeye başladı. Karışım %100
+                                    doğal, yani ona hiçbir şey olmayacak.</p>
                             </div>
                         </div>
                         <div class="review-el">
                             <img src="img/avatar23.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Emilia Huerta-Flores:</p>
+                                <p class="review-el__name"> - Emine Huerta-Flores:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-3, true);
+                                        dtime_nums(-3, true);
                                     </script>
                                 </p>
                                 <p class="review-el__text"> Aldım, teşekkür ederim, sipariş edeceğim.</p>
@@ -1128,22 +1187,23 @@ if (!isset($rawClick)) {
                         <div class="review-el">
                             <img src="img/avatar24.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Marisol Sevilla:</p>
+                                <p class="review-el__name">Marisol Sevilla:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-3, true);
+                                        dtime_nums(-3, true);
                                     </script>
                                 </p>
-                                <p class="review-el__text"> Annem ve ben çoktan almaya başladık. Şimdi bize nasıl bir sonuç vereceğini göreceğiz, her birimiz en az 7-9 kilo vermeyi umuyoruz, böylece plaja gittiğimizde en iyi bikiniye sahip olacağız!</p>
+                                <p class="review-el__text"> Annem ve ben çoktan almaya başladık. Şimdi bize nasıl bir sonuç vereceğini göreceğiz, her birimiz en az 7-9 kilo vermeyi umuyoruz, böylece
+                                    plaja gittiğimizde en iyi bikiniye sahip olacağız!</p>
                             </div>
                         </div>
                         <div class="review-el">
                             <img src="img/avatar25.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Claudia Gonzalez:</p>
+                                <p class="review-el__name"> Claudia Gönül:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-2, true);
+                                        dtime_nums(-2, true);
                                     </script>
                                 </p>
                                 <p class="review-el__text"> İlacı satın almakla ilgileniyorum. 14 yaşında obez bir oğlum var. Bunu alıp alamayacağını bilmek istiyorum. Teşekkür ederim.</p>
@@ -1152,10 +1212,10 @@ if (!isset($rawClick)) {
                         <div class="review-el">
                             <img src="img/avatar26.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Elena Suarez:</p>
+                                <p class="review-el__name"> Elif Suat:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-2, true);
+                                        dtime_nums(-2, true);
                                     </script>
                                 </p>
                                 <p class="review-el__text"> Kız kardeşime doğum günü için alacağım, çok mutlu olacak:)</p>
@@ -1164,34 +1224,36 @@ if (!isset($rawClick)) {
                         <div class="review-el">
                             <img src="img/avatar27.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Alejandra Gutiérrez Juárez:</p>
+                                <p class="review-el__name"> Aylin Gutiérrez Yılmaz:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-2, true);
+                                        dtime_nums(-2, true);
                                     </script>
                                 </p>
-                                <p class="review-el__text"> Ben de bu yıl kilo vermeye karar verdim! Ama fark etmediğim bir şey var, Graciola alsam bile diyet yapmak zorunda mıyım?</p>
+                                <p class="review-el__text"> Ben de bu yıl kilo vermeye karar verdim! Ama fark etmediğim bir şey var, G-tea alsam bile diyet yapmak zorunda mıyım?</p>
                             </div>
                         </div>
                         <div class="review-el">
                             <img src="img/avatar28.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Lucía Vera:</p>
+                                <p class="review-el__name"> Lucia Vera:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-2, true);
+                                        dtime_nums(-2, true);
                                     </script>
                                 </p>
-                                <p class="review-el__text"> Alejandra, klinik deney grubumda benim gibi ilacı alan ve diyet yapmayan insanlar vardı ve hepsinin sonuçları mükemmeldi! Elbette bana bir ayda 15 kg vereceğim söylendi ve ben "sadece" 12,8 kg verdim ama şikayetçi değilim çünkü bu kadar kilo vermeyeli uzun zaman olmuştu! Sonuçlarımdan çok memnunum! Tabii ki diyet ve sporu da eklerseniz daha da iyi sonuçlar alırsınız!</p>
+                                <p class="review-el__text"> Alejandra, klinik deney grubumda benim gibi ilacı alan ve diyet yapmayan insanlar vardı ve hepsinin sonuçları mükemmeldi! Elbette bana bir
+                                    ayda 15 kg vereceğim söylendi ve ben "sadece" 12,8 kg verdim ama şikayetçi değilim çünkü bu kadar kilo vermeyeli uzun zaman olmuştu! Sonuçlarımdan çok memnunum!
+                                    Tabii ki diyet ve sporu da eklerseniz daha da iyi sonuçlar alırsınız!</p>
                             </div>
                         </div>
                         <div class="review-el">
                             <img src="img/avatar29.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Dolores Casares:</p>
+                                <p class="review-el__name"> Dilay Casares:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-1, true);
+                                        dtime_nums(-1, true);
                                     </script>
                                 </p>
                                 <p class="review-el__text"> Tanrım, hemen sipariş vermek istiyorum! Bugün sipariş verirsem indirim alabilirim!</p>
@@ -1200,13 +1262,14 @@ if (!isset($rawClick)) {
                         <div class="review-el">
                             <img src="img/avatar30.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Viviana Socarras:</p>
+                                <p class="review-el__name"> Vildan Sokağraş:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-1, true);
+                                        dtime_nums(-1, true);
                                     </script>
                                 </p>
-                                <p class="review-el__text"> Dürüst olmak gerekirse, işe yarayacağını düşünmemiştim. Genel olarak doğal ilaçlara pek inanmazdım ama bilimsel sebepler beni ikna etti ve denemeye karar verdim. - 24 kg daha önce hiç başıma gelmemiş bir şey. Bu inanılmaz bir çözüm. Herkese tavsiye ederim.</p>
+                                <p class="review-el__text"> Dürüst olmak gerekirse, işe yarayacağını düşünmemiştim. Genel olarak doğal ilaçlara pek inanmazdım ama bilimsel sebepler beni ikna etti ve
+                                    denemeye karar verdim. - 24 kg daha önce hiç başıma gelmemiş bir şey. Bu inanılmaz bir çözüm. Herkese tavsiye ederim.</p>
                                 <div class="review-el__img-wrap">
                                     <img src="img/review30.jpg" alt class="review-el__img">
                                     <img src="img/plaster.svg" alt class="review-el__img-plaster">
@@ -1216,10 +1279,10 @@ if (!isset($rawClick)) {
                         <div class="review-el">
                             <img src="img/avatar31.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Carmen Santos:</p>
+                                <p class="review-el__name"> Cemile Santos:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-1, true);
+                                        dtime_nums(-1, true);
                                     </script>
                                 </p>
                                 <p class="review-el__text"> Bana ilacın maliyetini ve teslimatını anlatır mısınız?</p>
@@ -1228,13 +1291,14 @@ if (!isset($rawClick)) {
                         <div class="review-el">
                             <img src="img/avatar32.png" alt class="review-el__avatar">
                             <div class="review-el__header-description">
-                                <p class="review-el__name"> Reyna Castillo Ojeda:</p>
+                                <p class="review-el__name"> Reyhan Castillo Oğuz:</p>
                                 <p class="review-el__date">
                                     <script>
-                                    dtime_nums(-1, true);
+                                        dtime_nums(-1, true);
                                     </script>
                                 </p>
-                                <p class="review-el__text"> Bu karışım, siz fark etmeseniz bile vücuttaki yağları sihirli bir şekilde eritiyor. Fedakarlık yapmadan kilo vermek isteyen herkese şiddetle tavsiye edilir. Ben yaptım, siz de yapabilirsiniz.</p>
+                                <p class="review-el__text"> Bu karışım, siz fark etmeseniz bile vücuttaki yağları sihirli bir şekilde eritiyor. Fedakarlık yapmadan kilo vermek isteyen herkese şiddetle
+                                    tavsiye edilir. Ben yaptım, siz de yapabilirsiniz.</p>
                                 <div class="review-el__img-wrap review-el__img-wrap_few">
                                     <img src="img/review32.jpg" alt class="review-el__img">
                                     <div class="review-el__img-wrap-group">
@@ -1248,56 +1312,87 @@ if (!isset($rawClick)) {
                 </div>
                 <div class="main__separate-line"></div>
                 <div class="footer-btn__wrap">
-                    <a href class="footer-btn"> graciola</a>
+                    <a href class="footer-btn"> G-tea </a>
                 </div>
             </div>
         </div>
     </main>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-wrap">
-                <div class="footer-block">
-                    <img src="img/logo_blue.png" alt class="footer-logo">
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__logo">
+                <img src="./img/logo.png" alt="">
+            </div>
+            <div class="footer__socials">
+                <ul>
+                    <li class="footer__social link">
+                        <img src="./img/footer-icon-facebook.svg" alt="">
+                    </li>
+                    <li class="footer__social link">
+                        <img src="./img/footer-icon-twitter.svg" alt="">
+                    </li>
+                    <li class="footer__social link">
+                        <img src="./img/footer-icon-linkedin.svg" alt="">
+                    </li>
+                    <li class="footer__social link">
+                        <img src="./img/footer-icon-instagram.svg" alt="">
+                    </li>
+                    <li class="footer__social link">
+                        <img src="./img/footer-icon-youtube.svg" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__mid">
+            <div class="footer__mid-icons">
+                <ul>
+                    <li class="footer__mid-icon link">
+                        <img src="./img/goolgle-play-icon.png" alt="">
+                    </li>
+                    <li class="footer__mid-icon link">
+                        <img src="./img/huawei-app-gallery-icon.png" alt="">
+                    </li>
+                    <li class="footer__mid-icon link">
+                        <img src="./img/app-store-icon.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="footer-policy-links">
+                    <a href="" title="İletişim" class="border-r small" rel="nofollow">İletişim</a>
+                    <a href="" title="Künye" class="border-r small" rel="nofollow">Künye</a>
+                    <a href="" title="Yardım" class="border-r small" rel="nofollow">Yardım</a>
+                    <a href="" title="Üyelik" class="border-r small" rel="nofollow">Üyelik</a>
+                    <a href="" title="Gizlilik Politikası" class="border-r small" target="_blank">Gizlilik Politikası</a>
+                    <a href="" title="Yasal Uyarı" class="border-r small" rel="nofollow">Yasal Uyarı</a>
+                    <a href="" title="RSS" class="small" rel="nofollow">RSS</a>
                 </div>
-                <div class="footer-block">
-                    <p class="text footer__text text_sm"> COPYRIGHT © 2022 EL TIEMPO Casa Editorial NIT. 860.001.022-7 . Sahibinin yazılı izni olmaksızın tamamen veya kısmen çoğaltılması ve herhangi bir dile çevrilmesi yasaktır. ELTIEMPO.com Kolombiya ve Dünya'dan tüm ana haberler</p>
-                </div>
-                <div class="footer-block">
-                    <div class="footer-media">
-                        <p class="footer-media__text text_sm"> BİZİ TAKİP EDİN:</p>
-                        <div class="footer-media__list">
-                            <a href class="footer-media__el">
-                                <img src="img/footer-media1.svg" alt class="footer-media__img">
-                            </a>
-                            <a href class="footer-media__el">
-                                <img src="img/footer-media2.svg" alt class="footer-media__img">
-                            </a>
-                            <a href class="footer-media__el">
-                                <img src="img/footer-media3.svg" alt class="footer-media__img">
-                            </a>
-                            <a href class="footer-media__el">
-                                <img src="img/footer-media4.svg" alt class="footer-media__img">
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <small>
+                    Son Dakika haber, spor, astroloji ve magazinden siyasete, ekonomiden finansa, seyahatten televizyon dünyasına bütün konuların tek adresi mynet.com; mynet.com haber içerikleri
+                    kaynak gösterilmeden alıntı yapılamaz, kanuna aykırı ve izinsiz olarak kopyalanamaz, başka yerde yayınlanamaz.
+                </small>
+
+                <p class="new-footer-cpr-text">Copyright © MYNET A.Ş. Telif Hakları MYNET A.Ş.'ye Aittir.</p>
             </div>
         </div>
     </footer>
     <script>
-    const links = document.querySelectorAll('.link');
-    const anhor = document.querySelector('.ccc')
+        const links = document.querySelectorAll('.link');
+        const anhor = document.querySelector('.ccc')
 
-    for (const link of links) {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            anhor.scrollIntoView({
-                behavior: "smooth"
+        for (const link of links) {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                anhor.scrollIntoView({
+                    behavior: "smooth"
+                })
             })
-        })
-    }
+        }
     </script>
 
 
 
-</body></html>
+</body>
+
+</html>
