@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1.6;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Roboto", serif;
+}
+
+li,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+body {
+  min-height: 100vh;
+  background: #c1afcc;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1160px;
+  padding: 0px 20px;
+}
+
+.header {
+  background: #1c140f;
+}
+
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.header__logo {
+  padding: 20px 0px;
+}
+
+.header__logo img {
+  display: block;
+  width: 70px;
+}
+
+.main__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main__info {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.main__subtitle {
+  margin-top: 15px;
+}
+
+.progress {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.progress__wrapper {
+  background: #faf5ff;
+  border: 1px solid #1c140f;
+  border-radius: 10px;
+  padding: 40px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.progress__spin {
+  width: 40px;
+  height: 40px;
+}
+
+.progress__spin img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.progress__letters {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.dn {
+  display: none;
+}
+/*# sourceMappingURL=css.css.map */
