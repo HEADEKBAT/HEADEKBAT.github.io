@@ -1,15 +1,19 @@
 h1 {
-    text-align: center;
+    // text-align: center;
     font-weight: 700;
     font-size: 22px;
+    line-height: 26px;
     padding-bottom: 25px;
+    font {
+        text-transform: uppercase;
+    }
 }
 h2,
 h3,
 h4 {
-    text-align: center;
+    color: darkred;
+    font-size: 24px;
     font-weight: 700;
-    font-size: 19px;
     padding-bottom: 25px;
     padding-top: 15px;
 }
@@ -36,16 +40,16 @@ strong {
         gap: 10px;
     }
     img {
-        flex: 0 0 100px;
-        height: 100px;
+        flex: 0 0 80px;
+        height: 80px;
         border-radius: 50%;
         @media (max-width: 500px) {
-            flex: 0 0 80px;
-            height: 80px;
-        }
-        @media (max-width: 400px) {
             flex: 0 0 60px;
             height: 60px;
+        }
+        @media (max-width: 400px) {
+            flex: 0 0 40px;
+            height: 40px;
         }
     }
 }
