@@ -54,6 +54,7 @@ strong {
 }
 
 .int img {
+  display: none;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 80px;
           flex: 0 0 80px;
@@ -149,5 +150,11 @@ ul li {
 
 .mFooter__ul li {
   list-style: none;
+}
+
+.offer-link {
+  font-weight: 700;
+  text-decoration: none !important;
+  color: #4d85ff;
 }
 /*# sourceMappingURL=new-style.css.map */
