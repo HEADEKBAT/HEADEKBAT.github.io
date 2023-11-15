@@ -1,0 +1,10 @@
+[
+	{
+		"comments": "comentarios",
+		"buttonWrite": "ESCRIBE UN COMENTARIO",
+		"titleComment": "Agregar un comentario",
+		"inputName": "Nombre",
+		"inputMassage": "Tu mensaje",
+		"buttonMassage": "Enviar mensaje"
+	}
+]
