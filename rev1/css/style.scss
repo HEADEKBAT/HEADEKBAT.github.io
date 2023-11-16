@@ -144,7 +144,7 @@ ul {
 }
 .yellow-bg {
     background: #fcfbf3;
-    padding-top: 20px;
+    // padding-top: 20px;
     .form {
         &__row {
             display: table-row;
@@ -284,7 +284,7 @@ ul {
 }
 .header {
     background: #fcfbf3;
-    border: 1px solid #f0f0f0;
+    // border: 1px solid #f0f0f0;
     padding: 24px 0px;
     &__wrapper {
         padding: 0px 18px;
@@ -328,18 +328,27 @@ ul {
         &:last-child {
             border: none;
         }
+        &--df {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
     }
 }
 .italic {
     font-style: italic;
 }
+.red-text {
+    color: red;
+}
 .list-block {
-    padding: 20px 0px;
+    padding: 20px 0px 0 0;
     &__wrapper {
         padding: 0px 20px;
     }
 
     &__items {
+        padding: 20px 20px;
     }
 
     &__item {
@@ -350,6 +359,7 @@ ul {
         align-items: center;
         img {
             width: 37px;
+            flex: 0 0 auto;
         }
         span {
             font-size: 14px;

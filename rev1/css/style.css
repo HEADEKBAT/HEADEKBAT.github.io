@@ -176,7 +176,6 @@ ul {
 
 .yellow-bg {
   background: #fcfbf3;
-  padding-top: 20px;
 }
 
 .yellow-bg .form__row {
@@ -335,7 +334,6 @@ ul {
 
 .header {
   background: #fcfbf3;
-  border: 1px solid #f0f0f0;
   padding: 24px 0px;
 }
 
@@ -393,16 +391,34 @@ ul {
   border: none;
 }
 
+.header-info__item--df {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
 .italic {
   font-style: italic;
 }
 
+.red-text {
+  color: red;
+}
+
 .list-block {
-  padding: 20px 0px;
+  padding: 20px 0px 0 0;
 }
 
 .list-block__wrapper {
   padding: 0px 20px;
+}
+
+.list-block__items {
+  padding: 20px 20px;
 }
 
 .list-block__item {
@@ -418,6 +434,9 @@ ul {
 
 .list-block__item img {
   width: 37px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
 .list-block__item span {
