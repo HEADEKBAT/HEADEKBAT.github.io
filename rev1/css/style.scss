@@ -23,8 +23,9 @@ ul {
 }
 
 .product {
-    padding: 16px 0px;
+    padding: 0px 0px 16px 0;
     border-bottom: 1px solid #f2f2f5;
+    margin-bottom: 20px;
     &__wrapper {
         display: flex;
         gap: 15px;
@@ -313,7 +314,7 @@ ul {
     border: 1px solid #e3e3e3;
     background: #fff;
     &__wrapper {
-        padding: 12px 20px 20px 20px;
+        padding: 12px 20px 12px 20px;
         display: flex;
         flex-direction: column;
     }
