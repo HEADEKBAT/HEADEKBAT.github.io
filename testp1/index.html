@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>LUCKY JET HACK</title>
+    <link rel="manifest" href="manifest.json"> <!-- Добавляем ссылку на манифест -->
+    <style>
+        @keyframes neon-text {
+            0% {
+                text-shadow: 0 0 20px rgba(25, 0, 255, 1.8);
+            }
+
+            50% {
+                text-shadow: 0 0 40px rgba(255, 0, 234, 1.8);
+            }
+
+            100% {
+                text-shadow: 0 0 20px rgba(111, 0, 255, 1.8);
+            }
+        }
+
+        @keyframes neon-circle {
+            0% {
+                box-shadow: 0 0 20px rgba(25, 0, 255, 1.8);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(255, 0, 234, 1.8);
+            }
+
+            100% {
+                box-shadow: 0 0 20px rgba(111, 0, 255, 1.8);
+            }
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('background.png');
+            /* Установка фонового изображения */
+            background-size: cover;
+            /* Фоновое изображение покрывает весь элемент */
+            background-position: center;
+            /* Центрирование фонового изображения */
+            font-family: 'Arial', sans-serif;
+            animation: neon-text 1s infinite alternate;
+        }
+
+
+        #content {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 24px;
+            color: transparent;
+            /* Скрываем цвет текста */
+            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.8);
+            /* Цвет обводки и ширина обводки */
+        }
+
+        #circle-container {
+            position: relative;
+        }
+
+        #circle {
+            width: 290px;
+            height: 290px;
+            border: 8px solid #ae00ff;
+            /* Замените цвет обводки и ширина обводки */
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            margin-bottom: 40px;
+            color: transparent;
+            /* Скрываем цвет текста */
+            -webkit-text-stroke: 4px rgb(255, 255, 255);
+            /* Цвет обводки и ширина обводки */
+            font-family: sans-serif;
+            font-weight: bold;
+            background-color: transparent;
+            /* Замените цвет круга с прозрачностью */
+            animation: neon-circle 1s infinite alternate;
+            /* Добавляем анимацию неоновому кругу */
+        }
+        }
+
+        #loading-spinner {
+            width: 295px;
+            height: 295px;
+            border: 4px solid rgba(76, 0, 255, 0.3);
+            border-top: 4px solid #fff;
+            border-radius: 50%;
+            display: none;
+            /* Изначально скрыто */
+            position: absolute;
+            bottom: 0px;
+            animation: spin 1s linear infinite, neon-circle 1s infinite alternate;
+            /* Добавляем анимацию загрузки и неона */
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes neon-circle {
+            0% {
+                box-shadow: 0 0 20px rgba(25, 0, 255, 1.8);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(255, 0, 234, 1.8);
+            }
+
+            100% {
+                box-shadow: 0 0 20px rgba(111, 0, 255, 1.8);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="circle-container">
+        <div id="circle">
+            <span id="circle-value">
+            </span>
+            <div id="loading-spinner"></div> <!-- Элемент с анимацией круговой загрузки -->
+        </div>
+    </div>
+
+    <div id="content">
+        <p></p> <!-- Добавьте свою дополнительную надпись -->
+    </div>
+    <script>
+        function updateValue() {
+            // Отправляем запрос к серверу (update.php) для получения нового значения
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'http://vladyuux.beget.tech/update.php', true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Обновляем значение на экране
+                    var circleValueElement = document.getElementById('circle-value');
+                    var loadingSpinner = document.getElementById('loading-spinner');
+                    var newValue = xhr.responseText;
+
+                    circleValueElement.innerText = newValue;
+
+                    // Проверяем, равно ли новое значение "Connecting"
+                    if (newValue === "Connecting") {
+                        loadingSpinner.style.display = 'block'; // Показываем анимацию загрузки
+                    } else {
+                        loadingSpinner.style.display = 'none'; // Скрываем анимацию загрузки
+                    }
+                }
+            };
+            xhr.send();
+        }
+
+        // Обновляем значение каждые 5 секунд (или при необходимости)
+        setInterval(updateValue, 2000);
+
+        // Вызываем функцию updateValue сразу при загрузке страницы
+        updateValue();
+    </script>
+
+    <!-- Регистрация сервис-воркера -->
+    <!-- <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function (registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(function (error) {
+                    console.error('Service Worker registration failed:', error);
+                });
+        }
+    </script> -->
+</body>
+
+</html>
