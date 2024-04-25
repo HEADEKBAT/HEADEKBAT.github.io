@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>LUCKY JET HACK</title>
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <link rel="icon" href="./fav.png">
     <link rel="manifest" href="manifest.json"> <!-- Добавляем ссылку на манифест -->
     <style>
         @keyframes neon-text {
@@ -50,6 +54,12 @@
             /* Центрирование фонового изображения */
             font-family: 'Arial', sans-serif;
             animation: neon-text 1s infinite alternate;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                background-image: url('background-s.png');
+            }
         }
 
 
@@ -105,7 +115,7 @@
             display: none;
             /* Изначально скрыто */
             position: absolute;
-            bottom: 0px;
+            /* bottom: 0px; */
             animation: spin 1s linear infinite, neon-circle 1s infinite alternate;
             /* Добавляем анимацию загрузки и неона */
         }
@@ -152,13 +162,14 @@
         function updateValue() {
             // Отправляем запрос к серверу (update.php) для получения нового значения
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'http://vladyuux.beget.tech/update.php', true);
+            xhr.open('GET', './data.json?r' + Math.random(), true);
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     // Обновляем значение на экране
                     var circleValueElement = document.getElementById('circle-value');
                     var loadingSpinner = document.getElementById('loading-spinner');
-                    var newValue = xhr.responseText;
+                    var newValue = JSON.parse(xhr.responseText).text1.text;
+                    // console.log(newValue);
 
                     circleValueElement.innerText = newValue;
 
@@ -181,7 +192,7 @@
     </script>
 
     <!-- Регистрация сервис-воркера -->
-    <!-- <script>
+    <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('service-worker.js')
                 .then(function (registration) {
@@ -191,7 +202,7 @@
                     console.error('Service Worker registration failed:', error);
                 });
         }
-    </script> -->
+    </script>
 </body>
 
 </html>
