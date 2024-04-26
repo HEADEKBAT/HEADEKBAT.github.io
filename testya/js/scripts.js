@@ -23,7 +23,7 @@ var swiper = new Swiper(".usersSwiper", {
     loop: true,
     autoplay: {
         delay: 4000,
-      },
+    },
     pagination: {
         el: ".swiper-pagination1",
         type: "fraction",
@@ -45,3 +45,21 @@ var swiper = new Swiper(".usersSwiper", {
 });
 // дублируем бегущую строку
 document.querySelector(".main").appendChild(document.querySelector(".run-string").cloneNode(true));
+
+//прокрутка между блоками, можно было бы сделать более элегантное решение, но так как тут всего 2 ссылки это не оправдано
+const links1 = document.querySelectorAll('.link1');
+const anhor1 = document.querySelector('.about');
+const links2 = document.querySelectorAll('.link2');
+const anhor2 = document.querySelector('.stage');
+
+function scrol(links, anhor) {
+    for (const link of links) {
+        link.addEventListener('click', () => {
+            anhor.scrollIntoView({
+                behavior: "smooth"
+            })
+        })
+    }
+}
+scrol(links1,anhor1);
+scrol(links2,anhor2);
