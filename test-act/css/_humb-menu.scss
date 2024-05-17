@@ -1,0 +1,38 @@
+.humb {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8.3px;
+    padding: 5px 12px;
+    width: 56px;
+
+    @media (max-width: 1060px) {
+        display: flex;
+    }
+
+    &__item {
+        display: block;
+        background: var(--gray);
+        display: block;
+        width: 100%;
+        height: 2px;
+        transition: all 0.4s ease 0s;
+    }
+}
+
+.humb-active {
+    .humb__item {
+        &--1 {
+            transform: rotate(405deg) translate(7px, 5px);
+        }
+
+        &--2 {
+            opacity: 0;
+        }
+
+        &--3 {
+            transform: rotate(-45deg) translate(9px, -8px);
+        }
+    }
+}
